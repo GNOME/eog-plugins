@@ -1,5 +1,10 @@
 2007-11-13  Lucas Rocha  <lucasr@gnome.org>
 
+	* plugin/postr/eog-postr-plugin.c: remove remaining junk code from
+	plugin.
+
+2007-11-13  Lucas Rocha  <lucasr@gnome.org>
+
 	* plugin/postr/eog-postr-plugin.c,
 	plugins/postr/postr.eog-plugin.desktop.in: general code cleanup and marked
 	strings for proper translation.

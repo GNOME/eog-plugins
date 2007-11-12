@@ -154,10 +154,6 @@ impl_update_ui (EogPlugin *plugin,
 
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
-
-	g_return_if_fail (data != NULL);
-
-	update_ui_real (window,	data);
 }
 
 static void
