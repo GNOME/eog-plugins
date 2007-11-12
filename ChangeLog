@@ -1,3 +1,10 @@
+2007-11-13  Lucas Rocha  <lucasr@gnome.org>
+
+	* plugin/postr/eog-postr-plugin.c,
+	plugins/postr/postr.eog-plugin.desktop.in: general code cleanup and marked
+	strings for proper translation.
+	* MAINTAINERS: change file to official format.
+
 2007-08-06  Lucas Rocha  <lucasr@gnome.org>
 
 	* Initial import.	

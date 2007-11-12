@@ -19,11 +19,11 @@ libpostr_la_LDFLAGS = \
 
 # Plugin Info
 
-plugin_in_files = postr.eog-plugin.in
+plugin_in_files = postr.eog-plugin.desktop.in
 
-%.eog-plugin: %.eog-plugin.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
+%.eog-plugin: %.eog-plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
-plugin_DATA = $(plugin_in_files:.eog-plugin.in=.eog-plugin)
+plugin_DATA = $(plugin_in_files:.eog-plugin.desktop.in=.eog-plugin)
 
 EXTRA_DIST = $(plugin_in_files)
 

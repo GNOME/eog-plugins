@@ -4,8 +4,6 @@
 
 #include "eog-postr-plugin.h"
 
-#include <string.h> /* For strlen (...) */
-
 #include <gmodule.h>
 #include <glib/gi18n-lib.h>
 
@@ -47,9 +45,9 @@ static const GtkActionEntry action_entries[] =
 {
 	{ "RunPostr",
 	  "postr",
-	  "Upload to Flickr",
+	  N_("Upload to Flickr"),
 	  NULL,
-	  "Upload your pictures to Flickr",
+	  N_("Upload your pictures to Flickr"),
 	  G_CALLBACK (postr_cb) }
 };
 
@@ -63,29 +61,6 @@ free_window_data (WindowData *data)
 	g_object_unref (data->ui_action_group);
 	
 	g_free (data);
-}
-
-static void
-update_ui_real (EogWindow  *window,
-		WindowData   *data)
-{
-#if 0
-	EogView *view;
-
-	eog_debug (DEBUG_PLUGINS);
-
-	view = eog_window_get_active_view (window);
-
-	gtk_action_group_set_sensitive (data->ui_action_group,
-					(view != NULL));
-					
-	if (data->dialog != NULL)
-	{
-		gtk_dialog_set_response_sensitive (GTK_DIALOG (data->dialog->dialog),
-						   GTK_RESPONSE_OK,
-						   (view != NULL));
-	}
-#endif
 }
 
 static void
@@ -141,8 +116,6 @@ impl_activate (EogPlugin *plugin,
 			       "RunPostr",
 			       GTK_UI_MANAGER_MENUITEM, 
 			       FALSE);
-
-	update_ui_real (window,	data);
 }
 
 static void
