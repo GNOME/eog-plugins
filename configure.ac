@@ -66,9 +66,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr"
-USEFUL_PLUGINS="postr"
-DEFAULT_PLUGINS="postr"
+ALL_PLUGINS="postr reload"
+USEFUL_PLUGINS="postr reload"
+DEFAULT_PLUGINS="postr reload"
 
 PYTHON_ALL_PLUGINS=""
 PYTHON_USEFUL_PLUGINS=""
@@ -88,7 +88,7 @@ fi
 AC_ARG_WITH([plugins],
 [  --with-plugins=plugin1,plugin2,...
 			  build the specified plugins. Available:
-			  postr, as well as the aliases default, 
+			  postr, reload, as well as the aliases default, 
 			  all, and really-all],
 			  [plugins=$with_plugins],
 			  [plugins="default"])
@@ -295,7 +295,6 @@ then
 fi
 
 PLUGINS=$(echo $PLUGINS | tr ' ' '\n' | sort | uniq | tr '\n' ' ')
-PLUGINS="postr"
 AC_SUBST([DIST_PLUGINS])
 AC_SUBST([BUILD_PLUGINS],[$PLUGINS])
 
@@ -311,6 +310,7 @@ AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
 plugins/postr/Makefile
+plugins/reload/Makefile
 po/Makefile.in])
 
 AC_OUTPUT

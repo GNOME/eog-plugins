@@ -10,12 +10,12 @@ G_BEGIN_DECLS
 /*
  * Type checking and casting macros
  */
-#define EOG_TYPE_POSTR_PLUGIN		(eog_docinfo_plugin_get_type ())
-#define EOG_POSTR_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_DOCINFO_PLUGIN, EogPostrPlugin))
-#define EOG_POSTR_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k), EOG_TYPE_DOCINFO_PLUGIN, EogPostrPluginClass))
-#define EOG_IS_DOCINFO_PLUGIN(o)	(G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_DOCINFO_PLUGIN))
-#define EOG_IS_DOCINFO_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k), EOG_TYPE_DOCINFO_PLUGIN))
-#define EOG_POSTR_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o), EOG_TYPE_DOCINFO_PLUGIN, EogPostrPluginClass))
+#define EOG_TYPE_POSTR_PLUGIN		(eog_postr_plugin_get_type ())
+#define EOG_POSTR_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_POSTR_PLUGIN, EogPostrPlugin))
+#define EOG_POSTR_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_CAST((k),     EOG_TYPE_POSTR_PLUGIN, EogPostrPluginClass))
+#define EOG_IS_POSTR_PLUGIN(o)	        (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_POSTR_PLUGIN))
+#define EOG_IS_POSTR_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k),    EOG_TYPE_POSTR_PLUGIN))
+#define EOG_POSTR_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOG_TYPE_POSTR_PLUGIN, EogPostrPluginClass))
 
 /* Private structure type */
 typedef struct _EogPostrPluginPrivate	EogPostrPluginPrivate;

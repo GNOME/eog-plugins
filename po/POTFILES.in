@@ -1,2 +1,4 @@
 plugins/postr/postr.eog-plugin.desktop.in
 plugins/postr/eog-postr-plugin.c
+plugins/reload/reload.eog-plugin.desktop.in
+plugins/reload/eog-reload-plugin.c

@@ -1,5 +1,11 @@
 2007-11-13  Lucas Rocha  <lucasr@gnome.org>
 
+	* reload/eog-reload-plugin.c, reload/eog-reload-plugin.h,
+	reload/reload.eog-plugin.desktop.in, reload/Makefile.am, configure.ac: 
+	new "Reload Image" plugin. Fixes bug #470185.
+
+2007-11-13  Lucas Rocha  <lucasr@gnome.org>
+
 	* plugin/postr/eog-postr-plugin.c: remove remaining junk code from
 	plugin.
 
