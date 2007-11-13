@@ -2,6 +2,12 @@
 
 	* reload/eog-reload-plugin.c, reload/eog-reload-plugin.h,
 	reload/reload.eog-plugin.desktop.in, reload/Makefile.am, configure.ac: 
+	new "Fullscreen with double-click" plugin. Fixes bug #478695.
+
+2007-11-13  Lucas Rocha  <lucasr@gnome.org>
+
+	* reload/eog-reload-plugin.c, reload/eog-reload-plugin.h,
+	reload/reload.eog-plugin.desktop.in, reload/Makefile.am, configure.ac: 
 	new "Reload Image" plugin. Fixes bug #470185.
 
 2007-11-13  Lucas Rocha  <lucasr@gnome.org>

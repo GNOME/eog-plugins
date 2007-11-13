@@ -66,9 +66,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr reload"
-USEFUL_PLUGINS="postr reload"
-DEFAULT_PLUGINS="postr reload"
+ALL_PLUGINS="postr reload fullscreen"
+USEFUL_PLUGINS="postr reload fullscreen"
+DEFAULT_PLUGINS="postr reload fullscreen"
 
 PYTHON_ALL_PLUGINS=""
 PYTHON_USEFUL_PLUGINS=""
@@ -88,7 +88,7 @@ fi
 AC_ARG_WITH([plugins],
 [  --with-plugins=plugin1,plugin2,...
 			  build the specified plugins. Available:
-			  postr, reload, as well as the aliases default, 
+			  postr, reload, fullscreen, as well as the aliases default, 
 			  all, and really-all],
 			  [plugins=$with_plugins],
 			  [plugins="default"])
@@ -311,6 +311,7 @@ Makefile
 plugins/Makefile
 plugins/postr/Makefile
 plugins/reload/Makefile
+plugins/fullscreen/Makefile
 po/Makefile.in])
 
 AC_OUTPUT
