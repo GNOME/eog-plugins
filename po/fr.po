@@ -1,0 +1,48 @@
+# French translation of eog-plugins.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the eog-plugins package.
+# Ivan Buresi <err747@free.fr>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-28 03:49+0000\n"
+"PO-Revision-Date: 2007-11-28 20:32+0100\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Mise en ligne sur Flickr"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:50
+msgid "Upload your pictures to Flickr"
+msgstr "Met en ligne vos photos sur Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:48
+msgid "Upload to Flickr"
+msgstr "Mettre en ligne sur Flickr"
+
+#: ../plugins/reload/reload.eog-plugin.desktop.in.h:1
+#: ../plugins/reload/eog-reload-plugin.c:47
+msgid "Reload Image"
+msgstr "Recharger l'image"
+
+#: ../plugins/reload/reload.eog-plugin.desktop.in.h:2
+#: ../plugins/reload/eog-reload-plugin.c:49
+msgid "Reload current image"
+msgstr "Recharge l'image actuelle"
+
+#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:1
+msgid "Activate fullscreen mode with double-click"
+msgstr "Activer le mode plein écran avec un double-clic"
+
+#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:2
+msgid "Fullscreen with double-click"
+msgstr "Plein écran lors d'un double-clic"
+
