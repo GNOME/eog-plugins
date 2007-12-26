@@ -1,3 +1,8 @@
+2007-12-26  Djihed Afifi <djihed@gmail.com> 
+
+	* ar.po: Added Arabic Translation.
+	* LINGUAS: Added ar.
+
 2007-11-29  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
 
 	* gl.po: Added Galician Translation.
