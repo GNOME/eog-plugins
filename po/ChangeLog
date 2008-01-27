@@ -1,3 +1,9 @@
+2008-01-27  Duarte Loreto <happyguy_pt@hotmail.com>
+
+	* pt.po: Added Portuguese translation by António Lima
+	<amrlima@gmail.com>.
+	* LINGUAS: Added Portuguese (pt) to the list.
+
 2008-01-27  Gil Forcada  <gforcada@gnome.org>
 
 	* ca.po: Added Catalan translation (forgot to add it before, sorry!).
