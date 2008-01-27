@@ -1,0 +1,46 @@
+# Catalan translation of eog-plugins.
+# Copyright (C) 2007, 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the eog-plugins package.
+# Gil Forcada  <gilforcada@guifi.net>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-27 11:22+0100\n"
+"PO-Revision-Date: 2008-01-27 11:24+0100\n"
+"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
+"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Gestor de pujades al Flickr"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:50
+msgid "Upload your pictures to Flickr"
+msgstr "Pengeu les vostres fotos al Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:48
+msgid "Upload to Flickr"
+msgstr "Penja al Flickr"
+
+#: ../plugins/reload/reload.eog-plugin.desktop.in.h:1
+#: ../plugins/reload/eog-reload-plugin.c:47
+msgid "Reload Image"
+msgstr "Torna a carregar la imatge"
+
+#: ../plugins/reload/reload.eog-plugin.desktop.in.h:2
+#: ../plugins/reload/eog-reload-plugin.c:49
+msgid "Reload current image"
+msgstr "Torna a carregar la imatge actual"
+
+#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:1
+msgid "Activate fullscreen mode with double-click"
+msgstr "Activa el mode a pantalla completa amb un doble clic"
+
+#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:2
+msgid "Fullscreen with double-click"
+msgstr "Pantalla completa amb doble clic"
