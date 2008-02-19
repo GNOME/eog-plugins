@@ -1,0 +1,51 @@
+# Finnish messages for eog-plugins.
+# Copyright (C) 2008 Free Software Foundation.
+# Suomennos: http://gnome.fi/
+#
+# Ilkka Tuohela <hile@iki.fi>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-07 20:27+0300\n"
+"PO-Revision-Date: 2007-06-09 20:14+0300\n"
+"Last-Translator: Joonas Niilola <juippis@roskakori.org>\n"
+"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.2\n"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr-vienti"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:50
+msgid "Upload your pictures to Flickr"
+msgstr "Vie valokuvasi Flickr:iin"
+
+#: ../plugins/postr/eog-postr-plugin.c:48
+msgid "Upload to Flickr"
+msgstr "Vie Flickr:iin"
+
+#: ../plugins/reload/reload.eog-plugin.desktop.in.h:1
+#: ../plugins/reload/eog-reload-plugin.c:47
+msgid "Reload Image"
+msgstr "Lataa kuva uudestaan"
+
+#: ../plugins/reload/reload.eog-plugin.desktop.in.h:2
+#: ../plugins/reload/eog-reload-plugin.c:49
+msgid "Reload current image"
+msgstr "Lataa tämänhetkinen kuva uudestaan"
+
+#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:1
+msgid "Activate fullscreen mode with double-click"
+msgstr "Aloita kokoruututila kaksoisnapsautuksella"
+
+#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:2
+msgid "Fullscreen with double-click"
+msgstr "Kaksoisnapsauta kokoruututilaan"
+
