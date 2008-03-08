@@ -1,3 +1,9 @@
+2008-03-08  Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>
+
+	* LINGUAS: Added "zh_HK" and "zh_TW"
+        * zh_HK.po: Added Traditional Chinese translation(Hong Kong).
+        * zh_TW.po: Added Traditional Chinese translation(Taiwan).
+
 2008-03-08  Philip Withnall  <pwithnall@svn.gnome.org>
 
 	* LINGUAS: Added en_GB (British English) translation.
