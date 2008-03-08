@@ -1,0 +1,48 @@
+# English (British) translation.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the eog-plugins package.
+#
+# Philip Withnall <pwithnall@svn.gnome.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-03-08 10:43+0000\n"
+"PO-Revision-Date: 2008-03-08 10:43+0000\n"
+"Last-Translator: Philip Withnall <pwithnall@svn.gnome.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr Uploader"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:50
+msgid "Upload your pictures to Flickr"
+msgstr "Upload your pictures to Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:48
+msgid "Upload to Flickr"
+msgstr "Upload to Flickr"
+
+#: ../plugins/reload/reload.eog-plugin.desktop.in.h:1
+#: ../plugins/reload/eog-reload-plugin.c:47
+msgid "Reload Image"
+msgstr "Reload Image"
+
+#: ../plugins/reload/reload.eog-plugin.desktop.in.h:2
+#: ../plugins/reload/eog-reload-plugin.c:49
+msgid "Reload current image"
+msgstr "Reload current image"
+
+#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:1
+msgid "Activate fullscreen mode with double-click"
+msgstr "Activate fullscreen mode with double-click"
+
+#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:2
+msgid "Fullscreen with double-click"
+msgstr "Fullscreen with double-click"
