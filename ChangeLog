@@ -1,3 +1,9 @@
+2008-03-17  Lucas Rocha  <lucasr@gnome.org>
+
+	* configure.ac, plugins/Makefile.am, plugins/fullscreen/*,
+	plugins/reload/*: moved fullscreen and reload to main eog
+	module as default plugins.
+
 2007-11-13  Lucas Rocha  <lucasr@gnome.org>
 
 	* reload/eog-reload-plugin.c, reload/eog-reload-plugin.h,
