@@ -1,3 +1,8 @@
+2008-04-08  Lucas Rocha  <lucasr@gnome.org>
+
+	* configure.ac: property check postr program and disable plugin
+	accordingly in case the program is not installed.
+
 2008-03-17  Lucas Rocha  <lucasr@gnome.org>
 
 	* configure.ac, plugins/Makefile.am, plugins/fullscreen/*,

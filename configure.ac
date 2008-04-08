@@ -287,6 +287,10 @@ plugin_defined postr
 if test "$?" = 1
 then
 	AC_PATH_PROG(POSTR, postr)
+	if test -z "$POSTR"
+	then
+		undef_plugin postr "postr was not found"
+	fi
 fi
 
 if test -z "$disabled_plugins"
