@@ -1,3 +1,7 @@
+2008-05-23  Claude Paroz  <claude@2xlibre.net>
+
+	* POTFILES.in: Removed deleted files.
+
 2008-03-09  Ihar Hrachyshka <booxter@lacinka.org>
 
 	* be@latin.po: Added Belarusian Latin translation.
