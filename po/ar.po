@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-26 11:18+0000\n"
+"POT-Creation-Date: 2008-07-31 11:06+0100\n"
 "PO-Revision-Date: 2007-12-26 11:21+0100\n"
 "Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -29,21 +29,14 @@ msgstr "حمّل صورك إلى فلكر"
 msgid "Upload to Flickr"
 msgstr "حمّل إلى فلكر"
 
-#: ../plugins/reload/reload.eog-plugin.desktop.in.h:1
-#: ../plugins/reload/eog-reload-plugin.c:47
-msgid "Reload Image"
-msgstr "اعد تحميل الصورة"
+#~ msgid "Reload Image"
+#~ msgstr "اعد تحميل الصورة"
 
-#: ../plugins/reload/reload.eog-plugin.desktop.in.h:2
-#: ../plugins/reload/eog-reload-plugin.c:49
-msgid "Reload current image"
-msgstr "اعد تحميل الصورة الحالية"
+#~ msgid "Reload current image"
+#~ msgstr "اعد تحميل الصورة الحالية"
 
-#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr "نشّط العرض على كامل الشاشة بنقرة مزدوجة"
+#~ msgid "Activate fullscreen mode with double-click"
+#~ msgstr "نشّط العرض على كامل الشاشة بنقرة مزدوجة"
 
-#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:2
-msgid "Fullscreen with double-click"
-msgstr "نشّط العرض على كامل الشاشة بنقرة مزدوجة"
-
+#~ msgid "Fullscreen with double-click"
+#~ msgstr "نشّط العرض على كامل الشاشة بنقرة مزدوجة"
