@@ -1,3 +1,8 @@
+2008-09-13  Laurent Dhima  <laurenti@alblinux.net>
+
+	* sq.po: Added Albanian translation.
+	* LINGUAS: Added "sq".
+
 2008-07-31  Djihed Afifi <djihed@gmail.com> 
 
 	* ar.po: Updated Arabic Translation by Djihed Afifi.
