@@ -1,3 +1,8 @@
+2008-10-04  Mario Blättermann <mariobl@svn.gnome.org>
+
+	* de.po: Added German translation.
+	* LINGUAS: Added de
+
 2008-09-27  Matej Urbančič <mateju@svn.gnome.org>
 
 	* sl.po: Added Slovenian translation.
