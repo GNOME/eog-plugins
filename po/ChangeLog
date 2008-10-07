@@ -1,3 +1,8 @@
+2008-10-07  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* LINGUAS: Add 'nb'.
+	* nb.po: Added Norwegian bokmål translation.
+
 2008-10-04  Mario Blättermann <mariobl@svn.gnome.org>
 
 	* de.po: Added German translation.
