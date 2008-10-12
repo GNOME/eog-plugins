@@ -1,0 +1,9 @@
+[Eog Plugin]
+Module=champlain
+IAge=2
+_Name=Map
+Icon=champlain
+_Description=Display the geolocation of the image on a map
+Authors=Pierre-Luc Beaudoin <pierre-luc@squidy.info>
+Copyright=Copyright © 2008 Pierre-Luc Beaudoin
+Website=http://blog.squidy.info/projects/libchamplain

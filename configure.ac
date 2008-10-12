@@ -66,9 +66,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr"
-USEFUL_PLUGINS="postr"
-DEFAULT_PLUGINS="postr"
+ALL_PLUGINS="postr champlain"
+USEFUL_PLUGINS="postr champlain"
+DEFAULT_PLUGINS="postr champlain"
 
 PYTHON_ALL_PLUGINS=""
 PYTHON_USEFUL_PLUGINS=""
@@ -86,12 +86,12 @@ else
 fi
 
 AC_ARG_WITH([plugins],
-[  --with-plugins=plugin1,plugin2,...
-			  build the specified plugins. Available:
-			  postr, as well as the aliases default, 
-			  all, and really-all],
-			  [plugins=$with_plugins],
-			  [plugins="default"])
+[	--with-plugins=plugin1,plugin2,...
+				build the specified plugins. Available:
+				postr, as well as the aliases default, 
+				all, and really-all],
+				[plugins=$with_plugins],
+				[plugins="default"])
 
 if test "x$with_plugins" = xyes
 then
@@ -293,6 +293,27 @@ then
 	fi
 fi
 
+# *********
+# Champlain 
+# *********
+plugin_defined champlain
+if test "$?" = 1
+then
+	
+	PKG_CHECK_MODULES(CHAMPLAIN,
+		[ champlain-1.0 >= 0.2.2,
+		  champlain-gtk-1.0 >= 0.2.2,
+		  clutter-gtk-0.8 >= 0.8.0,
+		  libexif >= 0.6.16 ],
+		[],[have_champlain=no])
+	AC_SUBST(CHAMPLAIN_LIBS)
+	AC_SUBST(CHAMPLAIN_CFLAGS)
+	if test "x$have_champlain" = "xno"
+	then
+		undef_plugin champlain "champlain or libexif was not found"
+	fi
+fi
+
 if test -z "$disabled_plugins"
 then
 	disabled_plugins="none"
@@ -314,6 +335,7 @@ AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
 plugins/postr/Makefile
+plugins/champlain/Makefile
 po/Makefile.in])
 
 AC_OUTPUT

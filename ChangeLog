@@ -1,3 +1,8 @@
+2008-10-12  Lucas Rocha  <lucasr@gnome.org>
+
+	* configure.ac, plugins/champlain/*: new geo tagging plugin based on
+	libchamplain. Patch from Pierre-Luc Beaudoin <pierre-luc@pierlux.com>.
+
 2008-04-08  Lucas Rocha  <lucasr@gnome.org>
 
 	* configure.ac: property check postr program and disable plugin
