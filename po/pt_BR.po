@@ -7,41 +7,41 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-28 00:00-0300\n"
-"PO-Revision-Date: 2008-02-27 23:59-0300\n"
-"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
+"POT-Creation-Date: 2008-10-13 18:36+0000\n"
+"PO-Revision-Date: 2008-10-14 15:34-0300\n"
+"Last-Translator: Carlos Eduardo Moreira dos Santos <cems@cemshost.com.br>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Exiba a localização geográfica da imagem no mapa"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Mapa"
+
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
-msgstr "Enviar ao Flickr"
+msgstr "Uploader do Flickr"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
 #: ../plugins/postr/eog-postr-plugin.c:50
 msgid "Upload your pictures to Flickr"
-msgstr "Envia suas fotos ao Flickr"
+msgstr "Envie suas imagens ao Flickr"
 
 #: ../plugins/postr/eog-postr-plugin.c:48
 msgid "Upload to Flickr"
-msgstr "Envia ao Flickr"
+msgstr "Enviar ao Flickr"
 
-#: ../plugins/reload/reload.eog-plugin.desktop.in.h:1
-#: ../plugins/reload/eog-reload-plugin.c:47
-msgid "Reload Image"
-msgstr "Recarregar imagem"
+#~ msgid "Reload Image"
+#~ msgstr "Recarregar imagem"
+#~ msgid "Reload current image"
+#~ msgstr "Recarrega a imagem atual"
+#~ msgid "Activate fullscreen mode with double-click"
+#~ msgstr "Ativa o modo de tela cheia com um clique duplo"
+#~ msgid "Fullscreen with double-click"
+#~ msgstr "Tela cheia com um clique duplo"
 
-#: ../plugins/reload/reload.eog-plugin.desktop.in.h:2
-#: ../plugins/reload/eog-reload-plugin.c:49
-msgid "Reload current image"
-msgstr "Recarrega a imagem atual"
-
-#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr "Ativa o modo de tela cheia com um clique duplo"
-
-#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:2
-msgid "Fullscreen with double-click"
-msgstr "Tela cheia com um clique duplo"
