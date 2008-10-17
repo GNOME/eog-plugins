@@ -301,8 +301,8 @@ if test "$?" = 1
 then
 	
 	PKG_CHECK_MODULES(CHAMPLAIN,
-		[ champlain-1.0 >= 0.2.2,
-		  champlain-gtk-1.0 >= 0.2.2,
+		[ champlain-0.2 >= 0.2.4,
+		  champlain-gtk-0.2 >= 0.2.4,
 		  clutter-gtk-0.8 >= 0.8.0,
 		  libexif >= 0.6.16 ],
 		[],[have_champlain=no])

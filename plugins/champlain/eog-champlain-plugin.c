@@ -16,8 +16,7 @@
 #include <math.h>
 #include <string.h>
 #include <champlain/champlain.h>
-#include <champlain/champlainlayer.h>
-#include <champlain-gtk/champlainviewembed.h>
+#include <champlain-gtk/champlain-gtk.h>
 #include <clutter-cairo/clutter-cairo.h>
 #include <clutter-gtk/gtk-clutter-embed.h>
 #include <libexif/exif-data.h>
