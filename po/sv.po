@@ -1,19 +1,27 @@
 # Swedish translation for eog-plugins.
 # Copyright (C) 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
-# Daniel Nylander <po@danielnylander.se>, 2007.
+# Daniel Nylander <po@danielnylander.se>, 2007, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-23 14:57+0100\n"
-"PO-Revision-Date: 2007-11-23 14:58+0100\n"
+"POT-Creation-Date: 2008-10-22 16:52+0200\n"
+"PO-Revision-Date: 2008-10-22 16:53+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Visa den geologiska platsen för bilden på en karta"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Karta"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
@@ -28,21 +36,12 @@ msgstr "Skicka upp dina bilder till Flickr"
 msgid "Upload to Flickr"
 msgstr "Skicka upp till Flickr"
 
-#: ../plugins/reload/reload.eog-plugin.desktop.in.h:1
-#: ../plugins/reload/eog-reload-plugin.c:47
-msgid "Reload Image"
-msgstr "Läs om bild"
-
-#: ../plugins/reload/reload.eog-plugin.desktop.in.h:2
-#: ../plugins/reload/eog-reload-plugin.c:49
-msgid "Reload current image"
-msgstr "Läs om aktuell bild"
-
-#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr "Aktivera helskärmsläge med dubbelklick"
-
-#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:2
-msgid "Fullscreen with double-click"
-msgstr "Helskärm med dubbelklick"
+#~ msgid "Reload Image"
+#~ msgstr "Läs om bild"
+#~ msgid "Reload current image"
+#~ msgstr "Läs om aktuell bild"
+#~ msgid "Activate fullscreen mode with double-click"
+#~ msgstr "Aktivera helskärmsläge med dubbelklick"
+#~ msgid "Fullscreen with double-click"
+#~ msgstr "Helskärm med dubbelklick"
 
