@@ -1,3 +1,8 @@
+2008-12-06  Kenneth Nielsen  <k.nielsen81@gmail.com>
+
+	* LUNGUAS: Added da to list of languages
+	* da.po: Added Danish translation by Kris Hansen
+
 2008-11-21  Mario Blättermann <mariobl@svn.gnome.org>
 
 	* de.po: Updated German translation.
