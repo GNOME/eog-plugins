@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Jorge González <jorgegonz@svn.gnome.org>, 200, 2008.
+# Jorge González <jorgegonz@svn.gnome.org>, 200, 200, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 18:36+0000\n"
-"PO-Revision-Date: 2008-10-16 21:01+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&component=general\n"
+"POT-Creation-Date: 2009-02-15 11:03+0000\n"
+"PO-Revision-Date: 2009-02-15 15:37+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +38,14 @@ msgstr "Suba sus fotografías a Flickr"
 #: ../plugins/postr/eog-postr-plugin.c:48
 msgid "Upload to Flickr"
 msgstr "Subir a Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Consola de Python"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Consola de Python para el Visor de imágenes EOG"
 
 #~ msgid "Reload Image"
 #~ msgstr "Recargar imagen"
