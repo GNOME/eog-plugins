@@ -1,14 +1,14 @@
 # Swedish translation for eog-plugins.
-# Copyright (C) 2007 Free Software Foundation, Inc.
+# Copyright (C) 2007-2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
-# Daniel Nylander <po@danielnylander.se>, 2007, 2008.
+# Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-22 16:52+0200\n"
-"PO-Revision-Date: 2008-10-22 16:53+0100\n"
+"POT-Creation-Date: 2009-02-15 16:00+0100\n"
+"PO-Revision-Date: 2009-02-15 16:00+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,14 @@ msgstr "Skicka upp dina bilder till Flickr"
 #: ../plugins/postr/eog-postr-plugin.c:48
 msgid "Upload to Flickr"
 msgstr "Skicka upp till Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python-konsoll"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Python-konsoll för Eye of GNOME"
 
 #~ msgid "Reload Image"
 #~ msgstr "Läs om bild"
