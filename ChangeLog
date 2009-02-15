@@ -1,3 +1,10 @@
+2009-02-15  Felix Riemann  <friemann@svn.gnome.org>
+
+	* configure.ac:
+	* plugins/pythonconsole/*:
+	Add pythonconsole plugin based on the gedit plugin of the same name.
+	Fixes bug #462338 (Diego Escalante Urrelo, Francisco Rojas).
+
 2008-10-17  Felix Riemann  <friemann@svn.gnome.org>
 
 	* configure.ac:
