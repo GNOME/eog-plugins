@@ -1,5 +1,11 @@
 2009-02-15  Felix Riemann  <friemann@svn.gnome.org>
 
+	* Makefile.am:
+	* autogen.sh:
+	Require at least intltool-0.40.0.
+
+2009-02-15  Felix Riemann  <friemann@svn.gnome.org>
+
 	* configure.ac: Fix Bugzilla URI and remove unneeded dependencies
 	on libglade and GnomeVFS.
 
