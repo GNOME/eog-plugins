@@ -2,11 +2,9 @@ SUBDIRS = plugins po
 
 EXTRA_DIST =			\
 	autogen.sh		\
-	ChangeLog  		\
-	gnome-doc-utils.make
+	ChangeLog
 
 DISTCLEANFILES = 		\
-	gnome-doc-utils.make	\
 	intltool-extract 	\
 	intltool-merge 		\
 	intltool-update
