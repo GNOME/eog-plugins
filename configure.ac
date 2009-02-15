@@ -3,7 +3,7 @@
 EOG_MAJOR=2.20.0
 EOG_PLUGINS_MAJOR=2.20.0
 
-AC_INIT(eog-plugins, 2.19.6, http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins)
+AC_INIT([eog-plugins], [2.19.6], [http://bugzilla.gnome.org/enter_bug.cgi?product=eog&component=plugins])
 
 AC_CONFIG_SRCDIR([plugins])
 AC_PREFIX_PROGRAM([eog])
@@ -46,12 +46,10 @@ GNOME_DOC_INIT
 # GNOME Libs 
 # **********
 
-PKG_CHECK_MODULES(EOG, [
+PKG_CHECK_MODULES([EOG], [
 	glib-2.0 >= 2.12.0
 	gtk+-2.0 >= 2.10.0
 	eog >= 2.19.0
-	libglade-2.0 >= 2.3.6
-	gnome-vfs-2.0 >= 2.10.0
 ])
 AC_SUBST(EOG_LIBS)
 AC_SUBST(EOG_CFLAGS)
