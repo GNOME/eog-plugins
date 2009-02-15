@@ -36,12 +36,6 @@ GETTEXT_PACKAGE=eog-plugins
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 
-# ***************
-# gnome-doc-utils
-# ***************
-
-GNOME_DOC_INIT
-
 # **********
 # GNOME Libs 
 # **********
