@@ -1,14 +1,14 @@
 # eog-plugins' Portuguese translation.
-# Copyright © 2008 eog-plugins
+# Copyright © 2008, 2009 eog-plugins
 # This file is distributed under the same license as the eog-plugins package.
-# António Lima <amrlima@gmail.com>, 2008.
 #
+# António Lima <amrlima@gmail.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-11 23:13+0000\n"
-"PO-Revision-Date: 2008-10-29 22:25-0100\n"
+"POT-Creation-Date: 2009-03-01 23:38+0000\n"
+"PO-Revision-Date: 2009-02-25 22:04-0100\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,14 @@ msgstr "Enviar as suas fotos para o Flickr"
 #: ../plugins/postr/eog-postr-plugin.c:48
 msgid "Upload to Flickr"
 msgstr "Enviar para o Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Consola Python"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Consola Python para o Eye of GNOME"
 
 #~ msgid "Reload Image"
 #~ msgstr "Reler Imagem"
