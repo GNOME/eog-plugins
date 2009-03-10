@@ -1,21 +1,29 @@
-# translation of eog-plugins.po to Basque
+# translation of eu.po to Basque
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: eog-plugins\n"
+"Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-05 19:09+0100\n"
-"PO-Revision-Date: 2008-03-05 19:11+0100\n"
+"POT-Creation-Date: 2009-03-10 20:39+0100\n"
+"PO-Revision-Date: 2009-03-10 20:40+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Bistaratu irudiaren geolokalizazioa mapa batean"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Mapa"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
@@ -30,21 +38,11 @@ msgstr "Igo zure argazkiak Flickr gunera"
 msgid "Upload to Flickr"
 msgstr "Igo Flickr-era"
 
-#: ../plugins/reload/reload.eog-plugin.desktop.in.h:1
-#: ../plugins/reload/eog-reload-plugin.c:47
-msgid "Reload Image"
-msgstr "Birkargatu irudia"
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python kontsola"
 
-#: ../plugins/reload/reload.eog-plugin.desktop.in.h:2
-#: ../plugins/reload/eog-reload-plugin.c:49
-msgid "Reload current image"
-msgstr "Birkargatu uneko irudia"
-
-#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:1
-msgid "Activate fullscreen mode with double-click"
-msgstr "Aktibatu pantaila osoko modua klik bikoitza eginez"
-
-#: ../plugins/fullscreen/fullscreen.eog-plugin.desktop.in.h:2
-msgid "Fullscreen with double-click"
-msgstr "Pantaila osoa klik bikoitzarekin"
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "GNOMEren begiaren python kontsola"
 
