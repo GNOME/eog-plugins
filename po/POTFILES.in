@@ -1,4 +1,5 @@
 plugins/champlain/champlain.eog-plugin.desktop.in
+plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in
 plugins/postr/postr.eog-plugin.desktop.in
 plugins/postr/eog-postr-plugin.c
 plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in

@@ -1,3 +1,7 @@
+2009-04-12  Felix Riemann  <friemann@svn.gnome.org>
+
+	* POTFILES.in: Add entry for slideshowshuffle plugin.
+
 2009-04-08  Sweta Kothari  <swkothar@redhat.com>
 
 	* gu.po: Committed Gujarati Translation.

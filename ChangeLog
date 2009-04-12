@@ -1,3 +1,12 @@
+2009-04-12  Felix Riemann  <friemann@svn.gnome.org>
+
+	* configure.ac:
+	* plugins/slideshowshuffle/Makefile.am:
+	* plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in:
+	* plugins/slideshowshuffle/slideshowshuffle.py:
+	Add plugin to randomize image order during slideshows.
+	Fixes bug #526135 (Johannes Marbach).
+
 2009-02-15  Felix Riemann  <friemann@svn.gnome.org>
 
 	* Makefile.am: Forgot to remove gnome-doc-utils from the Makefile.

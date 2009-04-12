@@ -62,9 +62,9 @@ ALL_PLUGINS="postr champlain"
 USEFUL_PLUGINS="postr champlain"
 DEFAULT_PLUGINS="postr champlain"
 
-PYTHON_ALL_PLUGINS="pythonconsole"
-PYTHON_USEFUL_PLUGINS="pythonconsole"
-PYTHON_DEFAULT_PLUGINS="pythonconsole"
+PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole"
+PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole"
+PYTHON_DEFAULT_PLUGINS="slideshowshuffle pythonconsole"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -327,6 +327,7 @@ AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
 plugins/champlain/Makefile
+plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
 plugins/pythonconsole/Makefile
 po/Makefile.in])
