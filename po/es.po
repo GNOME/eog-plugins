@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&component=general\n"
-"POT-Creation-Date: 2009-02-15 11:03+0000\n"
-"PO-Revision-Date: 2009-02-15 15:37+0100\n"
+"POT-Creation-Date: 2009-04-16 20:30+0000\n"
+"PO-Revision-Date: 2009-04-18 18:14+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,6 +25,14 @@ msgstr "Mostrar la geolocalización de la imagen en un mapa"
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Mapa"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "Muestra imágenes aleatorias en el modo diapositiva"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "Diapositivas aleatorias"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
