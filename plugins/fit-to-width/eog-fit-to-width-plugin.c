@@ -31,7 +31,7 @@
 
 
 #define WINDOW_DATA_KEY "EogFitToWidthWindowData"
-	
+
 EOG_PLUGIN_REGISTER_TYPE(EogFitToWidthPlugin, eog_fit_to_width_plugin)
 
 typedef struct
@@ -52,13 +52,13 @@ fit_to_width_cb (GtkAction *action,
 	double         zoom;
 
 	g_return_if_fail (EOG_IS_WINDOW (window));
-	
+
 	view = eog_window_get_view (window);
 	image = eog_window_get_image (window);
 
 	g_return_if_fail (EOG_IS_SCROLL_VIEW (view));
 	g_return_if_fail (EOG_IS_IMAGE (image));
-	
+
 	eog_image_get_size (image, &image_width, &image_height);
 	view_width = view->allocation.width;
 
@@ -66,7 +66,7 @@ fit_to_width_cb (GtkAction *action,
 	//       to scrollview for obtain the display area.
 	zoom = (double) (view_width - 15) / image_width;
 
-	eog_scroll_view_set_zoom (EOG_SCROLL_VIEW (view), zoom);	
+	eog_scroll_view_set_zoom (EOG_SCROLL_VIEW (view), zoom);
 }
 
 static const gchar * const ui_definition =
@@ -91,7 +91,7 @@ free_window_data (WindowData *data)
 	g_return_if_fail (data != NULL);
 
 	g_object_unref (data->ui_action_group);
-	
+
 	g_free (data);
 }
 
@@ -108,14 +108,14 @@ impl_activate (EogPlugin *plugin,
 	GtkUIManager *manager;
 	GList *action_groups;
 	WindowData *data;
-	
+
 	manager = eog_window_get_ui_manager (window);
 	action_groups = gtk_ui_manager_get_action_groups (manager);
 	data = g_new (WindowData, 1);
 
 	data->ui_action_group = gtk_action_group_new ("EogFitToWidthPluginActions");
-	
-	gtk_action_group_set_translation_domain (data->ui_action_group, 
+
+	gtk_action_group_set_translation_domain (data->ui_action_group,
 						 GETTEXT_PACKAGE);
 
 	gtk_action_group_add_actions (data->ui_action_group,
@@ -131,8 +131,8 @@ impl_activate (EogPlugin *plugin,
 								  ui_definition,
 								  -1, NULL);
 
-	g_object_set_data_full (G_OBJECT (window), 
-				WINDOW_DATA_KEY, 
+	g_object_set_data_full (G_OBJECT (window),
+				WINDOW_DATA_KEY,
 				data,
 				(GDestroyNotify) free_window_data);
 }

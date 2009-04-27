@@ -31,11 +31,11 @@ postr_cb (GtkAction	*action,
 	gchar *cmd = g_strdup ("postr ");
 
 	images = eog_thumb_view_get_selected_images (EOG_THUMB_VIEW (thumbview));
-	
+
 	for (i = g_list_first (images); i; i = i->next) {
 		EogImage *image = (EogImage *) i->data;
 
-		cmd = g_strconcat (cmd, eog_image_get_uri_for_display (image), " ", NULL); 
+		cmd = g_strconcat (cmd, eog_image_get_uri_for_display (image), " ", NULL);
 	}
 
 	g_spawn_command_line_async (cmd, NULL);
@@ -55,11 +55,11 @@ static void
 free_window_data (WindowData *data)
 {
 	g_return_if_fail (data != NULL);
-	
+
 	eog_debug (DEBUG_PLUGINS);
 
 	g_object_unref (data->ui_action_group);
-	
+
 	g_free (data);
 }
 
@@ -83,15 +83,15 @@ impl_activate (EogPlugin *plugin,
 {
 	GtkUIManager *manager;
 	WindowData *data;
-	
+
 	eog_debug (DEBUG_PLUGINS);
 
 	data = g_new (WindowData, 1);
 	manager = eog_window_get_ui_manager (window);
 
 	data->ui_action_group = gtk_action_group_new ("EogPostrPluginActions");
-	
-	gtk_action_group_set_translation_domain (data->ui_action_group, 
+
+	gtk_action_group_set_translation_domain (data->ui_action_group,
 						 GETTEXT_PACKAGE);
 	gtk_action_group_add_actions (data->ui_action_group,
 				      action_entries,
@@ -104,17 +104,17 @@ impl_activate (EogPlugin *plugin,
 
 	data->ui_id = gtk_ui_manager_new_merge_id (manager);
 
-	g_object_set_data_full (G_OBJECT (window), 
-				WINDOW_DATA_KEY, 
+	g_object_set_data_full (G_OBJECT (window),
+				WINDOW_DATA_KEY,
 				data,
 				(GDestroyNotify) free_window_data);
 
-	gtk_ui_manager_add_ui (manager, 
-			       data->ui_id, 
+	gtk_ui_manager_add_ui (manager,
+			       data->ui_id,
 			       MENU_PATH,
-			       "RunPostr", 
 			       "RunPostr",
-			       GTK_UI_MANAGER_MENUITEM, 
+			       "RunPostr",
+			       GTK_UI_MANAGER_MENUITEM,
 			       FALSE);
 }
 
