@@ -12,7 +12,7 @@ plugin_LTLIBRARIES = libchamplain.la
 
 libchamplain_la_SOURCES = \
 	eog-champlain-plugin.h				\
-	eog-champlain-plugin.c	
+	eog-champlain-plugin.c
 
 libchamplain_la_LDFLAGS = \
 	$(PLUGIN_LIBTOOL_FLAGS)				\

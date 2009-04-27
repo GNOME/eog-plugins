@@ -134,7 +134,7 @@
 
 2008-10-13  Claudio Saavedra  <csaavedra@igalia.com>
 
-	* POTFILES.in: Add plugins/champlain/champlain.eog-plugin.desktop.in 
+	* POTFILES.in: Add plugins/champlain/champlain.eog-plugin.desktop.in
 
 2008-10-07  Kjartan Maraas  <kmaraas@gnome.org>
 
@@ -161,11 +161,11 @@
 	* sq.po: Added Albanian translation.
 	* LINGUAS: Added "sq".
 
-2008-07-31  Djihed Afifi <djihed@gmail.com> 
+2008-07-31  Djihed Afifi <djihed@gmail.com>
 
 	* ar.po: Updated Arabic Translation by Djihed Afifi.
 
-2008-07-31  Djihed Afifi <djihed@gmail.com> 
+2008-07-31  Djihed Afifi <djihed@gmail.com>
 
 	* ar.po: Updated Arabic Translation by Djihed Afifi.
 
@@ -240,7 +240,7 @@
 
 	* ca.po: Updated Catalan translation.
 
-2007-12-26  Djihed Afifi <djihed@gmail.com> 
+2007-12-26  Djihed Afifi <djihed@gmail.com>
 
 	* ar.po: Added Arabic Translation.
 	* LINGUAS: Added ar.

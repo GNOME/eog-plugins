@@ -11,7 +11,7 @@ plugin_LTLIBRARIES = libfit-to-width.la
 
 libfit_to_width_la_SOURCES = \
 	eog-fit-to-width-plugin.h			\
-	eog-fit-to-width-plugin.c	
+	eog-fit-to-width-plugin.c
 
 libfit_to_width_la_LDFLAGS = \
 	-avoid-version -module

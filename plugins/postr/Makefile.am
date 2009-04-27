@@ -11,7 +11,7 @@ plugin_LTLIBRARIES = libpostr.la
 
 libpostr_la_SOURCES = \
 	eog-postr-plugin.h				\
-	eog-postr-plugin.c	
+	eog-postr-plugin.c
 
 libpostr_la_LDFLAGS = \
 	$(PLUGIN_LIBTOOL_FLAGS)				\
