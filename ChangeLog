@@ -1,3 +1,13 @@
+2009-04-27  Felix Riemann  <friemann@svn.gnome.org>
+
+	* configure.ac:
+	* plugins/fit-to-width/Makefile.am:
+	* plugins/fit-to-width/eog-fit-to-width-plugin.c:
+	* plugins/fit-to-width/eog-fit-to-width-plugin.h:
+	* plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in:
+	Add fit-to-width plugin which tries to make the image width fit the
+	window. Fixes bug #438642 (Javier Sánchez).
+
 2009-04-12  Felix Riemann  <friemann@svn.gnome.org>
 
 	* configure.ac:

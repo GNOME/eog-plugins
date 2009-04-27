@@ -58,9 +58,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr champlain"
-USEFUL_PLUGINS="postr champlain"
-DEFAULT_PLUGINS="postr champlain"
+ALL_PLUGINS="postr champlain fit-to-width"
+USEFUL_PLUGINS="postr champlain fit-to-width"
+DEFAULT_PLUGINS="postr champlain fit-to-width"
 
 PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole"
 PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole"
@@ -327,6 +327,7 @@ AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
 plugins/champlain/Makefile
+plugins/fit-to-width/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
 plugins/pythonconsole/Makefile

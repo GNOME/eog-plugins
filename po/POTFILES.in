@@ -1,4 +1,6 @@
 plugins/champlain/champlain.eog-plugin.desktop.in
+plugins/fit-to-width/eog-fit-to-width-plugin.c
+plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in
 plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in
 plugins/postr/postr.eog-plugin.desktop.in
 plugins/postr/eog-postr-plugin.c
