@@ -102,11 +102,6 @@ eog_fit_to_width_plugin_init (EogFitToWidthPlugin *plugin)
 }
 
 static void
-eog_fit_to_width_plugin_finalize (GObject *object)
-{
-}
-
-static void
 impl_activate (EogPlugin *plugin,
 	       EogWindow *window)
 {
@@ -167,17 +162,10 @@ impl_deactivate	(EogPlugin *plugin,
 }
 
 static void
-impl_update_ui (EogPlugin *plugin,
-		EogWindow *window)
-{
-}
-
-static void
 eog_fit_to_width_plugin_class_init (EogFitToWidthPluginClass *klass)
 {
 	EogPluginClass *plugin_class = EOG_PLUGIN_CLASS (klass);
 
 	plugin_class->activate = impl_activate;
 	plugin_class->deactivate = impl_deactivate;
-	plugin_class->update_ui = impl_update_ui;
 }

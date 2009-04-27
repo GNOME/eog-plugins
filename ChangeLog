@@ -1,5 +1,11 @@
 2009-04-27  Felix Riemann  <friemann@svn.gnome.org>
 
+	* plugins/fit-to-width/eog-fit-to-width-plugin.c
+	(eog_fit_to_width_plugin_class_init):
+	Remove unused functions from fit-to-width plugin.
+
+2009-04-27  Felix Riemann  <friemann@svn.gnome.org>
+
 	* configure.ac:
 	* plugins/fit-to-width/Makefile.am:
 	* plugins/fit-to-width/eog-fit-to-width-plugin.c:
