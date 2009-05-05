@@ -1,5 +1,10 @@
 2009-05-05  Felix Riemann  <friemann@svn.gnome.org>
 
+	* configure.ac: Make --with-plugins parameter appear nice with a list
+	of the included plugins.
+
+2009-05-05  Felix Riemann  <friemann@svn.gnome.org>
+
 	* autogen.sh:
 	* configure.ac:
 	Match required build tool version in autogen.sh and configure.ac.

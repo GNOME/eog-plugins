@@ -76,14 +76,14 @@ then
 else
 	AC_MSG_WARN([eog compiled without python support, plugins $PYTHON_ALL_PLUGINS will not be available])
 fi
-
 AC_ARG_WITH([plugins],
-[	--with-plugins=plugin1,plugin2,...
-				build the specified plugins. Available:
-				postr, as well as the aliases default, 
-				all, and really-all],
-				[plugins=$with_plugins],
-				[plugins="default"])
+	    [AS_HELP_STRING([--with-plugins=LIST],
+			    [Comma-separated list specifying the plugins to build.
+			    Available: champlain, fit-to-width, postr, pythonconsole,
+			    slideshowshuffle, as well as the aliases default, 
+			    all, and really-all])],
+	    [plugins=$with_plugins],
+	    [plugins="default"])
 
 if test "x$with_plugins" = xyes
 then
