@@ -16,6 +16,8 @@ which gnome-autogen.sh || {
     echo "You need to install gnome-common from the GNOME Subversion"
     exit 1
 }
+REQUIRED_AUTOCONF_VERSION=2.59
 REQUIRED_AUTOMAKE_VERSION=1.9
 REQUIRED_INTLTOOL_VERSION=0.40.0
+REQUIRED_PKG_CONFIG_VERSION=0.16.0
 USE_GNOME2_MACROS=1 . gnome-autogen.sh

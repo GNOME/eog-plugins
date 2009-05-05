@@ -1,3 +1,9 @@
+2009-05-05  Felix Riemann  <friemann@svn.gnome.org>
+
+	* autogen.sh:
+	* configure.ac:
+	Match required build tool version in autogen.sh and configure.ac.
+
 2009-04-27  Felix Riemann  <friemann@svn.gnome.org>
 
 	* plugins/fit-to-width/eog-fit-to-width-plugin.c:

@@ -12,7 +12,7 @@ AC_SUBST(EOG_PLUGINS_MAJOR)
 
 AC_PREREQ(2.59)
 
-AM_INIT_AUTOMAKE([1.8 dist-bzip2 no-dist-gzip])
+AM_INIT_AUTOMAKE([1.9 dist-bzip2 no-dist-gzip])
 
 AM_MAINTAINER_MODE
 AC_CONFIG_HEADERS([config.h])
