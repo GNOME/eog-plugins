@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Jorge González <jorgegonz@svn.gnome.org>, 200, 200, 2009.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&component=general\n"
-"POT-Creation-Date: 2009-04-16 20:30+0000\n"
-"PO-Revision-Date: 2009-04-18 18:14+0200\n"
+"POT-Creation-Date: 2009-04-27 14:47+0000\n"
+"PO-Revision-Date: 2009-05-08 19:52+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,6 +25,15 @@ msgstr "Mostrar la geolocalización de la imagen en un mapa"
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Mapa"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "Ajustar a la anchura"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Ampliar para ajustar a la anchura de la imagen"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
