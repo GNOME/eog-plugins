@@ -1,14 +1,14 @@
-# translation of eog-plugins.HEAD.po to marathi
+# translation of eog-plugins.master.mr.po to marathi
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: eog-plugins.HEAD\n"
+"Project-Id-Version: eog-plugins.master.mr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-03-01 23:36+0000\n"
-"PO-Revision-Date: 2009-03-20 10:45+0530\n"
+"POT-Creation-Date: 2009-04-27 14:47+0000\n"
+"PO-Revision-Date: 2009-05-15 16:28+0530\n"
 "Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,23 @@ msgstr "प्रतिमाचे geolocation ठिकान नकाशा�
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "नकाशा"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "रूंदीत बसवा"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "प्रतिमा रूंदीत बसवण्याकरीता दृष्य बदल करा"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "स्लाईडशो पद्धत अंतर्गत प्रतिमा पटापट चाळा"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "स्लाईडशो चाळा"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
