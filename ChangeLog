@@ -38,7 +38,7 @@
 	* plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in:
 	* plugins/slideshowshuffle/slideshowshuffle.py:
 	Add plugin to randomize image order during slideshows.
-	Fixes bug #526135 (Johannes Marbach).
+	Fixes bug #562135 (Johannes Marbach).
 
 2009-02-15  Felix Riemann  <friemann@svn.gnome.org>
 
