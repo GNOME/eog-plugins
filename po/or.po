@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-03-10 18:34+0000\n"
-"PO-Revision-Date: 2009-03-19 12:20+0530\n"
+"POT-Creation-Date: 2009-04-27 14:47+0000\n"
+"PO-Revision-Date: 2009-06-02 12:39+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"\n"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
@@ -24,6 +25,23 @@ msgstr "ମାନଚିତ୍ରରେ geo ଅବସ୍ଥାନର ପ୍ରତ
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "ମାନଚିତ୍ର"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "ଓସାର ସହିତ ମେଳ ଖାଉଛି"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "ପ୍ରତିଛବି ଓସାର ସହିତ ଖାପ ଖାଇବା ପାଇଁ ଛୋଟ ବଡ଼ କରନ୍ତୁ"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "ପ୍ରତିଛବିଗୁଡ଼ିକୁ ସ୍ଲାଇଡ ଦୃଶ୍ୟ ଅବସ୍ଥାରେ ଦର୍ଶାଇବା ପାଇଁ ମିଶାନ୍ତୁ"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "ସ୍ଲାଇଡ ଦୃଶ୍ୟ ମିଶ୍ରଣ"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
