@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-25 09:52+0200\n"
-"PO-Revision-Date: 2009-04-25 09:53+0200\n"
+"POT-Creation-Date: 2009-06-06 21:26+0200\n"
+"PO-Revision-Date: 2009-06-06 21:27+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,15 @@ msgstr "Affiche la position géographique de l'image sur une carte"
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Carte"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "Adapter à la largeur"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Zoom en fonction de la largeur de l'image"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
