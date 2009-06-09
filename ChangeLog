@@ -1,3 +1,14 @@
+2009-06-12  Felix Riemann  <friemann@svn.gnome.org>
+
+	* plugins/exif-display/Makefile.am:
+	* plugins/exif-display/eog-exif-display-plugin.c:
+	* plugins/exif-display/eog-exif-display-plugin.h:
+	* plugins/exif-display/exif-display-config.ui:
+	* plugins/exif-display/exif-display.eog-plugin.desktop.in:
+	* plugins/exif-display/exif-display.ui:
+	* configure.ac:
+	Add exif-display plugin by Emmanuel Touzery.
+
 2009-05-05  Felix Riemann  <friemann@svn.gnome.org>
 
 	* configure.ac: Make --with-plugins parameter appear nice with a list

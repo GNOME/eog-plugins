@@ -58,9 +58,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr champlain fit-to-width"
-USEFUL_PLUGINS="postr champlain fit-to-width"
-DEFAULT_PLUGINS="postr champlain fit-to-width"
+ALL_PLUGINS="postr champlain fit-to-width exif-display"
+USEFUL_PLUGINS="postr champlain fit-to-width exif-display"
+DEFAULT_PLUGINS="postr champlain fit-to-width exif-display"
 
 PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole"
 PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole"
@@ -306,6 +306,26 @@ then
 	fi
 fi
 
+# ***********
+# ExifDisplay
+# ***********
+plugin_defined exif-display
+if test "$?" = 1
+then
+
+    PKG_CHECK_MODULES(EXIFDISPLAY,
+        [ libexif >= 0.6.16,
+	  eog < 2.27.1 ],
+        [],[have_exifdisplay=no])
+    AC_SUBST(EXIFDISPLAY_LIBS)
+    AC_SUBST(EXIFDISPLAY_CFLAGS)
+    if test "x$have_exifdisplay" = "xno"
+    then
+        undef_plugin exif-display "libexif was not found"
+    fi
+fi
+
+
 if test -z "$disabled_plugins"
 then
 	disabled_plugins="none"
@@ -328,6 +348,7 @@ Makefile
 plugins/Makefile
 plugins/champlain/Makefile
 plugins/fit-to-width/Makefile
+plugins/exif-display/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
 plugins/pythonconsole/Makefile
