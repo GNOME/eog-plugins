@@ -1,5 +1,13 @@
 2009-06-12  Felix Riemann  <friemann@svn.gnome.org>
 
+	* configure.ac:
+	* plugins/exif-display/eog-exif-display-plugin.c
+	(_eog_util_make_valid_utf8), (eog_exif_set_label):
+	Duplicate eog_util_make_valid_utf8 into the plugin as it is not
+	exported anymore by the current eog version.
+
+2009-06-12  Felix Riemann  <friemann@svn.gnome.org>
+
 	* plugins/exif-display/Makefile.am:
 	* plugins/exif-display/eog-exif-display-plugin.c:
 	* plugins/exif-display/eog-exif-display-plugin.h:

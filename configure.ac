@@ -314,8 +314,7 @@ if test "$?" = 1
 then
 
     PKG_CHECK_MODULES(EXIFDISPLAY,
-        [ libexif >= 0.6.16,
-	  eog < 2.27.1 ],
+        [ libexif >= 0.6.16 ],
         [],[have_exifdisplay=no])
     AC_SUBST(EXIFDISPLAY_LIBS)
     AC_SUBST(EXIFDISPLAY_CFLAGS)
