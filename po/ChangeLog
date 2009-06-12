@@ -1,3 +1,7 @@
+2009-06-12  Felix Riemann  <friemann@svn.gnome.org>
+
+	* POTFILES.in: Add entries for exif-display plugin
+
 2009-06-02  Manoj Kumar Giri  <mgiri@redhat.com>
 
 	* or.po: Updated Oriya Translation.
