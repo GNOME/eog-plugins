@@ -1,0 +1,93 @@
+# Punjabi translation of eog-plugins.
+# Copyright (C) 2009 eog-plugins's COPYRIGHT HOLDER
+# This file is distributed under the same license as the eog-plugins package.
+#
+# A S Alam <aalam@users.sf.net>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=eog-plugins&component=general\n"
+"POT-Creation-Date: 2009-06-12 19:21+0000\n"
+"PO-Revision-Date: 2009-06-13 07:09+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "ਨਕਸ਼ੇ ਉੱਤੇ ਚਿੱਤਰ ਦੀ ਭੂਗੋਲਿਕ ਸਥਿਤੀ ਵੇਖਾਓ"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "ਨਕਸ਼ਾ"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+msgid " (invalid Unicode)"
+msgstr " (ਗਲਤ ਯੂਨੀਕੋਡ)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (ਲੈਨਜ਼)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm ਫਿਲਮ)"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "ਕੈਮਰਾ ਸੈਟਿੰਗ ਅਤੇ ਹਿਸਟੋਗਰਾਮ ਵੇਖੋ"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif ਵੇਖੋ"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "ਚੌੜਾਈ ਲਈ ਫਿੱਟ"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "ਚਿੱਤਰ ਚੌੜਾਈ ਲਈ ਫਿੱਟ ਵਾਸਤੇ ਜ਼ੂਮ"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "ਸਲਾਈਡ ਸ਼ੋ ਮੋਡ ਵਿੱਚ ਚਿੱਤਰ ਰਲਵੇਂ ਵੇਖੋ"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "ਰਲਵਾਂ ਸਲਾਈਡ-ਸ਼ੋ"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "ਫਲਿੱਕਰ ਅੱਪਲੋਡਰ"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:50
+msgid "Upload your pictures to Flickr"
+msgstr "ਆਪਣੀਆਂ ਫੋਟੋ ਫਲਿੱਕਰ ਉੱਤੇ ਅੱਪਲੋਡ ਕਰੋ"
+
+#: ../plugins/postr/eog-postr-plugin.c:48
+msgid "Upload to Flickr"
+msgstr "ਫਲਿੱਕਰ ਉੱਤੇ ਅੱਪਲੋਡ"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "ਪਾਈਥਨ ਕਨਸੋਲ"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "ਗਨੋਮ ਦੀ ਅੱਖ ਲਈ ਪਾਈਥਨ ਕਨਸੋਲ"
+
