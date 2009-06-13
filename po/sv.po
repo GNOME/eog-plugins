@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-20 18:11+0200\n"
-"PO-Revision-Date: 2009-04-20 18:11+0100\n"
+"POT-Creation-Date: 2009-06-13 10:46+0200\n"
+"PO-Revision-Date: 2009-06-13 10:47+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,42 @@ msgstr "Visa den geologiska platsen för bilden på en karta"
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Karta"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+msgid " (invalid Unicode)"
+msgstr " (ogiltig Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (lins)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm film)"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "Visar kamerainställningar och histogram"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif-visning"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "Anpassa till bredd"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Zooma för att passa bildens bredd"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
