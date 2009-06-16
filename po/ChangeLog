@@ -1,3 +1,7 @@
+2009-06-16  Felix Riemann  <friemann@svn.gnome.org>
+
+	* POTFILES.in: Fix entries for GtkBuilder files.
+
 2009-06-12  Felix Riemann  <friemann@svn.gnome.org>
 
 	* POTFILES.in: Add entries for exif-display plugin
