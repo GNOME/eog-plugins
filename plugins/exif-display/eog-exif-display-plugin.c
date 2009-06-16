@@ -51,8 +51,8 @@
 
 static GConfClient *gconf_client = NULL;
 
-#define GTKBUILDER_FILE EOG_PLUGINDIR"/exif-display.ui"
-#define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/exif-display-config.ui"
+#define GTKBUILDER_FILE EOG_PLUGINDIR"/exif-display/exif-display.ui"
+#define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/exif-display/exif-display-config.ui"
 
 EOG_PLUGIN_REGISTER_TYPE(EogExifDisplayPlugin, eog_exif_display_plugin)
 

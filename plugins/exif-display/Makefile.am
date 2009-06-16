@@ -27,7 +27,7 @@ plugin_in_files = exif-display.eog-plugin.desktop.in
 
 UI_FILES = exif-display.ui exif-display-config.ui
 ui_DATA = $(UI_FILES)
-uidir = $(plugindir)
+uidir = $(plugindir)/exif-display
 
 %.eog-plugin: %.eog-plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
