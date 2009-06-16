@@ -1,14 +1,14 @@
-# translation of eog-plugins.master.mr.po to marathi
+# translation of mr.po to marathi
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: eog-plugins.master.mr\n"
+"Project-Id-Version: mr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-04-27 14:47+0000\n"
-"PO-Revision-Date: 2009-05-15 16:28+0530\n"
+"POT-Creation-Date: 2009-06-12 19:21+0000\n"
+"PO-Revision-Date: 2009-06-16 09:18+0530\n"
 "Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,38 @@ msgstr ""
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
-msgstr "प्रतिमाचे geolocation ठिकान नकाशावर दाखवा"
+msgstr "प्रतिमाचे geolocation ठिकाण नकाशावर दाखवा"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "नकाशा"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+msgid " (invalid Unicode)"
+msgstr " (अवैध Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (lens)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm film)"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "कॅमेरा संयोजना व हिस्टोग्राम दाखवतो"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif दृष्य"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
 msgid "Fit to width"
@@ -40,11 +67,11 @@ msgstr "स्लाईडशो पद्धत अंतर्गत प्र
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
-msgstr "स्लाईडशो चाळा"
+msgstr "Slideshow Shuffle"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
-msgstr "Flickr अपलोडकर्ता"
+msgstr "Flickr Uploader"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
 #: ../plugins/postr/eog-postr-plugin.c:50
@@ -57,7 +84,7 @@ msgstr "Flickr वर अपलोड करा"
 
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
 msgid "Python Console"
-msgstr "Python कन्सोल"
+msgstr "Python Console"
 
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
