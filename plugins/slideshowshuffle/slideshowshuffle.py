@@ -20,29 +20,29 @@ import eog, random
 class SlideshowShufflePlugin(eog.Plugin):
     def __init__(self):
         eog.Plugin.__init__(self)
-    
+
     def activate(self, window):
         random.seed()
         self.slideshow = False
         self.state_handler_id = \
             window.connect('window-state-event', self.state_changed_cb)
-    
+
     def deactivate(self, window):
         window.disconnect(self.state_handler_id)
-    
+
     def state_changed_cb(self, window, data = None):
         mode = window.get_mode()
-        
+
         if mode == eog.WindowMode(3) and not self.slideshow:
             # Slideshow starts
             self.slideshow = True
-            
+
             # Query position of current image
             if not window.get_image():
                 pos = 0
             else:
                 pos = window.get_store().get_pos_by_image(window.get_image())
-            
+
             # Generate random map
             uri_list = [row[2].get_uri_for_display() \
                         for row in window.get_store()]
@@ -50,33 +50,33 @@ class SlideshowShufflePlugin(eog.Plugin):
             supply = list(range(1, len(uri_list) + 1))
             for uri in uri_list:
                 self.map[uri] = supply.pop(random.randint(0, len(supply) - 1))
-            
+
             # Put random sort function in place
             window.get_store().\
                 set_default_sort_func(self.random_sort_function)
         elif mode == eog.WindowMode(1) and self.slideshow:
             # Slideshow ends
             self.slideshow = False
-            
+
             # Put alphabetic sort function in place
             window.get_store().\
                 set_default_sort_func(self.alphabetic_sort_function)
-    
+
     def random_sort_function(self, store, iter1, iter2, data = None):
         pos1 = self.map[store[iter1][2].get_uri_for_display()]
         pos2 = self.map[store[iter2][2].get_uri_for_display()]
-        
+
         if  pos1 > pos2:
             return 1
         elif pos1 < pos2:
             return -1
         else:
             return 0
-    
+
     def alphabetic_sort_function(self, store, iter1, iter2, data = None):
         uri1 = store[iter1][2].get_uri_for_display().lower()
         uri2 = store[iter2][2].get_uri_for_display().lower()
-        
+
         if uri1 > uri2:
             return 1
         elif uri1 < uri2:

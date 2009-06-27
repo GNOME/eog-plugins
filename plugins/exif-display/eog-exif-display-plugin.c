@@ -360,16 +360,16 @@ calculate_histogram (WindowData *data, EogImage *eog_image)
 
 	width = gdk_pixbuf_get_width (image_pixbuf);
 	height = gdk_pixbuf_get_height (image_pixbuf);
-	
+
 	pixels = gdk_pixbuf_get_pixels (image_pixbuf);
-	
+
 	for (row = 0; row < height; row++) {
 		guchar *row_cur_idx = pixels + row*rowstride;
 		for (col = 0; col < width; col++) {
 			guchar red = *row_cur_idx++;
 			guchar green = *row_cur_idx++;
 			guchar blue = *row_cur_idx++;
-			
+
 			histogram_values_red_temp[red] += 1;
 			data->histogram_values_green[green] += 1;
 			data->histogram_values_blue[blue] += 1;
@@ -463,7 +463,7 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 	}
 
 	cr = gdk_cairo_create (GTK_WIDGET (drawing_area)->window);
-	gdk_drawable_get_size ((GTK_WIDGET (drawing_area)->window), 
+	gdk_drawable_get_size ((GTK_WIDGET (drawing_area)->window),
 			&drawing_area_width, &drawing_area_height);
 
 	scale_factor_y = drawing_area_height;
@@ -494,10 +494,10 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 	if (draw_channels_histogram) {
 		cairo_set_source_rgba (cr, 1, 0, 0, 0.5);
 		draw_histogram_graph (cr, data->histogram_values_red, data->max_of_array_sums);
-	
+
 		cairo_set_source_rgba (cr, 0, 1, 0, 0.5);
 		draw_histogram_graph (cr, data->histogram_values_green, data->max_of_array_sums);
-	
+
 		cairo_set_source_rgba (cr, 0, 0, 1, 0.5);
 		draw_histogram_graph (cr, data->histogram_values_blue, data->max_of_array_sums);
 	}
@@ -514,7 +514,7 @@ static void calculate_histogram_cb (EogJob *job, gpointer _data)
 {
 	WindowData *data = (WindowData*)_data;
 	if (!job->error) {
-		EogImage *eog_image = 
+		EogImage *eog_image =
 			eog_thumb_view_get_first_selected_image (data->eog_thumb_view);
 		calculate_histogram (data, eog_image);
 		g_object_unref (eog_image);
@@ -568,7 +568,7 @@ statusbar_update_exif_data (GtkStatusbar *statusbar, EogThumbView *view)
 				iso, exposition_time, aperture, focal_length);
 
 		g_free (focal_length);
-	
+
 		exif_data_unref (exif_data);
 	}
 	g_object_unref (image);
@@ -729,7 +729,7 @@ impl_activate (EogPlugin *plugin,
 	data->gtkbuilder_widget = GTK_WIDGET (gtk_builder_get_object (data->sidebar_builder, "viewport1"));
 
 	GtkWidget *drawing_area = GTK_WIDGET (gtk_builder_get_object (data->sidebar_builder, "drawingarea1"));
-	g_signal_connect (drawing_area, "expose-event", 
+	g_signal_connect (drawing_area, "expose-event",
 			G_CALLBACK (drawing_area_expose), data);
 	data->drawing_area = GTK_DRAWING_AREA (drawing_area);
 
@@ -769,9 +769,9 @@ impl_deactivate	(EogPlugin *plugin,
 	data = (WindowData *) g_object_get_data (G_OBJECT (window),
 						 WINDOW_DATA_KEY);
 	g_return_if_fail (data != NULL);
-	
+
 	remove_statusbar_entry (data);
-	
+
 	sidebar = eog_window_get_sidebar (window);
 	eog_sidebar_remove_page(EOG_SIDEBAR (sidebar), data->gtkbuilder_widget);
 
