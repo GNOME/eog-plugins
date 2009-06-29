@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-06-12 19:21+0000\n"
-"PO-Revision-Date: 2009-06-16 09:18+0530\n"
+"POT-Creation-Date: 2009-06-16 14:00+0000\n"
+"PO-Revision-Date: 2009-06-29 16:18+0530\n"
 "Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
 "MIME-Version: 1.0\n"
@@ -44,6 +44,29 @@ msgstr "%.1fmm (lens)"
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
 
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>सर्वसाधारण</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>हिस्टोग्राम</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+#| msgid "Displays camera settings and histogram"
+msgid "Display RGB histogram"
+msgstr "RGB हिस्टोग्राम दाखवा"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+#| msgid "Displays camera settings and histogram"
+msgid "Display camera settings in statusbar"
+msgstr "कॅमेरा संयोजना स्थितीपट्टीत दाखवतो"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+#| msgid "Displays camera settings and histogram"
+msgid "Display per-channel histogram"
+msgstr "कॅमेरा संयोजना व हिस्टोग्राम दाखवतो"
+
 #: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
 msgid "Displays camera settings and histogram"
 msgstr "कॅमेरा संयोजना व हिस्टोग्राम दाखवतो"
@@ -51,6 +74,30 @@ msgstr "कॅमेरा संयोजना व हिस्टोग्र
 #: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "Exif दृष्य"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>एपर्चर:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Expo. वेळ:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Expo. बयास:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO वेग:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>Metering:</b>"
+msgstr "<b>मिटरींग:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Zoom:</b>"
+msgstr "<b>दृष्य बदल:</b>"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
 msgid "Fit to width"
