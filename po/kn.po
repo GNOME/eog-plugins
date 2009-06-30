@@ -1,14 +1,14 @@
-# translation of eog-plugins.HEAD.po to Kannada
+# translation of eog-plugins.master.kn.po to Kannada
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Shankar Prasad <svenkate@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: eog-plugins.HEAD\n"
+"Project-Id-Version: eog-plugins.master.kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-03-10 18:34+0000\n"
-"PO-Revision-Date: 2009-03-28 00:15+0530\n"
+"POT-Creation-Date: 2009-06-16 14:00+0000\n"
+"PO-Revision-Date: 2009-06-29 20:55+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,94 @@ msgstr "ಚಿತ್ರದ ಭೂಸ್ಥಳವನ್ನು ನಕ್ಷೆಯ�
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "ನಕ್ಷೆ"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+msgid " (invalid Unicode)"
+msgstr " (ಅಮಾನ್ಯ ಯುನಿಕೋಡ್)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (ಲೆನ್ಸ್)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm film)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>ಸಾಮಾನ್ಯ</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>ಹಿಸ್ಟೊಗ್ರಾಮ್</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "RGB ಹಿಸ್ಟೊಗ್ರಾಮ್ ಅನ್ನು ತೋರಿಸು"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "ಕ್ಯಾಮೆರ ಸಿದ್ಧತೆಗಳನ್ನು ಸ್ಥಿತಿ ಪಟ್ಟಿಕೆಯಲ್ಲಿ ತೋರಿಸು"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "ಪ್ರತಿ ಚಾನಲ್ ಹಿಸ್ಟೊಗ್ರಾಮ್ ಅನ್ನು ತೋರಿಸು"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "ಕ್ಯಾಮೆರ ಸಿದ್ಧತೆಗಳನ್ನು ಹಾಗು ಹಿಸ್ಟೊಗ್ರಾಮ್ ಅನ್ನು ತೋರಿಸುತ್ತದೆ"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif ಪ್ರದರ್ಶಕ"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>ಕಿಂಡಿ:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>ಎಕ್ಸ್‌ಪೊ. ಸಮಯ:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>ಎಕ್ಸ್‌ಪೊ. ಬಯಾಸ್:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO ವೇಗ:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>Metering:</b>"
+msgstr "<b>ಮೀಟರಿಂಗ್:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Zoom:</b>"
+msgstr "<b>ಝೂಮ್‌:</b>"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "ಅಗಲಕ್ಕೆ ಹೊಂದಿಸು"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "ಚಿತ್ರದ ಅಗಲಕ್ಕೆ ಹೊಂದುವಂತೆ ಹಿಗ್ಗಿಸು"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "ಚಿತ್ರಗಳನ್ನು ಜಾರುಫಲಕ ಪ್ರದರ್ಶನ ವಿಧಾನದಲ್ಲಿ ಕಲೆಸು"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "ಜಾರುಫಲಕ ಪ್ರದರ್ಶನದ ಕಲೆಸುವಿಕೆ"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
