@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-13 10:46+0200\n"
-"PO-Revision-Date: 2009-06-13 10:47+0100\n"
+"POT-Creation-Date: 2009-07-07 12:15+0200\n"
+"PO-Revision-Date: 2009-07-07 15:49+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
-msgstr "Visa den geologiska platsen för bilden på en karta"
+msgstr "Visa den geografiska platsen för bilden på en karta"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
 msgid "Map"
@@ -42,6 +42,26 @@ msgstr "%.1fmm (lins)"
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
 
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Allmänt</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>Histogram</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "Visa RGB-histogram"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "Visa kamerainställningar i statusrad"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "Visa histogram per kanal"
+
 #: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
 msgid "Displays camera settings and histogram"
 msgstr "Visar kamerainställningar och histogram"
@@ -49,6 +69,30 @@ msgstr "Visar kamerainställningar och histogram"
 #: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "Exif-visning"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>Bländare:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Exponeringstid:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Exponeringskomp.:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO-hastighet:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>Metering:</b>"
+msgstr "<b>Mätning:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Zoom:</b>"
+msgstr "<b>Zoom:</b>"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
 msgid "Fit to width"
