@@ -330,7 +330,7 @@ impl_activate (EogPlugin *plugin, EogWindow *window)
 	data->viewport = vbox;
 	gtk_box_pack_start (GTK_BOX (vbox), bbox, FALSE, FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (vbox), viewport);
-	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), "Map", vbox);
+	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), _("Map"), vbox);
 	gtk_widget_show_all (vbox);
 
 	thumbview = eog_window_get_thumb_view (window);
