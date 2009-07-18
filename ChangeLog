@@ -1,5 +1,9 @@
 2009-07-18  Felix Riemann  <friemann@gnome.org>
 
+	* configure.ac: Raise gtk+ dependency to at least 2.12.
+
+2009-07-18  Felix Riemann  <friemann@gnome.org>
+
 	* plugins/champlain/eog-champlain-plugin.c (impl_activate):
 	Make the sidebar's page title translatable.
 

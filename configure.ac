@@ -42,7 +42,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 
 PKG_CHECK_MODULES([EOG], [
 	glib-2.0 >= 2.12.0
-	gtk+-2.0 >= 2.10.0
+	gtk+-2.0 >= 2.12.0
 	eog >= 2.19.0
 ])
 AC_SUBST(EOG_LIBS)
