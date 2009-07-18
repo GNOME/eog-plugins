@@ -1,4 +1,5 @@
 plugins/champlain/champlain.eog-plugin.desktop.in
+plugins/champlain/eog-champlain-plugin.c
 plugins/exif-display/eog-exif-display-plugin.c
 [type: gettext/glade]plugins/exif-display/exif-display-config.ui
 plugins/exif-display/exif-display.eog-plugin.desktop.in
