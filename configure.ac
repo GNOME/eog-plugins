@@ -110,6 +110,7 @@ do
 	then
 		PLUGINS="$PLUGINS $ALL_PLUGINS"
 	else
+		IFS=$eogpl_save_ifs
 		AC_MSG_ERROR([the specified plugin $pl does not exist])
 	fi
 	
