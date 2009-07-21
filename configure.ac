@@ -79,8 +79,9 @@ fi
 AC_ARG_WITH([plugins],
 	    [AS_HELP_STRING([--with-plugins=LIST],
 			    [Comma-separated list specifying the plugins to build.
-			    Available: champlain, fit-to-width, postr, pythonconsole,
-			    slideshowshuffle, as well as the aliases default, 
+			    Available: champlain, exif-display, fit-to-width,
+			    postr, pythonconsole, slideshowshuffle,
+			    as well as the aliases default,
 			    all, and really-all])],
 	    [plugins=$with_plugins],
 	    [plugins="default"])
