@@ -2,16 +2,16 @@
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
 #
-# Gergely Szarka <gszarka@invitel.hu>, 2009.
-# Gabor Kelemen <kelemeng@gnome.hu>, 2009.
+# Gergely Szarka <gszarka at invitel dot hu>, 2009.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-05-15 11:02+0000\n"
-"PO-Revision-Date: 2009-05-21 11:11+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
-"Language-Team: Hungarian <gnome@fsf.hu>\n"
+"POT-Creation-Date: 2009-07-21 21:18+0000\n"
+"PO-Revision-Date: 2009-08-06 00:33+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <gnome at gnome dot hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,8 +23,80 @@ msgid "Display the geolocation of the image on a map"
 msgstr "A kép földrajzi elhelyezkedésének jelölése a térképen"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:333
 msgid "Map"
 msgstr "Térkép"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+msgid " (invalid Unicode)"
+msgstr "(érvénytelen Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (lencse)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm film)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Általános</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>Hisztogram</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "RGB hisztogram megjelenítése"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "Fényképezőgép beállításainak megjelenítése az állapotsoron"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "Csatornánkénti hisztogram megjelenítése"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "Hisztogram és a fényképezőgép beállításainak megjelenítése"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif adatok megjelenítése"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>Rekesz:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Expozíciós idő:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Expozíció eltérítése:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO sebesség:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>Metering:</b>"
+msgstr "<b>Mérés:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Zoom:</b>"
+msgstr "<b>Nagyítás:</b>"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
 msgid "Fit to width"
