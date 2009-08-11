@@ -1,3 +1,9 @@
+2009-08-11  Felix Riemann  <friemann@gnome.org>
+
+	* configure.ac:
+	* plugins/*/Makefile.am:
+	Add support for Automake 1.11's silent build rules.
+
 2009-07-18  Felix Riemann  <friemann@gnome.org>
 
 	* configure.ac: Raise gtk+ dependency to at least 2.12.
