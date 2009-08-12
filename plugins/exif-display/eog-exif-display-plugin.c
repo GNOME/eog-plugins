@@ -290,6 +290,9 @@ static void manage_exif_data (WindowData *data)
 
 	set_exif_label (exif_data, EXIF_TAG_METERING_MODE,
 			data->sidebar_builder, "metering_mode_label", TRUE);
+			
+	set_exif_label (exif_data, EXIF_TAG_USER_COMMENT,
+			data->sidebar_builder, "desc_label", TRUE);
 
 	set_exif_label (exif_data, EXIF_TAG_EXPOSURE_BIAS_VALUE, data->sidebar_builder, "exposure_bias_label", FALSE);
 

@@ -1,3 +1,10 @@
+2009-08-12  Felix Riemann  <friemann@gnome.org>
+
+	* plugins/exif-display/eog-exif-display-plugin.c:
+	* plugins/exif-display/exif-display.ui:
+	Add description tag to the list of displayed exif tags and improve
+	widget alignment (Jonathan Michalon).
+
 2009-08-11  Felix Riemann  <friemann@gnome.org>
 
 	* configure.ac:
