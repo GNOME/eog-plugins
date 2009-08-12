@@ -1,5 +1,13 @@
 2009-08-12  Felix Riemann  <friemann@gnome.org>
 
+	* plugins/exif-display/eog-exif-display-plugin.c (impl_activate),
+	(impl_create_config_dialog):
+	Set translation domain on GtkBuilder instances or else UI strings are
+	only partially translated because the strings are searched for in
+	eog's translations.
+
+2009-08-12  Felix Riemann  <friemann@gnome.org>
+
 	* plugins/exif-display/eog-exif-display-plugin.c:
 	* plugins/exif-display/exif-display.ui:
 	Add description tag to the list of displayed exif tags and improve

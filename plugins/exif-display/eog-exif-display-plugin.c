@@ -724,6 +724,7 @@ impl_activate (EogPlugin *plugin,
 
 	GError* error = NULL;
 	data->sidebar_builder = gtk_builder_new ();
+	gtk_builder_set_translation_domain (data->sidebar_builder, GETTEXT_PACKAGE);
 	if (!gtk_builder_add_from_file (data->sidebar_builder, GTKBUILDER_FILE, &error))
 	{
 		g_warning ("Couldn't load builder file: %s", error->message);
@@ -841,6 +842,7 @@ impl_create_config_dialog (EogPlugin *plugin)
 	GtkWidget *result;
 
 	config_builder = gtk_builder_new ();
+	gtk_builder_set_translation_domain (config_builder, GETTEXT_PACKAGE);
 	if (!gtk_builder_add_from_file (config_builder, GTKBUILDER_CONFIG_FILE, &error))
 	{
 		g_warning ("Couldn't load builder file: %s", error->message);
