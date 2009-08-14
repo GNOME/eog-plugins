@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&component=general\n"
-"POT-Creation-Date: 2009-06-16 14:00+0000\n"
-"PO-Revision-Date: 2009-06-21 11:07+0200\n"
+"POT-Creation-Date: 2009-08-12 11:52+0000\n"
+"PO-Revision-Date: 2009-08-14 15:05+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,7 @@ msgid "Display the geolocation of the image on a map"
 msgstr "Mostrar la geolocalización de la imagen en un mapa"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:333
 msgid "Map"
 msgstr "Mapa"
 
@@ -78,22 +79,27 @@ msgid "<b>Aperture:</b>"
 msgstr "<b>Apertura:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
+#| msgid "<b>Metering:</b>"
+msgid "<b>Description:</b>"
+msgstr "<b>Descripción:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
 msgid "<b>Expo. Time:</b>"
 msgstr "<b>Tiempo de exposición:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:3
+#: ../plugins/exif-display/exif-display.ui.h:4
 msgid "<b>Expo. bias:</b>"
 msgstr "<b>Polarización de la exposición:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:4
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>Velocidad ISO:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: ../plugins/exif-display/exif-display.ui.h:6
 msgid "<b>Metering:</b>"
 msgstr "<b>Mediciones:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:7
 msgid "<b>Zoom:</b>"
 msgstr "<b>Ampliación:</b>"
 
