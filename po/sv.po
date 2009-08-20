@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-07 12:15+0200\n"
-"PO-Revision-Date: 2009-07-07 15:49+0100\n"
+"POT-Creation-Date: 2009-08-20 22:24+0200\n"
+"PO-Revision-Date: 2009-08-20 22:25+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,7 @@ msgid "Display the geolocation of the image on a map"
 msgstr "Visa den geografiska platsen för bilden på en karta"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:333
 msgid "Map"
 msgstr "Karta"
 
@@ -75,22 +76,26 @@ msgid "<b>Aperture:</b>"
 msgstr "<b>Bländare:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>Beskrivning:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
 msgid "<b>Expo. Time:</b>"
 msgstr "<b>Exponeringstid:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:3
+#: ../plugins/exif-display/exif-display.ui.h:4
 msgid "<b>Expo. bias:</b>"
 msgstr "<b>Exponeringskomp.:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:4
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>ISO-hastighet:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: ../plugins/exif-display/exif-display.ui.h:6
 msgid "<b>Metering:</b>"
 msgstr "<b>Mätning:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:7
 msgid "<b>Zoom:</b>"
 msgstr "<b>Zoom:</b>"
 
