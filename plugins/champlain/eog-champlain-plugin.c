@@ -271,9 +271,12 @@ impl_activate (EogPlugin *plugin, EogWindow *window)
 				data,
 				(GDestroyNotify) free_window_data);
 
-	viewport = gtk_viewport_new (NULL, NULL);
+	/* This is a workaround until bug 590692 is fixed. */
+	viewport = gtk_frame_new (NULL);
+	gtk_frame_set_shadow_type (GTK_FRAME (viewport), GTK_SHADOW_ETCHED_IN);
+	/*viewport = gtk_viewport_new (NULL, NULL);
 	gtk_viewport_set_shadow_type (GTK_VIEWPORT (viewport),
-				      GTK_SHADOW_ETCHED_IN);
+				      GTK_SHADOW_ETCHED_IN);*/
 
 	embed = gtk_champlain_embed_new ();
 	data->map = gtk_champlain_embed_get_view (GTK_CHAMPLAIN_EMBED (embed));

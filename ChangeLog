@@ -1,5 +1,12 @@
 2009-08-24  Felix Riemann  <friemann@gnome.org>
 
+	* plugins/champlain/eog-champlain-plugin.c (impl_activate):
+	Place the champlain widget inside a GtkFrame instead of a viewport.
+	This is just a temporary workaround until there is a solution for the
+	X errors mentioned in bug 590692.
+
+2009-08-24  Felix Riemann  <friemann@gnome.org>
+
 	* configure.ac:
 	* plugins/champlain/eog-champlain-plugin.c:
 	Update champlain plugin to work with libchamplain-0.3 and clutter-1.0.
