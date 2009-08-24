@@ -1,0 +1,72 @@
+Version 2.27.91
+---------------
+
+This is the first tarball release of eog-plugins. It's a collection of plugins
+for use with the Eye of GNOME Image Viewer.
+
+New Plugins:
+
+- Map
+  Provides a map view in the sidebar showing you where the current picture was
+  taken if it carries the neccessary GPS tags. Written by Pierre-Luc Beaudoin.
+  Requires libchamplain 0.3 and Clutter 1.0.
+
+- Exif Display
+  Adds a page displaying a few selected Exif tags to the sidebar. It's also
+  possible to display a RGB histogram. Written by Emmanuel Touzery and extended
+  by Jonathan Michalon.
+
+- Zoom to fit image width
+  Adds a menu entry that adjusts the zoom factor so the image's width fits into
+  the window. Written by Javier Sánchez.
+
+- Postr
+  Allows uploading images to Flickr using Postr. It's the oldest plugin and we
+  actually don't know if it is of use anymore as there are better ways to do
+  that now. Written by Lucas Rocha.
+
+- Python Console
+  A port of the gedit plugin with the same name. Written in Python.
+  Ported by Diego Escalante Urrelo and Francisco Rojas.
+
+- Slideshow Shuffle
+  The second plugin written in Python. It randomizes the image order during
+  slideshows. Written by Johannes Marbach.
+
+New and updated translations
+- Djihed Afifi [ar]
+- Amitakhya Phukan [as]
+- Ihar Hrachyshka [be@latin]
+- Runa Bhattacharjee [bn_IN]
+- Gil Forcada [ca]
+- Kamil Paral, Adrian Guniš [cs]
+- Kris Hansen [da]
+- Mario Blättermann [de]
+- Philip Withnall, Jen Ockwell [en_GB]
+- Jorge González [es]
+- Iñaki Larrañaga Murgoitio [eu]
+- Ilkka Tuohela, Tommi Vainikainen [fi]
+- Marc Veillet, Claude Paroz [fr]
+- Ignacio Casal Quinteiro, Fran Dieguez [gl]
+- Sweta Kothari [gu]
+- Gergely Szarka, Gabor Kelemen [hu]
+- Gianvito Cavasoli [it]
+- Shankar Prasad [kn]
+- Gintautas Miliauskas, Žygimantas Beručka [lt]
+- Ani Peter [ml]
+- Arangel Angov [mk]
+- Sandeep Shedmake [mr]
+- Kjartan Maraas [nb]
+- Manoj Kumar Giri [or]
+- A S Alam [pa]
+- GNOME PL Team, Piotr Drąg, Tomasz Dominikowski [pl]
+- António Lima [pt]
+- Og Maciel, Carlos Eduardo Santos, Vladimir Melo [pt_BR]
+- Matej Urbančič [sl]
+- Laurent Dhima [sq]
+- Daniel Nylander [sv]
+- I. Felix [ta]
+- Krishna Babu K [te]
+- Clytie Siddall [vi]
+- Aron Xu [zh_CN]
+- Hialan Liu [zh_HK, zh_TW]

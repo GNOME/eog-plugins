@@ -1,4 +1,9 @@
+2009-08-24  Felix Riemann  <friemann@gnome.org>
+
+	* 2.27.91 release marker.
+
 2009-08-17  Ani Peter  <apeter@redhat.com>
+
 	* ml.po: Added Malayalam (ml) translations
 	* LINGUAS: Added ml to the list of languages
 
