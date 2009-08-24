@@ -1,3 +1,10 @@
+2009-08-24  Felix Riemann  <friemann@gnome.org>
+
+	* configure.ac:
+	* plugins/champlain/eog-champlain-plugin.c:
+	Update champlain plugin to work with libchamplain-0.3 and clutter-1.0.
+	Fixes bug #588397 (Pierre-Luc Beaudoin).
+
 2009-08-12  Felix Riemann  <friemann@gnome.org>
 
 	* plugins/exif-display/eog-exif-display-plugin.c (impl_activate),

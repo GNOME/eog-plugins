@@ -17,15 +17,13 @@
 #include <string.h>
 #include <champlain/champlain.h>
 #include <champlain-gtk/champlain-gtk.h>
-#include <clutter-cairo/clutter-cairo.h>
-#include <clutter-gtk/gtk-clutter-embed.h>
+#include <clutter-gtk/clutter-gtk.h>
 #include <libexif/exif-data.h>
 
 #define WINDOW_DATA_KEY "EogChamplainWindowData"
 
 EOG_PLUGIN_REGISTER_TYPE (EogChamplainPlugin, eog_champlain_plugin)
 
-#define PADDING 4
 #define FACTOR 2.0
 
 typedef struct {
@@ -34,7 +32,10 @@ typedef struct {
 	guint thumbnail_changed_id;
 
 	GtkWidget *viewport;
-	ClutterActor *map, *marker, *layer;
+	ChamplainView *map;
+
+	ChamplainLayer *layer;
+	ChamplainMarker *marker;
 } WindowData;
 
 static void
@@ -62,65 +63,37 @@ eog_champlain_plugin_finalize (GObject *object)
 	G_OBJECT_CLASS (eog_champlain_plugin_parent_class)->finalize (object);
 }
 
-static ClutterActor *
+static ChamplainMarker *
 create_champlain_marker(EogImage *image)
 {
-	ClutterActor *actor, *thumb, *marker;
-	ClutterColor color = { 0x99, 0x99, 0x99, 0xff };
-	ClutterColor darker_color;
+	ClutterActor *thumb, *marker;
 	GdkPixbuf* thumbnail = eog_image_get_thumbnail (image);
 
 	marker = champlain_marker_new ();
 	thumb = clutter_texture_new ();
-	guint width, height, point;
 
 	if (thumbnail) {
+		gfloat width, height;
 		gtk_clutter_texture_set_from_pixbuf (CLUTTER_TEXTURE (thumb),
-						     thumbnail);
-		clutter_actor_set_scale (thumb, 1 / FACTOR, 1 / FACTOR);
+						     thumbnail,
+						     NULL);
+		/* Clip the thumbnail to cut the border */
+		width = gdk_pixbuf_get_width (thumbnail);
+		height = gdk_pixbuf_get_height (thumbnail);
+
+		clutter_actor_set_clip (thumb, 3, 3, (width / FACTOR) - 7,
+			(height / FACTOR) - 7);
 		width = clutter_actor_get_width (thumb) / FACTOR;
-		height = clutter_actor_get_height (thumb) / FACTOR - PADDING;
+		height = clutter_actor_get_height (thumb) / FACTOR;
+		clutter_actor_set_size (thumb, width, height);
 	}
-	else
-		width = height = 10;
 
-	point = width / 3;
-
-	actor = clutter_cairo_new (width, height + point);
-	cairo_t * cr = clutter_cairo_create (CLUTTER_CAIRO (actor));
-
-	cairo_set_source_rgb (cr, 0, 0, 0);
-	cairo_set_line_width (cr, 1);
-
-	cairo_line_to (cr, width - point, height);
-	cairo_line_to (cr, width / 2, height + point);
-	cairo_line_to (cr, point, height);
-	cairo_close_path (cr);
-
-	cairo_set_source_rgba (cr,
-			       color.red / 255.0,
-			       color.green / 255.0,
-			       color.blue / 255.0,
-			       color.alpha / 255.0);
-	cairo_fill (cr);
-	clutter_color_darken (&color, &darker_color);
-	cairo_set_source_rgba (cr,
-			       darker_color.red / 255.0,
-			       darker_color.green / 255.0,
-			       darker_color.blue / 255.0,
-			       darker_color.alpha / 255.0);
-	cairo_stroke (cr);
-	cairo_destroy (cr);
-
-	clutter_container_add (CLUTTER_CONTAINER (marker), actor, NULL);
-	clutter_container_add (CLUTTER_CONTAINER (marker), thumb, NULL);
-
-	clutter_actor_set_anchor_point (marker, width / 2, height + point);
+	champlain_marker_set_image (CHAMPLAIN_MARKER (marker), thumb);
 
 	if (thumbnail)
 		g_object_unref (thumbnail);
 
-	return marker;
+	return CHAMPLAIN_MARKER (marker);
 }
 
 static gboolean
@@ -201,12 +174,12 @@ create_marker (EogImage *image, WindowData *data)
 	if (get_coordinates (image, &lat, &lon)) {
 		data->marker = create_champlain_marker (image);
 
-		clutter_actor_show (data->marker);
-		champlain_marker_set_position (CHAMPLAIN_MARKER (data->marker),
+		clutter_actor_show (CLUTTER_ACTOR (data->marker));
+		champlain_base_marker_set_position (CHAMPLAIN_BASE_MARKER (data->marker),
 					       lat,
 					       lon);
 		clutter_container_add (CLUTTER_CONTAINER (data->layer),
-				       data->marker,
+				       CLUTTER_ACTOR (data->marker),
 				       NULL);
 	}
 }
@@ -216,7 +189,7 @@ thumbnail_changed_cb (EogImage* image, WindowData* data)
 {
 	gdouble lon, lat;
 
-	if (eog_image_get_thumbnail(image)) {
+	if (eog_image_get_thumbnail (image)) {
 		create_marker (image, data);
 		if (data->marker) {
 			g_object_get (data->marker,
@@ -255,7 +228,7 @@ selection_changed_cb (EogThumbView *view, WindowData *data)
 
 	if (data->marker)
 		clutter_container_remove (CLUTTER_CONTAINER (data->layer),
-					  data->marker,
+					  CLUTTER_ACTOR (data->marker),
 					  NULL);
 
 	data->thumbnail_changed_id = g_signal_connect (G_OBJECT (image),
@@ -287,6 +260,7 @@ static void
 impl_activate (EogPlugin *plugin, EogWindow *window)
 {
 	GtkWidget *sidebar, *thumbview, *vbox, *bbox, *button, *viewport;
+	GtkWidget *embed;
 	WindowData *data;
 
 	eog_debug (DEBUG_PLUGINS);
@@ -297,15 +271,17 @@ impl_activate (EogPlugin *plugin, EogWindow *window)
 				data,
 				(GDestroyNotify) free_window_data);
 
-
 	viewport = gtk_viewport_new (NULL, NULL);
 	gtk_viewport_set_shadow_type (GTK_VIEWPORT (viewport),
 				      GTK_SHADOW_ETCHED_IN);
 
-	data->map = champlain_view_new (CHAMPLAIN_VIEW_MODE_KINETIC);
-	g_object_set (G_OBJECT (data->map), "zoom-level", 3, NULL);
-	gtk_container_add (GTK_CONTAINER (viewport),
-			   champlain_view_embed_new (CHAMPLAIN_VIEW (data->map)));
+	embed = gtk_champlain_embed_new ();
+	data->map = gtk_champlain_embed_get_view (GTK_CHAMPLAIN_EMBED (embed));
+	g_object_set (G_OBJECT (data->map),
+		"zoom-level", 3,
+		"scroll-mode", CHAMPLAIN_SCROLL_MODE_KINETIC,
+		NULL);
+	gtk_container_add (GTK_CONTAINER (viewport), embed);
 
 	vbox = gtk_vbox_new(FALSE, 0);
 	bbox =	gtk_toolbar_new ();
@@ -346,7 +322,7 @@ impl_activate (EogPlugin *plugin, EogWindow *window)
 }
 
 static void
-impl_deactivate	(EogPlugin *plugin,
+impl_deactivate (EogPlugin *plugin,
 		 EogWindow *window)
 {
 	WindowData *data;

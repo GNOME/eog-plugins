@@ -297,9 +297,9 @@ if test "$?" = 1
 then
 	
 	PKG_CHECK_MODULES(CHAMPLAIN,
-		[ champlain-0.2 >= 0.2.4,
-		  champlain-gtk-0.2 >= 0.2.4,
-		  clutter-gtk-0.8 >= 0.8.0,
+		[ champlain-0.3 >= 0.3.6,
+		  champlain-gtk-0.3 >= 0.3.6,
+		  clutter-gtk-0.10 >= 0.10,
 		  libexif >= 0.6.16 ],
 		[],[have_champlain=no])
 	AC_SUBST(CHAMPLAIN_LIBS)
