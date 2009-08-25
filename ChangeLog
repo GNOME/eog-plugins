@@ -1,5 +1,11 @@
 2009-08-25  Felix Riemann  <friemann@gnome.org>
 
+	* plugins/postr/eog-postr-plugin.c:
+	Use GIO to determine the images' file path. This makes it possible to
+	use files from GIO FUSE mounts. Fixes bug #592984.
+
+2009-08-25  Felix Riemann  <friemann@gnome.org>
+
 	* plugins/exif-display/eog-exif-display-plugin.c:
 	Only draw to the GtkDrawingArea when it is realized. Fixes crashes
 	when multiple plugins use the sidebar. Fixes bug #593003.

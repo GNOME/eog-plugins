@@ -34,8 +34,17 @@ postr_cb (GtkAction	*action,
 
 	for (i = g_list_first (images); i; i = i->next) {
 		EogImage *image = (EogImage *) i->data;
+		GFile *imgfile;
+		gchar *imgpath;
 
-		cmd = g_strconcat (cmd, eog_image_get_uri_for_display (image), " ", NULL);
+		imgfile = eog_image_get_file (image);
+		imgpath = g_file_get_path (imgfile);
+
+		if (G_LIKELY (imgpath != NULL))
+			cmd = g_strconcat (cmd, "\"", imgpath, "\"", " ", NULL);
+
+		g_free (imgpath);
+		g_object_unref (imgfile);
 	}
 
 	g_spawn_command_line_async (cmd, NULL);
