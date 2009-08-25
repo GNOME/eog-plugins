@@ -1,3 +1,9 @@
+2009-08-25  Felix Riemann  <friemann@gnome.org>
+
+	* plugins/exif-display/eog-exif-display-plugin.c:
+	Only draw to the GtkDrawingArea when it is realized. Fixes crashes
+	when multiple plugins use the sidebar. Fixes bug #593003.
+
 2009-08-24  Felix Riemann  <friemann@gnome.org>
 
 	* NEWS: Prepare for initial release.
