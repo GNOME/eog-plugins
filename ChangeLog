@@ -1,3 +1,9 @@
+2009-08-29  Felix Riemann  <friemann@gnome.org>
+
+	* plugins/champlain/eog-champlain-plugin.c:
+	* plugins/exif-display/eog-exif-display-plugin.c:
+	Fix various compiler warnings.
+
 2009-08-25  Felix Riemann  <friemann@gnome.org>
 
 	* plugins/postr/eog-postr-plugin.c:
