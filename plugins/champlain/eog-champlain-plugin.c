@@ -7,7 +7,7 @@
 #include <gmodule.h>
 #include <glib/gi18n-lib.h>
 
-#include <eog/eog-debug.h>
+#include <eog/eog-exif-util.h>
 #include <eog/eog-thumb-view.h>
 #include <eog/eog-image.h>
 #include <eog/eog-window.h>
