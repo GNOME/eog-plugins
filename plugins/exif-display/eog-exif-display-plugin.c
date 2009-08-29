@@ -256,7 +256,6 @@ static void manage_exif_data (WindowData *data)
 {
 	EogImage *image;
 	ExifData *exif_data;
-	ExifEntry *exif_entry;
 	ExifByteOrder byte_order;
 
 	image = eog_thumb_view_get_first_selected_image (data->eog_thumb_view);
@@ -311,7 +310,7 @@ static void manage_exif_data_cb (EogJob *job, gpointer data)
 static gboolean
 calculate_histogram (WindowData *data, EogImage *eog_image)
 {
-	int rowstride, n_channels;
+	int rowstride;
 	int width, height;
 	int row, col;
 	GdkPixbuf *image_pixbuf;
@@ -441,7 +440,6 @@ static void
 drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 	WindowData *data)
 {
-	int i;
 	gboolean draw_channels_histogram, draw_rgb_histogram;
 	EogImage *eog_image;
 	cairo_t *cr;
@@ -696,7 +694,6 @@ impl_activate (EogPlugin *plugin,
 	WindowData *data;
 	GtkWidget *thumbview;
 	GtkWidget *sidebar;
-	GtkWidget *statusbar = eog_window_get_statusbar (window);
 
 	gconf_client = gconf_client_get_default ();
 
