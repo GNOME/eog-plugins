@@ -28,10 +28,9 @@
 #include <gconf/gconf-client.h>
 
 #include <glib/gi18n-lib.h>
-#include <eog/eog-scroll-view.h>
 #include <eog/eog-image.h>
 #include <eog/eog-thumb-view.h>
-#include <eog/eog-exif-details.h>
+#include <eog/eog-job-queue.h>
 #include <eog/eog-exif-util.h>
 #include <eog/eog-sidebar.h>
 
