@@ -1,0 +1,140 @@
+# eog-plugins ja.po.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the eog-plugins package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-09-06 12:31+0900\n"
+"PO-Revision-Date: 2009-09-06 12:31+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "画像に含まれた情報から地理的位置をマップに表示します"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:312
+msgid "Map"
+msgstr "マップ"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+msgid " (invalid Unicode)"
+msgstr " (Unicode が不正です)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (レンズ)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm フィルム)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>全般</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>ヒストグラム</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "RGB のヒストグラムを表示する"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "ステータスバーにカメラの設定を表示する"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "チャンネル毎のヒストグラムを表示する"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "カメラの設定と画像のヒストグラムを表示します"
+
+# # 参考情報:
+# http://cachu.xrea.jp/perl/ExifTAG.html
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif データ表示"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>レンズ径:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>説明:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>露出時間:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>露出補正値:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO 値:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Metering:</b>"
+msgstr "<b>測光方式:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Zoom:</b>"
+msgstr "<b>ズーム:</b>"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "幅に合わせる"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "画像の幅にズームを合わせる"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "スライドショー・モードで画像の並びをシャッフルします"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "スライドショー・シャッフル"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr アップローダ"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:59
+msgid "Upload your pictures to Flickr"
+msgstr "お気に入りの写真を Flickr へアップロードします"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Flickr へアップロード"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python 端末"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Eye of GNOME 専用の Python 端末を表示します"
