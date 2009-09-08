@@ -1,3 +1,26 @@
+Version 2.27.92
+---------------
+
+Plugin Changes:
+
+- Map (champlain):
+ - Build fixes (Felix Riemann)
+
+- Exif Display (exif-display):
+ - #593003, crash in exif view (Felix Riemann)
+ - Build fixes (Felix Riemann)
+
+- Postr:
+ - #592984, cannot upload to flickr (Felix Riemann)
+
+New and updated translations
+- Iñaki Larrañaga Murgoitio [eu]
+- Gianvito Cavasoli [it]
+- Takeshi AIHANA [ja]
+- A S Alam [pa]
+- António Lima [pt]
+- Jonh Wendell [pt_BR]
+
 Version 2.27.91
 ---------------
 
