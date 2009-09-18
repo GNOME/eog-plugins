@@ -1,13 +1,13 @@
 # German translation of eog-plugins
 # Mario Blättermann <mariobl@gnome.org>, 2008, 2009.
+# Felix Riemann <friemann@gnome.org>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-13 21:30+0200\n"
-"PO-Revision-Date: 2009-03-13 21:39+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"POT-Creation-Date: 2009-09-18 15:23+0200\n"
+"Last-Translator: Felix Riemann <friemann@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,8 +20,94 @@ msgid "Display the geolocation of the image on a map"
 msgstr "Die Geoposition eines Bildes in einer Karte anzeigen"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:312
 msgid "Map"
 msgstr "Karte"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+msgid " (invalid Unicode)"
+msgstr " (ungültiges Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1f (Linse)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1f (35mm-Film)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Allgemein</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>Histogramm</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "RGB-Histogramm anzeigen"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "Kameraeinstellungen in Statusleiste anzeigen"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "Einzelkanal-Histogramm anzeigen"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "Zeigt Kameraeinstellungen und Histogramme an"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif-Anzeige"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>Blende:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>Beschreibung:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Belichtungszeit:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Belichtungskorrektur:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO-Emfindlichkeit:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Metering:</b>"
+msgstr "<b>Belichtungsmessung:</b>"
+
+# Hier steht zwar Zoom, aber gemeint ist die Brennweite
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Zoom:</b>"
+msgstr "<b>Brennweite:</b>"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "Breite einpassen"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Vergrößerung auf Bildbreite anpassen"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
@@ -36,11 +122,11 @@ msgid "Flickr Uploader"
 msgstr "Flickr Uploader"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:50
+#: ../plugins/postr/eog-postr-plugin.c:59
 msgid "Upload your pictures to Flickr"
 msgstr "Hochladen Ihrer Bilder zum Flickr-Bilderdienst"
 
-#: ../plugins/postr/eog-postr-plugin.c:48
+#: ../plugins/postr/eog-postr-plugin.c:57
 msgid "Upload to Flickr"
 msgstr "Hochladen zu Flickr"
 
