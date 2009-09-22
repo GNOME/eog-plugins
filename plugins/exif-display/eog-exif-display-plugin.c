@@ -255,14 +255,11 @@ static void manage_exif_data (WindowData *data)
 {
 	EogImage *image;
 	ExifData *exif_data;
-	ExifByteOrder byte_order;
 
 	image = eog_thumb_view_get_first_selected_image (data->eog_thumb_view);
 	g_return_if_fail (image != NULL);
 
 	exif_data = (ExifData *)eog_image_get_exif_info (image);
-
-	byte_order = exif_data_get_byte_order (exif_data);
 
 	set_exif_label (exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, data->sidebar_builder, "takenon_label", TRUE);
 

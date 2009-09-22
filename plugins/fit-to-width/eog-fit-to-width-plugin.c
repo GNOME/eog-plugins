@@ -106,11 +106,9 @@ impl_activate (EogPlugin *plugin,
 	       EogWindow *window)
 {
 	GtkUIManager *manager;
-	GList *action_groups;
 	WindowData *data;
 
 	manager = eog_window_get_ui_manager (window);
-	action_groups = gtk_ui_manager_get_action_groups (manager);
 	data = g_new (WindowData, 1);
 
 	data->ui_action_group = gtk_action_group_new ("EogFitToWidthPluginActions");
