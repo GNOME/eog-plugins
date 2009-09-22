@@ -180,7 +180,7 @@ static void set_exif_label (ExifData *exif_data, int exif_tag,
 static gchar*
 eog_exif_get_focal_length_desc (ExifData *exif_data)
 {
-	ExifEntry *entry,*entry35mm;
+	ExifEntry *entry = NULL, *entry35mm = NULL;
 	ExifByteOrder byte_order;
 	gfloat f_val = 0.0;
 	gchar *fl_text = NULL,*fl35_text = NULL;
