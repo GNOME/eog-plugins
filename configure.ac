@@ -318,13 +318,14 @@ if test "$?" = 1
 then
 
     PKG_CHECK_MODULES(EXIFDISPLAY,
-        [ libexif >= 0.6.16 ],
+        [ libexif >= 0.6.16,
+          gconf-2.0 >= 2.5.90 ],
         [],[have_exifdisplay=no])
     AC_SUBST(EXIFDISPLAY_LIBS)
     AC_SUBST(EXIFDISPLAY_CFLAGS)
     if test "x$have_exifdisplay" = "xno"
     then
-        undef_plugin exif-display "libexif was not found"
+        undef_plugin exif-display "libexif or gconf2 was not found"
     fi
 fi
 
