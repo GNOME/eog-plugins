@@ -1,3 +1,19 @@
+Version 2.28.1
+--------------
+
+Plugin changes:
+
+- Exif Display (Exif-display):
+ - #596452, eog-plugins must depend on libgconf (Felix Riemann)
+ - Code improvements (Felix Riemann)
+
+- Fit to Width:
+ - Code improvements (Felix Riemann)
+
+New and updated translations:
+
+- Matej Urbančič [sl]
+
 Version 2.28.0
 --------------
 
