@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins.master.gu\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-06-16 14:00+0000\n"
-"PO-Revision-Date: 2009-06-17 12:42+0530\n"
+"POT-Creation-Date: 2009-08-12 11:52+0000\n"
+"PO-Revision-Date: 2009-10-20 14:10+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,7 @@ msgid "Display the geolocation of the image on a map"
 msgstr "મેપ પર ઇમેજની geolocation ને દર્શાવો"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:333
 msgid "Map"
 msgstr "મેપ"
 
@@ -77,22 +78,27 @@ msgid "<b>Aperture:</b>"
 msgstr "<b>કાણું:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
+#| msgid "<b>Metering:</b>"
+msgid "<b>Description:</b>"
+msgstr "<b>વર્ણન:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
 msgid "<b>Expo. Time:</b>"
 msgstr "<b>Expo. Time:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:3
+#: ../plugins/exif-display/exif-display.ui.h:4
 msgid "<b>Expo. bias:</b>"
 msgstr "<b>Expo. bias:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:4
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>ISO ઝડપ:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: ../plugins/exif-display/exif-display.ui.h:6
 msgid "<b>Metering:</b>"
 msgstr "<b>મિટરીંગ:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:7
 msgid "<b>Zoom:</b>"
 msgstr "<b>નાનું મોટુ કરો:</b>"
 
