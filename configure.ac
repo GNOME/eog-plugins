@@ -60,9 +60,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr champlain fit-to-width exif-display"
-USEFUL_PLUGINS="postr champlain fit-to-width exif-display"
-DEFAULT_PLUGINS="postr champlain fit-to-width exif-display"
+ALL_PLUGINS="postr champlain fit-to-width exif-display send-by-mail"
+USEFUL_PLUGINS="postr champlain fit-to-width exif-display send-by-mail"
+DEFAULT_PLUGINS="postr champlain fit-to-width exif-display send-by-mail"
 
 PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole"
 PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole"
@@ -353,6 +353,7 @@ plugins/Makefile
 plugins/champlain/Makefile
 plugins/fit-to-width/Makefile
 plugins/exif-display/Makefile
+plugins/send-by-mail/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
 plugins/pythonconsole/Makefile
