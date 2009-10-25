@@ -10,3 +10,5 @@ DISTCLEANFILES = 		\
 	intltool-update
 
 DISTCHECK_CONFIGURE_FLAGS = --with-plugins=really-all
+
+-include $(top_srcdir)/git.mk

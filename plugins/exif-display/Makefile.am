@@ -37,3 +37,5 @@ EXTRA_DIST = $(plugin_in_files) $(UI_FILES)
 
 CLEANFILES = $(plugin_DATA)
 DISTCLEANFILES = $(plugin_DATA)
+
+-include $(top_srcdir)/git.mk

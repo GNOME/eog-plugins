@@ -7,3 +7,5 @@ plugin_PYTHON =
 DISTCLEANFILES =
 
 EXTRA_DIST =
+
+-include $(top_srcdir)/git.mk
