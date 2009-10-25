@@ -24,8 +24,9 @@
 #endif
 
 #include <glib/gi18n-lib.h>
-#include <eog/eog-scroll-view.h>
 #include <eog/eog-image.h>
+#include <eog/eog-thumb-view.h>
+#include <eog/eog-window.h>
 
 #include "eog-send-by-mail-plugin.h"
 
@@ -50,7 +51,7 @@ static const gchar * const ui_definition =
 	"</menu></menubar>"
 	"<popup name=\"ViewPopup\"><separator/>"
         "<menuitem action=\"EogPluginSendByMail\"/><separator/>"
-        "</popup></ui>";;
+        "</popup></ui>";
 
 static const GtkActionEntry action_entries[] =
 {
@@ -58,7 +59,7 @@ static const GtkActionEntry action_entries[] =
 	  "mail-message-new",
 	  N_("Send by Mail"),
 	  NULL,
-	  N_("Send the current image attached to a new mail"),
+	  N_("Send the selected images by mail"),
 	  G_CALLBACK (send_by_mail_cb) }
 };
 
@@ -148,30 +149,46 @@ static void
 send_by_mail_cb (GtkAction *action, EogWindow *window)
 {
 	GdkScreen *screen = NULL;
-	EogImage *img = NULL;
-	GFile *file = NULL;
-	gchar *path = NULL, *uri = NULL;
+	GtkWidget *tview = NULL;
+	GList *images = NULL, *image = NULL;
+	GString *uri = NULL;
+	gboolean first = TRUE;
 
 	g_return_if_fail (EOG_IS_WINDOW (window));
 
 	if (gtk_widget_has_screen (GTK_WIDGET (window)))
 		screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
-	/* Doesn't add a reference to the image! */
-	img = eog_window_get_image (window);
-	g_return_if_fail (img != NULL);
+	tview = eog_window_get_thumb_view (window);
+	images = eog_thumb_view_get_selected_images (EOG_THUMB_VIEW (tview));
+	uri = g_string_new ("mailto:?attach=");
 
-	file = eog_image_get_file (img);
-	if (!file)
-		return;
+	for (image = images; image != NULL; image = image->next) {
+		EogImage *img = EOG_IMAGE (image->data);
+		GFile *file;
+		gchar *path;
 
-	path = g_file_get_path (file);
-	uri = g_strdup_printf ("mailto:?attach=%s", path);
+		file = eog_image_get_file (img);
+		if (!file) {
+			g_object_unref (img);
+			continue;
+		}
+
+		path = g_file_get_path (file);
+		if (first) {
+			uri = g_string_append (uri, path);
+			first = FALSE;
+		} else {
+			g_string_append_printf (uri, "&attach=%s", path);
+		}
+		g_free (path);
+		g_object_unref (file);
+		g_object_unref (img);
+	}
+	g_list_free (images);
 
 	/* TODO: Error handling/reporting? */
-	gtk_show_uri (screen, uri, gtk_get_current_event_time (), NULL);
+	gtk_show_uri (screen, uri->str, gtk_get_current_event_time (), NULL);
 
-	g_free (uri);
-	g_free (path);
-	g_object_unref (file);
+	g_string_free (uri, TRUE);
 }
