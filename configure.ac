@@ -12,7 +12,7 @@ AC_SUBST(EOG_PLUGINS_MAJOR)
 
 AC_PREREQ(2.59)
 
-AM_INIT_AUTOMAKE([1.9 dist-bzip2 no-dist-gzip])
+AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 # Support silencing the build output if supported (automake-1.11+)
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
