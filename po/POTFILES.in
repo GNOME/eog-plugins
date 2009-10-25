@@ -6,6 +6,8 @@ plugins/exif-display/exif-display.eog-plugin.desktop.in
 [type: gettext/glade]plugins/exif-display/exif-display.ui
 plugins/fit-to-width/eog-fit-to-width-plugin.c
 plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in
+plugins/send-by-mail/eog-send-by-mail-plugin.c
+plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in
 plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in
 plugins/postr/postr.eog-plugin.desktop.in
 plugins/postr/eog-postr-plugin.c
