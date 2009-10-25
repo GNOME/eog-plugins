@@ -3,7 +3,7 @@
 EOG_MAJOR=2.20.0
 EOG_PLUGINS_MAJOR=2.20.0
 
-AC_INIT([eog-plugins], [2.28.2], [http://bugzilla.gnome.org/enter_bug.cgi?product=eog&component=plugins])
+AC_INIT([eog-plugins], [2.29.1], [http://bugzilla.gnome.org/enter_bug.cgi?product=eog&component=plugins])
 
 AC_CONFIG_SRCDIR([plugins])
 AC_PREFIX_PROGRAM([eog])
