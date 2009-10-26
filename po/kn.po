@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins.master.kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-06-16 14:00+0000\n"
-"PO-Revision-Date: 2009-06-29 20:55+0530\n"
+"POT-Creation-Date: 2009-10-25 18:38+0000\n"
+"PO-Revision-Date: 2009-10-26 12:51+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,16 +22,17 @@ msgid "Display the geolocation of the image on a map"
 msgstr "ಚಿತ್ರದ ಭೂಸ್ಥಳವನ್ನು ನಕ್ಷೆಯನ್ನು ತೋರಿಸು"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:312
 msgid "Map"
 msgstr "ನಕ್ಷೆ"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+#: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
 msgstr " (ಅಮಾನ್ಯ ಯುನಿಕೋಡ್)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#: ../plugins/exif-display/eog-exif-display-plugin.c:212
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (ಲೆನ್ಸ್)"
@@ -39,7 +40,7 @@ msgstr "%.1fmm (ಲೆನ್ಸ್)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#: ../plugins/exif-display/eog-exif-display-plugin.c:223
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
@@ -77,22 +78,27 @@ msgid "<b>Aperture:</b>"
 msgstr "<b>ಕಿಂಡಿ:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
+#| msgid "<b>Metering:</b>"
+msgid "<b>Description:</b>"
+msgstr "<b>ವಿವರಣೆ:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
 msgid "<b>Expo. Time:</b>"
 msgstr "<b>ಎಕ್ಸ್‌ಪೊ. ಸಮಯ:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:3
+#: ../plugins/exif-display/exif-display.ui.h:4
 msgid "<b>Expo. bias:</b>"
 msgstr "<b>ಎಕ್ಸ್‌ಪೊ. ಬಯಾಸ್:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:4
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>ISO ವೇಗ:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: ../plugins/exif-display/exif-display.ui.h:6
 msgid "<b>Metering:</b>"
 msgstr "<b>ಮೀಟರಿಂಗ್:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:7
 msgid "<b>Zoom:</b>"
 msgstr "<b>ಝೂಮ್‌:</b>"
 
@@ -104,6 +110,22 @@ msgstr "ಅಗಲಕ್ಕೆ ಹೊಂದಿಸು"
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "ಚಿತ್ರದ ಅಗಲಕ್ಕೆ ಹೊಂದುವಂತೆ ಹಿಗ್ಗಿಸು"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "ಮೈಲ್‌ ಮೂಲಕ ಕಳುಹಿಸು"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಚಿತ್ರಗಳನ್ನು ಮೈಲ್‌ ಮೂಲಕ ಕಳುಹಿಸು"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "ಮೈಲ್‌ ಮೂಲಕ ಕಳುಹಿಸು"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಚಿತ್ರವನ್ನು ಹೊಸ ಮೈಲ್‌ ಮೂಲಕ ಕಳುಹಿಸು"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
@@ -118,11 +140,11 @@ msgid "Flickr Uploader"
 msgstr "Flickr ಅಪ್‌ಲೋಡರ್"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:50
+#: ../plugins/postr/eog-postr-plugin.c:59
 msgid "Upload your pictures to Flickr"
 msgstr "Flickr ಗೆ ನಿಮ್ಮ ಚಿತ್ರಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
 
-#: ../plugins/postr/eog-postr-plugin.c:48
+#: ../plugins/postr/eog-postr-plugin.c:57
 msgid "Upload to Flickr"
 msgstr "Flickr ಗೆ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
 
