@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&component=general\n"
-"POT-Creation-Date: 2009-08-12 11:52+0000\n"
-"PO-Revision-Date: 2009-08-14 15:05+0200\n"
+"POT-Creation-Date: 2009-10-25 18:38+0000\n"
+"PO-Revision-Date: 2009-10-27 23:31+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,17 +23,17 @@ msgid "Display the geolocation of the image on a map"
 msgstr "Mostrar la geolocalización de la imagen en un mapa"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:333
+#: ../plugins/champlain/eog-champlain-plugin.c:312
 msgid "Map"
 msgstr "Mapa"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+#: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
 msgstr " (Unicode no válido)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#: ../plugins/exif-display/eog-exif-display-plugin.c:212
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (lente)"
@@ -41,7 +41,7 @@ msgstr "%.1fmm (lente)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#: ../plugins/exif-display/eog-exif-display-plugin.c:223
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (película de 35mm)"
@@ -79,7 +79,6 @@ msgid "<b>Aperture:</b>"
 msgstr "<b>Apertura:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-#| msgid "<b>Metering:</b>"
 msgid "<b>Description:</b>"
 msgstr "<b>Descripción:</b>"
 
@@ -112,6 +111,22 @@ msgstr "Ajustar a la anchura"
 msgid "Zoom to fit image width"
 msgstr "Ampliar para ajustar a la anchura de la imagen"
 
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "Enviar por correo-e"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "Enviar las imágenes seleccionadas por correo"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Enviar por correo-e"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Envía una imagen adjunta a un correo nuevo"
+
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
 msgstr "Muestra imágenes aleatorias en el modo diapositiva"
@@ -125,11 +140,11 @@ msgid "Flickr Uploader"
 msgstr "Cargador para Flickr"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:50
+#: ../plugins/postr/eog-postr-plugin.c:59
 msgid "Upload your pictures to Flickr"
 msgstr "Suba sus fotografías a Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:48
+#: ../plugins/postr/eog-postr-plugin.c:57
 msgid "Upload to Flickr"
 msgstr "Subir a Flickr"
 
