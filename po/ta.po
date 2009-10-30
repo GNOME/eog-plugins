@@ -1,4 +1,4 @@
-# translation of eog-plugins.po.master.bn_IN.po to Tamil
+# translation of eog-plugins.master.ta.po to Tamil
 # Bengali (India) translation of eog-plugins.
 # Copyright (C) 2009 eog-plugins's COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
@@ -6,10 +6,10 @@
 # I. Felix <ifelix@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: eog-plugins.po.master.bn_IN\n"
+"Project-Id-Version: eog-plugins.master.ta\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-06-17 07:13+0000\n"
-"PO-Revision-Date: 2009-06-24 14:53+0530\n"
+"POT-Creation-Date: 2009-10-25 18:38+0000\n"
+"PO-Revision-Date: 2009-10-28 15:31+0530\n"
 "Last-Translator: I. Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -20,22 +20,24 @@ msgstr ""
 "\n"
 "\n"
 "\n"
+"\n"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
 msgstr "வரைபடத்தில் இருப்பிட படத்தை காட்டு"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:312
 msgid "Map"
 msgstr "வரைபடம்"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+#: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
 msgstr " (தவறான யுனிகோட்)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#: ../plugins/exif-display/eog-exif-display-plugin.c:212
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (லென்ஸ்)"
@@ -43,7 +45,7 @@ msgstr "%.1fmm (லென்ஸ்)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#: ../plugins/exif-display/eog-exif-display-plugin.c:223
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm பிலிம்)்"
@@ -81,22 +83,27 @@ msgid "<b>Aperture:</b>"
 msgstr "<b>அப்பாச்சர்:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
+#| msgid "<b>Metering:</b>"
+msgid "<b>Description:</b>"
+msgstr "<b>விளக்கம்:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
 msgid "<b>Expo. Time:</b>"
 msgstr "<b>Expo. நேரம்:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:3
+#: ../plugins/exif-display/exif-display.ui.h:4
 msgid "<b>Expo. bias:</b>"
 msgstr "<b>Expo. bias:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:4
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>ISO வேகம்:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: ../plugins/exif-display/exif-display.ui.h:6
 msgid "<b>Metering:</b>"
 msgstr "<b>மீட்டரிங்:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:7
 msgid "<b>Zoom:</b>"
 msgstr "<b>அளவிடுதல்:</b>"
 
@@ -108,6 +115,22 @@ msgstr "அகலத்தில் பொருத்து"
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "பட அகலத்தை அளவிட பொருத்து"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "அஞ்சலால் அனுப்பு"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "தேர்ந்தெடுக்கப்பட்ட படங்களை அஞ்சலால் அனுப்பு"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "அஞ்சலால் அனுப்பு"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "ஒரு புதிய அஞ்சலுடன் ஒரு படத்தை சேர்த்து அனுப்பு"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
@@ -122,11 +145,11 @@ msgid "Flickr Uploader"
 msgstr "Flickr மேம்படுத்துபவர்"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:50
+#: ../plugins/postr/eog-postr-plugin.c:59
 msgid "Upload your pictures to Flickr"
 msgstr "Flickr இல் உங்கள் படங்களை மேம்படுத்தவும்"
 
-#: ../plugins/postr/eog-postr-plugin.c:48
+#: ../plugins/postr/eog-postr-plugin.c:57
 msgid "Upload to Flickr"
 msgstr "Flickr இல் மேம்படுத்து"
 
