@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-20 22:24+0200\n"
-"PO-Revision-Date: 2009-08-20 22:25+0100\n"
+"POT-Creation-Date: 2009-11-05 07:41+0100\n"
+"PO-Revision-Date: 2009-11-05 07:42+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -20,17 +20,17 @@ msgid "Display the geolocation of the image on a map"
 msgstr "Visa den geografiska platsen för bilden på en karta"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:333
+#: ../plugins/champlain/eog-champlain-plugin.c:312
 msgid "Map"
 msgstr "Karta"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:137
+#: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
 msgstr " (ogiltig Unicode)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:213
+#: ../plugins/exif-display/eog-exif-display-plugin.c:212
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (lins)"
@@ -38,7 +38,7 @@ msgstr "%.1fmm (lins)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:224
+#: ../plugins/exif-display/eog-exif-display-plugin.c:223
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
@@ -108,6 +108,22 @@ msgstr "Anpassa till bredd"
 msgid "Zoom to fit image width"
 msgstr "Zooma för att passa bildens bredd"
 
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "Skicka med e-post"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "Skicka markerade bilder med e-post"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Skicka med e-post"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Skicka en bild bifogad till ett nytt e-postmeddelande"
+
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
 msgstr "Blandar bilder i bildspelsläget"
@@ -121,11 +137,11 @@ msgid "Flickr Uploader"
 msgstr "Skicka till Flickr"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:50
+#: ../plugins/postr/eog-postr-plugin.c:59
 msgid "Upload your pictures to Flickr"
 msgstr "Skicka upp dina bilder till Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:48
+#: ../plugins/postr/eog-postr-plugin.c:57
 msgid "Upload to Flickr"
 msgstr "Skicka upp till Flickr"
 
