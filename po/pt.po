@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-30 18:18+0100\n"
-"PO-Revision-Date: 2009-08-19 22:23+0000\n"
+"POT-Creation-Date: 2009-11-21 23:43+0000\n"
+"PO-Revision-Date: 2009-11-21 01:03-0100\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -137,6 +137,18 @@ msgstr "Consola Python"
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Consola Python para o Eye of GNOME"
+
+#~ msgid "Send by Mail"
+#~ msgstr "Enviar por Mail"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "Enviar as imagens seleccionadas por mail"
+
+#~ msgid "Send By Mail"
+#~ msgstr "Enviar por Mail"
+
+#~ msgid "Sends an image attached to a new mail"
+#~ msgstr "Enviar imagens anexadas a um novo email"
 
 #~ msgid "Reload Image"
 #~ msgstr "Reler Imagem"
