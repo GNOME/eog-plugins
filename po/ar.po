@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-01 07:37+0200\n"
-"PO-Revision-Date: 2009-11-01 07:37+0300\n"
+"POT-Creation-Date: 2009-12-06 18:10+0200\n"
+"PO-Revision-Date: 2009-12-06 18:10+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.4.0\n"
+"X-Generator: Virtaal 0.5.0\n"
 "X-Poedit-Language: Arabic\n"
 
 #: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
@@ -54,7 +54,7 @@ msgstr "<b>عام</b>"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "<b>Histogram</b>"
-msgstr "<b>مدرّج تكراري</b>"
+msgstr "<b>رسم بياني</b>"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
@@ -152,11 +152,11 @@ msgstr "ارفع إلى فلكر"
 
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
 msgid "Python Console"
-msgstr "معراض بيثون"
+msgstr "مرقاب بيثون"
 
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
-msgstr "معراض بيثون لعين جنوم"
+msgstr "مرقاب بيثون لعين جنوم"
 
 #~ msgid "Reload Image"
 #~ msgstr "اعد تحميل الصورة"
