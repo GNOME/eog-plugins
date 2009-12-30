@@ -80,7 +80,7 @@ static const GtkActionEntry action_entries[] =
 	{ "EogPluginFitToWidth",
 	  GTK_STOCK_ZOOM_FIT,
 	  N_("Fit to width"),
-	  NULL,
+	  "W",
 	  N_("Zoom to fit image width"),
 	  G_CALLBACK (fit_to_width_cb) }
 };
