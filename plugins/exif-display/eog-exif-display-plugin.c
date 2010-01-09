@@ -462,8 +462,8 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 		calculate_histogram (data, eog_image);
 	}
 
-	cr = gdk_cairo_create (GTK_WIDGET (drawing_area)->window);
-	gdk_drawable_get_size ((GTK_WIDGET (drawing_area)->window),
+	cr = gdk_cairo_create (gtk_widget_get_window (GTK_WIDGET (drawing_area)));
+	gdk_drawable_get_size (gtk_widget_get_window (GTK_WIDGET (drawing_area)),
 			&drawing_area_width, &drawing_area_height);
 
 	scale_factor_y = drawing_area_height;
@@ -477,8 +477,9 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 
 	/* clear the display */
 	gtk_style = gtk_widget_get_style (GTK_WIDGET (drawing_area));
-	gtk_style_apply_default_background (gtk_style, GTK_WIDGET (drawing_area)->window,
-		TRUE, GTK_STATE_NORMAL, NULL, 0, 0, drawing_area_width, drawing_area_height);
+	gtk_style_apply_default_background (gtk_style,
+		gtk_widget_get_window (GTK_WIDGET (drawing_area)), TRUE,
+		GTK_STATE_NORMAL, NULL, 0, 0, drawing_area_width, drawing_area_height);
 
 	if (data->histogram_values_red == NULL) {
 		/* it's possible, if the image

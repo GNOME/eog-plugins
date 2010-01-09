@@ -50,6 +50,8 @@ fit_to_width_cb (GtkAction *action,
 	gint           image_height;
 	gint           view_width;
 	double         zoom;
+	GtkAllocation  allocation;
+
 
 	g_return_if_fail (EOG_IS_WINDOW (window));
 
@@ -60,7 +62,8 @@ fit_to_width_cb (GtkAction *action,
 	g_return_if_fail (EOG_IS_IMAGE (image));
 
 	eog_image_get_size (image, &image_width, &image_height);
-	view_width = view->allocation.width;
+	gtk_widget_get_allocation (view, &allocation);
+	view_width = allocation.width;
 
 	// HACK: It's necessary subtract the width size (15) of vscrollbar
 	//       to scrollview for obtain the display area.
