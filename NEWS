@@ -1,3 +1,22 @@
+Version 2.29.5
+--------------
+
+Plugin changes:
+
+- Exif Display
+ - Near complete GSEAL-support (Felix Riemann)
+
+- Fit to Width:
+ - Achieve full GSEAL-compatibility (Felix Riemann)
+
+New and updated translations:
+
+- Khaled Hosny [ar]
+- Gabor Kelemen [hu]
+- António Lima [pt]
+- Djavan Fagundes [pt_BR]
+- albertxiaoyu [zh_CN]
+
 Version 2.29.2
 --------------
 
