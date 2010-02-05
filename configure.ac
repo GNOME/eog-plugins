@@ -60,9 +60,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr champlain fit-to-width exif-display send-by-mail"
-USEFUL_PLUGINS="postr champlain fit-to-width exif-display send-by-mail"
-DEFAULT_PLUGINS="postr champlain fit-to-width exif-display send-by-mail"
+ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail"
+USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail"
+DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail"
 
 PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole"
 PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole"
@@ -81,7 +81,7 @@ fi
 AC_ARG_WITH([plugins],
 	    [AS_HELP_STRING([--with-plugins=LIST],
 			    [Comma-separated list specifying the plugins to build.
-			    Available: champlain, exif-display, fit-to-width,
+			    Available: map, exif-display, fit-to-width,
 			    postr, pythonconsole, slideshowshuffle,
 			    as well as the aliases default,
 			    all, and really-all])],
@@ -289,10 +289,10 @@ then
 	fi
 fi
 
-# *********
-# Champlain 
-# *********
-plugin_defined champlain
+# ***
+# Map
+# ***
+plugin_defined map
 if test "$?" = 1
 then
 	
@@ -301,12 +301,12 @@ then
 		  champlain-gtk-0.4 >= 0.4,
 		  clutter-gtk-0.10 >= 0.10,
 		  libexif >= 0.6.16 ],
-		[],[have_champlain=no])
+		[],[have_libchamplain=no])
 	AC_SUBST(CHAMPLAIN_LIBS)
 	AC_SUBST(CHAMPLAIN_CFLAGS)
-	if test "x$have_champlain" = "xno"
+	if test "x$have_libchamplain" = "xno"
 	then
-		undef_plugin champlain "champlain or libexif was not found"
+		undef_plugin map "libchamplain or libexif was not found"
 	fi
 fi
 
@@ -350,7 +350,7 @@ AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
-plugins/champlain/Makefile
+plugins/map/Makefile
 plugins/fit-to-width/Makefile
 plugins/exif-display/Makefile
 plugins/send-by-mail/Makefile

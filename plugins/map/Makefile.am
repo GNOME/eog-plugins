@@ -8,20 +8,20 @@ INCLUDES = \
 	$(WARN_CFLAGS)					\
 	-DEOG_LOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"
 
-plugin_LTLIBRARIES = libchamplain.la
+plugin_LTLIBRARIES = libmap.la
 
-libchamplain_la_SOURCES = \
-	eog-champlain-plugin.h				\
-	eog-champlain-plugin.c
+libmap_la_SOURCES = \
+	eog-map-plugin.h				\
+	eog-map-plugin.c
 
-libchamplain_la_LDFLAGS = \
+libmap_la_LDFLAGS = \
 	$(PLUGIN_LIBTOOL_FLAGS)				\
 	$(EOG_LIBS) \
 	$(CHAMPLAIN_LIBS)
 
 # Plugin Info
 
-plugin_in_files = champlain.eog-plugin.desktop.in
+plugin_in_files = map.eog-plugin.desktop.in
 
 %.eog-plugin: %.eog-plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 

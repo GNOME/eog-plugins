@@ -2,7 +2,7 @@
 #include <config.h>
 #endif
 
-#include "eog-champlain-plugin.h"
+#include "eog-map-plugin.h"
 
 #include <gmodule.h>
 #include <glib/gi18n-lib.h>
