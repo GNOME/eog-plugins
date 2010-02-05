@@ -308,6 +308,9 @@ impl_activate (EogPlugin *plugin,
 	g_object_set (G_OBJECT (data->map),
 		"zoom-level", 3,
 		"scroll-mode", CHAMPLAIN_SCROLL_MODE_KINETIC,
+#if CHAMPLAIN_CHECK_VERSION (0,4,3)
+		"show-scale", TRUE,
+#endif
 		NULL);
 	gtk_container_add (GTK_CONTAINER (viewport), embed);
 
