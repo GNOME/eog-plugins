@@ -20,9 +20,9 @@
 #include <clutter-gtk/clutter-gtk.h>
 #include <libexif/exif-data.h>
 
-#define WINDOW_DATA_KEY "EogChamplainWindowData"
+#define WINDOW_DATA_KEY "EogMapWindowData"
 
-EOG_PLUGIN_REGISTER_TYPE (EogChamplainPlugin, eog_champlain_plugin)
+EOG_PLUGIN_REGISTER_TYPE (EogMapPlugin, eog_map_plugin)
 
 #define FACTOR 2.0
 
@@ -49,18 +49,18 @@ free_window_data (WindowData *data)
 }
 
 static void
-eog_champlain_plugin_init (EogChamplainPlugin *plugin)
+eog_map_plugin_init (EogMapPlugin *plugin)
 {
-	eog_debug_message (DEBUG_PLUGINS, "EogChamplainPlugin initializing");
+	eog_debug_message (DEBUG_PLUGINS, "EogMapPlugin initializing");
 	gtk_clutter_init (NULL, NULL);
 }
 
 static void
-eog_champlain_plugin_finalize (GObject *object)
+eog_map_plugin_finalize (GObject *object)
 {
-	eog_debug_message (DEBUG_PLUGINS, "EogChamplainPlugin finalizing");
+	eog_debug_message (DEBUG_PLUGINS, "EogMapPlugin finalizing");
 
-	G_OBJECT_CLASS (eog_champlain_plugin_parent_class)->finalize (object);
+	G_OBJECT_CLASS (eog_map_plugin_parent_class)->finalize (object);
 }
 
 static ChamplainMarker *
@@ -354,12 +354,12 @@ impl_deactivate (EogPlugin *plugin,
 }
 
 static void
-eog_champlain_plugin_class_init (EogChamplainPluginClass *klass)
+eog_map_plugin_class_init (EogMapPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 	EogPluginClass *plugin_class = EOG_PLUGIN_CLASS (klass);
 
-	object_class->finalize = eog_champlain_plugin_finalize;
+	object_class->finalize = eog_map_plugin_finalize;
 
 	plugin_class->activate = impl_activate;
 	plugin_class->deactivate = impl_deactivate;
