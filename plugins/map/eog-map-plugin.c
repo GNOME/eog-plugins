@@ -64,7 +64,7 @@ eog_champlain_plugin_finalize (GObject *object)
 }
 
 static ChamplainMarker *
-create_champlain_marker(EogImage *image)
+create_champlain_marker (EogImage *image)
 {
 	ClutterActor *thumb, *marker;
 	GdkPixbuf* thumbnail = eog_image_get_thumbnail (image);
@@ -74,6 +74,7 @@ create_champlain_marker(EogImage *image)
 
 	if (thumbnail) {
 		gfloat width, height;
+
 		gtk_clutter_texture_set_from_pixbuf (CLUTTER_TEXTURE (thumb),
 						     thumbnail,
 						     NULL);
@@ -97,14 +98,16 @@ create_champlain_marker(EogImage *image)
 }
 
 static gboolean
-get_coordinates (EogImage *image, gdouble *latitude, gdouble *longitude)
+get_coordinates (EogImage *image,
+		 gdouble *latitude,
+		 gdouble *longitude)
 {
 	ExifData *exif_data;
 	gchar buffer[32];
 	gdouble lon, lat;
 	gfloat hour, min, sec;
 
-	exif_data = (ExifData *)eog_image_get_exif_info (image);
+	exif_data = (ExifData *) eog_image_get_exif_info (image);
 
 	if (exif_data) {
 
@@ -112,12 +115,12 @@ get_coordinates (EogImage *image, gdouble *latitude, gdouble *longitude)
 					 EXIF_TAG_GPS_LONGITUDE,
 					 buffer,
 					 32);
-		if (strlen(buffer) < 5) {
+		if (strlen (buffer) < 5) {
 			exif_data_unref (exif_data);
 			return FALSE;
 		}
 
-		sscanf(buffer, "%f, %f, %f", &hour, &min, &sec);
+		sscanf (buffer, "%f, %f, %f", &hour, &min, &sec);
 		lon = hour;
 		lon += min / 60.0;
 		lon += sec / 3600.0;
@@ -126,19 +129,19 @@ get_coordinates (EogImage *image, gdouble *latitude, gdouble *longitude)
 					 EXIF_TAG_GPS_LONGITUDE_REF,
 					 buffer,
 					 32);
-		if (strcmp(buffer, "W") == 0)
+		if (strcmp (buffer, "W") == 0)
 			lon *= -1;
 
 		eog_exif_util_get_value (exif_data,
 					 EXIF_TAG_GPS_LATITUDE,
 					 buffer,
 					 32);
-		if (strlen(buffer) < 5) {
+		if (strlen (buffer) < 5) {
 			exif_data_unref (exif_data);
 			return FALSE;
 		}
 
-		sscanf(buffer, "%f, %f, %f", &hour, &min, &sec);
+		sscanf (buffer, "%f, %f, %f", &hour, &min, &sec);
 		lat = hour;
 		lat += min / 60.0;
 		lat += sec / 3600.0;
@@ -147,7 +150,7 @@ get_coordinates (EogImage *image, gdouble *latitude, gdouble *longitude)
 					 EXIF_TAG_GPS_LATITUDE_REF,
 					 buffer,
 					 32);
-		if (strcmp(buffer, "S") == 0)
+		if (strcmp (buffer, "S") == 0)
 			lat *= -1;
 
 		*longitude = lon;
@@ -160,7 +163,8 @@ get_coordinates (EogImage *image, gdouble *latitude, gdouble *longitude)
 }
 
 static void
-create_marker (EogImage *image, WindowData *data)
+create_marker (EogImage *image,
+	       WindowData *data)
 {
 	data->marker = NULL;
 	if (!image)
@@ -176,8 +180,8 @@ create_marker (EogImage *image, WindowData *data)
 
 		clutter_actor_show (CLUTTER_ACTOR (data->marker));
 		champlain_base_marker_set_position (CHAMPLAIN_BASE_MARKER (data->marker),
-					       lat,
-					       lon);
+						    lat,
+						    lon);
 		clutter_container_add (CLUTTER_CONTAINER (data->layer),
 				       CLUTTER_ACTOR (data->marker),
 				       NULL);
@@ -185,7 +189,8 @@ create_marker (EogImage *image, WindowData *data)
 }
 
 static void
-thumbnail_changed_cb (EogImage* image, WindowData* data)
+thumbnail_changed_cb (EogImage* image,
+		      WindowData* data)
 {
 	gdouble lon, lat;
 
@@ -196,7 +201,7 @@ thumbnail_changed_cb (EogImage* image, WindowData* data)
 				      "latitude", &lat,
 				      "longitude", &lon,
 				      NULL);
-			g_object_set (G_OBJECT(data->map),
+			g_object_set (G_OBJECT (data->map),
 				      "zoom-level",
 				      15,
 				      NULL);
@@ -204,9 +209,8 @@ thumbnail_changed_cb (EogImage* image, WindowData* data)
 						  lat,
 						  lon);
 		} else {
-			g_object_set (G_OBJECT(data->map),
-				      "zoom-level",
-				      3,
+			g_object_set (G_OBJECT (data->map),
+				      "zoom-level", 3,
 				      NULL);
 		}
 		g_signal_handler_disconnect (image,
@@ -215,7 +219,8 @@ thumbnail_changed_cb (EogImage* image, WindowData* data)
 }
 
 static void
-selection_changed_cb (EogThumbView *view, WindowData *data)
+selection_changed_cb (EogThumbView *view,
+		      WindowData *data)
 {
 	EogImage *image;
 
@@ -245,19 +250,22 @@ selection_changed_cb (EogThumbView *view, WindowData *data)
 }
 
 static void
-zoom_in (GtkWidget *widget, ChamplainView *view)
+zoom_in (GtkWidget *widget,
+	 ChamplainView *view)
 {
-	champlain_view_zoom_in(view);
+	champlain_view_zoom_in (view);
 }
 
 static void
-zoom_out (GtkWidget *widget, ChamplainView *view)
+zoom_out (GtkWidget *widget,
+	  ChamplainView *view)
 {
-	champlain_view_zoom_out(view);
+	champlain_view_zoom_out (view);
 }
 
 static void
-impl_activate (EogPlugin *plugin, EogWindow *window)
+impl_activate (EogPlugin *plugin,
+	       EogWindow *window)
 {
 	GtkWidget *sidebar, *thumbview, *vbox, *bbox, *button, *viewport;
 	GtkWidget *embed;
@@ -265,7 +273,7 @@ impl_activate (EogPlugin *plugin, EogWindow *window)
 
 	eog_debug (DEBUG_PLUGINS);
 
-	data = g_new0(WindowData, 1);
+	data = g_new0 (WindowData, 1);
 	g_object_set_data_full (G_OBJECT (window),
 				WINDOW_DATA_KEY,
 				data,
@@ -286,16 +294,16 @@ impl_activate (EogPlugin *plugin, EogWindow *window)
 		NULL);
 	gtk_container_add (GTK_CONTAINER (viewport), embed);
 
-	vbox = gtk_vbox_new(FALSE, 0);
-	bbox =	gtk_toolbar_new ();
-	button = GTK_WIDGET(gtk_tool_button_new_from_stock (GTK_STOCK_ZOOM_IN));
+	vbox = gtk_vbox_new (FALSE, 0);
+	bbox = gtk_toolbar_new ();
+	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_ZOOM_IN));
 	g_signal_connect (button,
 			  "clicked",
 			  G_CALLBACK (zoom_in),
 			  data->map);
 	gtk_container_add (GTK_CONTAINER (bbox), button);
 
-	button = GTK_WIDGET(gtk_tool_button_new_from_stock (GTK_STOCK_ZOOM_OUT));
+	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_ZOOM_OUT));
 	g_signal_connect (button,
 			  "clicked",
 			  G_CALLBACK (zoom_out),
@@ -337,7 +345,7 @@ impl_deactivate (EogPlugin *plugin,
 	g_return_if_fail (data != NULL);
 
 	sidebar = eog_window_get_sidebar (window);
-	eog_sidebar_remove_page(EOG_SIDEBAR (sidebar), data->viewport);
+	eog_sidebar_remove_page (EOG_SIDEBAR (sidebar), data->viewport);
 
 	thumbview = eog_window_get_thumb_view (window);
 	g_signal_handler_disconnect (thumbview, data->selection_changed_id);
