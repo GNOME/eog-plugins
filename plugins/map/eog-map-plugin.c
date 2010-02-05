@@ -250,6 +250,23 @@ selection_changed_cb (EogThumbView *view,
 }
 
 static void
+jump_to (GtkWidget *widget,
+	 WindowData *data)
+{
+	gdouble lat, lon;
+
+	if (!data->marker)
+		return;
+
+	g_object_get (data->marker,
+		      "latitude", &lat,
+		      "longitude", &lon,
+		      NULL);
+
+	champlain_view_center_on (data->map, lat, lon);
+}
+
+static void
 zoom_in (GtkWidget *widget,
 	 ChamplainView *view)
 {
@@ -296,6 +313,17 @@ impl_activate (EogPlugin *plugin,
 
 	vbox = gtk_vbox_new (FALSE, 0);
 	bbox = gtk_toolbar_new ();
+
+	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_JUMP_TO));
+	g_signal_connect (button,
+			  "clicked",
+			  G_CALLBACK (jump_to),
+			  data);
+	gtk_container_add (GTK_CONTAINER (bbox), button);
+
+	button = GTK_WIDGET (gtk_separator_tool_item_new ());
+	gtk_container_add (GTK_CONTAINER (bbox), button);
+
 	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_ZOOM_IN));
 	g_signal_connect (button,
 			  "clicked",
