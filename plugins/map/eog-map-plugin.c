@@ -201,18 +201,11 @@ thumbnail_changed_cb (EogImage* image,
 				      "latitude", &lat,
 				      "longitude", &lon,
 				      NULL);
-			g_object_set (G_OBJECT (data->map),
-				      "zoom-level",
-				      15,
-				      NULL);
 			champlain_view_center_on (CHAMPLAIN_VIEW (data->map),
 						  lat,
 						  lon);
-		} else {
-			g_object_set (G_OBJECT (data->map),
-				      "zoom-level", 3,
-				      NULL);
 		}
+
 		g_signal_handler_disconnect (image,
 					     data->thumbnail_changed_id);
 	}
