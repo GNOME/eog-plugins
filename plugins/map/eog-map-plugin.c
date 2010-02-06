@@ -68,20 +68,18 @@ eog_map_plugin_finalize (GObject *object)
 	G_OBJECT_CLASS (eog_map_plugin_parent_class)->finalize (object);
 }
 
-static ChamplainMarker *
-create_champlain_marker (EogImage *image)
+static void
+update_marker_image (ChamplainMarker *marker,
+		     GtkIconSize size)
 {
-	ClutterActor *thumb, *marker;
+	GtkWidget *widget;
+	ClutterActor *thumb;
 
-	marker = champlain_marker_new ();
-	champlain_marker_set_draw_background (CHAMPLAIN_MARKER (marker), FALSE);
-	GtkWidget *tmp = gtk_button_new ();
-	thumb = gtk_clutter_texture_new_from_icon_name (tmp, "gnome-mime-image", GTK_ICON_SIZE_MENU);
-	/* don't need to unref tmp because it is floating */
+	widget = gtk_button_new ();
+	thumb = gtk_clutter_texture_new_from_icon_name (widget, "gnome-mime-image", size);
+	/* don't need to unref widget because it is floating */
 
 	champlain_marker_set_image (CHAMPLAIN_MARKER (marker), thumb);
-
-	return CHAMPLAIN_MARKER (marker);
 }
 
 static gboolean
@@ -165,7 +163,10 @@ create_marker (EogImage *image,
 	if (get_coordinates (image, &lat, &lon)) {
 		ChamplainMarker *marker;
 
-		marker = create_champlain_marker (image);
+		marker = CHAMPLAIN_MARKER (champlain_marker_new ());
+		champlain_marker_set_draw_background (CHAMPLAIN_MARKER (marker), FALSE);
+		update_marker_image (marker, GTK_ICON_SIZE_MENU);
+
 		g_object_set_data_full (G_OBJECT (image), "marker", marker, (GDestroyNotify) clutter_actor_destroy);
 
 		clutter_actor_show (CLUTTER_ACTOR (marker));
