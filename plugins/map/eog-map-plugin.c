@@ -29,7 +29,6 @@ EOG_PLUGIN_REGISTER_TYPE (EogMapPlugin, eog_map_plugin)
 typedef struct {
 	/* Handlers ids */
 	guint selection_changed_id;
-	guint thumbnail_changed_id;
 
 	GtkWidget *viewport;
 	ChamplainView *map;
@@ -37,6 +36,10 @@ typedef struct {
 	GtkWidget *jump_to_button;
 
 	ChamplainLayer *layer;
+
+	EogListStore *store;
+
+	/* The current selected position */
 	ChamplainMarker *marker;
 } WindowData;
 
@@ -170,9 +173,6 @@ create_marker (EogImage *image,
 {
 	gdouble lon, lat;
 
-	data->marker = NULL;
-	gtk_widget_set_sensitive (data->jump_to_button, FALSE);
-
 	if (!image)
 		return;
 
@@ -181,41 +181,20 @@ create_marker (EogImage *image,
 		return;
 
 	if (get_coordinates (image, &lat, &lon)) {
-		data->marker = create_champlain_marker (image);
+		ChamplainMarker *marker;
 
-		clutter_actor_show (CLUTTER_ACTOR (data->marker));
-		gtk_widget_set_sensitive (data->jump_to_button, TRUE);
-		champlain_base_marker_set_position (CHAMPLAIN_BASE_MARKER (data->marker),
+		marker = create_champlain_marker (image);
+		g_object_set_data_full (G_OBJECT (image), "marker", marker, (GDestroyNotify) clutter_actor_destroy);
+
+		clutter_actor_show (CLUTTER_ACTOR (marker));
+		champlain_base_marker_set_position (CHAMPLAIN_BASE_MARKER (marker),
 						    lat,
 						    lon);
 		clutter_container_add (CLUTTER_CONTAINER (data->layer),
-				       CLUTTER_ACTOR (data->marker),
+				       CLUTTER_ACTOR (marker),
 				       NULL);
 	}
 
-}
-
-static void
-thumbnail_changed_cb (EogImage* image,
-		      WindowData* data)
-{
-	gdouble lon, lat;
-
-	if (eog_image_get_thumbnail (image)) {
-		create_marker (image, data);
-		if (data->marker) {
-			g_object_get (data->marker,
-				      "latitude", &lat,
-				      "longitude", &lon,
-				      NULL);
-			champlain_view_center_on (CHAMPLAIN_VIEW (data->map),
-						  lat,
-						  lon);
-		}
-
-		g_signal_handler_disconnect (image,
-					     data->thumbnail_changed_id);
-	}
 }
 
 static void
@@ -223,6 +202,7 @@ selection_changed_cb (EogThumbView *view,
 		      WindowData *data)
 {
 	EogImage *image;
+	ChamplainMarker *marker;
 
 	if (!eog_thumb_view_get_n_selected (view))
 		return;
@@ -231,20 +211,26 @@ selection_changed_cb (EogThumbView *view,
 
 	g_return_if_fail (image != NULL);
 
-	if (data->marker)
-		clutter_container_remove (CLUTTER_CONTAINER (data->layer),
-					  CLUTTER_ACTOR (data->marker),
-					  NULL);
+	marker = g_object_get_data (G_OBJECT (image), "marker");
 
-	data->thumbnail_changed_id = g_signal_connect (G_OBJECT (image),
-						       "thumbnail-changed",
-						       G_CALLBACK (thumbnail_changed_cb),
-						       data);
+	if (marker) {
+		gdouble lat, lon;
 
-	/* Call the callback because images that are already in the
-	 * thumbview don't emit thumbnail_changed
-	 */
-	thumbnail_changed_cb (image, data);
+		g_object_get (marker,
+			      "latitude", &lat,
+			      "longitude", &lon,
+			      NULL);
+
+		champlain_view_center_on (CHAMPLAIN_VIEW (data->map),
+					  lat,
+					  lon);
+		data->marker = marker;
+		gtk_widget_set_sensitive (data->jump_to_button, TRUE);
+	}
+	else {
+		gtk_widget_set_sensitive (data->jump_to_button, FALSE);
+		data->marker = NULL;
+	}
 
 	g_object_unref (image);
 }
@@ -253,17 +239,19 @@ static void
 jump_to (GtkWidget *widget,
 	 WindowData *data)
 {
-	gdouble lat, lon;
-
 	if (!data->marker)
 		return;
+
+	gdouble lat, lon;
 
 	g_object_get (data->marker,
 		      "latitude", &lat,
 		      "longitude", &lon,
 		      NULL);
 
-	champlain_view_center_on (data->map, lat, lon);
+	champlain_view_center_on (CHAMPLAIN_VIEW (data->map),
+				  lat,
+				  lon);
 }
 
 static void
@@ -278,6 +266,43 @@ zoom_out (GtkWidget *widget,
 	  ChamplainView *view)
 {
 	champlain_view_zoom_out (view);
+}
+
+static gboolean
+for_each_thumb (GtkTreeModel *model,
+		GtkTreePath *path,
+		GtkTreeIter *iter,
+		WindowData *data)
+{
+	EogImage *image = NULL;
+
+	gtk_tree_model_get (model, iter,
+			    EOG_LIST_STORE_EOG_IMAGE, &image,
+			    -1);
+
+	if (!image) {
+		return FALSE;
+	}
+
+	create_marker (image, data);
+
+	g_object_unref (image);
+	return FALSE;
+}
+
+static void
+prepared_cb (EogWindow *window,
+	     WindowData *data)
+{
+	data->store = eog_window_get_store (window);
+
+	if (!data->store)
+		return;
+
+	/* At this point, the collection has been filled */
+	gtk_tree_model_foreach (GTK_TREE_MODEL (data->store),
+				(GtkTreeModelForeachFunc) for_each_thumb,
+				data);
 }
 
 static void
@@ -365,6 +390,11 @@ impl_activate (EogPlugin *plugin,
 	 *  the image is loaded, selection_changed isn't emited
 	 */
 	selection_changed_cb (EOG_THUMB_VIEW (thumbview), data);
+
+	g_signal_connect (G_OBJECT (window),
+			  "prepared",
+			  G_CALLBACK (prepared_cb),
+			  data);
 }
 
 static void
