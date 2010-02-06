@@ -72,32 +72,14 @@ static ChamplainMarker *
 create_champlain_marker (EogImage *image)
 {
 	ClutterActor *thumb, *marker;
-	GdkPixbuf* thumbnail = eog_image_get_thumbnail (image);
 
 	marker = champlain_marker_new ();
-	thumb = clutter_texture_new ();
-
-	if (thumbnail) {
-		gfloat width, height;
-
-		gtk_clutter_texture_set_from_pixbuf (CLUTTER_TEXTURE (thumb),
-						     thumbnail,
-						     NULL);
-		/* Clip the thumbnail to cut the border */
-		width = gdk_pixbuf_get_width (thumbnail);
-		height = gdk_pixbuf_get_height (thumbnail);
-
-		clutter_actor_set_clip (thumb, 3, 3, (width / FACTOR) - 7,
-			(height / FACTOR) - 7);
-		width = clutter_actor_get_width (thumb) / FACTOR;
-		height = clutter_actor_get_height (thumb) / FACTOR;
-		clutter_actor_set_size (thumb, width, height);
-	}
+	champlain_marker_set_draw_background (CHAMPLAIN_MARKER (marker), FALSE);
+	GtkWidget *tmp = gtk_button_new ();
+	thumb = gtk_clutter_texture_new_from_icon_name (tmp, "gnome-mime-image", GTK_ICON_SIZE_MENU);
+	/* don't need to unref tmp because it is floating */
 
 	champlain_marker_set_image (CHAMPLAIN_MARKER (marker), thumb);
-
-	if (thumbnail)
-		g_object_unref (thumbnail);
 
 	return CHAMPLAIN_MARKER (marker);
 }
