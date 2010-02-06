@@ -207,11 +207,22 @@ selection_changed_cb (EogThumbView *view,
 		champlain_view_center_on (CHAMPLAIN_VIEW (data->map),
 					  lat,
 					  lon);
+
+		/* Reset the previous selection */
+		if (data->marker)
+			update_marker_image (data->marker, GTK_ICON_SIZE_MENU);
+
 		data->marker = marker;
+		update_marker_image (data->marker, GTK_ICON_SIZE_LARGE_TOOLBAR);
 		gtk_widget_set_sensitive (data->jump_to_button, TRUE);
 	}
 	else {
 		gtk_widget_set_sensitive (data->jump_to_button, FALSE);
+
+		/* Reset the previous selection */
+		if (data->marker)
+			update_marker_image (data->marker, GTK_ICON_SIZE_MENU);
+
 		data->marker = NULL;
 	}
 
