@@ -30,6 +30,7 @@ typedef struct {
 	/* Handlers ids */
 	guint selection_changed_id;
 
+	GtkWidget *thumbview;
 	GtkWidget *viewport;
 	ChamplainView *map;
 
@@ -147,6 +148,21 @@ get_coordinates (EogImage *image,
 	return FALSE;
 }
 
+static gboolean
+change_image (ChamplainMarker *marker,
+	      ClutterEvent *event,
+	      WindowData *data)
+{
+	EogImage *image;
+
+	image = g_object_get_data (G_OBJECT (marker), "image");
+
+	if (!image)
+		return;
+
+	eog_thumb_view_set_current_image (EOG_THUMB_VIEW (data->thumbview), image, TRUE);
+}
+
 static void
 create_marker (EogImage *image,
 	       WindowData *data)
@@ -168,6 +184,7 @@ create_marker (EogImage *image,
 		update_marker_image (marker, GTK_ICON_SIZE_MENU);
 
 		g_object_set_data_full (G_OBJECT (image), "marker", marker, (GDestroyNotify) clutter_actor_destroy);
+		g_object_set_data (G_OBJECT (marker), "image", image);
 
 		clutter_actor_show (CLUTTER_ACTOR (marker));
 		champlain_base_marker_set_position (CHAMPLAIN_BASE_MARKER (marker),
@@ -176,6 +193,12 @@ create_marker (EogImage *image,
 		clutter_container_add (CLUTTER_CONTAINER (data->layer),
 				       CLUTTER_ACTOR (marker),
 				       NULL);
+
+		clutter_actor_set_reactive (CLUTTER_ACTOR (marker), TRUE);
+		g_signal_connect (marker,
+				  "button-release-event",
+				  G_CALLBACK (change_image),
+				  data);
 	}
 
 }
@@ -288,7 +311,6 @@ static void
 prepared_cb (EogWindow *window,
 	     WindowData *data)
 {
-	GtkWidget *thumbview;
 
 	data->store = eog_window_get_store (window);
 
@@ -300,8 +322,8 @@ prepared_cb (EogWindow *window,
 				(GtkTreeModelForeachFunc) for_each_thumb,
 				data);
 
-	thumbview = eog_window_get_thumb_view (window);
-	data->selection_changed_id = g_signal_connect (G_OBJECT (thumbview),
+	data->thumbview = eog_window_get_thumb_view (window);
+	data->selection_changed_id = g_signal_connect (G_OBJECT (data->thumbview),
 						       "selection-changed",
 						       G_CALLBACK (selection_changed_cb),
 						       data);
@@ -309,7 +331,7 @@ prepared_cb (EogWindow *window,
 	/* Call the callback because if the plugin is activated after
 	 *  the image is loaded, selection_changed isn't emited
 	 */
-	selection_changed_cb (EOG_THUMB_VIEW (thumbview), data);
+	selection_changed_cb (EOG_THUMB_VIEW (data->thumbview), data);
 
 }
 
@@ -317,7 +339,7 @@ static void
 impl_activate (EogPlugin *plugin,
 	       EogWindow *window)
 {
-	GtkWidget *sidebar, *thumbview, *vbox, *bbox, *button, *viewport;
+	GtkWidget *sidebar, *vbox, *bbox, *button, *viewport;
 	GtkWidget *embed;
 	WindowData *data;
 
