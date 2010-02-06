@@ -276,6 +276,8 @@ static void
 prepared_cb (EogWindow *window,
 	     WindowData *data)
 {
+	GtkWidget *thumbview;
+
 	data->store = eog_window_get_store (window);
 
 	if (!data->store)
@@ -285,6 +287,18 @@ prepared_cb (EogWindow *window,
 	gtk_tree_model_foreach (GTK_TREE_MODEL (data->store),
 				(GtkTreeModelForeachFunc) for_each_thumb,
 				data);
+
+	thumbview = eog_window_get_thumb_view (window);
+	data->selection_changed_id = g_signal_connect (G_OBJECT (thumbview),
+						       "selection-changed",
+						       G_CALLBACK (selection_changed_cb),
+						       data);
+
+	/* Call the callback because if the plugin is activated after
+	 *  the image is loaded, selection_changed isn't emited
+	 */
+	selection_changed_cb (EOG_THUMB_VIEW (thumbview), data);
+
 }
 
 static void
@@ -361,17 +375,6 @@ impl_activate (EogPlugin *plugin,
 	gtk_container_add (GTK_CONTAINER (vbox), viewport);
 	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), _("Map"), vbox);
 	gtk_widget_show_all (vbox);
-
-	thumbview = eog_window_get_thumb_view (window);
-	data->selection_changed_id = g_signal_connect (G_OBJECT (thumbview),
-						       "selection-changed",
-						       G_CALLBACK (selection_changed_cb),
-						       data);
-
-	/* Call the callback because if the plugin is activated after
-	 *  the image is loaded, selection_changed isn't emited
-	 */
-	selection_changed_cb (EOG_THUMB_VIEW (thumbview), data);
 
 	g_signal_connect (G_OBJECT (window),
 			  "prepared",
