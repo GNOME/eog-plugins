@@ -34,6 +34,8 @@ typedef struct {
 	GtkWidget *viewport;
 	ChamplainView *map;
 
+	GtkWidget *jump_to_button;
+
 	ChamplainLayer *layer;
 	ChamplainMarker *marker;
 } WindowData;
@@ -166,7 +168,11 @@ static void
 create_marker (EogImage *image,
 	       WindowData *data)
 {
+	gdouble lon, lat;
+
 	data->marker = NULL;
+	gtk_widget_set_sensitive (data->jump_to_button, FALSE);
+
 	if (!image)
 		return;
 
@@ -174,11 +180,11 @@ create_marker (EogImage *image,
 	    !eog_image_load (image, EOG_IMAGE_DATA_EXIF, NULL, NULL))
 		return;
 
-	gdouble lon, lat;
 	if (get_coordinates (image, &lat, &lon)) {
 		data->marker = create_champlain_marker (image);
 
 		clutter_actor_show (CLUTTER_ACTOR (data->marker));
+		gtk_widget_set_sensitive (data->jump_to_button, TRUE);
 		champlain_base_marker_set_position (CHAMPLAIN_BASE_MARKER (data->marker),
 						    lat,
 						    lon);
@@ -186,6 +192,7 @@ create_marker (EogImage *image,
 				       CLUTTER_ACTOR (data->marker),
 				       NULL);
 	}
+
 }
 
 static void
@@ -317,6 +324,7 @@ impl_activate (EogPlugin *plugin,
 			  G_CALLBACK (jump_to),
 			  data);
 	gtk_container_add (GTK_CONTAINER (bbox), button);
+	data->jump_to_button = button;
 
 	button = GTK_WIDGET (gtk_separator_tool_item_new ());
 	gtk_container_add (GTK_CONTAINER (bbox), button);
