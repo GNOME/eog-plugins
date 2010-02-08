@@ -1,7 +1,7 @@
 # Italian translation og Eye of GNOME plugins.
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
-# Gianvito Cavasoli <janvitus@ubuntu-it.org>, 2009.
+# Gianvito Cavasoli <janvitus@ubuntu-it.org>, 2009, 2010.
 #
 #
 msgid ""
@@ -9,23 +9,35 @@ msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&component=general\n"
-"POT-Creation-Date: 2009-09-01 01:47+0000\n"
-"PO-Revision-Date: 2009-08-24 14:03+0200\n"
+"POT-Creation-Date: 2010-02-08 16:30+0000\n"
+"PO-Revision-Date: 2010-01-29 14:21+0100\n"
 "Last-Translator: Gianvito Cavasoli <janvitus@ubuntu-it.org>\n"
-"Language-Team: Italian <tp@lists.linux.it>\n"
+"Language-Team: Italiana <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
 msgstr "Visualizza la posizione geografica dell'immagine su una mappa"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:355
 msgid "Map"
 msgstr "Mappa"
+
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr ""
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr ""
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr ""
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
@@ -102,14 +114,30 @@ msgstr "<b>Esposimetro:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>Ingrandimento:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
 msgstr "Adatta alla larghezza"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Ingrandisce per adattare l'immagine alla larghezza"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "Invia per email"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "Invia le immagini selezionate via email"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Invia per email"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Invia un'immagine allegandola a una nuova email"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
