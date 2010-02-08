@@ -1,5 +1,5 @@
-plugins/champlain/map.eog-plugin.desktop.in
-plugins/champlain/eog-map-plugin.c
+plugins/map/map.eog-plugin.desktop.in
+plugins/map/eog-map-plugin.c
 plugins/exif-display/eog-exif-display-plugin.c
 [type: gettext/glade]plugins/exif-display/exif-display-config.ui
 plugins/exif-display/exif-display.eog-plugin.desktop.in
