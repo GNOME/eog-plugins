@@ -1,3 +1,25 @@
+Version 2.29.90
+---------------
+
+New plugins:
+
+- PicasaWeb Uploader (posasa)
+  Uploads selected images to Google's PicasaWeb service using libgdata.
+  Requires yet unreleased libgdata-0.6.0; take from git. (Richard Schwarting).
+
+Plugin changes:
+
+- Map (map)
+ - Rename plugin from champlain to map (Pierre-Luc Beaudoin)
+ - Add button to jump to current image location (Pierre-Luc Beaudoin)
+ - Display scale if libchamplain is new enough (Pierre-Luc Beaudoin)
+ - Keep zoom level when changing image (Pierre-Luc Beaudoin)
+
+New and updated translations:
+
+- Gianvito Cavasoli [it]
+- Matej Urbančič [sl]
+
 Version 2.29.5
 --------------
 
