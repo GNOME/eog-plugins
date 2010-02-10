@@ -38,7 +38,6 @@
 #include <gdata/gdata.h>
 
 #define WINDOW_DATA_KEY "EogPostasaWindowData"
-#define MENU_PATH "/MainMenu/ToolsMenu/ToolsOps_2"
 
 #define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/postasa/postasa-config.xml"
 #define GTKBUILDER_UPLOAD_FILE EOG_PLUGINDIR"/postasa/postasa-uploads.xml"
@@ -106,6 +105,12 @@ static void picasaweb_upload_cb (GtkAction *action, EogWindow *window);
 static GtkWidget *login_get_dialog (EogPostasaPlugin *plugin);
 static gboolean login_dialog_close (EogPostasaPlugin *plugin);
 
+static const gchar * const ui_definition = 
+	"<ui><menubar name=\"MainMenu\">"
+	"<menu name=\"ToolsMenu\" action=\"Tools\"><separator/>"
+	"<menuitem name=\"EogPluginPostasa\" action=\"EogPluginRunPostasa\"/>"
+	"<separator/></menu></menubar></ui>";
+
 /**
  * action_entries:
  *
@@ -114,7 +119,7 @@ static gboolean login_dialog_close (EogPostasaPlugin *plugin);
  **/
 static const GtkActionEntry action_entries[] =
 {
-	{ "RunPostasa",
+	{ "EogPluginRunPostasa",
 	  "postasa",
 	  N_("Upload to PicasaWeb"),
 	  NULL,
@@ -731,8 +736,10 @@ impl_activate (EogPlugin *_plugin,
 
 	manager = eog_window_get_ui_manager (window); /* do not unref */
 	gtk_ui_manager_insert_action_group (manager, data->ui_action_group, -1);
-	data->ui_id = gtk_ui_manager_new_merge_id (manager);
-	gtk_ui_manager_add_ui (manager, data->ui_id, MENU_PATH, "RunPostasa", "RunPostasa", GTK_UI_MANAGER_MENUITEM, FALSE);
+	data->ui_id = gtk_ui_manager_add_ui_from_string (manager,
+							 ui_definition,
+							 -1, NULL);
+	g_warn_if_fail (data->ui_id != 0);
 
 	g_object_set_data_full (G_OBJECT (window), WINDOW_DATA_KEY, data, (GDestroyNotify) free_window_data);
 }
