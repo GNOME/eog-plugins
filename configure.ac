@@ -60,9 +60,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail"
-USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail"
-DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail"
+ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
+USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
+DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
 
 PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole"
 PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole"
@@ -82,7 +82,7 @@ AC_ARG_WITH([plugins],
 	    [AS_HELP_STRING([--with-plugins=LIST],
 			    [Comma-separated list specifying the plugins to build.
 			    Available: map, exif-display, fit-to-width,
-			    postr, pythonconsole, slideshowshuffle,
+			    postr, postasa, pythonconsole, slideshowshuffle,
 			    as well as the aliases default,
 			    all, and really-all])],
 	    [plugins=$with_plugins],
@@ -289,6 +289,23 @@ then
 	fi
 fi
 
+# *******
+# Postasa
+# *******
+plugin_defined postasa
+if test "$?" = 1
+then
+    PKG_CHECK_MODULES(POSTASA,
+        [ libgdata >= 0.6.0 ],
+        [],[have_postasa=no])
+    AC_SUBST(POSTASA_LIBS)
+    AC_SUBST(POSTASA_CFLAGS)
+    if test "x$have_postasa" = "xno"
+    then
+        undef_plugin postasa "libgdata was not found"
+    fi
+fi
+
 # ***
 # Map
 # ***
@@ -356,6 +373,7 @@ plugins/exif-display/Makefile
 plugins/send-by-mail/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
+plugins/postasa/Makefile
 plugins/pythonconsole/Makefile
 po/Makefile.in])
 
