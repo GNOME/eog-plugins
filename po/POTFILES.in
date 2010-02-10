@@ -9,6 +9,10 @@ plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in
 plugins/send-by-mail/eog-send-by-mail-plugin.c
 plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in
 plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in
+plugins/postasa/eog-postasa-plugin.c
+[type: gettext/glade]plugins/postasa/postasa-config.xml
+[type: gettext/glade]plugins/postasa/postasa-uploads.xml
+plugins/postasa/postasa.eog-plugin.desktop.in
 plugins/postr/postr.eog-plugin.desktop.in
 plugins/postr/eog-postr-plugin.c
 plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in
