@@ -1,4 +1,6 @@
-# This file is distributed under the same license as the package.
+# Slovenian translation for eog-plugins.
+# Copyright (C) 2009 eog-plugins COPYRIGHT HOLDER
+# This file is distributed under the same license as the eog-plugins package.
 #
 # Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2009.
 #
@@ -6,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-11-05 06:42+0000\n"
-"PO-Revision-Date: 2009-11-13 14:25+0100\n"
+"POT-Creation-Date: 2010-02-08 21:19+0000\n"
+"PO-Revision-Date: 2010-02-10 09:06+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -20,14 +22,26 @@ msgstr ""
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
-msgstr "Prikaži geografski položaj mesta,kjer je bila slika posneta"
+msgstr "Pokaži geografski položaj mesta,kjer je bila slika posneta"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:355
 msgid "Map"
 msgstr "Zemljevid"
+
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Skoči na trenutno mesto slike"
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Približaj"
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Oddalji"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
@@ -58,19 +72,19 @@ msgstr "<b>Histogram:</b>"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
-msgstr "Prikaži RGB histogram"
+msgstr "Pokaži RGB histogram"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
 msgid "Display camera settings in statusbar"
-msgstr "Prikaži nastavitve aparata v vrstici stanja"
+msgstr "Pokaži nastavitve aparata v vrstici stanja"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display per-channel histogram"
-msgstr "Prikaži kanalski histogram"
+msgstr "Pokaži kanalski histogram"
 
 #: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
 msgid "Displays camera settings and histogram"
-msgstr "Prikaže nastavitve aparata in histogram"
+msgstr "Pokaže nastavitve aparata in histogram"
 
 #: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
 msgid "Exif display"
@@ -102,16 +116,16 @@ msgstr "<b>Umerjanje:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
 msgid "<b>Zoom:</b>"
-msgstr "<b>Povečava:</b>"
+msgstr "<b>Približanje:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
 msgstr "Prilagodi širini"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
-msgstr "Povečaj na velikost prilagojeno širini"
+msgstr "Približaj prilagojeno širini"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
 msgid "Send by Mail"
