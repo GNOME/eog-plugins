@@ -27,7 +27,7 @@ libpostasa_la_LIBADD = $(EOG_LIBS)			\
 
 plugin_in_files = postasa.eog-plugin.desktop.in
 
-UI_FILES = postasa-config.xml postasa-uploads.xml default.png
+UI_FILES = postasa-config.xml postasa-uploads.xml
 ui_DATA = $(UI_FILES)
 uidir = $(plugindir)/postasa
 

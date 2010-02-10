@@ -283,11 +283,25 @@ uploads_add_entry (EogPostasaPlugin *plugin, EogImage *image, GCancellable *canc
 	   particularly what needs unrefing */
 	uri = eog_image_get_uri_for_display (image);
 	thumbnail_pixbuf = eog_image_get_thumbnail (image);
-	if (GDK_IS_PIXBUF (thumbnail_pixbuf)) {
+	if (thumbnail_pixbuf && GDK_IS_PIXBUF (thumbnail_pixbuf)) {
 		scaled_pixbuf = gdk_pixbuf_scale_simple (thumbnail_pixbuf, 32, 32, GDK_INTERP_BILINEAR);
 		g_object_unref (thumbnail_pixbuf);
 	} else {
-		scaled_pixbuf = gdk_pixbuf_new_from_file (DEFAULT_THUMBNAIL, &error);
+		/* This is currently a workaround due to limitations in eog's
+		 * eog's thumbnailing mechanism */
+		GError *error = NULL;
+		GtkIconTheme *icon_theme;
+
+		icon_theme = gtk_icon_theme_get_default ();
+
+		scaled_pixbuf = gtk_icon_theme_load_icon (icon_theme,
+							  "image-x-generic",
+							  32, 0, &error);
+
+		if (!scaled_pixbuf) {
+			g_warning ("Couldn't load icon: %s", error->message);
+			g_error_free (error);
+		}
 	}
 	size = g_strdup_printf ("%luKB", eog_image_get_bytes (image) / 1024);
 	iter = g_slice_new0 (GtkTreeIter);
