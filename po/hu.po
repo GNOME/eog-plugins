@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-03 18:41+0100\n"
-"PO-Revision-Date: 2010-01-03 18:42+0100\n"
+"POT-Creation-Date: 2010-02-11 22:07+0100\n"
+"PO-Revision-Date: 2010-02-11 22:20+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "MIME-Version: 1.0\n"
@@ -18,18 +18,9 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "A kép földrajzi elhelyezkedésének jelölése a térképen"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
-msgid "Map"
-msgstr "Térkép"
-
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
-msgstr "(érvénytelen Unicode)"
+msgstr " (érvénytelen Unicode)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
@@ -102,14 +93,140 @@ msgstr "<b>Mérés:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>Nagyítás:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
 msgstr "Szélesség illesztése"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Illesztés a kép szélességéhez"
+
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Ugrás a jelenlegi kép helyére"
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Nagyítás"
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Kicsinyítés"
+
+#: ../plugins/map/eog-map-plugin.c:355
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Térkép"
+
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "A kép földrajzi elhelyezkedésének jelölése a térképen"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "Feltöltés a Picasawebre"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Képek feltöltése a Picasawebre"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:321
+msgid "Uploading..."
+msgstr "Feltöltés…"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:368
+msgid "Uploaded"
+msgstr "Feltöltve"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:372
+msgid "Cancelled"
+msgstr "Megszakítva"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:375
+msgid "Failed"
+msgstr "Sikertelen"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:523
+#, c-format
+msgid "Login failed. %s"
+msgstr "A bejelentkezés meghiúsult. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:527
+msgid "Logged in successully."
+msgstr "A bejelentkezés sikerült."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:528
+msgid "Close"
+msgstr "Bezárás"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:549
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Mégse"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:555
+msgid "Logging in..."
+msgstr "Bejelentkezés…"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:583
+msgid "Please log in to continue upload."
+msgstr "Jelentkezzen be a feltöltés folytatásához."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Bejelentkezés"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Jelszó"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "PicasaWeb bejelentkezés"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Összes megszakítása"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Kijelölt megszakítása"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Feltöltések:"
+
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "Picasaweb feltöltő"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Feltöltés a Flickr-re"
+
+#: ../plugins/postr/eog-postr-plugin.c:59
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Képek feltöltése a Flickr-re"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr feltöltő"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python konzol"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Python konzol az Eye of GNOME programhoz"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
 msgid "Send by Mail"
@@ -134,25 +251,4 @@ msgstr "Képek keverése a diavetítés nézetben"
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Diavetítés véletlenszerűen"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Flickr feltöltő"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "Képek feltöltése a Flickr-re"
-
-#: ../plugins/postr/eog-postr-plugin.c:57
-msgid "Upload to Flickr"
-msgstr "Feltöltés a Flickr-re"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python konzol"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
-msgid "Python console for Eye of GNOME"
-msgstr "Python konzol az Eye of GNOME programhoz"
 
