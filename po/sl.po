@@ -2,14 +2,14 @@
 # Copyright (C) 2009 eog-plugins COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2009.
+# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2010-02-08 21:19+0000\n"
-"PO-Revision-Date: 2010-02-10 09:06+0100\n"
+"POT-Creation-Date: 2010-02-10 19:40+0000\n"
+"PO-Revision-Date: 2010-02-11 07:52+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -21,27 +21,6 @@ msgstr ""
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
-
-#: ../plugins/map/map.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "Pokaži geografski položaj mesta,kjer je bila slika posneta"
-
-#: ../plugins/map/map.eog-plugin.desktop.in.h:2
-#: ../plugins/map/eog-map-plugin.c:355
-msgid "Map"
-msgstr "Zemljevid"
-
-#: ../plugins/map/eog-map-plugin.c:321
-msgid "Jump to current image's location"
-msgstr "Skoči na trenutno mesto slike"
-
-#: ../plugins/map/eog-map-plugin.c:333
-msgid "Zoom in"
-msgstr "Približaj"
-
-#: ../plugins/map/eog-map-plugin.c:341
-msgid "Zoom out"
-msgstr "Oddalji"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
@@ -127,6 +106,132 @@ msgstr "Prilagodi širini"
 msgid "Zoom to fit image width"
 msgstr "Približaj prilagojeno širini"
 
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Skoči na trenutno mesto slike"
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Približaj"
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Oddalji"
+
+#: ../plugins/map/eog-map-plugin.c:355
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Zemljevid"
+
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Pokaži geografski položaj mesta,kjer je bila slika posneta"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "Prenesi na PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Prenos vaših slike na portal PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:321
+msgid "Uploading..."
+msgstr "Prenašanje ..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:368
+msgid "Uploaded"
+msgstr "Preneseno"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:372
+msgid "Cancelled"
+msgstr "Preklicano"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:375
+msgid "Failed"
+msgstr "Napaka"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:523
+#, c-format
+msgid "Login failed. %s"
+msgstr "Prijava ni uspela. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:527
+msgid "Logged in successully."
+msgstr "Uspešna prijava."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:528
+msgid "Close"
+msgstr "Zapri"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:549
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:555
+msgid "Logging in..."
+msgstr "Prijavljanje ..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:583
+msgid "Please log in to continue upload."
+msgstr "Prijavite se za nadaljevanje prenosa."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Prijava"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Geslo"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "Prijava PicasaWeb"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Uporabniško ime"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Prekliči vse"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Prekliči izbrano"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Prenosi:"
+
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "Program za prenos datotek na PicasaWeb"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Prenesi na Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:59
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Prenos vaših slike na portal Flickr"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Program za prenos datotek na Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Konzola python"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Konzola Python za program Eye of GNOME"
+
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
 msgid "Send by Mail"
 msgstr "Pošlji po pošti"
@@ -150,25 +255,4 @@ msgstr "Premešaj slike med diaprikazovanjem"
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Premešaj slike"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Program za prenos datotek na Flickr"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "Prenos vaših slike na portal Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:57
-msgid "Upload to Flickr"
-msgstr "Prenesi na Flickr"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Konzola python"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
-msgid "Python console for Eye of GNOME"
-msgstr "Konzola Python za program Eye of GNOME"
 
