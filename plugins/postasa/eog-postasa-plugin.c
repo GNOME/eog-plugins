@@ -319,7 +319,7 @@ uploads_add_entry (EogPostasaPlugin *plugin, EogImage *image, GCancellable *canc
 					   2, size,
 					   3, 50, /* upload status: set to G_MAXINT when done, to 0 to not start */
 					   4, cancellable,
-					   5, N_("Uploading..."),
+					   5, _("Uploading..."),
 					   -1); /* TODO: where should cancellabe, scaled_pixbuf be unref'd? don't worry about it since
 						   they'll exist until EoG exits anyway? or in eog_postasa_plugin_finalize()? */
 	g_free (uri);
@@ -366,14 +366,14 @@ picasaweb_upload_async_cb (EogPostasaPlugin *plugin, GAsyncResult *res, PicasaWe
 	GError *error = NULL; /* TODO: make sure to clear all set errors */
 
 	if (g_simple_async_result_get_op_res_gboolean (G_SIMPLE_ASYNC_RESULT (res)) == TRUE) {
-		gtk_list_store_set (plugin->priv->uploads_store, data->iter, 3, G_MAXINT, 5, N_("Uploaded"), -1);
+		gtk_list_store_set (plugin->priv->uploads_store, data->iter, 3, G_MAXINT, 5, _("Uploaded"), -1);
 	} else {
 		gtk_tree_model_get (GTK_TREE_MODEL (plugin->priv->uploads_store), data->iter, 4, &cancellable, -1);
 		if (g_cancellable_is_cancelled (cancellable) == TRUE) {
-			gtk_list_store_set (plugin->priv->uploads_store, data->iter, 3, -1, 5, N_("Cancelled"), -1);
+			gtk_list_store_set (plugin->priv->uploads_store, data->iter, 3, -1, 5, _("Cancelled"), -1);
 		} else {
 			g_simple_async_result_propagate_error (G_SIMPLE_ASYNC_RESULT (res), &error);
-			gtk_list_store_set (plugin->priv->uploads_store, data->iter, 3, -1, 5, error ? error->message : N_("Failed"), -1);
+			gtk_list_store_set (plugin->priv->uploads_store, data->iter, 3, -1, 5, error ? error->message : _("Failed"), -1);
 			g_clear_error (&error);
 		}
 	}
@@ -521,12 +521,12 @@ picasaweb_login_async_cb (GDataPicasaWebService *service, GAsyncResult *result, 
 	gtk_widget_set_sensitive (GTK_WIDGET (plugin->priv->password_entry), TRUE);
 
 	if (success == FALSE || error != NULL) {
-		message = g_strdup_printf (N_("Login failed. %s"), error->message);
+		message = g_strdup_printf (_("Login failed. %s"), error->message);
 		gtk_label_set_text (plugin->priv->login_message, message);
 		g_free (message);
 	} else {
-		gtk_label_set_text (plugin->priv->login_message, N_("Logged in successully."));
-		gtk_button_set_label (plugin->priv->cancel_button, N_("Close"));
+		gtk_label_set_text (plugin->priv->login_message, _("Logged in successully."));
+		gtk_button_set_label (plugin->priv->cancel_button, _("Close"));
 		login_dialog_close (plugin);
 	}
 }
@@ -547,13 +547,13 @@ picasaweb_login_cb (GtkWidget *login_button, gpointer _plugin)
 {
 	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (_plugin);
 
-	gtk_button_set_label (plugin->priv->cancel_button, N_("Cancel"));
+	gtk_button_set_label (plugin->priv->cancel_button, _("Cancel"));
 	gtk_widget_set_sensitive (login_button, FALSE);
 	gtk_widget_set_sensitive (GTK_WIDGET (plugin->priv->username_entry), FALSE);
 	gtk_widget_set_sensitive (GTK_WIDGET (plugin->priv->password_entry), FALSE);
 
 	/* TODO: want to handle passwords more securely */
-	gtk_label_set_text (plugin->priv->login_message, N_("Logging in..."));
+	gtk_label_set_text (plugin->priv->login_message, _("Logging in..."));
 	g_cancellable_reset (plugin->priv->login_cancellable);
 	gdata_service_authenticate_async (GDATA_SERVICE (plugin->priv->service),
 					  gtk_entry_get_text (plugin->priv->username_entry),
@@ -581,7 +581,7 @@ picasaweb_upload_cb (GtkAction	*action,
 		plugin->priv->uploads_pending = TRUE;
 
 		login_get_dialog (plugin);
-		gtk_label_set_text (plugin->priv->login_message, N_("Please log in to continue upload."));
+		gtk_label_set_text (plugin->priv->login_message, _("Please log in to continue upload."));
 		gtk_window_present (GTK_WINDOW (plugin->priv->login_dialog));
 	}
 }
