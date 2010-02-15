@@ -143,7 +143,6 @@ static gboolean
 uploads_cancel_row (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, EogPostasaPlugin *plugin)
 {
 	GCancellable *cancellable;
-	gint status;
 
 	gtk_tree_model_get (model, iter, 4, &cancellable, -1);
 	g_cancellable_cancel (cancellable);
@@ -278,7 +277,6 @@ uploads_add_entry (EogPostasaPlugin *plugin, EogImage *image, GCancellable *canc
 	GdkPixbuf *scaled_pixbuf;
 	gchar *size, *uri;
 	GtkTreeIter *iter;
-	GError *error = NULL;
 
 	/* display the Uploads window got from the plugin */
 	uploads_window = uploads_get_dialog (plugin);
@@ -362,7 +360,6 @@ static void
 picasaweb_upload_async_cb (EogPostasaPlugin *plugin, GAsyncResult *res, PicasaWebUploadFileAsyncData *data)
 {
 	GCancellable* cancellable;
-	gchar *filename;
 	GError *error = NULL; /* TODO: make sure to clear all set errors */
 
 	if (g_simple_async_result_get_op_res_gboolean (G_SIMPLE_ASYNC_RESULT (res)) == TRUE) {
@@ -407,7 +404,6 @@ tmp_picasaweb_upload_async (GSimpleAsyncResult *result, GObject *source_object, 
 	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (source_object);
 	GDataPicasaWebFile *file_entry;
 	PicasaWebUploadFileAsyncData *data;
-	gchar *filepath;
 	gchar *filename;
 	GError *error = NULL;
 
