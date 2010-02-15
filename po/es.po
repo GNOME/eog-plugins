@@ -1,31 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&component=general\n"
-"POT-Creation-Date: 2009-10-25 18:38+0000\n"
-"PO-Revision-Date: 2009-10-27 23:31+0100\n"
+"POT-Creation-Date: 2010-02-10 19:23+0000\n"
+"PO-Revision-Date: 2010-02-15 11:23+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "Mostrar la geolocalización de la imagen en un mapa"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
-msgid "Map"
-msgstr "Mapa"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
@@ -102,14 +92,144 @@ msgstr "<b>Mediciones:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>Ampliación:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
 msgstr "Ajustar a la anchura"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Ampliar para ajustar a la anchura de la imagen"
+
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Saltar a la ubicación de la imagen actual"
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Ampliar"
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Reducir"
+
+#: ../plugins/map/eog-map-plugin.c:355
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Mapa"
+
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Mostrar la geolocalización de la imagen en un mapa"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:124
+#| msgid "Upload to Flickr"
+msgid "Upload to PicasaWeb"
+msgstr "Cargar en PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+#| msgid "Upload your pictures to Flickr"
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Cargar sus imágenes en PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:321
+msgid "Uploading..."
+msgstr "Cargando…"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:368
+#| msgid "Flickr Uploader"
+msgid "Uploaded"
+msgstr "Cargadas"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:372
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:375
+msgid "Failed"
+msgstr "Falló"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:523
+#, c-format
+msgid "Login failed. %s"
+msgstr "Falló el inicio de sesión. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:527
+msgid "Logged in successully."
+msgstr "Inicio de sesión correcto."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:528
+msgid "Close"
+msgstr "Cerrar"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:549
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:555
+msgid "Logging in..."
+msgstr "Iniciando sesión…"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:583
+msgid "Please log in to continue upload."
+msgstr "Inicie sesión para continuar subiendo imágenes."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Usuario"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Contraseña"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "Inicio de sesión en PicasaWeb"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Cancelar todo"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Cancelar seleccionadas"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Subidas:"
+
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+#| msgid "Flickr Uploader"
+msgid "PicasaWeb Uploader"
+msgstr "Cargador para PicasaWeb"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Cargar en Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:59
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Cargar sus fotografías en Flickr"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Cargador para Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Consola de Python"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Consola de Python para el Visor de imágenes EOG"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
 msgid "Send by Mail"
@@ -134,27 +254,6 @@ msgstr "Muestra imágenes aleatorias en el modo diapositiva"
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Diapositivas aleatorias"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Cargador para Flickr"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "Suba sus fotografías a Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:57
-msgid "Upload to Flickr"
-msgstr "Subir a Flickr"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Consola de Python"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
-msgid "Python console for Eye of GNOME"
-msgstr "Consola de Python para el Visor de imágenes EOG"
 
 #~ msgid "Reload Image"
 #~ msgstr "Recargar imagen"
