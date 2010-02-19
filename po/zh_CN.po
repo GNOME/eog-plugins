@@ -1,40 +1,34 @@
 # Chinese translations for eog-plugins package
 # eog-plugins 软件包的简体中文翻译.
-# Copyright (C) 2008 THE eog-pulgins'S COPYRIGHT HOLDER
+# Copyright (C) 2008, 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
-# Aron Xu <aronmalache@163.com>, 2008.
+# Eleanor Chen <chenyueg@gmail.com>, 2010.
+# Aron Xu <happyaron.xu@gmail.com>, 2008, 2010.
+# Yunqiang Su <wzssyqa@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Head\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-10-25 18:38+0000\n"
-"PO-Revision-Date: 2009-12-11 12:47+0800\n"
-"Last-Translator: albertxiaoyu <albertxiaoyu@gmail.com>\n"
+"Project-Id-Version: eog-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&component=general\n"
+"POT-Creation-Date: 2010-02-15 18:55+0000\n"
+"PO-Revision-Date: 2010-02-19 13:41+0800\n"
+"Last-Translator: Eleanor Chen <chenyueg@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "在地图上显示图片的地理位置"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
-msgid "Map"
-msgstr "地图"
-
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
-msgstr ""
+msgstr " (无效的 Unicode)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
 #: ../plugins/exif-display/eog-exif-display-plugin.c:212
 #, c-format
 msgid "%.1fmm (lens)"
-msgstr ""
+msgstr "%.1fmm (长)"
 
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
@@ -42,15 +36,15 @@ msgstr ""
 #: ../plugins/exif-display/eog-exif-display-plugin.c:223
 #, c-format
 msgid "%.1fmm (35mm film)"
-msgstr ""
+msgstr "%.1fmm (35mm 胶片)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
 msgid "<b>General</b>"
-msgstr ""
+msgstr "<b>常规</b>"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "<b>Histogram</b>"
-msgstr ""
+msgstr "<b>直方图</b>"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
@@ -74,40 +68,166 @@ msgstr "显示EXIf"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "<b>Aperture:</b>"
-msgstr ""
+msgstr "<b>光圈：</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
 msgid "<b>Description:</b>"
-msgstr ""
+msgstr "<b>描述：</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
 msgid "<b>Expo. Time:</b>"
-msgstr ""
+msgstr "<b>曝光时间：</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
 msgid "<b>Expo. bias:</b>"
-msgstr ""
+msgstr "<b>曝光偏差：</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
-msgstr ""
+msgstr "<b>ISO 速度：</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
 msgid "<b>Metering:</b>"
-msgstr ""
+msgstr "<b>测光：</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
 msgid "<b>Zoom:</b>"
-msgstr ""
+msgstr "<b>缩放：</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
 msgstr "调整宽度"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
-msgstr "通过扩大来协调图片的宽度"
+msgstr "通过缩放来协调图片的宽度"
+
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "跳到当前图像的位置"
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "放大"
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "缩小"
+
+#: ../plugins/map/eog-map-plugin.c:355
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "地图"
+
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "在地图上显示图片的地理位置"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "上传到 PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "把您的图片上传到 PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:320
+msgid "Uploading..."
+msgstr "上传中..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:366
+msgid "Uploaded"
+msgstr "已上传"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:370
+msgid "Cancelled"
+msgstr "已取消"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:373
+msgid "Failed"
+msgstr "失败"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:520
+#, c-format
+msgid "Login failed. %s"
+msgstr "登录失败。%s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:524
+msgid "Logged in successully."
+msgstr "登录成功。"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:525
+msgid "Close"
+msgstr "关闭"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:546
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "取消"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:552
+msgid "Logging in..."
+msgstr "正在登录..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:580
+msgid "Please log in to continue upload."
+msgstr "请登录以便继续上传。"
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "登录"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "密码"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "登录 PicasaWeb"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "用户名"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "取消全部"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "取消选中"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "上传："
+
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb 上传工具"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "上传到 Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:59
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "把您的图片上传到 Flickr"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr 上传工具"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python 控制台"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Python 图形控制台"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
 msgid "Send by Mail"
@@ -132,25 +252,3 @@ msgstr "在图片显示模块编制图片"
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "重新编制图片"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Flickr 上传工具"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "把您的图片上传到 Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:57
-msgid "Upload to Flickr"
-msgstr "上传到 Flickr"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python 控制台"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
-msgid "Python console for Eye of GNOME"
-msgstr "Python 图形控制台"
-
