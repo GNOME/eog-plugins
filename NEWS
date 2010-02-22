@@ -1,9 +1,28 @@
+Version 2.29.91
+---------------
+
+Plugin changes:
+
+- PicasaWeb Uploader (postasa)
+ - Fix missing translations (Felix Riemann)
+
+New and updated translations:
+
+- Adrian Guniš [cs]
+- Mario Blättermann [de]
+- Jorge González [es]
+- Claude Paroz [fr]
+- Gabor Kelemen [hu]
+- António Lima [pt]
+- Matej Urbančič [sl]
+- Eleanor Chen [zh_CN]
+
 Version 2.29.90
 ---------------
 
 New plugins:
 
-- PicasaWeb Uploader (posasa)
+- PicasaWeb Uploader (postasa)
   Uploads selected images to Google's PicasaWeb service using libgdata.
   Requires yet unreleased libgdata-0.6.0; take from git. (Richard Schwarting).
 
