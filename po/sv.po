@@ -1,28 +1,19 @@
 # Swedish translation for eog-plugins.
-# Copyright (C) 2007-2009 Free Software Foundation, Inc.
+# Copyright (C) 2007-2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
-# Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009.
+# Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-05 07:41+0100\n"
-"PO-Revision-Date: 2009-11-05 07:42+0100\n"
+"POT-Creation-Date: 2010-03-13 22:32+0100\n"
+"PO-Revision-Date: 2010-03-13 22:35+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "Visa den geografiska platsen för bilden på en karta"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
-msgid "Map"
-msgstr "Karta"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
@@ -99,14 +90,140 @@ msgstr "<b>Mätning:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>Zoom:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
 msgstr "Anpassa till bredd"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Zooma för att passa bildens bredd"
+
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Hoppa till platsen för aktuell bild"
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Zooma in"
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Zooma ut"
+
+#: ../plugins/map/eog-map-plugin.c:355
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Karta"
+
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Visa den geografiska platsen för bilden på en karta"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "Skicka upp till PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Skicka upp dina bilder till PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:320
+msgid "Uploading..."
+msgstr "Skickar upp..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:366
+msgid "Uploaded"
+msgstr "Skickades upp"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:370
+msgid "Cancelled"
+msgstr "Avbruten"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:373
+msgid "Failed"
+msgstr "Misslyckades"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:520
+#, c-format
+msgid "Login failed. %s"
+msgstr "Inloggningen misslyckades. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:524
+msgid "Logged in successully."
+msgstr "Loggade in."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:525
+msgid "Close"
+msgstr "Stäng"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:546
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Avbryt"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:552
+msgid "Logging in..."
+msgstr "Loggar in..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:580
+msgid "Please log in to continue upload."
+msgstr "Logga in för att fortsätta skicka upp."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Logga in"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Lösenord"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "Inloggningsnamn för PicasaWeb"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Användarnamn"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Avbryt alla"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Avbryt markerade"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Sändningar:"
+
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "Skicka till PicasaWeb"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Skicka upp till Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:59
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Skicka upp dina bilder till Flickr"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Skicka till Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python-konsoll"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Python-konsoll för Eye of GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
 msgid "Send by Mail"
@@ -131,27 +248,6 @@ msgstr "Blandar bilder i bildspelsläget"
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Blandat bildspel"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Skicka till Flickr"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "Skicka upp dina bilder till Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:57
-msgid "Upload to Flickr"
-msgstr "Skicka upp till Flickr"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python-konsoll"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
-msgid "Python console for Eye of GNOME"
-msgstr "Python-konsoll för Eye of GNOME"
 
 #~ msgid "Reload Image"
 #~ msgstr "Läs om bild"
