@@ -443,7 +443,7 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 	int scale_factor_y;
 	GtkStyle *gtk_style;
 
-	if (!GTK_WIDGET_REALIZED (GTK_WIDGET (drawing_area)))
+	if (!gtk_widget_get_realized (GTK_WIDGET (drawing_area)))
 		return;
 
 	draw_channels_histogram = read_gconf_bool_setting (
