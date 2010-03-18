@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008, 2009.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-29 18:37+0200\n"
-"PO-Revision-Date: 2009-08-29 18:44+0200\n"
+"POT-Creation-Date: 2010-03-18 11:11+0100\n"
+"PO-Revision-Date: 2010-03-18 11:19+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,15 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "Bistaratu irudiaren geolokalizazioa mapa batean"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
-msgid "Map"
-msgstr "Mapa"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
@@ -101,35 +92,132 @@ msgstr "<b>Neurria:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>Zooma:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
 msgstr "Doitu zabalera"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Zooma irudia zabalerara doitzeko"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "Ausaz nahastu irudiak diapositiba-aurkezpena moduan"
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Joan uneko irudiaren kokalekura"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
-msgid "Slideshow Shuffle"
-msgstr "Ausazko diapositiba-aurkezpena"
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Handiagotu"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Flickr igotzailea"
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Txikiagotu"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "Igo zure argazkiak Flickr gunera"
+#: ../plugins/map/eog-map-plugin.c:355
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Mapa"
+
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Bistaratu irudiaren geolokalizazioa mapa batean"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "Igo PicasaWeb-era"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Igo zure argazkiak PicasaWeb gunera"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:320
+msgid "Uploading..."
+msgstr "Igotzen..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:366
+msgid "Uploaded"
+msgstr "Igota"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:370
+msgid "Cancelled"
+msgstr "Bertan behera utzita"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:373
+msgid "Failed"
+msgstr "Huts egin du"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:520
+#, c-format
+msgid "Login failed. %s"
+msgstr "Huts egin du saioa hastean. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:524
+msgid "Logged in successully."
+msgstr "Saioa ongi hasita."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:525
+msgid "Close"
+msgstr "Itxi"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:546
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Utzi"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:552
+msgid "Logging in..."
+msgstr "Saioa hasten..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:580
+msgid "Please log in to continue upload."
+msgstr "Hasi saioa igotzen jarratitzeko."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Erabiltzaile-izena"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Pasahitza"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "PicasaWeb-eko saio-hasiera"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Erabiltzaile-izena"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Utzi dena"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Utzi hautatutakoa"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Igotakoak:"
+
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb-eko igotzailea"
 
 #: ../plugins/postr/eog-postr-plugin.c:57
 msgid "Upload to Flickr"
 msgstr "Igo Flickr-era"
+
+#: ../plugins/postr/eog-postr-plugin.c:59
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Igo zure argazkiak Flickr gunera"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr igotzailea"
 
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
 msgid "Python Console"
@@ -138,4 +226,28 @@ msgstr "Python kontsola"
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "GNOMEren begiaren python kontsola"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "Bidali postaz"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "Bidali hautatutako irudiak postaren bidez"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Bidali postaz"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Bidali irudi bat posta berriari erantsita"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "Ausaz nahastu irudiak diapositiba-aurkezpena moduan"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "Ausazko diapositiba-aurkezpena"
 
