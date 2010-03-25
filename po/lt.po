@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the eog-plugins package.
 #
 # Gintautas Miliauskas <gintas@akl.lt>, 2008.
-# Žygimantas Beručka <zygis@gnome.org>, 2009.
+# Žygimantas Beručka <zygis@gnome.org>, 20, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-18 23:26+0300\n"
-"PO-Revision-Date: 2008-09-21 15:45+0300\n"
+"POT-Creation-Date: 2010-03-26 01:29+0200\n"
+"PO-Revision-Date: 2010-03-26 01:28+0200\n"
 "Last-Translator: Žygimantas Beručka <zygis@gnome.org>\n"
 "Language-Team: Lithuanian <gnome-lt@lists.akl.lt>\n"
 "MIME-Version: 1.0\n"
@@ -18,34 +18,207 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
 "100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "Rodyti paveikslėlio geografinę padėtį žemėlapyje"
+#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+msgid " (invalid Unicode)"
+msgstr " (neteisingas unikodas)"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (lęšis)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm filmas)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Bendras</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>Histograma</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "Rodyti RGB histogramą"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "Rodyti kameros nustatymus būsenos juostoje"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "Rodyti kanalų histogramą"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "Rodo kameros nustatymus ir histogramą"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif vaizduoklis"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>Anga:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>Aprašymas:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Rodymo laikas</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Rodymo nuožulnumas:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO greitis:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Metering:</b>"
+msgstr "<b>Matavimas:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Zoom:</b>"
+msgstr "<b>Mastelis:</b>"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
+msgid "Fit to width"
+msgstr "Sutalpinti į plotį"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Keisti mastelį sutalpinant paveikslėlio plotį"
+
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Pereiti į dabartinio paveikslėlio vietą"
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Didinti"
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Mažinti"
+
+#: ../plugins/map/eog-map-plugin.c:355
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Žemėlapis"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "Maišo paveikslėlius skaidrių rodymo veiksenoje"
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Rodyti paveikslėlio geografinę padėtį žemėlapyje"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
-msgid "Slideshow Shuffle"
-msgstr "Skaidrių maišymas"
+#: ../plugins/postasa/eog-postasa-plugin.c:124
+msgid "Upload to PicasaWeb"
+msgstr "Siųsti į PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Siųsti paveikslėlius į PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:320
+msgid "Uploading..."
+msgstr "Siunčiama..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:366
+msgid "Uploaded"
+msgstr "Nusiųsta"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:370
+msgid "Cancelled"
+msgstr "Atšaukta"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:373
+msgid "Failed"
+msgstr "Nepavyko"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:520
+#, c-format
+msgid "Login failed. %s"
+msgstr "Prisijungimas nepavyko. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:524
+msgid "Logged in successully."
+msgstr "Prisijungta sėkmingai."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:525
+msgid "Close"
+msgstr "Užverti"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:546
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:552
+msgid "Logging in..."
+msgstr "Prisijungiama..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:580
+msgid "Please log in to continue upload."
+msgstr "Prisijunkite įkėlimo tęsimui."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Naudotojo vardas"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Slaptažodis"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "PicasaWeb prisijungimas"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Naudotojo vardas"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Atšaukti visus"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Atšaukti pasirinktus"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Įkeliami failai:"
+
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb siuntiklis"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Siųsti į Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:59
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Siųsti paveikslėlius į Filckr"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Flickr siuntiklis"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:50
-msgid "Upload your pictures to Flickr"
-msgstr "Siųsti paveikslėlius į Filckr"
-
-#: ../plugins/postr/eog-postr-plugin.c:48
-msgid "Upload to Flickr"
-msgstr "Siųsti į Flickr"
 
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
 msgid "Python Console"
@@ -54,3 +227,27 @@ msgstr "Python konsolė"
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Eye of GNOME Python konsolė"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "Siųsti el. paštu"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "Siųsti pasirinktus paveikslėlius el. paštu"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Siųsti el. paštu"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Siunčia paveikslėlį, prisegtą prie naujo laiško"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "Maišo paveikslėlius skaidrių rodymo veiksenoje"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "Skaidrių maišymas"
