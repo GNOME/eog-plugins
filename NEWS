@@ -1,3 +1,20 @@
+Version 2.30.0
+---------------
+
+Plugin changes:
+
+- Exif Display
+ - #612692, Finish GSEAL support (André Klapper)
+
+New and updated translations:
+
+- Iñaki Larrañaga Murgoitio [eu]
+- Fran Diéguez [gl]
+- Gianvito Cavasoli [it]
+- Žygimantas Beručka [lt]
+- Piotr Drąg [pl]
+- Daniel Nylander [sv]
+
 Version 2.29.91
 ---------------
 
