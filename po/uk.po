@@ -1,0 +1,158 @@
+# Ukrainian translation for eog-plugins.
+# Copyright (C) 2010 Free Software Foundation
+# This file is distributed under the same license as the eog-plugins package.
+# Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-04-01 15:54+0300\n"
+"PO-Revision-Date: 2010-04-01 15:53+0300\n"
+"Last-Translator: Maxim V. Dziumanenko <dziumanenko@gmail.com>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Показує географічне розташування зображення на мапі"
+
+#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
+#: ../plugins/champlain/eog-champlain-plugin.c:312
+msgid "Map"
+msgstr "Мапа"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+msgid " (invalid Unicode)"
+msgstr " (неправильний Юнікод)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fмм (лінза)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fмм (35мм плівка)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Загальне</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>Гістограма</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "Показати гістограму RGB"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "Показати параметри камери у панелі статусу"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "Показати гістограму по каналах"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "Показати параметри камери та гістограму"
+
+#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Показати Exif"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>Діафрагма:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>Опис:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Час експозиції:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Центр експозиції:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>ISO speed:</b>"
+msgstr "<b>Швидкість ISO:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Metering:</b>"
+msgstr "<b>Вимірювання:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Zoom:</b>"
+msgstr "<b>Зум:</b>"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+msgid "Fit to width"
+msgstr "Підігнати за шириною"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Змінити масштаб, щоб умістити сторінку по ширині"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+msgid "Send by Mail"
+msgstr "Надіслати електронною поштою"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+msgid "Send the selected images by mail"
+msgstr "Надсилати обрані зображення електронною поштою"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Надіслати електронною поштою"
+
+#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Надсилати приєднане зображення електронною поштою"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "Перемішати зображення при показі слайдів"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "Перемішати слайдшоу"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Вивантаження до Flickr"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:59
+msgid "Upload your pictures to Flickr"
+msgstr "Вивантажити зображення до сайту Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Вивантаження на Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Консоль python"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Консоль Python до Ока GNOME."
+
+
