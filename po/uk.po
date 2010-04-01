@@ -6,8 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-01 15:54+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&component=general\n"
+"POT-Creation-Date: 2010-04-01 13:03+0000\n"
 "PO-Revision-Date: 2010-04-01 15:53+0300\n"
 "Last-Translator: Maxim V. Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -16,15 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "Показує географічне розташування зображення на мапі"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
-msgid "Map"
-msgstr "Мапа"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:136
 msgid " (invalid Unicode)"
@@ -101,14 +93,144 @@ msgstr "<b>Вимірювання:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>Зум:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
 msgstr "Підігнати за шириною"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
 #: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Змінити масштаб, щоб умістити сторінку по ширині"
+
+#: ../plugins/map/eog-map-plugin.c:321
+msgid "Jump to current image's location"
+msgstr "Перейти до теки поточного зображення"
+
+#: ../plugins/map/eog-map-plugin.c:333
+msgid "Zoom in"
+msgstr "Збільшити"
+
+#: ../plugins/map/eog-map-plugin.c:341
+msgid "Zoom out"
+msgstr "Зменшити"
+
+#: ../plugins/map/eog-map-plugin.c:355
+#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Мапа"
+
+#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Показує географічне розташування зображення на мапі"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:124
+#| msgid "Upload to Flickr"
+msgid "Upload to PicasaWeb"
+msgstr "Вивантаження на PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+#| msgid "Upload your pictures to Flickr"
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Вивантажити зображення до сайту PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:320
+msgid "Uploading..."
+msgstr "Вивантаження..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:366
+#| msgid "Flickr Uploader"
+msgid "Uploaded"
+msgstr "Вивантажено"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:370
+msgid "Cancelled"
+msgstr "Скасовано"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:373
+msgid "Failed"
+msgstr "Помилка"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:520
+#, c-format
+msgid "Login failed. %s"
+msgstr "Помилка реєстрації. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:524
+msgid "Logged in successully."
+msgstr "Вхід успашно виконано."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:525
+msgid "Close"
+msgstr "Закрити"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:546
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:552
+msgid "Logging in..."
+msgstr "Триває вхід..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:580
+msgid "Please log in to continue upload."
+msgstr "Увійдіть для продовження завантаження."
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "Login"
+msgstr "Реєстраційне ім'я"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "Password"
+msgstr "Пароль"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "PicasaWeb Login"
+msgstr "Ім'я у PicasaWeb"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "Username"
+msgstr "Реєстраційне ім'я"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Скасувати все"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Скасувати вибране"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Вивантажено:"
+
+#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+#| msgid "Flickr Uploader"
+msgid "PicasaWeb Uploader"
+msgstr "Вивантаження до PicasaWeb"
+
+#: ../plugins/postr/eog-postr-plugin.c:57
+msgid "Upload to Flickr"
+msgstr "Вивантаження на Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:59
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Вивантажити зображення до сайту Flickr"
+
+#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Вивантаження до Flickr"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Консоль python"
+
+#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Консоль Python до Ока GNOME."
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
 msgid "Send by Mail"
@@ -133,26 +255,3 @@ msgstr "Перемішати зображення при показі слайд
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Перемішати слайдшоу"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Вивантаження до Flickr"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "Вивантажити зображення до сайту Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:57
-msgid "Upload to Flickr"
-msgstr "Вивантаження на Flickr"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Консоль python"
-
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
-msgid "Python console for Eye of GNOME"
-msgstr "Консоль Python до Ока GNOME."
-
-
