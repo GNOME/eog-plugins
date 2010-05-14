@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
 "POT-Creation-Date: 2010-02-10 19:40+0000\n"
-"PO-Revision-Date: 2010-02-11 07:52+0100\n"
+"PO-Revision-Date: 2010-05-13 21:09+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "Pokaži nastavitve aparata v vrstici stanja"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display per-channel histogram"
-msgstr "Pokaži kanalski histogram"
+msgstr "Pokaži kanalni histogram"
 
 #: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
 msgid "Displays camera settings and histogram"
@@ -125,24 +125,24 @@ msgstr "Zemljevid"
 
 #: ../plugins/map/map.eog-plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
-msgstr "Pokaži geografski položaj mesta,kjer je bila slika posneta"
+msgstr "Pokaži geografski položaj mesta, kjer je bila slika posneta"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:124
 msgid "Upload to PicasaWeb"
-msgstr "Prenesi na PicasaWeb"
+msgstr "Pošlji na PicasaWeb"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:126
 #: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
-msgstr "Prenos vaših slike na portal PicasaWeb"
+msgstr "Pošiljanje vaših slike na portal PicasaWeb"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:321
 msgid "Uploading..."
-msgstr "Prenašanje ..."
+msgstr "Pošiljanje ..."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:368
 msgid "Uploaded"
-msgstr "Preneseno"
+msgstr "Poslano"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:372
 msgid "Cancelled"
@@ -177,7 +177,7 @@ msgstr "Prijavljanje ..."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:583
 msgid "Please log in to continue upload."
-msgstr "Prijavite se za nadaljevanje prenosa."
+msgstr "Prijavite se za nadaljevanje pošiljanja."
 
 #: ../plugins/postasa/postasa-config.xml.h:2
 msgid "Login"
@@ -205,7 +205,7 @@ msgstr "Prekliči izbrano"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "Uploads:"
-msgstr "Prenosi:"
+msgstr "Pošiljanje:"
 
 #: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
@@ -222,15 +222,15 @@ msgstr "Prenos vaših slike na portal Flickr"
 
 #: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
 msgid "Flickr Uploader"
-msgstr "Program za prenos datotek na Flickr"
+msgstr "Program za pošiljanje datotek na Flickr"
 
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
 msgid "Python Console"
-msgstr "Konzola python"
+msgstr "Konzola Python"
 
 #: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
-msgstr "Konzola Python za program Eye of GNOME"
+msgstr "Konzola Python za program Gnome oko"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
 msgid "Send by Mail"
@@ -250,9 +250,8 @@ msgstr "Pošlje sliko priloženo novemu sporočilu"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
-msgstr "Premešaj slike med diaprikazovanjem"
+msgstr "Premešaj slike med prikazovanjem predstavitve"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
-msgstr "Premešaj slike"
-
+msgstr "Premešaj slike med predstavitvijo"
