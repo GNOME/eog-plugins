@@ -402,8 +402,14 @@ tmp_picasaweb_upload_async (GSimpleAsyncResult *result, GObject *source_object, 
 {
 	GDataPicasaWebFile *new_file = NULL;
 	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (source_object);
+	GDataPicasaWebService *service = plugin->priv->service;
 	GDataPicasaWebFile *file_entry;
 	PicasaWebUploadFileAsyncData *data;
+#ifdef HAVE_LIBGDATA_80
+	GDataUploadStream *upload_stream;
+	GFileInputStream *in_stream;
+	GFileInfo *file_info;
+#endif
 	gchar *filename;
 	GError *error = NULL;
 
@@ -415,15 +421,70 @@ tmp_picasaweb_upload_async (GSimpleAsyncResult *result, GObject *source_object, 
 	gdata_entry_set_title (GDATA_ENTRY (file_entry), filename);
 	g_free (filename);
 
-	new_file = gdata_picasaweb_service_upload_file (plugin->priv->service, NULL /* Uploading to Drop Box */, file_entry,
-							data->imgfile, cancellable, &error);
+#ifdef HAVE_LIBGDATA_80
+	file_info = g_file_query_info (data->imgfile,
+				      G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME ","
+				      G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+				      G_FILE_QUERY_INFO_NONE, cancellable,
+				      &error);
+
+	if (file_info == NULL)
+		goto got_err;
+
+	upload_stream = gdata_picasaweb_service_upload_file (service,
+				      NULL /* Upload to Dropbox */, file_entry,
+				      g_file_info_get_display_name (file_info),
+				      g_file_info_get_content_type (file_info),
+				      cancellable, &error);
+	g_object_unref (file_info);
+
+	if (upload_stream == NULL)
+		goto got_err;
+
+	in_stream = g_file_read (data->imgfile, cancellable, &error);
+
+	if (in_stream == NULL) {
+		g_object_unref (upload_stream);
+		goto got_err;
+	}
+
+	if (g_output_stream_splice (G_OUTPUT_STREAM (upload_stream),
+				    G_INPUT_STREAM (in_stream),
+				    G_OUTPUT_STREAM_SPLICE_CLOSE_SOURCE |
+				    G_OUTPUT_STREAM_SPLICE_CLOSE_TARGET,
+				    cancellable, &error) == -1)
+	{
+		g_object_unref (upload_stream);
+		g_object_unref (in_stream);
+		goto got_err;
+	}
+
+
+	new_file = gdata_picasaweb_service_finish_file_upload (service,
+							       upload_stream,
+							       &error);
+
+	g_object_unref (upload_stream);
+	g_object_unref (in_stream);
+got_err:
+	/* Jump here if any GIO/GData call doesn't return successfully.
+	 * Error handling happens below. */
+
+#else
+	/* libgdata-0.6 */
+	new_file = gdata_picasaweb_service_upload_file (service,
+					       NULL /* Uploading to Drop Box */,
+					       file_entry, data->imgfile,
+					       cancellable, &error);
+#endif
 	g_object_unref (file_entry);
 
 	if (new_file == NULL || error) {
 		if (g_cancellable_is_cancelled (cancellable) == FALSE) {
 			g_simple_async_result_set_from_error (result, error);
-			g_clear_error (&error); /* we can clear this, because set_from_error() does a g_error_copy() */
 		}
+		/* Clear errors always as cancelling creates errors too */
+		g_clear_error (&error);
 	} else {
 		g_simple_async_result_set_op_res_gboolean (result, TRUE);
 	}
