@@ -1,4 +1,4 @@
-[Eog Plugin]
+[Plugin]
 Module=fit-to-width
 IAge=2
 _Name=Zoom to fit image width

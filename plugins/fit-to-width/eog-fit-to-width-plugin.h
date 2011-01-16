@@ -24,7 +24,10 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <eog/eog-plugin.h>
+#include <gtk/gtk.h>
+#include <eog/eog-window.h>
+#include <libpeas/peas-extension-base.h>
+#include <libpeas/peas-object-module.h>
 
 G_BEGIN_DECLS
 
@@ -32,11 +35,11 @@ G_BEGIN_DECLS
  * Type checking and casting macros
  */
 #define EOG_TYPE_FIT_TO_WIDTH_PLUGIN		(eog_fit_to_width_plugin_get_type ())
-#define EOG_FIT_TO_WIDTH_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_FIT_TO_WIDTH_PLUGIN, EogStatusbarDatePlugin))
-#define EOG_FIT_TO_WIDTH_PLUGIN_CLASS(k)	G_TYPE_CHECK_CLASS_CAST((k),      EOG_TYPE_FIT_TO_WIDTH_PLUGIN, EogStatusbarDatePluginClass))
+#define EOG_FIT_TO_WIDTH_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_FIT_TO_WIDTH_PLUGIN, EogFitToWidthPlugin))
+#define EOG_FIT_TO_WIDTH_PLUGIN_CLASS(k)	G_TYPE_CHECK_CLASS_CAST((k),      EOG_TYPE_FIT_TO_WIDTH_PLUGIN, EogFitToWidthPluginClass))
 #define EOG_IS_FIT_TO_WIDTH_PLUGIN(o)	        (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_FIT_TO_WIDTH_PLUGIN))
 #define EOG_IS_FIT_TO_WIDTH_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k),    EOG_TYPE_FIT_TO_WIDTH_PLUGIN))
-#define EOG_FIT_TO_WIDTH_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOG_TYPE_FIT_TO_WIDTH_PLUGIN, EogStatusbarDatePluginClass))
+#define EOG_FIT_TO_WIDTH_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOG_TYPE_FIT_TO_WIDTH_PLUGIN, EogFitToWidthPluginClass))
 
 /* Private structure type */
 typedef struct _EogFitToWidthPluginPrivate	EogFitToWidthPluginPrivate;
@@ -48,7 +51,13 @@ typedef struct _EogFitToWidthPlugin		EogFitToWidthPlugin;
 
 struct _EogFitToWidthPlugin
 {
-	EogPlugin parent_instance;
+	PeasExtensionBase parent_instance;
+
+	EogWindow *window;
+
+	GtkActionGroup *ui_action_group;
+	guint           ui_menuitem_id;
+
 };
 
 /*
@@ -58,7 +67,7 @@ typedef struct _EogFitToWidthPluginClass	EogFitToWidthPluginClass;
 
 struct _EogFitToWidthPluginClass
 {
-	EogPluginClass parent_class;
+	PeasExtensionBaseClass parent_class;
 };
 
 /*
@@ -67,7 +76,7 @@ struct _EogFitToWidthPluginClass
 GType	eog_fit_to_width_plugin_get_type		(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_eog_plugin (GTypeModule *module);
+G_MODULE_EXPORT void peas_register_types (PeasObjectModule *module);
 
 G_END_DECLS
 
