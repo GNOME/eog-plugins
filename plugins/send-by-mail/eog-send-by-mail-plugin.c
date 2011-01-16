@@ -27,21 +27,24 @@
 #include <eog/eog-image.h>
 #include <eog/eog-thumb-view.h>
 #include <eog/eog-window.h>
+#include <eog/eog-window-activatable.h>
 
 #include "eog-send-by-mail-plugin.h"
 
 
-#define WINDOW_DATA_KEY "EogSendByMailWindowData"
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
 
-EOG_PLUGIN_REGISTER_TYPE(EogSendByMailPlugin, eog_send_by_mail_plugin)
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogSendByMailPlugin, eog_send_by_mail_plugin,
+		PEAS_TYPE_EXTENSION_BASE, 0,
+		G_IMPLEMENT_INTERFACE_DYNAMIC (EOG_TYPE_WINDOW_ACTIVATABLE,
+					eog_window_activatable_iface_init))
 
-typedef struct
-{
-	GtkActionGroup *ui_action_group;
-	guint           ui_menuitem_id;
-} WindowData;
+enum {
+	PROP_0,
+	PROP_WINDOW
+};
 
-static void free_window_data (WindowData *data);
 static void send_by_mail_cb (GtkAction *action, EogWindow *window);
 
 static const gchar * const ui_definition =
@@ -66,83 +69,130 @@ static const GtkActionEntry action_entries[] =
 static void
 eog_send_by_mail_plugin_init (EogSendByMailPlugin *plugin)
 {
+	plugin->ui_action_group = NULL;
+	plugin->ui_menuitem_id = 0;
 }
 
 static void
-impl_activate (EogPlugin *plugin,
-	       EogWindow *window)
+impl_activate (EogWindowActivatable *activatable)
 {
+	EogSendByMailPlugin *plugin = EOG_SEND_BY_MAIL_PLUGIN (activatable);
 	GtkUIManager *manager;
-	WindowData *data;
 
-	manager = eog_window_get_ui_manager (window);
-	data = g_slice_new (WindowData);
+	manager = eog_window_get_ui_manager (plugin->window);
 
-	data->ui_action_group = gtk_action_group_new ("EogSendByMailPluginActions");
+	plugin->ui_action_group = gtk_action_group_new ("EogSendByMailPluginActions");
 
-	gtk_action_group_set_translation_domain (data->ui_action_group,
+	gtk_action_group_set_translation_domain (plugin->ui_action_group,
 						 GETTEXT_PACKAGE);
 
-	gtk_action_group_add_actions (data->ui_action_group,
+	gtk_action_group_add_actions (plugin->ui_action_group,
 				      action_entries,
 				      G_N_ELEMENTS (action_entries),
-				      window);
+				      plugin->window);
 
 	gtk_ui_manager_insert_action_group (manager,
-					    data->ui_action_group,
+					    plugin->ui_action_group,
 					    -1);
 
-	data->ui_menuitem_id = gtk_ui_manager_add_ui_from_string (manager,
+	plugin->ui_menuitem_id = gtk_ui_manager_add_ui_from_string (manager,
 								  ui_definition,
 								  -1, NULL);
-
-	g_object_set_data_full (G_OBJECT (window),
-				WINDOW_DATA_KEY,
-				data,
-				(GDestroyNotify) free_window_data);
 }
 
 static void
-impl_deactivate	(EogPlugin *plugin,
-		 EogWindow *window)
+impl_deactivate	(EogWindowActivatable *activatable)
 {
+	EogSendByMailPlugin *plugin = EOG_SEND_BY_MAIL_PLUGIN (activatable);
 	GtkUIManager *manager;
-	WindowData *data;
 
-	manager = eog_window_get_ui_manager (window);
-
-	data = (WindowData *) g_object_get_data (G_OBJECT (window),
-						 WINDOW_DATA_KEY);
-	g_return_if_fail (data != NULL);
+	manager = eog_window_get_ui_manager (plugin->window);
 
 	gtk_ui_manager_remove_ui (manager,
-				  data->ui_menuitem_id);
+				  plugin->ui_menuitem_id);
 
 	gtk_ui_manager_remove_action_group (manager,
-					    data->ui_action_group);
+					    plugin->ui_action_group);
+	plugin->ui_action_group = NULL;
+	plugin->ui_menuitem_id = 0;
+}
 
-	g_object_set_data (G_OBJECT (window),
-			   WINDOW_DATA_KEY,
-			   NULL);
+static void
+eog_send_by_mail_plugin_dispose (GObject *object)
+{
+	EogSendByMailPlugin *plugin = EOG_SEND_BY_MAIL_PLUGIN (object);
+
+	if (plugin->window != NULL) {
+		g_object_unref (plugin->window);
+		plugin->window = NULL;
+	}
+
+	G_OBJECT_CLASS (eog_send_by_mail_plugin_parent_class)->dispose (object);
+}
+
+static void
+eog_send_by_mail_plugin_get_property (GObject    *object,
+				      guint       prop_id,
+				      GValue     *value,
+				      GParamSpec *pspec)
+{
+	EogSendByMailPlugin *plugin = EOG_SEND_BY_MAIL_PLUGIN (object);
+
+	switch (prop_id)
+	{
+	case PROP_WINDOW:
+		g_value_set_object (value, plugin->window);
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
+}
+
+static void
+eog_send_by_mail_plugin_set_property (GObject      *object,
+				      guint         prop_id,
+				      const GValue *value,
+				      GParamSpec   *pspec)
+{
+	EogSendByMailPlugin *plugin = EOG_SEND_BY_MAIL_PLUGIN (object);
+
+	switch (prop_id)
+	{
+	case PROP_WINDOW:
+		plugin->window = EOG_WINDOW (g_value_dup_object (value));
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
 }
 
 static void
 eog_send_by_mail_plugin_class_init (EogSendByMailPluginClass *klass)
 {
-	EogPluginClass *plugin_class = EOG_PLUGIN_CLASS (klass);
+	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	plugin_class->activate = impl_activate;
-	plugin_class->deactivate = impl_deactivate;
+	object_class->dispose = eog_send_by_mail_plugin_dispose;
+	object_class->set_property = eog_send_by_mail_plugin_set_property;
+	object_class->get_property = eog_send_by_mail_plugin_get_property;
+
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 }
 
 static void
-free_window_data (WindowData *data)
+eog_send_by_mail_plugin_class_finalize (EogSendByMailPluginClass *klass)
 {
-	g_return_if_fail (data != NULL);
+	/* Dummy needed for G_DEFINE_DYNAMIC_TYPE_EXTENDED */
+}
 
-	g_object_unref (data->ui_action_group);
-
-	g_slice_free (WindowData, data);
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface)
+{
+	iface->activate = impl_activate;
+	iface->deactivate = impl_deactivate;
 }
 
 static void
@@ -191,4 +241,13 @@ send_by_mail_cb (GtkAction *action, EogWindow *window)
 	gtk_show_uri (screen, uri->str, gtk_get_current_event_time (), NULL);
 
 	g_string_free (uri, TRUE);
+}
+
+G_MODULE_EXPORT void
+peas_register_types (PeasObjectModule *module)
+{
+	eog_send_by_mail_plugin_register_type (G_TYPE_MODULE (module));
+	peas_object_module_register_extension_type (module,
+						    EOG_TYPE_WINDOW_ACTIVATABLE,
+						    EOG_TYPE_SEND_BY_MAIL_PLUGIN);
 }

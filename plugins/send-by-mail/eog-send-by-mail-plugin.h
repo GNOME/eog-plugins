@@ -1,6 +1,6 @@
 /* SendByMail  -- Send images per email
  *
- * Copyright (C) 2009 The Free Software Foundation
+ * Copyright (C) 2009-2011 The Free Software Foundation
  *
  * Author: Felix Riemann  <friemann@gnome.org>
  *
@@ -24,7 +24,10 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <eog/eog-plugin.h>
+#include <gtk/gtk.h>
+#include <eog/eog-window.h>
+#include <libpeas/peas-extension-base.h>
+#include <libpeas/peas-object-module.h>
 
 G_BEGIN_DECLS
 
@@ -32,11 +35,11 @@ G_BEGIN_DECLS
  * Type checking and casting macros
  */
 #define EOG_TYPE_SEND_BY_MAIL_PLUGIN		(eog_send_by_mail_plugin_get_type ())
-#define EOG_SEND_BY_MAIL_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_SEND_BY_MAIL_PLUGIN, EogStatusbarDatePlugin))
-#define EOG_SEND_BY_MAIL_PLUGIN_CLASS(k)	G_TYPE_CHECK_CLASS_CAST((k),      EOG_TYPE_SEND_BY_MAIL_PLUGIN, EogStatusbarDatePluginClass))
+#define EOG_SEND_BY_MAIL_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_SEND_BY_MAIL_PLUGIN, EogSendByMailPlugin))
+#define EOG_SEND_BY_MAIL_PLUGIN_CLASS(k)	G_TYPE_CHECK_CLASS_CAST((k),      EOG_TYPE_SEND_BY_MAIL_PLUGIN, EogSendByMailPluginClass))
 #define EOG_IS_SEND_BY_MAIL_PLUGIN(o)	        (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_SEND_BY_MAIL_PLUGIN))
 #define EOG_IS_SEND_BY_MAIL_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k),    EOG_TYPE_SEND_BY_MAIL_PLUGIN))
-#define EOG_SEND_BY_MAIL_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOG_TYPE_SEND_BY_MAIL_PLUGIN, EogStatusbarDatePluginClass))
+#define EOG_SEND_BY_MAIL_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOG_TYPE_SEND_BY_MAIL_PLUGIN, EogSendByMailPluginClass))
 
 /* Private structure type */
 typedef struct _EogSendByMailPluginPrivate	EogSendByMailPluginPrivate;
@@ -48,7 +51,12 @@ typedef struct _EogSendByMailPlugin		EogSendByMailPlugin;
 
 struct _EogSendByMailPlugin
 {
-	EogPlugin parent_instance;
+	PeasExtensionBase parent_instance;
+
+	EogWindow *window;
+	GtkActionGroup *ui_action_group;
+	guint           ui_menuitem_id;
+
 };
 
 /*
@@ -58,7 +66,7 @@ typedef struct _EogSendByMailPluginClass	EogSendByMailPluginClass;
 
 struct _EogSendByMailPluginClass
 {
-	EogPluginClass parent_class;
+	PeasExtensionBaseClass parent_class;
 };
 
 /*
@@ -67,7 +75,7 @@ struct _EogSendByMailPluginClass
 GType	eog_send_by_mail_plugin_get_type		(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_eog_plugin (GTypeModule *module);
+G_MODULE_EXPORT void peas_register_types (PeasObjectModule *module);
 
 G_END_DECLS
 
