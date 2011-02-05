@@ -1,9 +1,9 @@
  Process this file with autoconf to produce a configure script.
 
-EOG_MAJOR=2.20.0
-EOG_PLUGINS_MAJOR=2.20.0
+EOG_MAJOR=3.0.0
+EOG_PLUGINS_MAJOR=3.0.0
 
-AC_INIT([eog-plugins], [2.30.3], [http://bugzilla.gnome.org/enter_bug.cgi?product=eog&component=plugins])
+AC_INIT([eog-plugins], [2.91.7], [http://bugzilla.gnome.org/enter_bug.cgi?product=eog&component=plugins])
 
 AC_CONFIG_SRCDIR([plugins])
 AC_PREFIX_PROGRAM([eog])
@@ -44,8 +44,9 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 
 PKG_CHECK_MODULES([EOG], [
 	glib-2.0 >= 2.12.0
-	gtk+-2.0 >= 2.19.7
-	eog >= 2.19.0
+	gtk+-3.0 >= 2.99.3
+	libpeas-1.0 >= 0.7.0
+	eog >= 2.91.6
 ])
 AC_SUBST(EOG_LIBS)
 AC_SUBST(EOG_CFLAGS)
