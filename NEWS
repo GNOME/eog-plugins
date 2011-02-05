@@ -1,3 +1,21 @@
+Version 2.30.2
+--------------
+
+Plugin changes:
+
+- Map (map)
+ - #628079, Use libchamplain 0.7.1 or newer for the map plugin (Jiří Techet)
+
+New and updated translations:
+
+- Khaled Hosny [ar]
+- Marc Dabad [ca]
+- Marc Dabad, Carles Ferrando [ca@valencia]
+- Yaron Shahrabani [he]
+- Takeshi AIHANA [ja]
+- A S Alam [pa]
+- Lucian Adrian Grijincu, Nichita Utiu [ro]
+
 Version 2.30.1
 --------------
 
