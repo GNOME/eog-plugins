@@ -156,6 +156,12 @@ if test "x$have_python" != "xno"; then
 fi
 
 if test "x$have_python" != "xno"; then
+	AC_MSG_NOTICE([Disabling Python plugins as they do not work yet!])
+	have_python=no
+	enable_python=no
+fi
+
+if test "x$have_python" != "xno"; then
 	PY_PREFIX=`$PYTHON -c 'import sys ; print sys.prefix'`
 	PY_EXEC_PREFIX=`$PYTHON -c 'import sys ; print sys.exec_prefix'`
 	PYTHON_LIBS="-lpython$PYTHON_VERSION"
