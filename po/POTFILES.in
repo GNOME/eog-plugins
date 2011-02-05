@@ -3,7 +3,7 @@ plugins/exif-display/eog-exif-display-plugin.c
 plugins/exif-display/exif-display.eog-plugin.desktop.in
 [type: gettext/glade]plugins/exif-display/exif-display.ui
 plugins/fit-to-width/eog-fit-to-width-plugin.c
-plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in
+plugins/fit-to-width/fit-to-width.plugin.desktop.in
 plugins/map/eog-map-plugin.c
 plugins/map/map.eog-plugin.desktop.in
 plugins/postasa/eog-postasa-plugin.c
@@ -11,8 +11,8 @@ plugins/postasa/eog-postasa-plugin.c
 [type: gettext/glade]plugins/postasa/postasa-uploads.xml
 plugins/postasa/postasa.eog-plugin.desktop.in
 plugins/postr/eog-postr-plugin.c
-plugins/postr/postr.eog-plugin.desktop.in
+plugins/postr/postr.plugin.desktop.in
 plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in
 plugins/send-by-mail/eog-send-by-mail-plugin.c
-plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in
+plugins/send-by-mail/send-by-mail.plugin.desktop.in
 plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in
