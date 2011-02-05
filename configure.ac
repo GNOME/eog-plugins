@@ -284,7 +284,7 @@ then
 fi
 
 # Disable plugins that are not yet ported to eog-3.0
-UNPORTED_PLUGINS="exif-display map postasa send-by-mail"
+UNPORTED_PLUGINS="exif-display map postasa"
 for pl in $UNPORTED_PLUGINS
 do
 	undef_plugin "$pl" "not yet ported to 3.0"
