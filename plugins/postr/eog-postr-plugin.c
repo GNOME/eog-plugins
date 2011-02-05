@@ -10,17 +10,22 @@
 #include <eog/eog-debug.h>
 #include <eog/eog-thumb-view.h>
 #include <eog/eog-image.h>
+#include <eog/eog-window-activatable.h>
 
-#define WINDOW_DATA_KEY "EogPostrWindowData"
 #define MENU_PATH "/MainMenu/ToolsMenu/ToolsOps_2"
 
-EOG_PLUGIN_REGISTER_TYPE(EogPostrPlugin, eog_postr_plugin)
+enum {
+	PROP_O,
+	PROP_WINDOW
+};
 
-typedef struct
-{
-	GtkActionGroup *ui_action_group;
-	guint ui_id;
-} WindowData;
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
+
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogPostrPlugin, eog_postr_plugin,
+		PEAS_TYPE_EXTENSION_BASE, 0,
+		G_IMPLEMENT_INTERFACE_DYNAMIC(EOG_TYPE_WINDOW_ACTIVATABLE,
+					eog_window_activatable_iface_init))
 
 static void
 postr_cb (GtkAction	*action,
@@ -61,65 +66,60 @@ static const GtkActionEntry action_entries[] =
 };
 
 static void
-free_window_data (WindowData *data)
-{
-	g_return_if_fail (data != NULL);
-
-	eog_debug (DEBUG_PLUGINS);
-
-	g_object_unref (data->ui_action_group);
-
-	g_free (data);
-}
-
-static void
 eog_postr_plugin_init (EogPostrPlugin *plugin)
 {
 	eog_debug_message (DEBUG_PLUGINS, "EogPostrPlugin initializing");
+
+	plugin->ui_action_group = NULL;
+	plugin->ui_id = 0;
 }
 
-static void
-eog_postr_plugin_finalize (GObject *object)
-{
-	eog_debug_message (DEBUG_PLUGINS, "EogPostrPlugin finalizing");
-
-	G_OBJECT_CLASS (eog_postr_plugin_parent_class)->finalize (object);
-}
 
 static void
-impl_activate (EogPlugin *plugin,
-	       EogWindow *window)
+eog_postr_plugin_dispose (GObject *object)
 {
+	EogPostrPlugin *plugin = EOG_POSTR_PLUGIN (object);
 	GtkUIManager *manager;
-	WindowData *data;
+
+	eog_debug_message (DEBUG_PLUGINS, "EogPostrPlugin disposing");
+
+	if (plugin->window != NULL) {
+		g_object_unref (plugin->window);
+		plugin->window = NULL;
+	}
+
+	G_OBJECT_CLASS (eog_postr_plugin_parent_class)->dispose (object);
+}
+
+static void
+impl_activate (EogWindowActivatable *activatable)
+{
+	EogPostrPlugin *plugin = EOG_POSTR_PLUGIN (activatable);
+	GtkUIManager *manager;
 
 	eog_debug (DEBUG_PLUGINS);
 
-	data = g_new (WindowData, 1);
-	manager = eog_window_get_ui_manager (window);
+	g_return_if_fail (plugin->window != NULL);
 
-	data->ui_action_group = gtk_action_group_new ("EogPostrPluginActions");
+	manager = eog_window_get_ui_manager (plugin->window);
 
-	gtk_action_group_set_translation_domain (data->ui_action_group,
+	plugin->ui_action_group = gtk_action_group_new ("EogPostrPluginActions");
+
+	gtk_action_group_set_translation_domain (plugin->ui_action_group,
 						 GETTEXT_PACKAGE);
-	gtk_action_group_add_actions (data->ui_action_group,
+	gtk_action_group_add_actions (plugin->ui_action_group,
 				      action_entries,
 				      G_N_ELEMENTS (action_entries),
-				      window);
+				      plugin->window);
 
 	gtk_ui_manager_insert_action_group (manager,
-					    data->ui_action_group,
+					    plugin->ui_action_group,
 					    -1);
 
-	data->ui_id = gtk_ui_manager_new_merge_id (manager);
-
-	g_object_set_data_full (G_OBJECT (window),
-				WINDOW_DATA_KEY,
-				data,
-				(GDestroyNotify) free_window_data);
+	plugin->ui_id = gtk_ui_manager_new_merge_id (manager);
 
 	gtk_ui_manager_add_ui (manager,
-			       data->ui_id,
+			       plugin->ui_id,
 			       MENU_PATH,
 			       "RunPostr",
 			       "RunPostr",
@@ -128,52 +128,94 @@ impl_activate (EogPlugin *plugin,
 }
 
 static void
-impl_deactivate	(EogPlugin *plugin,
-		 EogWindow *window)
+impl_deactivate	(EogWindowActivatable *activatable)
 {
+	EogPostrPlugin *plugin = EOG_POSTR_PLUGIN (activatable);
 	GtkUIManager *manager;
-	WindowData *data;
 
 	eog_debug (DEBUG_PLUGINS);
 
-	manager = eog_window_get_ui_manager (window);
-
-	data = (WindowData *) g_object_get_data (G_OBJECT (window),
-						 WINDOW_DATA_KEY);
-	g_return_if_fail (data != NULL);
+	manager = eog_window_get_ui_manager (plugin->window);
 
 	gtk_ui_manager_remove_ui (manager,
-				  data->ui_id);
+				  plugin->ui_id);
 
 	gtk_ui_manager_remove_action_group (manager,
-					    data->ui_action_group);
-
-	g_object_set_data (G_OBJECT (window),
-			   WINDOW_DATA_KEY,
-			   NULL);
+					    plugin->ui_action_group);
+	plugin->ui_action_group = NULL;
+	plugin->ui_id = 0;
 }
 
 static void
-impl_update_ui (EogPlugin *plugin,
-		EogWindow *window)
+eog_postr_plugin_get_property (GObject    *object,
+			       guint       prop_id,
+			       GValue     *value,
+			       GParamSpec *pspec)
 {
-	WindowData *data;
+	EogPostrPlugin *plugin = EOG_POSTR_PLUGIN (object);
 
-	eog_debug (DEBUG_PLUGINS);
+	switch (prop_id)
+	{
+	case PROP_WINDOW:
+		g_value_set_object (value, plugin->window);
+		break;
 
-	data = (WindowData *) g_object_get_data (G_OBJECT (window),
-						 WINDOW_DATA_KEY);
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
+}
+
+static void
+eog_postr_plugin_set_property (GObject      *object,
+			       guint         prop_id,
+			       const GValue *value,
+			       GParamSpec   *pspec)
+{
+	EogPostrPlugin *plugin = EOG_POSTR_PLUGIN (object);
+
+	switch (prop_id)
+	{
+	case PROP_WINDOW:
+		plugin->window = EOG_WINDOW (g_value_dup_object (value));
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
 }
 
 static void
 eog_postr_plugin_class_init (EogPostrPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	EogPluginClass *plugin_class = EOG_PLUGIN_CLASS (klass);
 
-	object_class->finalize = eog_postr_plugin_finalize;
+	object_class->finalize = eog_postr_plugin_dispose;
+	object_class->set_property = eog_postr_plugin_set_property;
+	object_class->get_property = eog_postr_plugin_get_property;
 
-	plugin_class->activate = impl_activate;
-	plugin_class->deactivate = impl_deactivate;
-	plugin_class->update_ui = impl_update_ui;
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
+}
+
+static void
+eog_postr_plugin_class_finalize (EogPostrPluginClass *klass)
+{
+	/* Dummy needed for G_DEFINE_DYNAMIC_TYPE_EXTENDED */
+}
+
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface)
+{
+	iface->activate = impl_activate;
+	iface->deactivate = impl_deactivate;
+}
+
+G_MODULE_EXPORT void
+peas_register_types (PeasObjectModule *module)
+{
+	eog_postr_plugin_register_type (G_TYPE_MODULE (module));
+	peas_object_module_register_extension_type (module,
+						    EOG_TYPE_WINDOW_ACTIVATABLE,
+						    EOG_TYPE_POSTR_PLUGIN);
 }

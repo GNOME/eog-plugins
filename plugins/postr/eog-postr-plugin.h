@@ -3,7 +3,10 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <eog/eog-plugin.h>
+#include <gtk/gtk.h>
+#include <eog/eog-window.h>
+#include <libpeas/peas-extension-base.h>
+#include <libpeas/peas-object-module.h>
 
 G_BEGIN_DECLS
 
@@ -27,7 +30,11 @@ typedef struct _EogPostrPlugin		EogPostrPlugin;
 
 struct _EogPostrPlugin
 {
-	EogPlugin parent_instance;
+	PeasExtensionBase parent_instance;
+
+	EogWindow *window;
+	GtkActionGroup *ui_action_group;
+	guint ui_id;
 };
 
 /*
@@ -37,7 +44,7 @@ typedef struct _EogPostrPluginClass	EogPostrPluginClass;
 
 struct _EogPostrPluginClass
 {
-	EogPluginClass parent_class;
+	PeasExtensionBaseClass parent_class;
 };
 
 /*
@@ -46,7 +53,7 @@ struct _EogPostrPluginClass
 GType	eog_postr_plugin_get_type		(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_eog_plugin (GTypeModule *module);
+G_MODULE_EXPORT void peas_register_types (PeasObjectModule *module);
 
 G_END_DECLS
 
