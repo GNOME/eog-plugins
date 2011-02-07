@@ -432,15 +432,14 @@ read_gconf_bool_setting (const char *gconf_key)
 }
 
 static void
-drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
+drawing_area_draw_cb (GtkDrawingArea *drawing_area, cairo_t *cr,
 		     EogExifDisplayPlugin *plugin)
 {
 	gboolean draw_channels_histogram, draw_rgb_histogram;
 	EogImage *eog_image;
-	cairo_t *cr;
 	gint drawing_area_width, drawing_area_height;
 	int scale_factor_y;
-	GtkStyle *gtk_style;
+	GtkStyleContext *style_ctx;
 
 	if (!gtk_widget_get_realized (GTK_WIDGET (drawing_area)))
 		return;
@@ -461,9 +460,8 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 		calculate_histogram (plugin, eog_image);
 	}
 
-	cr = gdk_cairo_create (gtk_widget_get_window (GTK_WIDGET (drawing_area)));
-	gdk_drawable_get_size (gtk_widget_get_window (GTK_WIDGET (drawing_area)),
-			&drawing_area_width, &drawing_area_height);
+	drawing_area_width = gtk_widget_get_allocated_width (GTK_WIDGET (drawing_area));
+	drawing_area_height = gtk_widget_get_allocated_height (GTK_WIDGET (drawing_area));
 
 	scale_factor_y = drawing_area_height;
 	if (scale_factor_y > drawing_area_width/2) {
@@ -475,10 +473,9 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 	cairo_scale (cr, drawing_area_width, scale_factor_y);
 
 	/* clear the display */
-	gtk_style = gtk_widget_get_style (GTK_WIDGET (drawing_area));
-	gtk_style_apply_default_background (gtk_style,
-		gtk_widget_get_window (GTK_WIDGET (drawing_area)), TRUE,
-		GTK_STATE_NORMAL, NULL, 0, 0, drawing_area_width, drawing_area_height);
+	style_ctx = gtk_widget_get_style_context (GTK_WIDGET (drawing_area));
+	gtk_render_background (style_ctx, cr, 0, 0,
+			       drawing_area_width, drawing_area_height);
 
 	if (plugin->histogram_values_red == NULL) {
 		/* it's possible, if the image
@@ -510,7 +507,6 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 				      plugin->max_of_array_sums_rgb);
 	}
 
-        cairo_destroy (cr);
 	g_object_unref (eog_image);
 }
 
@@ -523,7 +519,8 @@ static void calculate_histogram_cb (EogJob *job, gpointer data)
 			eog_thumb_view_get_first_selected_image (plugin->thumbview);
 		calculate_histogram (plugin, eog_image);
 		g_object_unref (eog_image);
-		drawing_area_expose (plugin->drawing_area, NULL, plugin);
+		if (gtk_widget_get_realized (GTK_WIDGET(plugin->drawing_area)))
+			gdk_window_invalidate_rect (gtk_widget_get_window (GTK_WIDGET(plugin->drawing_area)), NULL, FALSE);
 	}
 }
 
@@ -667,8 +664,6 @@ setup_statusbar_exif (EogExifDisplayPlugin *plugin)
 
 	if (read_gconf_bool_setting (EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR)) {
 		plugin->statusbar_exif = gtk_statusbar_new ();
-		gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (plugin->statusbar_exif),
-						   FALSE);
 		gtk_widget_set_size_request (plugin->statusbar_exif, 280, 10);
 		gtk_box_pack_end (GTK_BOX (statusbar),
 				  plugin->statusbar_exif,
@@ -732,8 +727,8 @@ impl_activate (EogWindowActivatable *activatable)
 	plugin->gtkbuilder_widget = GTK_WIDGET (gtk_builder_get_object (plugin->sidebar_builder, "viewport1"));
 
 	drawing_area = GTK_WIDGET (gtk_builder_get_object (plugin->sidebar_builder, "drawingarea1"));
-	g_signal_connect (drawing_area, "expose-event",
-			G_CALLBACK (drawing_area_expose), plugin);
+	g_signal_connect (drawing_area, "draw",
+			  G_CALLBACK (drawing_area_draw_cb), plugin);
 	plugin->drawing_area = GTK_DRAWING_AREA (drawing_area);
 
 	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), "Details",
