@@ -1,4 +1,4 @@
-[Eog Plugin]
+[Plugin]
 Module=exif-display
 IAge=2
 _Name=Exif display

@@ -24,19 +24,23 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <eog/eog-plugin.h>
+#include <gtk/gtk.h>
+#include <eog/eog-thumb-view.h>
+#include <eog/eog-window.h>
+#include <libpeas/peas-extension-base.h>
+#include <libpeas/peas-object-module.h>
 
 G_BEGIN_DECLS
 
 /*
  * Type checking and casting macros
  */
-#define EOG_TYPE_EXIF_DISPLAY_PLUGIN		(eog_fit_to_width_plugin_get_type ())
-#define EOG_EXIF_DISPLAY_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_EXIF_DISPLAY_PLUGIN, EogStatusbarDatePlugin))
-#define EOG_EXIF_DISPLAY_PLUGIN_CLASS(k)	G_TYPE_CHECK_CLASS_CAST((k),      EOG_TYPE_EXIF_DISPLAY_PLUGIN, EogStatusbarDatePluginClass))
+#define EOG_TYPE_EXIF_DISPLAY_PLUGIN		(eog_exif_display_plugin_get_type ())
+#define EOG_EXIF_DISPLAY_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOG_TYPE_EXIF_DISPLAY_PLUGIN, EogExifDisplayPlugin))
+#define EOG_EXIF_DISPLAY_PLUGIN_CLASS(k)	G_TYPE_CHECK_CLASS_CAST((k),      EOG_TYPE_EXIF_DISPLAY_PLUGIN, EogExifDisplayPluginClass))
 #define EOG_IS_EXIF_DISPLAY_PLUGIN(o)	        (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOG_TYPE_EXIF_DISPLAY_PLUGIN))
 #define EOG_IS_EXIF_DISPLAY_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k),    EOG_TYPE_EXIF_DISPLAY_PLUGIN))
-#define EOG_EXIF_DISPLAY_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOG_TYPE_EXIF_DISPLAY_PLUGIN, EogStatusbarDatePluginClass))
+#define EOG_EXIF_DISPLAY_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOG_TYPE_EXIF_DISPLAY_PLUGIN, EogExifDisplayPluginClass))
 
 /* Private structure type */
 typedef struct _EogExifDisplayPluginPrivate	EogExifDisplayPluginPrivate;
@@ -48,7 +52,28 @@ typedef struct _EogExifDisplayPlugin		EogExifDisplayPlugin;
 
 struct _EogExifDisplayPlugin
 {
-	EogPlugin parent_instance;
+	PeasExtensionBase parent_instance;
+
+	EogThumbView *thumbview;
+	EogWindow *window;
+
+	GtkWidget *statusbar_exif;
+
+	GtkBuilder *sidebar_builder;
+	GtkWidget *gtkbuilder_widget;
+	GtkDrawingArea *drawing_area;
+
+	int *histogram_values_red;
+	int *histogram_values_green;
+	int *histogram_values_blue;
+
+	int *histogram_values_rgb;
+
+	int max_of_array_sums;
+	int max_of_array_sums_rgb;
+
+	/* Handlers ids */
+	guint selection_changed_id;
 };
 
 /*
@@ -58,7 +83,7 @@ typedef struct _EogExifDisplayPluginClass	EogExifDisplayPluginClass;
 
 struct _EogExifDisplayPluginClass
 {
-	EogPluginClass parent_class;
+	PeasExtensionBaseClass parent_class;
 };
 
 /*
@@ -67,7 +92,7 @@ struct _EogExifDisplayPluginClass
 GType	eog_exif_display_plugin_get_type		(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_eog_plugin (GTypeModule *module);
+G_MODULE_EXPORT void peas_register_types (PeasObjectModule *module);
 
 G_END_DECLS
 

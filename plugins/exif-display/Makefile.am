@@ -23,15 +23,15 @@ libexif_display_la_LIBADD = $(EOG_LIBS)			\
 
 # Plugin Info
 
-plugin_in_files = exif-display.eog-plugin.desktop.in
+plugin_in_files = exif-display.plugin.desktop.in
 
 UI_FILES = exif-display.ui exif-display-config.ui
 ui_DATA = $(UI_FILES)
 uidir = $(plugindir)/exif-display
 
-%.eog-plugin: %.eog-plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
+%.plugin: %.plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
-plugin_DATA = $(plugin_in_files:.eog-plugin.desktop.in=.eog-plugin)
+plugin_DATA = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
 EXTRA_DIST = $(plugin_in_files) $(UI_FILES)
 

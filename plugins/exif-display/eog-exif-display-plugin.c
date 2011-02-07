@@ -28,19 +28,25 @@
 #include <gconf/gconf-client.h>
 
 #include <glib/gi18n-lib.h>
+#include <eog/eog-debug.h>
+
+// TODO: This is not cool. We need to find a better way to organize the API.
+#ifndef HAVE_EXIF
+#define HAVE_EXIF 1
+#endif
 #include <eog/eog-image.h>
+
 #include <eog/eog-thumb-view.h>
 #include <eog/eog-job-queue.h>
 #include <eog/eog-exif-util.h>
 #include <eog/eog-sidebar.h>
+#include <eog/eog-window-activatable.h>
 
 #include "eog-exif-display-plugin.h"
 
 #define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM "/apps/eog/plugins/exif_display/display_channels_histogram"
 #define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM "/apps/eog/plugins/exif_display/display_rgb_histogram"
 #define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR "/apps/eog/plugins/exif_display/display_exif_in_statusbar"
-
-#define WINDOW_DATA_KEY "EogExifDisplayWindowData"
 
 /* copy-pasted from eog-preferences-dialog.c */
 #define GCONF_OBJECT_KEY	"GCONF_KEY"
@@ -53,30 +59,19 @@ static GConfClient *gconf_client = NULL;
 #define GTKBUILDER_FILE EOG_PLUGINDIR"/exif-display/exif-display.ui"
 #define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/exif-display/exif-display-config.ui"
 
-EOG_PLUGIN_REGISTER_TYPE(EogExifDisplayPlugin, eog_exif_display_plugin)
+enum {
+        PROP_O,
+        PROP_WINDOW
+};
 
-typedef struct {
-	/* Handlers ids */
-	guint selection_changed_id;
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
 
-	EogThumbView *eog_thumb_view;
-	EogWindow *eog_window;
-
-	GtkWidget *statusbar_exif;
-
-	GtkBuilder *sidebar_builder;
-	GtkWidget *gtkbuilder_widget;
-	GtkDrawingArea *drawing_area;
-
-	int *histogram_values_red;
-	int *histogram_values_green;
-	int *histogram_values_blue;
-	int max_of_array_sums;
-
-	int *histogram_values_rgb;
-	int max_of_array_sums_rgb;
-} WindowData;
-
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogExifDisplayPlugin, eog_exif_display_plugin,
+                PEAS_TYPE_EXTENSION_BASE, 0,
+                G_IMPLEMENT_INTERFACE_DYNAMIC(EOG_TYPE_WINDOW_ACTIVATABLE,
+                                        eog_window_activatable_iface_init))
+#if 0
 static void
 free_window_data (WindowData *data)
 {
@@ -91,7 +86,7 @@ free_window_data (WindowData *data)
 
 	g_free (data);
 }
-
+#endif
 
 static void
 eog_exif_display_plugin_init (EogExifDisplayPlugin *plugin)
@@ -149,7 +144,7 @@ eog_exif_set_label (GtkWidget *w, ExifData *exif_data, gint tag_id)
 	gchar *label_text = NULL;
 
 	if (exif_data) {
-		buf_ptr = eog_exif_util_get_value (exif_data, tag_id,
+		buf_ptr = eog_exif_data_get_value (exif_data, tag_id,
 						   exif_buffer, 512);
 
 		if (tag_id == EXIF_TAG_DATE_TIME_ORIGINAL && buf_ptr)
@@ -163,7 +158,9 @@ eog_exif_set_label (GtkWidget *w, ExifData *exif_data, gint tag_id)
 }
 
 static void set_exif_label (ExifData *exif_data, int exif_tag,
-	       GtkBuilder *gtk_builder, const gchar *gtk_builder_label_name, gboolean tooltip)
+			    GtkBuilder *gtk_builder,
+			    const gchar *gtk_builder_label_name,
+			    gboolean tooltip)
 {
 	GtkWidget *widget = GTK_WIDGET (gtk_builder_get_object (
 					gtk_builder, gtk_builder_label_name));
@@ -251,45 +248,47 @@ eog_exif_set_focal_length_label (GtkWidget *w, ExifData *exif_data)
 	g_free (focal_length_desc);
 }
 
-static void manage_exif_data (WindowData *data)
+static void manage_exif_data (EogExifDisplayPlugin *plugin)
 {
 	EogImage *image;
 	ExifData *exif_data;
 
-	image = eog_thumb_view_get_first_selected_image (data->eog_thumb_view);
+	image = eog_thumb_view_get_first_selected_image (plugin->thumbview);
 	g_return_if_fail (image != NULL);
 
 	exif_data = (ExifData *)eog_image_get_exif_info (image);
 
-	set_exif_label (exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, data->sidebar_builder, "takenon_label", TRUE);
+	set_exif_label (exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, plugin->sidebar_builder, "takenon_label", TRUE);
 
 	eog_exif_set_focal_length_label (GTK_WIDGET (gtk_builder_get_object (
-			data->sidebar_builder, "focal_length_label")), exif_data);
+			plugin->sidebar_builder, "focal_length_label")), exif_data);
 
-	set_exif_label (exif_data, EXIF_TAG_EXPOSURE_BIAS_VALUE, data->sidebar_builder, "exposure_bias_label", FALSE);
+	set_exif_label (exif_data, EXIF_TAG_EXPOSURE_BIAS_VALUE,
+			plugin->sidebar_builder, "exposure_bias_label", FALSE);
 
 	set_exif_label (exif_data, EXIF_TAG_EXPOSURE_TIME,
-			data->sidebar_builder, "exposure_time_label", FALSE);
+			plugin->sidebar_builder, "exposure_time_label", FALSE);
 
 	set_exif_label (exif_data, EXIF_TAG_MODEL,
-			data->sidebar_builder, "camera_model_label", FALSE);
+			plugin->sidebar_builder, "camera_model_label", FALSE);
 
 	set_exif_label (exif_data, EXIF_TAG_FNUMBER,
-			data->sidebar_builder, "aperture_label", FALSE);
+			plugin->sidebar_builder, "aperture_label", FALSE);
 
 	set_exif_label (exif_data, EXIF_TAG_ISO_SPEED_RATINGS,
-			data->sidebar_builder, "iso_label", FALSE);
+			plugin->sidebar_builder, "iso_label", FALSE);
 
 	set_exif_label (exif_data, EXIF_TAG_FLASH,
-			data->sidebar_builder, "flash_label", TRUE);
+			plugin->sidebar_builder, "flash_label", TRUE);
 
 	set_exif_label (exif_data, EXIF_TAG_METERING_MODE,
-			data->sidebar_builder, "metering_mode_label", TRUE);
+			plugin->sidebar_builder, "metering_mode_label", TRUE);
 			
 	set_exif_label (exif_data, EXIF_TAG_USER_COMMENT,
-			data->sidebar_builder, "desc_label", TRUE);
+			plugin->sidebar_builder, "desc_label", TRUE);
 
-	set_exif_label (exif_data, EXIF_TAG_EXPOSURE_BIAS_VALUE, data->sidebar_builder, "exposure_bias_label", FALSE);
+	set_exif_label (exif_data, EXIF_TAG_EXPOSURE_BIAS_VALUE,
+			plugin->sidebar_builder, "exposure_bias_label", FALSE);
 
 	exif_data_unref (exif_data);
 
@@ -299,12 +298,12 @@ static void manage_exif_data (WindowData *data)
 static void manage_exif_data_cb (EogJob *job, gpointer data)
 {
 	if (!job->error) {
-		manage_exif_data ((WindowData *)data);
+		manage_exif_data (EOG_EXIF_DISPLAY_PLUGIN(data));
 	}
 }
 
 static gboolean
-calculate_histogram (WindowData *data, EogImage *eog_image)
+calculate_histogram (EogExifDisplayPlugin *plugin, EogImage *eog_image)
 {
 	int rowstride;
 	int width, height;
@@ -317,7 +316,7 @@ calculate_histogram (WindowData *data, EogImage *eog_image)
 	 * the values in a temporary array.
 	 * only when everything is calculated
 	 * we copy the pointers to the real
-	 * data->histogram_values_red.
+	 * plugin->histogram_values_red.
 	 * That way we'll try to display
 	 * the histogram only once it's fully
 	 * calculated.*/
@@ -327,21 +326,21 @@ calculate_histogram (WindowData *data, EogImage *eog_image)
 		return FALSE;
 	}
 
-	g_free (data->histogram_values_red);
-	data->histogram_values_red = NULL;
+	g_free (plugin->histogram_values_red);
+	plugin->histogram_values_red = NULL;
 
-	g_free (data->histogram_values_green);
-	g_free (data->histogram_values_blue);
-	g_free (data->histogram_values_rgb);
+	g_free (plugin->histogram_values_green);
+	g_free (plugin->histogram_values_blue);
+	g_free (plugin->histogram_values_rgb);
 
 	histogram_values_red_temp = g_new0 (int, 256);
 
-	data->histogram_values_green = g_new0 (int, 256);
-	data->histogram_values_blue = g_new0 (int, 256);
-	data->max_of_array_sums = 0;
+	plugin->histogram_values_green = g_new0 (int, 256);
+	plugin->histogram_values_blue = g_new0 (int, 256);
+	plugin->max_of_array_sums = 0;
 
-	data->histogram_values_rgb = g_new0 (int, 256);
-	data->max_of_array_sums_rgb = 0;
+	plugin->histogram_values_rgb = g_new0 (int, 256);
+	plugin->max_of_array_sums_rgb = 0;
 
 	image_pixbuf = eog_image_get_pixbuf (eog_image);
 	if (image_pixbuf == NULL) {
@@ -369,30 +368,30 @@ calculate_histogram (WindowData *data, EogImage *eog_image)
 			guchar blue = *row_cur_idx++;
 
 			histogram_values_red_temp[red] += 1;
-			data->histogram_values_green[green] += 1;
-			data->histogram_values_blue[blue] += 1;
-			data->histogram_values_rgb[MAX (red, MAX (green, blue))] += 1;
+			plugin->histogram_values_green[green] += 1;
+			plugin->histogram_values_blue[blue] += 1;
+			plugin->histogram_values_rgb[MAX (red, MAX (green, blue))] += 1;
 		}
 	}
 	for (array_sums_elt=0;array_sums_elt<256;array_sums_elt++) {
-		if (histogram_values_red_temp[array_sums_elt] > data->max_of_array_sums) {
-			data->max_of_array_sums = histogram_values_red_temp[array_sums_elt];
+		if (histogram_values_red_temp[array_sums_elt] > plugin->max_of_array_sums) {
+			plugin->max_of_array_sums = histogram_values_red_temp[array_sums_elt];
 		}
-		if (data->histogram_values_green[array_sums_elt] > data->max_of_array_sums) {
-			data->max_of_array_sums = data->histogram_values_green[array_sums_elt];
+		if (plugin->histogram_values_green[array_sums_elt] > plugin->max_of_array_sums) {
+			plugin->max_of_array_sums = plugin->histogram_values_green[array_sums_elt];
 		}
-		if (data->histogram_values_blue[array_sums_elt] > data->max_of_array_sums) {
-			data->max_of_array_sums = data->histogram_values_blue[array_sums_elt];
+		if (plugin->histogram_values_blue[array_sums_elt] > plugin->max_of_array_sums) {
+			plugin->max_of_array_sums = plugin->histogram_values_blue[array_sums_elt];
 		}
 	}
 
 	for (array_sums_elt=0;array_sums_elt<256;array_sums_elt++) {
-		if (data->histogram_values_rgb[array_sums_elt] > data->max_of_array_sums_rgb) {
-			data->max_of_array_sums_rgb = data->histogram_values_rgb[array_sums_elt];
+		if (plugin->histogram_values_rgb[array_sums_elt] > plugin->max_of_array_sums_rgb) {
+			plugin->max_of_array_sums_rgb = plugin->histogram_values_rgb[array_sums_elt];
 		}
 	}
 
-	data->histogram_values_red = histogram_values_red_temp;
+	plugin->histogram_values_red = histogram_values_red_temp;
 
 	g_object_unref (image_pixbuf);
 
@@ -434,7 +433,7 @@ read_gconf_bool_setting (const char *gconf_key)
 
 static void
 drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
-	WindowData *data)
+		     EogExifDisplayPlugin *plugin)
 {
 	gboolean draw_channels_histogram, draw_rgb_histogram;
 	EogImage *eog_image;
@@ -451,15 +450,15 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 	draw_rgb_histogram = read_gconf_bool_setting (
 			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM);
 
-	eog_image = eog_thumb_view_get_first_selected_image (data->eog_thumb_view);
+	eog_image = eog_thumb_view_get_first_selected_image (plugin->thumbview);
 	g_return_if_fail (eog_image != NULL);
 
-	if (data->histogram_values_red == NULL) {
+	if (plugin->histogram_values_red == NULL) {
 		/* when calculate_histogram was called previously,
 		 * the picture was not loaded yet.
 		 * Now it's loaded, let's ask to calculate the
 		 * histogram again... */
-		calculate_histogram (data, eog_image);
+		calculate_histogram (plugin, eog_image);
 	}
 
 	cr = gdk_cairo_create (gtk_widget_get_window (GTK_WIDGET (drawing_area)));
@@ -481,7 +480,7 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 		gtk_widget_get_window (GTK_WIDGET (drawing_area)), TRUE,
 		GTK_STATE_NORMAL, NULL, 0, 0, drawing_area_width, drawing_area_height);
 
-	if (data->histogram_values_red == NULL) {
+	if (plugin->histogram_values_red == NULL) {
 		/* it's possible, if the image
 		 * is not loaded and histogram
 		 * can't be calculated, we go this
@@ -494,32 +493,37 @@ drawing_area_expose (GtkDrawingArea *drawing_area, GdkEventExpose *event,
 
 	if (draw_channels_histogram) {
 		cairo_set_source_rgba (cr, 1, 0, 0, 0.5);
-		draw_histogram_graph (cr, data->histogram_values_red, data->max_of_array_sums);
+		draw_histogram_graph (cr, plugin->histogram_values_red,
+				      plugin->max_of_array_sums);
 
 		cairo_set_source_rgba (cr, 0, 1, 0, 0.5);
-		draw_histogram_graph (cr, data->histogram_values_green, data->max_of_array_sums);
+		draw_histogram_graph (cr, plugin->histogram_values_green,
+				      plugin->max_of_array_sums);
 
 		cairo_set_source_rgba (cr, 0, 0, 1, 0.5);
-		draw_histogram_graph (cr, data->histogram_values_blue, data->max_of_array_sums);
+		draw_histogram_graph (cr, plugin->histogram_values_blue,
+				      plugin->max_of_array_sums);
 	}
 	if (draw_rgb_histogram) {
 		cairo_set_source_rgba (cr, 0, 0, 0, 0.5);
-		draw_histogram_graph (cr, data->histogram_values_rgb, data->max_of_array_sums_rgb);
+		draw_histogram_graph (cr, plugin->histogram_values_rgb,
+				      plugin->max_of_array_sums_rgb);
 	}
 
         cairo_destroy (cr);
 	g_object_unref (eog_image);
 }
 
-static void calculate_histogram_cb (EogJob *job, gpointer _data)
+static void calculate_histogram_cb (EogJob *job, gpointer data)
 {
-	WindowData *data = (WindowData*)_data;
+	EogExifDisplayPlugin *plugin = EOG_EXIF_DISPLAY_PLUGIN (data);
+
 	if (!job->error) {
 		EogImage *eog_image =
-			eog_thumb_view_get_first_selected_image (data->eog_thumb_view);
-		calculate_histogram (data, eog_image);
+			eog_thumb_view_get_first_selected_image (plugin->thumbview);
+		calculate_histogram (plugin, eog_image);
 		g_object_unref (eog_image);
-		drawing_area_expose (data->drawing_area, NULL, data);
+		drawing_area_expose (plugin->drawing_area, NULL, plugin);
 	}
 }
 
@@ -585,7 +589,7 @@ statusbar_update_exif_data (GtkStatusbar *statusbar, EogThumbView *view)
 
 
 static void
-selection_changed_cb (EogThumbView *view, WindowData *data)
+selection_changed_cb (EogThumbView *view, EogExifDisplayPlugin *plugin)
 {
 	EogImage *image;
 
@@ -597,7 +601,7 @@ selection_changed_cb (EogThumbView *view, WindowData *data)
 	g_return_if_fail (image != NULL);
 
 	if (read_gconf_bool_setting (EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR)) {
-		statusbar_update_exif_data (GTK_STATUSBAR (data->statusbar_exif), view);
+		statusbar_update_exif_data (GTK_STATUSBAR (plugin->statusbar_exif), view);
 	}
 
 	if (!eog_image_has_data (image, EOG_IMAGE_DATA_EXIF)) {
@@ -606,11 +610,11 @@ selection_changed_cb (EogThumbView *view, WindowData *data)
 		job = eog_job_load_new (image, EOG_IMAGE_DATA_EXIF);
 		g_signal_connect (G_OBJECT (job), "finished",
 				  G_CALLBACK (manage_exif_data_cb),
-				  data);
+				  plugin);
 		eog_job_queue_add_job (job);
 		g_object_unref (job);
 	} else {
-		manage_exif_data (data);
+		manage_exif_data (plugin);
 	}
 
 	/* the selected image changed, the histogram must
@@ -621,7 +625,7 @@ selection_changed_cb (EogThumbView *view, WindowData *data)
 		job = eog_job_load_new (image, EOG_IMAGE_DATA_IMAGE);
 		g_signal_connect (G_OBJECT (job), "finished",
 				  G_CALLBACK (calculate_histogram_cb),
-				  data);
+				  plugin);
 		eog_job_queue_add_job (job);
 		g_object_unref (job);
 	}
@@ -644,34 +648,36 @@ eog_display_histogram_settings_changed_cb (GConfClient *client,
 }
 
 static void
-remove_statusbar_entry (WindowData *data)
+remove_statusbar_entry (EogExifDisplayPlugin *plugin)
 {
-	if (data->statusbar_exif == NULL) {
+	GtkWidget *statusbar = eog_window_get_statusbar (plugin->window);
+
+	if (plugin->statusbar_exif == NULL) {
 		return;
 	}
-	GtkWidget *statusbar = eog_window_get_statusbar (data->eog_window);
-	gtk_container_remove (GTK_CONTAINER (statusbar), data->statusbar_exif);
-	data->statusbar_exif = NULL;
+	gtk_container_remove (GTK_CONTAINER (statusbar),
+			      plugin->statusbar_exif);
+	plugin->statusbar_exif = NULL;
 }
 
 static void
-setup_statusbar_exif (WindowData *data)
+setup_statusbar_exif (EogExifDisplayPlugin *plugin)
 {
-	GtkWidget *statusbar = eog_window_get_statusbar (data->eog_window);
+	GtkWidget *statusbar = eog_window_get_statusbar (plugin->window);
 
 	if (read_gconf_bool_setting (EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR)) {
-		data->statusbar_exif = gtk_statusbar_new ();
-		gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (data->statusbar_exif),
+		plugin->statusbar_exif = gtk_statusbar_new ();
+		gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (plugin->statusbar_exif),
 						   FALSE);
-		gtk_widget_set_size_request (data->statusbar_exif, 280, 10);
+		gtk_widget_set_size_request (plugin->statusbar_exif, 280, 10);
 		gtk_box_pack_end (GTK_BOX (statusbar),
-				  data->statusbar_exif,
+				  plugin->statusbar_exif,
 				  FALSE, FALSE, 0);
 
-		statusbar_update_exif_data (GTK_STATUSBAR (data->statusbar_exif), data->eog_thumb_view);
+		statusbar_update_exif_data (GTK_STATUSBAR (plugin->statusbar_exif), plugin->thumbview);
 	}
 	else {
-		remove_statusbar_entry (data);
+		remove_statusbar_entry (plugin);
 	}
 }
 
@@ -681,107 +687,100 @@ eog_display_statusbar_settings_changed_cb (GConfClient *client,
 				       GConfEntry  *entry,
 				       gpointer    data)
 {
-	setup_statusbar_exif ((WindowData*)data);
+	setup_statusbar_exif (EOG_EXIF_DISPLAY_PLUGIN (data));
 }
 
 static void
-impl_activate (EogPlugin *plugin,
-	       EogWindow *window)
+impl_activate (EogWindowActivatable *activatable)
 {
-	WindowData *data;
+	EogExifDisplayPlugin *plugin = EOG_EXIF_DISPLAY_PLUGIN (activatable);
+	EogWindow *window = plugin->window;
 	GtkWidget *thumbview;
 	GtkWidget *sidebar;
+	GtkWidget *drawing_area;
+	GError* error = NULL;
 
 	gconf_client = gconf_client_get_default ();
 
-	data = g_new0(WindowData, 1);
-	g_object_set_data_full (G_OBJECT (window),
-				WINDOW_DATA_KEY,
-				data,
-				(GDestroyNotify) free_window_data);
-
-
 	thumbview = eog_window_get_thumb_view (window);
-	data->eog_window = window;
-	data->eog_thumb_view = EOG_THUMB_VIEW (eog_window_get_thumb_view (window));
+	plugin->thumbview = EOG_THUMB_VIEW (thumbview);
 
-	data->histogram_values_red = NULL;
-	data->histogram_values_green = NULL;
-	data->histogram_values_blue = NULL;
-	data->histogram_values_rgb = NULL;
+	plugin->histogram_values_red = NULL;
+	plugin->histogram_values_green = NULL;
+	plugin->histogram_values_blue = NULL;
+	plugin->histogram_values_rgb = NULL;
 
-	data->statusbar_exif = NULL;
-	setup_statusbar_exif (data);
+	plugin->statusbar_exif = NULL;
+	setup_statusbar_exif (plugin);
 
-	data->selection_changed_id = g_signal_connect (G_OBJECT (thumbview),
-						       "selection-changed",
-						       G_CALLBACK (selection_changed_cb),
-						       data);
+	plugin->selection_changed_id = g_signal_connect (G_OBJECT (thumbview),
+					"selection-changed",
+					G_CALLBACK (selection_changed_cb),
+					plugin);
+
 	sidebar = eog_window_get_sidebar (window);
 
-	GError* error = NULL;
-	data->sidebar_builder = gtk_builder_new ();
-	gtk_builder_set_translation_domain (data->sidebar_builder, GETTEXT_PACKAGE);
-	if (!gtk_builder_add_from_file (data->sidebar_builder, GTKBUILDER_FILE, &error))
+	plugin->sidebar_builder = gtk_builder_new ();
+	gtk_builder_set_translation_domain (plugin->sidebar_builder,
+					    GETTEXT_PACKAGE);
+	if (!gtk_builder_add_from_file (plugin->sidebar_builder,
+					GTKBUILDER_FILE, &error))
 	{
 		g_warning ("Couldn't load builder file: %s", error->message);
 		g_error_free (error);
 	}
-	data->gtkbuilder_widget = GTK_WIDGET (gtk_builder_get_object (data->sidebar_builder, "viewport1"));
+	plugin->gtkbuilder_widget = GTK_WIDGET (gtk_builder_get_object (plugin->sidebar_builder, "viewport1"));
 
-	GtkWidget *drawing_area = GTK_WIDGET (gtk_builder_get_object (data->sidebar_builder, "drawingarea1"));
+	drawing_area = GTK_WIDGET (gtk_builder_get_object (plugin->sidebar_builder, "drawingarea1"));
 	g_signal_connect (drawing_area, "expose-event",
-			G_CALLBACK (drawing_area_expose), data);
-	data->drawing_area = GTK_DRAWING_AREA (drawing_area);
+			G_CALLBACK (drawing_area_expose), plugin);
+	plugin->drawing_area = GTK_DRAWING_AREA (drawing_area);
 
-	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), "Details", data->gtkbuilder_widget);
-	gtk_widget_show_all (data->gtkbuilder_widget);
+	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), "Details",
+			      plugin->gtkbuilder_widget);
+	gtk_widget_show_all (plugin->gtkbuilder_widget);
 
 	/* force display of data now */
-	selection_changed_cb (data->eog_thumb_view, data);
+	selection_changed_cb (plugin->thumbview, plugin);
 	if (read_gconf_bool_setting (EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR)) {
-		statusbar_update_exif_data (GTK_STATUSBAR (data->statusbar_exif),
-				    EOG_THUMB_VIEW (eog_window_get_thumb_view (window)));
+		statusbar_update_exif_data (GTK_STATUSBAR (plugin->statusbar_exif),
+					    EOG_THUMB_VIEW (thumbview));
 	}
 
 	gconf_client_notify_add (gconf_client,
 			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM,
 			eog_display_histogram_settings_changed_cb,
-			data->drawing_area, NULL, NULL);
+			plugin->drawing_area, NULL, NULL);
 
 	gconf_client_notify_add (gconf_client,
 			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM,
 			eog_display_histogram_settings_changed_cb,
-			data->drawing_area, NULL, NULL);
+			plugin->drawing_area, NULL, NULL);
 
 	gconf_client_notify_add (gconf_client,
 			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR,
 			eog_display_statusbar_settings_changed_cb,
-			data, NULL, NULL);
+			plugin, NULL, NULL);
 }
 
 static void
-impl_deactivate	(EogPlugin *plugin,
-		 EogWindow *window)
+impl_deactivate	(EogWindowActivatable *activatable)
 {
-	WindowData *data;
+	EogExifDisplayPlugin *plugin = EOG_EXIF_DISPLAY_PLUGIN (activatable);
 	GtkWidget *sidebar, *thumbview;
 
-	data = (WindowData *) g_object_get_data (G_OBJECT (window),
-						 WINDOW_DATA_KEY);
-	g_return_if_fail (data != NULL);
+	remove_statusbar_entry (plugin);
 
-	remove_statusbar_entry (data);
+	sidebar = eog_window_get_sidebar (plugin->window);
+	eog_sidebar_remove_page(EOG_SIDEBAR (sidebar),
+				plugin->gtkbuilder_widget);
 
-	sidebar = eog_window_get_sidebar (window);
-	eog_sidebar_remove_page(EOG_SIDEBAR (sidebar), data->gtkbuilder_widget);
+	thumbview = eog_window_get_thumb_view (plugin->window);
+	g_signal_handler_disconnect (thumbview, plugin->selection_changed_id);
 
-	thumbview = eog_window_get_thumb_view (window);
-	g_signal_handler_disconnect (thumbview, data->selection_changed_id);
-
-	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
+//	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
 }
-
+#if 0
 /* copy-pasted from eog-preferences-dialog.c */
 static void
 pd_check_toggle_cb (GtkWidget *widget, gpointer data)
@@ -870,13 +869,93 @@ impl_create_config_dialog (EogPlugin *plugin)
 
 	return result;
 }
+#endif
+static void
+eog_exif_display_plugin_get_property (GObject    *object,
+				      guint       prop_id,
+				      GValue     *value,
+				      GParamSpec *pspec)
+{
+	EogExifDisplayPlugin *plugin = EOG_EXIF_DISPLAY_PLUGIN (object);
 
+	switch (prop_id)
+	{
+	case PROP_WINDOW:
+		g_value_set_object (value, plugin->window);
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
+}
+
+static void
+eog_exif_display_plugin_set_property (GObject      *object,
+				      guint         prop_id,
+				      const GValue *value,
+				      GParamSpec   *pspec)
+{
+	EogExifDisplayPlugin *plugin = EOG_EXIF_DISPLAY_PLUGIN (object);
+
+	switch (prop_id)
+	{
+	case PROP_WINDOW:
+		plugin->window = EOG_WINDOW (g_value_dup_object (value));
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
+}
+
+static void
+eog_exif_display_plugin_dispose (GObject *object)
+{
+	EogExifDisplayPlugin *plugin = EOG_EXIF_DISPLAY_PLUGIN (object);
+
+	eog_debug_message (DEBUG_PLUGINS, "EogPostrPlugin disposing");
+
+	if (plugin->window != NULL) {
+		g_object_unref (plugin->window);
+		plugin->window = NULL;
+	}
+
+	G_OBJECT_CLASS (eog_exif_display_plugin_parent_class)->dispose (object);
+}
 static void
 eog_exif_display_plugin_class_init (EogExifDisplayPluginClass *klass)
 {
-	EogPluginClass *plugin_class = EOG_PLUGIN_CLASS (klass);
+	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	plugin_class->activate = impl_activate;
-	plugin_class->deactivate = impl_deactivate;
-	plugin_class->create_configure_dialog = impl_create_config_dialog;
+	object_class->finalize = eog_exif_display_plugin_dispose;
+	object_class->set_property = eog_exif_display_plugin_set_property;
+	object_class->get_property = eog_exif_display_plugin_get_property;
+
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
+
+//	plugin_class->create_configure_dialog = impl_create_config_dialog;
+}
+
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface)
+{
+        iface->activate = impl_activate;
+        iface->deactivate = impl_deactivate;
+}
+
+static void
+eog_exif_display_plugin_class_finalize (EogExifDisplayPluginClass *klass)
+{
+	/* Dummy needed for G_DEFINE_DYNAMIC_TYPE_EXTENDED */
+}
+
+G_MODULE_EXPORT void
+peas_register_types (PeasObjectModule *module)
+{
+        eog_exif_display_plugin_register_type (G_TYPE_MODULE (module));
+        peas_object_module_register_extension_type (module,
+                                                    EOG_TYPE_WINDOW_ACTIVATABLE,
+                                                    EOG_TYPE_EXIF_DISPLAY_PLUGIN);
 }
