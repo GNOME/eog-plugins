@@ -49,15 +49,7 @@ G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogExifDisplayPluginSetup,
 static void
 eog_exif_display_plugin_setup_init (EogExifDisplayPluginSetup *setup)
 {
-	setup->vbox = NULL;
-}
 
-static void
-close_config_window_cb(GtkWidget *widget, gpointer _data)
-{
-	GtkWidget *data = GTK_WIDGET (_data);
-
-	gtk_widget_destroy (GTK_WIDGET (gtk_widget_get_toplevel (data)));
 }
 
 static GtkWidget *
@@ -69,20 +61,22 @@ impl_create_config_widget (PeasGtkConfigurable *configurable)
 	GError *error = NULL;
 	GtkWidget *display_channels_histogram_widget, *display_rgb_histogram_widget;
 	GtkWidget *close_button, *display_camera_settings_in_statusbar;
-	GtkWidget *result;
+	GObject *result;
+	gchar *object_ids[] = {"vbox1", NULL};
 
 	setup = EOG_EXIF_DISPLAY_PLUGIN_SETUP (configurable);
 	settings = g_settings_new (EOG_EXIF_DISPLAY_CONF_SCHEMA_ID);
 
 	config_builder = gtk_builder_new ();
 	gtk_builder_set_translation_domain (config_builder, GETTEXT_PACKAGE);
-	if (!gtk_builder_add_from_file (config_builder, GTKBUILDER_CONFIG_FILE, &error))
+	if (!gtk_builder_add_objects_from_file (config_builder, GTKBUILDER_CONFIG_FILE, object_ids, &error))
 	{
 		g_warning ("Couldn't load builder file: %s", error->message);
 		g_error_free (error);
 	}
-	result = GTK_WIDGET (gtk_builder_get_object (config_builder, "vbox1"));
-	gtk_widget_unparent (result);
+
+	// Add a reference to keep the box alive after the builder is gone
+	result = g_object_ref (gtk_builder_get_object (config_builder, "vbox1"));
 	display_channels_histogram_widget = GTK_WIDGET (
 			gtk_builder_get_object (config_builder, "display_per_channel_histogram"));
 	display_rgb_histogram_widget = GTK_WIDGET (
@@ -100,9 +94,10 @@ impl_create_config_widget (PeasGtkConfigurable *configurable)
 			 display_camera_settings_in_statusbar,
 			 "active", G_SETTINGS_BIND_DEFAULT);
 
+	g_object_unref (config_builder);
 	g_object_unref (settings);
 
-	return result;
+	return GTK_WIDGET(result);
 }
 
 
@@ -113,11 +108,6 @@ eog_exif_display_plugin_setup_dispose (GObject *object)
 
 	eog_debug_message (DEBUG_PLUGINS,
 			   "EogExifDisplayPluginSetup disposing");
-
-	if (setup->vbox != NULL) {
-		g_object_unref (setup->vbox);
-		setup->vbox = NULL;
-	}
 
 	G_OBJECT_CLASS (eog_exif_display_plugin_setup_parent_class)->dispose (object);
 }

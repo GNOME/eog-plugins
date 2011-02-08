@@ -55,8 +55,6 @@ typedef struct _EogExifDisplayPluginSetup	EogExifDisplayPluginSetup;
 struct _EogExifDisplayPluginSetup
 {
 	PeasExtensionBase parent_instance;
-
-	GtkWidget *vbox;
 };
 
 /*
