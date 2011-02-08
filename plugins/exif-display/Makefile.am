@@ -13,7 +13,10 @@ plugin_LTLIBRARIES = libexif-display.la
 
 libexif_display_la_SOURCES = \
 	eog-exif-display-plugin.h			\
-	eog-exif-display-plugin.c
+	eog-exif-display-plugin.c			\
+	eog-exif-display-plugin-settings.h		\
+	eog-exif-display-plugin-setup.c			\
+	eog-exif-display-plugin-setup.h
 
 libexif_display_la_LDFLAGS = \
 	-avoid-version -module

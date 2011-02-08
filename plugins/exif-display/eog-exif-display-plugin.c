@@ -42,6 +42,7 @@
 #include <eog/eog-sidebar.h>
 #include <eog/eog-window-activatable.h>
 
+#include "eog-exif-display-plugin-setup.h"
 #include "eog-exif-display-plugin.h"
 
 #define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM "/apps/eog/plugins/exif_display/display_channels_histogram"
@@ -67,10 +68,12 @@ enum {
 static void
 eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
 
+
 G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogExifDisplayPlugin, eog_exif_display_plugin,
                 PEAS_TYPE_EXTENSION_BASE, 0,
                 G_IMPLEMENT_INTERFACE_DYNAMIC(EOG_TYPE_WINDOW_ACTIVATABLE,
                                         eog_window_activatable_iface_init))
+
 #if 0
 static void
 free_window_data (WindowData *data)
@@ -775,96 +778,7 @@ impl_deactivate	(EogWindowActivatable *activatable)
 
 //	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
 }
-#if 0
-/* copy-pasted from eog-preferences-dialog.c */
-static void
-pd_check_toggle_cb (GtkWidget *widget, gpointer data)
-{
-	char *key = NULL;
-	gboolean invert = FALSE;
-	gboolean value;
 
-	key = g_object_get_data (G_OBJECT (widget), GCONF_OBJECT_KEY);
-	invert = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), TOGGLE_INVERT_VALUE));
-
-	value = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
-
-	if (key == NULL) return;
-
-	gconf_client_set_bool (GCONF_CLIENT (data),
-			       key,
-			       (invert) ? !value : value,
-			       NULL);
-}
-
-static void
-close_config_window_cb(GtkWidget *widget, gpointer _data)
-{
-	GtkWidget *data = GTK_WIDGET (_data);
-
-	gtk_widget_destroy (GTK_WIDGET (gtk_widget_get_toplevel (data)));
-}
-
-static void
-connect_checkbox_to_gconf_setting (GtkToggleButton *checkbox, char *gconf_key)
-{
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkbox),
-				      gconf_client_get_bool (gconf_client,
-							     gconf_key,
-							     NULL));
-
-	g_object_set_data (G_OBJECT (checkbox),
-			   GCONF_OBJECT_KEY,
-			   gconf_key);
-
-	g_signal_connect (G_OBJECT (checkbox),
-			  "toggled",
-			  G_CALLBACK (pd_check_toggle_cb),
-			  gconf_client);
-}
-
-static GtkWidget *
-impl_create_config_dialog (EogPlugin *plugin)
-{
-	GtkBuilder *config_builder;
-	GError *error = NULL;
-	GtkWidget *display_channels_histogram_widget, *display_rgb_histogram_widget;
-	GtkWidget *close_button, *display_camera_settings_in_statusbar;
-	GtkWidget *result;
-
-	config_builder = gtk_builder_new ();
-	gtk_builder_set_translation_domain (config_builder, GETTEXT_PACKAGE);
-	if (!gtk_builder_add_from_file (config_builder, GTKBUILDER_CONFIG_FILE, &error))
-	{
-		g_warning ("Couldn't load builder file: %s", error->message);
-		g_error_free (error);
-	}
-	result = GTK_WIDGET (gtk_builder_get_object (config_builder, "config_dialog"));
-	display_channels_histogram_widget = GTK_WIDGET (
-			gtk_builder_get_object (config_builder, "display_per_channel_histogram"));
-	display_rgb_histogram_widget = GTK_WIDGET (
-			gtk_builder_get_object (config_builder, "display_rgb_histogram"));
-	display_camera_settings_in_statusbar = GTK_WIDGET (
-			gtk_builder_get_object (config_builder, "display_camerasettings_statusbar"));
-	close_button = GTK_WIDGET (
-			gtk_builder_get_object (config_builder, "close_button"));
-	g_object_unref (config_builder);
-
-	connect_checkbox_to_gconf_setting (GTK_TOGGLE_BUTTON (display_channels_histogram_widget),
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM);
-	connect_checkbox_to_gconf_setting (GTK_TOGGLE_BUTTON (display_rgb_histogram_widget),
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM);
-	connect_checkbox_to_gconf_setting (GTK_TOGGLE_BUTTON (display_camera_settings_in_statusbar),
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR);
-
-	g_signal_connect (G_OBJECT (close_button),
-			  "clicked",
-			  G_CALLBACK (close_config_window_cb),
-			  GTK_WINDOW (result));
-
-	return result;
-}
-#endif
 static void
 eog_exif_display_plugin_get_property (GObject    *object,
 				      guint       prop_id,
@@ -929,8 +843,6 @@ eog_exif_display_plugin_class_init (EogExifDisplayPluginClass *klass)
 	object_class->get_property = eog_exif_display_plugin_get_property;
 
 	g_object_class_override_property (object_class, PROP_WINDOW, "window");
-
-//	plugin_class->create_configure_dialog = impl_create_config_dialog;
 }
 
 static void
@@ -953,4 +865,6 @@ peas_register_types (PeasObjectModule *module)
         peas_object_module_register_extension_type (module,
                                                     EOG_TYPE_WINDOW_ACTIVATABLE,
                                                     EOG_TYPE_EXIF_DISPLAY_PLUGIN);
+
+	eog_exif_display_plugin_setup_register_types (module);
 }
