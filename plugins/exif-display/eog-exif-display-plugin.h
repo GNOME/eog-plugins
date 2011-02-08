@@ -74,6 +74,11 @@ struct _EogExifDisplayPlugin
 
 	/* Handlers ids */
 	guint selection_changed_id;
+
+	/* Settings */
+	gboolean enable_statusbar;
+	gboolean draw_chan_histogram;
+	gboolean draw_rgb_histogram;
 };
 
 /*

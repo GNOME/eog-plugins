@@ -36,9 +36,17 @@ uidir = $(plugindir)/exif-display
 
 plugin_DATA = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
-EXTRA_DIST = $(plugin_in_files) $(UI_FILES)
+gsettings_SCHEMAS = org.gnome.eog.plugins.exif-display.gschema.xml
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
 
-CLEANFILES = $(plugin_DATA)
-DISTCLEANFILES = $(plugin_DATA)
+EXTRA_DIST = \
+	$(plugin_in_files)	\
+	$(UI_FILES)		\
+	org.gnome.eog.plugins.exif-display.gschema.xml.in.in
+
+CLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
+MAINTAINERCLEANFILES = $(gsettings_SCHEMAS:.xml=.valid)
 
 -include $(top_srcdir)/git.mk

@@ -43,7 +43,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 # **********
 
 PKG_CHECK_MODULES([EOG], [
-	glib-2.0 >= 2.12.0
+	glib-2.0 >= 2.26.0
 	gtk+-3.0 >= 2.99.3
 	libpeas-1.0 >= 0.7.0
 	eog >= 2.91.6
@@ -128,12 +128,10 @@ IFS="$eogpl_save_ifs"
 AC_MSG_RESULT([$PLUGINS])
 
 # *****
-# GConf 
+# GSettings 
 # *****
 
-AC_PATH_PROG(GCONFTOOL, gconftool-2)
-
-AM_GCONF_SOURCE_2
+GLIB_GSETTINGS
 
 # **************
 # Python Support 
@@ -353,14 +351,13 @@ if test "$?" = 1
 then
 
     PKG_CHECK_MODULES(EXIFDISPLAY,
-        [ libexif >= 0.6.16,
-          gconf-2.0 >= 2.5.90 ],
+        [ libexif >= 0.6.16 ],
         [],[have_exifdisplay=no])
     AC_SUBST(EXIFDISPLAY_LIBS)
     AC_SUBST(EXIFDISPLAY_CFLAGS)
     if test "x$have_exifdisplay" = "xno"
     then
-        undef_plugin exif-display "libexif or gconf2 was not found"
+        undef_plugin exif-display "libexif was not found"
     fi
 fi
 
@@ -388,6 +385,7 @@ plugins/Makefile
 plugins/map/Makefile
 plugins/fit-to-width/Makefile
 plugins/exif-display/Makefile
+plugins/exif-display/org.gnome.eog.plugins.exif-display.gschema.xml.in
 plugins/send-by-mail/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile

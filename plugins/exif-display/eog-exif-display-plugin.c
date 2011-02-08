@@ -25,8 +25,6 @@
 
 #include <gtk/gtk.h>
 
-#include <gconf/gconf-client.h>
-
 #include <glib/gi18n-lib.h>
 #include <eog/eog-debug.h>
 
@@ -42,32 +40,22 @@
 #include <eog/eog-sidebar.h>
 #include <eog/eog-window-activatable.h>
 
+#include "eog-exif-display-plugin-settings.h"
 #include "eog-exif-display-plugin-setup.h"
 #include "eog-exif-display-plugin.h"
 
-#define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM "/apps/eog/plugins/exif_display/display_channels_histogram"
-#define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM "/apps/eog/plugins/exif_display/display_rgb_histogram"
-#define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR "/apps/eog/plugins/exif_display/display_exif_in_statusbar"
-
-/* copy-pasted from eog-preferences-dialog.c */
-#define GCONF_OBJECT_KEY	"GCONF_KEY"
-
-/* copy-pasted from eog-preferences-dialog.c */
-#define TOGGLE_INVERT_VALUE	"TOGGLE_INVERT_VALUE"
-
-static GConfClient *gconf_client = NULL;
-
 #define GTKBUILDER_FILE EOG_PLUGINDIR"/exif-display/exif-display.ui"
-#define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/exif-display/exif-display-config.ui"
 
 enum {
-        PROP_O,
-        PROP_WINDOW
+	PROP_O,
+	PROP_DRAW_CHAN_HISTOGRAM,
+	PROP_DRAW_RGB_HISTOGRAM,
+	PROP_ENABLE_STATUSBAR,
+	PROP_WINDOW
 };
 
 static void
 eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
-
 
 G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogExifDisplayPlugin, eog_exif_display_plugin,
                 PEAS_TYPE_EXTENSION_BASE, 0,
@@ -415,25 +403,6 @@ draw_histogram_graph (cairo_t *cr, int *histogram_values, int max_of_array_sums)
 	cairo_fill (cr);
 }
 
-static gboolean
-read_gconf_bool_setting (const char *gconf_key)
-{
-	gboolean result = FALSE;
-	GConfEntry *mode_entry = gconf_client_get_entry (gconf_client,
-					     gconf_key,
-					     NULL, TRUE, NULL);
-
-	if (G_LIKELY (mode_entry != NULL)) {
-		if (mode_entry->value != NULL &&
-		    mode_entry->value->type == GCONF_VALUE_BOOL) {
-			result = gconf_value_get_bool (mode_entry->value);
-		}
-		gconf_entry_unref (mode_entry);
-	}
-
-	return result;
-}
-
 static void
 drawing_area_draw_cb (GtkDrawingArea *drawing_area, cairo_t *cr,
 		     EogExifDisplayPlugin *plugin)
@@ -447,10 +416,8 @@ drawing_area_draw_cb (GtkDrawingArea *drawing_area, cairo_t *cr,
 	if (!gtk_widget_get_realized (GTK_WIDGET (drawing_area)))
 		return;
 
-	draw_channels_histogram = read_gconf_bool_setting (
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM);
-	draw_rgb_histogram = read_gconf_bool_setting (
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM);
+	draw_channels_histogram = plugin->draw_chan_histogram;
+	draw_rgb_histogram = plugin->draw_rgb_histogram;
 
 	eog_image = eog_thumb_view_get_first_selected_image (plugin->thumbview);
 	g_return_if_fail (eog_image != NULL);
@@ -600,7 +567,7 @@ selection_changed_cb (EogThumbView *view, EogExifDisplayPlugin *plugin)
 	image = eog_thumb_view_get_first_selected_image (view);
 	g_return_if_fail (image != NULL);
 
-	if (read_gconf_bool_setting (EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR)) {
+	if (plugin->enable_statusbar) {
 		statusbar_update_exif_data (GTK_STATUSBAR (plugin->statusbar_exif), view);
 	}
 
@@ -634,17 +601,20 @@ selection_changed_cb (EogThumbView *view, EogExifDisplayPlugin *plugin)
 }
 
 static void
-eog_display_histogram_settings_changed_cb (GConfClient *client,
-				       guint       cnxn_id,
-				       GConfEntry  *entry,
-				       gpointer    data)
+eog_display_histogram_settings_changed_cb (GSettings *setting,
+					   gchar     *key,
+					   gpointer   data)
 {
-	g_return_if_fail (GTK_IS_WIDGET (data));
+	EogExifDisplayPlugin *plugin;
+
+	g_return_if_fail (EOG_IS_EXIF_DISPLAY_PLUGIN (data));
+
+	plugin = EOG_EXIF_DISPLAY_PLUGIN(data);
 
 	/* redrawing the histogram will be enough to make
 	 * that the changes are applied.
 	 */
-	gtk_widget_queue_draw (GTK_WIDGET (data));
+	gtk_widget_queue_draw (GTK_WIDGET (plugin->drawing_area));
 }
 
 static void
@@ -665,7 +635,7 @@ setup_statusbar_exif (EogExifDisplayPlugin *plugin)
 {
 	GtkWidget *statusbar = eog_window_get_statusbar (plugin->window);
 
-	if (read_gconf_bool_setting (EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR)) {
+	if (plugin->enable_statusbar) {
 		plugin->statusbar_exif = gtk_statusbar_new ();
 		gtk_widget_set_size_request (plugin->statusbar_exif, 280, 10);
 		gtk_box_pack_end (GTK_BOX (statusbar),
@@ -680,10 +650,9 @@ setup_statusbar_exif (EogExifDisplayPlugin *plugin)
 }
 
 static void
-eog_display_statusbar_settings_changed_cb (GConfClient *client,
-				       guint       cnxn_id,
-				       GConfEntry  *entry,
-				       gpointer    data)
+eog_display_statusbar_settings_changed_cb (GSettings *settings,
+					   gchar     *key,
+					   gpointer   data)
 {
 	setup_statusbar_exif (EOG_EXIF_DISPLAY_PLUGIN (data));
 }
@@ -693,12 +662,13 @@ impl_activate (EogWindowActivatable *activatable)
 {
 	EogExifDisplayPlugin *plugin = EOG_EXIF_DISPLAY_PLUGIN (activatable);
 	EogWindow *window = plugin->window;
+	GSettings *settings;
 	GtkWidget *thumbview;
 	GtkWidget *sidebar;
 	GtkWidget *drawing_area;
 	GError* error = NULL;
 
-	gconf_client = gconf_client_get_default ();
+	settings = g_settings_new (EOG_EXIF_DISPLAY_CONF_SCHEMA_ID);
 
 	thumbview = eog_window_get_thumb_view (window);
 	plugin->thumbview = EOG_THUMB_VIEW (thumbview);
@@ -738,27 +708,22 @@ impl_activate (EogWindowActivatable *activatable)
 			      plugin->gtkbuilder_widget);
 	gtk_widget_show_all (plugin->gtkbuilder_widget);
 
+	g_settings_bind (settings, EOG_EXIF_DISPLAY_CONF_CHANNELS_HISTOGRAM,
+			 plugin, "draw-chan-histogram", G_SETTINGS_BIND_GET);
+	g_settings_bind (settings, EOG_EXIF_DISPLAY_CONF_RGB_HISTOGRAM,
+			 plugin, "draw-rgb-histogram", G_SETTINGS_BIND_GET);
+	g_settings_bind (settings, EOG_EXIF_DISPLAY_CONF_EXIF_IN_STATUSBAR,
+			 plugin, "enable-statusbar", G_SETTINGS_BIND_GET);
+
 	/* force display of data now */
 	selection_changed_cb (plugin->thumbview, plugin);
-	if (read_gconf_bool_setting (EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR)) {
+	if (plugin->enable_statusbar)
+	{
 		statusbar_update_exif_data (GTK_STATUSBAR (plugin->statusbar_exif),
 					    EOG_THUMB_VIEW (thumbview));
 	}
 
-	gconf_client_notify_add (gconf_client,
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM,
-			eog_display_histogram_settings_changed_cb,
-			plugin->drawing_area, NULL, NULL);
-
-	gconf_client_notify_add (gconf_client,
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM,
-			eog_display_histogram_settings_changed_cb,
-			plugin->drawing_area, NULL, NULL);
-
-	gconf_client_notify_add (gconf_client,
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR,
-			eog_display_statusbar_settings_changed_cb,
-			plugin, NULL, NULL);
+	g_object_unref (settings);
 }
 
 static void
@@ -789,6 +754,15 @@ eog_exif_display_plugin_get_property (GObject    *object,
 
 	switch (prop_id)
 	{
+	case PROP_DRAW_CHAN_HISTOGRAM:
+		g_value_set_boolean (value, plugin->draw_chan_histogram);
+		break;
+	case PROP_DRAW_RGB_HISTOGRAM:
+		g_value_set_boolean (value, plugin->draw_rgb_histogram);
+		break;
+	case PROP_ENABLE_STATUSBAR:
+		g_value_set_boolean (value, plugin->enable_statusbar);
+		break;
 	case PROP_WINDOW:
 		g_value_set_object (value, plugin->window);
 		break;
@@ -809,6 +783,15 @@ eog_exif_display_plugin_set_property (GObject      *object,
 
 	switch (prop_id)
 	{
+	case PROP_DRAW_CHAN_HISTOGRAM:
+		plugin->draw_chan_histogram = g_value_get_boolean (value);
+		break;
+	case PROP_DRAW_RGB_HISTOGRAM:
+		plugin->draw_rgb_histogram = g_value_get_boolean (value);
+		break;
+	case PROP_ENABLE_STATUSBAR:
+		plugin->enable_statusbar = g_value_get_boolean (value);
+		break;
 	case PROP_WINDOW:
 		plugin->window = EOG_WINDOW (g_value_dup_object (value));
 		break;
@@ -838,9 +821,21 @@ eog_exif_display_plugin_class_init (EogExifDisplayPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->finalize = eog_exif_display_plugin_dispose;
+	object_class->dispose = eog_exif_display_plugin_dispose;
 	object_class->set_property = eog_exif_display_plugin_set_property;
 	object_class->get_property = eog_exif_display_plugin_get_property;
+
+	g_object_class_install_property (object_class, PROP_DRAW_CHAN_HISTOGRAM,
+		g_param_spec_boolean ("draw-chan-histogram", NULL, NULL, FALSE,
+				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
+
+	g_object_class_install_property (object_class, PROP_DRAW_RGB_HISTOGRAM,
+		g_param_spec_boolean ("draw-rgb-histogram", NULL, NULL, FALSE,
+				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
+
+	g_object_class_install_property (object_class, PROP_ENABLE_STATUSBAR,
+		g_param_spec_boolean ("enable-statusbar", NULL, NULL, FALSE,
+				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 }

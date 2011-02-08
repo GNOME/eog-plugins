@@ -26,26 +26,14 @@
 
 #include <gtk/gtk.h>
 
-#include <gconf/gconf-client.h>
-
 #include <glib/gi18n-lib.h>
 #include <eog/eog-debug.h>
 
 #include <libpeas-gtk/peas-gtk-configurable.h>
 
+#include "eog-exif-display-plugin-settings.h"
+
 #include "eog-exif-display-plugin-setup.h"
-
-#define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM "/apps/eog/plugins/exif_display/display_channels_histogram"
-#define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM "/apps/eog/plugins/exif_display/display_rgb_histogram"
-#define EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR "/apps/eog/plugins/exif_display/display_exif_in_statusbar"
-
-/* copy-pasted from eog-preferences-dialog.c */
-#define GCONF_OBJECT_KEY	"GCONF_KEY"
-
-/* copy-pasted from eog-preferences-dialog.c */
-#define TOGGLE_INVERT_VALUE	"TOGGLE_INVERT_VALUE"
-
-static GConfClient *gconf_client = NULL;
 
 #define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/exif-display/exif-display-config.ui"
 
@@ -64,27 +52,6 @@ eog_exif_display_plugin_setup_init (EogExifDisplayPluginSetup *setup)
 	setup->vbox = NULL;
 }
 
-/* copy-pasted from eog-preferences-dialog.c */
-static void
-pd_check_toggle_cb (GtkWidget *widget, gpointer data)
-{
-	char *key = NULL;
-	gboolean invert = FALSE;
-	gboolean value;
-
-	key = g_object_get_data (G_OBJECT (widget), GCONF_OBJECT_KEY);
-	invert = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), TOGGLE_INVERT_VALUE));
-
-	value = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
-
-	if (key == NULL) return;
-
-	gconf_client_set_bool (GCONF_CLIENT (data),
-			       key,
-			       (invert) ? !value : value,
-			       NULL);
-}
-
 static void
 close_config_window_cb(GtkWidget *widget, gpointer _data)
 {
@@ -93,28 +60,11 @@ close_config_window_cb(GtkWidget *widget, gpointer _data)
 	gtk_widget_destroy (GTK_WIDGET (gtk_widget_get_toplevel (data)));
 }
 
-static void
-connect_checkbox_to_gconf_setting (GtkToggleButton *checkbox, char *gconf_key)
-{
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkbox),
-				      gconf_client_get_bool (gconf_client,
-							     gconf_key,
-							     NULL));
-
-	g_object_set_data (G_OBJECT (checkbox),
-			   GCONF_OBJECT_KEY,
-			   gconf_key);
-
-	g_signal_connect (G_OBJECT (checkbox),
-			  "toggled",
-			  G_CALLBACK (pd_check_toggle_cb),
-			  gconf_client);
-}
-
 static GtkWidget *
 impl_create_config_widget (PeasGtkConfigurable *configurable)
 {
 	EogExifDisplayPluginSetup *setup;
+	GSettings *settings;
 	GtkBuilder *config_builder;
 	GError *error = NULL;
 	GtkWidget *display_channels_histogram_widget, *display_rgb_histogram_widget;
@@ -122,6 +72,7 @@ impl_create_config_widget (PeasGtkConfigurable *configurable)
 	GtkWidget *result;
 
 	setup = EOG_EXIF_DISPLAY_PLUGIN_SETUP (configurable);
+	settings = g_settings_new (EOG_EXIF_DISPLAY_CONF_SCHEMA_ID);
 
 	config_builder = gtk_builder_new ();
 	gtk_builder_set_translation_domain (config_builder, GETTEXT_PACKAGE);
@@ -139,12 +90,18 @@ impl_create_config_widget (PeasGtkConfigurable *configurable)
 	display_camera_settings_in_statusbar = GTK_WIDGET (
 			gtk_builder_get_object (config_builder, "display_camerasettings_statusbar"));
 
-	connect_checkbox_to_gconf_setting (GTK_TOGGLE_BUTTON (display_channels_histogram_widget),
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_CHANNELS_HISTOGRAM);
-	connect_checkbox_to_gconf_setting (GTK_TOGGLE_BUTTON (display_rgb_histogram_widget),
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_RGB_HISTOGRAM);
-	connect_checkbox_to_gconf_setting (GTK_TOGGLE_BUTTON (display_camera_settings_in_statusbar),
-			EOG_EXIF_DISPLAY_CONF_UI_DISPLAY_EXIF_STATUSBAR);
+	g_settings_bind (settings, EOG_EXIF_DISPLAY_CONF_CHANNELS_HISTOGRAM,
+			 display_channels_histogram_widget,
+			 "active", G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (settings, EOG_EXIF_DISPLAY_CONF_RGB_HISTOGRAM,
+			 display_rgb_histogram_widget,
+			 "active", G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (settings, EOG_EXIF_DISPLAY_CONF_EXIF_IN_STATUSBAR,
+			 display_camera_settings_in_statusbar,
+			 "active", G_SETTINGS_BIND_DEFAULT);
+
+	g_object_unref (settings);
+
 	return result;
 }
 
@@ -169,8 +126,6 @@ static void
 eog_exif_display_plugin_setup_class_init (EogExifDisplayPluginSetupClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-
-	gconf_client = gconf_client_get_default ();
 
 	object_class->dispose = eog_exif_display_plugin_setup_dispose;
 }
