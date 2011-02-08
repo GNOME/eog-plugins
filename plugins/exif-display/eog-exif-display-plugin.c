@@ -489,8 +489,7 @@ static void calculate_histogram_cb (EogJob *job, gpointer data)
 			eog_thumb_view_get_first_selected_image (plugin->thumbview);
 		calculate_histogram (plugin, eog_image);
 		g_object_unref (eog_image);
-		if (gtk_widget_get_realized (GTK_WIDGET(plugin->drawing_area)))
-			gdk_window_invalidate_rect (gtk_widget_get_window (GTK_WIDGET(plugin->drawing_area)), NULL, FALSE);
+		gtk_widget_queue_draw (GTK_WIDGET (plugin->drawing_area));
 	}
 }
 
@@ -601,23 +600,6 @@ selection_changed_cb (EogThumbView *view, EogExifDisplayPlugin *plugin)
 }
 
 static void
-eog_display_histogram_settings_changed_cb (GSettings *setting,
-					   gchar     *key,
-					   gpointer   data)
-{
-	EogExifDisplayPlugin *plugin;
-
-	g_return_if_fail (EOG_IS_EXIF_DISPLAY_PLUGIN (data));
-
-	plugin = EOG_EXIF_DISPLAY_PLUGIN(data);
-
-	/* redrawing the histogram will be enough to make
-	 * that the changes are applied.
-	 */
-	gtk_widget_queue_draw (GTK_WIDGET (plugin->drawing_area));
-}
-
-static void
 remove_statusbar_entry (EogExifDisplayPlugin *plugin)
 {
 	GtkWidget *statusbar = eog_window_get_statusbar (plugin->window);
@@ -650,14 +632,6 @@ setup_statusbar_exif (EogExifDisplayPlugin *plugin)
 }
 
 static void
-eog_display_statusbar_settings_changed_cb (GSettings *settings,
-					   gchar     *key,
-					   gpointer   data)
-{
-	setup_statusbar_exif (EOG_EXIF_DISPLAY_PLUGIN (data));
-}
-
-static void
 impl_activate (EogWindowActivatable *activatable)
 {
 	EogExifDisplayPlugin *plugin = EOG_EXIF_DISPLAY_PLUGIN (activatable);
@@ -679,7 +653,6 @@ impl_activate (EogWindowActivatable *activatable)
 	plugin->histogram_values_rgb = NULL;
 
 	plugin->statusbar_exif = NULL;
-	setup_statusbar_exif (plugin);
 
 	plugin->selection_changed_id = g_signal_connect (G_OBJECT (thumbview),
 					"selection-changed",
@@ -715,6 +688,8 @@ impl_activate (EogWindowActivatable *activatable)
 	g_settings_bind (settings, EOG_EXIF_DISPLAY_CONF_EXIF_IN_STATUSBAR,
 			 plugin, "enable-statusbar", G_SETTINGS_BIND_GET);
 
+	setup_statusbar_exif (plugin);
+
 	/* force display of data now */
 	selection_changed_cb (plugin->thumbview, plugin);
 	if (plugin->enable_statusbar)
@@ -742,6 +717,49 @@ impl_deactivate	(EogWindowActivatable *activatable)
 	g_signal_handler_disconnect (thumbview, plugin->selection_changed_id);
 
 //	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
+}
+
+
+static void
+eog_exif_display_plugin_set_draw_chan_histogram (EogExifDisplayPlugin *plugin,
+						 gboolean value)
+{
+	if (plugin->draw_chan_histogram == value)
+		return;
+
+	plugin->draw_chan_histogram = value;
+
+	gtk_widget_queue_draw (GTK_WIDGET (plugin->drawing_area));
+
+	g_object_notify (G_OBJECT (plugin), "draw-chan-histogram");
+}
+
+static void
+eog_exif_display_plugin_set_draw_rgb_histogram (EogExifDisplayPlugin *plugin,
+						gboolean value)
+{
+	if (plugin->draw_rgb_histogram == value)
+		return;
+
+	plugin->draw_rgb_histogram = value;
+
+	gtk_widget_queue_draw (GTK_WIDGET (plugin->drawing_area));
+
+	g_object_notify (G_OBJECT (plugin), "draw-rgb-histogram");
+}
+
+static void
+eog_exif_display_plugin_enable_statusbar (EogExifDisplayPlugin *plugin,
+					  gboolean value)
+{
+	if (plugin->enable_statusbar == value)
+		return;
+
+	plugin->enable_statusbar = value;
+
+	setup_statusbar_exif (plugin);
+
+	g_object_notify (G_OBJECT (plugin), "enable-statusbar");
 }
 
 static void
@@ -784,13 +802,16 @@ eog_exif_display_plugin_set_property (GObject      *object,
 	switch (prop_id)
 	{
 	case PROP_DRAW_CHAN_HISTOGRAM:
-		plugin->draw_chan_histogram = g_value_get_boolean (value);
+		eog_exif_display_plugin_set_draw_chan_histogram (plugin,
+						g_value_get_boolean (value));	
 		break;
 	case PROP_DRAW_RGB_HISTOGRAM:
-		plugin->draw_rgb_histogram = g_value_get_boolean (value);
+		eog_exif_display_plugin_set_draw_rgb_histogram (plugin,
+						g_value_get_boolean (value));
 		break;
 	case PROP_ENABLE_STATUSBAR:
-		plugin->enable_statusbar = g_value_get_boolean (value);
+		eog_exif_display_plugin_enable_statusbar (plugin,
+						g_value_get_boolean (value));
 		break;
 	case PROP_WINDOW:
 		plugin->window = EOG_WINDOW (g_value_dup_object (value));
