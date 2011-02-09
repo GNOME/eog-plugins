@@ -1,6 +1,6 @@
 plugins/exif-display/eog-exif-display-plugin.c
 [type: gettext/glade]plugins/exif-display/exif-display-config.ui
-plugins/exif-display/exif-display.eog-plugin.desktop.in
+plugins/exif-display/exif-display.plugin.desktop.in
 [type: gettext/glade]plugins/exif-display/exif-display.ui
 plugins/fit-to-width/eog-fit-to-width-plugin.c
 plugins/fit-to-width/fit-to-width.plugin.desktop.in
