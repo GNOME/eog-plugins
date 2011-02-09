@@ -60,7 +60,7 @@ impl_create_config_widget (PeasGtkConfigurable *configurable)
 	GtkBuilder *config_builder;
 	GError *error = NULL;
 	GtkWidget *display_channels_histogram_widget, *display_rgb_histogram_widget;
-	GtkWidget *close_button, *display_camera_settings_in_statusbar;
+	GtkWidget *display_camera_settings_in_statusbar;
 	GObject *result;
 	gchar *object_ids[] = {"vbox1", NULL};
 
@@ -104,8 +104,6 @@ impl_create_config_widget (PeasGtkConfigurable *configurable)
 static void
 eog_exif_display_plugin_setup_dispose (GObject *object)
 {
-	EogExifDisplayPluginSetup *setup = EOG_EXIF_DISPLAY_PLUGIN_SETUP (object);
-
 	eog_debug_message (DEBUG_PLUGINS,
 			   "EogExifDisplayPluginSetup disposing");
 
