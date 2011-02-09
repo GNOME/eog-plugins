@@ -62,23 +62,6 @@ G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogExifDisplayPlugin, eog_exif_display_plugin,
                 G_IMPLEMENT_INTERFACE_DYNAMIC(EOG_TYPE_WINDOW_ACTIVATABLE,
                                         eog_window_activatable_iface_init))
 
-#if 0
-static void
-free_window_data (WindowData *data)
-{
-	g_return_if_fail (data != NULL);
-
-	g_free (data->histogram_values_red);
-	g_free (data->histogram_values_green);
-	g_free (data->histogram_values_blue);
-	g_free (data->histogram_values_rgb);
-
-	g_object_unref (data->sidebar_builder);
-
-	g_free (data);
-}
-#endif
-
 static void
 eog_exif_display_plugin_init (EogExifDisplayPlugin *plugin)
 {
@@ -716,7 +699,17 @@ impl_deactivate	(EogWindowActivatable *activatable)
 	thumbview = eog_window_get_thumb_view (plugin->window);
 	g_signal_handler_disconnect (thumbview, plugin->selection_changed_id);
 
-//	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
+	g_free (plugin->histogram_values_red);
+	plugin->histogram_values_red = NULL;
+	g_free (plugin->histogram_values_green);
+	plugin->histogram_values_green = NULL;
+	g_free (plugin->histogram_values_blue);
+	plugin->histogram_values_blue = NULL;
+	g_free (plugin->histogram_values_rgb);
+	plugin->histogram_values_rgb = NULL;
+
+	g_object_unref (plugin->sidebar_builder);
+	plugin->sidebar_builder = NULL;
 }
 
 
