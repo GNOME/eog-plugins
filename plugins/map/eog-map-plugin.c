@@ -61,9 +61,14 @@ update_marker_image (ChamplainLabel *marker,
 {
 	GtkWidget *widget;
 	ClutterActor *thumb;
+	gboolean result;
 
 	widget = gtk_button_new ();
-	thumb = gtk_clutter_texture_new_from_icon_name (widget, "gnome-mime-image", size);
+	thumb = gtk_clutter_texture_new ();
+	gtk_clutter_texture_set_from_icon_name (GTK_CLUTTER_TEXTURE (thumb),
+						widget,
+						"gnome-mime-image",
+						size, NULL);
 	/* don't need to unref widget because it is floating */
 
 	champlain_label_set_image (marker, thumb);
