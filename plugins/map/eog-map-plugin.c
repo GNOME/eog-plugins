@@ -1,6 +1,7 @@
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
+#define HAVE_EXIF 1
 
 #include "eog-map-plugin.h"
 
@@ -8,10 +9,14 @@
 #include <glib/gi18n-lib.h>
 
 #include <eog/eog-exif-util.h>
+#include <eog/eog-debug.h>
 #include <eog/eog-thumb-view.h>
 #include <eog/eog-image.h>
-#include <eog/eog-window.h>
 #include <eog/eog-sidebar.h>
+#include <eog/eog-window.h>
+#include <eog/eog-window-activatable.h>
+
+#include <libpeas/peas.h>
 
 #include <math.h>
 #include <string.h>
@@ -20,39 +25,20 @@
 #include <clutter-gtk/clutter-gtk.h>
 #include <libexif/exif-data.h>
 
-#define WINDOW_DATA_KEY "EogMapWindowData"
-
-EOG_PLUGIN_REGISTER_TYPE (EogMapPlugin, eog_map_plugin)
-
-#define FACTOR 2.0
-
-typedef struct {
-	/* Handlers ids */
-	guint selection_changed_id;
-
-	GtkWidget *thumbview;
-	GtkWidget *viewport;
-	ChamplainView *map;
-
-	GtkWidget *jump_to_button;
-
-	ChamplainMarkerLayer *layer;
-
-	EogListStore *store;
-
-	/* The current selected position */
-	ChamplainLabel *marker;
-} WindowData;
+enum {
+        PROP_0,
+        PROP_WINDOW
+};
 
 static void
-free_window_data (WindowData *data)
-{
-	g_return_if_fail (data != NULL);
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
 
-	eog_debug (DEBUG_PLUGINS);
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogMapPlugin, eog_map_plugin,
+                PEAS_TYPE_EXTENSION_BASE, 0,
+                G_IMPLEMENT_INTERFACE_DYNAMIC (EOG_TYPE_WINDOW_ACTIVATABLE,
+                                        eog_window_activatable_iface_init))
 
-	g_free (data);
-}
+#define FACTOR 2.0
 
 static void
 eog_map_plugin_init (EogMapPlugin *plugin)
@@ -97,7 +83,7 @@ get_coordinates (EogImage *image,
 
 	if (exif_data) {
 
-		eog_exif_util_get_value (exif_data,
+		eog_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LONGITUDE,
 					 buffer,
 					 32);
@@ -111,14 +97,14 @@ get_coordinates (EogImage *image,
 		lon += min / 60.0;
 		lon += sec / 3600.0;
 
-		eog_exif_util_get_value (exif_data,
+		eog_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LONGITUDE_REF,
 					 buffer,
 					 32);
 		if (strcmp (buffer, "W") == 0)
 			lon *= -1;
 
-		eog_exif_util_get_value (exif_data,
+		eog_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LATITUDE,
 					 buffer,
 					 32);
@@ -132,7 +118,7 @@ get_coordinates (EogImage *image,
 		lat += min / 60.0;
 		lat += sec / 3600.0;
 
-		eog_exif_util_get_value (exif_data,
+		eog_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LATITUDE_REF,
 					 buffer,
 					 32);
@@ -151,21 +137,24 @@ get_coordinates (EogImage *image,
 static gboolean
 change_image (ChamplainLabel *marker,
 	      ClutterEvent *event,
-	      WindowData *data)
+	      EogMapPlugin *plugin)
 {
 	EogImage *image;
 
 	image = g_object_get_data (G_OBJECT (marker), "image");
 
 	if (!image)
-		return;
+		return FALSE;
 
-	eog_thumb_view_set_current_image (EOG_THUMB_VIEW (data->thumbview), image, TRUE);
+	eog_thumb_view_set_current_image (EOG_THUMB_VIEW (plugin->thumbview),
+					  image, TRUE);
+
+	return FALSE;
 }
 
 static void
 create_marker (EogImage *image,
-	       WindowData *data)
+	       EogMapPlugin *plugin)
 {
 	gdouble lon, lat;
 
@@ -189,19 +178,19 @@ create_marker (EogImage *image,
 		champlain_location_set_location (CHAMPLAIN_LOCATION (marker),
 						    lat,
 						    lon);
-		champlain_marker_layer_add (data->layer, marker);
+		champlain_marker_layer_add (plugin->layer, marker);
 
 		g_signal_connect (marker,
 				  "button-release-event",
 				  G_CALLBACK (change_image),
-				  data);
+				  plugin);
 	}
 
 }
 
 static void
 selection_changed_cb (EogThumbView *view,
-		      WindowData *data)
+		      EogMapPlugin *plugin)
 {
 	EogImage *image;
 	ChamplainLabel *marker;
@@ -223,26 +212,26 @@ selection_changed_cb (EogThumbView *view,
 			      "longitude", &lon,
 			      NULL);
 
-		champlain_view_center_on (CHAMPLAIN_VIEW (data->map),
+		champlain_view_center_on (CHAMPLAIN_VIEW (plugin->map),
 					  lat,
 					  lon);
 
 		/* Reset the previous selection */
-		if (data->marker)
-			update_marker_image (data->marker, GTK_ICON_SIZE_MENU);
+		if (plugin->marker)
+			update_marker_image (plugin->marker, GTK_ICON_SIZE_MENU);
 
-		data->marker = marker;
-		update_marker_image (data->marker, GTK_ICON_SIZE_LARGE_TOOLBAR);
-		gtk_widget_set_sensitive (data->jump_to_button, TRUE);
+		plugin->marker = marker;
+		update_marker_image (plugin->marker, GTK_ICON_SIZE_LARGE_TOOLBAR);
+		gtk_widget_set_sensitive (plugin->jump_to_button, TRUE);
 	}
 	else {
-		gtk_widget_set_sensitive (data->jump_to_button, FALSE);
+		gtk_widget_set_sensitive (plugin->jump_to_button, FALSE);
 
 		/* Reset the previous selection */
-		if (data->marker)
-			update_marker_image (data->marker, GTK_ICON_SIZE_MENU);
+		if (plugin->marker)
+			update_marker_image (plugin->marker, GTK_ICON_SIZE_MENU);
 
-		data->marker = NULL;
+		plugin->marker = NULL;
 	}
 
 	g_object_unref (image);
@@ -250,19 +239,19 @@ selection_changed_cb (EogThumbView *view,
 
 static void
 jump_to (GtkWidget *widget,
-	 WindowData *data)
+	 EogMapPlugin *plugin)
 {
-	if (!data->marker)
+	if (!plugin->marker)
 		return;
 
 	gdouble lat, lon;
 
-	g_object_get (data->marker,
+	g_object_get (plugin->marker,
 		      "latitude", &lat,
 		      "longitude", &lon,
 		      NULL);
 
-	champlain_view_center_on (CHAMPLAIN_VIEW (data->map),
+	champlain_view_center_on (CHAMPLAIN_VIEW (plugin->map),
 				  lat,
 				  lon);
 }
@@ -285,7 +274,7 @@ static gboolean
 for_each_thumb (GtkTreeModel *model,
 		GtkTreePath *path,
 		GtkTreeIter *iter,
-		WindowData *data)
+		EogMapPlugin *plugin)
 {
 	EogImage *image = NULL;
 
@@ -297,7 +286,7 @@ for_each_thumb (GtkTreeModel *model,
 		return FALSE;
 	}
 
-	create_marker (image, data);
+	create_marker (image, plugin);
 
 	g_object_unref (image);
 	return FALSE;
@@ -305,48 +294,41 @@ for_each_thumb (GtkTreeModel *model,
 
 static void
 prepared_cb (EogWindow *window,
-	     WindowData *data)
+	     EogMapPlugin *plugin)
 {
 
-	data->store = eog_window_get_store (window);
+	plugin->store = eog_window_get_store (plugin->window);
 
-	if (!data->store)
+	if (!plugin->store)
 		return;
 
 	/* At this point, the collection has been filled */
-	gtk_tree_model_foreach (GTK_TREE_MODEL (data->store),
+	gtk_tree_model_foreach (GTK_TREE_MODEL (plugin->store),
 				(GtkTreeModelForeachFunc) for_each_thumb,
-				data);
+				plugin);
 
-	data->thumbview = eog_window_get_thumb_view (window);
-	data->selection_changed_id = g_signal_connect (G_OBJECT (data->thumbview),
+	plugin->thumbview = eog_window_get_thumb_view (window);
+	plugin->selection_changed_id = g_signal_connect (G_OBJECT (plugin->thumbview),
 						       "selection-changed",
 						       G_CALLBACK (selection_changed_cb),
-						       data);
+						       plugin);
 
 	/* Call the callback because if the plugin is activated after
 	 *  the image is loaded, selection_changed isn't emited
 	 */
-	selection_changed_cb (EOG_THUMB_VIEW (data->thumbview), data);
+	selection_changed_cb (EOG_THUMB_VIEW (plugin->thumbview), plugin);
 
 }
 
 static void
-impl_activate (EogPlugin *plugin,
-	       EogWindow *window)
+impl_activate (EogWindowActivatable *activatable)
 {
+	EogMapPlugin *plugin = EOG_MAP_PLUGIN (activatable);
 	GtkWidget *sidebar, *vbox, *bbox, *button, *viewport;
 	GtkWidget *embed;
-	WindowData *data;
 	ClutterActor *scale;
 
 	eog_debug (DEBUG_PLUGINS);
-
-	data = g_new0 (WindowData, 1);
-	g_object_set_data_full (G_OBJECT (window),
-				WINDOW_DATA_KEY,
-				data,
-				(GDestroyNotify) free_window_data);
 
 	/* This is a workaround until bug 590692 is fixed. */
 	viewport = gtk_frame_new (NULL);
@@ -356,15 +338,15 @@ impl_activate (EogPlugin *plugin,
 				      GTK_SHADOW_ETCHED_IN);*/
 
 	embed = gtk_champlain_embed_new ();
-	data->map = gtk_champlain_embed_get_view (GTK_CHAMPLAIN_EMBED (embed));
-	g_object_set (G_OBJECT (data->map),
+	plugin->map = gtk_champlain_embed_get_view (GTK_CHAMPLAIN_EMBED (embed));
+	g_object_set (G_OBJECT (plugin->map),
 		"zoom-level", 3,
 		"kinetic-mode", TRUE,
 		NULL);
 	scale = champlain_scale_new ();
-	champlain_scale_connect_view (CHAMPLAIN_SCALE (scale), data->map);
+	champlain_scale_connect_view (CHAMPLAIN_SCALE (scale), plugin->map);
 	/* align to the bottom left */
-	champlain_view_bin_layout_add (data->map, scale,
+	champlain_view_bin_layout_add (plugin->map, scale,
 		CLUTTER_BIN_ALIGNMENT_START,
 		CLUTTER_BIN_ALIGNMENT_END);
 
@@ -378,9 +360,9 @@ impl_activate (EogPlugin *plugin,
 	g_signal_connect (button,
 			  "clicked",
 			  G_CALLBACK (jump_to),
-			  data);
+			  plugin);
 	gtk_container_add (GTK_CONTAINER (bbox), button);
-	data->jump_to_button = button;
+	plugin->jump_to_button = button;
 
 	button = GTK_WIDGET (gtk_separator_tool_item_new ());
 	gtk_container_add (GTK_CONTAINER (bbox), button);
@@ -390,7 +372,7 @@ impl_activate (EogPlugin *plugin,
 	g_signal_connect (button,
 			  "clicked",
 			  G_CALLBACK (zoom_in),
-			  data->map);
+			  plugin->map);
 	gtk_container_add (GTK_CONTAINER (bbox), button);
 
 	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_ZOOM_OUT));
@@ -398,54 +380,124 @@ impl_activate (EogPlugin *plugin,
 	g_signal_connect (button,
 			  "clicked",
 			  G_CALLBACK (zoom_out),
-			  data->map);
+			  plugin->map);
 	gtk_container_add (GTK_CONTAINER (bbox), button);
 
-	data->layer = champlain_marker_layer_new_full (CHAMPLAIN_SELECTION_SINGLE);
-	champlain_view_add_layer (CHAMPLAIN_VIEW (data->map), data->layer);
+	plugin->layer = champlain_marker_layer_new_full (CHAMPLAIN_SELECTION_SINGLE);
+	champlain_view_add_layer (CHAMPLAIN_VIEW (plugin->map), plugin->layer);
 
-	sidebar = eog_window_get_sidebar (window);
-	data->viewport = vbox;
+	sidebar = eog_window_get_sidebar (plugin->window);
+	plugin->viewport = vbox;
 	gtk_box_pack_start (GTK_BOX (vbox), bbox, FALSE, FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (vbox), viewport);
 	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), _("Map"), vbox);
 	gtk_widget_show_all (vbox);
 
-	g_signal_connect (G_OBJECT (window),
+	g_signal_connect (G_OBJECT (plugin->window),
 			  "prepared",
 			  G_CALLBACK (prepared_cb),
-			  data);
+			  plugin);
 }
 
 static void
-impl_deactivate (EogPlugin *plugin,
-		 EogWindow *window)
+impl_deactivate (EogWindowActivatable *activatable)
 {
-	WindowData *data;
+	EogMapPlugin *plugin = EOG_MAP_PLUGIN (activatable);
 	GtkWidget *sidebar, *thumbview;
 
 	eog_debug (DEBUG_PLUGINS);
 
-	data = g_object_get_data (G_OBJECT (window), WINDOW_DATA_KEY);
-	g_return_if_fail (data != NULL);
+	sidebar = eog_window_get_sidebar (plugin->window);
+	eog_sidebar_remove_page (EOG_SIDEBAR (sidebar), plugin->viewport);
 
-	sidebar = eog_window_get_sidebar (window);
-	eog_sidebar_remove_page (EOG_SIDEBAR (sidebar), data->viewport);
+	thumbview = eog_window_get_thumb_view (plugin->window);
+	g_signal_handler_disconnect (thumbview, plugin->selection_changed_id);
+}
 
-	thumbview = eog_window_get_thumb_view (window);
-	g_signal_handler_disconnect (thumbview, data->selection_changed_id);
+static void
+eog_map_plugin_dispose (GObject *object)
+{
+        EogMapPlugin *plugin = EOG_MAP_PLUGIN (object);
 
-	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
+        if (plugin->window != NULL) {
+                g_object_unref (plugin->window);
+                plugin->window = NULL;
+        }
+
+        G_OBJECT_CLASS (eog_map_plugin_parent_class)->dispose (object);
+}
+
+static void
+eog_map_plugin_get_property (GObject    *object,
+			     guint       prop_id,
+			     GValue     *value,
+			     GParamSpec *pspec)
+{
+        EogMapPlugin *plugin = EOG_MAP_PLUGIN (object);
+
+        switch (prop_id)
+        {
+        case PROP_WINDOW:
+                g_value_set_object (value, plugin->window);
+                break;
+
+        default:
+                G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+                break;
+        }
+}
+
+static void
+eog_map_plugin_set_property (GObject      *object,
+			     guint         prop_id,
+			     const GValue *value,
+			     GParamSpec   *pspec)
+{
+        EogMapPlugin *plugin = EOG_MAP_PLUGIN (object);
+
+        switch (prop_id)
+        {
+        case PROP_WINDOW:
+                plugin->window = EOG_WINDOW (g_value_dup_object (value));
+                break;
+
+        default:
+                G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+                break;
+        }
 }
 
 static void
 eog_map_plugin_class_init (EogMapPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	EogPluginClass *plugin_class = EOG_PLUGIN_CLASS (klass);
 
 	object_class->finalize = eog_map_plugin_finalize;
+        object_class->dispose = eog_map_plugin_dispose;
+        object_class->set_property = eog_map_plugin_set_property;
+        object_class->get_property = eog_map_plugin_get_property;
 
-	plugin_class->activate = impl_activate;
-	plugin_class->deactivate = impl_deactivate;
+        g_object_class_override_property (object_class, PROP_WINDOW, "window");
+}
+
+static void
+eog_map_plugin_class_finalize (EogMapPluginClass *klass)
+{
+        /* Dummy needed for G_DEFINE_DYNAMIC_TYPE_EXTENDED */
+}
+
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface)
+{
+        iface->activate = impl_activate;
+        iface->deactivate = impl_deactivate;
+}
+
+G_MODULE_EXPORT void
+peas_register_types (PeasObjectModule *module)
+{
+        eog_map_plugin_register_type (G_TYPE_MODULE (module));
+        peas_object_module_register_extension_type (module,
+                                                    EOG_TYPE_WINDOW_ACTIVATABLE,
+                                                    EOG_TYPE_MAP_PLUGIN);
 }

@@ -5,7 +5,7 @@ plugins/exif-display/exif-display.plugin.desktop.in
 plugins/fit-to-width/eog-fit-to-width-plugin.c
 plugins/fit-to-width/fit-to-width.plugin.desktop.in
 plugins/map/eog-map-plugin.c
-plugins/map/map.eog-plugin.desktop.in
+plugins/map/map.plugin.desktop.in
 plugins/postasa/eog-postasa-plugin.c
 [type: gettext/glade]plugins/postasa/postasa-config.xml
 [type: gettext/glade]plugins/postasa/postasa-uploads.xml

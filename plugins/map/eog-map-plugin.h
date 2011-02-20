@@ -3,7 +3,12 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <eog/eog-plugin.h>
+#include <gtk/gtk.h>
+#include <champlain/champlain.h>
+#include <eog/eog-list-store.h>
+#include <eog/eog-window.h>
+#include <libpeas/peas-extension-base.h>
+#include <libpeas/peas-object-module.h>
 
 G_BEGIN_DECLS
 
@@ -27,7 +32,27 @@ typedef struct _EogMapPlugin		EogMapPlugin;
 
 struct _EogMapPlugin
 {
-	EogPlugin parent_instance;
+	PeasExtensionBase parent_instance;
+
+	EogWindow *window;
+
+	/* Window Data */
+	/* TODO: Make this a private struct! */
+	/* Handlers ids */
+	guint selection_changed_id;
+
+	GtkWidget *thumbview;
+	GtkWidget *viewport;
+	ChamplainView *map;
+
+	GtkWidget *jump_to_button;
+
+	ChamplainMarkerLayer *layer;
+
+	EogListStore *store;
+
+	/* The current selected position */
+	ChamplainLabel *marker;
 };
 
 /*
@@ -37,7 +62,7 @@ typedef struct _EogMapPluginClass	EogMapPluginClass;
 
 struct _EogMapPluginClass
 {
-	EogPluginClass parent_class;
+	PeasExtensionBaseClass parent_class;
 };
 
 /*
@@ -46,7 +71,7 @@ struct _EogMapPluginClass
 GType	eog_map_plugin_get_type		(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_eog_plugin (GTypeModule *module);
+G_MODULE_EXPORT void peas_register_types (PeasObjectModule *module);
 
 G_END_DECLS
 
