@@ -282,7 +282,7 @@ then
 fi
 
 # Disable plugins that are not yet ported to eog-3.0
-UNPORTED_PLUGINS="map postasa"
+UNPORTED_PLUGINS="postasa"
 for pl in $UNPORTED_PLUGINS
 do
 	undef_plugin "$pl" "not yet ported to 3.0"
@@ -330,9 +330,9 @@ if test "$?" = 1
 then
 	
 	PKG_CHECK_MODULES(CHAMPLAIN,
-		[ champlain-0.8 >= 0.7.1,
-		  champlain-gtk-0.8 >= 0.7.1,
-		  clutter-gtk-0.10 >= 0.10,
+		[ champlain-0.10 >= 0.9.0,
+		  champlain-gtk-0.10 >= 0.9.0,
+		  clutter-gtk-1.0 >= 0.90,
 		  libexif >= 0.6.16 ],
 		[],[have_libchamplain=no])
 	AC_SUBST(CHAMPLAIN_LIBS)

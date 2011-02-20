@@ -36,12 +36,12 @@ typedef struct {
 
 	GtkWidget *jump_to_button;
 
-	ChamplainLayer *layer;
+	ChamplainMarkerLayer *layer;
 
 	EogListStore *store;
 
 	/* The current selected position */
-	ChamplainMarker *marker;
+	ChamplainLabel *marker;
 } WindowData;
 
 static void
@@ -70,7 +70,7 @@ eog_map_plugin_finalize (GObject *object)
 }
 
 static void
-update_marker_image (ChamplainMarker *marker,
+update_marker_image (ChamplainLabel *marker,
 		     GtkIconSize size)
 {
 	GtkWidget *widget;
@@ -80,7 +80,7 @@ update_marker_image (ChamplainMarker *marker,
 	thumb = gtk_clutter_texture_new_from_icon_name (widget, "gnome-mime-image", size);
 	/* don't need to unref widget because it is floating */
 
-	champlain_marker_set_image (CHAMPLAIN_MARKER (marker), thumb);
+	champlain_label_set_image (marker, thumb);
 }
 
 static gboolean
@@ -149,7 +149,7 @@ get_coordinates (EogImage *image,
 }
 
 static gboolean
-change_image (ChamplainMarker *marker,
+change_image (ChamplainLabel *marker,
 	      ClutterEvent *event,
 	      WindowData *data)
 {
@@ -177,24 +177,20 @@ create_marker (EogImage *image,
 		return;
 
 	if (get_coordinates (image, &lat, &lon)) {
-		ChamplainMarker *marker;
+		ChamplainLabel *marker;
 
-		marker = CHAMPLAIN_MARKER (champlain_marker_new ());
-		champlain_marker_set_draw_background (CHAMPLAIN_MARKER (marker), FALSE);
+		marker = CHAMPLAIN_LABEL (champlain_label_new ());
+		champlain_label_set_draw_background (CHAMPLAIN_LABEL (marker), FALSE);
 		update_marker_image (marker, GTK_ICON_SIZE_MENU);
 
 		g_object_set_data_full (G_OBJECT (image), "marker", marker, (GDestroyNotify) clutter_actor_destroy);
 		g_object_set_data (G_OBJECT (marker), "image", image);
 
-		clutter_actor_show (CLUTTER_ACTOR (marker));
-		champlain_base_marker_set_position (CHAMPLAIN_BASE_MARKER (marker),
+		champlain_location_set_location (CHAMPLAIN_LOCATION (marker),
 						    lat,
 						    lon);
-		clutter_container_add (CLUTTER_CONTAINER (data->layer),
-				       CLUTTER_ACTOR (marker),
-				       NULL);
+		champlain_marker_layer_add (data->layer, marker);
 
-		clutter_actor_set_reactive (CLUTTER_ACTOR (marker), TRUE);
 		g_signal_connect (marker,
 				  "button-release-event",
 				  G_CALLBACK (change_image),
@@ -208,7 +204,7 @@ selection_changed_cb (EogThumbView *view,
 		      WindowData *data)
 {
 	EogImage *image;
-	ChamplainMarker *marker;
+	ChamplainLabel *marker;
 
 	if (!eog_thumb_view_get_n_selected (view))
 		return;
@@ -342,6 +338,7 @@ impl_activate (EogPlugin *plugin,
 	GtkWidget *sidebar, *vbox, *bbox, *button, *viewport;
 	GtkWidget *embed;
 	WindowData *data;
+	ClutterActor *scale;
 
 	eog_debug (DEBUG_PLUGINS);
 
@@ -362,11 +359,15 @@ impl_activate (EogPlugin *plugin,
 	data->map = gtk_champlain_embed_get_view (GTK_CHAMPLAIN_EMBED (embed));
 	g_object_set (G_OBJECT (data->map),
 		"zoom-level", 3,
-		"scroll-mode", CHAMPLAIN_SCROLL_MODE_KINETIC,
-#if CHAMPLAIN_CHECK_VERSION (0,4,3)
-		"show-scale", TRUE,
-#endif
+		"kinetic-mode", TRUE,
 		NULL);
+	scale = champlain_scale_new ();
+	champlain_scale_connect_view (CHAMPLAIN_SCALE (scale), data->map);
+	/* align to the bottom left */
+	champlain_view_bin_layout_add (data->map, scale,
+		CLUTTER_BIN_ALIGNMENT_START,
+		CLUTTER_BIN_ALIGNMENT_END);
+
 	gtk_container_add (GTK_CONTAINER (viewport), embed);
 
 	vbox = gtk_vbox_new (FALSE, 0);
@@ -400,7 +401,7 @@ impl_activate (EogPlugin *plugin,
 			  data->map);
 	gtk_container_add (GTK_CONTAINER (bbox), button);
 
-	data->layer = champlain_layer_new();
+	data->layer = champlain_marker_layer_new_full (CHAMPLAIN_SELECTION_SINGLE);
 	champlain_view_add_layer (CHAMPLAIN_VIEW (data->map), data->layer);
 
 	sidebar = eog_window_get_sidebar (window);
