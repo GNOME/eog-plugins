@@ -61,7 +61,6 @@ update_marker_image (ChamplainLabel *marker,
 {
 	GtkWidget *widget;
 	ClutterActor *thumb;
-	gboolean result;
 
 	widget = gtk_button_new ();
 	thumb = gtk_clutter_texture_new ();
@@ -183,7 +182,7 @@ create_marker (EogImage *image,
 		champlain_location_set_location (CHAMPLAIN_LOCATION (marker),
 						    lat,
 						    lon);
-		champlain_marker_layer_add (plugin->layer, marker);
+		champlain_marker_layer_add_marker (plugin->layer, CHAMPLAIN_MARKER (marker));
 
 		g_signal_connect (marker,
 				  "button-release-event",
@@ -389,7 +388,7 @@ impl_activate (EogWindowActivatable *activatable)
 	gtk_container_add (GTK_CONTAINER (bbox), button);
 
 	plugin->layer = champlain_marker_layer_new_full (CHAMPLAIN_SELECTION_SINGLE);
-	champlain_view_add_layer (CHAMPLAIN_VIEW (plugin->map), plugin->layer);
+	champlain_view_add_layer (CHAMPLAIN_VIEW (plugin->map), CHAMPLAIN_LAYER (plugin->layer));
 
 	sidebar = eog_window_get_sidebar (plugin->window);
 	plugin->viewport = vbox;
