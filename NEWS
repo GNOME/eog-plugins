@@ -1,3 +1,38 @@
+Version 2.91.7
+--------------
+
+Plugin changes:
+
+- Exif Display
+ - Convert to libpeas-based plugin API (Felix Riemann)
+ - Migrate from GConf to GSettings (Felix Riemann)
+
+- Fit to Width:
+ - Convert to libpeas-based plugin API (Felix Riemann)
+
+- Map
+ - #642802, Use libchamplain 0.10 for the map plugin (Jiří Techet)
+ - Convert to libpeas-based plugin API (Felix Riemann)
+ - Mark all images from the collection on the map (Pierre-Luc Beaudoin)
+ - Make markers clickable to change the current picture (Pierre-Luc Beaudoin)
+
+- PicasaWeb Uploader
+ - #639261, Fails to build against libgdata 0.8.0 (Felix Riemann)
+
+- Postr
+ - Convert to libpeas-based plugin API (Felix Riemann)
+
+- Send By Mail 
+ - Convert to libpeas-based plugin API (Felix Riemann)
+
+Other changes:
+
+- Disable python plugins until they work correctly with eog-3.0 (Felix Riemann)
+
+New and updated translations:
+
+- Khaled Hosny [ar]
+
 Version 2.30.2
 --------------
 
