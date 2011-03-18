@@ -45,8 +45,8 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 PKG_CHECK_MODULES([EOG], [
 	glib-2.0 >= 2.26.0
 	gtk+-3.0 >= 2.99.3
-	libpeas-1.0 >= 0.7.0
-	eog >= 2.91.6
+	libpeas-1.0 >= 0.7.4
+	eog >= 2.91.92
 ])
 AC_SUBST(EOG_LIBS)
 AC_SUBST(EOG_CFLAGS)
@@ -147,79 +147,10 @@ AC_ARG_ENABLE([python],
 AC_MSG_RESULT([$enable_python])
 
 if test "x$have_python" != "xno"; then
-	AM_PATH_PYTHON([2.3],[],[no])
+	AM_PATH_PYTHON([2.5.2],[],[:])
 	if test "x$PYTHON" = "x:"; then
 		have_python=no
 	fi
-fi
-
-if test "x$have_python" != "xno"; then
-	AC_MSG_NOTICE([Disabling Python plugins as they do not work yet!])
-	have_python=no
-	enable_python=no
-fi
-
-if test "x$have_python" != "xno"; then
-	PY_PREFIX=`$PYTHON -c 'import sys ; print sys.prefix'`
-	PY_EXEC_PREFIX=`$PYTHON -c 'import sys ; print sys.exec_prefix'`
-	PYTHON_LIBS="-lpython$PYTHON_VERSION"
-	PYTHON_LIB_LOC="-L$PY_EXEC_PREFIX/lib/python$PYTHON_VERSION/config"
-	PYTHON_CFLAGS="-I$PY_PREFIX/include/python$PYTHON_VERSION"
-	PYTHON_MAKEFILE="$PY_EXEC_PREFIX/lib/python$PYTHON_VERSION/config/Makefile"
-	PYTHON_LOCALMODLIBS=`sed -n -e 's/^LOCALMODLIBS=\(.*\)/\1/p' $PYTHON_MAKEFILE`
-	PYTHON_BASEMODLIBS=`sed -n -e 's/^BASEMODLIBS=\(.*\)/\1/p' $PYTHON_MAKEFILE`
-	PYTHON_OTHER_LIBS=`sed -n -e 's/^LIBS=\(.*\)/\1/p' $PYTHON_MAKEFILE`
-	PYTHON_EXTRA_LIBS="$PYTHON_LOCALMODLIBS $PYTHON_BASEMODLIBS $PYTHON_OTHER_LIBS"
-	AC_SUBST([PYTHON_LIBS])
-	AC_SUBST([PYTHON_LIB_LOC])
-	AC_SUBST([PYTHON_CFLAGS])
-	AC_SUBST([PYTHON_EXTRA_LIBS])
-fi
-
-if test "x$have_python" != "xno"; then
-	PYGOBJECT_REQUIRED=2.11.5
-	PYGTK_REQUIRED=2.9.7
-	GNOME_PYTHON_REQUIRED=2.18.2
-
-	PKG_CHECK_MODULES([PYGTK], [
-		pygobject-2.0 >= $PYGOBJECT_REQUIRED 
-		gnome-python-2.0 >= $GNOME_PYTHON_REQUIRED
-		pygtk-2.0 >= $PYGTK_REQUIRED],
-		[],[have_python=no])
-
-	AC_SUBST([PYGTK_CFLAGS])
-	AC_SUBST([PYGTK_LIBS])
-fi
-
-if test "x$have_python" != "xno"; then
-	AC_MSG_CHECKING([for pygtk defs])
-	PYGTK_DEFSDIR=`$PKG_CONFIG --variable=defsdir pygtk-2.0`
-	AC_MSG_RESULT([$PYGTK_DEFSDIR])
-
-	AC_MSG_CHECKING([for pygtk codegen])
-	PYGTK_CODEGEN="$PYTHON `$PKG_CONFIG --variable=codegendir pygtk-2.0`/codegen.py"
-	AC_MSG_RESULT([$PYGTK_CODEGEN])
-
-	AC_MSG_CHECKING([for pygtk h2def])
-	PYGTK_H2DEF="$PYTHON `$PKG_CONFIG --variable=codegendir pygtk-2.0`/h2def.py"
-	AC_MSG_RESULT([$PYGTK_H2DEF])
-
-	AC_SUBST([PYGTK_DEFSDIR])
-	AC_SUBST([PYGTK_CODEGEN])
-	AC_SUBST([PYGTK_H2DEF])
-
-	dnl Check for -fno-strict-aliasing
-	FLAGS="-fno-strict-aliasing"
-	save_CFLAGS="$CFLAGS"
-	CFLAGS="$CFLAGS $FLAGS"
-	AC_MSG_CHECKING([whether [$]CC understands $FLAGS])
-	AC_TRY_COMPILE([], [], [compiler_has_option=yes], [compiler_has_option=no])
-	CFLAGS="$save_CFLAGS"
-	AC_MSG_RESULT($compiler_has_option)
-	if test $compiler_has_option = yes; then
-		NO_STRICT_ALIASING_CFLAGS="$FLAGS"
-	fi
-	AC_SUBST([NO_STRICT_ALIASING_CFLAGS])
 fi
 
 if test "x$have_python" != "xyes"; then
@@ -282,7 +213,7 @@ then
 fi
 
 # Disable plugins that are not yet ported to eog-3.0
-UNPORTED_PLUGINS="postasa"
+UNPORTED_PLUGINS="postasa pythonconsole slideshowshuffle"
 for pl in $UNPORTED_PLUGINS
 do
 	undef_plugin "$pl" "not yet ported to 3.0"
