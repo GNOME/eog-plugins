@@ -1,4 +1,4 @@
-[Eog Plugin]
+[Plugin]
 Loader=python
 Module=pythonconsole
 IAge=2

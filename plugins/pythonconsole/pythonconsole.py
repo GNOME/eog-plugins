@@ -24,8 +24,7 @@
 #     Copyright (C), 2005 Adam Hooper <adamh@densi.com>
 #     Copyrignt (C), 2005 Raphaël Slinckx
 
-import gtk
-import eog
+from gi.repository import GObject, Gtk, Eog
 from console import PythonConsole
 
 ui_str = """
@@ -40,37 +39,39 @@ ui_str = """
 	</ui>
 	"""
 
-class PythonConsolePlugin(eog.Plugin):
+class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable):
+
+	# Override EogWindowActivatable's window property
+	window = GObject.property(type=Eog.Window)
+	action_group = None
 
 	def __init__(self):
-		eog.Plugin.__init__(self)
+		GObject.Object.__init__(self)
 		self.console_window = None
+		ui_id = 0
 			
-	def activate(self, window):
-		data = dict()
-		ui_manager = window.get_ui_manager()
-		data['group'] = gtk.ActionGroup('PythonConsole')
-		data['group'].add_actions([('PythonConsole', None, 'P_ython Console', None, None, self.console_cb)], window)
-		ui_manager.insert_action_group(data['group'], 0)
-		data['ui_id'] = ui_manager.add_ui_from_string(ui_str)
-		window.set_data('PythonConsolePluginInfo', data)
-		window.connect('delete-event', self.self_deactivate)
+	def do_activate(self):
+		ui_manager = self.window.get_ui_manager()
+		self.action_group = Gtk.ActionGroup('PythonConsole')
+		self.action_group.add_actions([('PythonConsole', None, 'P_ython Console', None, None, self.console_cb)], self.window)
+		ui_manager.insert_action_group(self.action_group, 0)
+		self.ui_id = ui_manager.add_ui_from_string(ui_str)
 	
-	def deactivate(self, window):
-		data = window.get_data('PythonConsolePluginInfo')
-		ui_manager = window.get_ui_manager()
-		ui_manager.remove_ui(data['ui_id'])
-		ui_manager.remove_action_group(data['group'])
+	def do_deactivate(self):
+		ui_manager = self.window.get_ui_manager()
+		ui_manager.remove_ui(self.ui_id)
+		self.ui_id = 0
+		ui_manager.remove_action_group(self.action_group)
+		self.action_group = None
 		ui_manager.ensure_update()
-		window.set_data("PythonConsolePluginInfo", None)
 		if self.console_window is not None:
 			self.console_window.destroy()
 		
 	def console_cb(self, action, window):
 		if not self.console_window:
-			self.console_window = gtk.Window()
+			self.console_window = Gtk.Window()
 			console = PythonConsole(namespace = {'__builtins__' : __builtins__,
-		    	                                 'eog' : eog,
+							     'eog' : Eog,
 		        	                             'window' : window})
 			console.set_size_request(600, 400)
 			console.eval('print "You can access the main window through ' \
@@ -91,10 +92,4 @@ class PythonConsolePlugin(eog.Plugin):
 		window.destroy()
 		self.console_window = None
 
-# This is a workaround for a ref-counting problem with python plugins.
-# This deactivates the plugin once the window that was used to activate
-# it is closed. Breaks multi-window-usability though.
-# See bug #460781 for more information.
-	def self_deactivate(self, window, event):
-		self.deactivate(window)
 
