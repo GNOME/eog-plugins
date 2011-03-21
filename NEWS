@@ -1,3 +1,14 @@
+Version 2.91.90
+---------------
+
+Plugin changes:
+
+- Python Console
+ - Port to libpeas-based plugin API (Felix Riemann)
+
+- Slideshow Shuffle
+ - Port to libpeas-based plugin API (Felix Riemann)
+
 Version 2.91.7
 --------------
 
