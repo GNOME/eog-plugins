@@ -212,13 +212,6 @@ then
 	done
 fi
 
-# Disable plugins that are not yet ported to eog-3.0
-UNPORTED_PLUGINS="postasa"
-for pl in $UNPORTED_PLUGINS
-do
-	undef_plugin "$pl" "not yet ported to 3.0"
-done
-
 # *****
 # Postr 
 # *****
