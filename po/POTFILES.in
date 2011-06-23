@@ -9,7 +9,7 @@ plugins/map/map.plugin.desktop.in
 plugins/postasa/eog-postasa-plugin.c
 [type: gettext/glade]plugins/postasa/postasa-config.xml
 [type: gettext/glade]plugins/postasa/postasa-uploads.xml
-plugins/postasa/postasa.eog-plugin.desktop.in
+plugins/postasa/postasa.plugin.desktop.in
 plugins/postr/eog-postr-plugin.c
 plugins/postr/postr.plugin.desktop.in
 plugins/pythonconsole/pythonconsole.plugin.desktop.in
