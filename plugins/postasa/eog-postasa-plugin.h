@@ -27,7 +27,8 @@
 
 #include <glib.h>
 #include <glib-object.h>
-#include <eog/eog-plugin.h>
+#include <libpeas/peas-extension-base.h>
+#include <libpeas/peas-object-module.h>
 
 G_BEGIN_DECLS
 
@@ -51,7 +52,7 @@ typedef struct _EogPostasaPlugin		EogPostasaPlugin;
 
 struct _EogPostasaPlugin
 {
-	EogPlugin parent_instance;
+	PeasExtensionBase parent_instance;
 	EogPostasaPluginPrivate *priv;
 };
 
@@ -62,7 +63,7 @@ typedef struct _EogPostasaPluginClass	EogPostasaPluginClass;
 
 struct _EogPostasaPluginClass
 {
-	EogPluginClass parent_class;
+	PeasExtensionBaseClass parent_class;
 };
 
 /*
@@ -71,7 +72,7 @@ struct _EogPostasaPluginClass
 GType	eog_postasa_plugin_get_type		(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_eog_plugin (GTypeModule *module);
+G_MODULE_EXPORT void peas_register_types (PeasObjectModule *module);
 
 G_END_DECLS
 

@@ -34,16 +34,26 @@
 #include <eog/eog-debug.h>
 #include <eog/eog-thumb-view.h>
 #include <eog/eog-image.h>
+#include <eog/eog-window-activatable.h>
 
 #include <gdata/gdata.h>
-
-#define WINDOW_DATA_KEY "EogPostasaWindowData"
 
 #define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/postasa/postasa-config.xml"
 #define GTKBUILDER_UPLOAD_FILE EOG_PLUGINDIR"/postasa/postasa-uploads.xml"
 #define DEFAULT_THUMBNAIL EOG_PLUGINDIR"/postasa/default.png"
 
-EOG_PLUGIN_REGISTER_TYPE(EogPostasaPlugin, eog_postasa_plugin)
+enum {
+	PROP_O,
+	PROP_WINDOW
+};
+
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
+
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogPostasaPlugin, eog_postasa_plugin,
+		PEAS_TYPE_EXTENSION_BASE, 0,
+		G_IMPLEMENT_INTERFACE_DYNAMIC(EOG_TYPE_WINDOW_ACTIVATABLE,
+					eog_window_activatable_iface_init))
 
 /**
  * _EogPostasaPluginPrivate:
@@ -53,6 +63,10 @@ EOG_PLUGIN_REGISTER_TYPE(EogPostasaPlugin, eog_postasa_plugin)
 struct _EogPostasaPluginPrivate
 {
 	EogWindow    *eog_window;
+	GtkActionGroup *ui_action_group;
+	guint ui_id;
+
+
 	GDataPicasaWebService *service;
 	GCancellable *login_cancellable;
 
@@ -71,20 +85,6 @@ struct _EogPostasaPluginPrivate
 };
 
 /**
- * WindowData:
- *
- * Data we'll associate with the window, describing the action group
- * as well as the plugin, so we'll be able to access it even from the
- * #GtkActionEntry's callback.
- **/
-typedef struct
-{
-	GtkActionGroup *ui_action_group;
-	guint ui_id;
-	EogPostasaPlugin *plugin;
-} WindowData;
-
-/**
  * PicasaWebUploadFileAsyncData:
  *
  * Small chunk of data for use by our asynchronous PicasaWeb upload
@@ -101,7 +101,7 @@ typedef struct
 	GFile *imgfile;
 } PicasaWebUploadFileAsyncData;
 
-static void picasaweb_upload_cb (GtkAction *action, EogWindow *window);
+static void picasaweb_upload_cb (GtkAction *action, EogPostasaPlugin *plugin);
 static GtkWidget *login_get_dialog (EogPostasaPlugin *plugin);
 static gboolean login_dialog_close (EogPostasaPlugin *plugin);
 
@@ -319,7 +319,7 @@ uploads_add_entry (EogPostasaPlugin *plugin, EogImage *image, GCancellable *canc
 					   4, cancellable,
 					   5, _("Uploading..."),
 					   -1); /* TODO: where should cancellabe, scaled_pixbuf be unref'd? don't worry about it since
-						   they'll exist until EoG exits anyway? or in eog_postasa_plugin_finalize()? */
+						   they'll exist until EoG exits anyway? or in eog_postasa_plugin_dispose()? */
 	g_free (uri);
 	g_free (size);
 	g_object_unref (scaled_pixbuf);
@@ -626,20 +626,22 @@ picasaweb_login_cb (GtkWidget *login_button, gpointer _plugin)
  **/
 static void
 picasaweb_upload_cb (GtkAction	*action,
-		     EogWindow *window)
+		     EogPostasaPlugin *plugin)
 {
-	WindowData *data = g_object_get_data (G_OBJECT (window), WINDOW_DATA_KEY);
-	EogPostasaPlugin *plugin = data->plugin;
+	EogPostasaPluginPrivate *priv;
 
-	if (gdata_service_is_authenticated (GDATA_SERVICE (plugin->priv->service)) == TRUE) {
+	g_return_if_fail (EOG_IS_POSTASA_PLUGIN (plugin));
+
+	priv = plugin->priv;
+	if (gdata_service_is_authenticated (GDATA_SERVICE (priv->service)) == TRUE) {
 		picasaweb_upload_files (plugin);
 	} else {
 		/* when the dialog closes, it checks if this is set to see if it should upload anything */
-		plugin->priv->uploads_pending = TRUE;
+		priv->uploads_pending = TRUE;
 
 		login_get_dialog (plugin);
-		gtk_label_set_text (plugin->priv->login_message, _("Please log in to continue upload."));
-		gtk_window_present (GTK_WINDOW (plugin->priv->login_dialog));
+		gtk_label_set_text (priv->login_message, _("Please log in to continue upload."));
+		gtk_window_present (GTK_WINDOW (priv->login_dialog));
 	}
 }
 
@@ -740,35 +742,6 @@ login_get_dialog (EogPostasaPlugin *plugin)
 /*** EogPlugin Functions ***/
 
 /**
- * free_window_data:
- *
- * This handles destruction of the #WindowData we define for this plugin.
- **/
-static void
-free_window_data (WindowData *data)
-{
-	eog_debug (DEBUG_PLUGINS);
-
-	g_return_if_fail (data != NULL);
-	g_object_unref (data->ui_action_group);
-	g_free (data);
-}
-
-/**
- * impl_create_config_dialog:
- *
- * Plugin hook for obtaining the configure/preferences dialog.  In
- * this case, it's just our Login dialog.  In the future, it might
- * include an album chooser, if there's demand.
- **/
-static GtkWidget *
-impl_create_config_dialog (EogPlugin *_plugin)
-{
-	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (_plugin);
-	return GTK_WIDGET (login_get_dialog (plugin));
-}
-
-/**
  * impl_activate:
  *
  * Plugin hook for plugin activation.  Creates #WindowData for the
@@ -776,31 +749,30 @@ impl_create_config_dialog (EogPlugin *_plugin)
  * some UI.
  **/
 static void
-impl_activate (EogPlugin *_plugin,
-	       EogWindow *window)
+impl_activate (EogWindowActivatable *activatable)
 {
+	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (activatable);
+	EogPostasaPluginPrivate *priv = plugin->priv;
 	GtkUIManager *manager;
-	WindowData *data;
-	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (_plugin);
+	EogWindow *window;
 
 	eog_debug (DEBUG_PLUGINS);
 
-	plugin->priv->eog_window = window;
+	window = priv->eog_window;
 
-	data = g_new (WindowData, 1); /* free'd by free_window_data() when window object is destroyed */
-	data->plugin = EOG_POSTASA_PLUGIN (plugin); /* circular references, fun */
-	data->ui_action_group = gtk_action_group_new ("EogPostasaPluginActions"); /* freed with WindowData in free_window_data() */
-	gtk_action_group_set_translation_domain (data->ui_action_group, GETTEXT_PACKAGE);
-	gtk_action_group_add_actions (data->ui_action_group, action_entries, G_N_ELEMENTS (action_entries), window);
+	priv->ui_action_group = gtk_action_group_new ("EogPostasaPluginActions");
+	gtk_action_group_set_translation_domain (priv->ui_action_group,
+						 GETTEXT_PACKAGE);
+	gtk_action_group_add_actions (priv->ui_action_group,
+				      action_entries,
+				      G_N_ELEMENTS (action_entries), plugin);
 
 	manager = eog_window_get_ui_manager (window); /* do not unref */
-	gtk_ui_manager_insert_action_group (manager, data->ui_action_group, -1);
-	data->ui_id = gtk_ui_manager_add_ui_from_string (manager,
+	gtk_ui_manager_insert_action_group (manager, priv->ui_action_group, -1);
+	priv->ui_id = gtk_ui_manager_add_ui_from_string (manager,
 							 ui_definition,
 							 -1, NULL);
-	g_warn_if_fail (data->ui_id != 0);
-
-	g_object_set_data_full (G_OBJECT (window), WINDOW_DATA_KEY, data, (GDestroyNotify) free_window_data);
+	g_warn_if_fail (priv->ui_id != 0);
 }
 
 /**
@@ -809,37 +781,22 @@ impl_activate (EogPlugin *_plugin,
  * Plugin hook for plugin deactivation. Removes UI and #WindowData
  **/
 static void
-impl_deactivate	(EogPlugin *plugin,
-		 EogWindow *window)
+impl_deactivate	(EogWindowActivatable *activatable)
 {
+	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (activatable);
+	EogPostasaPluginPrivate *priv = plugin->priv;
 	GtkUIManager *manager;
-	WindowData *data;
 
 	eog_debug (DEBUG_PLUGINS);
 
-	manager = eog_window_get_ui_manager (window);
+	manager = eog_window_get_ui_manager (priv->eog_window);
 
-	data = (WindowData *) g_object_get_data (G_OBJECT (window), WINDOW_DATA_KEY);
-	g_return_if_fail (data != NULL);
+	gtk_ui_manager_remove_ui (manager, priv->ui_id);
+	gtk_ui_manager_remove_action_group (manager, priv->ui_action_group);
 
-	gtk_ui_manager_remove_ui (manager, data->ui_id);
-	gtk_ui_manager_remove_action_group (manager, data->ui_action_group);
-
-	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL); /* TODO: does doing this interfere with the GDestroyNotify
-									 set in impl_activate()?  It's how it was done in Postr... */
+	priv->ui_action_group = NULL;
+	priv->ui_id = 0;
 }
-
-/**
- * impl_update_ui:
- *
- * Plugin hook for updating the UI.  I don't think we do anything of use in here.
- **/
-static void
-impl_update_ui (EogPlugin *plugin,
-		EogWindow *window)
-{
-}
-
 
 /*** GObject Functions ***/
 
@@ -856,30 +813,83 @@ eog_postasa_plugin_init (EogPostasaPlugin *plugin)
 	eog_debug_message (DEBUG_PLUGINS, "EogPostasaPlugin initializing");
 
 	plugin->priv = G_TYPE_INSTANCE_GET_PRIVATE (plugin, EOG_TYPE_POSTASA_PLUGIN, EogPostasaPluginPrivate);
-	plugin->priv->service = gdata_picasaweb_service_new ("EogPostasa"); /* unref'd in eog_postasa_plugin_finalize() */
-	plugin->priv->login_cancellable = g_cancellable_new (); /* unref'd in eog_postasa_plugin_finalize() */
+	plugin->priv->service = gdata_picasaweb_service_new ("EogPostasa"); /* unref'd in eog_postasa_plugin_dispose() */
+	plugin->priv->login_cancellable = g_cancellable_new (); /* unref'd in eog_postasa_plugin_dispose() */
 	plugin->priv->uploads_pending = FALSE;
 }
 
 /**
- * eog_postasa_plugin_finalize:
+ * eog_postasa_plugin_dispose:
  *
  * Cleans up the #EogPostasaPlugin object, unref'ing its #GDataPicasaWebService and #GCancellable.
  **/
 static void
-eog_postasa_plugin_finalize (GObject *_plugin)
+eog_postasa_plugin_dispose (GObject *_plugin)
 {
 	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (_plugin);
 
-	eog_debug_message (DEBUG_PLUGINS, "EogPostasaPlugin finalizing");
+	eog_debug_message (DEBUG_PLUGINS, "EogPostasaPlugin disposing");
 
-	g_object_unref (plugin->priv->service);
-	g_object_unref (plugin->priv->login_cancellable);
-	if (G_IS_OBJECT (plugin->priv->uploads_store))
+	if (plugin->priv->service) {
+		g_object_unref (plugin->priv->service);
+		plugin->priv->service = NULL;
+	}
+	if (plugin->priv->login_cancellable) {
+		g_object_unref (plugin->priv->login_cancellable);
+		plugin->priv->login_cancellable = NULL;
+	}
+	if (G_IS_OBJECT (plugin->priv->uploads_store)) {
 		/* we check in case the upload window was never created */
 		g_object_unref (plugin->priv->uploads_store);
+		plugin->priv->uploads_store = NULL;
+	}
 
-	G_OBJECT_CLASS (eog_postasa_plugin_parent_class)->finalize (_plugin);
+	if (plugin->priv->eog_window) {
+		g_object_unref (plugin->priv->eog_window);
+		plugin->priv->eog_window = NULL;
+	}
+
+	G_OBJECT_CLASS (eog_postasa_plugin_parent_class)->dispose (_plugin);
+}
+
+static void
+eog_postasa_plugin_get_property (GObject    *object,
+				 guint       prop_id,
+				 GValue     *value,
+				 GParamSpec *pspec)
+{
+	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (object);
+
+	switch (prop_id)
+	{
+	case PROP_WINDOW:
+		g_value_set_object (value, plugin->priv->eog_window);
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
+}
+
+static void
+eog_postasa_plugin_set_property (GObject      *object,
+				 guint         prop_id,
+				 const GValue *value,
+				 GParamSpec   *pspec)
+{
+	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (object);
+
+	switch (prop_id)
+	{
+	case PROP_WINDOW:
+		plugin->priv->eog_window = EOG_WINDOW (g_value_dup_object (value));
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
 }
 
 /**
@@ -891,14 +901,34 @@ static void
 eog_postasa_plugin_class_init (EogPostasaPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	EogPluginClass *plugin_class = EOG_PLUGIN_CLASS (klass);
 
 	g_type_class_add_private (klass, sizeof (EogPostasaPluginPrivate));
 
-	object_class->finalize = eog_postasa_plugin_finalize;
+	object_class->dispose = eog_postasa_plugin_dispose;
+	object_class->set_property = eog_postasa_plugin_set_property;
+	object_class->get_property = eog_postasa_plugin_get_property;
 
-	plugin_class->activate = impl_activate;
-	plugin_class->deactivate = impl_deactivate;
-	plugin_class->update_ui = impl_update_ui;
-	plugin_class->create_configure_dialog = impl_create_config_dialog;
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
+}
+
+static void
+eog_postasa_plugin_class_finalize (EogPostasaPluginClass *klass)
+{
+	/* Dummy needed for G_DEFINE_DYNAMIC_TYPE_EXTENDED */
+}
+
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface)
+{
+	iface->activate = impl_activate;
+	iface->deactivate = impl_deactivate;
+}
+
+G_MODULE_EXPORT void
+peas_register_types (PeasObjectModule *module)
+{
+	eog_postasa_plugin_register_type (G_TYPE_MODULE (module));
+	peas_object_module_register_extension_type (module,
+						    EOG_TYPE_WINDOW_ACTIVATABLE,
+						    EOG_TYPE_POSTASA_PLUGIN);
 }
