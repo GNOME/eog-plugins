@@ -1,3 +1,18 @@
+Version 3.1.1
+-------------
+
+Plugin changes:
+
+- Python Console
+ - Install code files into subfolder for a cleaner plugin folder (Felix Riemann)
+
+- PicasaWeb Uploader
+ - Port to libpeas-base plugin API (Felix Riemann)
+
+New and updated translations:
+
+- Yuri Myasoedov [ru]
+
 Version 3.0.0
 -------------
 
