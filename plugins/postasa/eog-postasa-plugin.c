@@ -307,7 +307,8 @@ uploads_add_entry (EogPostasaPlugin *plugin, EogImage *image, GCancellable *canc
 			g_error_free (error);
 		}
 	}
-	size = g_strdup_printf ("%luKB", eog_image_get_bytes (image) / 1024);
+	size = g_strdup_printf ("%" G_GOFFSET_FORMAT "KB",
+				eog_image_get_bytes (image) / 1024);
 	iter = g_slice_new0 (GtkTreeIter);
 
 	/* insert the data into the upload's list store */
