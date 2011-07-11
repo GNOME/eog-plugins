@@ -67,7 +67,7 @@ struct _EogPostasaPluginPrivate
 	guint ui_id;
 
 
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 	GDataClientLoginAuthorizer *authorizer;
 #endif
 	GDataPicasaWebService *service;
@@ -409,7 +409,7 @@ tmp_picasaweb_upload_async (GSimpleAsyncResult *result, GObject *source_object, 
 	GDataPicasaWebService *service = plugin->priv->service;
 	GDataPicasaWebFile *file_entry;
 	PicasaWebUploadFileAsyncData *data;
-#ifdef HAVE_LIBGDATA_80
+#ifdef HAVE_LIBGDATA_0_8
 	GDataUploadStream *upload_stream;
 	GFileInputStream *in_stream;
 	GFileInfo *file_info;
@@ -425,7 +425,7 @@ tmp_picasaweb_upload_async (GSimpleAsyncResult *result, GObject *source_object, 
 	gdata_entry_set_title (GDATA_ENTRY (file_entry), filename);
 	g_free (filename);
 
-#ifdef HAVE_LIBGDATA_80
+#ifdef HAVE_LIBGDATA_0_8
 	file_info = g_file_query_info (data->imgfile,
 				      G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME ","
 				      G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
@@ -525,7 +525,7 @@ picasaweb_upload_files (EogPostasaPlugin *plugin)
 	GSimpleAsyncResult *result;
 	PicasaWebUploadFileAsyncData *data;
 
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 	if (gdata_service_is_authorized (GDATA_SERVICE (plugin->priv->service)) == FALSE) {
 #else
 	if (gdata_service_is_authenticated (GDATA_SERVICE (plugin->priv->service)) == FALSE) {
@@ -572,7 +572,7 @@ picasaweb_upload_files (EogPostasaPlugin *plugin)
  * "Close".  Regardless of the response, it re-enables the Login
  * button (which is desensitised during the login attempt).
  **/
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 static void
 picasaweb_login_async_cb (GDataClientLoginAuthorizer *authorizer, GAsyncResult *result, EogPostasaPlugin *plugin)
 #else
@@ -584,7 +584,7 @@ picasaweb_login_async_cb (GDataPicasaWebService *service, GAsyncResult *result, 
 	gchar *message;
 	gboolean success = FALSE;
 
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 	success = gdata_client_login_authorizer_authenticate_finish (authorizer,
 								     result,
 								     &error);
@@ -632,7 +632,7 @@ picasaweb_login_cb (GtkWidget *login_button, gpointer _plugin)
 	gtk_label_set_text (plugin->priv->login_message, _("Logging in..."));
 	g_cancellable_reset (plugin->priv->login_cancellable);
 
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 	gdata_client_login_authorizer_authenticate_async (
 					  plugin->priv->authorizer,
 					  gtk_entry_get_text (plugin->priv->username_entry),
@@ -662,7 +662,7 @@ picasaweb_upload_cb (GtkAction	*action,
 
 	priv = plugin->priv;
 
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 	if (gdata_service_is_authorized (GDATA_SERVICE (priv->service)) == TRUE)
 #else
 	if (gdata_service_is_authenticated (GDATA_SERVICE (priv->service)) == TRUE)
@@ -769,7 +769,7 @@ login_get_dialog (EogPostasaPlugin *plugin)
 		g_signal_connect (G_OBJECT (plugin->priv->cancel_button), "clicked", G_CALLBACK (login_dialog_cancel_button_cb), plugin);
 		g_signal_connect (G_OBJECT (plugin->priv->login_dialog), "delete-event", G_CALLBACK (login_dialog_delete_event_cb), plugin);
 
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 		if (gdata_service_is_authorized (GDATA_SERVICE (plugin->priv->service))) {
 			gtk_entry_set_text (plugin->priv->username_entry, gdata_client_login_authorizer_get_username (plugin->priv->authorizer));
 			gtk_entry_set_text (plugin->priv->password_entry, gdata_client_login_authorizer_get_password (plugin->priv->authorizer));
@@ -860,7 +860,7 @@ eog_postasa_plugin_init (EogPostasaPlugin *plugin)
 
 	plugin->priv = G_TYPE_INSTANCE_GET_PRIVATE (plugin, EOG_TYPE_POSTASA_PLUGIN, EogPostasaPluginPrivate);
 
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 	plugin->priv->authorizer = gdata_client_login_authorizer_new ("EogPostasa", GDATA_TYPE_PICASAWEB_SERVICE);
 	plugin->priv->service = gdata_picasaweb_service_new (GDATA_AUTHORIZER (plugin->priv->authorizer)); /* unref'd in eog_postasa_plugin_dispose() */
 #else
@@ -882,7 +882,7 @@ eog_postasa_plugin_dispose (GObject *_plugin)
 
 	eog_debug_message (DEBUG_PLUGINS, "EogPostasaPlugin disposing");
 
-#ifdef HAVE_LIBGDATA_90
+#ifdef HAVE_LIBGDATA_0_9
 	if (plugin->priv->authorizer) {
 		g_object_unref (plugin->priv->authorizer);
 		plugin->priv->authorizer = NULL;
