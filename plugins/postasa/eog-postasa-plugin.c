@@ -713,6 +713,9 @@ login_dialog_close (EogPostasaPlugin *plugin)
 static gboolean
 login_dialog_cancel_button_cb (GtkWidget *cancel_button, EogPostasaPlugin *plugin)
 {
+	/* Make sure we don't resume uploads */
+	plugin->priv->uploads_pending = FALSE;
+
 	return login_dialog_close (plugin);
 }
 
@@ -724,6 +727,9 @@ login_dialog_cancel_button_cb (GtkWidget *cancel_button, EogPostasaPlugin *plugi
 static gboolean
 login_dialog_delete_event_cb (GtkWidget *widget, GdkEvent *event, gpointer *_plugin)
 {
+	/* Make sure we don't resume uploads */
+	EOG_POSTASA_PLUGIN (_plugin)->priv->uploads_pending = FALSE;
+
 	return login_dialog_close (EOG_POSTASA_PLUGIN (_plugin));
 }
 
