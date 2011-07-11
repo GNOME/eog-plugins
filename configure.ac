@@ -233,16 +233,24 @@ if test "$?" = 1
 then
     PKG_CHECK_MODULES(POSTASA,
         [ libgdata >= 0.6.0 ],
-        PKG_CHECK_EXISTS( libgdata >= 0.8 ,
-	    AC_DEFINE([HAVE_LIBGDATA_80], [1],
-	        [Define to be compatible with the API of libgdata-0.8])
-	),
+	[have_postasa=yes],
 	[have_postasa=no])
     AC_SUBST(POSTASA_LIBS)
     AC_SUBST(POSTASA_CFLAGS)
     if test "x$have_postasa" = "xno"
     then
         undef_plugin postasa "libgdata was not found"
+    else
+         PKG_CHECK_EXISTS([ libgdata >= 0.8 ],
+	     AC_DEFINE([HAVE_LIBGDATA_80], [1],
+	               [Define to be compatible with the API of libgdata-0.8]),
+	)
+        PKG_CHECK_EXISTS([ libgdata >= 0.9.1 ],
+	     AC_DEFINE([HAVE_LIBGDATA_90], [1],
+	               [Define to be compatible with the API of libgdata-0.9]),
+	)
+
+
     fi
 fi
 

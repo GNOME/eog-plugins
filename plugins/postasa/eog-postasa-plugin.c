@@ -67,6 +67,9 @@ struct _EogPostasaPluginPrivate
 	guint ui_id;
 
 
+#ifdef HAVE_LIBGDATA_90
+	GDataClientLoginAuthorizer *authorizer;
+#endif
 	GDataPicasaWebService *service;
 	GCancellable *login_cancellable;
 
@@ -522,7 +525,11 @@ picasaweb_upload_files (EogPostasaPlugin *plugin)
 	GSimpleAsyncResult *result;
 	PicasaWebUploadFileAsyncData *data;
 
+#ifdef HAVE_LIBGDATA_90
+	if (gdata_service_is_authorized (GDATA_SERVICE (plugin->priv->service)) == FALSE) {
+#else
 	if (gdata_service_is_authenticated (GDATA_SERVICE (plugin->priv->service)) == FALSE) {
+#endif
 		g_warning ("PicasaWeb could not be authenticated.  Aborting upload.");
 		return;
 	}
@@ -565,14 +572,25 @@ picasaweb_upload_files (EogPostasaPlugin *plugin)
  * "Close".  Regardless of the response, it re-enables the Login
  * button (which is desensitised during the login attempt).
  **/
+#ifdef HAVE_LIBGDATA_90
+static void
+picasaweb_login_async_cb (GDataClientLoginAuthorizer *authorizer, GAsyncResult *result, EogPostasaPlugin *plugin)
+#else
 static void
 picasaweb_login_async_cb (GDataPicasaWebService *service, GAsyncResult *result, EogPostasaPlugin *plugin)
+#endif
 {
 	GError *error = NULL;
 	gchar *message;
 	gboolean success = FALSE;
 
+#ifdef HAVE_LIBGDATA_90
+	success = gdata_client_login_authorizer_authenticate_finish (authorizer,
+								     result,
+								     &error);
+#else
 	success = gdata_service_authenticate_finish (GDATA_SERVICE (service), result, &error);
+#endif
 
 	gtk_widget_set_sensitive (GTK_WIDGET (plugin->priv->login_button), TRUE);
 	gtk_widget_set_sensitive (GTK_WIDGET (plugin->priv->username_entry), TRUE);
@@ -613,10 +631,19 @@ picasaweb_login_cb (GtkWidget *login_button, gpointer _plugin)
 	/* TODO: want to handle passwords more securely */
 	gtk_label_set_text (plugin->priv->login_message, _("Logging in..."));
 	g_cancellable_reset (plugin->priv->login_cancellable);
+
+#ifdef HAVE_LIBGDATA_90
+	gdata_client_login_authorizer_authenticate_async (
+					  plugin->priv->authorizer,
+					  gtk_entry_get_text (plugin->priv->username_entry),
+					  gtk_entry_get_text (plugin->priv->password_entry),
+					  plugin->priv->login_cancellable, (GAsyncReadyCallback)picasaweb_login_async_cb, plugin);
+#else
 	gdata_service_authenticate_async (GDATA_SERVICE (plugin->priv->service),
 					  gtk_entry_get_text (plugin->priv->username_entry),
 					  gtk_entry_get_text (plugin->priv->password_entry),
 					  plugin->priv->login_cancellable, (GAsyncReadyCallback)picasaweb_login_async_cb, plugin);
+#endif
 }
 
 /**
@@ -634,7 +661,13 @@ picasaweb_upload_cb (GtkAction	*action,
 	g_return_if_fail (EOG_IS_POSTASA_PLUGIN (plugin));
 
 	priv = plugin->priv;
-	if (gdata_service_is_authenticated (GDATA_SERVICE (priv->service)) == TRUE) {
+
+#ifdef HAVE_LIBGDATA_90
+	if (gdata_service_is_authorized (GDATA_SERVICE (priv->service)) == TRUE)
+#else
+	if (gdata_service_is_authenticated (GDATA_SERVICE (priv->service)) == TRUE)
+#endif
+	{
 		picasaweb_upload_files (plugin);
 	} else {
 		/* when the dialog closes, it checks if this is set to see if it should upload anything */
@@ -730,9 +763,15 @@ login_get_dialog (EogPostasaPlugin *plugin)
 		g_signal_connect (G_OBJECT (plugin->priv->cancel_button), "clicked", G_CALLBACK (login_dialog_cancel_button_cb), plugin);
 		g_signal_connect (G_OBJECT (plugin->priv->login_dialog), "delete-event", G_CALLBACK (login_dialog_delete_event_cb), plugin);
 
+#ifdef HAVE_LIBGDATA_90
+		if (gdata_service_is_authorized (GDATA_SERVICE (plugin->priv->service))) {
+			gtk_entry_set_text (plugin->priv->username_entry, gdata_client_login_authorizer_get_username (plugin->priv->authorizer));
+			gtk_entry_set_text (plugin->priv->password_entry, gdata_client_login_authorizer_get_password (plugin->priv->authorizer));
+#else
 		if (gdata_service_is_authenticated (GDATA_SERVICE (plugin->priv->service))) {
 			gtk_entry_set_text (plugin->priv->username_entry, gdata_service_get_username (GDATA_SERVICE (plugin->priv->service)));
 			gtk_entry_set_text (plugin->priv->password_entry, gdata_service_get_password (GDATA_SERVICE (plugin->priv->service)));
+#endif
 		}
 	}
 
@@ -814,7 +853,13 @@ eog_postasa_plugin_init (EogPostasaPlugin *plugin)
 	eog_debug_message (DEBUG_PLUGINS, "EogPostasaPlugin initializing");
 
 	plugin->priv = G_TYPE_INSTANCE_GET_PRIVATE (plugin, EOG_TYPE_POSTASA_PLUGIN, EogPostasaPluginPrivate);
+
+#ifdef HAVE_LIBGDATA_90
+	plugin->priv->authorizer = gdata_client_login_authorizer_new ("EogPostasa", GDATA_TYPE_PICASAWEB_SERVICE);
+	plugin->priv->service = gdata_picasaweb_service_new (GDATA_AUTHORIZER (plugin->priv->authorizer)); /* unref'd in eog_postasa_plugin_dispose() */
+#else
 	plugin->priv->service = gdata_picasaweb_service_new ("EogPostasa"); /* unref'd in eog_postasa_plugin_dispose() */
+#endif
 	plugin->priv->login_cancellable = g_cancellable_new (); /* unref'd in eog_postasa_plugin_dispose() */
 	plugin->priv->uploads_pending = FALSE;
 }
@@ -830,6 +875,13 @@ eog_postasa_plugin_dispose (GObject *_plugin)
 	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (_plugin);
 
 	eog_debug_message (DEBUG_PLUGINS, "EogPostasaPlugin disposing");
+
+#ifdef HAVE_LIBGDATA_90
+	if (plugin->priv->authorizer) {
+		g_object_unref (plugin->priv->authorizer);
+		plugin->priv->authorizer = NULL;
+	}
+#endif
 
 	if (plugin->priv->service) {
 		g_object_unref (plugin->priv->service);
