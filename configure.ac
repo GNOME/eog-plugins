@@ -311,6 +311,12 @@ AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"
 AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
 
+EOG_PLUGINS_LIBS_DIR="$libdir/eog/plugins"
+AC_SUBST(EOG_PLUGINS_LIBS_DIR)
+
+EOG_PLUGINS_DATA_DIR="$datadir/eog/plugins"
+AC_SUBST(EOG_PLUGINS_DATA_DIR)
+
 AC_CONFIG_FILES([
 Makefile
 plugins/Makefile
