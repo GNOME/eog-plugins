@@ -1,5 +1,6 @@
 # ExifDisplay plugin
-plugindir = $(libdir)/eog/plugins
+plugindir = $(EOG_PLUGINS_LIBS_DIR)
+uidir = $(EOG_PLUGINS_DATA_DIR)/exif-display
 
 INCLUDES = \
 	-I$(top_srcdir)/src 				\
@@ -7,7 +8,7 @@ INCLUDES = \
 	$(WARN_CFLAGS)					\
 	$(EXIFDISPLAY_CFLAGS)				\
 	-DEOG_LOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
-	-DEOG_PLUGINDIR=\""$(plugindir)"\"
+	-DEOG_EXIF_DISPLAY_DATA_DIR=\""$(uidir)"\"
 
 plugin_LTLIBRARIES = libexif-display.la
 
@@ -30,7 +31,6 @@ plugin_in_files = exif-display.plugin.desktop.in
 
 UI_FILES = exif-display.ui exif-display-config.ui
 ui_DATA = $(UI_FILES)
-uidir = $(plugindir)/exif-display
 
 %.plugin: %.plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 

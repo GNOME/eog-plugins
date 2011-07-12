@@ -35,7 +35,7 @@
 
 #include "eog-exif-display-plugin-setup.h"
 
-#define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/exif-display/exif-display-config.ui"
+#define GTKBUILDER_CONFIG_FILE EOG_EXIF_DISPLAY_DATA_DIR"/exif-display-config.ui"
 
 static void
 peas_gtk_configurable_iface_init (PeasGtkConfigurableInterface *iface);

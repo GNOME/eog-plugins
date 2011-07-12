@@ -44,7 +44,7 @@
 #include "eog-exif-display-plugin-setup.h"
 #include "eog-exif-display-plugin.h"
 
-#define GTKBUILDER_FILE EOG_PLUGINDIR"/exif-display/exif-display.ui"
+#define GTKBUILDER_FILE EOG_EXIF_DISPLAY_DATA_DIR"/exif-display.ui"
 
 enum {
 	PROP_O,
