@@ -1,5 +1,5 @@
 # Postasa plugin
-plugindir = $(libdir)/eog/plugins
+plugindir = $(EOG_PLUGINS_LIBS_DIR)
 
 INCLUDES = \
 	-I$(top_srcdir) 				\
@@ -7,7 +7,9 @@ INCLUDES = \
 	$(WARN_CFLAGS)					\
 	$(POSTASA_CFLAGS) 				\
 	-DEOG_LOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
-	-DEOG_PLUGINDIR=\""$(plugindir)"\"
+	-DEOG_POSTASA_PLUGIN_DIR=\""$(plugindir)"\"		\
+	-DEOG_POSTASA_DATA_DIR=\""$(EOG_PLUGINS_DATA_DIR)/postasa"\"
+
 
 plugin_LTLIBRARIES = libpostasa.la
 
@@ -29,7 +31,7 @@ plugin_in_files = postasa.plugin.desktop.in
 
 UI_FILES = postasa-config.xml postasa-uploads.xml
 ui_DATA = $(UI_FILES)
-uidir = $(plugindir)/postasa
+uidir = $(EOG_PLUGINS_DATA_DIR)/postasa
 
 %.plugin: %.plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 

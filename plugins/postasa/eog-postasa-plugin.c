@@ -38,9 +38,8 @@
 
 #include <gdata/gdata.h>
 
-#define GTKBUILDER_CONFIG_FILE EOG_PLUGINDIR"/postasa/postasa-config.xml"
-#define GTKBUILDER_UPLOAD_FILE EOG_PLUGINDIR"/postasa/postasa-uploads.xml"
-#define DEFAULT_THUMBNAIL EOG_PLUGINDIR"/postasa/default.png"
+#define GTKBUILDER_CONFIG_FILE EOG_POSTASA_DATA_DIR"/postasa-config.xml"
+#define GTKBUILDER_UPLOAD_FILE EOG_POSTASA_DATA_DIR"/postasa-uploads.xml"
 
 enum {
 	PROP_O,
