@@ -1,15 +1,15 @@
-# Slovenian translation for eog-plugins.
+# Slovenian translations for eog-plugins.
 # Copyright (C) 2009 eog-plugins COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2010.
+# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2010-02-10 19:40+0000\n"
-"PO-Revision-Date: 2010-05-13 21:09+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-07-13 08:55+0000\n"
+"PO-Revision-Date: 2011-07-14 08:50+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -22,13 +22,13 @@ msgstr ""
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+#: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (neveljaven Unicode)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (leča)"
@@ -36,7 +36,7 @@ msgstr "%.1fmm (leča)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#: ../plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
@@ -61,11 +61,11 @@ msgstr "Pokaži nastavitve aparata v vrstici stanja"
 msgid "Display per-channel histogram"
 msgstr "Pokaži kanalni histogram"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 msgid "Displays camera settings and histogram"
 msgstr "Pokaže nastavitve aparata in histogram"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "Exif prikaz"
 
@@ -97,103 +97,106 @@ msgstr "<b>Umerjanje:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>Približanje:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Prilagodi širini"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
-#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Približaj prilagojeno širini"
 
-#: ../plugins/map/eog-map-plugin.c:321
+#: ../plugins/map/eog-map-plugin.c:363
 msgid "Jump to current image's location"
 msgstr "Skoči na trenutno mesto slike"
 
-#: ../plugins/map/eog-map-plugin.c:333
+#: ../plugins/map/eog-map-plugin.c:375
 msgid "Zoom in"
 msgstr "Približaj"
 
-#: ../plugins/map/eog-map-plugin.c:341
+#: ../plugins/map/eog-map-plugin.c:383
 msgid "Zoom out"
 msgstr "Oddalji"
 
-#: ../plugins/map/eog-map-plugin.c:355
-#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:397
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Zemljevid"
 
-#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
 msgstr "Pokaži geografski položaj mesta, kjer je bila slika posneta"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:124
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "Pošlji na PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Pošiljanje vaših slike na portal PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:321
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "Pošiljanje ..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:368
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "Poslano"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:372
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "Preklicano"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "Napaka"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:523
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "Prijava ni uspela. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:527
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "Uspešna prijava."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:528
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "Zapri"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:549
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "Prekliči"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:555
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "Prijavljanje ..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:583
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "Prijavite se za nadaljevanje pošiljanja."
 
-#: ../plugins/postasa/postasa-config.xml.h:2
-msgid "Login"
-msgstr "Prijava"
-
-#: ../plugins/postasa/postasa-config.xml.h:3
-msgid "Password"
-msgstr "Geslo"
-
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
 msgstr "Prijava PicasaWeb"
 
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "_Cancel"
+msgstr "_Prekliči"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "_Login"
+msgstr "_Prijava"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "_Password:"
+msgstr "_Geslo:"
+
 #: ../plugins/postasa/postasa-config.xml.h:5
-msgid "Username"
-msgstr "Uporabniško ime"
+msgid "_Username:"
+msgstr "_Uporabniško ime:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Cancel All"
@@ -207,51 +210,52 @@ msgstr "Prekliči izbrano"
 msgid "Uploads:"
 msgstr "Pošiljanje:"
 
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Program za prenos datotek na PicasaWeb"
 
-#: ../plugins/postr/eog-postr-plugin.c:57
+#: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
 msgstr "Prenesi na Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:59
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:64
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
 msgid "Upload your pictures to Flickr"
 msgstr "Prenos vaših slike na portal Flickr"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+#: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Program za pošiljanje datotek na Flickr"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Konzola Python"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Konzola Python za program Gnome oko"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "Pošlji po pošti"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
 msgstr "Pošiljanje izbranih slik po pošti"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
 msgstr "Pošlji po pošti"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Pošlje sliko priloženo novemu sporočilu"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
 msgstr "Premešaj slike med prikazovanjem predstavitve"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Premešaj slike med predstavitvijo"
+
