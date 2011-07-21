@@ -24,6 +24,7 @@
 #include <champlain-gtk/champlain-gtk.h>
 #include <clutter-gtk/clutter-gtk.h>
 #include <libexif/exif-data.h>
+#include <libexif/exif-tag.h>
 
 enum {
         PROP_0,
@@ -73,6 +74,47 @@ update_marker_image (ChamplainLabel *marker,
 	champlain_label_set_image (marker, thumb);
 }
 
+#define MAP_EXIF_ENTRY_IS_GPS_RATIONAL(e) ( e && \
+	 (e->format == EXIF_FORMAT_RATIONAL) && \
+	 (e->components == 3) && \
+	 (exif_entry_get_ifd(e) == EXIF_IFD_GPS) )
+
+static gboolean
+parse_exif_gps_coordinate (ExifEntry *entry,
+			   gdouble *co,
+			   ExifByteOrder byte_order)
+{
+	gsize val_size;
+	ExifRational val;
+	gdouble hour = 0, min = 0, sec = 0;
+
+	if (G_UNLIKELY (!MAP_EXIF_ENTRY_IS_GPS_RATIONAL (entry)))
+		return FALSE;
+
+	val_size = exif_format_get_size (EXIF_FORMAT_RATIONAL);
+
+	val = exif_get_rational (entry->data, byte_order);
+	if (val.denominator != 0)
+		hour = (gdouble) val.numerator /
+		       (gdouble) val.denominator;
+
+	val = exif_get_rational (entry->data + val_size, byte_order);
+	if (val.denominator != 0)
+		min = (gdouble) val.numerator /
+		      (gdouble) val.denominator;
+
+	val = exif_get_rational (entry->data + (2 * val_size), byte_order);
+	if (val.denominator != 0)
+		sec = (gdouble) val.numerator /
+		      (gdouble) val.denominator;
+
+	if (G_LIKELY (co != NULL)) {
+		*co = hour + (min / 60.0) + (sec / 3600.0);
+	}
+
+	return TRUE;
+}
+
 static gboolean
 get_coordinates (EogImage *image,
 		 gdouble *latitude,
@@ -81,25 +123,22 @@ get_coordinates (EogImage *image,
 	ExifData *exif_data;
 	gchar buffer[32];
 	gdouble lon, lat;
-	gfloat hour, min, sec;
 
 	exif_data = (ExifData *) eog_image_get_exif_info (image);
 
 	if (exif_data) {
+		ExifEntry *entry;
+		ExifByteOrder byte_order;
 
-		eog_exif_data_get_value (exif_data,
-					 EXIF_TAG_GPS_LONGITUDE,
-					 buffer,
-					 32);
-		if (strlen (buffer) < 5) {
+		byte_order = exif_data_get_byte_order (exif_data);
+		entry = exif_data_get_entry (exif_data,
+					     EXIF_TAG_GPS_LONGITUDE);
+
+		if (!parse_exif_gps_coordinate (entry, &lon, byte_order)) {
 			exif_data_unref (exif_data);
 			return FALSE;
 		}
 
-		sscanf (buffer, "%f, %f, %f", &hour, &min, &sec);
-		lon = hour;
-		lon += min / 60.0;
-		lon += sec / 3600.0;
 
 		eog_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LONGITUDE_REF,
@@ -108,19 +147,13 @@ get_coordinates (EogImage *image,
 		if (strcmp (buffer, "W") == 0)
 			lon *= -1;
 
-		eog_exif_data_get_value (exif_data,
-					 EXIF_TAG_GPS_LATITUDE,
-					 buffer,
-					 32);
-		if (strlen (buffer) < 5) {
+		entry = exif_data_get_entry (exif_data,
+					     EXIF_TAG_GPS_LATITUDE);
+
+		if (!parse_exif_gps_coordinate (entry, &lat, byte_order)) {
 			exif_data_unref (exif_data);
 			return FALSE;
 		}
-
-		sscanf (buffer, "%f, %f, %f", &hour, &min, &sec);
-		lat = hour;
-		lat += min / 60.0;
-		lat += sec / 3600.0;
 
 		eog_exif_data_get_value (exif_data,
 					 EXIF_TAG_GPS_LATITUDE_REF,
