@@ -1,3 +1,27 @@
+Version 3.1.2
+-------------
+
+Plugin changes:
+
+- Map
+ - #654650, Wrong location of photos with map plugin (Felix Riemann)
+
+- Exif Display
+ - Move GtkBuilder files out of /usr/lib into /usr/share (Felix Riemann)
+
+- PicasaWeb Uploader
+ - #654302, postasa plugin doesn't build with libgdata 0.9.x (Felix Riemann)
+ - Move GtkBuilder files out of /usr/lib into /usr/share (Felix Riemann)
+ - Various small code and UI improvements (Felix Riemann)
+
+New and updated translations:
+
+- Marek Černocký [cs]
+- Mario Blättermann [de]
+- Daniel Mustieles [es]
+- Takeshi AIHANA [ja]
+- Matej Urbančič [sl]
+
 Version 3.1.1
 -------------
 
