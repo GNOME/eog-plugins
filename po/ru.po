@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-04-22 10:27+0000\n"
-"PO-Revision-Date: 2011-06-07 20:02+0300\n"
+"POT-Creation-Date: 2011-07-11 20:36+0000\n"
+"PO-Revision-Date: 2011-07-29 21:34+0300\n"
 "Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -121,73 +121,80 @@ msgstr "Карта"
 msgid "Display the geolocation of the image on a map"
 msgstr "Отображение местоположения изображения на карте"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:124
+#: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
 msgstr "Загрузить в PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+#: ../plugins/postasa/eog-postasa-plugin.c:129
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Загрузка изображений в PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:320
+#: ../plugins/postasa/eog-postasa-plugin.c:324
 msgid "Uploading..."
 msgstr "Загрузка…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:366
+#: ../plugins/postasa/eog-postasa-plugin.c:370
 msgid "Uploaded"
 msgstr "Загружено"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:374
 msgid "Cancelled"
 msgstr "Отменено"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:377
 msgid "Failed"
 msgstr "Сбой"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:581
+#: ../plugins/postasa/eog-postasa-plugin.c:600
 #, c-format
 msgid "Login failed. %s"
 msgstr "Не удалось войти. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:585
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Logged in successully."
 msgstr "Вход завершён успешно."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:586
+#: ../plugins/postasa/eog-postasa-plugin.c:605
 msgid "Close"
 msgstr "Закрыть"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:607
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: ../plugins/postasa/eog-postasa-plugin.c:626
 msgid "Cancel"
 msgstr "Отменить"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:613
+#: ../plugins/postasa/eog-postasa-plugin.c:632
 msgid "Logging in..."
 msgstr "Вход…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:641
+#: ../plugins/postasa/eog-postasa-plugin.c:677
 msgid "Please log in to continue upload."
 msgstr "Чтобы продолжить загрузки, нужно выполнить вход."
 
-#: ../plugins/postasa/postasa-config.xml.h:2
-msgid "Login"
-msgstr "Войти"
-
-#: ../plugins/postasa/postasa-config.xml.h:3
-msgid "Password"
-msgstr "Пароль"
-
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
 msgstr "Вход в PicasaWeb"
 
+#: ../plugins/postasa/postasa-config.xml.h:2
+#| msgid "Cancel"
+msgid "_Cancel"
+msgstr "_Отменить"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+#| msgid "Login"
+msgid "_Login"
+msgstr "_Войти"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+#| msgid "Password"
+msgid "_Password:"
+msgstr "_Пароль:"
+
 #: ../plugins/postasa/postasa-config.xml.h:5
-msgid "Username"
-msgstr "Имя пользователя"
+#| msgid "Username"
+msgid "_Username:"
+msgstr "_Имя пользователя:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Cancel All"
@@ -201,7 +208,7 @@ msgstr "Отменить выделенное"
 msgid "Uploads:"
 msgstr "Загрузки:"
 
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Загрузчик PicasaWeb"
 
