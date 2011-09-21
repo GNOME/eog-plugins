@@ -1,30 +1,29 @@
 # Italian translation og Eye of GNOME plugins.
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
-# Gianvito Cavasoli <janvitus@ubuntu-it.org>, 2009, 2010.
-#
+# Gianvito Cavasoli <gianvito@gmx.it>, 2009, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&component=general\n"
-"POT-Creation-Date: 2010-02-15 18:55+0000\n"
-"PO-Revision-Date: 2010-02-16 12:39+0100\n"
-"Last-Translator: Gianvito Cavasoli <janvitus@ubuntu-it.org>\n"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-07-29 17:37+0000\n"
+"PO-Revision-Date: 2011-08-28 11:45+0200\n"
+"Last-Translator: Gianvito Cavasoli <gianvito@gmx.it>\n"
 "Language-Team: Italiana <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+#: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (Unicode non valido)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (obiettivo)"
@@ -32,7 +31,7 @@ msgstr "%.1fmm (obiettivo)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#: ../plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (equiv. 35mm)"
@@ -57,11 +56,11 @@ msgstr "Visualizzare impostazioni della fotocamera nella barra degli strumenti"
 msgid "Display per-channel histogram"
 msgstr "Visualizzare istogramma per canale"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 msgid "Displays camera settings and histogram"
 msgstr "Visualizza le impostazioni della fotocamera e l'istogramma"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "Visualizza dati Exif"
 
@@ -93,103 +92,106 @@ msgstr "<b>Esposimetro:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>Ingrandimento:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Adatta alla larghezza"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
-#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Ingrandisce per adattare l'immagine alla larghezza"
 
-#: ../plugins/map/eog-map-plugin.c:321
+#: ../plugins/map/eog-map-plugin.c:396
 msgid "Jump to current image's location"
 msgstr "Va all'attuale posizione dell'immagine"
 
-#: ../plugins/map/eog-map-plugin.c:333
+#: ../plugins/map/eog-map-plugin.c:408
 msgid "Zoom in"
 msgstr "Aumenta l'ingrandimento"
 
-#: ../plugins/map/eog-map-plugin.c:341
+#: ../plugins/map/eog-map-plugin.c:416
 msgid "Zoom out"
 msgstr "Diminuisce l'ingrandimento"
 
-#: ../plugins/map/eog-map-plugin.c:355
-#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:430
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Mappa"
 
-#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Display the geolocation of the image on a map"
 msgstr "Visualizza la posizione geografica dell'immagine su una mappa"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:124
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "Carica su PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Carica le immagini su PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:320
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "Caricamento..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:366
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "Caricate"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "Annullate"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "Non riuscito"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:520
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "Accesso non riuscito. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:524
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "Accesso effettuato con successo."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:525
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "Chiudi"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:546
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "Annulla"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:552
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "Accesso in corso..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:580
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "Accedere per continuare il caricamento."
 
-#: ../plugins/postasa/postasa-config.xml.h:2
-msgid "Login"
-msgstr "Accesso"
-
-#: ../plugins/postasa/postasa-config.xml.h:3
-msgid "Password"
-msgstr "Password"
-
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
 msgstr "Acesso PicasaWeb"
 
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "_Cancel"
+msgstr "_Annulla"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "_Login"
+msgstr "A_ccedi"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "_Password:"
+msgstr "Pass_word:"
+
 #: ../plugins/postasa/postasa-config.xml.h:5
-msgid "Username"
-msgstr "Nome utente"
+msgid "_Username:"
+msgstr "Nome _utente:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Cancel All"
@@ -203,51 +205,51 @@ msgstr "Annulla selezionate"
 msgid "Uploads:"
 msgstr "Caricamenti:"
 
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Caricatore PicasaWeb"
 
-#: ../plugins/postr/eog-postr-plugin.c:57
+#: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
 msgstr "Carica su Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:59
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:64
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
 msgid "Upload your pictures to Flickr"
 msgstr "Carica le immagini su Flickr"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+#: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Caricatore Flickr"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Console Python"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Console Python per Eye of GNOME"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "Invia per email"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
 msgstr "Invia le immagini selezionate via email"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
 msgstr "Invia per email"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Invia un'immagine allegandola a una nuova email"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
 msgstr "Mischia le immagini nella modalità diapositive"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Mischia diapositive"
