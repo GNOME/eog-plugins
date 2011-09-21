@@ -6,15 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-12 07:18+0900\n"
-"PO-Revision-Date: 2011-07-12 07:18+0900\n"
-"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
-"Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
-"Language: ja\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-09-16 14:50+0000\n"
+"PO-Revision-Date: 2011-09-18 17:43+0900\n"
+"Last-Translator: Yasumichi Akahoshi <yasumichi@vinelinux.org>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -102,19 +103,19 @@ msgstr "幅に合わせる"
 msgid "Zoom to fit image width"
 msgstr "画像の幅にズームを合わせる"
 
-#: ../plugins/map/eog-map-plugin.c:363
+#: ../plugins/map/eog-map-plugin.c:396
 msgid "Jump to current image's location"
 msgstr "この画像の撮影場所へジャンプします"
 
-#: ../plugins/map/eog-map-plugin.c:375
+#: ../plugins/map/eog-map-plugin.c:408
 msgid "Zoom in"
 msgstr "拡大します"
 
-#: ../plugins/map/eog-map-plugin.c:383
+#: ../plugins/map/eog-map-plugin.c:416
 msgid "Zoom out"
 msgstr "縮小します"
 
-#: ../plugins/map/eog-map-plugin.c:397
+#: ../plugins/map/eog-map-plugin.c:430
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "マップ"
@@ -123,54 +124,54 @@ msgstr "マップ"
 msgid "Display the geolocation of the image on a map"
 msgstr "画像に含まれた情報から地理的位置をマップに表示します"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "PicasaWeb へアップロード"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:129
+#: ../plugins/postasa/eog-postasa-plugin.c:128
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "お気に入りの写真を PicasaWeb へアップロードします"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:324
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "アップロード中..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "アップロード完了"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:374
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "キャンセルしました"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:377
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "失敗しました"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:600
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "ログインできませんでした: %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "ログインが完了しました"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "閉じる"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:626
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "キャンセル"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:632
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "ログイン中..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:677
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "アップロードするにはログインが必要です。"
 
@@ -192,7 +193,7 @@ msgstr "パスワード(_P):"
 
 #: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Username:"
-msgstr "ユーザ名(_U):"
+msgstr "ユーザー名(_U):"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Cancel All"
@@ -208,7 +209,7 @@ msgstr "アップロード:"
 
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
-msgstr "PicasaWeb アップローダ"
+msgstr "PicasaWeb アップローダー"
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
@@ -221,7 +222,7 @@ msgstr "お気に入りの写真を Flickr へアップロードします"
 
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
-msgstr "Flickr アップローダ"
+msgstr "Flickr アップローダー"
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
@@ -249,8 +250,8 @@ msgstr "メールに画像を添付して送信します"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Shuffles images in slideshow mode"
-msgstr "スライドショー・モードで画像の並びをシャッフルします"
+msgstr "スライドショーモードで画像の並びをシャッフルします"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
-msgstr "スライドショー・シャッフル"
+msgstr "スライドショーシャッフル"
