@@ -1,3 +1,22 @@
+Version 3.1.3
+-------------
+
+Plugin changes:
+
+- Map
+ - #658349, Support libchamplain 0.11/0.12 (Claudio Saavedra)
+
+New and updated translations:
+
+- Bruce Cowan [en_GB]
+- Claude Paroz [fr]
+- Balazs Ur [hu]
+- Gianvito Cavasoli [it]
+- Yasumichi Akahoshi [ja]
+- Piotr Drąg [pl]
+- António Lima [pt]
+- Yuri Myasoedov [ru]
+
 Version 3.1.2
 -------------
 
