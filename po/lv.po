@@ -1,0 +1,258 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=eog-plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-09-26 20:28+0000\n"
+"PO-Revision-Date: 2011-09-30 01:55+0300\n"
+"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lv\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:105
+msgid " (invalid Unicode)"
+msgstr " (nederīgs Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:183
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (lēca)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:194
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm filma)"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+msgid "<b>General</b>"
+msgstr "<b>Vispārējs</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "<b>Histogram</b>"
+msgstr "<b>Histogramma</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+msgid "Display RGB histogram"
+msgstr "Rādīt RGB histogrammu"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "Display camera settings in statusbar"
+msgstr "Rādīt kameras iestatījumus statusa joslā"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+msgid "Display per-channel histogram"
+msgstr "Rādīt histogrammu katram kanālam"
+
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
+msgid "Displays camera settings and histogram"
+msgstr "Rāda kameras iestatījumus un histogrammu"
+
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+msgid "Exif display"
+msgstr "Exif attēlošana"
+
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "<b>Aperture:</b>"
+msgstr "<b>Diafragma:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Description:</b>"
+msgstr "<b>Apraksts:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Ekspozīcija:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Ekspozīcijas nobīde:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>ISO speed:</b>"
+msgstr "<b>ISO ātrums:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Metering:</b>"
+msgstr "<b>Mērīšana:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Zoom:</b>"
+msgstr "<b>Palielinājums:</b>"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+msgid "Fit to width"
+msgstr "Piekārtot platumam"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+msgid "Zoom to fit image width"
+msgstr "Pielāgot attēla platumam"
+
+#: ../plugins/map/eog-map-plugin.c:396
+msgid "Jump to current image's location"
+msgstr "Lekt uz pašreizējā attāla vietu"
+
+#: ../plugins/map/eog-map-plugin.c:408
+msgid "Zoom in"
+msgstr "Tuvināt"
+
+#: ../plugins/map/eog-map-plugin.c:416
+msgid "Zoom out"
+msgstr "Tālināt"
+
+#: ../plugins/map/eog-map-plugin.c:430
+#: ../plugins/map/map.plugin.desktop.in.h:2
+msgid "Map"
+msgstr "Karte"
+
+#: ../plugins/map/map.plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "Attēlot attēla ģeogrāfisko vietu uz kartes"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+msgid "Upload to PicasaWeb"
+msgstr "Augšupielādēt uz PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Augšupielādējiet savas bildes uz PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:323
+msgid "Uploading..."
+msgstr "Augšupielādē..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:369
+msgid "Uploaded"
+msgstr "Augšupielādēts"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:373
+msgid "Cancelled"
+msgstr "Atcelts"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:376
+msgid "Failed"
+msgstr "Neizdevās"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:599
+#, c-format
+msgid "Login failed. %s"
+msgstr "Pieteikšanās neveiksmīga. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:603
+msgid "Logged in successully."
+msgstr "Pieteicās veiksmīgi."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:604
+msgid "Close"
+msgstr "Aizvērt"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:625
+msgid "Cancel"
+msgstr "Atcelt"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:631
+msgid "Logging in..."
+msgstr "Piesakās..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:676
+msgid "Please log in to continue upload."
+msgstr "Piesakieties, lai varētu turpināt augšupielādi."
+
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "PicasaWeb Login"
+msgstr "PicasaWeb pieteikšanās"
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "_Cancel"
+msgstr "At_celt"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "_Login"
+msgstr "_Pieteikties"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "_Password:"
+msgstr "_Parole:"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "_Username:"
+msgstr "_Lietotājvārds:"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "Atcelt Visu"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "Atcelt izvēlēto"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Uploads:"
+msgstr "Augšupielādes:"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb augšupielādētājs"
+
+#: ../plugins/postr/eog-postr-plugin.c:62
+msgid "Upload to Flickr"
+msgstr "Augšupielādēt uz Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:64
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Augšupielādējiet savas bildes uz Flickr"
+
+#: ../plugins/postr/postr.plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "Flickr augšupielādētājs"
+
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python konsole"
+
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
+msgid "Python console for Eye of GNOME"
+msgstr "Python konsole lietotnei Eye of GNOME"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+msgid "Send by Mail"
+msgstr "Sūtīt vēstuli"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
+msgid "Send the selected images by mail"
+msgstr "Sūtīt izvēlētos attēlus caur pastu"
+
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Sūtīt vēstuli"
+
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Sūta attēlu, kas pievienots jaunai vēstulei"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "Sajauc attēlus slīdrādes režīmā"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "Slīdrādes maisītājs"
+
