@@ -59,7 +59,7 @@
                         <property name="model">uploads_store</property>
                         <child>
                           <object class="GtkTreeViewColumn" id="file_col">
-                            <property name="title">File</property>
+                            <property name="title" translatable="yes">File</property>
                             <property name="expand">True</property>
                             <child>
                               <object class="GtkCellRendererPixbuf" id="thumbnail_cell"/>
@@ -81,7 +81,7 @@
                           <object class="GtkTreeViewColumn" id="size_col">
                             <property name="sizing">fixed</property>
                             <property name="fixed_width">60</property>
-                            <property name="title">Size</property>
+                            <property name="title" translatable="yes">Size</property>
                             <child>
                               <object class="GtkCellRendererText" id="size_cell"/>
                               <attributes>
@@ -93,7 +93,7 @@
                         <child>
                           <object class="GtkTreeViewColumn" id="progress_col">
                             <property name="min_width">160</property>
-                            <property name="title">Status</property>
+                            <property name="title" translatable="yes">Status</property>
                             <child>
                               <object class="GtkCellRendererProgress" id="progress_cell"/>
                               <attributes>
