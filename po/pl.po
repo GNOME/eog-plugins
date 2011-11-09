@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-08 22:03+0200\n"
-"PO-Revision-Date: 2010-09-08 22:04+0200\n"
+"POT-Creation-Date: 2011-11-09 23:22+0100\n"
+"PO-Revision-Date: 2011-11-09 22:23+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -128,7 +128,7 @@ msgstr "Wyświetlanie położenia geograficznego obrazu na mapie"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
-msgstr "Wyślij do PicasaWeb"
+msgstr "Wyślij do serwisu PicasaWeb"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:128
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
@@ -206,6 +206,18 @@ msgid "Cancel Selected"
 msgstr "Anuluj wybrane"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "File"
+msgstr "Plik"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Size"
+msgstr "Rozmiar"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Status"
+msgstr "Stan"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Uploads:"
 msgstr "Wysyłanie:"
 
@@ -215,7 +227,7 @@ msgstr "Wysyłanie do serwisu PicasaWeb"
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
-msgstr "Wyślij do Flickr"
+msgstr "Wyślij do serwisu Flickr"
 
 #: ../plugins/postr/eog-postr-plugin.c:64
 #: ../plugins/postr/postr.plugin.desktop.in.h:2
@@ -232,7 +244,7 @@ msgstr "Konsola Python"
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
-msgstr "Konsola Python dla programu Eye of GNOME"
+msgstr "Konsola języka Python dla programu Eye of GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
