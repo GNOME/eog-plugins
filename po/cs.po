@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-07-11 20:36+0000\n"
-"PO-Revision-Date: 2011-07-14 14:48+0200\n"
+"POT-Creation-Date: 2011-11-09 22:06+0000\n"
+"PO-Revision-Date: 2011-11-10 16:22+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
-"Language: cs\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -105,19 +105,19 @@ msgstr "Přizpůsobit šířce obrazovky"
 msgid "Zoom to fit image width"
 msgstr "Přizpůsobí měřítko obrázku šířce obrazovky"
 
-#: ../plugins/map/eog-map-plugin.c:363
+#: ../plugins/map/eog-map-plugin.c:396
 msgid "Jump to current image's location"
 msgstr "Přejít na místo pořízení aktuálního obrázku"
 
-#: ../plugins/map/eog-map-plugin.c:375
+#: ../plugins/map/eog-map-plugin.c:408
 msgid "Zoom in"
 msgstr "Přiblížit"
 
-#: ../plugins/map/eog-map-plugin.c:383
+#: ../plugins/map/eog-map-plugin.c:416
 msgid "Zoom out"
 msgstr "Oddálit"
 
-#: ../plugins/map/eog-map-plugin.c:397
+#: ../plugins/map/eog-map-plugin.c:430
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Mapa"
@@ -126,54 +126,54 @@ msgstr "Mapa"
 msgid "Display the geolocation of the image on a map"
 msgstr "Zobrazí geografickou polohu obrázku na mapě"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "Odeslat na Picasa"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:129
+#: ../plugins/postasa/eog-postasa-plugin.c:128
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Odešlete své obrázky na Picasa"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:324
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "Odesílá se…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "Odesláno"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:374
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "Zrušeno"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:377
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "Selhalo"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:600
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "Přihlášení selhalo. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "Přihlášení úspěšné"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "Zavřít"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:626
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "Zrušit"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:632
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "Přihlašuje se…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:677
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "Prosím přihlašte se pro pokračování odesílání."
 
@@ -182,22 +182,18 @@ msgid "PicasaWeb Login"
 msgstr "Přihlášení na Picasa"
 
 #: ../plugins/postasa/postasa-config.xml.h:2
-#| msgid "Cancel"
 msgid "_Cancel"
 msgstr "_Zrušit"
 
 #: ../plugins/postasa/postasa-config.xml.h:3
-#| msgid "Login"
 msgid "_Login"
 msgstr "Přih_lásit se"
 
 #: ../plugins/postasa/postasa-config.xml.h:4
-#| msgid "Password"
 msgid "_Password:"
 msgstr "_Heslo:"
 
 #: ../plugins/postasa/postasa-config.xml.h:5
-#| msgid "Username"
 msgid "_Username:"
 msgstr "_Uživatelské jméno:"
 
@@ -210,6 +206,18 @@ msgid "Cancel Selected"
 msgstr "Zvoleno zrušení"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "File"
+msgstr "Soubor"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Size"
+msgstr "Velikost"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Status"
+msgstr "Stav"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Uploads:"
 msgstr "Odesílání:"
 
