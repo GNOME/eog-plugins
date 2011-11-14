@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-07-11 20:36+0000\n"
-"PO-Revision-Date: 2011-07-13 10:51+0200\n"
+"POT-Creation-Date: 2011-11-09 22:06+0000\n"
+"PO-Revision-Date: 2011-11-14 10:44+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -103,19 +103,19 @@ msgstr "Ajustar a la anchura"
 msgid "Zoom to fit image width"
 msgstr "Ampliar para ajustar a la anchura de la imagen"
 
-#: ../plugins/map/eog-map-plugin.c:363
+#: ../plugins/map/eog-map-plugin.c:396
 msgid "Jump to current image's location"
 msgstr "Saltar a la ubicación de la imagen actual"
 
-#: ../plugins/map/eog-map-plugin.c:375
+#: ../plugins/map/eog-map-plugin.c:408
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: ../plugins/map/eog-map-plugin.c:383
+#: ../plugins/map/eog-map-plugin.c:416
 msgid "Zoom out"
 msgstr "Reducir"
 
-#: ../plugins/map/eog-map-plugin.c:397
+#: ../plugins/map/eog-map-plugin.c:430
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Mapa"
@@ -124,54 +124,54 @@ msgstr "Mapa"
 msgid "Display the geolocation of the image on a map"
 msgstr "Mostrar la geolocalización de la imagen en un mapa"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "Cargar en PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:129
+#: ../plugins/postasa/eog-postasa-plugin.c:128
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Cargar sus imágenes en PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:324
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "Cargando…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "Cargadas"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:374
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "Cancelado"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:377
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "Falló"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:600
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "Falló el inicio de sesión. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "Inicio de sesión correcto."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "Cerrar"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:626
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:632
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "Iniciando sesión…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:677
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "Inicie sesión para continuar subiendo imágenes."
 
@@ -180,22 +180,18 @@ msgid "PicasaWeb Login"
 msgstr "Inicio de sesión en PicasaWeb"
 
 #: ../plugins/postasa/postasa-config.xml.h:2
-#| msgid "Cancel"
 msgid "_Cancel"
 msgstr "_Cancelar"
 
 #: ../plugins/postasa/postasa-config.xml.h:3
-#| msgid "Login"
 msgid "_Login"
 msgstr "_Entrada"
 
 #: ../plugins/postasa/postasa-config.xml.h:4
-#| msgid "Password"
 msgid "_Password:"
 msgstr "C_ontraseña:"
 
 #: ../plugins/postasa/postasa-config.xml.h:5
-#| msgid "Username"
 msgid "_Username:"
 msgstr "Nombre de _usuario:"
 
@@ -208,6 +204,19 @@ msgid "Cancel Selected"
 msgstr "Cancelar seleccionadas"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
+#| msgid "Failed"
+msgid "File"
+msgstr "Archivo"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Size"
+msgstr "Tamaño"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Status"
+msgstr "Estado"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Uploads:"
 msgstr "Subidas:"
 
