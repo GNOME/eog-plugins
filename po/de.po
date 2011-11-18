@@ -1,5 +1,5 @@
 # German translation of eog-plugins.
-# Mario Blättermann <mariobl@freenet.de>, 2008-2011.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2011.
 # Felix Riemann <friemann@gnome.org>, 2009.
 #
 msgid ""
@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-07-11 20:36+0000\n"
-"PO-Revision-Date: 2011-07-11 20:51+0000\n"
-"Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
+"POT-Creation-Date: 2011-11-09 22:06+0000\n"
+"PO-Revision-Date: 2011-11-18 18:03+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr " (ungültiges Unicode)"
 #: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
-msgstr "%.1f (Linse)"
+msgstr "%.1f (Objektiv)"
 
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
@@ -82,7 +82,7 @@ msgstr "<b>Belichtungskorrektur:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
-msgstr "<b>ISO-Emfindlichkeit:</b>"
+msgstr "<b>ISO-Empfindlichkeit:</b>"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
 msgid "<b>Metering:</b>"
@@ -102,19 +102,19 @@ msgstr "Breite einpassen"
 msgid "Zoom to fit image width"
 msgstr "Vergrößerung auf Bildbreite anpassen"
 
-#: ../plugins/map/eog-map-plugin.c:363
+#: ../plugins/map/eog-map-plugin.c:396
 msgid "Jump to current image's location"
 msgstr "Zum Ort des aktuellen Bildes springen"
 
-#: ../plugins/map/eog-map-plugin.c:375
+#: ../plugins/map/eog-map-plugin.c:408
 msgid "Zoom in"
 msgstr "Vergrößern"
 
-#: ../plugins/map/eog-map-plugin.c:383
+#: ../plugins/map/eog-map-plugin.c:416
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: ../plugins/map/eog-map-plugin.c:397 ../plugins/map/map.plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:430 ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Karte"
 
@@ -122,54 +122,54 @@ msgstr "Karte"
 msgid "Display the geolocation of the image on a map"
 msgstr "Die Geoposition eines Bildes in einer Karte anzeigen"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "Hochladen zu PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:129
+#: ../plugins/postasa/eog-postasa-plugin.c:128
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Hochladen Ihrer Bilder zum PicasaWeb-Bilderdienst"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:324
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "Übertragung läuft …"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "Hochgeladen"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:374
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "Abgebrochen"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:377
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "Fehlgeschlagen"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:600
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "Anmeldung fehlgeschlagen. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "Erfolgreich angemeldet."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "Schließen"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:626
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "Abbrechen"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:632
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "Anmeldung läuft …"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:677
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "Bitte melden Sie sich an, um die Übertragung fortzusetzen."
 
@@ -202,6 +202,18 @@ msgid "Cancel Selected"
 msgstr "Ausgewählte abbrechen"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "File"
+msgstr "Datei"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Size"
+msgstr "Größe"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Status"
+msgstr "Status"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Uploads:"
 msgstr "Übertragungen:"
 
