@@ -1,3 +1,20 @@
+Version 3.2.2
+-------------
+
+Plugin changes:
+
+- PicasaWeb Uploader
+ - #663494, The column titles in the postasa-uploads-view are
+            not translatable. (Jiro Matsuzawa)
+
+New and updated translations:
+
+- Sílvia Miranda [ca]
+- Marek Černocký [cs]
+- Mario Blättermann [de]
+- Daniel Mustieles [es]
+- Piotr Drąg [pl]
+
 Version 3.2.1
 -------------
 
