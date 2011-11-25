@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-07-13 08:55+0000\n"
-"PO-Revision-Date: 2011-07-14 08:50+0100\n"
+"POT-Creation-Date: 2011-11-21 21:34+0000\n"
+"PO-Revision-Date: 2011-11-25 17:28+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -106,19 +107,19 @@ msgstr "Prilagodi širini"
 msgid "Zoom to fit image width"
 msgstr "Približaj prilagojeno širini"
 
-#: ../plugins/map/eog-map-plugin.c:363
+#: ../plugins/map/eog-map-plugin.c:396
 msgid "Jump to current image's location"
 msgstr "Skoči na trenutno mesto slike"
 
-#: ../plugins/map/eog-map-plugin.c:375
+#: ../plugins/map/eog-map-plugin.c:408
 msgid "Zoom in"
 msgstr "Približaj"
 
-#: ../plugins/map/eog-map-plugin.c:383
+#: ../plugins/map/eog-map-plugin.c:416
 msgid "Zoom out"
 msgstr "Oddalji"
 
-#: ../plugins/map/eog-map-plugin.c:397
+#: ../plugins/map/eog-map-plugin.c:430
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Zemljevid"
@@ -207,6 +208,18 @@ msgid "Cancel Selected"
 msgstr "Prekliči izbrano"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "File"
+msgstr "Datoteka"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Size"
+msgstr "Velikost"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Status"
+msgstr "Stanje"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Uploads:"
 msgstr "Pošiljanje:"
 
