@@ -1,41 +1,31 @@
 # translation of eog-plugins.master.te.po to Telugu
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2011 gnome telugu contributors
+# This file is distributed under the same license as the eog-plugins package.
 #
 # Krishna Babu K <kkrothap@redhat.com>, 2009.
+# Praveen Illa <mail2ipn@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins.master.te\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2009-10-25 18:38+0000\n"
-"PO-Revision-Date: 2009-10-26 13:30+0530\n"
-"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
-"Language-Team: Telugu <en@li.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-11-09 22:06+0000\n"
+"PO-Revision-Date: 2011-12-04 11:46+0530\n"
+"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
+"Language-Team: Telugu <indlinux-telugu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
-"\n"
-"\n"
-"\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "మాప్‌నందు ప్రతిబింబముయొక్క geolocationను ప్రదర్శించుము"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
-msgid "Map"
-msgstr "మాప్"
-
-#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+#: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (చెల్లని యూనికోడ్)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (lens)"
@@ -43,14 +33,14 @@ msgstr "%.1fmm (lens)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#: ../plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
 msgid "<b>General</b>"
-msgstr "<b>సాదారణ</b>"
+msgstr "<b>సాధారణ</b>"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "<b>Histogram</b>"
@@ -58,7 +48,7 @@ msgstr "<b>హిస్టోగ్రామ్</b>"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
-msgstr "RGB హిస్టోగ్రామ్ ప్రదర్శించుము"
+msgstr "RGB హిస్టోగ్రామ్ ప్రదర్శించు"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
 msgid "Display camera settings in statusbar"
@@ -68,11 +58,11 @@ msgstr "కేమెరా అమరికలను స్థితిపట్�
 msgid "Display per-channel histogram"
 msgstr "ఒక్కో-చానల్ హిస్టోగ్రామ్ ప్రదర్శించుము"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 msgid "Displays camera settings and histogram"
 msgstr "కేమెరా అమరికలను మరియు హిస్టోగ్రామ్‌ను ప్రదర్శిస్తుంది"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "Exif ప్రదర్శన"
 
@@ -104,57 +94,180 @@ msgstr "<b>మీటరింగ్:</b>"
 msgid "<b>Zoom:</b>"
 msgstr "<b>జూమ్:</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "వెడల్పునకు అమర్చు"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
-#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
-msgstr "ప్రతిబింబము వెడల్పు అమర్చుటకు జూమ్‌చేయి"
+msgstr "బొమ్మ వెడల్పు అమర్చుటకు జూమ్‌చేయి"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
-msgid "Send by Mail"
-msgstr "మెయిల్ ద్వారా పంపుము"
+#: ../plugins/map/eog-map-plugin.c:396
+msgid "Jump to current image's location"
+msgstr "ప్రస్తుత బొమ్మ యొక్క స్థానమునకు వెళ్ళండి"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
-msgid "Send the selected images by mail"
-msgstr "ఎంపికచేసిన ప్రతిబింబములను మెయిల్ ద్వారా పంపుము"
+#: ../plugins/map/eog-map-plugin.c:408
+msgid "Zoom in"
+msgstr "జూమ్ చేయి"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
-msgid "Send By Mail"
-msgstr "మెయిల్ ద్వారా పంపుము"
+#: ../plugins/map/eog-map-plugin.c:416
+msgid "Zoom out"
+msgstr "జూమ్ చేయవద్దు"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
-msgid "Sends an image attached to a new mail"
-msgstr "కొత్త మెయిల్‌కు అనుబందించి వొక ప్రతిబింబమును పంపుతుంది"
+#: ../plugins/map/eog-map-plugin.c:430
+#: ../plugins/map/map.plugin.desktop.in.h:2
+msgid "Map"
+msgstr "మాప్"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "స్లైడ్‌షో రీతినందు ప్రతిబింబములను కలగలిపియిస్తుంది"
+#: ../plugins/map/map.plugin.desktop.in.h:1
+msgid "Display the geolocation of the image on a map"
+msgstr "మాప్‌నందు ప్రతిబింబముయొక్క geolocationను ప్రదర్శించుము"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
-msgid "Slideshow Shuffle"
-msgstr "కలగలిపిన స్లైడ్‌షో"
+#: ../plugins/postasa/eog-postasa-plugin.c:126
+#| msgid "Upload to Flickr"
+msgid "Upload to PicasaWeb"
+msgstr "పికాసావెబ్‌కు ఎక్కించండి"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "ఫ్లికర్‌కు యెక్కించునది"
+#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+#| msgid "Upload your pictures to Flickr"
+msgid "Upload your pictures to PicasaWeb"
+msgstr "మీ చిత్రాలను పికాసావెబ్‌కు ఎక్కించుము"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "మీ ఛాయాచిత్రములను ఫ్లిక్కర్‌కు యెక్కించుము"
+#: ../plugins/postasa/eog-postasa-plugin.c:323
+msgid "Uploading..."
+msgstr "ఎక్కిస్తున్నది..."
 
-#: ../plugins/postr/eog-postr-plugin.c:57
+#: ../plugins/postasa/eog-postasa-plugin.c:369
+#| msgid "Flickr Uploader"
+msgid "Uploaded"
+msgstr "ఎక్కించబడింది"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:373
+msgid "Cancelled"
+msgstr "రద్దుచేయబడింది"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:376
+msgid "Failed"
+msgstr "విఫలమైంది"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:599
+#, c-format
+msgid "Login failed. %s"
+msgstr "ప్రవేశం విఫలమైంది. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:603
+msgid "Logged in successully."
+msgstr "విజయవంతంగా లోనికి ప్రవేశించారు."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:604
+msgid "Close"
+msgstr "మూసివేయి"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:625
+msgid "Cancel"
+msgstr "రద్దుచేయి"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:631
+msgid "Logging in..."
+msgstr "ప్రవేశిస్తున్నారు..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:676
+msgid "Please log in to continue upload."
+msgstr "ఎక్కింపును కొనసాగించుటకు దయచేసి లోనికి ప్రవేశించండి."
+
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "PicasaWeb Login"
+msgstr "పికాసావెబ్ ప్రవేశం"
+
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "_Cancel"
+msgstr "రద్దుచేయి (_C)"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "_Login"
+msgstr "ప్రవేశించు (_L)"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "_Password:"
+msgstr "సంకేతపదం (_P):"
+
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "_Username:"
+msgstr "వాడుకరిపేరు (_U):"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Cancel All"
+msgstr "అన్నీ రద్దుచేయి"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "Cancel Selected"
+msgstr "ఎంపికచేసినవాటిని రద్దుచేయి"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "File"
+msgstr "ఫైల్"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Size"
+msgstr "పరిమాణం"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Status"
+msgstr "స్థితి"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
+msgid "Uploads:"
+msgstr "ఎక్కింపులు:"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+#| msgid "Flickr Uploader"
+msgid "PicasaWeb Uploader"
+msgstr "పికాసావెబ్ ఎక్కింపరి"
+
+#: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
-msgstr "ఫ్లిక్కర్‌కు యెక్కించుము"
+msgstr "ఫ్లిక్కర్‌కు ఎక్కించుము"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+#: ../plugins/postr/eog-postr-plugin.c:64
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "మీ చిత్రాలను ఫ్లిక్కర్‌కు ఎక్కించుము"
+
+#: ../plugins/postr/postr.plugin.desktop.in.h:1
+msgid "Flickr Uploader"
+msgstr "ఫ్లికర్ ఎక్కింపరి"
+
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "పైథాన్ కన్సోల్"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Eye of GNOME కొరకు పైథాన్ కన్సోలు"
 
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+msgid "Send by Mail"
+msgstr "మెయిల్ ద్వారా పంపు"
+
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
+msgid "Send the selected images by mail"
+msgstr "ఎంపికచేసిన ప్రతిబింబములను మెయిల్ ద్వారా పంపుము"
+
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "మెయిల్ ద్వారా పంపు"
+
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "కొత్త మెయిల్‌కు అనుబందించి వొక ప్రతిబింబమును పంపుతుంది"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
+msgid "Shuffles images in slideshow mode"
+msgstr "పలకప్రదర్శన రీతినందు బొమ్మలను కలగలిపి చూపిస్తుంది"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Slideshow Shuffle"
+msgstr "కలగలిపిన పలకప్రదర్శన"
