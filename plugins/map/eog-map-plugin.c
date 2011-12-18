@@ -394,7 +394,7 @@ impl_activate (EogWindowActivatable *activatable)
 
 	gtk_container_add (GTK_CONTAINER (viewport), embed);
 
-	vbox = gtk_vbox_new (FALSE, 0);
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 	bbox = gtk_toolbar_new ();
 
 	button = GTK_WIDGET (gtk_tool_button_new_from_stock (GTK_STOCK_JUMP_TO));
@@ -431,6 +431,7 @@ impl_activate (EogWindowActivatable *activatable)
 	sidebar = eog_window_get_sidebar (plugin->window);
 	plugin->viewport = vbox;
 	gtk_box_pack_start (GTK_BOX (vbox), bbox, FALSE, FALSE, 0);
+	gtk_widget_set_vexpand (viewport, TRUE);
 	gtk_container_add (GTK_CONTAINER (vbox), viewport);
 	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), _("Map"), vbox);
 	gtk_widget_show_all (vbox);
