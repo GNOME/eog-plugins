@@ -339,6 +339,11 @@ prepared_cb (EogWindow *window,
 	if (!plugin->store)
 		return;
 
+	if (plugin->win_prepared_id > 0) {
+		g_signal_handler_disconnect (window, plugin->win_prepared_id);
+		plugin->win_prepared_id = 0;
+	}
+
 	/* At this point, the collection has been filled */
 	gtk_tree_model_foreach (GTK_TREE_MODEL (plugin->store),
 				(GtkTreeModelForeachFunc) for_each_thumb,
@@ -430,10 +435,12 @@ impl_activate (EogWindowActivatable *activatable)
 	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), _("Map"), vbox);
 	gtk_widget_show_all (vbox);
 
-	g_signal_connect (G_OBJECT (plugin->window),
-			  "prepared",
-			  G_CALLBACK (prepared_cb),
-			  plugin);
+	plugin->win_prepared_id = g_signal_connect (G_OBJECT (plugin->window),
+						    "prepared",
+						    G_CALLBACK (prepared_cb),
+						    plugin);
+	/* Call the callback once in case the window is already ready */
+	prepared_cb (plugin->window, plugin);
 }
 
 static void
@@ -448,7 +455,18 @@ impl_deactivate (EogWindowActivatable *activatable)
 	eog_sidebar_remove_page (EOG_SIDEBAR (sidebar), plugin->viewport);
 
 	thumbview = eog_window_get_thumb_view (plugin->window);
-	g_signal_handler_disconnect (thumbview, plugin->selection_changed_id);
+	if (thumbview && plugin->selection_changed_id > 0) {
+		g_signal_handler_disconnect (thumbview,
+					     plugin->selection_changed_id);
+		plugin->selection_changed_id = 0;
+	}
+
+	if (plugin->window && plugin->win_prepared_id > 0) {
+		g_signal_handler_disconnect (plugin->window,
+					     plugin->win_prepared_id);
+		plugin->win_prepared_id = 0;
+	}
+
 }
 
 static void

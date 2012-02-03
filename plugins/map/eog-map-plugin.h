@@ -39,7 +39,8 @@ struct _EogMapPlugin
 	/* Window Data */
 	/* TODO: Make this a private struct! */
 	/* Handlers ids */
-	guint selection_changed_id;
+	gulong selection_changed_id;
+	gulong win_prepared_id;
 
 	GtkWidget *thumbview;
 	GtkWidget *viewport;
