@@ -264,7 +264,8 @@ then
 	PKG_CHECK_MODULES(CHAMPLAIN,
 		[ champlain-0.12 >= 0.9.0,
 		  champlain-gtk-0.12 >= 0.9.0,
-		  clutter-gtk-1.0 >= 0.90,
+		  clutter-1.0 >= 1.9.4,
+		  clutter-gtk-1.0 >= 1.1.2,
 		  libexif >= 0.6.16 ],
 		[],[have_libchamplain=no])
 	AC_SUBST(CHAMPLAIN_LIBS)
