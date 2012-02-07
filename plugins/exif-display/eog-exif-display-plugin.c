@@ -307,15 +307,6 @@ calculate_histogram (EogExifDisplayPlugin *plugin, EogImage *eog_image)
 	g_free (plugin->histogram_values_blue);
 	g_free (plugin->histogram_values_rgb);
 
-	histogram_values_red_temp = g_new0 (int, 256);
-
-	plugin->histogram_values_green = g_new0 (int, 256);
-	plugin->histogram_values_blue = g_new0 (int, 256);
-	plugin->max_of_array_sums = 0;
-
-	plugin->histogram_values_rgb = g_new0 (int, 256);
-	plugin->max_of_array_sums_rgb = 0;
-
 	image_pixbuf = eog_image_get_pixbuf (eog_image);
 	if (image_pixbuf == NULL) {
 		return FALSE;
@@ -333,6 +324,15 @@ calculate_histogram (EogExifDisplayPlugin *plugin, EogImage *eog_image)
 	height = gdk_pixbuf_get_height (image_pixbuf);
 
 	pixels = gdk_pixbuf_get_pixels (image_pixbuf);
+
+	histogram_values_red_temp = g_new0 (int, 256);
+
+	plugin->histogram_values_green = g_new0 (int, 256);
+	plugin->histogram_values_blue = g_new0 (int, 256);
+	plugin->max_of_array_sums = 0;
+
+	plugin->histogram_values_rgb = g_new0 (int, 256);
+	plugin->max_of_array_sums_rgb = 0;
 
 	for (row = 0; row < height; row++) {
 		guchar *row_cur_idx = pixels + row*rowstride;
