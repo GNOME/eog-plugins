@@ -65,9 +65,9 @@ ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
 USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
 DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
 
-PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole"
-PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole"
-PYTHON_DEFAULT_PLUGINS="slideshowshuffle pythonconsole"
+PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole fullscreenbackground"
+PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole fullscreenbackground"
+PYTHON_DEFAULT_PLUGINS="slideshowshuffle pythonconsole fullscreenbackground"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -82,7 +82,7 @@ fi
 AC_ARG_WITH([plugins],
 	    [AS_HELP_STRING([--with-plugins=LIST],
 			    [Comma-separated list specifying the plugins to build.
-			    Available: map, exif-display, fit-to-width,
+			    Available: map, exif-display, fit-to-width, fullscreenbackground,
 			    postr, postasa, pythonconsole, slideshowshuffle,
 			    as well as the aliases default,
 			    all, and really-all])],
@@ -325,6 +325,8 @@ plugins/map/Makefile
 plugins/fit-to-width/Makefile
 plugins/exif-display/Makefile
 plugins/exif-display/org.gnome.eog.plugins.exif-display.gschema.xml.in
+plugins/fullscreenbackground/Makefile
+plugins/fullscreenbackground/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
 plugins/send-by-mail/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
