@@ -17,7 +17,7 @@
 # along with this program; if not, write to the Free Software Foundation,
 # Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-from gi.repository import GObject, Gdk, Gio, Gtk, Eog, Peas, PeasGtk
+from gi.repository import GObject, Gdk, Gio, Gtk, Eog, PeasGtk
 from os.path import join
 
 
