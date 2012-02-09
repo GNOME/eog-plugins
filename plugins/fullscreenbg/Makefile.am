@@ -7,7 +7,7 @@ gsettings_SCHEMAS_in_files = org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.i
 
 
 ui_DATA = preferences_dialog.ui
-uidir = $(plugindir)/fullscreenbg
+uidir = $(EOG_PLUGINS_DATA_DIR)/fullscreenbg
 
 plugin_PYTHON = \
 	fullscreenbg.py

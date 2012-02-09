@@ -46,7 +46,7 @@ PKG_CHECK_MODULES([EOG], [
 	glib-2.0 >= 2.26.0
 	gtk+-3.0 >= 2.99.3
 	libpeas-1.0 >= 0.7.4
-	eog >= 2.91.92
+	eog >= 3.3.6
 ])
 AC_SUBST(EOG_LIBS)
 AC_SUBST(EOG_CFLAGS)
