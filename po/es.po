@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-11-09 22:06+0000\n"
-"PO-Revision-Date: 2011-11-14 10:44+0100\n"
+"POT-Creation-Date: 2012-02-09 13:47+0000\n"
+"PO-Revision-Date: 2012-02-09 17:29+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,60 +39,60 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (película de 35mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>General</b>"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "<b>Histogram</b>"
 msgstr "<b>Histograma</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "Display per-channel histogram"
+msgstr "Mostrar el histograma por canal"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
 msgstr "Mostrar el histograma RGB"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "<b>General</b>"
+msgstr "<b>General</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
 msgstr "Mostrar los ajustes de la cámara en la barra de estado"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
-msgid "Display per-channel histogram"
-msgstr "Mostrar el histograma por canal"
-
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Displays camera settings and histogram"
-msgstr "Muestra los ajustes de la cámara y el histograma"
-
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "Pantalla Exif"
 
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+msgid "Displays camera settings and histogram"
+msgstr "Muestra los ajustes de la cámara y el histograma"
+
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>Apertura:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>Descripción:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Tiempo de exposición:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Polarización de la exposición:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>Velocidad ISO:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Tiempo de exposición:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Aperture:</b>"
+msgstr "<b>Apertura:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Zoom:</b>"
+msgstr "<b>Ampliación:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>Metering:</b>"
 msgstr "<b>Mediciones:</b>"
 
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Polarización de la exposición:</b>"
+
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>Ampliación:</b>"
+msgid "<b>Description:</b>"
+msgstr "<b>Descripción:</b>"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -103,24 +103,57 @@ msgstr "Ajustar a la anchura"
 msgid "Zoom to fit image width"
 msgstr "Ampliar para ajustar a la anchura de la imagen"
 
-#: ../plugins/map/eog-map-plugin.c:396
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "Fondo a pantalla completa"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "Activa el cambio de fondo en el modo a pantalla completa"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "Usar configuración de fondo personalizada"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr ""
+"Indica si el complemento debe usar una configuración global o la suya propia."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "Color de fondo en modo a pantalla completa"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"El color usado para rellenar el área de detrás de la imagen. Esta opción "
+"sólo tiene efecto si se usa un color personalizado."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Usar color personalizado:"
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Saltar a la ubicación de la imagen actual"
 
-#: ../plugins/map/eog-map-plugin.c:408
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: ../plugins/map/eog-map-plugin.c:416
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
 msgstr "Reducir"
 
-#: ../plugins/map/eog-map-plugin.c:430
-#: ../plugins/map/map.plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Mostrar la geolocalización de la imagen en un mapa"
 
@@ -188,37 +221,36 @@ msgid "_Login"
 msgstr "_Entrada"
 
 #: ../plugins/postasa/postasa-config.xml.h:4
-msgid "_Password:"
-msgstr "C_ontraseña:"
-
-#: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Username:"
 msgstr "Nombre de _usuario:"
 
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "_Password:"
+msgstr "C_ontraseña:"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "Cancelar todo"
+msgid "Uploads:"
+msgstr "Subidas:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "Cancel Selected"
-msgstr "Cancelar seleccionadas"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:3
-#| msgid "Failed"
 msgid "File"
 msgstr "Archivo"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:4
+#: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "Size"
 msgstr "Tamaño"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:5
+#: ../plugins/postasa/postasa-uploads.xml.h:4
 msgid "Status"
 msgstr "Estado"
 
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Cancel Selected"
+msgstr "Cancelar seleccionadas"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:6
-msgid "Uploads:"
-msgstr "Subidas:"
+msgid "Cancel All"
+msgstr "Cancelar todo"
 
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
@@ -262,12 +294,12 @@ msgid "Sends an image attached to a new mail"
 msgstr "Envía una imagen adjunta a un correo nuevo"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "Muestra imágenes aleatorias en el modo diapositiva"
-
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Diapositivas aleatorias"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Shuffles images in slideshow mode"
+msgstr "Muestra imágenes aleatorias en el modo diapositiva"
 
 #~ msgid "Reload Image"
 #~ msgstr "Recargar imagen"
