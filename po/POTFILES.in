@@ -4,6 +4,9 @@ plugins/exif-display/exif-display.plugin.desktop.in
 [type: gettext/glade]plugins/exif-display/exif-display.ui
 plugins/fit-to-width/eog-fit-to-width-plugin.c
 plugins/fit-to-width/fit-to-width.plugin.desktop.in
+plugins/fullscreenbg/fullscreenbg.plugin.desktop.in
+plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in
+[type: gettext/glade]plugins/fullscreenbg/preferences_dialog.ui
 plugins/map/eog-map-plugin.c
 plugins/map/map.plugin.desktop.in
 plugins/postasa/eog-postasa-plugin.c
