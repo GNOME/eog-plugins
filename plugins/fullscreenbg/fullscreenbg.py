@@ -25,7 +25,7 @@ class BackgroundChanger(GObject.Object, Eog.WindowActivatable,\
   """Class implementing custom background in fullscreen mode"""
   BASE_KEY = 'org.gnome.eog.plugins.fullscreenbg'
   window = GObject.property(type=Eog.Window)
-  preferneces_dialog_created = False
+  preferences_dialog_created = False
 
   def __init__(self):
     GObject.Object.__init__(self)
@@ -52,7 +52,7 @@ class BackgroundChanger(GObject.Object, Eog.WindowActivatable,\
 
   def do_create_configure_widget(self):
     # Create preference dialog
-    if not self.preferneces_dialog_created:
+    if not self.preferences_dialog_created:
       signals = {'use_global_settings_cb': self.use_global_settings_cb,
                  'hide_colorbutton_cb': self.hide_colorbutton_cb}
       builder = Gtk.Builder()
@@ -67,7 +67,7 @@ class BackgroundChanger(GObject.Object, Eog.WindowActivatable,\
           self.settings.get_boolean('use-custom'))
       self.choose_color.set_color(\
           Gdk.Color.parse(self.settings.get_string('background-color'))[1])
-      self.preferneces_dialog_created = True
+      self.preferences_dialog_created = True
 
     return self.preferences_dialog
 
