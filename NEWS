@@ -1,3 +1,27 @@
+Version 3.3.5
+-------------
+
+New plugins:
+
+- Fullscreen Background (fullscreenbg)
+  #667979, Allows changing the image view background color in fullscreen and
+           slideshow modes (Adrian Zgorzałek).
+
+Plugin changes:
+
+- Map
+ - #643769, map plugin doesn't react to mouse events (Felix Riemann)
+ - Miscellaneous code improvements (Felix Riemann)
+
+- Exif Display
+ - Fixed possible memory leak (Felix Riemann)
+
+New and updated translations:
+
+- Jiro Matsuzawa [ja]
+- Matej Urbančič [sl]
+- Praveen Illa [te]
+
 Version 3.2.2
 -------------
 
