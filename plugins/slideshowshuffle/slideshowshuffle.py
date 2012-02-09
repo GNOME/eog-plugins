@@ -41,7 +41,7 @@ class SlideshowShufflePlugin(GObject.Object, Eog.WindowActivatable):
     def state_changed_cb(window, event, self):
         mode = self.window.get_mode()
 
-        if mode == Eog.WindowMode(3) and not self.slideshow:
+        if mode == Eog.WindowMode.SLIDESHOW and not self.slideshow:
             # Slideshow starts
             self.slideshow = True
 
@@ -62,7 +62,7 @@ class SlideshowShufflePlugin(GObject.Object, Eog.WindowActivatable):
             # Put random sort function in place
             self.window.get_store().\
                 set_default_sort_func(self.random_sort_function, self)
-        elif mode == Eog.WindowMode(1) and self.slideshow:
+        elif mode == Eog.WindowMode.NORMAL and self.slideshow:
             # Slideshow ends
             self.slideshow = False
 
