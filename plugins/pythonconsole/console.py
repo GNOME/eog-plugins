@@ -28,30 +28,54 @@ import string
 import sys
 import re
 import traceback
-from gi.repository import GObject, Gdk, Gtk, Pango
+
+from gi.repository import GObject, Gio, Gtk, Gdk, Pango
 
 __all__ = ('PythonConsole', 'OutFile')
 
 
 class PythonConsole(Gtk.ScrolledWindow):
+
+    __gsignals__ = {
+        'grab-focus' : 'override',
+    }
+
+    DEFAULT_FONT = "Monospace 11"
+
+    CONSOLE_KEY_BASE = 'org.gnome.eog.plugins.pythonconsole'
+    SETTINGS_INTERFACE_DIR = "org.gnome.desktop.interface"
+
+    CONSOLE_KEY_COMMAND_COLOR = 'command-color'
+    CONSOLE_KEY_ERROR_COLOR = 'error-color'
+
     def __init__(self, namespace = {}):
         Gtk.ScrolledWindow.__init__(self)
+
+        self._settings = Gio.Settings.new(self.CONSOLE_KEY_BASE)
+        self._settings.connect("changed", self.on_color_settings_changed)
+
+        self._interface_settings = Gio.Settings.new(self.SETTINGS_INTERFACE_DIR)
+        self._interface_settings.connect("changed", self.on_settings_changed)
+
+        self._profile_settings = self.get_profile_settings()
+        self._profile_settings.connect("changed", self.on_settings_changed)
 
         self.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         self.set_shadow_type(Gtk.ShadowType.IN)
         self.view = Gtk.TextView()
-        self.view.modify_font(Pango.FontDescription('Monospace'))
+        self.reconfigure()
         self.view.set_editable(True)
         self.view.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
         self.add(self.view)
         self.view.show()
 
-        buffer = self.view.get_buffer()
-        self.normal = buffer.create_tag("normal")
-        self.error  = buffer.create_tag("error")
-        self.error.set_property("foreground", "red")
-        self.command = buffer.create_tag("command")
-        self.command.set_property("foreground", "blue")
+        buf = self.view.get_buffer()
+        self.normal = buf.create_tag("normal")
+        self.error  = buf.create_tag("error")
+        self.command = buf.create_tag("command")
+
+        # Load the default settings
+        self.on_color_settings_changed(self._settings, None)
 
         self.__spaces_pattern = re.compile(r'^\s+')
         self.namespace = namespace
@@ -59,9 +83,9 @@ class PythonConsole(Gtk.ScrolledWindow):
         self.block_command = False
 
         # Init first line
-        buffer.create_mark("input-line", buffer.get_end_iter(), True)
-        buffer.insert(buffer.get_end_iter(), ">>> ")
-        buffer.create_mark("input", buffer.get_end_iter(), True)
+        buf.create_mark("input-line", buf.get_end_iter(), True)
+        buf.insert(buf.get_end_iter(), ">>> ")
+        buf.create_mark("input", buf.get_end_iter(), True)
 
         # Init history
         self.history = ['']
@@ -75,56 +99,104 @@ class PythonConsole(Gtk.ScrolledWindow):
 
         # Signals
         self.view.connect("key-press-event", self.__key_press_event_cb)
-        buffer.connect("mark-set", self.__mark_set_cb)
+        buf.connect("mark-set", self.__mark_set_cb)
 
+    def get_profile_settings(self):
+        #FIXME return either the gnome-terminal settings or the eog one
+        return Gio.Settings.new(self.CONSOLE_KEY_BASE)
+
+    def do_grab_focus(self):
+        self.view.grab_focus()
+
+    def reconfigure(self):
+        # Font
+        font_desc = None
+        system_font = self._interface_settings.get_string("monospace-font-name")
+
+        if self._profile_settings.get_boolean("use-system-font"):
+            font_name = system_font
+        else:
+            font_name = self._profile_settings.get_string("font")
+
+        try:
+            font_desc = Pango.FontDescription(font_name)
+        except:
+            if font_name != self.DEFAULT_FONT:
+                if font_name != system_font:
+                    try:
+                        font_desc = Pango.FontDescription(system_font)
+                    except:
+                        pass
+
+                if font_desc == None:
+                    try:
+                        font_desc = Pango.FontDescription(self.DEFAULT_FONT)
+                    except:
+                        pass
+
+        if font_desc != None:
+            self.view.modify_font(font_desc)
+
+    def on_settings_changed(self, settings, key):
+        self.reconfigure()
+
+    def on_color_settings_changed(self, settings, key):
+        self.error.set_property("foreground", settings.get_string(self.CONSOLE_KEY_ERROR_COLOR))
+        self.command.set_property("foreground", settings.get_string(self.CONSOLE_KEY_COMMAND_COLOR))
+
+    def stop(self):
+        self.namespace = None
 
     def __key_press_event_cb(self, view, event):
-        if event.keyval == Gdk.KEY_d and event.state == Gdk.ModifierType.CONTROL_MASK:
+        modifier_mask = Gtk.accelerator_get_default_mod_mask()
+        event_state = event.state & modifier_mask
+
+        if event.keyval == Gdk.KEY_D and event_state == Gdk.ModifierType.CONTROL_MASK:
             self.destroy()
 
-        elif event.keyval == Gdk.KEY_Return and event.state == Gdk.ModifierType.CONTROL_MASK:
+        elif event.keyval == Gdk.KEY_Return and event_state == Gdk.ModifierType.CONTROL_MASK:
             # Get the command
-            buffer = view.get_buffer()
-            inp_mark = buffer.get_mark("input")
-            inp = buffer.get_iter_at_mark(inp_mark)
-            cur = buffer.get_end_iter()
-            line = buffer.get_text(inp, cur, False)
+            buf = view.get_buffer()
+            inp_mark = buf.get_mark("input")
+            inp = buf.get_iter_at_mark(inp_mark)
+            cur = buf.get_end_iter()
+            line = buf.get_text(inp, cur, False)
             self.current_command = self.current_command + line + "\n"
             self.history_add(line)
 
             # Prepare the new line
-            cur = buffer.get_end_iter()
-            buffer.insert(cur, "\n... ")
-            cur = buffer.get_end_iter()
-            buffer.move_mark(inp_mark, cur)
+            cur = buf.get_end_iter()
+            buf.insert(cur, "\n... ")
+            cur = buf.get_end_iter()
+            buf.move_mark(inp_mark, cur)
 
             # Keep indentation of precendent line
             spaces = re.match(self.__spaces_pattern, line)
             if spaces is not None:
-                buffer.insert(cur, line[spaces.start() : spaces.end()])
-                cur = buffer.get_end_iter()
+                buf.insert(cur, line[spaces.start() : spaces.end()])
+                cur = buf.get_end_iter()
 
-            buffer.place_cursor(cur)
+            buf.place_cursor(cur)
             GObject.idle_add(self.scroll_to_end)
             return True
 
         elif event.keyval == Gdk.KEY_Return:
             # Get the marks
-            buffer = view.get_buffer()
-            lin_mark = buffer.get_mark("input-line")
-            inp_mark = buffer.get_mark("input")
+            buf = view.get_buffer()
+            lin_mark = buf.get_mark("input-line")
+            inp_mark = buf.get_mark("input")
 
             # Get the command line
-            inp = buffer.get_iter_at_mark(inp_mark)
-            cur = buffer.get_end_iter()
-            line = buffer.get_text(inp, cur, False)
+            inp = buf.get_iter_at_mark(inp_mark)
+            cur = buf.get_end_iter()
+            line = buf.get_text(inp, cur, False)
             self.current_command = self.current_command + line + "\n"
             self.history_add(line)
 
             # Make the line blue
-            lin = buffer.get_iter_at_mark(lin_mark)
-            buffer.apply_tag(self.command, lin, cur)
-            buffer.insert(cur, "\n")
+            lin = buf.get_iter_at_mark(lin_mark)
+            buf.apply_tag(self.command, lin, cur)
+            buf.insert(cur, "\n")
 
             cur_strip = self.current_command.rstrip()
 
@@ -143,12 +215,12 @@ class PythonConsole(Gtk.ScrolledWindow):
                 com_mark = ">>> "
 
             # Prepare the new line
-            cur = buffer.get_end_iter()
-            buffer.move_mark(lin_mark, cur)
-            buffer.insert(cur, com_mark)
-            cur = buffer.get_end_iter()
-            buffer.move_mark(inp_mark, cur)
-            buffer.place_cursor(cur)
+            cur = buf.get_end_iter()
+            buf.move_mark(lin_mark, cur)
+            buf.insert(cur, com_mark)
+            cur = buf.get_end_iter()
+            buf.move_mark(inp_mark, cur)
+            buf.place_cursor(cur)
             GObject.idle_add(self.scroll_to_end)
             return True
 
@@ -168,40 +240,78 @@ class PythonConsole(Gtk.ScrolledWindow):
 
         elif event.keyval == Gdk.KEY_KP_Left or event.keyval == Gdk.KEY_Left or \
              event.keyval == Gdk.KEY_BackSpace:
-            buffer = view.get_buffer()
-            inp = buffer.get_iter_at_mark(buffer.get_mark("input"))
-            cur = buffer.get_iter_at_mark(buffer.get_insert())
-            return inp.compare(cur) == 0
+            buf = view.get_buffer()
+            inp = buf.get_iter_at_mark(buf.get_mark("input"))
+            cur = buf.get_iter_at_mark(buf.get_insert())
+            if inp.compare(cur) == 0:
+                if not event_state:
+                    buf.place_cursor(inp)
+                return True
+            return False
 
-        elif event.keyval == Gdk.KEY_Home:
+        # For the console we enable smart/home end behavior incoditionally
+        # since it is useful when editing python
+
+        elif (event.keyval == Gdk.KEY_KP_Home or event.keyval == Gdk.KEY_Home) and \
+             event_state == event_state & (Gdk.ModifierType.SHIFT_MASK|Gdk.ModifierType.CONTROL_MASK):
             # Go to the begin of the command instead of the begin of the line
-            buffer = view.get_buffer()
-            inp = buffer.get_iter_at_mark(buffer.get_mark("input"))
-            if event.state == Gdk.ModifierType.SHIFT_MASK:
-                buffer.move_mark_by_name("insert", inp)
+            buf = view.get_buffer()
+            it = buf.get_iter_at_mark(buf.get_mark("input"))
+            ins = buf.get_iter_at_mark(buf.get_insert())
+
+            while it.get_char().isspace():
+                it.forward_char()
+
+            if it.equal(ins):
+                it = buf.get_iter_at_mark(buf.get_mark("input"))
+
+            if event_state & Gdk.ModifierType.SHIFT_MASK:
+                buf.move_mark_by_name("insert", it)
             else:
-                buffer.place_cursor(inp)
+                buf.place_cursor(it)
             return True
 
-    def __mark_set_cb(self, buffer, iter, name):
-        input = buffer.get_iter_at_mark(buffer.get_mark("input"))
-        pos   = buffer.get_iter_at_mark(buffer.get_insert())
+        elif (event.keyval == Gdk.KEY_KP_End or event.keyval == Gdk.KEY_End) and \
+             event_state == event_state & (Gdk.ModifierType.SHIFT_MASK|Gdk.ModifierType.CONTROL_MASK):
+
+            buf = view.get_buffer()
+            it = buf.get_end_iter()
+            ins = buf.get_iter_at_mark(buf.get_insert())
+
+            it.backward_char()
+
+            while it.get_char().isspace():
+                it.backward_char()
+
+            it.forward_char()
+
+            if it.equal(ins):
+                it = buf.get_end_iter()
+
+            if event_state & Gdk.ModifierType.SHIFT_MASK:
+                buf.move_mark_by_name("insert", it)
+            else:
+                buf.place_cursor(it)
+            return True
+
+    def __mark_set_cb(self, buf, it, name):
+        input = buf.get_iter_at_mark(buf.get_mark("input"))
+        pos   = buf.get_iter_at_mark(buf.get_insert())
         self.view.set_editable(pos.compare(input) != -1)
 
     def get_command_line(self):
-        buffer = self.view.get_buffer()
-        inp = buffer.get_iter_at_mark(buffer.get_mark("input"))
-        cur = buffer.get_end_iter()
-        return buffer.get_text(inp, cur, False)
+        buf = self.view.get_buffer()
+        inp = buf.get_iter_at_mark(buf.get_mark("input"))
+        cur = buf.get_end_iter()
+        return buf.get_text(inp, cur, False)
 
     def set_command_line(self, command):
-        buffer = self.view.get_buffer()
-        mark = buffer.get_mark("input")
-        inp = buffer.get_iter_at_mark(mark)
-        cur = buffer.get_end_iter()
-        buffer.delete(inp, cur)
-        buffer.insert(inp, command)
-        buffer.select_range(buffer.get_iter_at_mark(mark), buffer.get_end_iter())
+        buf = self.view.get_buffer()
+        mark = buf.get_mark("input")
+        inp = buf.get_iter_at_mark(mark)
+        cur = buf.get_end_iter()
+        buf.delete(inp, cur)
+        buf.insert(inp, command)
         self.view.grab_focus()
 
     def history_add(self, line):
@@ -223,23 +333,24 @@ class PythonConsole(Gtk.ScrolledWindow):
             self.set_command_line(self.history[self.history_pos])
 
     def scroll_to_end(self):
-        iter = self.view.get_buffer().get_end_iter()
-        self.view.scroll_to_iter(iter, 0.0, False, 0.5, 0.5)
+        i = self.view.get_buffer().get_end_iter()
+        self.view.scroll_to_iter(i, 0.0, False, 0.5, 0.5)
         return False
 
     def write(self, text, tag = None):
-        buffer = self.view.get_buffer()
+        buf = self.view.get_buffer()
         if tag is None:
-            buffer.insert(buffer.get_end_iter(), text)
+            buf.insert(buf.get_end_iter(), text)
         else:
-            buffer.insert_with_tags(buffer.get_end_iter(), text, tag)
+            buf.insert_with_tags(buf.get_end_iter(), text, tag)
+
         GObject.idle_add(self.scroll_to_end)
 
     def eval(self, command, display_command = False):
-        buffer = self.view.get_buffer()
-        lin = buffer.get_mark("input-line")
-        buffer.delete(buffer.get_iter_at_mark(lin),
-                      buffer.get_end_iter())
+        buf = self.view.get_buffer()
+        lin = buf.get_mark("input-line")
+        buf.delete(buf.get_iter_at_mark(lin),
+                   buf.get_end_iter())
 
         if isinstance(command, list) or isinstance(command, tuple):
             for c in command:
@@ -251,24 +362,29 @@ class PythonConsole(Gtk.ScrolledWindow):
                 self.write(">>> " + c + "\n", self.command)
             self.__run(command)
 
-        cur = buffer.get_end_iter()
-        buffer.move_mark_by_name("input-line", cur)
-        buffer.insert(cur, ">>> ")
-        cur = buffer.get_end_iter()
-        buffer.move_mark_by_name("input", cur)
-        self.view.scroll_to_iter(buffer.get_end_iter(), 0.0, False, 0.5, 0.5)
+        cur = buf.get_end_iter()
+        buf.move_mark_by_name("input-line", cur)
+        buf.insert(cur, ">>> ")
+        cur = buf.get_end_iter()
+        buf.move_mark_by_name("input", cur)
+        self.view.scroll_to_iter(buf.get_end_iter(), 0.0, False, 0.5, 0.5)
 
     def __run(self, command):
         sys.stdout, self.stdout = self.stdout, sys.stdout
         sys.stderr, self.stderr = self.stderr, sys.stderr
 
+        # eval and exec are broken in how they deal with utf8-encoded
+        # strings so we have to explicitly decode the command before
+        # passing it along
+        command = command.decode('utf8')
+
         try:
             try:
                 r = eval(command, self.namespace, self.namespace)
                 if r is not None:
-                    print `r`
+                    print(r)
             except SyntaxError:
-                exec command in self.namespace
+                exec(command, self.namespace)
         except:
             if hasattr(sys, 'last_type') and sys.last_type == SystemExit:
                 self.destroy()
@@ -299,6 +415,6 @@ class OutFile:
     def readlines(self):     return []
     def write(self, s):      self.console.write(s, self.tag)
     def writelines(self, l): self.console.write(l, self.tag)
-    def seek(self, a):       raise IOError, (29, 'Illegal seek')
-    def tell(self):          raise IOError, (29, 'Illegal seek')
+    def seek(self, a):       raise IOError((29, 'Illegal seek'))
+    def tell(self):          raise IOError((29, 'Illegal seek'))
     truncate = tell

@@ -25,8 +25,10 @@
 #     Copyright (C), 2005 Adam Hooper <adamh@densi.com>
 #     Copyrignt (C), 2005 Raphaël Slinckx
 
-from gi.repository import GObject, Gtk, Eog
+from gi.repository import GObject, Gtk, Eog, PeasGtk
+
 from console import PythonConsole
+from config import PythonConsoleConfigWidget
 
 ui_str = """
     <ui>
@@ -41,7 +43,7 @@ ui_str = """
     """
 
 
-class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable):
+class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable, PeasGtk.Configurable):
 
     # Override EogWindowActivatable's window property
     window = GObject.property(type=Eog.Window)
@@ -74,7 +76,7 @@ class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable):
         if not self.console_window:
             self.console_window = Gtk.Window()
             console = PythonConsole(namespace = {'__builtins__' : __builtins__,
-                                                 'eog' : Eog,
+                                                 'Eog' : Eog,
                                                  'window' : window})
             console.set_size_request(600, 400)
             console.eval('print "You can access the main window through ' \
@@ -93,3 +95,8 @@ class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable):
     def on_delete_cb(self, window, event):
         window.destroy()
         self.console_window = None
+
+    def do_create_configure_widget(self):
+        config_widget = PythonConsoleConfigWidget(self.plugin_info.get_data_dir())
+
+        return config_widget.configure_widget()

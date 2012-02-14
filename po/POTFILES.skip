@@ -1,1 +1,2 @@
 plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
+plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in

@@ -294,6 +294,19 @@ then
     fi
 fi
 
+# ***********
+# PythonConsole
+# ***********
+plugin_defined pythonconsole
+if test "$?" = 1
+then
+
+    PKG_CHECK_EXISTS([ gsettings-desktop-schemas ],
+        [],
+	undef_plugin pythonconsole "gsettings-desktop-schemas missing"
+    )
+fi
+
 
 if test -z "$disabled_plugins"
 then
@@ -332,6 +345,7 @@ plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
 plugins/postasa/Makefile
 plugins/pythonconsole/Makefile
+plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in
 po/Makefile.in])
 
 AC_OUTPUT
