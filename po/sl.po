@@ -2,14 +2,14 @@
 # Copyright (C) 2009 eog-plugins COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2011.
+# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-11-21 21:34+0000\n"
-"PO-Revision-Date: 2011-11-25 17:28+0100\n"
+"POT-Creation-Date: 2012-02-16 09:27+0000\n"
+"PO-Revision-Date: 2012-02-17 21:02+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -43,60 +43,60 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Splošno</b>"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "<b>Histogram</b>"
 msgstr "<b>Histogram:</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "Display per-channel histogram"
+msgstr "Pokaži kanalni histogram"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
 msgstr "Pokaži RGB histogram"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "<b>General</b>"
+msgstr "<b>Splošno</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
 msgstr "Pokaži nastavitve aparata v vrstici stanja"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
-msgid "Display per-channel histogram"
-msgstr "Pokaži kanalni histogram"
-
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Displays camera settings and histogram"
-msgstr "Pokaže nastavitve aparata in histogram"
-
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "Exif prikaz"
 
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+msgid "Displays camera settings and histogram"
+msgstr "Pokaže nastavitve aparata in histogram"
+
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>Zaslonka:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>Opis:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Čas osvetljevanja:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Nagnjenost osvetlitve:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>Hitrost ISO:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Čas osvetljevanja:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Aperture:</b>"
+msgstr "<b>Zaslonka:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Zoom:</b>"
+msgstr "<b>Približanje:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>Metering:</b>"
 msgstr "<b>Umerjanje:</b>"
 
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Nagnjenost osvetlitve:</b>"
+
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>Približanje:</b>"
+msgid "<b>Description:</b>"
+msgstr "<b>Opis:</b>"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -107,24 +107,52 @@ msgstr "Prilagodi širini"
 msgid "Zoom to fit image width"
 msgstr "Približaj prilagojeno širini"
 
-#: ../plugins/map/eog-map-plugin.c:396
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "Ozadje celozaslonskega načina"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "Omogoči spreminjanje ozadja v celozaslonskem načinu"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "Uporabi nastavitve ozadja po meri"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr "Ali naj vstavek samostojno uporablja splošne nastavitve."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "Barva ozadja v celozaslonskem načinu"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid "The color that is used to fill the area behind the image. This option has effect only if use-custom is enabled."
+msgstr "Barva ozadja za sliko. Možnost je v uporabi, če je omogočeno prilagajanje po meri."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Uporabi barvo po meri:"
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Skoči na trenutno mesto slike"
 
-#: ../plugins/map/eog-map-plugin.c:408
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
 msgstr "Približaj"
 
-#: ../plugins/map/eog-map-plugin.c:416
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
 msgstr "Oddalji"
 
-#: ../plugins/map/eog-map-plugin.c:430
-#: ../plugins/map/map.plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Zemljevid"
 
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Pokaži geografski položaj mesta, kjer je bila slika posneta"
 
@@ -192,36 +220,36 @@ msgid "_Login"
 msgstr "_Prijava"
 
 #: ../plugins/postasa/postasa-config.xml.h:4
-msgid "_Password:"
-msgstr "_Geslo:"
-
-#: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Username:"
 msgstr "_Uporabniško ime:"
 
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "_Password:"
+msgstr "_Geslo:"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "Prekliči vse"
+msgid "Uploads:"
+msgstr "Pošiljanje:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "Cancel Selected"
-msgstr "Prekliči izbrano"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "File"
 msgstr "Datoteka"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:4
+#: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "Size"
 msgstr "Velikost"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:5
+#: ../plugins/postasa/postasa-uploads.xml.h:4
 msgid "Status"
 msgstr "Stanje"
 
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Cancel Selected"
+msgstr "Prekliči izbrano"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:6
-msgid "Uploads:"
-msgstr "Pošiljanje:"
+msgid "Cancel All"
+msgstr "Prekliči vse"
 
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
@@ -239,6 +267,46 @@ msgstr "Prenos vaših slike na portal Flickr"
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Program za pošiljanje datotek na Flickr"
+
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "Barva pisave _ukaza:"
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "Barva pisave _napake:"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "Command Text Color"
+msgstr "Barva besedila ukazov"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "The color used for commands."
+msgstr "Barva uporabljena za besedilo ukazov"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+msgid "Error Text Color"
+msgstr "Barva besedila napak"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "The color used for errors."
+msgstr "Barva uporabljena za besedio napake."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid "Whether to use the system font"
+msgstr "Ali naj se uporabi sistemska pisava"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+msgid "If true, the terminal will use the desktop-global standard font if it's monospace (and the most similar font it can come up with otherwise)."
+msgstr "Izbrana možnost omogoča, da bo terminal uporabil običajno pisavo namizja, če ima ta enako širino črk (sicer pa bo uporabil najbolj podobno pisavo, ki jo bo našel)."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+msgid "Font used by Python Console"
+msgstr "Pisava uporabljena v konzoli Python"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Ime pisave Pango. Primera sta \"Sans 12\" ali \"Monospace Bold 14\"."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
@@ -265,10 +333,10 @@ msgid "Sends an image attached to a new mail"
 msgstr "Pošlje sliko priloženo novemu sporočilu"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "Premešaj slike med prikazovanjem predstavitve"
-
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Premešaj slike med predstavitvijo"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Shuffles images in slideshow mode"
+msgstr "Premešaj slike med prikazovanjem predstavitve"
 
