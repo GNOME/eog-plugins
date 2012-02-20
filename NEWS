@@ -1,3 +1,25 @@
+Version 3.3.90
+--------------
+
+Plugin changes:
+
+- Fullscreen Background
+ - Various code improvements (Adrian Zgorzałek, Felix Riemann)
+
+- Python Console
+ - Import latest code from gedit's Python Console plugin (Felix Riemann)
+ - Coding style improvements (Felix Riemann)
+
+- Slideshow Shuffle
+ - Code improvements (Adrian Zgorzałek)
+
+New and updated translations:
+
+- Gil Forcada [ca]
+- Adam Matoušek [cs]
+- Daniel Mustieles [es]
+- Matej Urbančič [sl]
+
 Version 3.3.5
 -------------
 
