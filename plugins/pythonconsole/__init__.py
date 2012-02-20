@@ -55,7 +55,7 @@ class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable, PeasGtk.Configu
     def __init__(self):
         GObject.Object.__init__(self)
         self.console_window = None
-        ui_id = 0
+        self.ui_id = 0
 
     def do_activate(self):
         ui_manager = self.window.get_ui_manager()
