@@ -15,6 +15,7 @@ plugins/postasa/eog-postasa-plugin.c
 plugins/postasa/postasa.plugin.desktop.in
 plugins/postr/eog-postr-plugin.c
 plugins/postr/postr.plugin.desktop.in
+plugins/pythonconsole/__init__.py
 [type: gettext/glade]plugins/pythonconsole/config.ui
 plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in
 plugins/pythonconsole/pythonconsole.plugin.desktop.in

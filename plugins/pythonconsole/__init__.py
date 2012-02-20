@@ -30,6 +30,9 @@ from gi.repository import GObject, Gtk, Eog, PeasGtk
 from console import PythonConsole
 from config import PythonConsoleConfigWidget
 
+import gettext
+_ = gettext.translation('eog-plugins', fallback=True).ugettext
+
 ui_str = """
     <ui>
         <menubar name="MainMenu">
@@ -58,7 +61,7 @@ class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable, PeasGtk.Configu
         ui_manager = self.window.get_ui_manager()
         self.action_group = Gtk.ActionGroup('PythonConsole')
         self.action_group.add_actions([('PythonConsole', None, \
-            'P_ython Console', None, None, self.console_cb)], self.window)
+            _('P_ython Console'), None, None, self.console_cb)], self.window)
         ui_manager.insert_action_group(self.action_group, 0)
         self.ui_id = ui_manager.add_ui_from_string(ui_str)
 
@@ -82,7 +85,7 @@ class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable, PeasGtk.Configu
             console.eval('print "You can access the main window through ' \
                          '\'window\' :\\n%s" % window', False)
 
-            self.console_window.set_title('Python Console')
+            self.console_window.set_title(_('Python Console'))
             self.console_window.add(console)
             self.console_window.connect('delete-event', self.on_delete_cb)
             self.console_window.show_all()
