@@ -55,16 +55,15 @@ eog_exif_display_plugin_setup_init (EogExifDisplayPluginSetup *setup)
 static GtkWidget *
 impl_create_config_widget (PeasGtkConfigurable *configurable)
 {
-	EogExifDisplayPluginSetup *setup;
 	GSettings *settings;
 	GtkBuilder *config_builder;
 	GError *error = NULL;
-	GtkWidget *display_channels_histogram_widget, *display_rgb_histogram_widget;
+	GtkWidget *display_channels_histogram_widget;
+	GtkWidget *display_rgb_histogram_widget;
 	GtkWidget *display_camera_settings_in_statusbar;
 	GObject *result;
 	gchar *object_ids[] = {"vbox1", NULL};
 
-	setup = EOG_EXIF_DISPLAY_PLUGIN_SETUP (configurable);
 	settings = g_settings_new (EOG_EXIF_DISPLAY_CONF_SCHEMA_ID);
 
 	config_builder = gtk_builder_new ();
