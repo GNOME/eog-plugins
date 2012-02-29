@@ -57,6 +57,7 @@ class BackgroundChanger(GObject.Object, Eog.WindowActivatable, \
             signals = {'use_global_settings_cb': self.use_global_settings_cb,
                        'hide_colorbutton_cb': self.hide_colorbutton_cb}
             builder = Gtk.Builder()
+            builder.set_translation_domain('eog-plugins')
             builder.add_from_file(join(self.plugin_info.get_data_dir(), \
                                        'preferences_dialog.ui'))
             builder.connect_signals(signals)
