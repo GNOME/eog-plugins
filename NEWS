@@ -1,3 +1,24 @@
+Version 3.3.91
+--------------
+
+Plugin changes:
+
+- Exif Display
+ - Drop unused variable (Felix Riemann)
+
+- Fullscreen Background
+ - Actually make use of translations in config dialog (Felix Riemann)
+
+- Python Console
+ - Actually make use of translations in config dialog (Felix Riemann)
+
+New and updated translations:
+
+- Mario Blättermann [de]
+- Daniel Mustieles [es]
+- Matej Urbančič [sl]
+- Daniel Nylander [sv]
+
 Version 3.3.90
 --------------
 
