@@ -1,13 +1,14 @@
 # eog-plugins' Portuguese translation.
 # Copyright © 2008, 2009 eog-plugins
 # This file is distributed under the same license as the eog-plugins package.
-# António Lima <amrlima@gmail.com>, 2008, 2009, 2011.
+# António Lima <amrlima@gmail.com>, 2008, 2009, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-04 02:43+0100\n"
-"PO-Revision-Date: 2011-09-02 22:30+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-02-20 18:18+0000\n"
+"PO-Revision-Date: 2012-03-01 23:19+0000\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: gnome_pt@yahoogroups.com\n"
 "Language: pt\n"
@@ -15,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.0\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
-msgstr " (Unicode Inválido)"
+msgstr " (nicode inválido)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
@@ -38,60 +39,60 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm filme)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Geral</b>"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "<b>Histogram</b>"
 msgstr "<b>Histograma</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "Display per-channel histogram"
+msgstr "Mostrar um histograma por canal"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
 msgstr "Mostrar histograma RGB"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "<b>General</b>"
+msgstr "<b>Geral</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
 msgstr "Mostrar definições da câmara na barra de estado"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
-msgid "Display per-channel histogram"
-msgstr "Mostrar um histograma por canal"
-
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
+msgid "Exif display"
+msgstr "Mostrar exif"
+
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Mostrar definições da câmara e histograma"
 
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
-msgid "Exif display"
-msgstr "Mostrar Exif"
-
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>Abertura:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>Descrição:</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Tempo de Expo.</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Desvio de Expo.</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>Velocidade ISO:</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>Tempo de Expo.</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Aperture:</b>"
+msgstr "<b>Abertura:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "<b>Zoom:</b>"
+msgstr "<b>Zoom:</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>Metering:</b>"
 msgstr "<b>Medição:</b>"
 
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>Desvio de expo.</b>"
+
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>Zoom:</b>"
+msgid "<b>Description:</b>"
+msgstr "<b>Descrição:</b>"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -102,24 +103,56 @@ msgstr "Caber à largura"
 msgid "Zoom to fit image width"
 msgstr "Zoom para caber a largura da imagem"
 
-#: ../plugins/map/eog-map-plugin.c:396
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "Fundo de Ecrã Completo"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "Permite alterar o fundo no modo de ecrã inteiro"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "Utilizar definições de fundo personalizadas"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr "Se o plug-in deve usar configurações globais ou próprias."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "Cor de fundo no modo de tela ecrã inteiro"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"A cor que é utilizada para preencher a área por trás da imagem. Esta opção "
+"tem efeito somente se a opção utilizar personalizada está activa."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Utilizar cor personalizada:"
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Ir para a localização actual da imagem"
 
-#: ../plugins/map/eog-map-plugin.c:408
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
-msgstr "Aumentar Zoom"
+msgstr "Aumentar zoom"
 
-#: ../plugins/map/eog-map-plugin.c:416
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
-msgstr "Reduzir Zoom"
+msgstr "Reduzir zoom"
 
-#: ../plugins/map/eog-map-plugin.c:430
-#: ../plugins/map/map.plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Apresentar a geolocalização da imagem num mapa"
 
@@ -172,7 +205,7 @@ msgstr "A iniciar sessão..."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
-msgstr "Por favor inicie sessão para continuar"
+msgstr "Por favor inicie sessão para continuar."
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -187,24 +220,37 @@ msgid "_Login"
 msgstr "_Iniciar Sessão"
 
 #: ../plugins/postasa/postasa-config.xml.h:4
-msgid "_Password:"
-msgstr "_Senha:"
-
-#: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Username:"
 msgstr "Nome de _Utilizador:"
 
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "_Password:"
+msgstr "_Senha:"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "Cancelar Todos"
+msgid "Uploads:"
+msgstr "Envios:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
+#| msgid "Failed"
+msgid "File"
+msgstr "Ficheiro"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Size"
+msgstr "Tamanho"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Status"
+msgstr "Estado"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
 msgid "Cancel Selected"
 msgstr "Cancelar Seleccionados"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:3
-msgid "Uploads:"
-msgstr "Envios"
+#: ../plugins/postasa/postasa-uploads.xml.h:6
+msgid "Cancel All"
+msgstr "Cancelar Todos"
 
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
@@ -223,9 +269,60 @@ msgstr "Enviar as suas fotos para o Flickr"
 msgid "Flickr Uploader"
 msgstr "Envio para o Flickr"
 
+#: ../plugins/pythonconsole/__init__.py:64
+#| msgid "Python Console"
+msgid "P_ython Console"
+msgstr "Consola P_ython"
+
+#: ../plugins/pythonconsole/__init__.py:88
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Consola Python"
+
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "Cor do c_omando:"
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "Cor de _erro:"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "Command Text Color"
+msgstr "Cor do Texto de Comando"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "The color used for commands."
+msgstr "A cor utilizada para comandos."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+msgid "Error Text Color"
+msgstr "Cor do Texto de Erro"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "The color used for errors."
+msgstr "A cor utilizada para erros."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid "Whether to use the system font"
+msgstr "Se deve utilizar a fonte de sistema"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Se verdadeiro, a consola utilizará a fonte por omissão desktop-global se "
+"esta for mono-espaçada (ou a fonte mais semelhante que encontrar)."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#| msgid "Python Console"
+msgid "Font used by Python Console"
+msgstr "Fonte utilizada pela Consola Python"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Um nome de fonte Pango. Exemplos são \"Sans 12\" ou \"Monospace Bold 14\"."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
@@ -248,12 +345,12 @@ msgid "Sends an image attached to a new mail"
 msgstr "Enviar imagens anexadas a um novo email"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "Baralha as imagens no modo de apresentação"
-
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Baralhar Apresentação"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Shuffles images in slideshow mode"
+msgstr "Baralha as imagens no modo de apresentação"
 
 #~ msgid "Reload Image"
 #~ msgstr "Reler Imagem"
