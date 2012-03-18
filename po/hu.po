@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the eog-plugins package.
 #
 # Gergely Szarka <gszarka at invitel dot hu>, 2009.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2009, 2010, 2011.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2009, 2010, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-21 16:07+0200\n"
-"PO-Revision-Date: 2011-09-21 16:08+0200\n"
+"POT-Creation-Date: 2012-03-18 03:16+0100\n"
+"PO-Revision-Date: 2012-03-18 03:12+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
-"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
+"Language-Team: Magyar <gnome-hu-list at gnome dot org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -103,19 +103,51 @@ msgstr "Szélesség illesztése"
 msgid "Zoom to fit image width"
 msgstr "Illesztés a kép szélességéhez"
 
-#: ../plugins/map/eog-map-plugin.c:396
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Enables changing background in fullscreen mode"
+msgstr "Háttér váltása teljes képernyős módban"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Fullscreen Background"
+msgstr "Teljes képernyős háttér"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Background color in fullscreen mode"
+msgstr "Háttérszín teljes képernyős módban"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"A kép mögötti terület kitöltésére használt szín. Ez a beállítás csak akkor "
+"hatásos, ha a use-custom kulcs engedélyezve van."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Use custom background settings"
+msgstr "Egyéni háttérszín-beállítások használata"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid "Whether the plugin should use global settings or its own."
+msgstr "A bővítmény a globális beállításokat használja-e vagy a sajátjait."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Egyéni szín használata:"
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Ugrás a jelenlegi kép helyére"
 
-#: ../plugins/map/eog-map-plugin.c:408
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
 msgstr "Nagyítás"
 
-#: ../plugins/map/eog-map-plugin.c:416
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
 msgstr "Kicsinyítés"
 
-#: ../plugins/map/eog-map-plugin.c:430
+#: ../plugins/map/eog-map-plugin.c:436
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Térkép"
@@ -204,6 +236,18 @@ msgid "Cancel Selected"
 msgstr "Kijelölt megszakítása"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "File"
+msgstr "Fájl"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Size"
+msgstr "Méret"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Status"
+msgstr "Állapot"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Uploads:"
 msgstr "Feltöltések:"
 
@@ -224,9 +268,58 @@ msgstr "Képek feltöltése a Flickr-re"
 msgid "Flickr Uploader"
 msgstr "Flickr feltöltő"
 
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "P_ython konzol"
+
+#: ../plugins/pythonconsole/__init__.py:88
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Python konzol"
+
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "_Parancsszín:"
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "_Hibaszín:"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Egy Pango betűkészletnév. Például: „Sans 12” vagy „Monospace Bold 14”."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "Command Text Color"
+msgstr "Parancsszöveg színe"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+msgid "Error Text Color"
+msgstr "Hibaszöveg színe"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "Font used by Python Console"
+msgstr "A Python konzol által használt betűkészlet"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Ha be van állítva, a terminál az asztal globális szabvány betűkészletét "
+"fogja használni, ha az monospace (és a hozzá leginkább hasonlót egyébként)."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+msgid "The color used for commands."
+msgstr "A parancsokhoz használt szín."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+msgid "The color used for errors."
+msgstr "A hibákhoz használt szín."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+msgid "Whether to use the system font"
+msgstr "Használja-e a rendszer betűkészletet"
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
@@ -255,4 +348,3 @@ msgstr "Képek keverése a diavetítés nézetben"
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Diavetítés véletlenszerűen"
-
