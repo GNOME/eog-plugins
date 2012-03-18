@@ -1,21 +1,21 @@
 # Italian translation og Eye of GNOME plugins.
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
-# Gianvito Cavasoli <gianvito@gmx.it>, 2009, 2010, 2011.
+# Gianvito Cavasoli <gianvito@gmx.it>, 2009, 2010, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-07-29 17:37+0000\n"
-"PO-Revision-Date: 2011-08-28 11:45+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-18 18:35+0100\n"
+"PO-Revision-Date: 2012-03-16 10:49+0100\n"
 "Last-Translator: Gianvito Cavasoli <gianvito@gmx.it>\n"
-"Language-Team: Italiana <tp@lists.linux.it>\n"
+"Language-Team: Italiano <tp@lists.linux.it>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -101,19 +101,51 @@ msgstr "Adatta alla larghezza"
 msgid "Zoom to fit image width"
 msgstr "Ingrandisce per adattare l'immagine alla larghezza"
 
-#: ../plugins/map/eog-map-plugin.c:396
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Enables changing background in fullscreen mode"
+msgstr "Consente la modifica dello sfondo nella modalità a schermo intero"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Fullscreen Background"
+msgstr "Sfondo a schermo intero"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Background color in fullscreen mode"
+msgstr "Colore sfondo nella modalità schermo intero"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"Il colore che è usato per riempire l'area dietro l'immagine. Questa opzione "
+"ha effetto solo se «use-custom» è abilitato."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Use custom background settings"
+msgstr "Usa impostazioni sfondo personalizzate"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid "Whether the plugin should use global settings or its own."
+msgstr "Indica se il plugin deve usare le impostazioni globali o le proprie."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Usa colore personalizzato:"
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Va all'attuale posizione dell'immagine"
 
-#: ../plugins/map/eog-map-plugin.c:408
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
 msgstr "Aumenta l'ingrandimento"
 
-#: ../plugins/map/eog-map-plugin.c:416
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
 msgstr "Diminuisce l'ingrandimento"
 
-#: ../plugins/map/eog-map-plugin.c:430
+#: ../plugins/map/eog-map-plugin.c:436
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Map"
 msgstr "Mappa"
@@ -141,7 +173,7 @@ msgstr "Caricate"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
-msgstr "Annullate"
+msgstr "Annullato"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
@@ -195,13 +227,25 @@ msgstr "Nome _utente:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Cancel All"
-msgstr "Anulla tutte"
+msgstr "Annulla tutto"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
 msgid "Cancel Selected"
 msgstr "Annulla selezionate"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "File"
+msgstr "File"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Size"
+msgstr "Dimensione"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Status"
+msgstr "Stato"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Uploads:"
 msgstr "Caricamenti:"
 
@@ -222,9 +266,60 @@ msgstr "Carica le immagini su Flickr"
 msgid "Flickr Uploader"
 msgstr "Caricatore Flickr"
 
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "Console P_ython"
+
+#: ../plugins/pythonconsole/__init__.py:88
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Console Python"
+
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "Colore c_omando:"
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "Colore _errore:"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+"Un nome di carattere Pango. Esempi sono «Sans 12» oppure «Monospace Bold 14»."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "Command Text Color"
+msgstr "Colore testo dei comandi"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+msgid "Error Text Color"
+msgstr "Colore testo degli errori"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "Font used by Python Console"
+msgstr "Carattere usato dalla console Python"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Se abilitato, il terminale userà il carattere standard globale del desktop "
+"se è a spaziatura fissa (diversamente il carattere più simile che viene "
+"trovato)."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+msgid "The color used for commands."
+msgstr "Il colore usato per i comandi."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+msgid "The color used for errors."
+msgstr "Il colore usato per gli errori."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+msgid "Whether to use the system font"
+msgstr "Indica se usare i caratteri di sistema"
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
