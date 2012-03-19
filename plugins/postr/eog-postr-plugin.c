@@ -79,7 +79,6 @@ static void
 eog_postr_plugin_dispose (GObject *object)
 {
 	EogPostrPlugin *plugin = EOG_POSTR_PLUGIN (object);
-	GtkUIManager *manager;
 
 	eog_debug_message (DEBUG_PLUGINS, "EogPostrPlugin disposing");
 
