@@ -8,7 +8,7 @@
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 2, or (at your option)
 # any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -29,6 +29,7 @@ from gi.repository import Gio, Gtk, Gdk
 
 __all__ = ('PythonConsoleConfigWidget')
 
+
 class PythonConsoleConfigWidget(object):
 
     CONSOLE_KEY_BASE = 'org.gnome.eog.plugins.pythonconsole'
@@ -41,7 +42,7 @@ class PythonConsoleConfigWidget(object):
         self._ui_path = os.path.join(datadir, 'config.ui')
         self._settings = Gio.Settings.new(self.CONSOLE_KEY_BASE)
         self._ui = Gtk.Builder()
-        self._ui.set_translation_domain('eog-plugins');
+        self._ui.set_translation_domain('eog-plugins')
 
     def configure_widget(self):
         self._ui.add_objects_from_file(self._ui_path, ["grid"])
