@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-23 23:53+0100\n"
-"PO-Revision-Date: 2012-03-23 23:54+0100\n"
+"POT-Creation-Date: 2012-03-24 18:06+0100\n"
+"PO-Revision-Date: 2012-03-24 18:09+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl\n"
@@ -106,19 +106,52 @@ msgstr "Axustar ao ancho"
 msgid "Zoom to fit image width"
 msgstr "Facer zoom para axustar ao ancho da imaxe"
 
-#: ../plugins/map/eog-map-plugin.c:363
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "Fondo de escritorio a pantalla completa"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "Activa o cambio de fondo no modo a pantalla completa"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "Usar configuración de fondo personalizada"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr ""
+"Indica se o engadido debe usar unha configuración global ou a súa propia."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "Cor de fondo en modo a pantalla completa"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"O cor usado para encher a área de detrás da imaxe. Esta opción só ten efecto "
+"se se usa un cor personalizado."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Usar cor personalizado:"
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Saltar á localización da imaxe actual"
 
-#: ../plugins/map/eog-map-plugin.c:375
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
 msgstr "Acercar"
 
-#: ../plugins/map/eog-map-plugin.c:383
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
 msgstr "Afastar"
 
-#: ../plugins/map/eog-map-plugin.c:397
+#: ../plugins/map/eog-map-plugin.c:436
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
@@ -127,55 +160,54 @@ msgstr "Mapa"
 msgid "Display the geolocation of the image on a map"
 msgstr "Mostra a xeolocalización da imaxe nun mapa"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:124
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "Subir a PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Suba as súas fotografías a PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:320
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "Subindo..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:366
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "Subido"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "Cancelado"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "Fallado"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:581
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "Produciuse un fallo ao autenticarse. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:585
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "Autenticación correcta."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:586
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "Pechar"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:607
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:613
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "Autenticándose..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:641
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "Autentíquese para continuar a subida."
 
@@ -184,30 +216,46 @@ msgid "PicasaWeb Login"
 msgstr "Autenticación de PicasaWeb"
 
 #: ../plugins/postasa/postasa-config.xml.h:2
-msgid "Username"
-msgstr "Nome de usuario"
+msgid "_Cancel"
+msgstr "_Cancelar"
 
 #: ../plugins/postasa/postasa-config.xml.h:3
-msgid "Password"
-msgstr "Contrasinal"
+msgid "_Login"
+msgstr "_Entrada"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "_Username:"
+msgstr "Nome de _usuario:"
 
 #: ../plugins/postasa/postasa-config.xml.h:5
-msgid "Login"
-msgstr "Usuario"
+msgid "_Password:"
+msgstr "C_ontrasinal:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
 msgstr "Subidas:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "File"
+msgstr "Ficheiro"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Size"
+msgstr "Tamaño"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Status"
+msgstr "Estado"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
 msgid "Cancel Selected"
 msgstr "Cancelar o seleccionado"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:3
+#: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Cancel All"
 msgstr "Cancelar todo"
 
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Cargador para PicasaWeb"
 
@@ -224,9 +272,59 @@ msgstr "Suba as súas fotografías a Flickr"
 msgid "Flickr Uploader"
 msgstr "Cargador para Flickr"
 
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "Consola de P_ython"
+
+#: ../plugins/pythonconsole/__init__.py:88
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Consola Python"
+
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "Cor da _orde:"
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "Cor do _erro:"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "Command Text Color"
+msgstr "Cor do texto da orde"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "The color used for commands."
+msgstr "A cor usado para as ordes."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+msgid "Error Text Color"
+msgstr "Cor do texto de erro"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "The color used for errors."
+msgstr "A cor usada para os erros."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid "Whether to use the system font"
+msgstr "Indica se se debe usar a tipografía do sistema"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Se é certo, o terminal usará o tipo de letra global estándar do escritorio "
+"se esta é de ancho fixo (e o tipo de letra máis parecida a esta)."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+msgid "Font used by Python Console"
+msgstr "Tipo de letra usada pola consola de Python"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+"Un nome de tipo de letra Pango. Por exemplo «Sans 12» ou «Monospace Bold 14»."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
