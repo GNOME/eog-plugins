@@ -5,27 +5,29 @@
 # Eleanor Chen <chenyueg@gmail.com>, 2010.
 # Aron Xu <happyaron.xu@gmail.com>, 2008, 2010.
 # Yunqiang Su <wzssyqa@gmail.com>, 2010.
+# tuhaihe <wangdianjin@linuxdeepin.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&component=general\n"
-"POT-Creation-Date: 2010-02-15 18:55+0000\n"
-"PO-Revision-Date: 2010-02-19 13:41+0800\n"
-"Last-Translator: Eleanor Chen <chenyueg@gmail.com>\n"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-03-26 20:37+0000\n"
+"PO-Revision-Date: 2012-04-05 08:57+0800\n"
+"Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+#: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (无效的 Unicode)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (长)"
@@ -33,222 +35,314 @@ msgstr "%.1fmm (长)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#: ../plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm 胶片)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>常规</b>"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "<b>Histogram</b>"
 msgstr "<b>直方图</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "Display per-channel histogram"
+msgstr "显示每一个频道上的图片"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
 msgstr "显示图形的色彩模式"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "<b>General</b>"
+msgstr "<b>常规</b>"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
 msgstr "在状态栏上显示相机上的设置"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
-msgid "Display per-channel histogram"
-msgstr "显示每一个频道上的图片"
-
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
-msgid "Displays camera settings and histogram"
-msgstr "显示相机上的设置和图像"
-
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 msgid "Exif display"
 msgstr "显示EXIf"
 
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+msgid "Displays camera settings and histogram"
+msgstr "显示相机上的设置和图像"
+
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>光圈：</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>描述：</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>曝光时间：</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>曝光偏差：</b>"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "<b>ISO speed:</b>"
 msgstr "<b>ISO 速度：</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Metering:</b>"
-msgstr "<b>测光：</b>"
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "<b>Expo. Time:</b>"
+msgstr "<b>曝光时间：</b>"
 
-#: ../plugins/exif-display/exif-display.ui.h:7
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "<b>Aperture:</b>"
+msgstr "<b>光圈：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
 msgid "<b>Zoom:</b>"
 msgstr "<b>缩放：</b>"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "<b>Metering:</b>"
+msgstr "<b>测光：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "<b>Expo. bias:</b>"
+msgstr "<b>曝光偏差：</b>"
+
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "<b>Description:</b>"
+msgstr "<b>描述：</b>"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "调整宽度"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
-#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "通过缩放来协调图片的宽度"
 
-#: ../plugins/map/eog-map-plugin.c:321
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "全屏背景"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "允许在全屏模式下更换背景"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "使用自定义背景设置"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr "插件使用全局设置还是自身设置。"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "全屏模式下的背景颜色"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr "该颜色用来填充图像背后的区域。该选项只有在启用“使用自定义”时才生效。"
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "使用自定义颜色："
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "跳到当前图像的位置"
 
-#: ../plugins/map/eog-map-plugin.c:333
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
 msgstr "放大"
 
-#: ../plugins/map/eog-map-plugin.c:341
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
 msgstr "缩小"
 
-#: ../plugins/map/eog-map-plugin.c:355
-#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "地图"
 
-#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "在地图上显示图片的地理位置"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:124
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "上传到 PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
+#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "把您的图片上传到 PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:320
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "上传中..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:366
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "已上传"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "已取消"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "失败"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:520
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "登录失败。%s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:524
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "登录成功。"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:525
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "关闭"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:546
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "取消"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:552
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "正在登录..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:580
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "请登录以便继续上传。"
 
-#: ../plugins/postasa/postasa-config.xml.h:2
-msgid "Login"
-msgstr "登录"
-
-#: ../plugins/postasa/postasa-config.xml.h:3
-msgid "Password"
-msgstr "密码"
-
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
 msgstr "登录 PicasaWeb"
 
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "_Login"
+msgstr "登录(_L)"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "_Username:"
+msgstr "用户名(_U)："
+
 #: ../plugins/postasa/postasa-config.xml.h:5
-msgid "Username"
-msgstr "用户名"
+msgid "_Password:"
+msgstr "密码(_P)："
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "取消全部"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "Cancel Selected"
-msgstr "取消选中"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "Uploads:"
 msgstr "上传："
 
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "File"
+msgstr "文件"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Size"
+msgstr "尺寸"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Status"
+msgstr "状态"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Cancel Selected"
+msgstr "取消选中"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
+msgid "Cancel All"
+msgstr "取消全部"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "PicasaWeb 上传工具"
 
-#: ../plugins/postr/eog-postr-plugin.c:57
+#: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
 msgstr "上传到 Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:59
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:64
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
 msgid "Upload your pictures to Flickr"
 msgstr "把您的图片上传到 Flickr"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+#: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Flickr 上传工具"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "P_ython 控制台"
+
+#: ../plugins/pythonconsole/__init__.py:88
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Python 控制台"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "命令颜色(_O)："
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "错误颜色(_E)："
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "Command Text Color"
+msgstr "命令文本颜色"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "The color used for commands."
+msgstr "用来显示命令的颜色。"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+msgid "Error Text Color"
+msgstr "错误文本颜色"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "The color used for errors."
+msgstr "用来显示错误的颜色。"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid "Whether to use the system font"
+msgstr "是否使用系统字体"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+msgid "Font used by Python Console"
+msgstr "Python 控制台所用字体"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "一个 Pango 字体名。例如，“Sans 12”或“Monospace Bold 14”。"
+
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Python 图形控制台"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "通过邮件发送"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
 msgstr "发送选中的图片通过邮件"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
 msgstr "通过邮件发送"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "发送带有购物中心信息的图片"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "在图片显示模块编制图片"
-
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "重新编制图片"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Shuffles images in slideshow mode"
+msgstr "在图片显示模块编制图片"
