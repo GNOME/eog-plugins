@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-02-20 18:18+0000\n"
-"PO-Revision-Date: 2012-02-23 13:59+0100\n"
+"POT-Creation-Date: 2012-05-15 18:57+0000\n"
+"PO-Revision-Date: 2012-05-16 11:21+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,8 +39,9 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (película de 35mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>Histogram</b>"
-msgstr "<b>Histograma</b>"
+#| msgid "<b>Histogram</b>"
+msgid "Histogram"
+msgstr "Histograma"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Display per-channel histogram"
@@ -51,8 +52,9 @@ msgid "Display RGB histogram"
 msgstr "Mostrar el histograma RGB"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
-msgid "<b>General</b>"
-msgstr "<b>General</b>"
+#| msgid "<b>General</b>"
+msgid "General"
+msgstr "General"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
@@ -67,32 +69,39 @@ msgid "Displays camera settings and histogram"
 msgstr "Muestra los ajustes de la cámara y el histograma"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>ISO speed:</b>"
-msgstr "<b>Velocidad ISO:</b>"
+#| msgid "<b>ISO speed:</b>"
+msgid "ISO speed:"
+msgstr "Velocidad ISO:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Tiempo de exposición:</b>"
+#| msgid "<b>Expo. Time:</b>"
+msgid "Expo. Time:"
+msgstr "Tiempo de exposición:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Aperture:</b>"
-msgstr "<b>Apertura:</b>"
+#| msgid "<b>Aperture:</b>"
+msgid "Aperture:"
+msgstr "Apertura:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Zoom:</b>"
-msgstr "<b>Ampliación:</b>"
+#| msgid "Zoom in"
+msgid "Zoom:"
+msgstr "Ampliación:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>Metering:</b>"
-msgstr "<b>Mediciones:</b>"
+#| msgid "<b>Metering:</b>"
+msgid "Metering:"
+msgstr "Mediciones:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Polarización de la exposición:</b>"
+#| msgid "<b>Expo. bias:</b>"
+msgid "Expo. bias:"
+msgstr "Polarización de la exposición:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>Descripción:</b>"
+#| msgid "<b>Description:</b>"
+msgid "Description:"
+msgstr "Descripción:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -270,7 +279,6 @@ msgid "Flickr Uploader"
 msgstr "Cargador para Flickr"
 
 #: ../plugins/pythonconsole/__init__.py:64
-#| msgid "Python Console"
 msgid "P_ython Console"
 msgstr "Consola de Py_thon"
 
@@ -351,6 +359,9 @@ msgstr "Diapositivas aleatorias"
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Muestra imágenes aleatorias en el modo diapositiva"
+
+#~ msgid "<b>Zoom:</b>"
+#~ msgstr "<b>Ampliación:</b>"
 
 #~ msgid "Reload Image"
 #~ msgstr "Recargar imagen"
