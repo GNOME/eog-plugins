@@ -36,12 +36,12 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fмм (плёнка 35мм)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Общие</b>"
+msgid "General"
+msgstr "Общие"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
-msgid "<b>Histogram</b>"
-msgstr "<b>Гистограмма</b>"
+msgid "Histogram"
+msgstr "Гистограмма"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
@@ -64,32 +64,32 @@ msgid "Exif display"
 msgstr "Данные EXIF"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>Диафрагма:</b>"
+msgid "Aperture:"
+msgstr "Диафрагма:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>Описание:</b>"
+msgid "Description:"
+msgstr "Описание:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Время экспоз.:</b>"
+msgid "Expo. Time:"
+msgstr "Время экспоз.:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Компенсация экспоз.:</b>"
+msgid "Expo. bias:"
+msgstr "Компенсация экспоз.:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>ISO speed:</b>"
-msgstr "<b>Светочувст. ISO:</b>"
+msgid "ISO speed:"
+msgstr "Светочувст. ISO:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Metering:</b>"
-msgstr "<b>Измерение:</b>"
+msgid "Metering:"
+msgstr "Измерение:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>Увеличение:</b>"
+msgid "Zoom:"
+msgstr "Увеличение:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"

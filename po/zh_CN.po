@@ -41,8 +41,8 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm 胶片)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>Histogram</b>"
-msgstr "<b>直方图</b>"
+msgid "Histogram"
+msgstr "直方图"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Display per-channel histogram"
@@ -53,8 +53,8 @@ msgid "Display RGB histogram"
 msgstr "显示图形的色彩模式"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
-msgid "<b>General</b>"
-msgstr "<b>常规</b>"
+msgid "General"
+msgstr "常规"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
@@ -69,32 +69,32 @@ msgid "Displays camera settings and histogram"
 msgstr "显示相机上的设置和图像"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>ISO speed:</b>"
-msgstr "<b>ISO 速度：</b>"
+msgid "ISO speed:"
+msgstr "ISO 速度："
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>曝光时间：</b>"
+msgid "Expo. Time:"
+msgstr "曝光时间："
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Aperture:</b>"
-msgstr "<b>光圈：</b>"
+msgid "Aperture:"
+msgstr "光圈："
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Zoom:</b>"
-msgstr "<b>缩放：</b>"
+msgid "Zoom:"
+msgstr "缩放："
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>Metering:</b>"
-msgstr "<b>测光：</b>"
+msgid "Metering:"
+msgstr "测光："
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>曝光偏差：</b>"
+msgid "Expo. bias:"
+msgstr "曝光偏差："
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>描述：</b>"
+msgid "Description:"
+msgstr "描述："
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"

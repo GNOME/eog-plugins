@@ -39,8 +39,8 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm filma)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>Histogram</b>"
-msgstr "<b>Histogramma</b>"
+msgid "Histogram"
+msgstr "Histogramma"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Display per-channel histogram"
@@ -51,8 +51,8 @@ msgid "Display RGB histogram"
 msgstr "Rādīt RGB histogrammu"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
-msgid "<b>General</b>"
-msgstr "<b>Vispārējs</b>"
+msgid "General"
+msgstr "Vispārējs"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
@@ -67,32 +67,32 @@ msgid "Displays camera settings and histogram"
 msgstr "Rāda kameras iestatījumus un histogrammu"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>ISO speed:</b>"
-msgstr "<b>ISO ātrums:</b>"
+msgid "ISO speed:"
+msgstr "ISO ātrums:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Ekspozīcija:</b>"
+msgid "Expo. Time:"
+msgstr "Ekspozīcija:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Aperture:</b>"
-msgstr "<b>Diafragma:</b>"
+msgid "Aperture:"
+msgstr "Diafragma:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Zoom:</b>"
-msgstr "<b>Palielinājums:</b>"
+msgid "Zoom:"
+msgstr "Palielinājums:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>Metering:</b>"
-msgstr "<b>Mērīšana:</b>"
+msgid "Metering:"
+msgstr "Mērīšana:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Ekspozīcijas nobīde:</b>"
+msgid "Expo. bias:"
+msgstr "Ekspozīcijas nobīde:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>Apraksts:</b>"
+msgid "Description:"
+msgstr "Apraksts:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"

@@ -38,8 +38,8 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm フィルム)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>Histogram</b>"
-msgstr "<b>ヒストグラム</b>"
+msgid "Histogram"
+msgstr "ヒストグラム"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Display per-channel histogram"
@@ -50,8 +50,8 @@ msgid "Display RGB histogram"
 msgstr "RGB のヒストグラムを表示する"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
-msgid "<b>General</b>"
-msgstr "<b>全般</b>"
+msgid "General"
+msgstr "全般"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
@@ -68,32 +68,32 @@ msgid "Displays camera settings and histogram"
 msgstr "カメラの設定と画像のヒストグラムを表示します"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>ISO speed:</b>"
-msgstr "<b>ISO 値:</b>"
+msgid "ISO speed:"
+msgstr "ISO 値:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>露出時間:</b>"
+msgid "Expo. Time:"
+msgstr "露出時間:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Aperture:</b>"
-msgstr "<b>レンズ径:</b>"
+msgid "Aperture:"
+msgstr "レンズ径:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Zoom:</b>"
-msgstr "<b>ズーム:</b>"
+msgid "Zoom:"
+msgstr "ズーム:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>Metering:</b>"
-msgstr "<b>測光方式:</b>"
+msgid "Metering:"
+msgstr "測光方式:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>露出補正値:</b>"
+msgid "Expo. bias:"
+msgstr "露出補正値:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>説明:</b>"
+msgid "Description:"
+msgstr "説明:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"

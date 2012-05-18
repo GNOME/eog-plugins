@@ -38,12 +38,12 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm ਫਿਲਮ)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>ਆਮ</b>"
+msgid "General"
+msgstr "ਆਮ"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
-msgid "<b>Histogram</b>"
-msgstr "<b>ਹਿਸਟੋਗਰਾਮ</b>"
+msgid "Histogram"
+msgstr "ਹਿਸਟੋਗਰਾਮ"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
@@ -66,32 +66,32 @@ msgid "Exif display"
 msgstr "Exif ਵੇਖੋ"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>ਅਪਰਚਰ:</b>"
+msgid "Aperture:"
+msgstr "ਅਪਰਚਰ:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>ਵੇਰਵਾ:</b>"
+msgid "Description:"
+msgstr "ਵੇਰਵਾ:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>ਐਕਸਪੋਜ਼ਰ ਟਾਈਮ:</b>"
+msgid "Expo. Time:"
+msgstr "ਐਕਸਪੋਜ਼ਰ ਟਾਈਮ:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>ਐਕਸਪੋਜ਼ਰ bias:</b>"
+msgid "Expo. bias:"
+msgstr "ਐਕਸਪੋਜ਼ਰ bias:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>ISO speed:</b>"
-msgstr "<b>ISO ਸਪੀਡ:</b>"
+msgid "ISO speed:"
+msgstr "ISO ਸਪੀਡ:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Metering:</b>"
-msgstr "<b>ਮੀਟੀਰਿੰਗ:</b>"
+msgid "Metering:"
+msgstr "ਮੀਟੀਰਿੰਗ:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>ਜ਼ੂਮ:</b>"
+msgid "Zoom:"
+msgstr "ਜ਼ੂਮ:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"

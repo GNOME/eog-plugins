@@ -41,8 +41,8 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (film 35mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>Histogram</b>"
-msgstr "<b>Histogram</b>"
+msgid "Histogram"
+msgstr "Histogram"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Display per-channel histogram"
@@ -53,8 +53,8 @@ msgid "Display RGB histogram"
 msgstr "Wyświetlanie histogramu RGB"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
-msgid "<b>General</b>"
-msgstr "<b>Ogólne</b>"
+msgid "General"
+msgstr "Ogólne"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
@@ -69,32 +69,32 @@ msgid "Displays camera settings and histogram"
 msgstr "Wyświetlanie ustawień aparatu i histogram"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>ISO speed:</b>"
-msgstr "<b>Prędkość ISO:</b>"
+msgid "ISO speed:"
+msgstr "Prędkość ISO:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Czas naświetlania:</b>"
+msgid "Expo. Time:"
+msgstr "Czas naświetlania:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Aperture:</b>"
-msgstr "<b>Przysłona:</b>"
+msgid "Aperture:"
+msgstr "Przysłona:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Zoom:</b>"
-msgstr "<b>Przybliżenie:</b>"
+msgid "Zoom:"
+msgstr "Przybliżenie:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>Metering:</b>"
-msgstr "<b>Tryb pomiaru:</b>"
+msgid "Metering:"
+msgstr "Tryb pomiaru:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Odchylenie naświetlania:</b>"
+msgid "Expo. bias:"
+msgstr "Odchylenie naświetlania:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>Opis:</b>"
+msgid "Description:"
+msgstr "Opis:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"

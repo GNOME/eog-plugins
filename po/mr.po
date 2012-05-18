@@ -45,12 +45,12 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>सर्वसाधारण</b>"
+msgid "General"
+msgstr "सर्वसाधारण"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
-msgid "<b>Histogram</b>"
-msgstr "<b>हिस्टोग्राम</b>"
+msgid "Histogram"
+msgstr "हिस्टोग्राम"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 #| msgid "Displays camera settings and histogram"
@@ -76,28 +76,28 @@ msgid "Exif display"
 msgstr "Exif दृष्य"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>एपर्चर:</b>"
+msgid "Aperture:"
+msgstr "एपर्चर:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Expo. वेळ:</b>"
+msgid "Expo. Time:"
+msgstr "Expo. वेळ:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Expo. बयास:</b>"
+msgid "Expo. bias:"
+msgstr "Expo. बयास:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>ISO speed:</b>"
-msgstr "<b>ISO वेग:</b>"
+msgid "ISO speed:"
+msgstr "ISO वेग:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>Metering:</b>"
-msgstr "<b>मिटरींग:</b>"
+msgid "Metering:"
+msgstr "मिटरींग:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Zoom:</b>"
-msgstr "<b>दृष्य बदल:</b>"
+msgid "Zoom:"
+msgstr "दृष्य बदल:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
 msgid "Fit to width"

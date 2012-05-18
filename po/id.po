@@ -37,12 +37,12 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (film 35mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Umum</b>"
+msgid "General"
+msgstr "Umum"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
-msgid "<b>Histogram</b>"
-msgstr "<b>Histogram</b>"
+msgid "Histogram"
+msgstr "Histogram"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
@@ -65,32 +65,32 @@ msgid "Exif display"
 msgstr "Tampilan Exif"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>Bukaan:</b>"
+msgid "Aperture:"
+msgstr "Bukaan:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>Keterangan:</b>"
+msgid "Description:"
+msgstr "Keterangan:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Waktu Pencahayaan:</b>"
+msgid "Expo. Time:"
+msgstr "Waktu Pencahayaan:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Bias Pencahayaan:</b>"
+msgid "Expo. bias:"
+msgstr "Bias Pencahayaan:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>ISO speed:</b>"
-msgstr "<b>Kecepatan ISO:</b>"
+msgid "ISO speed:"
+msgstr "Kecepatan ISO:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Metering:</b>"
-msgstr "<b>Metering:</b>"
+msgid "Metering:"
+msgstr "Metering:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>Zum:</b>"
+msgid "Zoom:"
+msgstr "Zum:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"

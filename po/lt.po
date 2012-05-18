@@ -38,12 +38,12 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm filmas)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Bendras</b>"
+msgid "General"
+msgstr "Bendras"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
-msgid "<b>Histogram</b>"
-msgstr "<b>Histograma</b>"
+msgid "Histogram"
+msgstr "Histograma"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
@@ -66,32 +66,32 @@ msgid "Exif display"
 msgstr "Exif vaizduoklis"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>Anga:</b>"
+msgid "Aperture:"
+msgstr "Anga:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>Aprašymas:</b>"
+msgid "Description:"
+msgstr "Aprašymas:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Rodymo laikas</b>"
+msgid "Expo. Time:"
+msgstr "Rodymo laikas"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Rodymo nuožulnumas:</b>"
+msgid "Expo. bias:"
+msgstr "Rodymo nuožulnumas:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>ISO speed:</b>"
-msgstr "<b>ISO greitis:</b>"
+msgid "ISO speed:"
+msgstr "ISO greitis:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Metering:</b>"
-msgstr "<b>Matavimas:</b>"
+msgid "Metering:"
+msgstr "Matavimas:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>Mastelis:</b>"
+msgid "Zoom:"
+msgstr "Mastelis:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"

@@ -46,12 +46,12 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (φίλμ 35mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Γενικά</b>"
+msgid "General"
+msgstr "Γενικά"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
-msgid "<b>Histogram</b>"
-msgstr "<b>Ιστόγραμμα</b>"
+msgid "Histogram"
+msgstr "Ιστόγραμμα"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
@@ -74,32 +74,32 @@ msgid "Exif display"
 msgstr "Προβολή Exif"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>Διάφραγμα:</b>"
+msgid "Aperture:"
+msgstr "Διάφραγμα:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>Περιγραφή:</b>"
+msgid "Description:"
+msgstr "Περιγραφή:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Χρόνος  έκθεσης:</b>"
+msgid "Expo. Time:"
+msgstr "Χρόνος  έκθεσης:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Expo. bias:</b>"
+msgid "Expo. bias:"
+msgstr "Expo. bias:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>ISO speed:</b>"
-msgstr "<b>Ταχύτητα ISO:</b>"
+msgid "ISO speed:"
+msgstr "Ταχύτητα ISO:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Metering:</b>"
-msgstr "<b>Μέτρηση:</b>"
+msgid "Metering:"
+msgstr "Μέτρηση:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>Ζούμ:</b>"
+msgid "Zoom:"
+msgstr "Ζούμ:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
 msgid "Fit to width"

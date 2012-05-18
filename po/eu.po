@@ -37,12 +37,12 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm filma)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "<b>General</b>"
-msgstr "<b>Orokorra</b>"
+msgid "General"
+msgstr "Orokorra"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
-msgid "<b>Histogram</b>"
-msgstr "<b>Histograma</b>"
+msgid "Histogram"
+msgstr "Histograma"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
@@ -65,32 +65,32 @@ msgid "Exif display"
 msgstr "Bistaratu Exif"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "<b>Aperture:</b>"
-msgstr "<b>Irekiera:</b>"
+msgid "Aperture:"
+msgstr "Irekiera:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-msgid "<b>Description:</b>"
-msgstr "<b>Azalpena:</b>"
+msgid "Description:"
+msgstr "Azalpena:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-msgid "<b>Expo. Time:</b>"
-msgstr "<b>Esposizio-denbora:</b>"
+msgid "Expo. Time:"
+msgstr "Esposizio-denbora:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-msgid "<b>Expo. bias:</b>"
-msgstr "<b>Esposizio-zuzenketa:</b>"
+msgid "Expo. bias:"
+msgstr "Esposizio-zuzenketa:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-msgid "<b>ISO speed:</b>"
-msgstr "<b>ISO abiadura:</b>"
+msgid "ISO speed:"
+msgstr "ISO abiadura:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-msgid "<b>Metering:</b>"
-msgstr "<b>Neurria:</b>"
+msgid "Metering:"
+msgstr "Neurria:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "<b>Zoom:</b>"
-msgstr "<b>Zooma:</b>"
+msgid "Zoom:"
+msgstr "Zooma:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
 msgid "Fit to width"
