@@ -304,8 +304,13 @@ calculate_histogram (EogExifDisplayPlugin *plugin, EogImage *eog_image)
 	plugin->histogram_values_red = NULL;
 
 	g_free (plugin->histogram_values_green);
+	plugin->histogram_values_green = NULL;
+
 	g_free (plugin->histogram_values_blue);
+	plugin->histogram_values_blue = NULL;
+
 	g_free (plugin->histogram_values_rgb);
+	plugin->histogram_values_rgb = NULL;
 
 	image_pixbuf = eog_image_get_pixbuf (eog_image);
 	if (image_pixbuf == NULL) {
