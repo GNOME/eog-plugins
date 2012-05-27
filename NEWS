@@ -1,3 +1,19 @@
+Version 3.4.1
+-------------
+
+Plugin changes:
+
+- Exif Display
+ - Remove markup from translatable UI strings (Piotr Drąg)
+ - #676735, eog crashes when quickly clicking the Back button twice
+
+New and updated translations:
+
+- Daniel Mustieles [es]
+- Alain Lojewski, Bruno Brouard [fr]
+- Rūdolfs Mazurs [lv]
+- tuhaihe [zh_CN]
+
 Version 3.4.0
 -------------
 
