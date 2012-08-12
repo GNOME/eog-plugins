@@ -61,9 +61,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
-USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
-DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa"
+ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar"
+USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar"
+DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar"
 
 PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole fullscreenbg"
 PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole fullscreenbg"
@@ -340,6 +340,7 @@ plugins/exif-display/Makefile
 plugins/exif-display/org.gnome.eog.plugins.exif-display.gschema.xml.in
 plugins/fullscreenbg/Makefile
 plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
+plugins/hide-titlebar/Makefile
 plugins/send-by-mail/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
