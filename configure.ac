@@ -46,7 +46,7 @@ PKG_CHECK_MODULES([EOG], [
 	glib-2.0 >= 2.26.0
 	gtk+-3.0 >= 2.99.3
 	libpeas-1.0 >= 0.7.4
-	eog >= 3.3.6
+	eog >= 3.5.5
 ])
 AC_SUBST(EOG_LIBS)
 AC_SUBST(EOG_CFLAGS)
@@ -61,9 +61,9 @@ EOG_HAS_PYTHON=1
 
 AC_MSG_CHECKING([which plugins to build])
 
-ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar"
-USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar"
-DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar"
+ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar light-theme"
+USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar light-theme"
+DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar light-theme"
 
 PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole fullscreenbg"
 PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole fullscreenbg"
@@ -341,6 +341,7 @@ plugins/exif-display/org.gnome.eog.plugins.exif-display.gschema.xml.in
 plugins/fullscreenbg/Makefile
 plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
 plugins/hide-titlebar/Makefile
+plugins/light-theme/Makefile
 plugins/send-by-mail/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile

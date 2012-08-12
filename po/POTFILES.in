@@ -8,6 +8,7 @@ plugins/fullscreenbg/fullscreenbg.plugin.desktop.in
 plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in
 [type: gettext/glade]plugins/fullscreenbg/preferences_dialog.ui
 plugins/hide-titlebar/hide-titlebar.plugin.desktop.in
+plugins/light-theme/light-theme.plugin.desktop.in
 plugins/map/eog-map-plugin.c
 plugins/map/map.plugin.desktop.in
 plugins/postasa/eog-postasa-plugin.c
