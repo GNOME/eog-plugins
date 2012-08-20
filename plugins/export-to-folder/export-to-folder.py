@@ -60,6 +60,7 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
 
     def do_deactivate(self):
         print 'Export plugin deactivated'
+        ui_manager = self.window.get_ui_manager().remove_ui(self.ui_id);
 
     def export_cb(self, action, window):
         # Get path to current image.
