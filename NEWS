@@ -1,3 +1,25 @@
+Version 3.5.5
+-------------
+
+New Plugins:
+
+- Hide Titlebar
+  Hides the titlebar of eog's main window if supported by the window manager.
+  The menubar will move up into the place of the titlebar. (Claudio Saavedra)
+
+- Disable dark theme
+  Disables the preference for dark theme variants and uses the default
+  theme variant instead. (Felix Riemann)
+
+- Export to Folder
+  Copies images to a predefined folder with one keypress. (Jendrick Seipp)
+
+New and updated translations:
+
+- Tom Tryfonidis [el]
+- Daniel Mustieles [es]
+- Aurimas Černius [lt]
+
 Version 3.4.1
 -------------
 
