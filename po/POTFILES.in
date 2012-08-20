@@ -2,6 +2,10 @@ plugins/exif-display/eog-exif-display-plugin.c
 [type: gettext/glade]plugins/exif-display/exif-display-config.ui
 plugins/exif-display/exif-display.plugin.desktop.in
 [type: gettext/glade]plugins/exif-display/exif-display.ui
+plugins/export-to-folder/export-to-folder.plugin.desktop.in
+plugins/export-to-folder/export-to-folder.py
+plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in
+[type: gettext/glade]plugins/export-to-folder/preferences_dialog.ui
 plugins/fit-to-width/eog-fit-to-width-plugin.c
 plugins/fit-to-width/fit-to-width.plugin.desktop.in
 plugins/fullscreenbg/fullscreenbg.plugin.desktop.in
