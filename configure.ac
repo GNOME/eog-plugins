@@ -339,6 +339,7 @@ plugins/fit-to-width/Makefile
 plugins/exif-display/Makefile
 plugins/exif-display/org.gnome.eog.plugins.exif-display.gschema.xml.in
 plugins/export-to-folder/Makefile
+plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in
 plugins/fullscreenbg/Makefile
 plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
 plugins/hide-titlebar/Makefile

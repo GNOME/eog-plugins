@@ -37,17 +37,22 @@ ui_str = """
 """
 
 EXPORT_DIR = os.path.join(os.path.expanduser('~'), 'exported-images')
-
+BASE_KEY = 'org.gnome.eog.plugins.export-to-folder'
 
 class ExportPlugin(GObject.Object, Eog.WindowActivatable):
     window = GObject.property(type=Eog.Window)
 
     def __init__(self):
         GObject.Object.__init__(self)
+        self.settings = Gio.Settings.new(BASE_KEY)
 
     @property
     def export_dir(self):
-        return EXPORT_DIR
+        target_dir = self.settings.get_string('target-folder')
+        if target_dir == "":
+            return EXPORT_DIR
+
+        return target_dir
 
     def do_activate(self):
         print 'Activating export plugin'
@@ -81,6 +86,11 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
 
 
 class ExportConfigurable(GObject.Object, PeasGtk.Configurable):
+
+    def __init__(self):
+        GObject.Object.__init__(self)
+        self.settings = Gio.Settings.new(BASE_KEY)
+
     def do_create_configure_widget(self):
         # Create preference dialog
         signals = {'current_folder_changed_cb': self.current_folder_changed_cb}
@@ -92,11 +102,12 @@ class ExportConfigurable(GObject.Object, PeasGtk.Configurable):
 
         self.export_dir_button = builder.get_object('export_dir_button')
         self.preferences_dialog = builder.get_object('preferences_box')
-        self.export_dir_button.set_current_folder(EXPORT_DIR)
+	target_dir =  self.settings.get_string('target-folder')
+	if target_dir == "":
+		target_dir = EXPORT_DIR;
+        self.export_dir_button.set_current_folder(target_dir)
 
         return self.preferences_dialog
 
     def current_folder_changed_cb(self, button):
-        global EXPORT_DIR
-        EXPORT_DIR = button.get_current_folder()
-        print 'Exporting to %s' % EXPORT_DIR
+	self.settings.set_string('target-folder', button.get_current_folder())
