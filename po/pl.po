@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-16 22:02+0100\n"
-"PO-Revision-Date: 2012-03-16 22:03+0100\n"
+"POT-Creation-Date: 2012-08-22 00:21+0200\n"
+"PO-Revision-Date: 2012-08-22 00:22+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -66,7 +66,7 @@ msgstr "Wyświetlanie danych EXIF"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
-msgstr "Wyświetlanie ustawień aparatu i histogram"
+msgstr "Wyświetla ustawienia aparatu i histogram"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -95,6 +95,35 @@ msgstr "Odchylenie naświetlania:"
 #: ../plugins/exif-display/exif-display.ui.h:7
 msgid "Description:"
 msgstr "Opis:"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "Eksport do katalogu"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Eksportuje bieżący obraz do oddzielnego katalogu"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "Wy_eksportuj"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "Katalog, do którego eksportować"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"To jest katalog, w którym wtyczka umieści wyeksportowane pliki. Wtyczka "
+"będzie eksportować do $HOME/exported-images, jeśli nie ustawiono żadnej "
+"wartości."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Katalog eksportu:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -138,6 +167,22 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Użycie własnego koloru:"
 
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "Ukrycie paska tytułowego"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Ukrywa pasek tytułowy zmaksymalizowanych okien programu Oko GNOME"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "Wyłączenie ciemnego motywu"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Wyłącza ciemny wariant motywu preferowany przez program Oko GNOME"
+
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Przejdź do położenia bieżącego obrazu"
@@ -157,7 +202,7 @@ msgstr "Mapa"
 
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
-msgstr "Wyświetlanie położenia geograficznego obrazu na mapie"
+msgstr "Wyświetla położenie geograficzne obrazu na mapie"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
@@ -329,7 +374,7 @@ msgstr ""
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
-msgstr "Konsola języka Python dla programu Eye of GNOME"
+msgstr "Konsola języka Python dla programu Oko GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
