@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-02-28 20:47+0000\n"
-"PO-Revision-Date: 2012-03-25 21:32+0200\n"
+"POT-Creation-Date: 2012-08-20 20:28+0000\n"
+"PO-Revision-Date: 2012-09-02 13:46+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
@@ -98,6 +98,35 @@ msgstr "Kompenzace expozice:"
 msgid "Description:"
 msgstr "Popis:"
 
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "Exportovat do složky"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Exportuje aktuální obrázek do zvláštní složky"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "_Exportovat"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "Složka do které se má exportovat"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Jedná se o složku, do které bude zásuvný modul umisťovat exportované "
+"soubory. Pokud není nastaveno, exportuje zásuvný modul do $HOME/exported-"
+"images."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Složka pro export:"
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Přizpůsobit šířce obrazovky"
@@ -139,6 +168,22 @@ msgstr ""
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
 msgstr "Použít vlastní barvu:"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "Skrýt lištu záhlaví"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Skryje lištu záhlaví kvůli maximalizaci okna Eye of GNOME"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "Vypnout tmavý motiv"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Vypne varianty tmavého motivu v předvolbách Eye of GNOME"
 
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
