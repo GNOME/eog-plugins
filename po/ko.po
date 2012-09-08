@@ -1,7 +1,8 @@
-# eog-plugins ko.po
+# Korean translation for the eog-plugins
 # This file is distributed under the same license as the eog-plugins package.
 #
 # Changwoo Ryu  <cwryu@debian.org>, 2011.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2012.
 #
 # 주의
 # - 카메라 관련 전문 용어가 많으므로 기존에 쓰이는 용어를 찾아서 사용한다.
@@ -10,11 +11,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eog\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-09-26 00:10+0900\n"
-"PO-Revision-Date: 2011-09-26 00:21+0900\n"
-"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Project-Id-Version: eog-plugins\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-09-02 11:49+0000\n"
+"PO-Revision-Date: 2012-09-03 01:40+0900\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: Korean\n"
 "MIME-Version: 1.0\n"
@@ -42,60 +44,88 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm 필름)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "General"
-msgstr "일반"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Histogram"
 msgstr "히스토그램"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "Display per-channel histogram"
+msgstr "채널별 히스토그램 표시"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
 msgstr "RGB 히스토그램 표시"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "General"
+msgstr "일반"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
 msgstr "카메라 설정을 상태 표시줄에 표시"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
-msgid "Display per-channel histogram"
-msgstr "채널별 히스토그램 표시"
-
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Displays camera settings and histogram"
-msgstr "카메라 설정과 히스토그램 표시"
-
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "EXIF 표시"
 
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+msgid "Displays camera settings and histogram"
+msgstr "카메라 설정과 히스토그램 표시"
+
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "Aperture:"
-msgstr "조리개:"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "Description:"
-msgstr "설명:"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "Expo. Time:"
-msgstr "노출 시간:"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "Expo. bias:"
-msgstr "노출 보정:"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "ISO speed:"
 msgstr "ISO 값:"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "Expo. Time:"
+msgstr "노출 시간:"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "Aperture:"
+msgstr "조리개:"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "Zoom:"
+msgstr "확대:"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "Metering:"
 msgstr "측광 방식:"
 
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "Expo. bias:"
+msgstr "노출 보정:"
+
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "Zoom:"
-msgstr "확대:"
+msgid "Description:"
+msgstr "설명:"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "폴더로 내보내기"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "현재 이미지를 각각의 디렉터리로 내보냅니다"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "내보내기(_E)"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "내보낼 폴더"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"플러그인이 내보낼 파일을 놓을 폴더입니다. 설정하지 않았다면 플러그인은 $HOME/"
+"exported-images로 내보낼 것입니다."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "내보낼 디렉터리:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -106,24 +136,72 @@ msgstr "너비에 맞추기"
 msgid "Zoom to fit image width"
 msgstr "그림 너비에 맞춰 확대/축소"
 
-#: ../plugins/map/eog-map-plugin.c:396
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "최대 화면 배경"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "최대 화면 모드로 배경 바꾸기를 활성화합니다"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "사용자 정의 배경 설정 사용"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr "플러그인이 전역 설정 또는 자체 설정을 사용할지 결정합니다."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "최대 화면 모드의 배경색"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"이미지 뒤 영역을 채우는데 사용할 색상입니다. 이 옵션은 사용자 정의 설정 사용"
+"을 활성화 했을때만 적용합니다."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "사용자 정의 색상:"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "제목 표시줄 숨기기"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "최대화 한 그놈의 눈 창의 제목 표시줄을 숨깁니다"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "어두운 테마 비활성화"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "그놈의 눈 기본 설정의 어두운 테마 변형을 비활성화 합니다"
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "현재 이미지의 위치로 이동"
 
-#: ../plugins/map/eog-map-plugin.c:408
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
 msgstr "확대"
 
-#: ../plugins/map/eog-map-plugin.c:416
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
 msgstr "축소"
 
-#: ../plugins/map/eog-map-plugin.c:430
-#: ../plugins/map/map.plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "지도"
 
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "지도에서 사진의 지리적 위치를 표시합니다"
 
@@ -191,24 +269,36 @@ msgid "_Login"
 msgstr "로그인(_L)"
 
 #: ../plugins/postasa/postasa-config.xml.h:4
-msgid "_Password:"
-msgstr "암호(_P):"
-
-#: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Username:"
 msgstr "사용자 이름(_U):"
 
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "_Password:"
+msgstr "암호(_P):"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "모두 취소"
+msgid "Uploads:"
+msgstr "업로드:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "File"
+msgstr "파일"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Size"
+msgstr "크기"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Status"
+msgstr "상태"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
 msgid "Cancel Selected"
 msgstr "선택 취소"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:3
-msgid "Uploads:"
-msgstr "업로드:"
+#: ../plugins/postasa/postasa-uploads.xml.h:6
+msgid "Cancel All"
+msgstr "모두 취소"
 
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
@@ -227,9 +317,60 @@ msgstr "사진을 플리커에 업로드합니다"
 msgid "Flickr Uploader"
 msgstr "플리커 업로드"
 
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "파이썬 콘솔(_Y)"
+
+#: ../plugins/pythonconsole/__init__.py:88
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "파이썬 콘솔"
+
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "명령 색상(_O):"
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "오류 색상(_E):"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "Command Text Color"
+msgstr "명령 텍스트 색상"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "The color used for commands."
+msgstr "명령에 사용할 색상입니다."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+msgid "Error Text Color"
+msgstr "오류 텍스트 색상"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "The color used for errors."
+msgstr "오류를 표시할 때 사용할 색상입니다."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid "Whether to use the system font"
+msgstr "시스템 글꼴 사용 여부"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"이를 표시하면, 고정폭 글꼴(이며 다른 경우 대부분의 유사한 글꼴이 옵니다)인 경"
+"우 터미널에서 데스크톱 전역 표준 글꼴을 사용할 것입니다."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+msgid "Font used by Python Console"
+msgstr "파이썬 콘솔에서 사용하는 글꼴"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+"팡고 글꼴 이름입니다. 예를 들자면 \"Sans 12\" 또는 \"Monospace Bold 14\" 입니"
+"다."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
@@ -252,9 +393,9 @@ msgid "Sends an image attached to a new mail"
 msgstr "그림을 메일에 첨부해서 보냅니다"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "슬라이드쇼 모드에서 임의 그림 열기"
-
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "슬라이드 쇼 임의 모드"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Shuffles images in slideshow mode"
+msgstr "슬라이드쇼 모드에서 임의 그림 열기"
