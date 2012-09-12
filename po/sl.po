@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-02-20 20:40+0000\n"
-"PO-Revision-Date: 2012-02-21 22:26+0100\n"
+"POT-Creation-Date: 2012-09-09 13:36+0000\n"
+"PO-Revision-Date: 2012-09-12 13:09+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -44,7 +44,7 @@ msgstr "%.1fmm (35mm film)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
 msgid "Histogram"
-msgstr "Histogram:"
+msgstr "Histogram"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Display per-channel histogram"
@@ -84,7 +84,7 @@ msgstr "Zaslonka:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
 msgid "Zoom:"
-msgstr "Približanje:"
+msgstr "Povečava:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
 msgid "Metering:"
@@ -97,6 +97,30 @@ msgstr "Nagnjenost osvetlitve:"
 #: ../plugins/exif-display/exif-display.ui.h:7
 msgid "Description:"
 msgstr "Opis:"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "Izvozi v mapo"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Izvozi trenutno sliko v ločeno mapo"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "_Izvozi"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "Mapa za izvoz"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid "This is the folder the plugin will place the exported files in. Plugin will export to $HOME/exported-images if not set."
+msgstr "Mapa v katero bodo izvožene datoteke. V kolikor nastavitev ni določena, bo izbrana mapa$HOME/exported-images."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Izvozi mapo:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -134,6 +158,22 @@ msgstr "Barva ozadja za sliko. Možnost je v uporabi, če je omogočeno prilagaj
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
 msgstr "Uporabi barvo po meri:"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "Skrij naslovno vrstico"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Skrije naslovno vrstico razpetega okna programa"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "Onemogoči temno temo"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Onemogoči nastavitve temne teme"
 
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
@@ -345,3 +385,5 @@ msgstr "Premešaj slike med predstavitvijo"
 msgid "Shuffles images in slideshow mode"
 msgstr "Premešaj slike med prikazovanjem predstavitve"
 
+#~ msgid "<b>Zoom:</b>"
+#~ msgstr "<b>Približanje:</b>"
