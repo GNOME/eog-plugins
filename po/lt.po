@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-05-18 13:37+0000\n"
-"PO-Revision-Date: 2012-08-05 16:26+0300\n"
+"POT-Creation-Date: 2012-08-20 20:28+0000\n"
+"PO-Revision-Date: 2012-09-14 22:58+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lithuanian <gnome-lt@lists.akl.lt>\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,6 +93,30 @@ msgstr "Rodymo nuožulnumas:"
 msgid "Description:"
 msgstr "Aprašymas:"
 
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "Eksportuoti į aplanką"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Eksportuoti dabartinį paveikslėlį į atskirą katalogą"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "_Eksportuoti"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "Aplankas, į kurį eksportuoti"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid "This is the folder the plugin will place the exported files in. Plugin will export to $HOME/exported-images if not set."
+msgstr "Tai yra aplankas, į kurį įskiepis patalpins eksportuojamus failus. Jei nenustatyta, įskiepis eksportuos į $HOME/exported-images."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Eksportavimo katalogas:"
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Sutalpinti į plotį"
@@ -128,6 +153,22 @@ msgstr "Spalva, naudojama sričiai už paveikslėlio užpildyti. Ši parinktis y
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
 msgstr "Naudoti pasirinktinę spalvą:"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "Slėpti pavadinimo juostą"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Slepia išdidintų Eye of GNOME langų pavadinimų juostas"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "Išjungti tamsią temą"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Išjungia Eye of GNOME tamsaus temos varianto pageidavimą"
 
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
@@ -206,22 +247,18 @@ msgid "PicasaWeb Login"
 msgstr "PicasaWeb prisijungimas"
 
 #: ../plugins/postasa/postasa-config.xml.h:2
-#| msgid "Cancel"
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
 #: ../plugins/postasa/postasa-config.xml.h:3
-#| msgid "Login"
 msgid "_Login"
 msgstr "_Prisijungti"
 
 #: ../plugins/postasa/postasa-config.xml.h:4
-#| msgid "Username"
 msgid "_Username:"
 msgstr "_Naudotojo vardas:"
 
 #: ../plugins/postasa/postasa-config.xml.h:5
-#| msgid "Password"
 msgid "_Password:"
 msgstr "Sla_ptažodis:"
 
@@ -230,7 +267,6 @@ msgid "Uploads:"
 msgstr "Įkeliami failai:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
-#| msgid "Failed"
 msgid "File"
 msgstr "Failas"
 
@@ -268,7 +304,6 @@ msgid "Flickr Uploader"
 msgstr "Flickr siuntiklis"
 
 #: ../plugins/pythonconsole/__init__.py:64
-#| msgid "Python Console"
 msgid "P_ython Console"
 msgstr "P_ython konsolė"
 
@@ -310,7 +345,6 @@ msgid "If true, the terminal will use the desktop-global standard font if it's m
 msgstr "Jei teigiama, terminalas naudos desktop-global standartinį šriftą, jei jis lygiaplotis (ir kiek įmanoma panašiausią priešingu atveju)."
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
-#| msgid "Python Console"
 msgid "Font used by Python Console"
 msgstr "Python konsolės naudojamas šriftas"
 
