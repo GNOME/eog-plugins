@@ -6,9 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-18 18:35+0100\n"
-"PO-Revision-Date: 2012-03-16 10:49+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-09-14 19:59+0000\n"
+"PO-Revision-Date: 2012-09-19 10:55+0200\n"
 "Last-Translator: Gianvito Cavasoli <gianvito@gmx.it>\n"
 "Language-Team: Italiano <tp@lists.linux.it>\n"
 "Language: \n"
@@ -37,60 +38,88 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (equiv. 35mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "General"
-msgstr "Generale"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Histogram"
 msgstr "Istogramma"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "Display per-channel histogram"
+msgstr "Visualizzare istogramma per canale"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
 msgstr "Visualizzare istogramma RGB"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "General"
+msgstr "Generale"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
 msgstr "Visualizzare impostazioni della fotocamera nella barra degli strumenti"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
-msgid "Display per-channel histogram"
-msgstr "Visualizzare istogramma per canale"
-
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Displays camera settings and histogram"
-msgstr "Visualizza le impostazioni della fotocamera e l'istogramma"
-
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Exif display"
 msgstr "Visualizza dati Exif"
 
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+msgid "Displays camera settings and histogram"
+msgstr "Visualizza le impostazioni della fotocamera e l'istogramma"
+
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "Aperture:"
-msgstr "Apertura:"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "Description:"
-msgstr "Descrizione:"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "Expo. Time:"
-msgstr "Tempo esposizione:"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "Expo. bias:"
-msgstr "Bias esposizione:"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "ISO speed:"
 msgstr "Velocità ISO:"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "Expo. Time:"
+msgstr "Tempo esposizione:"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "Aperture:"
+msgstr "Apertura:"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "Zoom:"
+msgstr "Ingrandimento:"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "Metering:"
 msgstr "Esposimetro:"
 
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "Expo. bias:"
+msgstr "Bias esposizione:"
+
 #: ../plugins/exif-display/exif-display.ui.h:7
-msgid "Zoom:"
-msgstr "Ingrandimento:"
+msgid "Description:"
+msgstr "Descrizione:"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "Esporta nella cartella"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Esporta l'attuale immagine in una directory separata"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "_Esporta"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "La cartella in cui esportare"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Questa è la cartella dove il plugin metterà i file esportati. Se non "
+"impostata, il plugin esporterà in $HOME/exported-images."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Directory di esportazione:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -102,18 +131,26 @@ msgid "Zoom to fit image width"
 msgstr "Ingrandisce per adattare l'immagine alla larghezza"
 
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
-msgid "Enables changing background in fullscreen mode"
-msgstr "Consente la modifica dello sfondo nella modalità a schermo intero"
-
-#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Fullscreen Background"
 msgstr "Sfondo a schermo intero"
 
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "Consente la modifica dello sfondo nella modalità a schermo intero"
+
 #: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "Usa impostazioni sfondo personalizzate"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr "Indica se il plugin deve usare le impostazioni globali o le proprie."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
 msgid "Background color in fullscreen mode"
 msgstr "Colore sfondo nella modalità schermo intero"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -121,17 +158,26 @@ msgstr ""
 "Il colore che è usato per riempire l'area dietro l'immagine. Questa opzione "
 "ha effetto solo se «use-custom» è abilitato."
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
-msgid "Use custom background settings"
-msgstr "Usa impostazioni sfondo personalizzate"
-
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
-msgid "Whether the plugin should use global settings or its own."
-msgstr "Indica se il plugin deve usare le impostazioni globali o le proprie."
-
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
 msgstr "Usa colore personalizzato:"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "Nascondi barra del titolo"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr ""
+"Nasconde la barra del titolo delle finestre massimizzate dell'applicazione"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "Disabilita tema scuro"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Disabilita la variante del tema scuro dell'applicazione"
 
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
@@ -146,11 +192,11 @@ msgid "Zoom out"
 msgstr "Diminuisce l'ingrandimento"
 
 #: ../plugins/map/eog-map-plugin.c:436
-#: ../plugins/map/map.plugin.desktop.in.h:2
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mappa"
 
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Visualizza la posizione geografica dell'immagine su una mappa"
 
@@ -218,36 +264,36 @@ msgid "_Login"
 msgstr "A_ccedi"
 
 #: ../plugins/postasa/postasa-config.xml.h:4
-msgid "_Password:"
-msgstr "Pass_word:"
-
-#: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Username:"
 msgstr "Nome _utente:"
 
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "_Password:"
+msgstr "Pass_word:"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "Annulla tutto"
+msgid "Uploads:"
+msgstr "Caricamenti:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "Cancel Selected"
-msgstr "Annulla selezionate"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "File"
 msgstr "File"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:4
+#: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "Size"
 msgstr "Dimensione"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:5
+#: ../plugins/postasa/postasa-uploads.xml.h:4
 msgid "Status"
 msgstr "Stato"
 
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Cancel Selected"
+msgstr "Annulla selezionate"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:6
-msgid "Uploads:"
-msgstr "Caricamenti:"
+msgid "Cancel All"
+msgstr "Annulla tutto"
 
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
@@ -284,23 +330,26 @@ msgid "_Error color:"
 msgstr "Colore _errore:"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr ""
-"Un nome di carattere Pango. Esempi sono «Sans 12» oppure «Monospace Bold 14»."
-
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
 msgid "Command Text Color"
 msgstr "Colore testo dei comandi"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "The color used for commands."
+msgstr "Il colore usato per i comandi."
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
 msgid "Error Text Color"
 msgstr "Colore testo degli errori"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
-msgid "Font used by Python Console"
-msgstr "Carattere usato dalla console Python"
+msgid "The color used for errors."
+msgstr "Il colore usato per gli errori."
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid "Whether to use the system font"
+msgstr "Indica se usare i caratteri di sistema"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -309,17 +358,14 @@ msgstr ""
 "se è a spaziatura fissa (diversamente il carattere più simile che viene "
 "trovato)."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
-msgid "The color used for commands."
-msgstr "Il colore usato per i comandi."
-
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
-msgid "The color used for errors."
-msgstr "Il colore usato per gli errori."
+msgid "Font used by Python Console"
+msgstr "Carattere usato dalla console Python"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
-msgid "Whether to use the system font"
-msgstr "Indica se usare i caratteri di sistema"
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+"Un nome di carattere Pango. Esempi sono «Sans 12» oppure «Monospace Bold 14»."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
@@ -342,9 +388,9 @@ msgid "Sends an image attached to a new mail"
 msgstr "Invia un'immagine allegandola a una nuova email"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "Mischia le immagini nella modalità diapositive"
-
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Slideshow Shuffle"
 msgstr "Mischia diapositive"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Shuffles images in slideshow mode"
+msgstr "Mischia le immagini nella modalità diapositive"
