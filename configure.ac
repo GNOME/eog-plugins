@@ -174,7 +174,7 @@ disabled_plugins=
 # *******************
 
 check_plugin_defined() {
-	if echo "$2" | egrep "\b($1)\b" > /dev/null;
+	if echo "$2" | grep -w "$1" > /dev/null;
 	then
 		return 1
 	else
