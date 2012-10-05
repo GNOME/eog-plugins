@@ -1,29 +1,32 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Indonesian translation of eog-plugins
+# Copyright (C) 2009 THE eog-plugins' COPYRIGHT HOLDER
+# This file is distributed under the same license as the eog-plugins package.
 # Imam Musthaqim <userindesign@gmail.com>, 2009.
+# Andika Triwidada <andika@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plugins&component=general\n"
-"POT-Creation-Date: 2010-02-15 18:55+0000\n"
-"PO-Revision-Date: 2010-04-16 12:52+0700\n"
+"Project-Id-Version: eog-plugins gnome-3-4\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-08-12 13:21+0000\n"
+"PO-Revision-Date: 2012-10-04 19:55+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Indonesian\n"
-"X-Poedit-Country: INDONESIA\n"
+"X-Generator: Poedit 1.5.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+#: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (Unicode tak valid)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (lensa)"
@@ -31,227 +34,326 @@ msgstr "%.1fmm (lensa)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#: ../plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (film 35mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "General"
-msgstr "Umum"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Histogram"
 msgstr "Histogram"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "Display per-channel histogram"
+msgstr "Tampilkan histogram per kanal"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
 msgstr "Tampilkan histogram RGB"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "General"
+msgstr "Umum"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
 msgstr "Tampilkan tatanan kamera di batang status"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
-msgid "Display per-channel histogram"
-msgstr "Tampilkan histogram per kanal"
-
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
-msgid "Displays camera settings and histogram"
-msgstr "Tampilkan tatanan kamera dan histogram"
-
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 msgid "Exif display"
 msgstr "Tampilan Exif"
 
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+msgid "Displays camera settings and histogram"
+msgstr "Tampilkan tatanan kamera dan histogram"
+
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "Aperture:"
-msgstr "Bukaan:"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "Description:"
-msgstr "Keterangan:"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "Expo. Time:"
-msgstr "Waktu Pencahayaan:"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "Expo. bias:"
-msgstr "Bias Pencahayaan:"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "ISO speed:"
 msgstr "Kecepatan ISO:"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
-msgid "Metering:"
-msgstr "Metering:"
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "Expo. Time:"
+msgstr "Waktu Pencahayaan:"
 
-#: ../plugins/exif-display/exif-display.ui.h:7
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "Aperture:"
+msgstr "Bukaan:"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
 msgid "Zoom:"
 msgstr "Zum:"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "Metering:"
+msgstr "Metering:"
+
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "Expo. bias:"
+msgstr "Bias Pencahayaan:"
+
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "Description:"
+msgstr "Keterangan:"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Pas lebar"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
-#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Zum agar pas lebar citra"
 
-#: ../plugins/map/eog-map-plugin.c:321
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "Latar Layar Penuh"
+
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "Fungsikan mengubah latar dalam mode layar penuh"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "Gunakan pengaturan latar belakang ubahan"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr ""
+"Apakah plugin mesti memakai pengaturan global atau memakai milik sendiri."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "Warna latar dalam mode layar penuh"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"Warna yang dipakai untuk memenuhi area di belakang gambar. Opsi ini hanya "
+"berefek bila use-custom difungsikan."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Gunakan warna ubahan:"
+
+#: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Lompat ke lokasi citra kini"
 
-#: ../plugins/map/eog-map-plugin.c:333
+#: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
 msgstr "Perbesar"
 
-#: ../plugins/map/eog-map-plugin.c:341
+#: ../plugins/map/eog-map-plugin.c:421
 msgid "Zoom out"
 msgstr "Perkecil"
 
-#: ../plugins/map/eog-map-plugin.c:355
-#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Peta"
 
-#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Tampilkan lokasi geografis citra pada peta"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:124
-#| msgid "Upload to Flickr"
+#: ../plugins/postasa/eog-postasa-plugin.c:126
 msgid "Upload to PicasaWeb"
 msgstr "Unggah ke PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
-#| msgid "Upload your pictures to Flickr"
+#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Unggah citra Anda ke PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:320
+#: ../plugins/postasa/eog-postasa-plugin.c:323
 msgid "Uploading..."
 msgstr "Mengunggah..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:366
-#| msgid "Flickr Uploader"
+#: ../plugins/postasa/eog-postasa-plugin.c:369
 msgid "Uploaded"
 msgstr "Diunggah"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:373
 msgid "Cancelled"
 msgstr "Dibatalkan"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:376
 msgid "Failed"
 msgstr "Gagal"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:520
+#: ../plugins/postasa/eog-postasa-plugin.c:599
 #, c-format
 msgid "Login failed. %s"
 msgstr "Log masuk gagal. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:524
+#: ../plugins/postasa/eog-postasa-plugin.c:603
 msgid "Logged in successully."
 msgstr "Sukses log masuk."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:525
+#: ../plugins/postasa/eog-postasa-plugin.c:604
 msgid "Close"
 msgstr "Tutup"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:546
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: ../plugins/postasa/eog-postasa-plugin.c:625
 msgid "Cancel"
 msgstr "Batal"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:552
+#: ../plugins/postasa/eog-postasa-plugin.c:631
 msgid "Logging in..."
 msgstr "Sedang log masuk.."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:580
+#: ../plugins/postasa/eog-postasa-plugin.c:676
 msgid "Please log in to continue upload."
 msgstr "Silakan log masuk untuk melanjutkan mengunggah."
 
-#: ../plugins/postasa/postasa-config.xml.h:2
-msgid "Login"
-msgstr "Login"
-
-#: ../plugins/postasa/postasa-config.xml.h:3
-msgid "Password"
-msgstr "Kata Sandi"
-
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
 msgstr "Login PicasaWeb"
 
+#: ../plugins/postasa/postasa-config.xml.h:2
+#| msgid "Cancel"
+msgid "_Cancel"
+msgstr "_Batal"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+#| msgid "Login"
+msgid "_Login"
+msgstr "_Log masuk"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+#| msgid "Username"
+msgid "_Username:"
+msgstr "Nama-pengg_una:"
+
 #: ../plugins/postasa/postasa-config.xml.h:5
-msgid "Username"
-msgstr "Nama Pengguna"
+#| msgid "Password"
+msgid "_Password:"
+msgstr "_Sandi:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "Batalkan Semua"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "Cancel Selected"
-msgstr "Batalkan Yang Dipilih"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "Uploads:"
 msgstr "Unggahan:"
 
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
-#| msgid "Flickr Uploader"
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "File"
+msgstr "Berkas"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Size"
+msgstr "Ukuran"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Status"
+msgstr "Status"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Cancel Selected"
+msgstr "Batalkan Yang Dipilih"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
+msgid "Cancel All"
+msgstr "Batalkan Semua"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Pengunggah Picasa"
 
-#: ../plugins/postr/eog-postr-plugin.c:57
+#: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
 msgstr "Unggah ke Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:59
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
+#: ../plugins/postr/eog-postr-plugin.c:64
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
 msgid "Upload your pictures to Flickr"
 msgstr "Unggah citra Anda ke Flickr"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+#: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Pengunggah Flickr"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+#: ../plugins/pythonconsole/__init__.py:64
+#| msgid "Python Console"
+msgid "P_ython Console"
+msgstr "Konsol P_ython"
+
+#: ../plugins/pythonconsole/__init__.py:88
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Konsol Python"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "W_arna perintah:"
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "Warna _galat:"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+msgid "Command Text Color"
+msgstr "Warna Teks Perintah"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "The color used for commands."
+msgstr "Warna yang dipakai untuk perintah."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+msgid "Error Text Color"
+msgstr "Warna Teks Galat"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "The color used for errors."
+msgstr "Warna yang dipakai untuk galat."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid "Whether to use the system font"
+msgstr "Apakah memakai fonta sistem"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Bila berisi true, terminal akan memakai fonta standar global desktop bila "
+"monospace (dan fonta paling mirip yang dapat diperoleh bila tidak)."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#| msgid "Python Console"
+msgid "Font used by Python Console"
+msgstr "Fonta yang dipakai oleh Konsol Python"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr ""
+"Suatu nama fonta Pango. Misalnya \"Sans 12\" atau \"Monospace Bold 14\"."
+
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Konsol Python untuk Mata GNOME"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "Kirim lewat Surel:"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
 msgstr "Kirim citra yang dipilih lewat surel"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
 msgstr "Kirim Lewat Surel"
 
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Kirim suatu citra yang dilampirkan pada suatu surel baru"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "Acak citra pada moda pertunjukan slide"
-
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "Acak Pertunjukan Slide"
 
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Shuffles images in slideshow mode"
+msgstr "Acak citra pada moda pertunjukan slide"
