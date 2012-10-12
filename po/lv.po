@@ -5,16 +5,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-05-15 18:57+0000\n"
-"PO-Revision-Date: 2012-05-18 17:48+0300\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-13 00:37+0300\n"
+"PO-Revision-Date: 2012-10-13 00:40+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lv\n"
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
@@ -39,7 +38,6 @@ msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm filma)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-#| msgid "<b>Histogram</b>"
 msgid "Histogram"
 msgstr "Histogramma"
 
@@ -52,7 +50,6 @@ msgid "Display RGB histogram"
 msgstr "Rādīt RGB histogrammu"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
-#| msgid "<b>General</b>"
 msgid "General"
 msgstr "Vispārīgi"
 
@@ -69,39 +66,60 @@ msgid "Displays camera settings and histogram"
 msgstr "Rāda kameras iestatījumus un histogrammu"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-#| msgid "<b>ISO speed:</b>"
 msgid "ISO speed:"
 msgstr "ISO ātrums:"
 
 #: ../plugins/exif-display/exif-display.ui.h:2
-#| msgid "<b>Expo. Time:</b>"
 msgid "Expo. Time:"
 msgstr "Ekspozīcijas laiks:"
 
 #: ../plugins/exif-display/exif-display.ui.h:3
-#| msgid "<b>Aperture:</b>"
 msgid "Aperture:"
 msgstr "Diafragma:"
 
 #: ../plugins/exif-display/exif-display.ui.h:4
-#| msgid "Zoom in"
 msgid "Zoom:"
 msgstr "Mērogs:"
 
 #: ../plugins/exif-display/exif-display.ui.h:5
-#| msgid "<b>Metering:</b>"
 msgid "Metering:"
 msgstr "Gaismas mērīšanas režīms:"
 
 #: ../plugins/exif-display/exif-display.ui.h:6
-#| msgid "<b>Expo. bias:</b>"
 msgid "Expo. bias:"
 msgstr "Ekspozīcijas nobīde:"
 
 #: ../plugins/exif-display/exif-display.ui.h:7
-#| msgid "<b>Description:</b>"
 msgid "Description:"
 msgstr "Apraksts:"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "Eksportēt uz mapi"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Eksportēt pašreizējo attēlu uz atsevišķu direktoriju"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "_Eksportēt"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "Mape, ko eksportēt"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Šī ir mājas mape, kur spraudnis liks eksportētās datnes. Spraudnis eksportēs "
+"$HOME/exported-images, ja nav iestatīts."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Eksportēt direktoriju:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -143,6 +161,22 @@ msgstr ""
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
 msgstr "Lietot pielāgotu krāsu:"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "Slēpt virsraksta joslu"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Slēpj virsraksta joslu, kad maksimizē Eye of GNOME logus"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "Deaktivēt tumšo motīvu"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Deaktivē Eye of GNOME iestatījumus tumšā motīva variantiem"
 
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
@@ -242,7 +276,7 @@ msgstr "Augšupielādes:"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:2
 msgid "File"
-msgstr "Fails"
+msgstr "Datne"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:3
 msgid "Size"
