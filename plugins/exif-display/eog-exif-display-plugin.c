@@ -44,7 +44,7 @@
 #include "eog-exif-display-plugin-setup.h"
 #include "eog-exif-display-plugin.h"
 
-#define GTKBUILDER_FILE EOG_EXIF_DISPLAY_DATA_DIR"/exif-display.ui"
+#define GRESOURCE_PATH "/org/gnome/eog/plugins/exif-display/exif-display.ui"
 
 enum {
 	PROP_O,
@@ -652,10 +652,10 @@ impl_activate (EogWindowActivatable *activatable)
 	plugin->sidebar_builder = gtk_builder_new ();
 	gtk_builder_set_translation_domain (plugin->sidebar_builder,
 					    GETTEXT_PACKAGE);
-	if (!gtk_builder_add_from_file (plugin->sidebar_builder,
-					GTKBUILDER_FILE, &error))
+	if (!gtk_builder_add_from_resource (plugin->sidebar_builder,
+					    GRESOURCE_PATH, &error))
 	{
-		g_warning ("Couldn't load builder file: %s", error->message);
+		g_warning ("Couldn't load UI resource: %s", error->message);
 		g_error_free (error);
 	}
 	plugin->gtkbuilder_widget = GTK_WIDGET (gtk_builder_get_object (plugin->sidebar_builder, "viewport1"));

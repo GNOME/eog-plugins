@@ -35,7 +35,8 @@
 
 #include "eog-exif-display-plugin-setup.h"
 
-#define GTKBUILDER_CONFIG_FILE EOG_EXIF_DISPLAY_DATA_DIR"/exif-display-config.ui"
+#define GRESOURCE_PATH "/org/gnome/eog/plugins/exif-display/exif-display-config.ui"
+
 
 static void
 peas_gtk_configurable_iface_init (PeasGtkConfigurableInterface *iface);
@@ -68,9 +69,9 @@ impl_create_config_widget (PeasGtkConfigurable *configurable)
 
 	config_builder = gtk_builder_new ();
 	gtk_builder_set_translation_domain (config_builder, GETTEXT_PACKAGE);
-	if (!gtk_builder_add_objects_from_file (config_builder, GTKBUILDER_CONFIG_FILE, object_ids, &error))
+	if (!gtk_builder_add_objects_from_resource (config_builder, GRESOURCE_PATH, object_ids, &error))
 	{
-		g_warning ("Couldn't load builder file: %s", error->message);
+		g_warning ("Couldn't load UI resource: %s", error->message);
 		g_error_free (error);
 	}
 

@@ -12,7 +12,11 @@ INCLUDES = \
 
 plugin_LTLIBRARIES = libexif-display.la
 
+BUILT_SOURCES = \
+	eog-exif-display-plugin-resources.c
+
 libexif_display_la_SOURCES = \
+	${BUILT_SOURCES}				\
 	eog-exif-display-plugin.h			\
 	eog-exif-display-plugin.c			\
 	eog-exif-display-plugin-settings.h		\
@@ -22,15 +26,16 @@ libexif_display_la_SOURCES = \
 libexif_display_la_LDFLAGS = \
 	-avoid-version -module
 
-libexif_display_la_LIBADD = $(EOG_LIBS)			\
+libexif_display_la_LIBADD = \
+	$(EOG_LIBS)		\
 	$(EXIFDISPLAY_LIBS)
+
+eog-exif-display-plugin-resources.c: eog-exif-display-plugin.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/eog-exif-display-plugin.gresource.xml)
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --internal --target=$@ --sourcedir=$(srcdir) --generate-source $(srcdir)/eog-exif-display-plugin.gresource.xml
 
 # Plugin Info
 
 plugin_in_files = exif-display.plugin.desktop.in
-
-UI_FILES = exif-display.ui exif-display-config.ui
-ui_DATA = $(UI_FILES)
 
 %.plugin: %.plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
@@ -42,11 +47,21 @@ gsettings_SCHEMAS = org.gnome.eog.plugins.exif-display.gschema.xml
 
 EXTRA_DIST = \
 	$(plugin_in_files)	\
-	$(UI_FILES)		\
+	exif-display.ui		\
+	exif-display-config.ui	\
+	eog-exif-display-plugin.gresource.xml	\
 	org.gnome.eog.plugins.exif-display.gschema.xml.in.in
 
-CLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
-DISTCLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
+CLEANFILES = \
+	${BUILT_SOURCES}	\
+	$(plugin_DATA)		\
+	$(gsettings_SCHEMAS)
+
+DISTCLEANFILES = \
+	${BUILT_SOURCES}	\
+	$(plugin_DATA)		\
+	$(gsettings_SCHEMAS)
+
 MAINTAINERCLEANFILES = $(gsettings_SCHEMAS:.xml=.valid)
 
 -include $(top_srcdir)/git.mk
