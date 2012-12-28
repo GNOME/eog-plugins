@@ -38,8 +38,9 @@
 
 #include <gdata/gdata.h>
 
-#define GTKBUILDER_CONFIG_FILE EOG_POSTASA_DATA_DIR"/postasa-config.xml"
-#define GTKBUILDER_UPLOAD_FILE EOG_POSTASA_DATA_DIR"/postasa-uploads.xml"
+#define EOG_POSTASA_RESOURCE_PREFIX "/org/gnome/eog/plugins/postasa"
+#define GTKBUILDER_CONFIG_FILE EOG_POSTASA_RESOURCE_PREFIX"/postasa-config.xml"
+#define GTKBUILDER_UPLOAD_FILE EOG_POSTASA_RESOURCE_PREFIX"/postasa-uploads.xml"
 
 enum {
 	PROP_O,
@@ -197,7 +198,8 @@ uploads_get_dialog (EogPostasaPlugin *plugin)
 	if (plugin->priv->uploads_window == NULL) {
 		builder = gtk_builder_new ();
 		gtk_builder_set_translation_domain (builder, GETTEXT_PACKAGE);
-		gtk_builder_add_from_file (builder, GTKBUILDER_UPLOAD_FILE, &error);
+		gtk_builder_add_from_resource (builder, GTKBUILDER_UPLOAD_FILE,
+		                               &error);
 		if (error != NULL) {
 			g_warning ("Couldn't load Postasa uploads UI file:%d:%s", error->code, error->message);
 			g_error_free (error);
@@ -748,7 +750,8 @@ login_get_dialog (EogPostasaPlugin *plugin)
 	if (plugin->priv->login_dialog == NULL) {
 		builder = gtk_builder_new ();
 		gtk_builder_set_translation_domain (builder, GETTEXT_PACKAGE);
-		gtk_builder_add_from_file (builder, GTKBUILDER_CONFIG_FILE, &error);
+		gtk_builder_add_from_resource (builder, GTKBUILDER_CONFIG_FILE,
+		                               &error);
 		if (error != NULL) {
 			g_warning ("Couldn't load Postasa configuration UI file:%d:%s", error->code, error->message);
 			g_error_free (error);
