@@ -43,8 +43,8 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 # **********
 
 PKG_CHECK_MODULES([EOG], [
-	glib-2.0 >= 2.26.0
-	gtk+-3.0 >= 2.99.3
+	glib-2.0 >= 2.32.0
+	gtk+-3.0 >= 3.3.8
 	libpeas-1.0 >= 0.7.4
 	eog >= 3.5.5
 ])
