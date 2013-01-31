@@ -1,0 +1,514 @@
+# Slovak translation for eog-plugins.
+# Copyright (C) 2012 eog-plugins's COPYRIGHT HOLDER
+# This file is distributed under the same license as the eog-plugins package.
+# Richard Stanislavský <kenny.vv@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-12-30 18:05+0000\n"
+"PO-Revision-Date: 2012-12-31 08:54+0100\n"
+"Last-Translator: Richard Stanislavský <kenny.vv@gmail.com>\n"
+"Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../plugins/exif-display/eog-exif-display-plugin.c:105
+msgid " (invalid Unicode)"
+msgstr " (neplatný Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:183
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1fmm (objektív)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../plugins/exif-display/eog-exif-display-plugin.c:194
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1fmm (35mm film)"
+
+# PM: Histogram je znázornenie rozloženia rozdistribuovania hodnot pomocou stlpcového diagramu - napr zjednodušene kolko bodov má farbu modrá kolko bodov má farbu červená a pod.
+# PM: myslím že to prekladáme tiež ako histogram
+# GtkLabel label
+#: ../plugins/exif-display/exif-display-config.ui.h:1
+#, fuzzy
+msgid "Histogram"
+msgstr "Stĺpcový diagram"
+
+# GtkCheckButton label
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+#, fuzzy
+msgid "Display per-channel histogram"
+msgstr "Zobraziť stĺpcový diagram kanálu"
+
+# GtkCheckButton label
+#: ../plugins/exif-display/exif-display-config.ui.h:3
+#, fuzzy
+msgid "Display RGB histogram"
+msgstr "Zobraziť stĺpcový diagram RGB"
+
+# GtkLabel label
+#: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "General"
+msgstr "Všeobecné"
+
+# PM: nemyslí sa slovom camera fotoaparát?
+# GtkCheckButton label
+#: ../plugins/exif-display/exif-display-config.ui.h:5
+#, fuzzy
+msgid "Display camera settings in statusbar"
+msgstr "Zobraziť nastavenia kamery v stavovom riadku"
+
+# PM: dal by som údajov Exif
+# plugin name
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
+#, fuzzy
+msgid "Exif display"
+msgstr "Zobrazenie Exifu"
+
+# plugin description
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+#, fuzzy
+msgid "Displays camera settings and histogram"
+msgstr "Zobrazuje nastavenia kamery a stĺpcového diagramu"
+
+# GtkLabel label
+#: ../plugins/exif-display/exif-display.ui.h:1
+msgid "ISO speed:"
+msgstr "Citlivosť ISO:"
+
+# GtkLabel label
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "Expo. Time:"
+msgstr "Čas expozície:"
+
+# GtkLabel label
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "Aperture:"
+msgstr "Clona:"
+
+# GtkLabel label
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "Zoom:"
+msgstr "Priblíženie:"
+
+# GtkLabel label
+#: ../plugins/exif-display/exif-display.ui.h:5
+msgid "Metering:"
+msgstr "Meranie:"
+
+# MČ: netuším čo si mám pod tým predstaviť. Nedokážem to skontrolovať.
+# PM: Odchýlka expozície
+# GtkLabel label
+#: ../plugins/exif-display/exif-display.ui.h:6
+#, fuzzy
+msgid "Expo. bias:"
+msgstr "Expo. skreslenosť:"
+
+# GtkLabel label
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "Description:"
+msgstr "Popis:"
+
+# plugin name
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "Export do priečinka"
+
+# plugin description
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Exportuje aktuálny obrázok do samostatného adresára"
+
+# action
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "_Exportovať"
+
+# gsettings summary
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "Priečinok na exportovanie do"
+
+# gsettings description
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Toto je priečinok, do ktorého zásuvný modul umiestňuje exportované súbory. Ak nie je "
+"nastavený, zásuvný modul ich bude umiestňovať do $HOME/exported-images"
+
+# GtkLabel label
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Adresár pre export:"
+
+# action entry
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+msgid "Fit to width"
+msgstr "Prispôsobiť šírke"
+
+# PM: Názov potrebujeme preložiť inak ako popis - nahlás bug vývojárom aby to oddelili
+# action entry tooltip; Plugin name; plugin description 
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+#, fuzzy
+msgid "Zoom to fit image width"
+msgstr "Prispôsobí mierku zobrazenia šírke obrázku"
+
+# plugin name
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "Celoobrazovkové pozadie"
+
+# plugin description
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "Povolí zmenu pozadia v celoobrazovkovom režime"
+
+# gsettings summary
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+msgid "Use custom background settings"
+msgstr "Použiť vlastné nastavenia pozadia"
+
+# gsettings description
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr "Či by mal zásuvný modul používať globálne nastavenia, alebo svoje vlastné."
+
+# gsettings summary
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "Farba pozadia v celoobrazovkovom režime"
+
+# PM: use-custom neprekladať je to názov kľúča nastavení; iba ak je povolený kľúč/povolená voľba use-custom 
+# gsettings description
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#, fuzzy
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"Farba, ktorá sa použije na vyplnenie oblasti za obrázkom. Táto voľba má "
+"vplyv iba ak budu povolené vlastné nastavenia pozadia."
+
+# GtkCheckButton label
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Použiť vlastnú farbu:"
+
+# PM:titlebar prekladáme inak, skús pozrieť do slovníka alebo v iných moduloch
+# plugin name
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+#, fuzzy
+msgid "Hide Titlebar"
+msgstr "Skryť lištu s názvom"
+
+# plugin description
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+#, fuzzy
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Skryje lištu s názvom pri maximalizovanom okne programu Oko GNOME"
+
+# plugin name
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "Zakáz tmavej témy"
+
+# PM: nejak mi tu chýba preklad preference
+# plugin description
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+#, fuzzy
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Zakáže tmavé varianty tém programu Oko GNOME"
+
+# tooltip
+#: ../plugins/map/eog-map-plugin.c:401
+msgid "Jump to current image's location"
+msgstr "Skočí na umiestnenie aktuálneho obrázku"
+
+# tooltip
+#: ../plugins/map/eogeog-map-plugin.c:413
+msgid "Zoom in"
+msgstr "Zväčší"
+
+# tooltip
+#: ../plugins/map/eog-map-plugin.c:421
+msgid "Zoom out"
+msgstr "Zmenší"
+
+# sidebar page; plugin name
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
+msgid "Map"
+msgstr "Mapa"
+
+# PM: typujem že to zobrazuje údaje o polohe vytvorenia fotky z Exif informácii. Takže asi "z obrázku"/vytvorenia obrázku - je to ale len môž typ -treba to preveriť bud vyskúšaním alebo u vývojárov
+#: ../plugins/map/map.plugin.desktop.in.h:2
+#, fuzzy
+msgid "Display the geolocation of the image on a map"
+msgstr "Zobrazi geologické umiestnenie obrázku na mape"
+
+# action entry
+#: ../plugins/postasa/eog-postasa-plugin.c:127
+msgid "Upload to PicasaWeb"
+msgstr "Odovzdať na PicasaWeb"
+
+# action entry tooltip; plugin description
+#: ../plugins/postasa/eog-postasa-plugin.c:129
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Odovzdá vaše obrázky na PicasaWeb"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:325
+msgid "Uploading..."
+msgstr "Odovzdáva sa..."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:371
+msgid "Uploaded"
+msgstr "Odovzdané"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:375
+msgid "Cancelled"
+msgstr "Zrušené"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:378
+msgid "Failed"
+msgstr "Zlyhalo"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:601
+#, c-format
+msgid "Login failed. %s"
+msgstr "Prihlásenie zlyhalo. %s"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:605
+msgid "Logged in successully."
+msgstr "Úspešné prihlásenie."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:606
+msgid "Close"
+msgstr "Zavrieť"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:627
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#. TODO: want to handle passwords more securely
+#: ../plugins/postasa/eog-postasa-plugin.c:633
+msgid "Logging in..."
+msgstr "Prihlasuje sa..."
+
+# PM: používame vykanie a neosobné oslovovanie vám s malým v; znie to neprirodzene - Ak chcete pokračovať v odovávaní, prosím prihláste sa.
+#: ../plugins/postasa/eog-postasa-plugin.c:678
+#, fuzzy
+msgid "Please log in to continue upload."
+msgstr "Prosím, prihlás sa pre pokračovanie odovzdávania."
+
+# GtkDialog title
+#: ../plugins/postasa/postasa-config.xml.h:1
+msgid "PicasaWeb Login"
+msgstr "Prihlasenie na PicasaWeb"
+
+# GtkButton label
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "_Cancel"
+msgstr "_Zrušiť"
+
+# GtkButton label
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "_Login"
+msgstr "_Prihlásiť"
+
+# GtkLabel label
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "_Username:"
+msgstr "Po_užívateľské meno:"
+
+# GtkLabel label
+#: ../plugins/postasa/postasa-config.xml.h:5
+msgid "_Password:"
+msgstr "_Heslo:"
+
+# PM: toto sa mi nevidí, kde to je, čo je za týmto textom?
+# GtkLabel label
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+#, fuzzy
+msgid "Uploads:"
+msgstr "Odovzdané:"
+
+# GtkTreeViewColumn title
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "File"
+msgstr "Súbor"
+
+# GtkTreeViewColumn title
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Size"
+msgstr "Veľkosť"
+
+# GtkTreeViewColumn title
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Status"
+msgstr "Stav"
+
+# PM: nebude lepšie označené?
+# GtkButton label
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+#, fuzzy
+msgid "Cancel Selected"
+msgstr "Zrušiť vybraté"
+
+# GtkButton label
+#: ../plugins/postasa/postasa-uploads.xml.h:6
+msgid "Cancel All"
+msgstr "Zrušiť všetko"
+
+# PM: dal by som Odovzdávanie na PicasaWeb
+# plugin name
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+#, fuzzy
+msgid "PicasaWeb Uploader"
+msgstr "Odovzdávač PicasaWeb"
+
+# action entry
+#: ../plugins/postr/eog-postr-plugin.c:62
+msgid "Upload to Flickr"
+msgstr "Odovzdať na Flickr"
+
+# action entry tooltip; plugin description
+#: ../plugins/postr/eog-postr-plugin.c:64
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Odovzdá tvoje obrázky na Flickr"
+
+# PM: dal by som Odovzdávanie na Flickr
+# plugin name
+#: ../plugins/postr/postr.plugin.desktop.in.h:1
+#, fuzzy
+msgid "Flickr Uploader"
+msgstr "Odovzdávač Flickr"
+
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "Konzola P_ython"
+
+# PM: Konzola jazyka Python
+# plugin name
+#: ../plugins/pythonconsole/__init__.py:88
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+#, fuzzy
+msgid "Python Console"
+msgstr "Konzola Python"
+
+# GtkLabel label
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "F_arba príkazu:"
+
+# GtkLabel label
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "_Farba chyby:"
+
+# PM: Farba textu príkazu
+# gsetting summary
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#, fuzzy
+msgid "Command Text Color"
+msgstr "Farba príkazového textu"
+
+# gsetting description
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+msgid "The color used for commands."
+msgstr "Farba použitá pre príkazy."
+
+# PM: Farba textu chyby
+# gsetting summary
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#, fuzzy
+msgid "Error Text Color"
+msgstr "Farba chybového textu"
+
+# gsetting description
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+msgid "The color used for errors."
+msgstr "Farba použitá pre chyby."
+
+# gsetting summary
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+msgid "Whether to use the system font"
+msgstr "Či sa má použiť systémové písmo"
+
+# PM: z kontextu sa mi vidí, že desktop-global nie je názov iného kľúča a asi to treba preložiť - ale pre istotu sa opýtaj vývojárov; nie som si tiež istý prekladom zátvorky nerozumiem originálu čo sa to snaží povedať?
+# gsetting description
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#, fuzzy
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Ak je „true“, terminál použije štandardné písmo desktop-global, ak to je "
+"monospace (a najviac podobné písmo)."
+
+# gsetting summary
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+msgid "Font used by Python Console"
+msgstr "Písmo použité pre konzolu Python"
+
+# PM: teraz to vyzerá že Pango je názov písma, dal by som "pre Pango"
+# gsetting description
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+#, fuzzy
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Názov písma Pango. Napríklad „Sans 12“ alebo „Monospace Bold 14“."
+
+# PM: dal by som jazyka Python kedze je to popis
+# plugin description
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
+#, fuzzy
+msgid "Python console for Eye of GNOME"
+msgstr "Konzola Python pre program Oko GNOME"
+
+# action entry
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+msgid "Send by Mail"
+msgstr "Poslať emailom"
+
+# action entry tooltip
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
+msgid "Send the selected images by mail"
+msgstr "Pošle vybrané obrázky emailom"
+
+# plugin name
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Poslať emailom"
+
+# plugin description
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Posiela obrázok ako prílohu nového emailu"
+
+# PM: Premiešanie prezentácie
+# plugin name
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
+#, fuzzy
+msgid "Slideshow Shuffle"
+msgstr "Náhodná prezentácia"
+
+# plugin description
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+msgid "Shuffles images in slideshow mode"
+msgstr "Zamieša snímky v režime prezentácie"
