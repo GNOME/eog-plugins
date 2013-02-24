@@ -90,7 +90,7 @@ static const GtkActionEntry action_entries[] =
 	  GTK_STOCK_ZOOM_FIT,
 	  N_("Fit to width"),
 	  "W",
-	  N_("Zoom to fit image width"),
+	  N_("Fit the image to the window width"),
 	  G_CALLBACK (fit_to_width_cb) }
 };
 
