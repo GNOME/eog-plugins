@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-03-26 20:37+0000\n"
-"PO-Revision-Date: 2012-04-05 08:57+0800\n"
-"Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
+"POT-Creation-Date: 2013-02-24 18:09+0000\n"
+"PO-Revision-Date: 2012-09-17 19:00+0800\n"
+"Last-Translator: tuhaihe <1132321739qq@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -46,11 +46,11 @@ msgstr "直方图"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Display per-channel histogram"
-msgstr "显示每一个频道上的图片"
+msgstr "显示各通道的直方图"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
-msgstr "显示图形的色彩模式"
+msgstr "显示 RGB 直方图"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
 msgid "General"
@@ -58,15 +58,16 @@ msgstr "常规"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
-msgstr "在状态栏上显示相机上的设置"
+msgstr "在状态栏上显示相机设置"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 msgid "Exif display"
-msgstr "显示EXIf"
+msgstr "Exif 数据显示"
 
+# 在遥感影像相关的论文里面，都称为 color histogram，“颜色直方图”。这里就是直方图的意思。
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
-msgstr "显示相机上的设置和图像"
+msgstr "显示相机设置和直方图"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -96,14 +97,48 @@ msgstr "曝光偏差："
 msgid "Description:"
 msgstr "描述："
 
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "导出到文件夹"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "将当前图像导出到一个单独的目录"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "导出(_E)"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "导出的目标文件夹"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"这是插件放置导出文件的文件夹。如不设置，插件将导出到 $HOME/exported-images。"
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "导出目录："
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
-msgstr "调整宽度"
+msgstr "适合宽度"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+msgid "Fit the image to the window width"
+msgstr ""
+
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
-msgstr "通过缩放来协调图片的宽度"
+msgstr "缩放到适合图像宽度"
+
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
+msgid "Fit images to the window width"
+msgstr ""
 
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
@@ -135,6 +170,22 @@ msgstr "该颜色用来填充图像背后的区域。该选项只有在启用“
 msgid "Use custom color:"
 msgstr "使用自定义颜色："
 
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "隐藏标题栏"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "隐藏图像查看器窗口最大化时的标题栏"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "禁用黑色主题"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "禁用图像查看器首选的黑色主题风格"
+
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "跳到当前图像的位置"
@@ -154,56 +205,56 @@ msgstr "地图"
 
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
-msgstr "在地图上显示图片的地理位置"
+msgstr "在地图上显示图像的地理位置"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
 msgstr "上传到 PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/eog-postasa-plugin.c:129
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "把您的图片上传到 PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:323
+#: ../plugins/postasa/eog-postasa-plugin.c:325
 msgid "Uploading..."
 msgstr "上传中..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:369
+#: ../plugins/postasa/eog-postasa-plugin.c:371
 msgid "Uploaded"
 msgstr "已上传"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:375
 msgid "Cancelled"
 msgstr "已取消"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:376
+#: ../plugins/postasa/eog-postasa-plugin.c:378
 msgid "Failed"
 msgstr "失败"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:599
+#: ../plugins/postasa/eog-postasa-plugin.c:601
 #, c-format
 msgid "Login failed. %s"
 msgstr "登录失败。%s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:603
+#: ../plugins/postasa/eog-postasa-plugin.c:605
 msgid "Logged in successully."
 msgstr "登录成功。"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: ../plugins/postasa/eog-postasa-plugin.c:606
 msgid "Close"
 msgstr "关闭"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:625
+#: ../plugins/postasa/eog-postasa-plugin.c:627
 msgid "Cancel"
 msgstr "取消"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:631
+#: ../plugins/postasa/eog-postasa-plugin.c:633
 msgid "Logging in..."
 msgstr "正在登录..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:676
+#: ../plugins/postasa/eog-postasa-plugin.c:678
 msgid "Please log in to continue upload."
 msgstr "请登录以便继续上传。"
 
@@ -310,6 +361,8 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
+"如果为真，终端将使用桌面全局的标准字体(如果是等宽字体，也可能使用最相近的字"
+"体)。"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
 msgid "Font used by Python Console"
@@ -321,28 +374,28 @@ msgstr "一个 Pango 字体名。例如，“Sans 12”或“Monospace Bold 14�
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
-msgstr "Python 图形控制台"
+msgstr "图像查看器的 Python 控制台"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
-msgstr "通过邮件发送"
+msgstr "邮件发送"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
-msgstr "发送选中的图片通过邮件"
+msgstr "通过邮件发送选中的图像"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
-msgstr "通过邮件发送"
+msgstr "邮件发送"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
-msgstr "发送带有购物中心信息的图片"
+msgstr "将附件图像发送到新邮件"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
-msgstr "重新编制图片"
+msgstr "幻灯片随机播放"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
-msgstr "在图片显示模块编制图片"
+msgstr "幻灯片模式下随机显示图像"
