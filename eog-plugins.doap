@@ -12,13 +12,6 @@
   <bug-database rdf:resource="http://bugzilla.gnome.org/browse.cgi?product=eog" />
   <maintainer>
     <foaf:Person>
-      <foaf:name>Claudio Saavedra</foaf:name>
-      <foaf:mbox rdf:resource="mailto:csaavedra@gnome.org" />
-      <gnome:userid>csaavedra</gnome:userid>
-    </foaf:Person>
-  </maintainer>
-  <maintainer>
-    <foaf:Person>
       <foaf:name>Felix Riemann</foaf:name>
       <foaf:mbox rdf:resource="mailto:friemann@gnome.org" />
       <gnome:userid>friemann</gnome:userid>
