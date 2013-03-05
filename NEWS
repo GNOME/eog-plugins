@@ -1,3 +1,27 @@
+Version 3.7.91
+--------------
+
+Plugin changes:
+
+- Exif Display
+ - Embed UI files into plugin using GResource (Felix Riemann)
+
+- Fit To Width
+ - Improve translatability of description strings (Felix Riemann)
+
+- PicasaWeb Uploader
+ - Embed UI files into plugin using GResource (Felix Riemann)
+
+New and updated translations:
+
+- Daniel Mustieles [es]
+- Aurimas Černius [lt]
+- Piotr Drąg [pl]
+- Florêncio Neves [pt_BR]
+- Yuri Myasoedov [ru]
+- Richard Stanislavský [sk]
+- Wylmer Wang [zh_CN]
+
 Version 3.6.1
 -------------
 
