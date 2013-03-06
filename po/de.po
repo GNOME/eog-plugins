@@ -1,21 +1,25 @@
 # German translation of eog-plugins.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012.
 # Felix Riemann <friemann@gnome.org>, 2009.
+# Christian Kirbach <christian.kirbach@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-02-20 18:18+0000\n"
-"PO-Revision-Date: 2012-02-28 21:47+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
-"Language-Team: German <gnome-de@gnome.org>\n"
+"POT-Creation-Date: 2012-12-28 19:11+0000\n"
+"PO-Revision-Date: 2013-03-06 10:26+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
+"Language-Team: Deutsch <gnome-de@gnome.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -93,6 +97,35 @@ msgstr "Belichtungskorrektur:"
 msgid "Description:"
 msgstr "Beschreibung:"
 
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "In Ordner exportieren"
+
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Das aktuelle Bild in einen separaten Ordner exportieren"
+
+#: ../plugins/export-to-folder/export-to-folder.py:62
+msgid "_Export"
+msgstr "_Exportieren"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+msgid "The folder to export to"
+msgstr "Der Ordner, in den exportiert wird"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Dies ist der Ordner, in den das Plugin die exportierten Dateien legt. Das "
+"Plugin exportiert nach »$HOME/exported-images«, falls nichts weiter "
+"angegeben ist."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Exportordner:"
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Breite einpassen"
@@ -135,6 +168,22 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Benutzerdefinierte Farbe verwenden:"
 
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "Titelleiste verbergen"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Die Titelleiste von maximierten Eye of GNOME-Fenstern verbergen"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable dark theme"
+msgstr "Dunkles Thema deaktivieren"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Die Verwendung des dunklen Themas durch Eye of GNOME deaktivieren"
+
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
 msgstr "Zum Ort des aktuellen Bildes springen"
@@ -147,7 +196,8 @@ msgstr "Vergrößern"
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: ../plugins/map/eog-map-plugin.c:436 ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Karte"
 
@@ -309,8 +359,9 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
-"Falls wahr, verwendet das Terminal die global geltende Standardschrift, falls "
-"es eine Schrift fester Breite ist (bzw. die verwendbare ähnlichste Schrift)."
+"Falls wahr, verwendet das Terminal die global geltende Standardschrift, "
+"falls es eine Schrift fester Breite ist (bzw. die verwendbare ähnlichste "
+"Schrift)."
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
 msgid "Font used by Python Console"
