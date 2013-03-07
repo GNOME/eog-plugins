@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-08-20 20:28+0000\n"
-"PO-Revision-Date: 2012-09-08 06:44+0200\n"
+"POT-Creation-Date: 2013-02-24 18:09+0000\n"
+"PO-Revision-Date: 2013-03-07 11:31+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -128,9 +128,16 @@ msgid "Fit to width"
 msgstr "Испуни по ширини"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+msgid "Fit the image to the window width"
+msgstr "Прилагоди слику ширини прозора"
+
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Увећајте да испуните ширину слике"
+
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
+msgid "Fit images to the window width"
+msgstr "Прилагодите слике ширини прозора"
 
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
@@ -201,54 +208,54 @@ msgstr "Карта"
 msgid "Display the geolocation of the image on a map"
 msgstr "Прикажите геоположај слике на карти"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
 msgstr "Отпреми на Пикаса веб"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/eog-postasa-plugin.c:129
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Отпремите ваше слике на Пикаса веб"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:323
+#: ../plugins/postasa/eog-postasa-plugin.c:325
 msgid "Uploading..."
 msgstr "Одашиљем..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:369
+#: ../plugins/postasa/eog-postasa-plugin.c:371
 msgid "Uploaded"
 msgstr "Отпремљено"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:375
 msgid "Cancelled"
 msgstr "Отказано"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:376
+#: ../plugins/postasa/eog-postasa-plugin.c:378
 msgid "Failed"
 msgstr "Неуспело"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:599
+#: ../plugins/postasa/eog-postasa-plugin.c:601
 #, c-format
 msgid "Login failed. %s"
 msgstr "Неуспешно пријављивање. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:603
+#: ../plugins/postasa/eog-postasa-plugin.c:605
 msgid "Logged in successully."
 msgstr "Успешно сте пријављени."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: ../plugins/postasa/eog-postasa-plugin.c:606
 msgid "Close"
 msgstr "Затвори"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:625
+#: ../plugins/postasa/eog-postasa-plugin.c:627
 msgid "Cancel"
 msgstr "Откажи"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:631
+#: ../plugins/postasa/eog-postasa-plugin.c:633
 msgid "Logging in..."
 msgstr "Пријављујем се..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:676
+#: ../plugins/postasa/eog-postasa-plugin.c:678
 msgid "Please log in to continue upload."
 msgstr "Молим пријавите се да наставите одашиљање."
 
