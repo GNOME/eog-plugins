@@ -1,14 +1,13 @@
 # eog-plugins' Portuguese translation.
-# Copyright © 2008, 2009 eog-plugins
+# Copyright © 2008, 2009, 2011, 2012, 2013 eog-plugins
 # This file is distributed under the same license as the eog-plugins package.
-# António Lima <amrlima@gmail.com>, 2008, 2009, 2011, 2012.
+# António Lima <amrlima@gmail.com>, 2008, 2009, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-08-20 20:28+0000\n"
-"PO-Revision-Date: 2012-09-13 21:49+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-17 12:13+0000\n"
+"PO-Revision-Date: 2013-03-16 23:31+0000\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: gnome_pt@yahoogroups.com\n"
 "Language: pt\n"
@@ -100,7 +99,7 @@ msgstr "Exportar para Pasta"
 
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
-msgstr "Exportar a imagem actual para um directório separado"
+msgstr "Exportar a imagem atual para um diretório separado"
 
 #: ../plugins/export-to-folder/export-to-folder.py:62
 msgid "_Export"
@@ -120,16 +119,23 @@ msgstr ""
 
 #: ../plugins/export-to-folder/preferences_dialog.ui.h:1
 msgid "Export directory:"
-msgstr "Directório de exportação:"
+msgstr "Diretório de exportação:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Caber à largura"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+msgid "Fit the image to the window width"
+msgstr "Ajustar a imagem à largura da janela"
+
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
 msgstr "Zoom para caber a largura da imagem"
+
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
+msgid "Fit images to the window width"
+msgstr "Ajustar imagens à largura da janela"
 
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
@@ -157,7 +163,7 @@ msgid ""
 "effect only if use-custom is enabled."
 msgstr ""
 "A cor que é utilizada para preencher a área por trás da imagem. Esta opção "
-"tem efeito somente se a opção utilizar personalizada está activa."
+"tem efeito somente se a opção utilizar personalizada está ativa."
 
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
@@ -174,17 +180,16 @@ msgstr ""
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
 msgid "Disable dark theme"
-msgstr "Desactivar o tema escuro"
+msgstr "Desativar o tema escuro"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
 msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr ""
-"Desactiva a preferência de variantes do tema escuro do Visualizador de "
-"Imagens"
+"Desativa a preferência de variantes do tema escuro do Visualizador de Imagens"
 
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
-msgstr "Ir para a localização actual da imagem"
+msgstr "Ir para a localização atual da imagem"
 
 #: ../plugins/map/eog-map-plugin.c:413
 msgid "Zoom in"
@@ -203,54 +208,54 @@ msgstr "Mapa"
 msgid "Display the geolocation of the image on a map"
 msgstr "Apresentar a geolocalização da imagem num mapa"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
 msgstr "Enviar para o PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/eog-postasa-plugin.c:129
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Enviar as suas fotos para o PicasaWeb"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:323
+#: ../plugins/postasa/eog-postasa-plugin.c:325
 msgid "Uploading..."
 msgstr "A enviar..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:369
+#: ../plugins/postasa/eog-postasa-plugin.c:371
 msgid "Uploaded"
 msgstr "Envida"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:375
 msgid "Cancelled"
 msgstr "Cancelado"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:376
+#: ../plugins/postasa/eog-postasa-plugin.c:378
 msgid "Failed"
 msgstr "Falha"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:599
+#: ../plugins/postasa/eog-postasa-plugin.c:601
 #, c-format
 msgid "Login failed. %s"
 msgstr "Início de sessão falhou. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:603
+#: ../plugins/postasa/eog-postasa-plugin.c:605
 msgid "Logged in successully."
 msgstr "Sessão iniciada com sucesso."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: ../plugins/postasa/eog-postasa-plugin.c:606
 msgid "Close"
 msgstr "Fechar"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:625
+#: ../plugins/postasa/eog-postasa-plugin.c:627
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:631
+#: ../plugins/postasa/eog-postasa-plugin.c:633
 msgid "Logging in..."
 msgstr "A iniciar sessão..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:676
+#: ../plugins/postasa/eog-postasa-plugin.c:678
 msgid "Please log in to continue upload."
 msgstr "Por favor inicie sessão para continuar."
 
@@ -292,7 +297,7 @@ msgstr "Estado"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:5
 msgid "Cancel Selected"
-msgstr "Cancelar Seleccionados"
+msgstr "Cancelar Selecionados"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Cancel All"
@@ -379,7 +384,7 @@ msgstr "Enviar por Mail"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
-msgstr "Enviar as imagens seleccionadas por mail"
+msgstr "Enviar as imagens selecionadas por mail"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
@@ -401,10 +406,10 @@ msgstr "Baralha as imagens no modo de apresentação"
 #~ msgstr "Reler Imagem"
 
 #~ msgid "Reload current image"
-#~ msgstr "Reler a imagem actual"
+#~ msgstr "Reler a imagem atual"
 
 #~ msgid "Activate fullscreen mode with double-click"
-#~ msgstr "Activar o modo de ecrã completo com duplo clique"
+#~ msgstr "Ativar o modo de ecrã completo com duplo clique"
 
 #~ msgid "Fullscreen with double-click"
 #~ msgstr "Ecrã completo com duplo clique"
