@@ -6,15 +6,15 @@
 # Petr Kovar <pknbe@volny.cz>, 2008.
 # Adrian Guniš <andygun696@gmail.com>, 2009, 2010, 2011.
 # Adam Matoušek <adydas95@gmail.com>, 2012.
-# Marek Černocký <marek@manet.cz>, 2011, 2012.
+# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-08-20 20:28+0000\n"
-"PO-Revision-Date: 2012-09-02 13:46+0200\n"
+"POT-Creation-Date: 2013-02-24 18:09+0000\n"
+"PO-Revision-Date: 2013-03-18 20:49+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -22,6 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -129,12 +130,19 @@ msgstr "Složka pro export:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
-msgstr "Přizpůsobit šířce obrazovky"
+msgstr "Přizpůsobit šířce"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
+msgid "Fit the image to the window width"
+msgstr "Přizpůsobit obrázek šířce okna"
+
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
-msgstr "Přizpůsobí měřítko obrázku šířce obrazovky"
+msgstr "Přizpůsobit přiblížení šířce obrázku"
+
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
+msgid "Fit images to the window width"
+msgstr "Přizpůsobí obrázky šířce okna"
 
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
@@ -206,54 +214,54 @@ msgstr "Mapa"
 msgid "Display the geolocation of the image on a map"
 msgstr "Zobrazí geografickou polohu obrázku na mapě"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
+#: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
 msgstr "Odeslat na Picasa"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:128
+#: ../plugins/postasa/eog-postasa-plugin.c:129
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Odešlete své obrázky na Picasa"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:323
+#: ../plugins/postasa/eog-postasa-plugin.c:325
 msgid "Uploading..."
 msgstr "Odesílá se…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:369
+#: ../plugins/postasa/eog-postasa-plugin.c:371
 msgid "Uploaded"
 msgstr "Odesláno"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:375
 msgid "Cancelled"
 msgstr "Zrušeno"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:376
+#: ../plugins/postasa/eog-postasa-plugin.c:378
 msgid "Failed"
 msgstr "Selhalo"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:599
+#: ../plugins/postasa/eog-postasa-plugin.c:601
 #, c-format
 msgid "Login failed. %s"
 msgstr "Přihlášení selhalo. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:603
+#: ../plugins/postasa/eog-postasa-plugin.c:605
 msgid "Logged in successully."
 msgstr "Přihlášení úspěšné"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: ../plugins/postasa/eog-postasa-plugin.c:606
 msgid "Close"
 msgstr "Zavřít"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:625
+#: ../plugins/postasa/eog-postasa-plugin.c:627
 msgid "Cancel"
 msgstr "Zrušit"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:631
+#: ../plugins/postasa/eog-postasa-plugin.c:633
 msgid "Logging in..."
 msgstr "Přihlašuje se…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:676
+#: ../plugins/postasa/eog-postasa-plugin.c:678
 msgid "Please log in to continue upload."
 msgstr "Prosím přihlašte se pro pokračování odesílání."
 
