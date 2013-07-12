@@ -35,7 +35,7 @@
 #include <eog/eog-image.h>
 
 #include <eog/eog-thumb-view.h>
-#include <eog/eog-job-queue.h>
+#include <eog/eog-job-scheduler.h>
 #include <eog/eog-exif-util.h>
 #include <eog/eog-sidebar.h>
 #include <eog/eog-window-activatable.h>
@@ -565,7 +565,7 @@ selection_changed_cb (EogThumbView *view, EogExifDisplayPlugin *plugin)
 		g_signal_connect (G_OBJECT (job), "finished",
 				  G_CALLBACK (manage_exif_data_cb),
 				  plugin);
-		eog_job_queue_add_job (job);
+		eog_job_scheduler_add_job (job);
 		g_object_unref (job);
 	} else {
 		manage_exif_data (plugin);
@@ -580,7 +580,7 @@ selection_changed_cb (EogThumbView *view, EogExifDisplayPlugin *plugin)
 		g_signal_connect (G_OBJECT (job), "finished",
 				  G_CALLBACK (calculate_histogram_cb),
 				  plugin);
-		eog_job_queue_add_job (job);
+		eog_job_scheduler_add_job (job);
 		g_object_unref (job);
 	}
 
