@@ -1,3 +1,11 @@
+Version 3.9.5
+-------------
+
+Plugin changes:
+
+- Exif Display
+ - #704081, Fails to build against eog trunk (Dominique Leuenberger)
+
 Version 3.8.1
 -------------
 
