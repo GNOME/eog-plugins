@@ -65,7 +65,7 @@ msgstr "Zobrazit nastavení fotoaparátu ve stavové liště"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 msgid "Exif display"
-msgstr "Zobrazení informací z Exif"
+msgstr "Zobrazení informací Exif"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
