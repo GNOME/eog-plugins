@@ -328,12 +328,12 @@ msgstr "Odesílání na Flickr"
 
 #: ../plugins/pythonconsole/__init__.py:64
 msgid "P_ython Console"
-msgstr "Konzola P_ython"
+msgstr "Konzola jazyka P_ython"
 
 #: ../plugins/pythonconsole/__init__.py:88
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
-msgstr "Konzola Python"
+msgstr "Konzola jazyka Python"
 
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
@@ -382,7 +382,7 @@ msgstr ""
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
-msgstr "Konzola Python pro Prohlížeč obrázků"
+msgstr "Konzola jazyka Python pro Prohlížeč obrázků"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
