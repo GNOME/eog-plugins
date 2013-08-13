@@ -216,12 +216,12 @@ msgstr "Zobrazí geografickou polohu obrázku na mapě"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
-msgstr "Odeslat na Picasa"
+msgstr "Odeslat na PicasaWeb"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:129
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
 msgid "Upload your pictures to PicasaWeb"
-msgstr "Odešlete své obrázky na Picasa"
+msgstr "Odešlete své obrázky na PicasaWeb"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:325
 msgid "Uploading..."
@@ -267,7 +267,7 @@ msgstr "Prosím přihlašte se pro pokračování odesílání."
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
-msgstr "Přihlášení na Picasa"
+msgstr "Přihlášení na PicasaWeb"
 
 #: ../plugins/postasa/postasa-config.xml.h:2
 msgid "_Cancel"
@@ -311,7 +311,7 @@ msgstr "Zrušit vše"
 
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
-msgstr "Odesílání na Picasa"
+msgstr "Odesílání na PicasaWeb"
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
