@@ -87,7 +87,7 @@ static const gchar * const ui_definition =
 static const GtkActionEntry action_entries[] =
 {
 	{ "EogPluginFitToWidth",
-	  GTK_STOCK_ZOOM_FIT,
+	  "zoom-fit-best",
 	  N_("Fit to width"),
 	  "W",
 	  N_("Fit the image to the window width"),
