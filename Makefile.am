@@ -1,5 +1,7 @@
 SUBDIRS = plugins po
 
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+
 EXTRA_DIST =			\
 	autogen.sh		\
 	ChangeLog.pre-git
