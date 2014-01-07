@@ -1,7 +1,7 @@
 # Champlain plugin
 plugindir = $(libdir)/eog/plugins
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(top_srcdir) 				\
 	$(EOG_CFLAGS) 					\
 	$(CHAMPLAIN_CFLAGS) 		\

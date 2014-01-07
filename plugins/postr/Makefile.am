@@ -1,7 +1,7 @@
 # Postr plugin
 plugindir = $(libdir)/eog/plugins
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(top_srcdir) 				\
 	$(EOG_CFLAGS) 					\
 	$(WARN_CFLAGS)					\

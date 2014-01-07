@@ -1,7 +1,7 @@
 # Postasa plugin
 plugindir = $(EOG_PLUGINS_LIBS_DIR)
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(top_srcdir) 				\
 	$(EOG_CFLAGS) 					\
 	$(WARN_CFLAGS)					\

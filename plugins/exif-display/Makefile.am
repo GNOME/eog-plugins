@@ -2,7 +2,7 @@
 plugindir = $(EOG_PLUGINS_LIBS_DIR)
 uidir = $(EOG_PLUGINS_DATA_DIR)/exif-display
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(top_srcdir)/src 				\
 	$(EOG_CFLAGS) 					\
 	$(WARN_CFLAGS)					\
