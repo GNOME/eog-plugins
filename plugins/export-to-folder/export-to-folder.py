@@ -55,7 +55,7 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
         return target_dir
 
     def do_activate(self):
-        print 'Activating export plugin'
+        print('Activating export plugin')
         ui_manager = self.window.get_ui_manager()
         self.action_group = Gtk.ActionGroup('Export')
         self.action_group.add_actions([('Export', None,
@@ -64,14 +64,14 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
         self.ui_id = ui_manager.add_ui_from_string(ui_str)
 
     def do_deactivate(self):
-        print 'Export plugin deactivated'
+        print('Export plugin deactivated')
         ui_manager = self.window.get_ui_manager().remove_ui(self.ui_id);
 
     def export_cb(self, action, window):
         # Get path to current image.
         image = window.get_image()
         if not image:
-            print 'No image can be exported'
+            print('No image can be exported')
             return
         src = image.get_file().get_path()
         name = os.path.basename(src)
@@ -82,7 +82,7 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
         except OSError:
             pass
         shutil.copy2(src, dest)
-        print 'Copied %s into %s' % (name, self.export_dir)
+        print('Copied %s into %s' % (name, self.export_dir))
 
 
 class ExportConfigurable(GObject.Object, PeasGtk.Configurable):
@@ -102,12 +102,12 @@ class ExportConfigurable(GObject.Object, PeasGtk.Configurable):
 
         self.export_dir_button = builder.get_object('export_dir_button')
         self.preferences_dialog = builder.get_object('preferences_box')
-	target_dir =  self.settings.get_string('target-folder')
-	if target_dir == "":
-		target_dir = EXPORT_DIR;
+        target_dir =  self.settings.get_string('target-folder')
+        if target_dir == "":
+            target_dir = EXPORT_DIR;
         self.export_dir_button.set_current_folder(target_dir)
 
         return self.preferences_dialog
 
     def current_folder_changed_cb(self, button):
-	self.settings.set_string('target-folder', button.get_current_folder())
+        self.settings.set_string('target-folder', button.get_current_folder())
