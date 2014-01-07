@@ -43,7 +43,8 @@ class BackgroundChanger(GObject.Object, Eog.WindowActivatable, \
         scroll_view = self.window.get_view()
         mode = self.window.get_mode()
         if self.settings.get_boolean('use-custom'):
-            color = Gdk.Color.parse(self.settings.get_string('background-color'))[1]
+            color = Gdk.RGBA()
+            color.parse(self.settings.get_string('background-color'))
         else:
             color = scroll_view.get_property('background-color')
 
@@ -69,8 +70,9 @@ class BackgroundChanger(GObject.Object, Eog.WindowActivatable, \
             # Restore values
             self.use_global_checkbutton.set_active( \
                 self.settings.get_boolean('use-custom'))
-            self.choose_color.set_color( \
-                Gdk.Color.parse(self.settings.get_string('background-color'))[1])
+            color = Gdk.RGBA()
+            color.parse(self.settings.get_string('background-color'))
+            self.choose_color.set_rgba(color)
             self.preferences_dialog_created = True
 
         return self.preferences_dialog
@@ -81,4 +83,4 @@ class BackgroundChanger(GObject.Object, Eog.WindowActivatable, \
 
     def hide_colorbutton_cb(self, data):
         self.settings.set_string('background-color', \
-                                 self.choose_color.get_color().to_string())
+                                 self.choose_color.get_rgba().to_string())
