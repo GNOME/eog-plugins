@@ -46,7 +46,7 @@ PKG_CHECK_MODULES([EOG], [
 	glib-2.0 >= 2.32.0
 	gtk+-3.0 >= 3.3.8
 	libpeas-1.0 >= 0.7.4
-	eog >= 3.11.3
+	eog >= 3.11.4
 ])
 AC_SUBST(EOG_LIBS)
 AC_SUBST(EOG_CFLAGS)
@@ -147,7 +147,7 @@ AC_ARG_ENABLE([python],
 AC_MSG_RESULT([$enable_python])
 
 if test "x$have_python" != "xno"; then
-	AM_PATH_PYTHON([2.5.2],[],[:])
+	AM_PATH_PYTHON([3.2],[],[:])
 	if test "x$PYTHON" = "x:"; then
 		have_python=no
 	fi
