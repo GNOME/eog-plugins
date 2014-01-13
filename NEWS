@@ -1,3 +1,23 @@
+Version 3.11.4
+--------------
+
+Plugin changes:
+
+- Export to Folder
+ - Convert to Python 3 (Felix Riemann)
+
+- Fullscreen Background
+ - Adapt to API changes in eog 3.11.3 (Felix Riemann)
+ - Convert to Python 3 (Felix Riemann)
+
+- Python Console
+ - Convert to Python 3 (Felix Riemann)
+
+Other changes:
+
+- Modernize build system (Felix Riemann)
+- Raise Python and eog dependencies (Felix Riemann)
+
 Version 3.10.1
 --------------
 
