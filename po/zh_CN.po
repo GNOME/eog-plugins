@@ -4,7 +4,7 @@
 # This file is distributed under the same license as the eog-plugins package.
 # Eleanor Chen <chenyueg@gmail.com>, 2010.
 # Aron Xu <happyaron.xu@gmail.com>, 2008, 2010.
-# Yunqiang Su <wzssyqa@gmail.com>, 2010.
+# Yunqiang Su <wzssyqa@gmail.com>, 2010, 2014.
 # tuhaihe <wangdianjin@linuxdeepin.com>, 2012.
 #
 msgid ""
@@ -12,9 +12,9 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-24 18:09+0000\n"
-"PO-Revision-Date: 2012-09-17 19:00+0800\n"
-"Last-Translator: tuhaihe <1132321739qq@gmail.com>\n"
+"POT-Creation-Date: 2014-01-07 22:27+0000\n"
+"PO-Revision-Date: 2014-01-25 10:34+0800\n"
+"Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -130,7 +130,7 @@ msgstr "适合宽度"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
 msgid "Fit the image to the window width"
-msgstr ""
+msgstr "图像适配窗口宽度"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
 msgid "Zoom to fit image width"
@@ -138,7 +138,7 @@ msgstr "缩放到适合图像宽度"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
-msgstr ""
+msgstr "图像适配窗口宽度"
 
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
