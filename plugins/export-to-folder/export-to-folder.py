@@ -57,7 +57,7 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
     def do_activate(self):
         print('Activating export plugin')
         ui_manager = self.window.get_ui_manager()
-        self.action_group = Gtk.ActionGroup('Export')
+        self.action_group = Gtk.ActionGroup(name='Export')
         self.action_group.add_actions([('Export', None,
                         _('_Export'), "E", None, self.export_cb)], self.window)
         ui_manager.insert_action_group(self.action_group, 0)
