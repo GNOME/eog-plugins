@@ -59,7 +59,7 @@ class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable, PeasGtk.Configu
 
     def do_activate(self):
         ui_manager = self.window.get_ui_manager()
-        self.action_group = Gtk.ActionGroup('PythonConsole')
+        self.action_group = Gtk.ActionGroup(name='PythonConsole')
         self.action_group.add_actions([('PythonConsole', None, \
             _('P_ython Console'), None, None, self.console_cb)], self.window)
         ui_manager.insert_action_group(self.action_group, 0)
