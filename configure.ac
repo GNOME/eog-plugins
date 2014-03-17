@@ -3,7 +3,7 @@
 EOG_MAJOR=3.0.0
 EOG_PLUGINS_MAJOR=3.0.0
 
-AC_INIT([eog-plugins], [3.11.5], [http://bugzilla.gnome.org/enter_bug.cgi?product=eog&component=plugins])
+AC_INIT([eog-plugins], [3.11.92], [http://bugzilla.gnome.org/enter_bug.cgi?product=eog&component=plugins])
 
 AC_CONFIG_SRCDIR([plugins])
 AC_PREFIX_PROGRAM([eog])
@@ -12,7 +12,7 @@ AC_SUBST(EOG_PLUGINS_MAJOR)
 
 AC_PREREQ(2.59)
 
-AM_INIT_AUTOMAKE([1.11 foreign dist-xz no-dist-gzip])
+AM_INIT_AUTOMAKE([1.11 foreign tar-ustar dist-xz no-dist-gzip])
 AC_CONFIG_MACRO_DIR([m4])
 # Support silencing the build output if supported (automake-1.11+)
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])

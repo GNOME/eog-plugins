@@ -1,3 +1,19 @@
+Version 3.11.92
+---------------
+
+Plugin changes:
+
+- Export to Folder
+ - Fix PyGObject deprecation warnings (Felix Riemann)
+
+- Python Console
+ - Fix PyGObject deprecation warnings (Felix Riemann)
+
+New and updated translations:
+
+- Benjamin Steinwender [de]
+- YunQiang Su [zh_CN]
+
 Version 3.11.4
 --------------
 
