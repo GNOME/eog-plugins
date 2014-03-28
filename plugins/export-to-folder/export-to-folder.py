@@ -55,7 +55,6 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
         return target_dir
 
     def do_activate(self):
-        print('Activating export plugin')
         ui_manager = self.window.get_ui_manager()
         self.action_group = Gtk.ActionGroup(name='Export')
         self.action_group.add_actions([('Export', None,
@@ -64,7 +63,6 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
         self.ui_id = ui_manager.add_ui_from_string(ui_str)
 
     def do_deactivate(self):
-        print('Export plugin deactivated')
         ui_manager = self.window.get_ui_manager().remove_ui(self.ui_id);
 
     def export_cb(self, action, window):
