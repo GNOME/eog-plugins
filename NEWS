@@ -1,3 +1,14 @@
+Version 3.12.1
+--------------
+
+Plugin changes:
+
+- Export to Folder
+ - #727218, Make export-to-folder plugin less chatty (Jasper Lievisse Adriaanse)
+
+- Slideshow Shuffle
+ - #727222, Switch slideshowshuffle to python3 loader (Jasper Lievisse Adriaanse)
+
 Version 3.12.0
 --------------
 
