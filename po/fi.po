@@ -2,25 +2,26 @@
 # Copyright (C) 2008 Free Software Foundation.
 # Suomennos: http://gnome.fi/
 #
+#
 # Ilkka Tuohela <hile@iki.fi>, 2008.
 # Tommi Vainikainen <thv@iki.fi>, 2009.
 # Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013.
-#
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-07-20 18:53+0000\n"
-"PO-Revision-Date: 2013-09-13 18:48+0300\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
-"Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2014-05-03 15:28+0000\n"
+"PO-Revision-Date: 2014-05-04 02:58+0300\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -105,7 +106,7 @@ msgstr "Vie kansioon"
 msgid "Export the current image to a separate directory"
 msgstr "Vie nykyinen kuva erilliseen kansioon"
 
-#: ../plugins/export-to-folder/export-to-folder.py:62
+#: ../plugins/export-to-folder/export-to-folder.py:61
 msgid "_Export"
 msgstr "_Vie"
 
@@ -195,17 +196,14 @@ msgid "Jump to current image's location"
 msgstr "Siirry nykyisen kuvan sijaintiin"
 
 #: ../plugins/map/eog-map-plugin.c:413
-#| msgid "Zoom:"
 msgid "Zoom in"
 msgstr "Lähennä"
 
 #: ../plugins/map/eog-map-plugin.c:421
-#| msgid "Zoom:"
 msgid "Zoom out"
 msgstr "Loitonna"
 
-#: ../plugins/map/eog-map-plugin.c:436
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:436 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Kartta"
 
@@ -214,13 +212,11 @@ msgid "Display the geolocation of the image on a map"
 msgstr "Näyttää kuvan paikkatiedon kartalla"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:127
-#| msgid "Upload to Flickr"
 msgid "Upload to PicasaWeb"
 msgstr "Vie PicasaWebiin"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:129
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-#| msgid "Upload your pictures to Flickr"
 msgid "Upload your pictures to PicasaWeb"
 msgstr "Vie valokuvasi PicasaWebiin"
 
@@ -229,7 +225,6 @@ msgid "Uploading..."
 msgstr "Lähetetään..."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:371
-#| msgid "Flickr Uploader"
 msgid "Uploaded"
 msgstr "Lähetetty"
 
@@ -312,7 +307,6 @@ msgid "Cancel All"
 msgstr "Peru kaikki"
 
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
-#| msgid "Flickr Uploader"
 msgid "PicasaWeb Uploader"
 msgstr "PicasaWeb-vienti"
 
@@ -330,11 +324,10 @@ msgid "Flickr Uploader"
 msgstr "Flickr-vienti"
 
 #: ../plugins/pythonconsole/__init__.py:64
-#| msgid "Python Console"
 msgid "P_ython Console"
 msgstr "P_ython-konsoli"
 
-#: ../plugins/pythonconsole/__init__.py:88
+#: ../plugins/pythonconsole/__init__.py:87
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Python-konsoli"
@@ -365,7 +358,7 @@ msgstr "Virheissä käytettävä tekstin väri."
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
 msgid "Whether to use the system font"
-msgstr "Käytetäänkö järjestelmän kirjasinta"
+msgstr "Käytetäänkö järjestelmän fonttia"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
 msgid ""
@@ -374,9 +367,8 @@ msgid ""
 msgstr ""
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
-#| msgid "Python Console"
 msgid "Font used by Python Console"
-msgstr "Python-konsolin käyttämä kirjasin"
+msgstr "Python-konsolin käyttämä fontti"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
@@ -409,15 +401,3 @@ msgstr "Diaesitys-sekoitus"
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Sekoita valokuvat diaesityksessä"
-
-#~ msgid "Reload Image"
-#~ msgstr "Lataa kuva uudestaan"
-
-#~ msgid "Reload current image"
-#~ msgstr "Lataa tämänhetkinen kuva uudestaan"
-
-#~ msgid "Activate fullscreen mode with double-click"
-#~ msgstr "Aloita kokoruututila kaksoisnapsautuksella"
-
-#~ msgid "Fullscreen with double-click"
-#~ msgstr "Kaksoisnapsauta kokoruututilaan"
