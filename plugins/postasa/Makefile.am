@@ -1,5 +1,6 @@
 # Postasa plugin
 plugindir = $(EOG_PLUGINS_LIBS_DIR)
+appstreamdir = $(datadir)/appdata
 
 AM_CPPFLAGS = \
 	-I$(top_srcdir) 				\
@@ -41,12 +42,18 @@ plugin_in_files = postasa.plugin.desktop.in
 
 plugin_DATA = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
+appstream_in_files = eog-postasa.metainfo.xml.in
+
+appstream_DATA = $(appstream_in_files:.xml.in=.xml)
+@INTLTOOL_XML_RULE@
+
 EXTRA_DIST = \
 	$(plugin_in_files)	\
+	$(appstream_in_files)	\
 	$(UI_FILES)		\
 	eog-postasa-plugin.gresource.xml
 
-CLEANFILES = $(plugin_DATA) $(BUILT_SOURCES)
-DISTCLEANFILES = $(plugin_DATA) $(BUILT_SOURCES)
+CLEANFILES = $(plugin_DATA) $(appstream_DATA) $(BUILT_SOURCES)
+DISTCLEANFILES = $(plugin_DATA) $(appstream_DATA) $(BUILT_SOURCES)
 
 -include $(top_srcdir)/git.mk

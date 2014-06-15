@@ -1,5 +1,6 @@
 # HideTitlebar plugin
 plugindir = $(libdir)/eog/plugins
+appstreamdir = $(datadir)/appdata
 
 AM_CPPFLAGS = \
 	-I$(top_srcdir)/src 				\
@@ -26,9 +27,14 @@ plugin_in_files = hide-titlebar.plugin.desktop.in
 
 plugin_DATA = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
-EXTRA_DIST = $(plugin_in_files)
+appstream_in_files = eog-hide-titlebar.metainfo.xml.in
 
-CLEANFILES = $(plugin_DATA)
-DISTCLEANFILES = $(plugin_DATA)
+appstream_DATA = $(appstream_in_files:.xml.in=.xml)
+@INTLTOOL_XML_RULE@
+
+EXTRA_DIST = $(plugin_in_files) $(appstream_in_files)
+
+CLEANFILES = $(plugin_DATA) $(appstream_DATA)
+DISTCLEANFILES = $(plugin_DATA) $(appstream_DATA)
 
 -include $(top_srcdir)/git.mk

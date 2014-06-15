@@ -1,5 +1,6 @@
 # ExifDisplay plugin
 plugindir = $(EOG_PLUGINS_LIBS_DIR)
+appstreamdir = $(datadir)/appdata
 uidir = $(EOG_PLUGINS_DATA_DIR)/exif-display
 
 AM_CPPFLAGS = \
@@ -41,12 +42,18 @@ plugin_in_files = exif-display.plugin.desktop.in
 
 plugin_DATA = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
+appstream_in_files = eog-exif-display.metainfo.xml.in
+
+appstream_DATA = $(appstream_in_files:.xml.in=.xml)
+@INTLTOOL_XML_RULE@
+
 gsettings_SCHEMAS = org.gnome.eog.plugins.exif-display.gschema.xml
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
 EXTRA_DIST = \
 	$(plugin_in_files)	\
+	$(appstream_in_files)	\
 	exif-display.ui		\
 	exif-display-config.ui	\
 	eog-exif-display-plugin.gresource.xml	\
@@ -55,11 +62,13 @@ EXTRA_DIST = \
 CLEANFILES = \
 	${BUILT_SOURCES}	\
 	$(plugin_DATA)		\
+	$(appstream_DATA)	\
 	$(gsettings_SCHEMAS)
 
 DISTCLEANFILES = \
 	${BUILT_SOURCES}	\
 	$(plugin_DATA)		\
+	$(appstream_DATA)	\
 	$(gsettings_SCHEMAS)
 
 MAINTAINERCLEANFILES = $(gsettings_SCHEMAS:.xml=.valid)
