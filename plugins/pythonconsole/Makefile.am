@@ -1,8 +1,10 @@
 # Python Console plugin
 plugindir = $(EOG_PLUGINS_LIBS_DIR)
+appstreamdir = $(datadir)/appdata
 pythonconsoledir = $(plugindir)/pythonconsole
 uidir = $(EOG_PLUGINS_DATA_DIR)/pythonconsole
 plugin_in_files = pythonconsole.plugin.desktop.in
+appstream_in_files = eog-pythonconsole.metainfo.xml.in
 
 pythonconsole_PYTHON =	\
 	__init__.py	\
@@ -16,18 +18,22 @@ ui_DATA = $(UI_FILES)
 
 plugin_DATA = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
+appstream_DATA = $(appstream_in_files:.xml.in=.xml)
+@INTLTOOL_XML_RULE@
+
 gsettings_SCHEMAS = org.gnome.eog.plugins.pythonconsole.gschema.xml
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
 EXTRA_DIST = \
 	$(plugin_in_files)	\
+	$(appstream_in_files)	\
 	$(UI_FILES)		\
 	org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in
 
 
-CLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
-DISTCLEANFILES = $(plugin_DATA) $(gsettings_SCHEMAS)
+CLEANFILES = $(plugin_DATA) $(appstream_in_files) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(plugin_DATA) $(appstream_DATA) $(gsettings_SCHEMAS)
 MAINTAINERCLEANFILES = $(gsettings_SCHEMAS:.xml=.valid)
 
 -include $(top_srcdir)/git.mk
