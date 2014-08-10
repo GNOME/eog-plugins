@@ -22,17 +22,16 @@ appstream_DATA = $(appstream_in_files:.xml.in=.xml)
 @INTLTOOL_XML_RULE@
 
 gsettings_SCHEMAS = org.gnome.eog.plugins.pythonconsole.gschema.xml
-@INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
 EXTRA_DIST = \
 	$(plugin_in_files)	\
 	$(appstream_in_files)	\
 	$(UI_FILES)		\
-	org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in
+	org.gnome.eog.plugins.pythonconsole.gschema.xml.in
 
 
-CLEANFILES = $(plugin_DATA) $(appstream_in_files) $(gsettings_SCHEMAS)
+CLEANFILES = $(plugin_DATA) $(appstream_DATA) $(gsettings_SCHEMAS)
 DISTCLEANFILES = $(plugin_DATA) $(appstream_DATA) $(gsettings_SCHEMAS)
 MAINTAINERCLEANFILES = $(gsettings_SCHEMAS:.xml=.valid)
 

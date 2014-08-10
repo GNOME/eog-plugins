@@ -32,7 +32,7 @@ AC_PROG_MAKE_SET
 # ***********
 
 AM_GLIB_GNU_GETTEXT
-IT_PROG_INTLTOOL([0.40.0])
+IT_PROG_INTLTOOL([0.50.1])
 
 GETTEXT_PACKAGE=eog-plugins
 AC_SUBST(GETTEXT_PACKAGE)
@@ -338,11 +338,11 @@ plugins/Makefile
 plugins/map/Makefile
 plugins/fit-to-width/Makefile
 plugins/exif-display/Makefile
-plugins/exif-display/org.gnome.eog.plugins.exif-display.gschema.xml.in
+plugins/exif-display/org.gnome.eog.plugins.exif-display.gschema.xml
 plugins/export-to-folder/Makefile
-plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in
+plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml
 plugins/fullscreenbg/Makefile
-plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
+plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml
 plugins/hide-titlebar/Makefile
 plugins/light-theme/Makefile
 plugins/send-by-mail/Makefile
@@ -350,7 +350,7 @@ plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile
 plugins/postasa/Makefile
 plugins/pythonconsole/Makefile
-plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in
+plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml
 po/Makefile.in])
 
 AC_OUTPUT

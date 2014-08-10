@@ -5,7 +5,7 @@ plugin_in_files = fullscreenbg.plugin.desktop.in
 appstream_in_files = eog-fullscreenbg.metainfo.xml.in
 
 gsettings_SCHEMAS = org.gnome.eog.plugins.fullscreenbg.gschema.xml
-gsettings_SCHEMAS_in_files = org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in
+gsettings_SCHEMAS_in_files = org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
 
 
 ui_DATA = preferences_dialog.ui
@@ -20,7 +20,7 @@ plugin_DATA = $(plugin_in_files:.plugin.desktop.in=.plugin)
 
 appstream_DATA = $(appstream_in_files:.xml.in=.xml)
 
-@INTLTOOL_XML_NOMERGE_RULE@
+@INTLTOOL_XML_RULE@
 @GSETTINGS_RULES@
 
 EXTRA_DIST = $(plugin_in_files)\

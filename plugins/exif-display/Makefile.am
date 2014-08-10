@@ -48,7 +48,6 @@ appstream_DATA = $(appstream_in_files:.xml.in=.xml)
 @INTLTOOL_XML_RULE@
 
 gsettings_SCHEMAS = org.gnome.eog.plugins.exif-display.gschema.xml
-@INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
 EXTRA_DIST = \
@@ -57,7 +56,7 @@ EXTRA_DIST = \
 	exif-display.ui		\
 	exif-display-config.ui	\
 	eog-exif-display-plugin.gresource.xml	\
-	org.gnome.eog.plugins.exif-display.gschema.xml.in.in
+	org.gnome.eog.plugins.exif-display.gschema.xml.in
 
 CLEANFILES = \
 	${BUILT_SOURCES}	\
