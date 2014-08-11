@@ -3,7 +3,7 @@
 <component type="addon">
   <id>eog-light-theme</id>
   <extends>eog.desktop</extends>
-  <_name>Disable dark theme</_name>
+  <_name>Disable Dark Theme</_name>
   <_summary>Disables dark theme</_summary>
   <url type="homepage">https://wiki.gnome.org/Apps/EyeOfGnome/Plugins</url>
   <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=eog&amp;component=plugins</url>
