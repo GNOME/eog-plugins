@@ -6,15 +6,15 @@
 # Petr Kovar <pknbe@volny.cz>, 2008.
 # Adrian Guniš <andygun696@gmail.com>, 2009, 2010, 2011.
 # Adam Matoušek <adydas95@gmail.com>, 2012.
-# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013.
+# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-24 18:09+0000\n"
-"PO-Revision-Date: 2013-03-18 20:49+0100\n"
+"POT-Creation-Date: 2014-08-18 15:29+0000\n"
+"PO-Revision-Date: 2014-08-18 22:13+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -64,12 +64,18 @@ msgid "Display camera settings in statusbar"
 msgstr "Zobrazit nastavení fotoaparátu ve stavové liště"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+msgid "Exif Display"
 msgstr "Zobrazení informací Exif"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Zobrazí nastavení fotoaparátu a histogram"
+
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr ""
+"Zobrazí informace Exif v postranním panelu a volitelně ve stavové liště"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -99,23 +105,25 @@ msgstr "Kompenzace expozice:"
 msgid "Description:"
 msgstr "Popis:"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
 msgid "Export to Folder"
 msgstr "Exportovat do složky"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
 msgstr "Exportuje aktuální obrázek do zvláštní složky"
 
-#: ../plugins/export-to-folder/export-to-folder.py:62
+#: ../plugins/export-to-folder/export-to-folder.py:61
 msgid "_Export"
 msgstr "_Exportovat"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
 msgid "The folder to export to"
 msgstr "Složka do které se má exportovat"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
@@ -128,6 +136,15 @@ msgstr ""
 msgid "Export directory:"
 msgstr "Složka pro export:"
 
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+msgid "Zoom to Fit Image Width"
+msgstr "Přizpůsobit přiblížení šířce obrázku"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
+msgid "Adjusts the zoom to have the image's width fit into the window"
+msgstr "Přizpůsobí přiblížení tak, aby obrázek zabíral celou šířku okna"
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Přizpůsobit šířce"
@@ -136,36 +153,34 @@ msgstr "Přizpůsobit šířce"
 msgid "Fit the image to the window width"
 msgstr "Přizpůsobit obrázek šířce okna"
 
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Přizpůsobit přiblížení šířce obrázku"
-
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
 msgstr "Přizpůsobí obrázky šířce okna"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
 msgstr "Pozadí celé obrazovky"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Enables changing background in fullscreen mode"
 msgstr "Povolí změnu pozadí v režimu celé obrazovky"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
 msgstr "Použít vlastní nastavení pozadí"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
 msgid "Whether the plugin should use global settings or its own."
 msgstr ""
 "Zdali by měl zásuvný modul používat globální nastavení nebo své vlastní."
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
 msgid "Background color in fullscreen mode"
 msgstr "Barva pozadí v režimu celé obrazovky"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -177,21 +192,41 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Použít vlastní barvu:"
 
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
 msgid "Hide Titlebar"
 msgstr "Skrýt lištu záhlaví"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+msgid "Hides the titlebar of maximized windows"
+msgstr "Skryje lištu záhlaví kvůli maximalizaci okna"
 
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "Skryje lištu záhlaví kvůli maximalizaci okna Eye of GNOME"
 
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-msgid "Disable dark theme"
+msgid "Disable Dark Theme"
 msgstr "Vypnout tmavý motiv"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+msgid "Disables dark theme"
+msgstr "Vypne tmavý motiv"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
 msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Vypne varianty tmavého motivu v předvolbách Eye of GNOME"
+
+#: ../plugins/map/eog-map.metainfo.xml.in.h:1
+#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/map.plugin.desktop.in.h:1
+msgid "Map"
+msgstr "Mapa"
+
+#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Na mapě v postranním panelu zobrazí, kde byl obrázek pořízen"
 
 #: ../plugins/map/eog-map-plugin.c:401
 msgid "Jump to current image's location"
@@ -205,14 +240,17 @@ msgstr "Přiblížit"
 msgid "Zoom out"
 msgstr "Oddálit"
 
-#: ../plugins/map/eog-map-plugin.c:436
-#: ../plugins/map/map.plugin.desktop.in.h:1
-msgid "Map"
-msgstr "Mapa"
-
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Zobrazí geografickou polohu obrázku na mapě"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+msgid "Picasa Web Uploader"
+msgstr "Odesílání na Picasa Web"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Podpora odesílání fotografií do služby Google Picase Web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
@@ -285,6 +323,10 @@ msgstr "_Uživatelské jméno:"
 msgid "_Password:"
 msgstr "_Heslo:"
 
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "Odesílání na PicasaWeb"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
 msgstr "Odesílání:"
@@ -309,9 +351,13 @@ msgstr "Zvoleno zrušení"
 msgid "Cancel All"
 msgstr "Zrušit vše"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
-msgid "PicasaWeb Uploader"
-msgstr "Odesílání na PicasaWeb"
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+msgid "Postr"
+msgstr "Postr"
+
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Flickr"
+msgstr "Podpora odesílání fotografií do služby Flickr"
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
@@ -326,15 +372,6 @@ msgstr "Odešlete své obrázky na Flickr"
 msgid "Flickr Uploader"
 msgstr "Odesílání na Flickr"
 
-#: ../plugins/pythonconsole/__init__.py:64
-msgid "P_ython Console"
-msgstr "Konzola jazyka P_ython"
-
-#: ../plugins/pythonconsole/__init__.py:88
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Konzola jazyka Python"
-
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
 msgstr "Barva pří_kazu:"
@@ -343,27 +380,41 @@ msgstr "Barva pří_kazu:"
 msgid "_Error color:"
 msgstr "Barva chy_by:"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
+#: ../plugins/pythonconsole/__init__.py:87
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Konzola jazyka Python"
+
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+msgid "Adds a Python console"
+msgstr "Přidá konzolu jazyka Python"
+
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "Konzola jazyka P_ython"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
 msgid "Command Text Color"
 msgstr "Barva textu příkazu"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
 msgid "The color used for commands."
 msgstr "Barva použitá pro příkazy"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
 msgid "Error Text Color"
 msgstr "Barva textu chyby"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
 msgid "The color used for errors."
 msgstr "Barva použitá pro chyby."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
 msgid "Whether to use the system font"
 msgstr "Zda používat systémové písmo"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -371,11 +422,11 @@ msgstr ""
 "Je-li zapnuto, bude terminál používat globální písmo pracovního prostředí, "
 "pokud se jedná o neproporcionální písmo."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
 msgid "Font used by Python Console"
 msgstr "Písmo použité konzolí Python"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
 "Název písma v systému Pango. Například „Sans 12“ nebo „Monospace Bold 14“."
@@ -384,9 +435,15 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "Konzola jazyka Python pro Prohlížeč obrázků"
 
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "Poslat e-mailem"
+
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Pošle obrázek přiložený do nového e-mailu"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
@@ -396,14 +453,15 @@ msgstr "Poslat vybrané obrázky e-mailem"
 msgid "Send By Mail"
 msgstr "Poslat e-mailem"
 
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
-msgid "Sends an image attached to a new mail"
-msgstr "Pošle obrázek přiložený do nového e-mailu"
-
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "Náhodné promítání snímků"
 
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Promíchání fotografií v režimu promítání"
+
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
-msgstr "Promíchá snímky v režimu promítání"
+msgstr "Promíchá obrázky v režimu promítání"
