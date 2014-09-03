@@ -134,7 +134,8 @@ get_coordinates (EogImage *image,
 		entry = exif_data_get_entry (exif_data,
 					     EXIF_TAG_GPS_LONGITUDE);
 
-		if (!parse_exif_gps_coordinate (entry, &lon, byte_order)) {
+		if (!parse_exif_gps_coordinate (entry, &lon, byte_order)
+		    || (lon > 180.0)) {
 			exif_data_unref (exif_data);
 			return FALSE;
 		}
@@ -150,7 +151,8 @@ get_coordinates (EogImage *image,
 		entry = exif_data_get_entry (exif_data,
 					     EXIF_TAG_GPS_LATITUDE);
 
-		if (!parse_exif_gps_coordinate (entry, &lat, byte_order)) {
+		if (!parse_exif_gps_coordinate (entry, &lat, byte_order)
+		    || (lat > 90.0)) {
 			exif_data_unref (exif_data);
 			return FALSE;
 		}
