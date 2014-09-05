@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-07-20 18:53+0000\n"
-"PO-Revision-Date: 2013-09-26 18:55+0700\n"
+"POT-Creation-Date: 2014-09-05 03:29+0000\n"
+"PO-Revision-Date: 2014-09-05 20:11+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "Language: id\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.9\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -60,12 +60,18 @@ msgid "Display camera settings in statusbar"
 msgstr "Tampilkan tatanan kamera di batang status"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+msgid "Exif Display"
 msgstr "Tampilan Exif"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Tampilkan tatanan kamera dan histogram"
+
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr ""
+"Tampilkan tag Exif pada panel sisi dan secara opsional pada bilah status"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -95,23 +101,25 @@ msgstr "Bias Pencahayaan:"
 msgid "Description:"
 msgstr "Keterangan:"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
 msgid "Export to Folder"
 msgstr "Ekspor ke Folder"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
 msgstr "Ekspor gambar sekarang ke direktori terpisah"
 
-#: ../plugins/export-to-folder/export-to-folder.py:62
+#: ../plugins/export-to-folder/export-to-folder.py:61
 msgid "_Export"
 msgstr "_Ekspor"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
 msgid "The folder to export to"
 msgstr "Folder tujuan ekspor"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
@@ -123,6 +131,15 @@ msgstr ""
 msgid "Export directory:"
 msgstr "Direktori ekspor:"
 
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+msgid "Zoom to Fit Image Width"
+msgstr "Zum agar Pas Lebar Citra"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
+msgid "Adjusts the zoom to have the image's width fit into the window"
+msgstr "Atur zum agar lebar citra pas ke jendela"
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Pas lebar"
@@ -131,36 +148,34 @@ msgstr "Pas lebar"
 msgid "Fit the image to the window width"
 msgstr "Paskan gambar ke lebar jendela"
 
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Zum agar pas lebar citra"
-
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
 msgstr "Paskan gambar ke lebar jendela"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
 msgstr "Latar Belakang Layar Penuh"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Enables changing background in fullscreen mode"
 msgstr "Fungsikan pengubahan latar belakang dalam mode layar penuh"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
 msgstr "Gunakan pengaturan latar belakang ubahan"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
 msgid "Whether the plugin should use global settings or its own."
 msgstr ""
 "Apakah plugin mesti memakai pengaturan global atau memakai miliki sendiri."
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
 msgid "Background color in fullscreen mode"
 msgstr "Warna latar belakang dalam mode layar penuh"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -172,42 +187,65 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Gunakan warna ubahan:"
 
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
 msgid "Hide Titlebar"
 msgstr "Sembunyikan Bilah Judul"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+msgid "Hides the titlebar of maximized windows"
+msgstr "Sembunyikan bilah judul dari jendela yang dimaksimalkan"
 
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "Sembunyikan bilah judul dari jendela Eye of GNOME yang dimaksimalkan"
 
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-msgid "Disable dark theme"
+msgid "Disable Dark Theme"
+msgstr "Nonaktifkan Tema Gelap"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+msgid "Disables dark theme"
 msgstr "Nonaktifkan tema gelap"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
 msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Nonaktifkan preferensi Eye of GNOME atas varian tema gelap"
 
-#: ../plugins/map/eog-map-plugin.c:401
-msgid "Jump to current image's location"
-msgstr "Lompat ke lokasi citra kini"
-
-#: ../plugins/map/eog-map-plugin.c:413
-msgid "Zoom in"
-msgstr "Perbesar"
-
-#: ../plugins/map/eog-map-plugin.c:421
-msgid "Zoom out"
-msgstr "Perkecil"
-
-#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/eog-map.metainfo.xml.in.h:1
+#: ../plugins/map/eog-map-plugin.c:438
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Peta"
 
+#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Tampilkan pada sebuah peta di panel sisi di mana gambar diambil"
+
+#: ../plugins/map/eog-map-plugin.c:403
+msgid "Jump to current image's location"
+msgstr "Lompat ke lokasi citra kini"
+
+#: ../plugins/map/eog-map-plugin.c:415
+msgid "Zoom in"
+msgstr "Perbesar"
+
+#: ../plugins/map/eog-map-plugin.c:423
+msgid "Zoom out"
+msgstr "Perkecil"
+
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Tampilkan lokasi geografis citra pada peta"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+msgid "Picasa Web Uploader"
+msgstr "Pengunggah Web Picasa"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Mendukung pengunggahan foto ke Google Picasa Web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
@@ -280,6 +318,10 @@ msgstr "Nama Pengg_una:"
 msgid "_Password:"
 msgstr "_Sandi:"
 
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "Pengunggah Picasa"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
 msgstr "Unggahan:"
@@ -304,9 +346,13 @@ msgstr "Batalkan Yang Dipilih"
 msgid "Cancel All"
 msgstr "Batalkan Semua"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
-msgid "PicasaWeb Uploader"
-msgstr "Pengunggah Picasa"
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+msgid "Postr"
+msgstr "Postr"
+
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Flickr"
+msgstr "Mendukung pengunggahan foto ke Flickr"
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
@@ -321,15 +367,6 @@ msgstr "Unggah citra Anda ke Flickr"
 msgid "Flickr Uploader"
 msgstr "Pengunggah Flickr"
 
-#: ../plugins/pythonconsole/__init__.py:64
-msgid "P_ython Console"
-msgstr "Konsol P_ython"
-
-#: ../plugins/pythonconsole/__init__.py:88
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Konsol Python"
-
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
 msgstr "Warn_a perintah:"
@@ -338,27 +375,41 @@ msgstr "Warn_a perintah:"
 msgid "_Error color:"
 msgstr "War_na galat:"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
+#: ../plugins/pythonconsole/__init__.py:87
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Konsol Python"
+
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+msgid "Adds a Python console"
+msgstr "Menambah sebuah konsol Python"
+
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "Konsol P_ython"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
 msgid "Command Text Color"
 msgstr "Warna Teks Perintah"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
 msgid "The color used for commands."
 msgstr "Warna yang dipakai untuk perintah."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
 msgid "Error Text Color"
 msgstr "Warna Teks Galat"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
 msgid "The color used for errors."
 msgstr "Warna yang dipakai untuk galat."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
 msgid "Whether to use the system font"
 msgstr "Apakah memakai fonta sistem"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -367,11 +418,11 @@ msgstr ""
 "oleh desktop secara global jika berjenis monospace (dan fonta lainnya yang "
 "sejenis)."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
 msgid "Font used by Python Console"
 msgstr "Fonta yang dipakai oleh Konsol Python"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
 "Nama fonta Pango. Sebagai contoh \"Sans 12\" atau \"Monospace Bold 14\"."
@@ -380,9 +431,15 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "Konsol Python untuk Mata GNOME"
 
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "Kirim lewat Surel:"
+
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Kirim suatu citra yang dilampirkan pada suatu surel baru"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
@@ -392,13 +449,14 @@ msgstr "Kirim citra yang dipilih lewat surel"
 msgid "Send By Mail"
 msgstr "Kirim Lewat Surel"
 
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
-msgid "Sends an image attached to a new mail"
-msgstr "Kirim suatu citra yang dilampirkan pada suatu surel baru"
-
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "Acak Pertunjukan Slide"
+
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Acak foto pada moda pertunjukan salindia"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
