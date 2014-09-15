@@ -1,9 +1,24 @@
+Version 3.13.92
+---------------
+
+Plugin changes:
+
+- Map
+ - #735914, EOG's Map plugin crashes on invalid GPS coordinates (Felix Riemann)
+
+New and updated translations:
+
+- Daniel Mustieles [es]
+- Balázs Úr [hu]
+- Andika Triwidada [id]
+- Changwoo Ryu [ko]
+
 Version 3.13.1
 --------------
 
 General changes:
 
-- 731676, add metainfo files for all available plugins
+- #731676, add metainfo files for all available plugins
           (Igor Gnatenko, Felix Riemann, Piotr Drąg)
 
 Plugin changes:
