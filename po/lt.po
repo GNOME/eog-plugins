@@ -4,15 +4,15 @@
 #
 # Gintautas Miliauskas <gintas@akl.lt>, 2008.
 # Žygimantas Beručka <zygis@gnome.org>, 20, 2010.
-# Aurimas Černius <aurisc4@gmail.com>, 2013.
+# Aurimas Černius <aurisc4@gmail.com>, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-24 18:09+0000\n"
-"PO-Revision-Date: 2013-02-27 22:47+0200\n"
+"POT-Creation-Date: 2014-10-06 15:33+0000\n"
+"PO-Revision-Date: 2014-10-18 21:35+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -63,12 +63,18 @@ msgid "Display camera settings in statusbar"
 msgstr "Rodyti kameros nustatymus būsenos juostoje"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+#| msgid "Exif display"
+msgid "Exif Display"
 msgstr "Exif vaizduoklis"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Rodo kameros nustatymus ir histogramą"
+
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr "Rodo Exif žymas šoniniame polangyje ir galimai būsenos juostoje"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -98,23 +104,25 @@ msgstr "Rodymo nuožulnumas:"
 msgid "Description:"
 msgstr "Aprašymas:"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
 msgid "Export to Folder"
 msgstr "Eksportuoti į aplanką"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
 msgstr "Eksportuoti dabartinį paveikslėlį į atskirą katalogą"
 
-#: ../plugins/export-to-folder/export-to-folder.py:62
+#: ../plugins/export-to-folder/export-to-folder.py:61
 msgid "_Export"
 msgstr "_Eksportuoti"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
 msgid "The folder to export to"
 msgstr "Aplankas, į kurį eksportuoti"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
@@ -126,6 +134,16 @@ msgstr ""
 msgid "Export directory:"
 msgstr "Eksportavimo katalogas:"
 
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+#| msgid "Zoom to fit image width"
+msgid "Zoom to Fit Image Width"
+msgstr "Keisti mastelį sutalpinant paveikslėlio plotį"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
+msgid "Adjusts the zoom to have the image's width fit into the window"
+msgstr "Pakoreguoja mastelį, kad paveikslėlio plotis tilptų į langą"
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Sutalpinti į plotį"
@@ -134,35 +152,33 @@ msgstr "Sutalpinti į plotį"
 msgid "Fit the image to the window width"
 msgstr "Pritaikyti paveikslėlį prie lango pločio"
 
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Keisti mastelį sutalpinant paveikslėlio plotį"
-
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
 msgstr "Pritaikyti paveikslėlio prie lango pločio"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
 msgstr "Fonas viso ekrano veiksenoje"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Enables changing background in fullscreen mode"
 msgstr "Leidžia pakeisti foną viso ekrano veiksenoje"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
 msgstr "Naudoti pasirinktinius fono nustatymus"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
 msgid "Whether the plugin should use global settings or its own."
 msgstr "Ar įskiepis turėtų naudoti visuotinius nustatymus, ar savo."
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
 msgid "Background color in fullscreen mode"
 msgstr "Fono spalva viso ekrano veiksenoje"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -174,42 +190,69 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Naudoti pasirinktinę spalvą:"
 
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
 msgid "Hide Titlebar"
 msgstr "Slėpti pavadinimo juostą"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+#| msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgid "Hides the titlebar of maximized windows"
+msgstr "Slepia išdidintų langų pavadinimų juostas"
 
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "Slepia išdidintų Eye of GNOME langų pavadinimų juostas"
 
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-msgid "Disable dark theme"
+#| msgid "Disable dark theme"
+msgid "Disable Dark Theme"
 msgstr "Išjungti tamsią temą"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+#| msgid "Disable dark theme"
+msgid "Disables dark theme"
+msgstr "Išjungia tamsią temą"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
 msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Išjungia Eye of GNOME tamsaus temos varianto pageidavimą"
 
-#: ../plugins/map/eog-map-plugin.c:401
-msgid "Jump to current image's location"
-msgstr "Pereiti į dabartinio paveikslėlio vietą"
-
-#: ../plugins/map/eog-map-plugin.c:413
-msgid "Zoom in"
-msgstr "Didinti"
-
-#: ../plugins/map/eog-map-plugin.c:421
-msgid "Zoom out"
-msgstr "Mažinti"
-
-#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/eog-map.metainfo.xml.in.h:1
+#: ../plugins/map/eog-map-plugin.c:438
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Žemėlapis"
 
+#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Šoniniame polangyje rodo žemėlapio vietą, kur padaryta nuotrauka"
+
+#: ../plugins/map/eog-map-plugin.c:403
+msgid "Jump to current image's location"
+msgstr "Pereiti į dabartinio paveikslėlio vietą"
+
+#: ../plugins/map/eog-map-plugin.c:415
+msgid "Zoom in"
+msgstr "Didinti"
+
+#: ../plugins/map/eog-map-plugin.c:423
+msgid "Zoom out"
+msgstr "Mažinti"
+
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Rodyti paveikslėlio geografinę padėtį žemėlapyje"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+#| msgid "PicasaWeb Uploader"
+msgid "Picasa Web Uploader"
+msgstr "Picasa Web siuntiklis"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Palaiko nuotraukų siuntimą į Google Picasa Web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
@@ -282,6 +325,10 @@ msgstr "_Naudotojo vardas:"
 msgid "_Password:"
 msgstr "Sla_ptažodis:"
 
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb siuntiklis"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
 msgstr "Įkeliami failai:"
@@ -306,9 +353,13 @@ msgstr "Atšaukti pasirinktus"
 msgid "Cancel All"
 msgstr "Atšaukti visus"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
-msgid "PicasaWeb Uploader"
-msgstr "PicasaWeb siuntiklis"
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+msgid "Postr"
+msgstr "Postr"
+
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Flickr"
+msgstr "Palaiko nuotraukų siuntimą į Flickr"
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
@@ -323,15 +374,6 @@ msgstr "Siųsti paveikslėlius į Filckr"
 msgid "Flickr Uploader"
 msgstr "Flickr siuntiklis"
 
-#: ../plugins/pythonconsole/__init__.py:64
-msgid "P_ython Console"
-msgstr "P_ython konsolė"
-
-#: ../plugins/pythonconsole/__init__.py:88
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python konsolė"
-
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
 msgstr "K_omando spalva:"
@@ -340,27 +382,42 @@ msgstr "K_omando spalva:"
 msgid "_Error color:"
 msgstr "_Klaidos spalva:"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
+#: ../plugins/pythonconsole/__init__.py:87
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python konsolė"
+
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+#| msgid "Python Console"
+msgid "Adds a Python console"
+msgstr "Prideda Python konsolę"
+
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "P_ython konsolė"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
 msgid "Command Text Color"
 msgstr "Komandos teksto spalva"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
 msgid "The color used for commands."
 msgstr "Spalva, naudojama komandoms."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
 msgid "Error Text Color"
 msgstr "Klaidos teksto spalva"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
 msgid "The color used for errors."
 msgstr "Spalva, naudojama klaidoms."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
 msgid "Whether to use the system font"
 msgstr "Ar naudoti sistemos šriftą"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -368,11 +425,11 @@ msgstr ""
 "Jei teigiama, terminalas naudos desktop-global standartinį šriftą, jei jis "
 "lygiaplotis (ir kiek įmanoma panašiausią priešingu atveju)."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
 msgid "Font used by Python Console"
 msgstr "Python konsolės naudojamas šriftas"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr "Pango šrifto pavadinimas. Pvz. „Sans 12“ arba „Monospace Bold 14“."
 
@@ -380,9 +437,15 @@ msgstr "Pango šrifto pavadinimas. Pvz. „Sans 12“ arba „Monospace Bold 14�
 msgid "Python console for Eye of GNOME"
 msgstr "Eye of GNOME Python konsolė"
 
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "Siųsti el. paštu"
+
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Siunčia paveikslėlį, prisegtą prie naujo laiško"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
@@ -392,13 +455,15 @@ msgstr "Siųsti pasirinktus paveikslėlius el. paštu"
 msgid "Send By Mail"
 msgstr "Siųsti el. paštu"
 
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
-msgid "Sends an image attached to a new mail"
-msgstr "Siunčia paveikslėlį, prisegtą prie naujo laiško"
-
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "Skaidrių maišymas"
+
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+#| msgid "Shuffles images in slideshow mode"
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Maišo paveikslėlius skaidrių rodymo veiksenoje"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
