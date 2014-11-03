@@ -1,6 +1,6 @@
 # Finnish messages for eog-plugins.
 # Copyright (C) 2008 Free Software Foundation.
-# Suomennos: http://gnome.fi/
+# Suomennos: https://l10n.gnome.org/teams/fi/
 #
 #
 # Ilkka Tuohela <hile@iki.fi>, 2008.
