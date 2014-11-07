@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: eog-plugins 2.28\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-07 20:47+0000\n"
-"PO-Revision-Date: 2013-03-12 09:36-0300\n"
+"POT-Creation-Date: 2014-11-06 16:31+0000\n"
+"PO-Revision-Date: 2014-11-07 01:22-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -61,12 +61,18 @@ msgid "Display camera settings in statusbar"
 msgstr "Exibir as configurações da câmera na barra de status"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
-msgstr "Informações Exif"
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+msgid "Exif Display"
+msgstr "Exibir Exif"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Exibe as configurações da câmera e histogramas"
+
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr ""
+"Exibe etiquetas Exif no painel lateral e, opcionalmente, a barra de status"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -96,23 +102,25 @@ msgstr "Bias de exposição:"
 msgid "Description:"
 msgstr "Descrição:"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
 msgid "Export to Folder"
 msgstr "Exportar para pasta"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
 msgstr "Exportar a imagem atual para um diretório diferente"
 
-#: ../plugins/export-to-folder/export-to-folder.py:62
+#: ../plugins/export-to-folder/export-to-folder.py:61
 msgid "_Export"
 msgstr "_Exportar"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
 msgid "The folder to export to"
 msgstr "A pasta para a qual exportar"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
@@ -124,6 +132,15 @@ msgstr ""
 msgid "Export directory:"
 msgstr "Diretório de exportação:"
 
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+msgid "Zoom to Fit Image Width"
+msgstr "Ampliar para adequar a largura da imagem"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
+msgid "Adjusts the zoom to have the image's width fit into the window"
+msgstr "Ajusta a ampliação para que a largura da imagem se adeque à janela"
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Ajustar ao tamanho"
@@ -132,37 +149,35 @@ msgstr "Ajustar ao tamanho"
 msgid "Fit the image to the window width"
 msgstr "Ajusta a imagem à largura da janela"
 
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Redimensionar para ajustar ao tamanho da imagem"
-
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
 msgstr "Ajusta imagens à largura da janela"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
 msgstr "Plano de fundo em tela cheia"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Enables changing background in fullscreen mode"
 msgstr "Permite modificar o plano de fundo em modo de tela cheia"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
 msgstr "Usar configurações de plano de fundo personalizadas"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
 msgid "Whether the plugin should use global settings or its own."
 msgstr ""
 "Se o plug-in deve usar as configurações globais ou suas próprias "
 "configurações"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
 msgid "Background color in fullscreen mode"
 msgstr "Cor do plano de fundo em modo de tela cheia"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -174,42 +189,65 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Usar cor personalizada:"
 
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
 msgid "Hide Titlebar"
-msgstr "Esconder barra de título"
+msgstr "Ocultar barra de título"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+msgid "Hides the titlebar of maximized windows"
+msgstr "Oculta a barra de título de janelas maximizadas"
 
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Esconde a barra de título de janelas maximizadas do Eye of GNOME"
+msgstr "Oculta a barra de título de janelas maximizadas do Eye of GNOME"
 
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-msgid "Disable dark theme"
+msgid "Disable Dark Theme"
 msgstr "Desabilitar tema escuro"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+msgid "Disables dark theme"
+msgstr "Desabilita tema escuro"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
 msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Desabilita a preferência do Eye of GNOME pela variante escura de temas"
 
-#: ../plugins/map/eog-map-plugin.c:401
-msgid "Jump to current image's location"
-msgstr "Ir para a localização da imagem atual"
-
-#: ../plugins/map/eog-map-plugin.c:413
-msgid "Zoom in"
-msgstr "Mais zoom"
-
-#: ../plugins/map/eog-map-plugin.c:421
-msgid "Zoom out"
-msgstr "Menos zoom"
-
-#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/eog-map.metainfo.xml.in.h:1
+#: ../plugins/map/eog-map-plugin.c:438
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
+#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Exibe em um mapa no painel lateral onde a imagem foi tirada"
+
+#: ../plugins/map/eog-map-plugin.c:403
+msgid "Jump to current image's location"
+msgstr "Ir para a localização da imagem atual"
+
+#: ../plugins/map/eog-map-plugin.c:415
+msgid "Zoom in"
+msgstr "Mais zoom"
+
+#: ../plugins/map/eog-map-plugin.c:423
+msgid "Zoom out"
+msgstr "Menos zoom"
+
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Exibe a localização geográfica da imagem em um mapa"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+msgid "Picasa Web Uploader"
+msgstr "Ferramenta de envio do Picasa Web"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Possui suporte ao envio de fotos para o Google Picasa Web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
@@ -282,6 +320,10 @@ msgstr "Nome de _usuário:"
 msgid "_Password:"
 msgstr "_Senha:"
 
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "Ferramenta de envio do PicasaWeb"
+
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
 msgstr "Enviados:"
@@ -306,9 +348,13 @@ msgstr "Cancelar selecionados"
 msgid "Cancel All"
 msgstr "Cancelar todos"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
-msgid "PicasaWeb Uploader"
-msgstr "Ferramenta de envio do Picasaweb"
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+msgid "Postr"
+msgstr "Postr"
+
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Flickr"
+msgstr "Possui suporte ao envio de fotos para o Flickr"
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
@@ -323,15 +369,6 @@ msgstr "Envie suas imagens ao Flickr"
 msgid "Flickr Uploader"
 msgstr "Ferramenta de envio do Flickr"
 
-#: ../plugins/pythonconsole/__init__.py:64
-msgid "P_ython Console"
-msgstr "Console P_ython"
-
-#: ../plugins/pythonconsole/__init__.py:88
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Console Python"
-
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
 msgstr "Cor de c_omandos:"
@@ -340,27 +377,41 @@ msgstr "Cor de c_omandos:"
 msgid "_Error color:"
 msgstr "Cor de _erros:"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
+#: ../plugins/pythonconsole/__init__.py:87
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Console Python"
+
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+msgid "Adds a Python console"
+msgstr "Adiciona um console Python"
+
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "Console P_ython"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
 msgid "Command Text Color"
 msgstr "Cor de texto para comandos"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
 msgid "The color used for commands."
 msgstr "A cor usada para comandos"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
 msgid "Error Text Color"
 msgstr "Cor de texto para erros"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
 msgid "The color used for errors."
 msgstr "A cor usada para erros."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
 msgid "Whether to use the system font"
 msgstr "Se a fonte do sistema deve ser utilizada"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -369,11 +420,11 @@ msgstr ""
 "trabalho caso esta seja monoespaçada (e a fonte mais similar que consiga "
 "encontrar em caso contrário)."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
 msgid "Font used by Python Console"
 msgstr "Fonte usada pelo console Python"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
 "Um nome de fonte Pango. Exemplos são \"Sans 12\" ou \"Monospace Bold 14\"."
@@ -382,9 +433,15 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "Console Python para o Visualisador de imagens GNOME"
 
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "Enviar por e-mail"
+
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Envia uma imagem anexada em um novo e-mail"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
@@ -394,13 +451,14 @@ msgstr "Enviar as imagens selecionadas por e-mail"
 msgid "Send By Mail"
 msgstr "Enviar por e-mail"
 
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
-msgid "Sends an image attached to a new mail"
-msgstr "Envia uma imagem anexada em um novo e-mail"
-
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "Modo de apresentação"
+
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Mistura as fotos em um modo de apresentação"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
