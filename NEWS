@@ -1,3 +1,20 @@
+Version 3.14.1
+--------------
+
+New and updated translations:
+
+- Timo Jyrinki [fi]
+- Claude Paroz [fr]
+- Aurimas Černius [lt]
+- Rafael Ferreira [pt_BR]
+- Мирослав Николић [sr]
+- Miroslav Nikolić [sr@latin]
+
+Version 3.14.0
+--------------
+
+* Re-release 3.13.92 as 3.14.0 to have an "official" 3.14-release.
+
 Version 3.13.92
 ---------------
 
