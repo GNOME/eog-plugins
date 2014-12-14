@@ -602,7 +602,7 @@ picasaweb_login_async_cb (GDataPicasaWebService *service, GAsyncResult *result, 
 		gtk_label_set_text (plugin->priv->login_message, message);
 		g_free (message);
 	} else {
-		gtk_label_set_text (plugin->priv->login_message, _("Logged in successully."));
+		gtk_label_set_text (plugin->priv->login_message, _("Logged in successfully."));
 		gtk_button_set_label (plugin->priv->cancel_button, _("Close"));
 		login_dialog_close (plugin);
 	}
