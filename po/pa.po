@@ -157,7 +157,7 @@ msgid "Login failed. %s"
 msgstr "ਲਾਗਇਨ ਫੇਲ੍ਹ ਹੈ। %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:527
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "ਲਾਗਇਨ ਸਫ਼ਲ ਰਿਹਾ ਹੈ।"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:528

@@ -156,7 +156,7 @@ msgid "Login failed. %s"
 msgstr "فشل الولوج. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:585
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "نجح الولوج."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:586

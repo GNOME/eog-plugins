@@ -158,7 +158,7 @@ msgid "Login failed. %s"
 msgstr "Autentificarea a eșuat. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:524
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Autentificat cu succes."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:525

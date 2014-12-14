@@ -237,7 +237,7 @@ msgid "Login failed. %s"
 msgstr "Huts egin du saioa hastean. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Saioa ongi hasita."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

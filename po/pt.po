@@ -239,7 +239,7 @@ msgid "Login failed. %s"
 msgstr "Início de sessão falhou. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Sessão iniciada com sucesso."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

@@ -276,7 +276,7 @@ msgid "Login failed. %s"
 msgstr "로그인 실패. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "성공적으로 로그인."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

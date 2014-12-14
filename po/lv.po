@@ -238,7 +238,7 @@ msgid "Login failed. %s"
 msgstr "Ierakstīšanās neveiksmīga. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Ierakstījās veiksmīgi."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

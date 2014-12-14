@@ -185,7 +185,7 @@ msgid "Login failed. %s"
 msgstr "No s'ha pogut entrar. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:603
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "S'ha entrat correctament."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:604

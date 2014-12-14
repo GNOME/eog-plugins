@@ -189,7 +189,7 @@ msgid "Login failed. %s"
 msgstr "ログインできませんでした: %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:603
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "ログインが完了しました"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:604

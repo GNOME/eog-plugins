@@ -157,7 +157,7 @@ msgid "Login failed. %s"
 msgstr "Помилка реєстрації. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:524
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Вхід успашно виконано."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:525

@@ -241,7 +241,7 @@ msgid "Login failed. %s"
 msgstr "Produciuse un fallo ao autenticarse. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Autenticación correcta."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

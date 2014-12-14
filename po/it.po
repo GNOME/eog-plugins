@@ -239,7 +239,7 @@ msgid "Login failed. %s"
 msgstr "Accesso non riuscito. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Accesso effettuato con successo."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

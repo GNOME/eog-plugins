@@ -180,7 +180,7 @@ msgid "Login failed. %s"
 msgstr "Inloggningen misslyckades. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:603
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Loggade in."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:604

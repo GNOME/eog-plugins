@@ -239,7 +239,7 @@ msgid "Login failed. %s"
 msgstr "Indlogning mislykkedes. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Loggede ind med success."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

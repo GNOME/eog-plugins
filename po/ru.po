@@ -233,7 +233,7 @@ msgid "Login failed. %s"
 msgstr "Не удалось войти. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:603
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Вход завершён успешно."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:604

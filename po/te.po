@@ -158,7 +158,7 @@ msgid "Login failed. %s"
 msgstr "ప్రవేశం విఫలమైంది. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:603
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "విజయవంతంగా లోనికి ప్రవేశించారు."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:604

@@ -241,7 +241,7 @@ msgid "Login failed. %s"
 msgstr "הכניסה נכשלה.%s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "הכניסה הושלמה בהצלחה."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

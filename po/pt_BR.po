@@ -280,7 +280,7 @@ msgid "Login failed. %s"
 msgstr "Login falhou. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Conectado com sucesso."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

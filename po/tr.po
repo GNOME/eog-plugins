@@ -273,7 +273,7 @@ msgid "Login failed. %s"
 msgstr "Oturum açma başarısız oldu. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Başarıyla oturum açıldı."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

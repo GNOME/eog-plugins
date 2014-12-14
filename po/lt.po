@@ -285,7 +285,7 @@ msgid "Login failed. %s"
 msgstr "Prisijungimas nepavyko. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Prisijungta sėkmingai."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

@@ -282,7 +282,7 @@ msgid "Login failed. %s"
 msgstr "Prihlásenie zlyhalo. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Úspešné prihlásenie."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

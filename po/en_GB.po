@@ -234,7 +234,7 @@ msgid "Login failed. %s"
 msgstr "Login failed. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:603
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Logged in successfully."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:604

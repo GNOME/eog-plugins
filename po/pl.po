@@ -283,7 +283,7 @@ msgid "Login failed. %s"
 msgstr "Zalogowanie się nie powiodło. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Zalogowano."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606

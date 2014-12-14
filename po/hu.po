@@ -286,7 +286,7 @@ msgid "Login failed. %s"
 msgstr "A bejelentkezés meghiúsult. %s"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "A bejelentkezés sikerült."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:606
