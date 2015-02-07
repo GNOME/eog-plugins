@@ -1,21 +1,24 @@
-# translation of eu.po to Basque
+# Basque translation for eog-plugins
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2014.
+# Edurne Labaka <elabaka@uzei.com>, 2015.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-15 11:53+0200\n"
-"PO-Revision-Date: 2014-07-10 21:19+0200\n"
+"Project-Id-Version: eog-plugins gnome-3-12\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-07 11:44+0100\n"
+"PO-Revision-Date: 2014-11-10 16:14+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Poedit 1.6.10\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
@@ -99,7 +102,7 @@ msgstr "Esportatu karpetara"
 
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
-msgstr "Esportatu uneko irudia bereiztutako direktorio batera"
+msgstr "Esportatu uneko irudia bereizitako direktorio batera"
 
 #: ../plugins/export-to-folder/export-to-folder.py:61
 msgid "_Export"
@@ -255,7 +258,7 @@ msgstr "Saioa hasten..."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:678
 msgid "Please log in to continue upload."
-msgstr "Hasi saioa igotzen jarratitzeko."
+msgstr "Hasi saioa igotzen jarraitzeko."
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -398,4 +401,4 @@ msgstr "Ausazko diapositiba-aurkezpena"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
-msgstr "Ausaz nahastu irudiak diapositiba-aurkezpena moduan"
+msgstr "Ausaz nahasi irudiak diapositiba-aurkezpena moduan"
