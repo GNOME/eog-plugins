@@ -1,14 +1,17 @@
-# translation of eu.po to Basque
+# Basque translation for eog-plugins
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2014.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2014, 2015.
+# Edurne Labaka <elabaka@uzei.com>, 2015.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-15 11:53+0200\n"
-"PO-Revision-Date: 2014-07-10 21:19+0200\n"
+"Project-Id-Version: eog-plugins master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
+"plugins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-07 11:47+0100\n"
+"PO-Revision-Date: 2015-02-07 11:49+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
@@ -58,12 +61,17 @@ msgid "Display camera settings in statusbar"
 msgstr "Bistaratu kameraren ezarpenak egoera-barran"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+msgid "Exif Display"
 msgstr "Bistaratu Exif"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Bistaratu kameraren ezarpenak eta histograma"
+
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr ""
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -93,23 +101,25 @@ msgstr "Esposizio-zuzenketa:"
 msgid "Description:"
 msgstr "Azalpena:"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
 msgid "Export to Folder"
 msgstr "Esportatu karpetara"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
-msgstr "Esportatu uneko irudia bereiztutako direktorio batera"
+msgstr "Esportatu uneko irudia bereizitako direktorio batera"
 
 #: ../plugins/export-to-folder/export-to-folder.py:61
 msgid "_Export"
 msgstr "E_sportatu"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
 msgid "The folder to export to"
 msgstr "Karpeta (horra esportatzeko)"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
@@ -121,6 +131,15 @@ msgstr ""
 msgid "Export directory:"
 msgstr "Esportatze-direktorioa:"
 
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+msgid "Zoom to Fit Image Width"
+msgstr "Zooma irudiaren zabalera doitzeko"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
+msgid "Adjusts the zoom to have the image's width fit into the window"
+msgstr ""
+
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
 msgstr "Doitu zabalera"
@@ -129,35 +148,33 @@ msgstr "Doitu zabalera"
 msgid "Fit the image to the window width"
 msgstr "Doitu irudia leihoaren zabalerara"
 
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Zooma irudia zabalerara doitzeko"
-
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
 msgstr "Doitu irudiak leihoaren zabalerara"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
 msgstr "Pantaila osoaren atzeko planoa"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Enables changing background in fullscreen mode"
 msgstr "Atzeko planoa pantaila osoko moduan aldatzea gaitzen du"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
 msgstr "Erabili atzeko planoaren ezarpen pertsonalizatuak"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
 msgid "Whether the plugin should use global settings or its own."
 msgstr "Pluginak ezarpen globalak edo bereak erabiliko dituen."
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
 msgid "Background color in fullscreen mode"
 msgstr "Atzeko planoaren kolorea pantaila osoko moduan"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -169,42 +186,65 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Erabili kolore pertsonalizatua:"
 
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
 msgid "Hide Titlebar"
 msgstr "Ezkutatu titulu-barra"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+msgid "Hides the titlebar of maximized windows"
+msgstr "Leiho maximizatuen titulu-barra ezkutatzen du"
 
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "GNOMEren Begiaren leiho maximizatuen titulu-barra ezkutatzen du"
 
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-msgid "Disable dark theme"
-msgstr "Desgaitu gai iluna"
+msgid "Disable Dark Theme"
+msgstr "Desgaitu 'Gai iluna'"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+msgid "Disables dark theme"
+msgstr "'Gai iluna' desgaitzen du"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
 msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "GNOMEren Begiaren gai ilunaren aldaeren hobespenak desgaitzen ditu"
 
-#: ../plugins/map/eog-map-plugin.c:401
-msgid "Jump to current image's location"
-msgstr "Joan uneko irudiaren kokalekura"
-
-#: ../plugins/map/eog-map-plugin.c:413
-msgid "Zoom in"
-msgstr "Handiagotu"
-
-#: ../plugins/map/eog-map-plugin.c:421
-msgid "Zoom out"
-msgstr "Txikiagotu"
-
-#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/eog-map.metainfo.xml.in.h:1
+#: ../plugins/map/eog-map-plugin.c:438
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
+#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr ""
+
+#: ../plugins/map/eog-map-plugin.c:403
+msgid "Jump to current image's location"
+msgstr "Joan uneko irudiaren kokalekura"
+
+#: ../plugins/map/eog-map-plugin.c:415
+msgid "Zoom in"
+msgstr "Handiagotu"
+
+#: ../plugins/map/eog-map-plugin.c:423
+msgid "Zoom out"
+msgstr "Txikiagotu"
+
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Bistaratu irudiaren geolokalizazioa mapa batean"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+msgid "Picasa Web Uploader"
+msgstr "Picasa Web-eko igotzailea"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr ""
 
 #: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
@@ -255,7 +295,7 @@ msgstr "Saioa hasten..."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:678
 msgid "Please log in to continue upload."
-msgstr "Hasi saioa igotzen jarratitzeko."
+msgstr "Hasi saioa igotzen jarraitzeko."
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -276,6 +316,10 @@ msgstr "_Erabiltzaile-izena:"
 #: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Password:"
 msgstr "_Pasahitza:"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb-eko igotzailea"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -301,9 +345,13 @@ msgstr "Utzi hautatutakoa"
 msgid "Cancel All"
 msgstr "Utzi dena"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
-msgid "PicasaWeb Uploader"
-msgstr "PicasaWeb-eko igotzailea"
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+msgid "Postr"
+msgstr ""
+
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Flickr"
+msgstr ""
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
@@ -318,15 +366,6 @@ msgstr "Igo zure argazkiak Flickr gunera"
 msgid "Flickr Uploader"
 msgstr "Flickr igotzailea"
 
-#: ../plugins/pythonconsole/__init__.py:64
-msgid "P_ython Console"
-msgstr "_Python kontsola"
-
-#: ../plugins/pythonconsole/__init__.py:87
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python kontsola"
-
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
 msgstr "_Komandoen kolorea:"
@@ -335,27 +374,41 @@ msgstr "_Komandoen kolorea:"
 msgid "_Error color:"
 msgstr "_Erroreen kolorea:"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
+#: ../plugins/pythonconsole/__init__.py:87
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python kontsola"
+
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+msgid "Adds a Python console"
+msgstr "Python kontsola gehitzen du"
+
+#: ../plugins/pythonconsole/__init__.py:64
+msgid "P_ython Console"
+msgstr "_Python kontsola"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
 msgid "Command Text Color"
 msgstr "Komandoaren testu-kolorea"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
 msgid "The color used for commands."
 msgstr "Komandoetan erabiliko den kolorea."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
 msgid "Error Text Color"
 msgstr "Erroreen testu-kolorea"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
 msgid "The color used for errors."
 msgstr "Erroreetan erabiliko den kolorea."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
 msgid "Whether to use the system font"
 msgstr "Sistemaren letra-tipoa erabili edo ez."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -363,11 +416,11 @@ msgstr ""
 "TRUE (egia) bada, terminalak mahaigainaren letra-tipo arrunt orokorra "
 "erabiliko du tarte bakarrekoa bada (bestela, letra-tipo antzekoena)."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
 msgid "Font used by Python Console"
 msgstr "Letra-tipoa Python kontsolan erabiltzeko"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
 "Pango-ren letra-tipoaren izena. Adb. \"Sans 12\" edo \"Monospace Bold 14\"."
@@ -376,9 +429,15 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "GNOMEren begiaren python kontsola"
 
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
 msgid "Send by Mail"
 msgstr "Bidali postaz"
+
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Bidali irudi bat posta berriari erantsita"
 
 #: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
 msgid "Send the selected images by mail"
@@ -388,14 +447,16 @@ msgstr "Bidali hautatutako irudiak postaren bidez"
 msgid "Send By Mail"
 msgstr "Bidali postaz"
 
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
-msgid "Sends an image attached to a new mail"
-msgstr "Bidali irudi bat posta berriari erantsita"
-
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "Ausazko diapositiba-aurkezpena"
 
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Ausaz nahasi irudiak diapositiba-aurkezpena moduan"
+
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
-msgstr "Ausaz nahastu irudiak diapositiba-aurkezpena moduan"
+msgstr "Ausaz nahasi irudiak diapositiba-aurkezpena moduan"
+
