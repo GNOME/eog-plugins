@@ -1,6 +1,6 @@
 [Plugin]
 Module=light-theme
-IAge=2
+IAge=3
 _Name=Disable Dark Theme
 Icon=eog-plugin
 _Description=Disables Eye of GNOME's preference of dark theme variants

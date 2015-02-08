@@ -1,7 +1,7 @@
 [Plugin]
 Loader=python3
 Module=slideshowshuffle
-IAge=2
+IAge=3
 _Name=Slideshow Shuffle
 Icon=media-playlist-shuffle
 _Description=Shuffles images in slideshow mode

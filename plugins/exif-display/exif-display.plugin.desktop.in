@@ -1,6 +1,6 @@
 [Plugin]
 Module=exif-display
-IAge=2
+IAge=3
 _Name=Exif Display
 Icon=zoom-fit-best
 _Description=Displays camera settings and histogram

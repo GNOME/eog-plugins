@@ -1,7 +1,7 @@
 [Plugin]
 Loader=python3
 Module=fullscreenbg
-IAge=2
+IAge=3
 _Name=Fullscreen Background
 _Description=Enables changing background in fullscreen mode
 Authors=Adrian Zgorzałek <a.zgorzalek@gmail.com>

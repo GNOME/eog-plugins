@@ -1,6 +1,6 @@
 [Plugin]
 Module=map
-IAge=2
+IAge=3
 _Name=Map
 Icon=map
 _Description=Display the geolocation of the image on a map
