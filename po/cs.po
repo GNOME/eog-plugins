@@ -6,15 +6,15 @@
 # Petr Kovar <pknbe@volny.cz>, 2008.
 # Adrian Guniš <andygun696@gmail.com>, 2009, 2010, 2011.
 # Adam Matoušek <adydas95@gmail.com>, 2012.
-# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013, 2014.
+# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-18 15:29+0000\n"
-"PO-Revision-Date: 2014-08-18 22:13+0200\n"
+"POT-Creation-Date: 2015-02-08 17:53+0000\n"
+"PO-Revision-Date: 2015-02-08 23:42+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -219,7 +219,7 @@ msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Vypne varianty tmavého motivu v předvolbách Eye of GNOME"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/eog-map-plugin.c:441
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
@@ -228,21 +228,34 @@ msgstr "Mapa"
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Na mapě v postranním panelu zobrazí, kde byl obrázek pořízen"
 
-#: ../plugins/map/eog-map-plugin.c:401
+#: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
 msgstr "Přejít na místo pořízení aktuálního obrázku"
 
-#: ../plugins/map/eog-map-plugin.c:413
+#: ../plugins/map/eog-map-plugin.c:417
 msgid "Zoom in"
 msgstr "Přiblížit"
 
-#: ../plugins/map/eog-map-plugin.c:421
+#: ../plugins/map/eog-map-plugin.c:426
 msgid "Zoom out"
 msgstr "Oddálit"
 
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Zobrazí geografickou polohu obrázku na mapě"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Maximalizovat okna"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Nová okna otevře maximalizovaná"
+
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Maximalizuje nová okna"
 
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
 msgid "Picasa Web Uploader"
@@ -390,7 +403,7 @@ msgstr "Konzola jazyka Python"
 msgid "Adds a Python console"
 msgstr "Přidá konzolu jazyka Python"
 
-#: ../plugins/pythonconsole/__init__.py:64
+#: ../plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
 msgstr "Konzola jazyka P_ython"
 
