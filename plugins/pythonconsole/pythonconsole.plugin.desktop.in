@@ -1,7 +1,7 @@
 [Plugin]
 Loader=python3
 Module=pythonconsole
-IAge=2
+IAge=3
 _Name=Python Console
 _Description=Python console for Eye of GNOME
 Icon=about

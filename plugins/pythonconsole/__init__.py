@@ -25,7 +25,7 @@
 #     Copyright (C), 2005 Adam Hooper <adamh@densi.com>
 #     Copyrignt (C), 2005 Raphaël Slinckx
 
-from gi.repository import GObject, Gtk, Eog, PeasGtk
+from gi.repository import GObject, Gio, GLib, Gtk, Eog, PeasGtk
 
 from .console import PythonConsole
 from .config import PythonConsoleConfigWidget
@@ -33,20 +33,12 @@ from .config import PythonConsoleConfigWidget
 import gettext
 _ = gettext.translation('eog-plugins', fallback=True).gettext
 
-_UI_STR = """
-    <ui>
-        <menubar name="MainMenu">
-            <menu name="ToolsMenu" action="Tools">
-                <separator/>
-                <menuitem name="PythonConsole" action="PythonConsole"/>
-                <separator/>
-            </menu>
-        </menubar>
-    </ui>
-    """
+_MENU_ID = 'PythonConsole'
+_ACTION_NAME = 'python-console'
 
 
-class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable, PeasGtk.Configurable):
+class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable,
+                          PeasGtk.Configurable):
 
     # Override EogWindowActivatable's window property
     window = GObject.property(type=Eog.Window)
@@ -58,31 +50,39 @@ class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable, PeasGtk.Configu
         self.ui_id = 0
 
     def do_activate(self):
-        ui_manager = self.window.get_ui_manager()
-        self.action_group = Gtk.ActionGroup(name='PythonConsole')
-        self.action_group.add_actions([('PythonConsole', None, \
-            _('P_ython Console'), None, None, self.console_cb)], self.window)
-        ui_manager.insert_action_group(self.action_group, 0)
-        self.ui_id = ui_manager.add_ui_from_string(_UI_STR)
+        model = self.window.get_gear_menu_section('plugins-section')
+        action = Gio.SimpleAction.new(_ACTION_NAME)
+        action.connect('activate', self.console_cb, self.window)
+
+        self.window.add_action(action)
+        menu = Gio.Menu()
+        menu.append(_('P_ython Console'), 'win.python-console')
+        item = Gio.MenuItem.new_section(None, menu)
+        item.set_attribute([('id', 's', _MENU_ID)])
+        model.append_item(item)
 
     def do_deactivate(self):
-        ui_manager = self.window.get_ui_manager()
-        ui_manager.remove_ui(self.ui_id)
-        self.ui_id = 0
-        ui_manager.remove_action_group(self.action_group)
-        self.action_group = None
-        ui_manager.ensure_update()
+        menu = self.window.get_gear_menu_section('plugins-section')
+        for i in range(0, menu.get_n_items()):
+            value = menu.get_item_attribute_value(i, 'id',
+                                                  GLib.VariantType.new('s'))
+
+            if value and value.get_string() == _MENU_ID:
+                menu.remove(i)
+                break
+        self.window.remove_action(_ACTION_NAME)
         if self.console_window is not None:
             self.console_window.destroy()
+            self.console_window = None
 
-    def console_cb(self, action, window):
+    def console_cb(self, simple, parameter, window):
         if not self.console_window:
             self.console_window = Gtk.Window()
-            console = PythonConsole(namespace = {'__builtins__' : __builtins__,
-                                                 'Eog' : Eog,
-                                                 'window' : window})
+            console = PythonConsole(namespace={'__builtins__': __builtins__,
+                                               'Eog': Eog,
+                                               'window': window})
             console.set_size_request(600, 400)
-            console.eval('print("You can access the main window through ' \
+            console.eval('print("You can access the main window through '
                          '\'window\' :\\n%s" % window)', False)
             self.console_window.set_title(_('Python Console'))
             self.console_window.add(console)
@@ -100,6 +100,7 @@ class PythonConsolePlugin(GObject.Object, Eog.WindowActivatable, PeasGtk.Configu
         self.console_window = None
 
     def do_create_configure_widget(self):
-        config_widget = PythonConsoleConfigWidget(self.plugin_info.get_data_dir())
+        data_dir = self.plugin_info.get_data_dir()
+        config_widget = PythonConsoleConfigWidget(data_dir)
 
         return config_widget.configure_widget()
