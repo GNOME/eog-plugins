@@ -22,6 +22,8 @@ plugins/light-theme/light-theme.plugin.desktop.in
 plugins/map/eog-map.metainfo.xml.in
 plugins/map/eog-map-plugin.c
 plugins/map/map.plugin.desktop.in
+plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in
+plugins/maximize-windows/maximize-windows.plugin.desktop.in
 plugins/postasa/eog-postasa.metainfo.xml.in
 plugins/postasa/eog-postasa-plugin.c
 [type: gettext/glade]plugins/postasa/postasa-config.xml

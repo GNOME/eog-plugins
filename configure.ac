@@ -65,9 +65,9 @@ ALL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-title
 USEFUL_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar light-theme"
 DEFAULT_PLUGINS="postr map fit-to-width exif-display send-by-mail postasa hide-titlebar light-theme"
 
-PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole fullscreenbg export-to-folder"
-PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole fullscreenbg export-to-folder"
-PYTHON_DEFAULT_PLUGINS="slideshowshuffle pythonconsole fullscreenbg export-to-folder"
+PYTHON_ALL_PLUGINS="slideshowshuffle pythonconsole fullscreenbg export-to-folder maximize-windows"
+PYTHON_USEFUL_PLUGINS="slideshowshuffle pythonconsole fullscreenbg export-to-folder maximize-windows"
+PYTHON_DEFAULT_PLUGINS="slideshowshuffle pythonconsole fullscreenbg export-to-folder maximize-windows"
 
 DIST_PLUGINS="$ALL_PLUGINS $PYTHON_ALL_PLUGINS"
 
@@ -345,6 +345,7 @@ plugins/fullscreenbg/Makefile
 plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml
 plugins/hide-titlebar/Makefile
 plugins/light-theme/Makefile
+plugins/maximize-windows/Makefile
 plugins/send-by-mail/Makefile
 plugins/slideshowshuffle/Makefile
 plugins/postr/Makefile

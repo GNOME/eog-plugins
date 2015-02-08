@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python3
+Module=maximize-windows
+IAge=3
+_Name=Maximize Windows
+_Description=Maximize new windows
+Authors=Felix Riemann <friemann@gnome.org>
+Copyright=Copyright © 2015 Felix Riemann <friemann@gnome.org>
+Website=http://projects.gnome.org/eog
