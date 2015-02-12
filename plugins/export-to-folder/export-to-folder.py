@@ -29,6 +29,7 @@ _ACTION_NAME = 'export-to-folder'
 EXPORT_DIR = os.path.join(os.path.expanduser('~'), 'exported-images')
 BASE_KEY = 'org.gnome.eog.plugins.export-to-folder'
 
+
 class ExportPlugin(GObject.Object, Eog.WindowActivatable):
     window = GObject.property(type=Eog.Window)
 
@@ -56,6 +57,10 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
         item.set_attribute([('id', 's', _MENU_ID)])
         model.append_item(item)
 
+        # Add accelerator key
+        app = Eog.Application.get_instance()
+        app.set_accels_for_action('win.' + _ACTION_NAME, ['E', None])
+
     def do_deactivate(self):
         menu = self.window.get_gear_menu_section('plugins-section')
         for i in range(0, menu.get_n_items()):
@@ -65,6 +70,11 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
             if value and value.get_string() == _MENU_ID:
                 menu.remove(i)
                 break
+
+        # Disable accelerator key
+        app = Eog.Application.get_instance()
+        app.set_accels_for_action('win.' + _ACTION_NAME, ['E', None])
+
         self.window.remove_action(_ACTION_NAME)
 
     def export_cb(self, action, parameter, window):
@@ -102,9 +112,9 @@ class ExportConfigurable(GObject.Object, PeasGtk.Configurable):
 
         self.export_dir_button = builder.get_object('export_dir_button')
         self.preferences_dialog = builder.get_object('preferences_box')
-        target_dir =  self.settings.get_string('target-folder')
+        target_dir = self.settings.get_string('target-folder')
         if target_dir == "":
-            target_dir = EXPORT_DIR;
+            target_dir = EXPORT_DIR
         self.export_dir_button.set_current_folder(target_dir)
 
         return self.preferences_dialog
