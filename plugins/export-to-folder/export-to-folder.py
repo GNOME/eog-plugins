@@ -21,20 +21,10 @@
 import os
 import shutil
 
-from gi.repository import GObject, Eog, Gio, Gtk, PeasGtk
+from gi.repository import GObject, GLib, Eog, Gio, Gtk, PeasGtk
 
-
-ui_str = """
-<ui>
-    <menubar name="MainMenu">
-        <menu name="ToolsMenu" action="Tools">
-            <separator/>
-            <menuitem name="Export" action="Export"/>
-            <separator/>
-        </menu>
-    </menubar>
-</ui>
-"""
+_MENU_ID = 'Export'
+_ACTION_NAME = 'export-to-folder'
 
 EXPORT_DIR = os.path.join(os.path.expanduser('~'), 'exported-images')
 BASE_KEY = 'org.gnome.eog.plugins.export-to-folder'
@@ -55,17 +45,29 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
         return target_dir
 
     def do_activate(self):
-        ui_manager = self.window.get_ui_manager()
-        self.action_group = Gtk.ActionGroup(name='Export')
-        self.action_group.add_actions([('Export', None,
-                        _('_Export'), "E", None, self.export_cb)], self.window)
-        ui_manager.insert_action_group(self.action_group, 0)
-        self.ui_id = ui_manager.add_ui_from_string(ui_str)
+        model = self.window.get_gear_menu_section('plugins-section')
+        action = Gio.SimpleAction.new(_ACTION_NAME)
+        action.connect('activate', self.export_cb, self.window)
+
+        self.window.add_action(action)
+        menu = Gio.Menu()
+        menu.append(_('_Export'), 'win.export-to-folder')
+        item = Gio.MenuItem.new_section(None, menu)
+        item.set_attribute([('id', 's', _MENU_ID)])
+        model.append_item(item)
 
     def do_deactivate(self):
-        ui_manager = self.window.get_ui_manager().remove_ui(self.ui_id);
+        menu = self.window.get_gear_menu_section('plugins-section')
+        for i in range(0, menu.get_n_items()):
+            value = menu.get_item_attribute_value(i, 'id',
+                                                  GLib.VariantType.new('s'))
 
-    def export_cb(self, action, window):
+            if value and value.get_string() == _MENU_ID:
+                menu.remove(i)
+                break
+        self.window.remove_action(_ACTION_NAME)
+
+    def export_cb(self, action, parameter, window):
         # Get path to current image.
         image = window.get_image()
         if not image:

@@ -1,7 +1,7 @@
 [Plugin]
 Loader=python3
 Module=export-to-folder
-IAge=2
+IAge=3
 _Name=Export to Folder
 Icon=eog
 _Description=Export the current image to a separate directory
