@@ -1,6 +1,6 @@
 [Plugin]
 Module=fit-to-width
-IAge=2
+IAge=3
 _Name=Zoom to Fit Image Width
 Icon=gtk-zoom-fit
 _Description=Fit images to the window width

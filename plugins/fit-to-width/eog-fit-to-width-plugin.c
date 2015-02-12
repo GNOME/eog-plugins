@@ -24,6 +24,7 @@
 #endif
 
 #include <glib/gi18n-lib.h>
+#include <eog/eog-application.h>
 #include <eog/eog-scroll-view.h>
 #include <eog/eog-image.h>
 #include <eog/eog-window.h>
@@ -32,6 +33,9 @@
 #include <libpeas/peas.h>
 
 #include "eog-fit-to-width-plugin.h"
+
+#define EOG_FIT_TO_WIDTH_PLUGIN_MENU_ID "EogPluginFitToWidth"
+#define EOG_FIT_TO_WIDTH_PLUGIN_ACTION "zoom-fit-width"
 
 
 static void
@@ -48,8 +52,11 @@ enum {
 };
 
 static void
-fit_to_width_cb (GtkAction *action, EogWindow *window)
+fit_to_width_cb (GSimpleAction *simple,
+		 GVariant      *parameter,
+		 gpointer       user_data)
 {
+	EogWindow     *window;
 	GtkWidget     *view;
 	EogImage      *image;
 	gint           image_width;
@@ -59,7 +66,9 @@ fit_to_width_cb (GtkAction *action, EogWindow *window)
 	GtkAllocation  allocation;
 
 
-	g_return_if_fail (EOG_IS_WINDOW (window));
+	g_return_if_fail (EOG_IS_WINDOW (user_data));
+
+	window = EOG_WINDOW (user_data);
 
 	view = eog_window_get_view (window);
 	image = eog_window_get_image (window);
@@ -78,74 +87,92 @@ fit_to_width_cb (GtkAction *action, EogWindow *window)
 	eog_scroll_view_set_zoom (EOG_SCROLL_VIEW (view), zoom);
 }
 
-static const gchar * const ui_definition =
-	"<ui><menubar name=\"MainMenu\">"
-	"<menu action=\"View\">"
-	"<menuitem action=\"EogPluginFitToWidth\"/>"
-	"</menu></menubar></ui>";
-
-static const GtkActionEntry action_entries[] =
-{
-	{ "EogPluginFitToWidth",
-	  "zoom-fit-best",
-	  N_("Fit to width"),
-	  "W",
-	  N_("Fit the image to the window width"),
-	  G_CALLBACK (fit_to_width_cb) }
-};
-
-
 static void
 eog_fit_to_width_plugin_init (EogFitToWidthPlugin *plugin)
 {
-	plugin->ui_action_group = NULL;
-	plugin->ui_menuitem_id = 0;
 }
 
 static void
 impl_activate (EogWindowActivatable *activatable)
 {
+	const gchar * const accel_keys[] = { "W", NULL };
 	EogFitToWidthPlugin *plugin = EOG_FIT_TO_WIDTH_PLUGIN (activatable);
-	GtkUIManager *manager;
+	GMenu *model, *menu;
+	GMenuItem *item;
+	GSimpleAction *action;
 
-	manager = eog_window_get_ui_manager (plugin->window);
+	model= eog_window_get_gear_menu_section (plugin->window,
+						 "plugins-section");
 
-	plugin->ui_action_group = gtk_action_group_new ("EogFitToWidthPluginActions");
+	g_return_if_fail (G_IS_MENU (model));
 
-	gtk_action_group_set_translation_domain (plugin->ui_action_group,
-						 GETTEXT_PACKAGE);
+	/* Setup and inject action */
+	action = g_simple_action_new (EOG_FIT_TO_WIDTH_PLUGIN_ACTION, NULL);
+	g_signal_connect(action, "activate",
+			 G_CALLBACK (fit_to_width_cb), plugin->window);
+	g_action_map_add_action (G_ACTION_MAP (plugin->window),
+				 G_ACTION (action));
+	g_object_unref (action);
 
-	gtk_action_group_add_actions (plugin->ui_action_group,
-				      action_entries,
-				      G_N_ELEMENTS (action_entries),
-				      plugin->window);
+	/* Append entry to the window's gear menu */
+	menu = g_menu_new ();
+	g_menu_append (menu, _("Fit to width"),
+		       "win." EOG_FIT_TO_WIDTH_PLUGIN_ACTION);
 
-	gtk_ui_manager_insert_action_group (manager,
-					    plugin->ui_action_group,
-					    -1);
+	item = g_menu_item_new_section (NULL, G_MENU_MODEL (menu));
+	g_menu_item_set_attribute (item, "id",
+				   "s", EOG_FIT_TO_WIDTH_PLUGIN_MENU_ID);
+	g_menu_item_set_attribute (item, G_MENU_ATTRIBUTE_ICON,
+				   "s", "zoom-fit-best-symbolic");
+	g_menu_append_item (model, item);
+	g_object_unref (item);
 
-	plugin->ui_menuitem_id = gtk_ui_manager_add_ui_from_string (manager,
-								  ui_definition,
-								  -1, NULL);
+	g_object_unref (menu);
+
+	/* Define accelerator keys */
+	gtk_application_set_accels_for_action (GTK_APPLICATION (EOG_APP),
+					       "win." EOG_FIT_TO_WIDTH_PLUGIN_ACTION,
+					       accel_keys);
 }
 
 static void
 impl_deactivate	(EogWindowActivatable *activatable)
 {
+	const gchar * const empty_accels[1] = { NULL };
 	EogFitToWidthPlugin *plugin = EOG_FIT_TO_WIDTH_PLUGIN (activatable);
-	GtkUIManager *manager;
+	GMenu *menu;
+	GMenuModel *model;
+	gint i;
 
-	manager = eog_window_get_ui_manager (plugin->window);
+	menu = eog_window_get_gear_menu_section (plugin->window,
+						 "plugins-section");
 
-	gtk_ui_manager_remove_ui (manager,
-				  plugin->ui_menuitem_id);
+	g_return_if_fail (G_IS_MENU (menu));
 
-	plugin->ui_menuitem_id = 0;
+	/* Remove menu entry */
+	model = G_MENU_MODEL (menu);
+	for (i = 0; i < g_menu_model_get_n_items (model); i++) {
+		gchar *id;
+		if (g_menu_model_get_item_attribute (model, i, "id", "s", &id)) {
+			const gboolean found =
+				(g_strcmp0 (id, EOG_FIT_TO_WIDTH_PLUGIN_MENU_ID) == 0);
+			g_free (id);
 
-	gtk_ui_manager_remove_action_group (manager,
-					    plugin->ui_action_group);
-	g_object_unref (plugin->ui_action_group);
-	plugin->ui_action_group = NULL;
+			if (found) {
+				g_menu_remove (menu, i);
+				break;
+			}
+		}
+	}
+
+	/* Unset accelerator */
+	gtk_application_set_accels_for_action(GTK_APPLICATION (EOG_APP),
+					      "win." EOG_FIT_TO_WIDTH_PLUGIN_ACTION,
+					      empty_accels);
+
+	/* Finally remove action */
+	g_action_map_remove_action (G_ACTION_MAP (plugin->window),
+				    EOG_FIT_TO_WIDTH_PLUGIN_ACTION);
 }
 
 static void
