@@ -42,6 +42,9 @@
 #define GTKBUILDER_CONFIG_FILE EOG_POSTASA_RESOURCE_PREFIX"/postasa-config.xml"
 #define GTKBUILDER_UPLOAD_FILE EOG_POSTASA_RESOURCE_PREFIX"/postasa-uploads.xml"
 
+#define EOG_POSTASA_PLUGIN_MENU_ID "EogPluginPostasa"
+#define EOG_POSTASA_PLUGIN_ACTION "postasa-upload"
+
 enum {
 	PROP_O,
 	PROP_WINDOW
@@ -104,31 +107,9 @@ typedef struct
 	GFile *imgfile;
 } PicasaWebUploadFileAsyncData;
 
-static void picasaweb_upload_cb (GtkAction *action, EogPostasaPlugin *plugin);
+static void picasaweb_upload_cb (GSimpleAction *simple, GVariant *parameter, gpointer user_data);
 static GtkWidget *login_get_dialog (EogPostasaPlugin *plugin);
 static gboolean login_dialog_close (EogPostasaPlugin *plugin);
-
-static const gchar * const ui_definition = 
-	"<ui><menubar name=\"MainMenu\">"
-	"<menu name=\"ToolsMenu\" action=\"Tools\"><separator/>"
-	"<menuitem name=\"EogPluginPostasa\" action=\"EogPluginRunPostasa\"/>"
-	"<separator/></menu></menubar></ui>";
-
-/**
- * action_entries:
- *
- * Describes the #GtkActionEntry representing the Postasa upload menu
- * item and it's callback.
- **/
-static const GtkActionEntry action_entries[] =
-{
-	{ "EogPluginRunPostasa",
-	  "postasa",
-	  N_("Upload to PicasaWeb"),
-	  NULL,
-	  N_("Upload your pictures to PicasaWeb"),
-	  G_CALLBACK (picasaweb_upload_cb) }
-};
 
 /*** Uploads Dialog ***/
 
@@ -654,12 +635,16 @@ picasaweb_login_cb (GtkWidget *login_button, gpointer _plugin)
  * if we're not) and, if we are, moves on to upload the files.
  **/
 static void
-picasaweb_upload_cb (GtkAction	*action,
-		     EogPostasaPlugin *plugin)
+picasaweb_upload_cb (GSimpleAction *simple,
+		     GVariant      *parameter,
+		     gpointer       user_data)
 {
+	EogPostasaPlugin *plugin;
 	EogPostasaPluginPrivate *priv;
 
-	g_return_if_fail (EOG_IS_POSTASA_PLUGIN (plugin));
+	g_return_if_fail (EOG_IS_POSTASA_PLUGIN (user_data));
+
+	plugin = EOG_POSTASA_PLUGIN (user_data);
 
 	priv = plugin->priv;
 
@@ -800,27 +785,35 @@ static void
 impl_activate (EogWindowActivatable *activatable)
 {
 	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (activatable);
-	EogPostasaPluginPrivate *priv = plugin->priv;
-	GtkUIManager *manager;
-	EogWindow *window;
+	GMenu *model, *menu;
+	GMenuItem *item;
+	GSimpleAction *action;
 
-	eog_debug (DEBUG_PLUGINS);
+	model= eog_window_get_gear_menu_section (plugin->priv->eog_window,
+						 "plugins-section");
 
-	window = priv->eog_window;
+	g_return_if_fail (G_IS_MENU (model));
 
-	priv->ui_action_group = gtk_action_group_new ("EogPostasaPluginActions");
-	gtk_action_group_set_translation_domain (priv->ui_action_group,
-						 GETTEXT_PACKAGE);
-	gtk_action_group_add_actions (priv->ui_action_group,
-				      action_entries,
-				      G_N_ELEMENTS (action_entries), plugin);
+	/* Setup and inject action */
+	action = g_simple_action_new (EOG_POSTASA_PLUGIN_ACTION, NULL);
+	g_signal_connect(action, "activate",
+			 G_CALLBACK (picasaweb_upload_cb), plugin);
+	g_action_map_add_action (G_ACTION_MAP (plugin->priv->eog_window),
+				 G_ACTION (action));
+	g_object_unref (action);
 
-	manager = eog_window_get_ui_manager (window); /* do not unref */
-	gtk_ui_manager_insert_action_group (manager, priv->ui_action_group, -1);
-	priv->ui_id = gtk_ui_manager_add_ui_from_string (manager,
-							 ui_definition,
-							 -1, NULL);
-	g_warn_if_fail (priv->ui_id != 0);
+	/* Append entry to the window's gear menu */
+	menu = g_menu_new ();
+	g_menu_append (menu, _("Upload to PicasaWeb"),
+		       "win." EOG_POSTASA_PLUGIN_ACTION);
+
+	item = g_menu_item_new_section (NULL, G_MENU_MODEL (menu));
+	g_menu_item_set_attribute (item, "id",
+				   "s", EOG_POSTASA_PLUGIN_MENU_ID);
+	g_menu_append_item (model, item);
+	g_object_unref (item);
+
+	g_object_unref (menu);
 }
 
 /**
@@ -832,18 +825,34 @@ static void
 impl_deactivate	(EogWindowActivatable *activatable)
 {
 	EogPostasaPlugin *plugin = EOG_POSTASA_PLUGIN (activatable);
-	EogPostasaPluginPrivate *priv = plugin->priv;
-	GtkUIManager *manager;
+	GMenu *menu;
+	GMenuModel *model;
+	gint i;
 
-	eog_debug (DEBUG_PLUGINS);
+	menu = eog_window_get_gear_menu_section (plugin->priv->eog_window,
+						 "plugins-section");
 
-	manager = eog_window_get_ui_manager (priv->eog_window);
+	g_return_if_fail (G_IS_MENU (menu));
 
-	gtk_ui_manager_remove_ui (manager, priv->ui_id);
-	gtk_ui_manager_remove_action_group (manager, priv->ui_action_group);
+	/* Remove menu entry */
+	model = G_MENU_MODEL (menu);
+	for (i = 0; i < g_menu_model_get_n_items (model); i++) {
+		gchar *id;
+		if (g_menu_model_get_item_attribute (model, i, "id", "s", &id)) {
+			const gboolean found =
+				(g_strcmp0 (id, EOG_POSTASA_PLUGIN_MENU_ID) == 0);
+			g_free (id);
 
-	priv->ui_action_group = NULL;
-	priv->ui_id = 0;
+			if (found) {
+				g_menu_remove (menu, i);
+				break;
+			}
+		}
+	}
+
+	/* Finally remove action */
+	g_action_map_remove_action (G_ACTION_MAP (plugin->priv->eog_window),
+				    EOG_POSTASA_PLUGIN_ACTION);
 }
 
 /*** GObject Functions ***/

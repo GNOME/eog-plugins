@@ -1,8 +1,8 @@
 [Plugin]
 Module=postasa
-IAge=2
+IAge=3
 _Name=PicasaWeb Uploader
-Icon=postasa
+Icon=eog-plugin
 _Description=Upload your pictures to PicasaWeb
 Authors=Richard Schwarting <aquarichy@gmail.com>
 Copyright=Copyright © 2009 Richard Schwarting
