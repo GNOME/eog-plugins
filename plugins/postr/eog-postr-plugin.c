@@ -50,18 +50,24 @@ postr_cb (GSimpleAction *simple,
 		EogImage *image = (EogImage *) i->data;
 		GFile *imgfile;
 		gchar *imgpath;
+		gchar *oldcmd = cmd;
 
 		imgfile = eog_image_get_file (image);
 		imgpath = g_file_get_path (imgfile);
 
-		if (G_LIKELY (imgpath != NULL))
-			cmd = g_strconcat (cmd, "\"", imgpath, "\"", " ", NULL);
+		if (G_LIKELY (imgpath != NULL)) {
+			cmd = g_strconcat (oldcmd, "\"", imgpath, "\"", " ", NULL);
+			g_free (oldcmd);
+		}
 
 		g_free (imgpath);
 		g_object_unref (imgfile);
 	}
 
 	g_spawn_command_line_async (cmd, NULL);
+
+	g_list_free_full (images, g_object_unref);
+	g_free (cmd);
 }
 
 
