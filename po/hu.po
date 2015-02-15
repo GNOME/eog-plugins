@@ -4,14 +4,14 @@
 #
 # Gergely Szarka <gszarka at invitel dot hu>, 2009.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2009, 2010, 2011, 2012.
-# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014.
+# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-14 15:29+0000\n"
-"PO-Revision-Date: 2014-09-14 22:09+0200\n"
+"POT-Creation-Date: 2015-02-15 04:32+0000\n"
+"PO-Revision-Date: 2015-02-15 14:46+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
@@ -62,7 +62,6 @@ msgstr "Fényképezőgép beállításainak megjelenítése az állapotsoron"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 #: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
-#| msgid "Exif display"
 msgid "Exif Display"
 msgstr "Exif megjelenítő"
 
@@ -114,7 +113,7 @@ msgstr "Exportálás mappába"
 msgid "Export the current image to a separate directory"
 msgstr "A jelenlegi kép exportálása külön könyvtárba"
 
-#: ../plugins/export-to-folder/export-to-folder.py:61
+#: ../plugins/export-to-folder/export-to-folder.py:55
 msgid "_Export"
 msgstr "_Exportálás"
 
@@ -136,7 +135,6 @@ msgstr "Exportálás könyvtára:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-#| msgid "Zoom to fit image width"
 msgid "Zoom to Fit Image Width"
 msgstr "Nagyítás a kép szélességének igazításához"
 
@@ -144,13 +142,9 @@ msgstr "Nagyítás a kép szélességének igazításához"
 msgid "Adjusts the zoom to have the image's width fit into the window"
 msgstr "Beállítja a nagyítást, hogy a képek szélessége beférjen az ablakba"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:119
 msgid "Fit to width"
 msgstr "Szélesség illesztése"
-
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "Kép igazítása az ablak szélességéhez"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
@@ -196,7 +190,6 @@ msgid "Hide Titlebar"
 msgstr "Címsor elrejtése"
 
 #: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
-#| msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgid "Hides the titlebar of maximized windows"
 msgstr "Elrejti a teljes méretű ablakok címsorát"
 
@@ -206,12 +199,10 @@ msgstr "Elejti a teljes méretű Képmegjelenítő ablakok címsorát"
 
 #: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-#| msgid "Disable dark theme"
 msgid "Disable Dark Theme"
 msgstr "Sötét téma tiltása"
 
 #: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
-#| msgid "Disable dark theme"
 msgid "Disables dark theme"
 msgstr "Letiltja a sötét témát"
 
@@ -221,7 +212,7 @@ msgstr ""
 "Letiltja a Képmegjelenítő sötét témaváltozatainak előnyben részesítését"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:438
+#: ../plugins/map/eog-map-plugin.c:441
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Térkép"
@@ -230,15 +221,15 @@ msgstr "Térkép"
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Megjeleníti az oldalsó panelen egy térképen, hogy a kép hol készült"
 
-#: ../plugins/map/eog-map-plugin.c:403
+#: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
 msgstr "Ugrás a jelenlegi kép helyére"
 
-#: ../plugins/map/eog-map-plugin.c:415
+#: ../plugins/map/eog-map-plugin.c:417
 msgid "Zoom in"
 msgstr "Nagyítás"
 
-#: ../plugins/map/eog-map-plugin.c:423
+#: ../plugins/map/eog-map-plugin.c:426
 msgid "Zoom out"
 msgstr "Kicsinyítés"
 
@@ -246,8 +237,20 @@ msgstr "Kicsinyítés"
 msgid "Display the geolocation of the image on a map"
 msgstr "A kép földrajzi elhelyezkedésének jelölése a térképen"
 
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Ablakok maximalizálása"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Az új ablakok teljes méretben fognak megnyílni"
+
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Új ablakok maximalizálása"
+
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
-#| msgid "PicasaWeb Uploader"
 msgid "Picasa Web Uploader"
 msgstr "Picasa Web feltöltő"
 
@@ -255,56 +258,51 @@ msgstr "Picasa Web feltöltő"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Támogatja a fényképek feltöltését a Google Picasa Web szolgáltatásba"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "Feltöltés a Picasawebre"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Képek feltöltése a Picasawebre"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:325
+#: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
 msgstr "Feltöltés…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Feltöltve"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Megszakítva"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Sikertelen"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "A bejelentkezés meghiúsult. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "A bejelentkezés sikerült."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Bezárás"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Mégse"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
+#: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
 msgstr "Bejelentkezés…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Jelentkezzen be a feltöltés folytatásához."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:807
+msgid "Upload to PicasaWeb"
+msgstr "Feltöltés a Picasawebre"
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -329,6 +327,10 @@ msgstr "_Jelszó:"
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Picasaweb feltöltő"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Képek feltöltése a Picasawebre"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -390,11 +392,10 @@ msgid "Python Console"
 msgstr "Python konzol"
 
 #: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
-#| msgid "Python Console"
 msgid "Adds a Python console"
 msgstr "Hozzáad egy Python konzolt"
 
-#: ../plugins/pythonconsole/__init__.py:64
+#: ../plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
 msgstr "P_ython konzol"
 
@@ -462,7 +463,6 @@ msgid "Slideshow Shuffle"
 msgstr "Diavetítés véletlenszerűen"
 
 #: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
-#| msgid "Shuffles images in slideshow mode"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Megkeveri a fényképeket diavetítés módban"
 
@@ -470,3 +470,5 @@ msgstr "Megkeveri a fényképeket diavetítés módban"
 msgid "Shuffles images in slideshow mode"
 msgstr "Megkeveri a képeket diavetítés módban"
 
+#~ msgid "Fit the image to the window width"
+#~ msgstr "Kép igazítása az ablak szélességéhez"
