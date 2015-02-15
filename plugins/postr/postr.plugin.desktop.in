@@ -1,6 +1,6 @@
 [Plugin]
 Module=postr
-IAge=2
+IAge=3
 _Name=Flickr Uploader
 Icon=postr
 _Description=Upload your pictures to Flickr
