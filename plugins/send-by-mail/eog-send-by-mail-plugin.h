@@ -54,9 +54,6 @@ struct _EogSendByMailPlugin
 	PeasExtensionBase parent_instance;
 
 	EogWindow *window;
-	GtkActionGroup *ui_action_group;
-	guint           ui_menuitem_id;
-
 };
 
 /*

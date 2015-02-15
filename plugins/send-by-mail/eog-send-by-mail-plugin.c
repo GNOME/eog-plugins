@@ -31,6 +31,9 @@
 
 #include "eog-send-by-mail-plugin.h"
 
+#define EOG_SEND_BY_MAIL_PLUGIN_MENU_ID "EogPluginSendByMail"
+#define EOG_SEND_BY_MAIL_PLUGIN_ACTION "send-by-mail"
+
 
 static void
 eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
@@ -45,76 +48,85 @@ enum {
 	PROP_WINDOW
 };
 
-static void send_by_mail_cb (GtkAction *action, EogWindow *window);
+static void send_by_mail_cb (GSimpleAction *simple,
+			     GVariant      *parameter,
+			     gpointer       user_data);
 
-static const gchar * const ui_definition =
-	"<ui><menubar name=\"MainMenu\">"
-	"<menu name=\"ToolsMenu\" action=\"Tools\">"
-	"<menuitem action=\"EogPluginSendByMail\"/>"
-	"</menu></menubar>"
-	"<popup name=\"ViewPopup\"><separator/>"
-        "<menuitem action=\"EogPluginSendByMail\"/><separator/>"
-        "</popup></ui>";
-
-static const GtkActionEntry action_entries[] =
-{
-	{ "EogPluginSendByMail",
-	  "mail-message-new",
-	  N_("Send by Mail"),
-	  NULL,
-	  N_("Send the selected images by mail"),
-	  G_CALLBACK (send_by_mail_cb) }
-};
 
 static void
 eog_send_by_mail_plugin_init (EogSendByMailPlugin *plugin)
 {
-	plugin->ui_action_group = NULL;
-	plugin->ui_menuitem_id = 0;
 }
 
 static void
 impl_activate (EogWindowActivatable *activatable)
 {
 	EogSendByMailPlugin *plugin = EOG_SEND_BY_MAIL_PLUGIN (activatable);
-	GtkUIManager *manager;
+	GMenu *model, *menu;
+	GMenuItem *item;
+	GSimpleAction *action;
 
-	manager = eog_window_get_ui_manager (plugin->window);
+	model= eog_window_get_gear_menu_section (plugin->window,
+						 "plugins-section");
 
-	plugin->ui_action_group = gtk_action_group_new ("EogSendByMailPluginActions");
+	g_return_if_fail (G_IS_MENU (model));
 
-	gtk_action_group_set_translation_domain (plugin->ui_action_group,
-						 GETTEXT_PACKAGE);
+	/* Setup and inject action */
+	action = g_simple_action_new (EOG_SEND_BY_MAIL_PLUGIN_ACTION, NULL);
+	g_signal_connect(action, "activate",
+			 G_CALLBACK (send_by_mail_cb), plugin->window);
+	g_action_map_add_action (G_ACTION_MAP (plugin->window),
+				 G_ACTION (action));
+	g_object_unref (action);
 
-	gtk_action_group_add_actions (plugin->ui_action_group,
-				      action_entries,
-				      G_N_ELEMENTS (action_entries),
-				      plugin->window);
+	/* Append entry to the window's gear menu */
+	menu = g_menu_new ();
+	g_menu_append (menu, _("Send by Mail"),
+		       "win." EOG_SEND_BY_MAIL_PLUGIN_ACTION);
 
-	gtk_ui_manager_insert_action_group (manager,
-					    plugin->ui_action_group,
-					    -1);
+	item = g_menu_item_new_section (NULL, G_MENU_MODEL (menu));
+	g_menu_item_set_attribute (item, "id",
+				   "s", EOG_SEND_BY_MAIL_PLUGIN_MENU_ID);
+	g_menu_item_set_attribute (item, G_MENU_ATTRIBUTE_ICON,
+				   "s", "mail-message-new");
+	g_menu_append_item (model, item);
+	g_object_unref (item);
 
-	plugin->ui_menuitem_id = gtk_ui_manager_add_ui_from_string (manager,
-								  ui_definition,
-								  -1, NULL);
+	g_object_unref (menu);
 }
 
 static void
 impl_deactivate	(EogWindowActivatable *activatable)
 {
 	EogSendByMailPlugin *plugin = EOG_SEND_BY_MAIL_PLUGIN (activatable);
-	GtkUIManager *manager;
+	GMenu *menu;
+	GMenuModel *model;
+	gint i;
 
-	manager = eog_window_get_ui_manager (plugin->window);
+	menu = eog_window_get_gear_menu_section (plugin->window,
+						 "plugins-section");
 
-	gtk_ui_manager_remove_ui (manager,
-				  plugin->ui_menuitem_id);
+	g_return_if_fail (G_IS_MENU (menu));
 
-	gtk_ui_manager_remove_action_group (manager,
-					    plugin->ui_action_group);
-	plugin->ui_action_group = NULL;
-	plugin->ui_menuitem_id = 0;
+	/* Remove menu entry */
+	model = G_MENU_MODEL (menu);
+	for (i = 0; i < g_menu_model_get_n_items (model); i++) {
+		gchar *id;
+		if (g_menu_model_get_item_attribute (model, i, "id", "s", &id)) {
+			const gboolean found =
+				(g_strcmp0 (id, EOG_SEND_BY_MAIL_PLUGIN_MENU_ID) == 0);
+			g_free (id);
+
+			if (found) {
+				g_menu_remove (menu, i);
+				break;
+			}
+		}
+	}
+
+	/* Finally remove action */
+	g_action_map_remove_action (G_ACTION_MAP (plugin->window),
+				    EOG_SEND_BY_MAIL_PLUGIN_ACTION);
 }
 
 static void
@@ -196,15 +208,20 @@ eog_window_activatable_iface_init (EogWindowActivatableInterface *iface)
 }
 
 static void
-send_by_mail_cb (GtkAction *action, EogWindow *window)
+send_by_mail_cb (GSimpleAction *simple,
+		 GVariant      *parameter,
+		 gpointer       user_data)
 {
+	EogWindow *window;
 	GdkScreen *screen = NULL;
 	GtkWidget *tview = NULL;
 	GList *images = NULL, *image = NULL;
 	GString *uri = NULL;
 	gboolean first = TRUE;
 
-	g_return_if_fail (EOG_IS_WINDOW (window));
+	g_return_if_fail (EOG_IS_WINDOW (user_data));
+
+	window = EOG_WINDOW (user_data);
 
 	if (gtk_widget_has_screen (GTK_WIDGET (window)))
 		screen = gtk_widget_get_screen (GTK_WIDGET (window));
