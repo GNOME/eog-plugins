@@ -1,3 +1,25 @@
+Version 3.15.90
+---------------
+
+General changes:
+
+- #741503, Typo in translatable string (Anders Jonsson)
+- #743885, Port plugins to GAction (Felix Riemann, Robert Roth)
+
+New Plugin:
+
+- Maximize Windows
+  Causes new windows to open maximized (Felix Riemann, #744083)
+
+New and updated translations:
+
+- Marek Černocký [cs]
+- Iñaki Larrañaga Murgoitio [eu]
+- Balázs Úr [hu]
+- Piotr Drąg [pl]
+- Anders Jonsson [sv]
+- Muhammet Kara [tr]
+
 Version 3.14.1
 --------------
 
