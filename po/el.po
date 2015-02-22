@@ -3,21 +3,23 @@
 # , 2009.
 # Sterios Prosiniklis <steriosprosiniklis@gmail.com>, 2009.
 # Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins.master.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-22 03:29+0000\n"
-"PO-Revision-Date: 2014-08-22 12:34+0200\n"
-"Last-Translator: Maria Mavridou <mavridou@gmail.com>\n"
-"Language-Team: team@gnome.gr\n"
+"POT-Creation-Date: 2015-02-22 16:32+0000\n"
+"PO-Revision-Date: 2015-02-23 01:03+0200\n"
+"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
+"Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
@@ -61,7 +63,6 @@ msgstr "Εμφάνιση των ρυθμίσεων κάμερας στην γρ�
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 #: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
-#| msgid "Exif display"
 msgid "Exif Display"
 msgstr "Εμφάνιση Exif"
 
@@ -113,7 +114,7 @@ msgstr "Εξαγωγή σε φάκελο"
 msgid "Export the current image to a separate directory"
 msgstr "Εξαγωγή της τρέχουσας εικόνας σε ξεχωριστό κατάλογο"
 
-#: ../plugins/export-to-folder/export-to-folder.py:61
+#: ../plugins/export-to-folder/export-to-folder.py:55
 msgid "_Export"
 msgstr "_Εξαγωγή"
 
@@ -135,7 +136,6 @@ msgstr "Κατάλογος εξαγωγής:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-#| msgid "Zoom to fit image width"
 msgid "Zoom to Fit Image Width"
 msgstr "Εστίαση για ταίριασμα στο πλάτος της εικόνας"
 
@@ -144,13 +144,9 @@ msgid "Adjusts the zoom to have the image's width fit into the window"
 msgstr ""
 "Ρυθμίζει την εστίαση για να ταιριάζει το πλάτος της εικόνας στο παράθυρο"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:119
 msgid "Fit to width"
 msgstr "Ταίριασμα στο πλάτος"
-
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "Προσαρμογή της εικόνας στο πλάτος του παραθύρου"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
@@ -198,7 +194,6 @@ msgid "Hide Titlebar"
 msgstr "Απόκρυψη γραμμής τίτλου"
 
 #: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
-#| msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgid "Hides the titlebar of maximized windows"
 msgstr "Κάνει απόκρυψη της γραμμής τίτλου των μεγιστοποιημένων παραθύρων"
 
@@ -210,12 +205,10 @@ msgstr ""
 
 #: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-#| msgid "Disable dark theme"
 msgid "Disable Dark Theme"
 msgstr "Απενεργοποίηση σκούρου θέματος"
 
 #: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
-#| msgid "Disable dark theme"
 msgid "Disables dark theme"
 msgstr "Απενεργοποίηση σκούρου θέματος"
 
@@ -226,7 +219,7 @@ msgstr ""
 "θέματος"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:436
+#: ../plugins/map/eog-map-plugin.c:441
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Χάρτης"
@@ -237,15 +230,15 @@ msgstr ""
 "Εμφανίζει σε ένα χάρτη στην πλευρική στήλη την τοποθεσία όπου λήφθηκε η "
 "φωτογραφία"
 
-#: ../plugins/map/eog-map-plugin.c:401
+#: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
 msgstr "Μετάβαση στη τωρινή τοποθεσία της εικόνας"
 
-#: ../plugins/map/eog-map-plugin.c:413
+#: ../plugins/map/eog-map-plugin.c:417
 msgid "Zoom in"
 msgstr "Μεγέθυνση"
 
-#: ../plugins/map/eog-map-plugin.c:421
+#: ../plugins/map/eog-map-plugin.c:426
 msgid "Zoom out"
 msgstr "Σμίκρυνση"
 
@@ -253,8 +246,20 @@ msgstr "Σμίκρυνση"
 msgid "Display the geolocation of the image on a map"
 msgstr "Εμφάνιση της γεωγραφικής θέσης της εικόνας σε έναν χάρτη"
 
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Μεγιστοποίηση παραθύρων"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Τα νέα παράθυρα θα ανοίγουν μεγιστοποιημένα"
+
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Μεγιστοποίηση νέων παραθύρων"
+
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
-#| msgid "PicasaWeb Uploader"
 msgid "Picasa Web Uploader"
 msgstr "Αποστολέας του Picasa Web"
 
@@ -262,56 +267,52 @@ msgstr "Αποστολέας του Picasa Web"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Υποστηρίζει την αποστολή φωτογραφιών στο Picasa Web της Google"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "Αποστολή στο PicasaWeb"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Ανεβάστε τις φωτογραφίες σας στο PicasaWeb"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:325
+#: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
 msgstr "Γίνεται αποστολή..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Απεστάλθηκε"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Ακυρώθηκε"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Απέτυχε"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Απέτυχε η σύνδεση. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
-msgid "Logged in successully."
+#: ../plugins/postasa/eog-postasa-plugin.c:586
+#| msgid "Logged in successully."
+msgid "Logged in successfully."
 msgstr "Επιτυχής σύνδεση."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Ακύρωση"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
+#: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
 msgstr "Γίνεται σύνδεση..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Παρακαλώ συνδεθείτε για να συνεχίσετε την αποστολή."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:807
+msgid "Upload to PicasaWeb"
+msgstr "Αποστολή στο PicasaWeb"
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -336,6 +337,10 @@ msgstr "Κωδικός _πρόσβασης:"
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Αποστολέας του PicasaWeb"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Ανεβάστε τις φωτογραφίες σας στο PicasaWeb"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -369,18 +374,17 @@ msgstr "Postr"
 msgid "Supports uploading photos to Flickr"
 msgstr "Υποστηρίζει την αποστολή φωτογραφιών στο Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: ../plugins/postr/eog-postr-plugin.c:123
 msgid "Upload to Flickr"
 msgstr "Αποστολή στο Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Αποστολή των φωτογραφιών σας στο Flickr"
 
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Αποστολέας του Flickr"
+
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Αποστολή των φωτογραφιών σας στο Flickr"
 
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
@@ -397,11 +401,10 @@ msgid "Python Console"
 msgstr "Κονσόλα Python"
 
 #: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
-#| msgid "Python Console"
 msgid "Adds a Python console"
 msgstr "Προσθέτει μια κονσόλα Python"
 
-#: ../plugins/pythonconsole/__init__.py:64
+#: ../plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
 msgstr "Κονσόλα P_ython"
 
@@ -449,7 +452,7 @@ msgid "Python console for Eye of GNOME"
 msgstr "Κονσόλα Python για το Μάτι του GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:84
 msgid "Send by Mail"
 msgstr "Αποστολή μέσω αλληλογραφίας"
 
@@ -457,10 +460,6 @@ msgstr "Αποστολή μέσω αλληλογραφίας"
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Στέλνει μια εικόνα που επισυνάπτεται σε μια νέα αλληλογραφία"
-
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "Αποστολή επιλεγμένων εικόνων μέσω αλληλογραφίας"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
@@ -472,10 +471,15 @@ msgid "Slideshow Shuffle"
 msgstr "Τυχαία σειρά παρουσίασης"
 
 #: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
-#| msgid "Shuffles images in slideshow mode"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Τυχαία σειρά φωτογραφιών σε λειτουργία παρουσίασης"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Τυχαία σειρά εικόνων σε λειτουργία παρουσίασης"
+
+#~ msgid "Fit the image to the window width"
+#~ msgstr "Προσαρμογή της εικόνας στο πλάτος του παραθύρου"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "Αποστολή επιλεγμένων εικόνων μέσω αλληλογραφίας"
