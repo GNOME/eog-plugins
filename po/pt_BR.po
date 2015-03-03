@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: eog-plugins 2.28\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-11-06 16:31+0000\n"
-"PO-Revision-Date: 2014-11-07 01:22-0300\n"
+"POT-Creation-Date: 2015-03-03 04:32+0000\n"
+"PO-Revision-Date: 2015-03-03 12:12-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.7.4\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -112,7 +112,7 @@ msgstr "Exportar para pasta"
 msgid "Export the current image to a separate directory"
 msgstr "Exportar a imagem atual para um diretório diferente"
 
-#: ../plugins/export-to-folder/export-to-folder.py:61
+#: ../plugins/export-to-folder/export-to-folder.py:55
 msgid "_Export"
 msgstr "_Exportar"
 
@@ -141,13 +141,9 @@ msgstr "Ampliar para adequar a largura da imagem"
 msgid "Adjusts the zoom to have the image's width fit into the window"
 msgstr "Ajusta a ampliação para que a largura da imagem se adeque à janela"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:119
 msgid "Fit to width"
 msgstr "Ajustar ao tamanho"
-
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "Ajusta a imagem à largura da janela"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
@@ -216,7 +212,7 @@ msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Desabilita a preferência do Eye of GNOME pela variante escura de temas"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:438
+#: ../plugins/map/eog-map-plugin.c:441
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
@@ -225,21 +221,34 @@ msgstr "Mapa"
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Exibe em um mapa no painel lateral onde a imagem foi tirada"
 
-#: ../plugins/map/eog-map-plugin.c:403
+#: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
 msgstr "Ir para a localização da imagem atual"
 
-#: ../plugins/map/eog-map-plugin.c:415
+#: ../plugins/map/eog-map-plugin.c:417
 msgid "Zoom in"
 msgstr "Mais zoom"
 
-#: ../plugins/map/eog-map-plugin.c:423
+#: ../plugins/map/eog-map-plugin.c:426
 msgid "Zoom out"
 msgstr "Menos zoom"
 
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Exibe a localização geográfica da imagem em um mapa"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Maximizar janelas"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Novas janelas serão abertas maximizadas"
+
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Maximizar novas janelas"
 
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
 msgid "Picasa Web Uploader"
@@ -249,56 +258,51 @@ msgstr "Ferramenta de envio do Picasa Web"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Possui suporte ao envio de fotos para o Google Picasa Web"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "Enviar ao PicasaWeb"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Envie suas imagens ao PicasaWeb"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:325
+#: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
 msgstr "Enviando..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Enviado"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Cancelado"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Falhou"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Login falhou. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "Conectado com sucesso."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Fechar"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
+#: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
 msgstr "Conectando-se em..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Por favor, conecte-se para continuar o envio."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:807
+msgid "Upload to PicasaWeb"
+msgstr "Enviar ao PicasaWeb"
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -323,6 +327,10 @@ msgstr "_Senha:"
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Ferramenta de envio do PicasaWeb"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Envie suas imagens ao PicasaWeb"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -356,18 +364,17 @@ msgstr "Postr"
 msgid "Supports uploading photos to Flickr"
 msgstr "Possui suporte ao envio de fotos para o Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: ../plugins/postr/eog-postr-plugin.c:123
 msgid "Upload to Flickr"
 msgstr "Enviar ao Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Envie suas imagens ao Flickr"
 
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Ferramenta de envio do Flickr"
+
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Envie suas imagens ao Flickr"
 
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
@@ -387,7 +394,7 @@ msgstr "Console Python"
 msgid "Adds a Python console"
 msgstr "Adiciona um console Python"
 
-#: ../plugins/pythonconsole/__init__.py:64
+#: ../plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
 msgstr "Console P_ython"
 
@@ -434,7 +441,7 @@ msgid "Python console for Eye of GNOME"
 msgstr "Console Python para o Visualisador de imagens GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:84
 msgid "Send by Mail"
 msgstr "Enviar por e-mail"
 
@@ -442,10 +449,6 @@ msgstr "Enviar por e-mail"
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Envia uma imagem anexada em um novo e-mail"
-
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "Enviar as imagens selecionadas por e-mail"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
@@ -463,6 +466,12 @@ msgstr "Mistura as fotos em um modo de apresentação"
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Mistura as imagens num modo de apresentação"
+
+#~ msgid "Fit the image to the window width"
+#~ msgstr "Ajusta a imagem à largura da janela"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "Enviar as imagens selecionadas por e-mail"
 
 #~ msgid "Reload Image"
 #~ msgstr "Recarregar imagem"
