@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-15 18:37+0100\n"
-"PO-Revision-Date: 2015-02-15 18:38+0100\n"
+"POT-Creation-Date: 2015-08-31 02:17+0200\n"
+"PO-Revision-Date: 2015-08-31 02:18+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -41,7 +41,7 @@ msgstr "%.1fmm (obiektyw)"
 #: ../plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
-msgstr "%.1fmm (film 35mm)"
+msgstr "%.1f mm (film 35 mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
 msgid "Histogram"
@@ -128,7 +128,7 @@ msgid ""
 "export to $HOME/exported-images if not set."
 msgstr ""
 "To jest katalog, w którym wtyczka umieści wyeksportowane pliki. Wtyczka "
-"będzie eksportować do $HOME/exported-images, jeśli nie ustawiono żadnej "
+"będzie eksportować do „$HOME/exported-images”, jeśli nie ustawiono żadnej "
 "wartości."
 
 #: ../plugins/export-to-folder/preferences_dialog.ui.h:1
@@ -181,7 +181,7 @@ msgid ""
 "effect only if use-custom is enabled."
 msgstr ""
 "Kolor używany do wypełnienia obszaru za obrazem. Ta opcja jest uwzględniana "
-"tylko, jeśli klucz \"use-custom\" jest włączony."
+"tylko, jeśli klucz „use-custom” jest włączony."
 
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
@@ -263,7 +263,7 @@ msgstr "Obsługuje wysyłanie zdjęć do serwisu Picasa Web firmy Google"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
-msgstr "Wysyłanie..."
+msgstr "Wysyłanie…"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
@@ -297,7 +297,7 @@ msgstr "Anuluj"
 #. TODO: want to handle passwords more securely
 #: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
-msgstr "Logowanie..."
+msgstr "Logowanie…"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
@@ -353,7 +353,7 @@ msgstr "Stan"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:5
 msgid "Cancel Selected"
-msgstr "Anuluj wybrane"
+msgstr "Anuluj zaznaczone"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:6
 msgid "Cancel All"
@@ -426,7 +426,7 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
-"Jeśli jest ustawione na wartość \"true\", to terminal użyje standardowej "
+"Jeśli jest ustawione na wartość „true”, to terminal użyje standardowej "
 "czcionki środowiska, jeśli jest stałej szerokości (w innym przypadku "
 "najbardziej podobną)."
 
@@ -437,8 +437,8 @@ msgstr "Czcionka używana przez konsolę języka Python"
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
-"Nazwa czcionki biblioteki Pango. Przykłady: \"Sans 12\" lub \"Monospace Bold "
-"14\"."
+"Nazwa czcionki biblioteki Pango. Przykłady: „Sans 12” lub „Monospace Bold "
+"14”."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
