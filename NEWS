@@ -1,3 +1,17 @@
+Version 3.16.2
+--------------
+
+Plugin changes:
+
+- Map
+ - #753761, map plugin uses outdated icon to mark image location
+
+New and updated translations:
+
+- Changwoo Ryu [ko]
+- Piotr Drąg [pl]
+- Pedro Albuquerque [pt]
+
 Version 3.16.1
 --------------
 
