@@ -70,6 +70,33 @@ postr_cb (GSimpleAction *simple,
 	g_free (cmd);
 }
 
+static void
+eog_postr_plugin_update_action_state (EogPostrPlugin *plugin)
+{
+	GAction *action;
+	EogThumbView *thumbview;
+	gboolean enable = FALSE;
+
+	thumbview = EOG_THUMB_VIEW (eog_window_get_thumb_view (plugin->window));
+
+	if (G_LIKELY (thumbview))
+	{
+		enable = (eog_thumb_view_get_n_selected (thumbview) != 0);
+	}
+
+	action = g_action_map_lookup_action (G_ACTION_MAP (plugin->window),
+					     EOG_POSTR_PLUGIN_ACTION);
+	g_simple_action_set_enabled (G_SIMPLE_ACTION (action), enable);
+}
+
+static void
+_selection_changed_cb (EogThumbView *thumbview, gpointer user_data)
+{
+	EogPostrPlugin *plugin = EOG_POSTR_PLUGIN (user_data);
+
+	if (G_LIKELY (plugin))
+		eog_postr_plugin_update_action_state (plugin);
+}
 
 static void
 eog_postr_plugin_init (EogPostrPlugin *plugin)
@@ -118,6 +145,12 @@ impl_activate (EogWindowActivatable *activatable)
 				 G_ACTION (action));
 	g_object_unref (action);
 
+	g_signal_connect (G_OBJECT (eog_window_get_thumb_view (plugin->window)),
+			  "selection-changed",
+			  G_CALLBACK (_selection_changed_cb),
+			  plugin);
+	eog_postr_plugin_update_action_state (plugin);
+
 	/* Append entry to the window's gear menu */
 	menu = g_menu_new ();
 	g_menu_append (menu, _("Upload to Flickr"),
@@ -165,6 +198,10 @@ impl_deactivate	(EogWindowActivatable *activatable)
 			}
 		}
 	}
+
+	g_signal_handlers_disconnect_by_func (eog_window_get_thumb_view (plugin->window),
+					      _selection_changed_cb, plugin);
+
 
 	/* Finally remove action */
 	g_action_map_remove_action (G_ACTION_MAP (plugin->window),
