@@ -100,6 +100,7 @@ impl_activate (EogWindowActivatable *activatable)
 	GMenu *model, *menu;
 	GMenuItem *item;
 	GSimpleAction *action;
+	GAction *ref_action;
 
 	model= eog_window_get_gear_menu_section (plugin->window,
 						 "plugins-section");
@@ -112,6 +113,15 @@ impl_activate (EogWindowActivatable *activatable)
 			 G_CALLBACK (fit_to_width_cb), plugin->window);
 	g_action_map_add_action (G_ACTION_MAP (plugin->window),
 				 G_ACTION (action));
+
+	/* Bind to the zoom-normal action's enabled property to only enable
+	 * fit-to-width zooming if zooming is generally enabled */
+	ref_action = g_action_map_lookup_action (G_ACTION_MAP (plugin->window),
+						 "zoom-normal");
+	if (ref_action)
+		g_object_bind_property (ref_action, "enabled",
+					action, "enabled",
+					G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE);
 	g_object_unref (action);
 
 	/* Append entry to the window's gear menu */
