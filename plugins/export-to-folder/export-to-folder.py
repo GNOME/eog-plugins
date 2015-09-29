@@ -36,6 +36,7 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
     def __init__(self):
         GObject.Object.__init__(self)
         self.settings = Gio.Settings.new(BASE_KEY)
+        self.selection_changed_handler_id = None
 
     @property
     def export_dir(self):
@@ -52,10 +53,15 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
 
         self.window.add_action(action)
         menu = Gio.Menu()
-        menu.append(_('_Export'), 'win.export-to-folder')
+        menu.append(_('_Export'), 'win.' + _ACTION_NAME)
         item = Gio.MenuItem.new_section(None, menu)
         item.set_attribute([('id', 's', _MENU_ID)])
         model.append_item(item)
+
+        thumbview = self.window.get_thumb_view()
+        self.selection_changed_handler_id = \
+            thumbview.connect('selection-changed', self.update_action_state)
+        self.update_action_state(thumbview)
 
         # Add accelerator key
         app = Eog.Application.get_instance()
@@ -75,6 +81,11 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
         app = Eog.Application.get_instance()
         app.set_accels_for_action('win.' + _ACTION_NAME, ['E', None])
 
+        if self.selection_changed_handler_id is not None:
+            thumbview = self.window.get_thumb_view()
+            thumbview.disconnect(self.selection_changed_handler_id)
+            self.selection_changed_handler_id = None
+
         self.window.remove_action(_ACTION_NAME)
 
     def export_cb(self, action, parameter, window):
@@ -93,6 +104,17 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
             pass
         shutil.copy2(src, dest)
         print('Copied %s into %s' % (name, self.export_dir))
+
+    def update_action_state(self, thumbview=None):
+        action = self.window.lookup_action(_ACTION_NAME)
+        enable = False
+        if thumbview is None:
+            thumbview = self.window.get_thumb_view()
+
+        if thumbview is not None:
+            enable = (thumbview.get_n_selected() > 0)
+
+        action.set_enabled(enable)
 
 
 class ExportConfigurable(GObject.Object, PeasGtk.Configurable):
