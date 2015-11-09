@@ -1,3 +1,11 @@
+Version 3.16.3
+--------------
+
+General changes:
+
+- #755244, Some entries of the popovermenu entry should be grayed
+           when no image opened (Felix Riemann)
+
 Version 3.16.2
 --------------
 
