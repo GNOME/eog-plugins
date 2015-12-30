@@ -1,14 +1,14 @@
 # Serbian translation of eog-plugins.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012—2014.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012—2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-10-25 03:29+0000\n"
-"PO-Revision-Date: 2014-10-25 10:05+0200\n"
+"POT-Creation-Date: 2015-12-30 04:45+0000\n"
+"PO-Revision-Date: 2015-12-30 08:40+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -60,7 +60,6 @@ msgstr "Прикажите подешавања фото-апарата на т�
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
 #: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
-#| msgid "Exif display"
 msgid "Exif Display"
 msgstr "Ексиф приказ"
 
@@ -110,7 +109,7 @@ msgstr "Извези у фасциклу"
 msgid "Export the current image to a separate directory"
 msgstr "Извезите текућу слику у засебну фасциклу"
 
-#: ../plugins/export-to-folder/export-to-folder.py:61
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Извези"
 
@@ -133,7 +132,6 @@ msgstr "Фасцикла извоза:"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-#| msgid "Zoom to fit image width"
 msgid "Zoom to Fit Image Width"
 msgstr "Увећај да испуни ширину слике"
 
@@ -141,13 +139,9 @@ msgstr "Увећај да испуни ширину слике"
 msgid "Adjusts the zoom to have the image's width fit into the window"
 msgstr "Дотерајте увеличање тако да ширина слике испуни прозор"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Испуни по ширини"
-
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "Прилагоди слику ширини прозора"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
@@ -193,7 +187,6 @@ msgid "Hide Titlebar"
 msgstr "Сакриј наслов"
 
 #: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
-#| msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgid "Hides the titlebar of maximized windows"
 msgstr "Сакријте траку наслова увећаних прозора"
 
@@ -203,12 +196,10 @@ msgstr "Сакрјте траку наслова увећаних прозора
 
 #: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-#| msgid "Disable dark theme"
 msgid "Disable Dark Theme"
 msgstr "Искључи тамну тему"
 
 #: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
-#| msgid "Disable dark theme"
 msgid "Disables dark theme"
 msgstr "Искључите тамну тему"
 
@@ -217,8 +208,7 @@ msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Искључите тамну тему у поставкама Гномовог Ока"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:438
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:441 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Карта"
 
@@ -226,15 +216,15 @@ msgstr "Карта"
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Прикажите на карти у бочној површи где је снимљена слика"
 
-#: ../plugins/map/eog-map-plugin.c:403
+#: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
 msgstr "Скочи до места текуће слике"
 
-#: ../plugins/map/eog-map-plugin.c:415
+#: ../plugins/map/eog-map-plugin.c:417
 msgid "Zoom in"
 msgstr "Увећај"
 
-#: ../plugins/map/eog-map-plugin.c:423
+#: ../plugins/map/eog-map-plugin.c:426
 msgid "Zoom out"
 msgstr "Умањи"
 
@@ -242,8 +232,20 @@ msgstr "Умањи"
 msgid "Display the geolocation of the image on a map"
 msgstr "Прикажите геоположај слике на карти"
 
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Увећај прозор"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Нови прозори ће се отворити увећани"
+
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Увећај нове прозоре"
+
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
-#| msgid "PicasaWeb Uploader"
 msgid "Picasa Web Uploader"
 msgstr "Отпремник Пикаса веба"
 
@@ -251,56 +253,51 @@ msgstr "Отпремник Пикаса веба"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Подршка за отпремање фотографија на Гугл Пикаса веб"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "Отпреми на Пикаса веб"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Отпремите ваше слике на Пикаса веб"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:325
+#: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
 msgstr "Отпремам..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Отпремљено"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Отказано"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Неуспело"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Пријављивање није успело. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "Успешно сте пријављени."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Затвори"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Откажи"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
+#: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
 msgstr "Пријављујем се..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Пријавите се да наставите отпремање."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:842
+msgid "Upload to PicasaWeb"
+msgstr "Отпреми на Пикаса веб"
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -325,6 +322,10 @@ msgstr "_Лозинка:"
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Отпремник Пикаса веба"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Отпремите ваше слике на Пикаса веб"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -358,18 +359,17 @@ msgstr "Постр"
 msgid "Supports uploading photos to Flickr"
 msgstr "Подршка за отпремање фотогрфија на Фликр"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Отпреми на Фликр"
-
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Отпремите ваше слике на Фликр"
 
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Фликров отпреник"
+
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Отпремите ваше слике на Фликр"
 
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
@@ -386,11 +386,10 @@ msgid "Python Console"
 msgstr "Питонова конзола"
 
 #: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
-#| msgid "Python Console"
 msgid "Adds a Python console"
 msgstr "Додајте питонову конзолу"
 
-#: ../plugins/pythonconsole/__init__.py:64
+#: ../plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
 msgstr "_Питонова конзола"
 
@@ -435,7 +434,7 @@ msgid "Python console for Eye of GNOME"
 msgstr "Питонова конзола за Око Гнома"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Пошаљи поштом"
 
@@ -443,10 +442,6 @@ msgstr "Пошаљи поштом"
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Пошаљите слику прикачену новој пошти"
-
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "Пошаљите поштом изабране слике"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
@@ -458,10 +453,15 @@ msgid "Slideshow Shuffle"
 msgstr "Мешање покретног приказа"
 
 #: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
-#| msgid "Shuffles images in slideshow mode"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Измешајте фотографије у режиму покретног приказа"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Измешајте слике у режиму покретног приказа"
+
+#~ msgid "Fit the image to the window width"
+#~ msgstr "Прилагоди слику ширини прозора"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "Пошаљите поштом изабране слике"
