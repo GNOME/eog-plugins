@@ -1,22 +1,21 @@
-# Translation of oc.po to Occitan
-# Occitan translation of eog.
-# Copyright (C) 2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the eog package.
+# French translation of eog-plugins.
+# Copyright (C) 2007-2014 Free Software Foundation, Inc.
+# This file is distributed under the same license as the eog-plugins package.
 # Yannig Marchegay (Kokoyaya)  <yannig@marchegay.org>, 2007-2008.
 # Cédric Valmary (Tot en Òc) <cvalmary@yahoo.fr>, 2013.
 # Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>, 2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: oc\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=general\n"
+"Project-Id-Version: eog-plugins HEAD\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog&key"
+"words=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2016-02-15 15:21+0000\n"
-"PO-Revision-Date: 2015-05-25 11:24+0200\n"
-"Last-Translator: Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>\n"
-"Language-Team: Tot en òc (totenoc.eu)\n"
+"PO-Revision-Date: 2016-03-04 17:34+0200\n"
+"Last-Translator: Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
+"Language-Team: Tot En Òc\n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 0.7.1\n"
@@ -89,7 +88,7 @@ msgstr "_Dobrir..."
 
 #: ../data/eog-gear-menu.ui.h:2
 msgid "Open _With"
-msgstr "Ouvrir _avec"
+msgstr "Dobrir _amb"
 
 #: ../data/eog-gear-menu.ui.h:3 ../data/popup-menus.ui.h:2
 #: ../src/eog-close-confirmation-dialog.c:178 ../src/eog-file-chooser.c:465
@@ -114,19 +113,16 @@ msgid "Sli_deshow"
 msgstr "_Diaporama"
 
 #: ../data/eog-gear-menu.ui.h:8
-#, fuzzy
 #| msgid "Side _Pane"
 msgid "S_ide Pane"
 msgstr "_Panèl lateral"
 
 #: ../data/eog-gear-menu.ui.h:9
-#, fuzzy
 #| msgid "_Image Gallery"
 msgid "Image _Gallery"
 msgstr "Galariá d'_imatges"
 
 #: ../data/eog-gear-menu.ui.h:10
-#, fuzzy
 #| msgid "_Statusbar"
 msgid "S_tatus Bar"
 msgstr "Barra d'e_stat"
@@ -161,7 +157,7 @@ msgstr "_Nautor :"
 
 #: ../data/eog-image-properties-dialog.ui.h:7
 msgid "Type:"
-msgstr "Mena :"
+msgstr "Tipe :"
 
 #: ../data/eog-image-properties-dialog.ui.h:8
 msgid "Bytes:"
@@ -237,7 +233,7 @@ msgstr "Metadonadas"
 
 #: ../data/eog-multiple-save-as-dialog.ui.h:1
 msgid "Save As"
-msgstr "Enregistrar coma"
+msgstr "Enregistrar jos"
 
 #: ../data/eog-multiple-save-as-dialog.ui.h:2
 #: ../src/eog-close-confirmation-dialog.c:172
@@ -292,7 +288,7 @@ msgstr "Opcions"
 
 #: ../data/eog-multiple-save-as-dialog.ui.h:15
 msgid "Rename from:"
-msgstr "Renommar a partir de :"
+msgstr "Renomenar a partir de :"
 
 #: ../data/eog-multiple-save-as-dialog.ui.h:16
 msgid "To:"
@@ -450,7 +446,7 @@ msgstr "Pivotar l'imatge de 90 grases a esquèrra"
 
 #: ../data/fullscreen-toolbar.ui.h:16
 msgid "Rotate Counter_clockwise"
-msgstr "Rotation _anti-horaire"
+msgstr "Rotacion _anti-horaire"
 
 #: ../data/fullscreen-toolbar.ui.h:17 ../src/eog-scroll-view.c:2325
 msgid "Rotate the image 90 degrees to the right"
@@ -480,56 +476,49 @@ msgstr "_Sortir de l'ecran complet"
 
 #: ../data/fullscreen-toolbar.ui.h:23
 msgid "Leave fullscreen mode"
-msgstr "Quitter le mode plein écran"
+msgstr "Quitar le mode plein écran"
 
 #: ../data/help-overlay.ui.h:1
-#, fuzzy
 #| msgid "General"
 msgctxt "shortcut window"
 msgid "General"
 msgstr "General"
 
 #: ../data/help-overlay.ui.h:2
-#, fuzzy
 #| msgid "Open a file"
 msgctxt "shortcut window"
 msgid "Open an image file"
-msgstr "Dobrir un fichièr"
+msgstr "Dobrir un fichièr imatge"
 
 #: ../data/help-overlay.ui.h:3
-#, fuzzy
 #| msgid "Enlarge the image"
 msgctxt "shortcut window"
 msgid "Save the image"
-msgstr "Agrandir l'imatge"
+msgstr "Enregistrar l'imatge"
 
 #: ../data/help-overlay.ui.h:4
-#, fuzzy
 #| msgid "Save the selected images with a different name"
 msgctxt "shortcut window"
 msgid "Save the image with a new file name"
-msgstr "Enregistrar los imatges seleccionats jos un autre nom"
+msgstr "Enregistrar l'imatge jos un autre nom"
 
 #: ../data/help-overlay.ui.h:5
-#, fuzzy
 #| msgid "Print the selected image"
 msgctxt "shortcut window"
 msgid "Print the current image"
-msgstr "Imprimir l'imatge seleccionat"
+msgstr "Imprimir l'imatge corrent"
 
 #: ../data/help-overlay.ui.h:6
-#, fuzzy
 #| msgid "Close window"
 msgctxt "shortcut window"
 msgid "Close the current window"
-msgstr "Tampar la fenèstra"
+msgstr "Tampar la fenèstra correnta"
 
 #: ../data/help-overlay.ui.h:7
-#, fuzzy
 #| msgid "Close window"
 msgctxt "shortcut window"
 msgid "Close all windows"
-msgstr "Tampar la fenèstra"
+msgstr "Tampar totas las fenèstras"
 
 #: ../data/help-overlay.ui.h:8
 msgctxt "shortcut window"
@@ -537,42 +526,36 @@ msgid "Set the image as desktop background"
 msgstr ""
 
 #: ../data/help-overlay.ui.h:9
-#, fuzzy
 #| msgid "Show/Hide the window toolbar."
 msgctxt "shortcut window"
 msgid "Show/Hide the sidebar"
-msgstr "Afichar/amagar la barra d'aisinas de la fenèstra."
+msgstr "Afichar/amagar lo panèl lateral"
 
 #: ../data/help-overlay.ui.h:10
-#, fuzzy
 #| msgid "Image Properties"
 msgctxt "shortcut window"
 msgid "Show image properties dialog"
 msgstr "Proprietats de l'imatge"
 
 #: ../data/help-overlay.ui.h:11
-#, fuzzy
 #| msgid "Help on this application"
 msgctxt "shortcut window"
 msgid "Open the application manual"
 msgstr "Ajuda sus aquesta aplicacion"
 
 #: ../data/help-overlay.ui.h:12
-#, fuzzy
 #| msgid "_Zoom In"
 msgctxt "shortcut window"
 msgid "Zoom"
 msgstr "_Zoom +"
 
 #: ../data/help-overlay.ui.h:13
-#, fuzzy
 #| msgid "_Zoom In"
 msgctxt "shortcut window"
 msgid "Zoom in"
 msgstr "_Zoom +"
 
 #: ../data/help-overlay.ui.h:14
-#, fuzzy
 #| msgid "Zoom _Out"
 msgctxt "shortcut window"
 msgid "Zoom out"
@@ -581,10 +564,9 @@ msgstr "Zoo_m +"
 #: ../data/help-overlay.ui.h:15
 msgctxt "shortcut window"
 msgid "Actual size"
-msgstr ""
+msgstr "Talha actuala"
 
 #: ../data/help-overlay.ui.h:16
-#, fuzzy
 #| msgid "_Best Fit"
 msgctxt "shortcut window"
 msgid "Best fit"
@@ -592,114 +574,101 @@ msgstr "Talha _ideala"
 
 # Utilisation de l'infinitif sur les infobulles del Bureau
 #: ../data/help-overlay.ui.h:17
-#, fuzzy
 #| msgid "Browse and rotate images"
 msgctxt "shortcut window"
 msgid "Browsing Images"
 msgstr "Percórrer e pivotar los imatges"
 
 #: ../data/help-overlay.ui.h:18
-#, fuzzy
 #| msgid "Go to the previous image of the gallery"
 msgctxt "shortcut window"
 msgid "Go to the previous image in the folder"
 msgstr "Anar a l'imatge precedent de la colleccion"
 
 #: ../data/help-overlay.ui.h:19
-#, fuzzy
 #| msgid "Go to the next image of the gallery"
 msgctxt "shortcut window"
 msgid "Go to the next image in the folder"
 msgstr "Anar a l'imatge seguent de la colleccion"
 
 #: ../data/help-overlay.ui.h:20
-#, fuzzy
 #| msgid "Go to the first image of the gallery"
 msgctxt "shortcut window"
 msgid "Go to the first image in the folder"
 msgstr "Anar al primièr imatge de la colleccion"
 
 #: ../data/help-overlay.ui.h:21
-#, fuzzy
 #| msgid "Go to the last image of the gallery"
 msgctxt "shortcut window"
 msgid "Go to the last image in the folder"
 msgstr "Anar al darrièr imatge de la colleccion"
 
 #: ../data/help-overlay.ui.h:22
-#, fuzzy
 #| msgid "Go to a random image of the gallery"
 msgctxt "shortcut window"
 msgid "Go to a random image in the folder"
 msgstr "Anar a l'imatge seguent de la colleccion"
 
 #: ../data/help-overlay.ui.h:23
-#, fuzzy
 #| msgid "Show/Hide the image gallery pane."
 msgctxt "shortcut window"
 msgid "Show/Hide the image gallery"
 msgstr "Afichar/amagar lo panèl de la galariá d'imatges."
 
 #: ../data/help-overlay.ui.h:24
-#, fuzzy
 #| msgid "Location:"
 msgctxt "shortcut window"
 msgid "Rotation"
 msgstr "Emplaçament :"
 
 #: ../data/help-overlay.ui.h:25
-#, fuzzy
 #| msgid "_Rotate Clockwise"
 msgctxt "shortcut window"
 msgid "Rotate clockwise"
 msgstr "_Pivotar dins lo sens de las agulhas d'un relòtge"
 
 #: ../data/help-overlay.ui.h:26
-#, fuzzy
 #| msgid "Rotate Counterc_lockwise"
 msgctxt "shortcut window"
 msgid "Rotate counterclockwise"
 msgstr "Pivotar dins lo sens _invèrs de las agulhas d'un relòtge"
 
 #: ../data/help-overlay.ui.h:27
-#, fuzzy
 #| msgid "_Fullscreen"
 msgctxt "shortcut window"
 msgid "Fullscreen"
 msgstr "Ecran _complet"
 
 #: ../data/help-overlay.ui.h:28
-#, fuzzy
 #| msgid "_Leave Fullscreen"
 msgctxt "shortcut window"
 msgid "Enter/Leave fullscreen"
 msgstr "_Sortir de l'ecran complet"
 
 #: ../data/help-overlay.ui.h:29
-#, fuzzy
 #| msgid "Slideshow"
 msgctxt "shortcut window"
 msgid "Start/Stop slideshow"
 msgstr "Diaporama"
 
 #: ../data/help-overlay.ui.h:30
-#, fuzzy
 #| msgid "Pause Slideshow"
 msgctxt "shortcut window"
 msgid "Pause slideshow"
 msgstr "Diaporama"
 
 #: ../data/metadata-sidebar.ui.h:1 ../src/eog-print-image-setup.c:969
+#, fuzzy
 msgid "Size"
 msgstr "Talha"
 
 #: ../data/metadata-sidebar.ui.h:2
 msgid "Type"
-msgstr "Type"
+msgstr "Tipe"
 
 #: ../data/metadata-sidebar.ui.h:3
 msgid "File Size"
-msgstr "Taille de fichièr"
+msgstr "Talha del fichièr"
 
 #: ../data/metadata-sidebar.ui.h:4
 msgid "Folder"
@@ -711,7 +680,7 @@ msgstr "Dobertura"
 
 #: ../data/metadata-sidebar.ui.h:6
 msgid "Exposure"
-msgstr "Durée d'exposition"
+msgstr "Durada d'exposicion"
 
 #: ../data/metadata-sidebar.ui.h:7
 msgid "ISO"
@@ -719,7 +688,7 @@ msgstr "ISO"
 
 #: ../data/metadata-sidebar.ui.h:8
 msgid "Metering"
-msgstr "Mòde de mesure"
+msgstr "Mòde de mesura"
 
 #: ../data/metadata-sidebar.ui.h:9 ../src/eog-metadata-details.c:65
 msgid "Camera"
@@ -1296,8 +1265,8 @@ msgstr "Sud"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] "%i × %i pixel"
-msgstr[1] "%i × %i pixels"
+msgstr[0] "%i × %i pixèl"
+msgstr[1] "%i × %i pixèls"
 
 #: ../src/eog-metadata-sidebar.c:155 ../src/eog-properties-dialog.c:182
 msgid "Unknown"
@@ -1512,7 +1481,7 @@ msgstr "Error d'aviada dels paramètres del sistèma : "
 
 #: ../src/eog-window.c:2630
 msgid "_Open Background Preferences"
-msgstr "_Dobrir les peferéncias de rèireplan"
+msgstr "_Dobrir las peferéncias de rèireplan"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
@@ -1639,7 +1608,7 @@ msgstr "Adaptar l'imatge a la fenèstra"
 
 #: ../src/eog-window.c:4232 ../src/eog-window.c:4277
 msgid "Shrink or enlarge the current image"
-msgstr "Réduit o agrandit l'image actuelle"
+msgstr "Redutz o agrandís l'imatge actual"
 
 #: ../src/eog-window.c:4335
 msgid "Show the current image in fullscreen mode"
@@ -2018,3 +1987,314 @@ msgstr ""
 
 #~ msgid "Page Set_up..."
 #~ msgstr "Config_uracion de la pagina..."
+
+#, c-format
+#~ msgid "%.1fmm (lens)"
+#~ msgstr "%.1f mm (focale)"
+
+#, c-format
+#~ msgid "%.1fmm (35mm film)"
+#~ msgstr "%.1f mm (film 35 mm)"
+
+#~ msgid "Histogram"
+#~ msgstr "Histogramme"
+
+#~ msgid "Display per-channel histogram"
+#~ msgstr "Afficher un histogramme par canal"
+
+#~ msgid "Display RGB histogram"
+#~ msgstr "Afficher l'histogramme RVB"
+
+#~ msgid "Display camera settings in statusbar"
+#~ msgstr "Afficher les paramètres de l'appareil dans la barre d'état"
+
+#~ msgid "Exif Display"
+#~ msgstr "Affichage Exif"
+
+#~ msgid "Displays camera settings and histogram"
+#~ msgstr "Affiche les paramètres de l'appareil et l'histogramme"
+
+#~ msgid "Displays Exif tags in the side panel and optionally the statusbar"
+#~ msgstr ""
+#~ "Affiche les balises Exif dans le panneau latéral et dans la barre d'état, si "
+#~ "demandé"
+
+#~ msgid "ISO speed:"
+#~ msgstr "Vitesse ISO :"
+
+#~ msgid "Expo. Time:"
+#~ msgstr "Durée d'exp. :"
+
+#~ msgid "Aperture:"
+#~ msgstr "Ouverture :"
+
+#~ msgid "Zoom:"
+#~ msgstr "Zoom :"
+
+#~ msgid "Metering:"
+#~ msgstr "Mesure :"
+
+#~ msgid "Expo. bias:"
+#~ msgstr "Correction d'exp. :"
+
+#~ msgid "Export to Folder"
+#~ msgstr "Exporter vers le dossier"
+
+#~ msgid "Export the current image to a separate directory"
+#~ msgstr "Exporter l'image actuelle dans un répertoire distinct"
+
+#~ msgid "_Export"
+#~ msgstr "_Exporter"
+
+#~ msgid "The folder to export to"
+#~ msgstr "Le dossier de destination"
+
+#~ msgid ""
+#~ "This is the folder the plugin will place the exported files in. Plugin will "
+#~ "export to $HOME/exported-images if not set."
+#~ msgstr ""
+#~ "Il s'agit du dossier dans lequel le greffon place les fichiers exportés. Ils "
+#~ "sont exportés par défaut dans $HOME/exported-images si le dossier n'est pas "
+#~ "spécifié."
+
+#~ msgid "Export directory:"
+#~ msgstr "Répertoire d'exportation :"
+
+#~ msgid "Zoom to Fit Image Width"
+#~ msgstr "Zoom en fonction de la largeur de l'image"
+
+#~ msgid "Adjusts the zoom to have the image's width fit into the window"
+#~ msgstr ""
+#~ "Ajuste le zoom pour que la largeur de l'image corresponde à la taille de la "
+#~ "fenêtre"
+
+#~ msgid "Fit to width"
+#~ msgstr "Adapter à la largeur"
+
+#~ msgid "Fit the image to the window width"
+#~ msgstr "Adapter l'image à la largeur de la fenêtre"
+
+#~ msgid "Fit images to the window width"
+#~ msgstr "Adapter les images à la largeur de la fenêtre"
+
+#~ msgid "Fullscreen Background"
+#~ msgstr "Arrière-plan du mode plein écran"
+
+#~ msgid "Enables changing background in fullscreen mode"
+#~ msgstr "Autorise la modification de l'arrière-plan en mode plein écran"
+
+#~ msgid "Use custom background settings"
+#~ msgstr "Utilisation de paramètres personnalisés pour l'arrière-plan"
+
+#~ msgid "Whether the plugin should use global settings or its own."
+#~ msgstr ""
+#~ "Définit si le greffon doit utiliser les paramètres généraux ou ses propres "
+#~ "paramètres."
+
+#~ msgid "Background color in fullscreen mode"
+#~ msgstr "Couleur de l'arrière-plan en mode plein écran"
+
+#~ msgid ""
+#~ "The color that is used to fill the area behind the image. This option has "
+#~ "effect only if use-custom is enabled."
+#~ msgstr ""
+#~ "La couleur à appliquer pour remplir la zone derrière l'image. Cette option "
+#~ "ne fonctionne qu'avec les paramètres personnalisés activés."
+
+#~ msgid "Use custom color:"
+#~ msgstr "Utiliser une couleur personnalisée :"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Masquer la barre de titre"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Masque la barre de titre des fenêtres maximisées"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "Masque la barre de titre des fenêtres maximisées de Eye of GNOME"
+
+#~ msgid "Disable Dark Theme"
+#~ msgstr "Désactiver le thème sombre"
+
+#~ msgid "Disables dark theme"
+#~ msgstr "Désactive le thème sombre"
+
+#~ msgid "Disables Eye of GNOME's preference of dark theme variants"
+#~ msgstr "Désactive le thème sombre des préférences de Eye of GNOME"
+
+#~ msgid "Map"
+#~ msgstr "Carte"
+
+#~ msgid "Displays on a map in the side panel where the picture was taken"
+#~ msgstr ""
+#~ "Affiche l'endroit où la photo a été prise sur une carte dans le panneau "
+#~ "latéral"
+
+#~ msgid "Jump to current image's location"
+#~ msgstr "Aller à l'emplacement de l'image actuelle"
+
+#~ msgid "Zoom in"
+#~ msgstr "Zoom avant"
+
+#~ msgid "Zoom out"
+#~ msgstr "Zoom arrière"
+
+#~ msgid "Display the geolocation of the image on a map"
+#~ msgstr "Affiche la position géographique de l'image sur une carte"
+
+#~ msgid "Picasa Web Uploader"
+#~ msgstr "Moteur de mise en ligne sur PicasaWeb"
+
+#~ msgid "Supports uploading photos to Google Picasa Web"
+#~ msgstr "Gère le téléversement de photos vers Google Picasa Web"
+
+#~ msgid "Upload to PicasaWeb"
+#~ msgstr "Mettre en ligne sur PicasaWeb"
+
+#~ msgid "Upload your pictures to PicasaWeb"
+#~ msgstr "Met en ligne vos photos sur PicasaWeb"
+
+#~ msgid "Uploading..."
+#~ msgstr "Envoi des images en cours..."
+
+#~ msgid "Uploaded"
+#~ msgstr "Mise en ligne terminée"
+
+#~ msgid "Cancelled"
+#~ msgstr "Annulé"
+
+#~ msgid "Failed"
+#~ msgstr "Échec"
+
+#, c-format
+#~ msgid "Login failed. %s"
+#~ msgstr "Échec de connexion. %s"
+
+#~ msgid "Logged in successfully."
+#~ msgstr "Connexion réussie."
+
+#~ msgid "Close"
+#~ msgstr "Fermer"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
+
+#~ msgid "Logging in..."
+#~ msgstr "Connexion en cours..."
+
+#~ msgid "Please log in to continue upload."
+#~ msgstr "Veuillez vous connecter pour continuer le téléversement."
+
+#~ msgid "PicasaWeb Login"
+#~ msgstr "Connexion à PicasaWeb"
+
+#~ msgid "_Login"
+#~ msgstr "Se _connecter"
+
+#~ msgid "_Username:"
+#~ msgstr "Nom d'_utilisateur :"
+
+#~ msgid "_Password:"
+#~ msgstr "_Mot de passe :"
+
+#~ msgid "PicasaWeb Uploader"
+#~ msgstr "Moteur de mise en ligne sur PicasaWeb"
+
+#~ msgid "Uploads:"
+#~ msgstr "Téléversements :"
+
+#~ msgid "File"
+#~ msgstr "Fichier"
+
+#~ msgid "Status"
+#~ msgstr "État"
+
+#~ msgid "Cancel Selected"
+#~ msgstr "Annuler la sélection"
+
+#~ msgid "Cancel All"
+#~ msgstr "Tout annuler"
+
+#~ msgid "Postr"
+#~ msgstr "Postr"
+
+#~ msgid "Supports uploading photos to Flickr"
+#~ msgstr "Gère le téléversement de photos vers Flickr"
+
+#~ msgid "Upload to Flickr"
+#~ msgstr "Mettre en ligne sur Flickr"
+
+#~ msgid "Upload your pictures to Flickr"
+#~ msgstr "Met en ligne vos photos sur Flickr"
+
+#~ msgid "Flickr Uploader"
+#~ msgstr "Moteur de mise en ligne sur Flickr"
+
+#~ msgid "C_ommand color:"
+#~ msgstr "C_oloration de la commande :"
+
+#~ msgid "_Error color:"
+#~ msgstr "Coloration de l'_erreur :"
+
+#~ msgid "Python Console"
+#~ msgstr "Console Python"
+
+#~ msgid "Adds a Python console"
+#~ msgstr "Ajoute une console Python"
+
+#~ msgid "P_ython Console"
+#~ msgstr "Console P_ython"
+
+#~ msgid "Command Text Color"
+#~ msgstr "Couleur du texte de la commande"
+
+#~ msgid "The color used for commands."
+#~ msgstr "La couleur utilisée pour les commandes."
+
+#~ msgid "Error Text Color"
+#~ msgstr "Couleur du message d'erreur"
+
+#~ msgid "The color used for errors."
+#~ msgstr "La couleur utilisée pour les messages d'erreur."
+
+#~ msgid "Whether to use the system font"
+#~ msgstr "Définit s'il faut utiliser la police du système"
+
+#~ msgid ""
+#~ "If true, the terminal will use the desktop-global standard font if it's "
+#~ "monospace (and the most similar font it can come up with otherwise)."
+#~ msgstr ""
+#~ "Si vrai, la police utilisée dans la console sera la police standard du "
+#~ "bureau à condition qu'elle soit à chasse fixe (sinon, il sera fait usage de "
+#~ "la police la plus approchante possible)."
+
+#~ msgid "Font used by Python Console"
+#~ msgstr "Police utilisée dans la console Python"
+
+#~ msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+#~ msgstr ""
+#~ "Un nom de police Pango. Par exemple : « Sans 12 » ou « Monospace Bold 14 »."
+
+#~ msgid "Python console for Eye of GNOME"
+#~ msgstr "Console Python pour Eye of GNOME"
+
+#~ msgid "Send by Mail"
+#~ msgstr "Envoyer par courriel"
+
+#~ msgid "Sends an image attached to a new mail"
+#~ msgstr "Envoie une image en pièce jointe d'un nouveau courriel"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "Envoie les images sélectionnées par courriel"
+
+#~ msgid "Send By Mail"
+#~ msgstr "Envoi par courriel"
+
+#~ msgid "Slideshow Shuffle"
+#~ msgstr "Diaporama aléatoire"
+
+#~ msgid "Shuffles the photos in slideshow mode"
+#~ msgstr "Mélange les photos en mode diaporama"
+
+#~ msgid "Shuffles images in slideshow mode"
+#~ msgstr "Mélange les images en mode diaporama"
