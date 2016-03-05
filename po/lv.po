@@ -1,21 +1,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-27 21:53+0000\n"
-"PO-Revision-Date: 2013-10-05 10:07+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-plug"
+"ins&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-03-05 04:45+0000\n"
+"PO-Revision-Date: 2016-03-05 17:05+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -59,12 +59,18 @@ msgid "Display camera settings in statusbar"
 msgstr "Rādīt kameras iestatījumus statusa joslā"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+#| msgid "Exif display"
+msgid "Exif Display"
 msgstr "Exif attēlošana"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Rāda kameras iestatījumus un histogrammu"
+
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr "Attēlo Exif tagus sānu rūtī un, iespējams, statusa joslā"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -94,23 +100,25 @@ msgstr "Ekspozīcijas nobīde:"
 msgid "Description:"
 msgstr "Apraksts:"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
 msgid "Export to Folder"
 msgstr "Eksportēt uz mapi"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
 msgstr "Eksportēt pašreizējo attēlu uz atsevišķu direktoriju"
 
-#: ../plugins/export-to-folder/export-to-folder.py:62
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Eksportēt"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
 msgid "The folder to export to"
 msgstr "Mape, ko eksportēt"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
@@ -122,141 +130,180 @@ msgstr ""
 msgid "Export directory:"
 msgstr "Eksportēt direktoriju:"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+#| msgid "Zoom to fit image width"
+msgid "Zoom to Fit Image Width"
+msgstr "Pielāgot attēla platumam"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
+msgid "Adjusts the zoom to have the image's width fit into the window"
+msgstr ""
+"Iestata tālummaiņu, lai ietilpinātu attēlu tā pilnā platumā lietotnes logā"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Piekārtot platumam"
-
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "Ietilpināt attēlu loga platumā"
-
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Pielāgot attēla platumam"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
 msgstr "Ietilpināt attēlus loga platumā"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
 msgstr "Pilnekrāna fons"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Enables changing background in fullscreen mode"
-msgstr "Aktivē fona mainīšanu pilnekrāna režīmā"
+msgstr "Ieslēdz fona mainīšanu pilnekrāna režīmā"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
 msgstr "Izmantot pielāgotus fona iestatījumus"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
 msgid "Whether the plugin should use global settings or its own."
 msgstr "Vai spraudnim jāizmanto globālos iestatījumus, vai pašam savus."
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
 msgid "Background color in fullscreen mode"
 msgstr "Fona krāsa pilnekrāna režīmā"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
 msgstr ""
 "Krāsa, kuru izmantot, lai aizpildītu laukumu aiz bildes. Šī opcija ir spēkā "
-"tikai, ja ir aktivēts use-custom."
+"tikai, ja ir ieslēgts use-custom."
 
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
 msgstr "Lietot pielāgotu krāsu:"
 
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
 msgid "Hide Titlebar"
 msgstr "Slēpt virsraksta joslu"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+#| msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgid "Hides the titlebar of maximized windows"
+msgstr "Slēpj virsraksta joslu, kad maksimizē logus"
 
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "Slēpj virsraksta joslu, kad maksimizē Eye of GNOME logus"
 
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-msgid "Disable dark theme"
-msgstr "Deaktivēt tumšo motīvu"
+#| msgid "Disable dark theme"
+msgid "Disable Dark Theme"
+msgstr "Izslēgt tumšo motīvu"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+#| msgid "Disable dark theme"
+msgid "Disables dark theme"
+msgstr "Izslēdz tumšo motīvu"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
 msgid "Disables Eye of GNOME's preference of dark theme variants"
-msgstr "Deaktivē Eye of GNOME iestatījumus tumšā motīva variantiem"
+msgstr "Izslēdz Eye of GNOME iestatījumus tumšā motīva variantiem"
 
-#: ../plugins/map/eog-map-plugin.c:401
+#: ../plugins/map/eog-map.metainfo.xml.in.h:1
+#: ../plugins/map/eog-map-plugin.c:441 ../plugins/map/map.plugin.desktop.in.h:1
+msgid "Map"
+msgstr "Karte"
+
+#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Attēlo uz kartes sānu rūtī vietu, kurā ir uzņemts attēls"
+
+#: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
 msgstr "Lekt uz pašreizējā attāla vietu"
 
-#: ../plugins/map/eog-map-plugin.c:413
+#: ../plugins/map/eog-map-plugin.c:417
 msgid "Zoom in"
 msgstr "Tuvināt"
 
-#: ../plugins/map/eog-map-plugin.c:421
+#: ../plugins/map/eog-map-plugin.c:426
 msgid "Zoom out"
 msgstr "Tālināt"
-
-#: ../plugins/map/eog-map-plugin.c:436
-#: ../plugins/map/map.plugin.desktop.in.h:1
-msgid "Map"
-msgstr "Karte"
 
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Attēlot attēla ģeogrāfisko vietu uz kartes"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "Augšupielādēt uz PicasaWeb"
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Maksimizēt logus"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Augšupielādējiet savas bildes uz PicasaWeb"
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Jaunie logi tiks atvērti maksimizēti"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:325
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Maksimizēt jaunos logus"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+#| msgid "PicasaWeb Uploader"
+msgid "Picasa Web Uploader"
+msgstr "Picasa Web augšupielādētājs"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Atbalsta fotogrāfiju augšupielādēšanu uz Google Picasa Web"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
 msgstr "Augšupielādē..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Augšupielādēts"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Atcelts"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Neizdevās"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Ierakstīšanās neveiksmīga. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "Ierakstījās veiksmīgi."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Aizvērt"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Atcelt"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
+#: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
 msgstr "Ierakstās..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Ierakstieties, lai varētu turpināt augšupielādi."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:842
+msgid "Upload to PicasaWeb"
+msgstr "Augšupielādēt uz PicasaWeb"
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -277,6 +324,14 @@ msgstr "_Lietotājvārds:"
 #: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Password:"
 msgstr "_Parole:"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb augšupielādētājs"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Augšupielādējiet savas bildes uz PicasaWeb"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -302,31 +357,25 @@ msgstr "Atcelt izvēlēto"
 msgid "Cancel All"
 msgstr "Atcelt visu"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
-msgid "PicasaWeb Uploader"
-msgstr "PicasaWeb augšupielādētājs"
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+msgid "Postr"
+msgstr "Postr"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Flickr"
+msgstr "Atbalsta fotogrāfiju augšupielādēšanu uz Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Augšupielādēt uz Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Augšupielādējiet savas bildes uz Flickr"
 
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Flickr augšupielādētājs"
 
-#: ../plugins/pythonconsole/__init__.py:64
-msgid "P_ython Console"
-msgstr "P_ython konsole"
-
-#: ../plugins/pythonconsole/__init__.py:88
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python konsole"
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Augšupielādējiet savas bildes uz Flickr"
 
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
@@ -336,27 +385,42 @@ msgstr "K_omandas krāsa:"
 msgid "_Error color:"
 msgstr "_Kļūdas krāsa:"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
+#: ../plugins/pythonconsole/__init__.py:87
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python konsole"
+
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+#| msgid "Python Console"
+msgid "Adds a Python console"
+msgstr "Pievieno Python konsoli"
+
+#: ../plugins/pythonconsole/__init__.py:59
+msgid "P_ython Console"
+msgstr "P_ython konsole"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
 msgid "Command Text Color"
 msgstr "Komandas teksta krāsa"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
 msgid "The color used for commands."
 msgstr "Krāsa, kuru izmantot komandām."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
 msgid "Error Text Color"
 msgstr "Kļūdas teksta krāsa"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
 msgid "The color used for errors."
 msgstr "Krāsa, kuru izmantot kļūdām."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
 msgid "Whether to use the system font"
 msgstr "Vai izmantot sistēmas fontu"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -364,11 +428,11 @@ msgstr ""
 "Ja patiess, terminālis izmantos globālo darba virsmas fontu, ja tas ir "
 "monospace (vai arī vistuvāko pēc līdzības, kādu tas var atrast)."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
 msgid "Font used by Python Console"
 msgstr "Fonts, ko izmanto Python konsole"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr "Pango fonta nosaukums. Piemēri: \"Sans 12\" vai \"Monospace Bold 14\"."
 
@@ -376,29 +440,30 @@ msgstr "Pango fonta nosaukums. Piemēri: \"Sans 12\" vai \"Monospace Bold 14\"."
 msgid "Python console for Eye of GNOME"
 msgstr "Python konsole lietotnei Eye of GNOME"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Sūtīt vēstuli"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "Sūtīt izvēlētos attēlus caur pastu"
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Sūta attēlu, kas pievienots jaunai vēstulei"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
 msgstr "Sūtīt vēstuli"
 
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
-msgid "Sends an image attached to a new mail"
-msgstr "Sūta attēlu, kas pievienots jaunai vēstulei"
-
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "Slaidrādes maisītājs"
 
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+#| msgid "Shuffles images in slideshow mode"
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Sajauc fotogrāfijas slaidrādes režīmā"
+
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Sajauc attēlus slaidrādes režīmā"
-
-#~ msgid "<b>Zoom:</b>"
-#~ msgstr "<b>Palielinājums:</b>"
