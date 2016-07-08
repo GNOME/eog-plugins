@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
 "plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-05 03:29+0000\n"
-"PO-Revision-Date: 2014-09-05 20:11+0700\n"
+"POT-Creation-Date: 2016-05-19 15:46+0000\n"
+"PO-Revision-Date: 2016-07-08 20:47+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "Language: id\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -111,7 +111,7 @@ msgstr "Ekspor ke Folder"
 msgid "Export the current image to a separate directory"
 msgstr "Ekspor gambar sekarang ke direktori terpisah"
 
-#: ../plugins/export-to-folder/export-to-folder.py:61
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Ekspor"
 
@@ -140,13 +140,9 @@ msgstr "Zum agar Pas Lebar Citra"
 msgid "Adjusts the zoom to have the image's width fit into the window"
 msgstr "Atur zum agar lebar citra pas ke jendela"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Pas lebar"
-
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "Paskan gambar ke lebar jendela"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
@@ -214,8 +210,7 @@ msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Nonaktifkan preferensi Eye of GNOME atas varian tema gelap"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:438
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:441 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Peta"
 
@@ -223,21 +218,34 @@ msgstr "Peta"
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Tampilkan pada sebuah peta di panel sisi di mana gambar diambil"
 
-#: ../plugins/map/eog-map-plugin.c:403
+#: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
 msgstr "Lompat ke lokasi citra kini"
 
-#: ../plugins/map/eog-map-plugin.c:415
+#: ../plugins/map/eog-map-plugin.c:417
 msgid "Zoom in"
 msgstr "Perbesar"
 
-#: ../plugins/map/eog-map-plugin.c:423
+#: ../plugins/map/eog-map-plugin.c:426
 msgid "Zoom out"
 msgstr "Perkecil"
 
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Tampilkan lokasi geografis citra pada peta"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Maksimalkan Jendela"
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Jendela baru akan dibuka dalam keadaan termaksimalkan"
+
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Maksimalkan jendela baru"
 
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
 msgid "Picasa Web Uploader"
@@ -247,56 +255,51 @@ msgstr "Pengunggah Web Picasa"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Mendukung pengunggahan foto ke Google Picasa Web"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "Unggah ke PicasaWeb"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Unggah citra Anda ke PicasaWeb"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:325
+#: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
 msgstr "Mengunggah..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Diunggah"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Dibatalkan"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Gagal"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Log masuk gagal. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "Sukses log masuk."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Tutup"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Batal"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
+#: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
 msgstr "Sedang log masuk.."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Silakan log masuk untuk melanjutkan mengunggah."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:842
+msgid "Upload to PicasaWeb"
+msgstr "Unggah ke PicasaWeb"
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -321,6 +324,10 @@ msgstr "_Sandi:"
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Pengunggah Picasa"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Unggah citra Anda ke PicasaWeb"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -354,18 +361,17 @@ msgstr "Postr"
 msgid "Supports uploading photos to Flickr"
 msgstr "Mendukung pengunggahan foto ke Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Unggah ke Flickr"
-
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Unggah citra Anda ke Flickr"
 
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Pengunggah Flickr"
+
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Unggah citra Anda ke Flickr"
 
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
@@ -385,7 +391,7 @@ msgstr "Konsol Python"
 msgid "Adds a Python console"
 msgstr "Menambah sebuah konsol Python"
 
-#: ../plugins/pythonconsole/__init__.py:64
+#: ../plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
 msgstr "Konsol P_ython"
 
@@ -432,7 +438,7 @@ msgid "Python console for Eye of GNOME"
 msgstr "Konsol Python untuk Mata GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Kirim lewat Surel:"
 
@@ -440,10 +446,6 @@ msgstr "Kirim lewat Surel:"
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Kirim suatu citra yang dilampirkan pada suatu surel baru"
-
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "Kirim citra yang dipilih lewat surel"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
