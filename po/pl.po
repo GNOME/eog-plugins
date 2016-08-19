@@ -1,28 +1,24 @@
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aviary.pl
-# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
-# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
-# gnomepl@aviary.pl
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Polish translation for eog-plugins.
+# Copyright © 2008-2016 the eog-plugins authors.
+# This file is distributed under the same license as the eog-plugins package.
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008-2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2009-2015.
-# Aviary.pl <gnomepl@aviary.pl>, 2008-2015.
+# Piotr Drąg <piotrdrag@gmail.com>, 2009-2016.
+# Aviary.pl <community-poland@mozilla.org>, 2008-2016.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-31 02:17+0200\n"
-"PO-Revision-Date: 2015-08-31 02:18+0200\n"
+"POT-Creation-Date: 2016-08-19 18:14+0200\n"
+"PO-Revision-Date: 2016-08-19 18:15+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <gnomepl@aviary.pl>\n"
+"Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Poedit-Language: Polish\n"
-"X-Poedit-Country: Poland\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -33,7 +29,7 @@ msgstr " (nieprawidłowe kodowanie Unicode)"
 #: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
-msgstr "%.1fmm (obiektyw)"
+msgstr "%.1f mm (obiektyw)"
 
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
@@ -70,11 +66,11 @@ msgstr "Wyświetlanie danych Exif"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
-msgstr "Wyświetla ustawienia aparatu i histogram"
+msgstr "Wyświetla ustawienia aparatu i histogram"
 
 #: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
-msgstr "Wyświetla etykiety Exif w panelu bocznym i opcjonalnie na pasku stanu"
+msgstr "Wyświetla etykiety Exif w panelu bocznym i opcjonalnie na pasku stanu"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -114,7 +110,7 @@ msgstr "Eksport do katalogu"
 msgid "Export the current image to a separate directory"
 msgstr "Eksportuje bieżący obraz do oddzielnego katalogu"
 
-#: ../plugins/export-to-folder/export-to-folder.py:55
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "Wy_eksportuj"
 
@@ -127,7 +123,7 @@ msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
 msgstr ""
-"To jest katalog, w którym wtyczka umieści wyeksportowane pliki. Wtyczka "
+"To jest katalog, w którym wtyczka umieści wyeksportowane pliki. Wtyczka "
 "będzie eksportować do „$HOME/exported-images”, jeśli nie ustawiono żadnej "
 "wartości."
 
@@ -144,7 +140,7 @@ msgstr "Przybliżanie obrazów, aby dopasować szerokość"
 msgid "Adjusts the zoom to have the image's width fit into the window"
 msgstr "Dostosowuje przybliżenie, aby dopasować szerokość obraz do okna"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:119
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Dopasowanie do szerokości"
 
@@ -160,7 +156,7 @@ msgstr "Tło pełnego ekranu"
 #: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Enables changing background in fullscreen mode"
-msgstr "Umożliwia zmianę tła w trybie pełnoekranowym"
+msgstr "Umożliwia zmianę tła w trybie pełnoekranowym"
 
 #: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
@@ -173,7 +169,7 @@ msgstr ""
 
 #: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
 msgid "Background color in fullscreen mode"
-msgstr "Kolor tła w trybie pełnoekranowym"
+msgstr "Kolor tła w trybie pełnoekranowym"
 
 #: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
 msgid ""
@@ -214,15 +210,14 @@ msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Wyłącza ciemny wariant motywu preferowany przez program Oko GNOME"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:441
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:441 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:2
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr ""
-"Wyświetla miejsce na mapie w panelu bocznym, gdzie zdjęcie zostało wykonane"
+"Wyświetla miejsce na mapie w panelu bocznym, gdzie zdjęcie zostało wykonane"
 
 #: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
@@ -303,7 +298,7 @@ msgstr "Logowanie…"
 msgid "Please log in to continue upload."
 msgstr "Proszę się zalogować, aby kontynuować wysyłanie."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:807
+#: ../plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
 msgstr "Wyślij do serwisu PicasaWeb"
 
@@ -367,7 +362,7 @@ msgstr "Postr"
 msgid "Supports uploading photos to Flickr"
 msgstr "Obsługuje wysyłanie zdjęć do serwisu Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:123
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Wyślij do serwisu Flickr"
 
@@ -445,7 +440,7 @@ msgid "Python console for Eye of GNOME"
 msgstr "Konsola języka Python dla programu Oko GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:84
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Wyślij przez e-mail"
 
@@ -465,8 +460,8 @@ msgstr "Tryb losowy pokazu slajdów"
 
 #: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
 msgid "Shuffles the photos in slideshow mode"
-msgstr "Losuje zdjęcia w trybie pokazu slajdów"
+msgstr "Losuje zdjęcia w trybie pokazu slajdów"
 
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
-msgstr "Losuje kolejność wyświetlania obrazów w trybie pokazu slajdów"
+msgstr "Losuje kolejność wyświetlania obrazów w trybie pokazu slajdów"
