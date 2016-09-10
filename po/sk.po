@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2016-08-19 16:17+0000\n"
-"PO-Revision-Date: 2016-08-22 09:21+0200\n"
+"POT-Creation-Date: 2016-08-22 07:21+0000\n"
+"PO-Revision-Date: 2016-09-10 16:56+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -76,7 +76,7 @@ msgstr "Zobrazuje nastavenia fotoaparátu a histogramu"
 
 #: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
-msgstr ""
+msgstr "Zobrazuje značky Exif v bočnom paneli a voliteľne v stavovej lište"
 
 # GtkLabel label
 #: ../plugins/exif-display/exif-display.ui.h:1
@@ -158,7 +158,7 @@ msgstr "Mierku zobrazenia prispôsobí šírke obrázku"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
 msgid "Adjusts the zoom to have the image's width fit into the window"
-msgstr ""
+msgstr "Upravuje priblíženie tak, aby šírka obrázku vyhovovala oknu"
 
 # action entry
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
@@ -252,7 +252,7 @@ msgstr "Mapa"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:2
 msgid "Displays on a map in the side panel where the picture was taken"
-msgstr ""
+msgstr "Zobrazuje na mape v bočnom paneli, kde bol obrázok vytvorený"
 
 # tooltip
 #: ../plugins/map/eog-map-plugin.c:404
@@ -277,15 +277,15 @@ msgstr "Zobrazí geologické umiestnenie z obrázku na mape"
 #: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
 #: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
 msgid "Maximize Windows"
-msgstr ""
+msgstr "Maximalizácia okien"
 
 #: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
 msgid "New windows will open maximized"
-msgstr ""
+msgstr "Nové okná budú otvárané v maximalizovanom stave"
 
 #: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
 msgid "Maximize new windows"
-msgstr ""
+msgstr "Maximalizuje nové okná"
 
 # plugin name
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
@@ -294,7 +294,7 @@ msgstr "Odovzdávanie na web služby Picasa"
 
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
 msgid "Supports uploading photos to Google Picasa Web"
-msgstr ""
+msgstr "Podpora odovzdávania fotografií do služby Google Picasa Web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
