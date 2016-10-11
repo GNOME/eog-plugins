@@ -1,3 +1,19 @@
+Version 3.16.5
+--------------
+
+Plugin changes:
+
+- Map
+ - #771945, map plugin: Use default marker (Thomas Bechtold)
+ - #771948, map plugin: Slowly move to selected image (Thomas Bechtold)
+ - #771976, map plugin: Initial zoom level wrong (Thomas Bechtold)
+
+New and updated translations:
+
+- Andika Triwidada [id]
+- Piotr Drąg [pl]
+- Dušan Kazik [sk]
+
 Version 3.16.4
 --------------
 
