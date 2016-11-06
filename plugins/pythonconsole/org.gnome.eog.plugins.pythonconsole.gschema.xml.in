@@ -15,7 +15,7 @@
       <summary>Whether to use the system font</summary>
       <description>
         If true, the terminal will use the desktop-global standard
-        font if it's monospace (and the most similar font it can
+        font if it’s monospace (and the most similar font it can
         come up with otherwise).
       </description>
     </key>
@@ -23,7 +23,7 @@
       <default>'Monospace 10'</default>
       <summary>Font used by Python Console</summary>
       <description>
-        A Pango font name. Examples are "Sans 12" or "Monospace Bold 14".
+        A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”.
       </description>
     </key>
   </schema>

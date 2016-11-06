@@ -303,7 +303,7 @@ uploads_add_entry (EogPostasaPlugin *plugin, EogImage *image, GCancellable *canc
 					   2, size,
 					   3, 50, /* upload status: set to G_MAXINT when done, to 0 to not start */
 					   4, cancellable,
-					   5, _("Uploading..."),
+					   5, _("Uploading…"),
 					   -1); /* TODO: where should cancellabe, scaled_pixbuf be unref'd? don't worry about it since
 						   they'll exist until EoG exits anyway? or in eog_postasa_plugin_dispose()? */
 	g_free (uri);
@@ -611,7 +611,7 @@ picasaweb_login_cb (GtkWidget *login_button, gpointer _plugin)
 	gtk_widget_set_sensitive (GTK_WIDGET (plugin->priv->password_entry), FALSE);
 
 	/* TODO: want to handle passwords more securely */
-	gtk_label_set_text (plugin->priv->login_message, _("Logging in..."));
+	gtk_label_set_text (plugin->priv->login_message, _("Logging in…"));
 	g_cancellable_reset (plugin->priv->login_cancellable);
 
 #ifdef HAVE_LIBGDATA_0_9

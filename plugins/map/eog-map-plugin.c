@@ -427,7 +427,7 @@ impl_activate (EogWindowActivatable *activatable)
 
 	button = GTK_WIDGET (gtk_tool_button_new (NULL, NULL));
 	gtk_tool_button_set_icon_name (GTK_TOOL_BUTTON (button), "go-jump-symbolic");
-	gtk_widget_set_tooltip_text (button, _("Jump to current image's location"));
+	gtk_widget_set_tooltip_text (button, _("Jump to current image’s location"));
 	g_signal_connect (button,
 			  "clicked",
 			  G_CALLBACK (jump_to),
