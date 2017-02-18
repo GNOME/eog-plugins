@@ -5,23 +5,24 @@
 #
 # Ilkka Tuohela <hile@iki.fi>, 2008.
 # Tommi Vainikainen <thv@iki.fi>, 2009.
-# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013, 2017.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-05-03 15:28+0000\n"
-"PO-Revision-Date: 2014-05-04 02:58+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=plugins\n"
+"POT-Creation-Date: 2016-08-19 16:17+0000\n"
+"PO-Revision-Date: 2017-02-18 18:09+0200\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -63,12 +64,18 @@ msgid "Display camera settings in statusbar"
 msgstr "Näytä kamera-asetukset tilapalkissa"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+#| msgid "Exif display"
+msgid "Exif Display"
 msgstr "Exif-näkymä"
 
 #: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Näyttää kamera-asetukset ja histogrammin"
+
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr "Näyttää Exif-tunnisteet sivupaneelissa ja valinnaisesti tilapalkissa"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -98,23 +105,25 @@ msgstr "Suljinharha:"
 msgid "Description:"
 msgstr "Kuvaus:"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
 msgid "Export to Folder"
 msgstr "Vie kansioon"
 
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
 #: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
 msgid "Export the current image to a separate directory"
 msgstr "Vie nykyinen kuva erilliseen kansioon"
 
-#: ../plugins/export-to-folder/export-to-folder.py:61
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Vie"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
 msgid "The folder to export to"
 msgstr "Vientikansio"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
@@ -127,43 +136,47 @@ msgstr ""
 msgid "Export directory:"
 msgstr "Vientikansio:"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+#| msgid "Zoom to fit image width"
+msgid "Zoom to Fit Image Width"
+msgstr "Sovita kuva sopimaan leveyteen"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
+msgid "Adjusts the zoom to have the image's width fit into the window"
+msgstr "Sovittaa suurennuksen siten, että kuvan leveys mahtuu ikkunaan"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Sovita leveyteen"
-
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "Sovita kuva ikkunan leveyteen"
-
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Zoomaa kuva sopimaan leveyteen"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
 msgstr "Sovita kuvat ikkunan leveyteen"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
 msgid "Fullscreen Background"
 msgstr "Koko näytön taustakuva"
 
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
 #: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
 msgid "Enables changing background in fullscreen mode"
 msgstr "Mahdollistaa taustan vaihtamisen koko näytön tilassa"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
 msgstr "Käytä omavalintaisia taustakuvan asetuksia"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
 msgid "Whether the plugin should use global settings or its own."
 msgstr "Käyttääkö liitännäinen yleisiä vai omia asetuksia."
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
 msgid "Background color in fullscreen mode"
 msgstr "Taustan väri koko näytön tilassa"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -175,92 +188,127 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Käytä omavalintaista väriä:"
 
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
 msgid "Hide Titlebar"
 msgstr "Piilota otsikkopalkki"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+#| msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgid "Hides the titlebar of maximized windows"
+msgstr "Piilottaa kuvakatselimen suurennetun ikkunan otsikkopalkin"
 
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "Piilottaa kuvakatselimen suurennetun ikkunan otsikkopalkin"
 
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-msgid "Disable dark theme"
+#| msgid "Disable dark theme"
+msgid "Disable Dark Theme"
 msgstr "Poista tumma teema käytöstä"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+#| msgid "Disable dark theme"
+msgid "Disables dark theme"
+msgstr "Poistaa tumman teeman käytöstä"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
 msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "Poistaa käytöstä kuvakatselimen tumman teeman suosimisen"
 
-#: ../plugins/map/eog-map-plugin.c:401
+#: ../plugins/map/eog-map.metainfo.xml.in.h:1
+#: ../plugins/map/eog-map-plugin.c:441 ../plugins/map/map.plugin.desktop.in.h:1
+msgid "Map"
+msgstr "Kartta"
+
+#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Näyttää sivupaneelin karttanäkymässä, missä kuva otettiin"
+
+#: ../plugins/map/eog-map-plugin.c:404
 msgid "Jump to current image's location"
 msgstr "Siirry nykyisen kuvan sijaintiin"
 
-#: ../plugins/map/eog-map-plugin.c:413
+#: ../plugins/map/eog-map-plugin.c:417
 msgid "Zoom in"
 msgstr "Lähennä"
 
-#: ../plugins/map/eog-map-plugin.c:421
+#: ../plugins/map/eog-map-plugin.c:426
 msgid "Zoom out"
 msgstr "Loitonna"
-
-#: ../plugins/map/eog-map-plugin.c:436 ../plugins/map/map.plugin.desktop.in.h:1
-msgid "Map"
-msgstr "Kartta"
 
 #: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Näyttää kuvan paikkatiedon kartalla"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "Vie PicasaWebiin"
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Suurenna ikkunat"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Vie valokuvasi PicasaWebiin"
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Uudet ikkunat avataan suurennettuna"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:325
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Suurenna uudet ikkunat"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+#| msgid "PicasaWeb Uploader"
+msgid "Picasa Web Uploader"
+msgstr "PicasaWeb-vienti"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Tukee kuvien lähettämistä Google Picasa Webiin"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
 msgstr "Lähetetään..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Lähetetty"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Peruttu"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Epäonnistui"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Kirjautuminen epäonnistui. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "Kirjautuminen onnistui."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Sulje"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Peru"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
+#: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
 msgstr "Kirjaudutaan..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Kirjaudu sisään jatkaaksesi lähetystä."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:842
+msgid "Upload to PicasaWeb"
+msgstr "Vie PicasaWebiin"
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -281,6 +329,14 @@ msgstr "_Käyttäjätunnus:"
 #: ../plugins/postasa/postasa-config.xml.h:5
 msgid "_Password:"
 msgstr "_Salasana:"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb-vienti"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Vie valokuvasi PicasaWebiin"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -306,31 +362,25 @@ msgstr "Peru valitut"
 msgid "Cancel All"
 msgstr "Peru kaikki"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
-msgid "PicasaWeb Uploader"
-msgstr "PicasaWeb-vienti"
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+msgid "Postr"
+msgstr "Postr"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Flickr"
+msgstr "Tukee kuvien lähettämistä Flickriin"
+
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Vie Flickr-palveluun"
-
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Vie valokuvasi Flickr-palveluun"
 
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Flickr-vienti"
 
-#: ../plugins/pythonconsole/__init__.py:64
-msgid "P_ython Console"
-msgstr "P_ython-konsoli"
-
-#: ../plugins/pythonconsole/__init__.py:87
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python-konsoli"
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Vie valokuvasi Flickr-palveluun"
 
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
@@ -340,37 +390,52 @@ msgstr "_Komentojen väri:"
 msgid "_Error color:"
 msgstr "_Virheväri:"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
+#: ../plugins/pythonconsole/__init__.py:87
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python-konsoli"
+
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+#| msgid "Python Console"
+msgid "Adds a Python console"
+msgstr "Lisää Python-konsolin"
+
+#: ../plugins/pythonconsole/__init__.py:59
+msgid "P_ython Console"
+msgstr "P_ython-konsoli"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
 msgid "Command Text Color"
 msgstr "Komentojen tekstin väri"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
 msgid "The color used for commands."
 msgstr "Komennoissa käytettävän tekstin väri."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
 msgid "Error Text Color"
 msgstr "Virhetekstin väri"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
 msgid "The color used for errors."
 msgstr "Virheissä käytettävä tekstin väri."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
 msgid "Whether to use the system font"
 msgstr "Käytetäänkö järjestelmän fonttia"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it's "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
 msgid "Font used by Python Console"
 msgstr "Python-konsolin käyttämä fontti"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
 msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgstr ""
 
@@ -378,26 +443,36 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "Python-konsoli kuvakatselimelle"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Lähetä sähköpostitse"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "Lähetä valittu kuva sähköpostitse"
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+msgid "Sends an image attached to a new mail"
+msgstr "Lähettää kuvan sähköpostin liitetiedostona"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
 msgstr "Lähetä sähköpostitse"
 
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
-msgid "Sends an image attached to a new mail"
-msgstr "Lähettää kuvan sähköpostin liitetiedostona"
-
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
 msgid "Slideshow Shuffle"
 msgstr "Diaesitys-sekoitus"
 
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+#| msgid "Shuffles images in slideshow mode"
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Sekoitaa valokuvat diaesityksessä"
+
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Sekoita valokuvat diaesityksessä"
+
+#~ msgid "Fit the image to the window width"
+#~ msgstr "Sovita kuva ikkunan leveyteen"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "Lähetä valittu kuva sähköpostitse"
