@@ -2,23 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2014, 2015.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2014, 2015, 2017.
 # Edurne Labaka <elabaka@uzei.com>, 2015.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-07 11:47+0100\n"
-"PO-Revision-Date: 2015-02-07 11:49+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-05 11:40+0100\n"
+"PO-Revision-Date: 2017-03-04 19:53+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
-"Language-Team: Basque <librezale@librezale.org>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
@@ -71,7 +69,7 @@ msgstr "Bistaratu kameraren ezarpenak eta histograma"
 
 #: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
-msgstr ""
+msgstr "Exif etiketak bistaratzen ditu albo-panalean eta aukeran egoera-barran"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -111,7 +109,7 @@ msgstr "Esportatu karpetara"
 msgid "Export the current image to a separate directory"
 msgstr "Esportatu uneko irudia bereizitako direktorio batera"
 
-#: ../plugins/export-to-folder/export-to-folder.py:61
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "E_sportatu"
 
@@ -138,15 +136,11 @@ msgstr "Zooma irudiaren zabalera doitzeko"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
 msgid "Adjusts the zoom to have the image's width fit into the window"
-msgstr ""
+msgstr "Zooma doitzen du irudiaren zabalera leihora egokitzeko"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Doitu zabalera"
-
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "Doitu irudia leihoaren zabalerara"
 
 #: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
 msgid "Fit images to the window width"
@@ -213,24 +207,24 @@ msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "GNOMEren Begiaren gai ilunaren aldaeren hobespenak desgaitzen ditu"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:438
+#: ../plugins/map/eog-map-plugin.c:467
 #: ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:2
 msgid "Displays on a map in the side panel where the picture was taken"
-msgstr ""
+msgstr "Argazkia non hartu den mapa batean bistaratzen du albo-panelean"
 
-#: ../plugins/map/eog-map-plugin.c:403
+#: ../plugins/map/eog-map-plugin.c:430
 msgid "Jump to current image's location"
 msgstr "Joan uneko irudiaren kokalekura"
 
-#: ../plugins/map/eog-map-plugin.c:415
+#: ../plugins/map/eog-map-plugin.c:443
 msgid "Zoom in"
 msgstr "Handiagotu"
 
-#: ../plugins/map/eog-map-plugin.c:423
+#: ../plugins/map/eog-map-plugin.c:452
 msgid "Zoom out"
 msgstr "Txikiagotu"
 
@@ -238,64 +232,72 @@ msgstr "Txikiagotu"
 msgid "Display the geolocation of the image on a map"
 msgstr "Bistaratu irudiaren geolokalizazioa mapa batean"
 
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr ""
+
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr ""
+
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr ""
+
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
 msgid "Picasa Web Uploader"
 msgstr "Picasa Web-eko igotzailea"
 
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
 msgid "Supports uploading photos to Google Picasa Web"
-msgstr ""
+msgstr "Argazkiak Google Picasa webgunera igotzeko euskarria du"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "Igo PicasaWeb-era"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Igo zure argazkiak PicasaWeb gunera"
-
-#: ../plugins/postasa/eog-postasa-plugin.c:325
+#: ../plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading..."
 msgstr "Igotzen..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Igota"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Bertan behera utzita"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Huts egin du"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Huts egin du saioa hastean. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: ../plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "Saioa ongi hasita."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Itxi"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Utzi"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
+#: ../plugins/postasa/eog-postasa-plugin.c:614
 msgid "Logging in..."
 msgstr "Saioa hasten..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Hasi saioa igotzen jarraitzeko."
+
+#: ../plugins/postasa/eog-postasa-plugin.c:842
+msgid "Upload to PicasaWeb"
+msgstr "Igo PicasaWeb-era"
 
 #: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
@@ -320,6 +322,10 @@ msgstr "_Pasahitza:"
 #: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "PicasaWeb-eko igotzailea"
+
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Igo zure argazkiak PicasaWeb gunera"
 
 #: ../plugins/postasa/postasa-uploads.xml.h:1
 msgid "Uploads:"
@@ -347,24 +353,23 @@ msgstr "Utzi dena"
 
 #: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
 msgid "Postr"
-msgstr ""
+msgstr "Postr"
 
 #: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
 msgid "Supports uploading photos to Flickr"
-msgstr ""
+msgstr "Argazkiak Flickr webgunera igotzeko euskarria du"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Igo Flickr-era"
-
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Igo zure argazkiak Flickr gunera"
 
 #: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Flickr igotzailea"
+
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Igo zure argazkiak Flickr gunera"
 
 #: ../plugins/pythonconsole/config.ui.h:1
 msgid "C_ommand color:"
@@ -384,7 +389,7 @@ msgstr "Python kontsola"
 msgid "Adds a Python console"
 msgstr "Python kontsola gehitzen du"
 
-#: ../plugins/pythonconsole/__init__.py:64
+#: ../plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
 msgstr "_Python kontsola"
 
@@ -430,7 +435,7 @@ msgid "Python console for Eye of GNOME"
 msgstr "GNOMEren begiaren python kontsola"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Bidali postaz"
 
@@ -438,10 +443,6 @@ msgstr "Bidali postaz"
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Bidali irudi bat posta berriari erantsita"
-
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "Bidali hautatutako irudiak postaren bidez"
 
 #: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
 msgid "Send By Mail"
@@ -460,3 +461,8 @@ msgstr "Ausaz nahasi irudiak diapositiba-aurkezpena moduan"
 msgid "Shuffles images in slideshow mode"
 msgstr "Ausaz nahasi irudiak diapositiba-aurkezpena moduan"
 
+#~ msgid "Fit the image to the window width"
+#~ msgstr "Doitu irudia leihoaren zabalerara"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "Bidali hautatutako irudiak postaren bidez"
