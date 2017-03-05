@@ -2,23 +2,23 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2014, 2015.
-# Edurne Labaka <elabaka@uzei.com>, 2015.
 #
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2014, 2015, 2017.
+# Edurne Labaka <elabaka@uzei.com>, 2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-07 11:47+0100\n"
-"PO-Revision-Date: 2015-02-07 11:49+0100\n"
+"Project-Id-Version: eog-plugins gnome-3-14\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=plugins\n"
+"POT-Creation-Date: 2016-09-22 13:52+0000\n"
+"PO-Revision-Date: 2017-03-04 19:53+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
-"Language-Team: Basque <librezale@librezale.org>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
@@ -71,7 +71,7 @@ msgstr "Bistaratu kameraren ezarpenak eta histograma"
 
 #: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
-msgstr ""
+msgstr "Exif etiketak bistaratzen ditu albo-panalean eta aukeran egoera-barran"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
 msgid "ISO speed:"
@@ -138,7 +138,7 @@ msgstr "Zooma irudiaren zabalera doitzeko"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
 msgid "Adjusts the zoom to have the image's width fit into the window"
-msgstr ""
+msgstr "Zooma doitzen du irudiaren zabalera leihora egokitzeko"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
 msgid "Fit to width"
@@ -213,14 +213,13 @@ msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgstr "GNOMEren Begiaren gai ilunaren aldaeren hobespenak desgaitzen ditu"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:438
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:438 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:2
 msgid "Displays on a map in the side panel where the picture was taken"
-msgstr ""
+msgstr "Argazkia non hartu den mapa batean bistaratzen du albo-panelean"
 
 #: ../plugins/map/eog-map-plugin.c:403
 msgid "Jump to current image's location"
@@ -244,7 +243,7 @@ msgstr "Picasa Web-eko igotzailea"
 
 #: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
 msgid "Supports uploading photos to Google Picasa Web"
-msgstr ""
+msgstr "Argazkiak Google Picasa webgunera igotzeko euskarria du"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:127
 msgid "Upload to PicasaWeb"
@@ -347,11 +346,11 @@ msgstr "Utzi dena"
 
 #: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
 msgid "Postr"
-msgstr ""
+msgstr "Postr"
 
 #: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
 msgid "Supports uploading photos to Flickr"
-msgstr ""
+msgstr "Argazkiak Flickr webgunera igotzeko euskarria du"
 
 #: ../plugins/postr/eog-postr-plugin.c:62
 msgid "Upload to Flickr"
