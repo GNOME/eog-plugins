@@ -1,16 +1,16 @@
 # Polish translation for eog-plugins.
-# Copyright © 2008-2016 the eog-plugins authors.
+# Copyright © 2008-2017 the eog-plugins authors.
 # This file is distributed under the same license as the eog-plugins package.
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008-2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2009-2016.
-# Aviary.pl <community-poland@mozilla.org>, 2008-2016.
+# Piotr Drąg <piotrdrag@gmail.com>, 2009-2017.
+# Aviary.pl <community-poland@mozilla.org>, 2008-2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-19 18:14+0200\n"
-"PO-Revision-Date: 2016-08-19 18:15+0200\n"
+"POT-Creation-Date: 2017-04-11 14:39+0200\n"
+"PO-Revision-Date: 2017-04-11 14:40+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -29,7 +29,7 @@ msgstr " (nieprawidłowe kodowanie Unicode)"
 #: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
-msgstr "%.1f mm (obiektyw)"
+msgstr "%.1f mm (obiektyw)"
 
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
@@ -37,7 +37,7 @@ msgstr "%.1f mm (obiektyw)"
 #: ../plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
-msgstr "%.1f mm (film 35 mm)"
+msgstr "%.1f mm (film 35 mm)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
 msgid "Histogram"
@@ -137,7 +137,7 @@ msgid "Zoom to Fit Image Width"
 msgstr "Przybliżanie obrazów, aby dopasować szerokość"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
-msgid "Adjusts the zoom to have the image's width fit into the window"
+msgid "Adjusts the zoom to have the image’s width fit into the window"
 msgstr "Dostosowuje przybliżenie, aby dopasować szerokość obraz do okna"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
@@ -160,7 +160,7 @@ msgstr "Umożliwia zmianę tła w trybie pełnoekranowym"
 
 #: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
 msgid "Use custom background settings"
-msgstr "Użycie własnych ustawień tła"
+msgstr "Użycie niestandardowych ustawień tła"
 
 #: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
 msgid "Whether the plugin should use global settings or its own."
@@ -181,7 +181,7 @@ msgstr ""
 
 #: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
 msgid "Use custom color:"
-msgstr "Użycie własnego koloru:"
+msgstr "Niestandardowy kolor:"
 
 #: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
 #: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
@@ -206,11 +206,11 @@ msgid "Disables dark theme"
 msgstr "Wyłącza ciemny motyw"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
-msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Wyłącza ciemny wariant motywu preferowany przez program Oko GNOME"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:441 ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:467 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
@@ -219,15 +219,15 @@ msgid "Displays on a map in the side panel where the picture was taken"
 msgstr ""
 "Wyświetla miejsce na mapie w panelu bocznym, gdzie zdjęcie zostało wykonane"
 
-#: ../plugins/map/eog-map-plugin.c:404
-msgid "Jump to current image's location"
+#: ../plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
 msgstr "Przejdź do położenia bieżącego obrazu"
 
-#: ../plugins/map/eog-map-plugin.c:417
+#: ../plugins/map/eog-map-plugin.c:443
 msgid "Zoom in"
 msgstr "Przybliż"
 
-#: ../plugins/map/eog-map-plugin.c:426
+#: ../plugins/map/eog-map-plugin.c:452
 msgid "Zoom out"
 msgstr "Oddal"
 
@@ -257,7 +257,7 @@ msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Obsługuje wysyłanie zdjęć do serwisu Picasa Web firmy Google"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:306
-msgid "Uploading..."
+msgid "Uploading…"
 msgstr "Wysyłanie…"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:352
@@ -291,7 +291,7 @@ msgstr "Anuluj"
 
 #. TODO: want to handle passwords more securely
 #: ../plugins/postasa/eog-postasa-plugin.c:614
-msgid "Logging in..."
+msgid "Logging in…"
 msgstr "Logowanie…"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:663
@@ -418,11 +418,11 @@ msgstr "Określa, czy używać czcionki systemowej"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
+"If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
 "Jeśli jest ustawione na wartość „true”, to terminal użyje standardowej "
-"czcionki środowiska, jeśli jest stałej szerokości (w innym przypadku "
+"czcionki środowiska, jeśli jest stałej szerokości (w innym przypadku "
 "najbardziej podobną)."
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
@@ -430,7 +430,7 @@ msgid "Font used by Python Console"
 msgstr "Czcionka używana przez konsolę języka Python"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr ""
 "Nazwa czcionki biblioteki Pango. Przykłady: „Sans 12” lub „Monospace Bold "
 "14”."
