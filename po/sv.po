@@ -1,23 +1,23 @@
 # Swedish translation for eog-plugins.
-# Copyright © 2007-2014 Free Software Foundation, Inc.
+# Copyright © 2007-2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
 # Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009, 2010, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-05-06 15:37+0000\n"
-"PO-Revision-Date: 2015-05-06 23:58+0100\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=plugins\n"
+"POT-Creation-Date: 2017-04-10 18:59+0000\n"
+"PO-Revision-Date: 2017-04-14 00:36+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -109,7 +109,7 @@ msgstr "Exportera till mapp"
 msgid "Export the current image to a separate directory"
 msgstr "Exportera den aktuella bilden till en separat katalog"
 
-#: ../plugins/export-to-folder/export-to-folder.py:55
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Exportera"
 
@@ -135,10 +135,10 @@ msgid "Zoom to Fit Image Width"
 msgstr "Zooma för att passa bildens bredd"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
-msgid "Adjusts the zoom to have the image's width fit into the window"
+msgid "Adjusts the zoom to have the image’s width fit into the window"
 msgstr "Justerar zoomnivån så bildens bredd passar i fönstret"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:119
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Anpassa till bredd"
 
@@ -204,12 +204,11 @@ msgid "Disables dark theme"
 msgstr "Inaktiverar mörkt tema"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
-msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Inaktiverar inställningen med mörkt tema för Eye of GNOME"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:441
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:467 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Karta"
 
@@ -217,15 +216,15 @@ msgstr "Karta"
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Visar var bilden togs på en karta i sidopanelen"
 
-#: ../plugins/map/eog-map-plugin.c:404
-msgid "Jump to current image's location"
+#: ../plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
 msgstr "Hoppa till platsen för aktuell bild"
 
-#: ../plugins/map/eog-map-plugin.c:417
+#: ../plugins/map/eog-map-plugin.c:443
 msgid "Zoom in"
 msgstr "Zooma in"
 
-#: ../plugins/map/eog-map-plugin.c:426
+#: ../plugins/map/eog-map-plugin.c:452
 msgid "Zoom out"
 msgstr "Zooma ut"
 
@@ -255,7 +254,7 @@ msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Stöder sändning av foton till Google Picasa Web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:306
-msgid "Uploading..."
+msgid "Uploading…"
 msgstr "Skickar upp…"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:352
@@ -289,14 +288,14 @@ msgstr "Avbryt"
 
 #. TODO: want to handle passwords more securely
 #: ../plugins/postasa/eog-postasa-plugin.c:614
-msgid "Logging in..."
+msgid "Logging in…"
 msgstr "Loggar in…"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Logga in för att fortsätta skicka upp."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:807
+#: ../plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
 msgstr "Skicka upp till PicasaWeb"
 
@@ -360,7 +359,7 @@ msgstr "Postr"
 msgid "Supports uploading photos to Flickr"
 msgstr "Stöder sändning av foton till Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:123
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Skicka upp till Flickr"
 
@@ -416,27 +415,27 @@ msgstr "Huruvida systemtypsnittet ska användas"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
+"If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
-"Om true så kommer terminalen att använda skrivbordets allmänna typsnitt om "
-"det har fast bredd (och det typsnitt som mest liknar det kan visas annars)."
+"Om true (sant) så kommer terminalen att använda skrivbordets allmänna "
+"typsnitt om det har fast bredd (och det typsnitt som mest liknar det kan "
+"visas annars)."
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
 msgid "Font used by Python Console"
 msgstr "Typsnitt som används av Python-konsol"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr ""
-"Ett Pango-typsnittsnamn. Exempel \"Sans 12\" eller \"Monospace Bold 14\"."
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
+msgstr "Ett Pango-typsnittsnamn. Exempel ”Sans 12” eller ”Monospace Bold 14”."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Python-konsol för Eye of GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:84
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Skicka med e-post"
 
