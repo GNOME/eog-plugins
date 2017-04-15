@@ -6,10 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2016-10-11 18:54+0000\n"
-"PO-Revision-Date: 2016-10-12 20:55+0200\n"
+"POT-Creation-Date: 2017-04-10 18:59+0000\n"
+"PO-Revision-Date: 2017-04-15 23:46+0200\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "X-Generator: Poedit 1.8.7.1\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
@@ -136,7 +136,7 @@ msgid "Zoom to Fit Image Width"
 msgstr "Uvećaj za popunu širine slike"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
-msgid "Adjusts the zoom to have the image's width fit into the window"
+msgid "Adjusts the zoom to have the image’s width fit into the window"
 msgstr "Prilagodi uvećanje kako bi širina slike pristajala u prozor"
 
 #: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
@@ -204,7 +204,7 @@ msgid "Disables dark theme"
 msgstr "Onemogući tamnu temu"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
-msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Onemogućuje tamnu temu u Eye of GNOME postavkama"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
@@ -217,7 +217,7 @@ msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Prikazuje u mapi na bočnom panelu gdje je slika uslikana"
 
 #: ../plugins/map/eog-map-plugin.c:430
-msgid "Jump to current image's location"
+msgid "Jump to current image’s location"
 msgstr "Idi na trenutnu lokaciju slike"
 
 #: ../plugins/map/eog-map-plugin.c:443
@@ -254,7 +254,7 @@ msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Podržava slanje fotografija na Google Picasa web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:306
-msgid "Uploading..."
+msgid "Uploading…"
 msgstr "Šaljem..."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:352
@@ -288,7 +288,7 @@ msgstr "Odustani"
 
 #. TODO: want to handle passwords more securely
 #: ../plugins/postasa/eog-postasa-plugin.c:614
-msgid "Logging in..."
+msgid "Logging in…"
 msgstr "Prijavljivanje..."
 
 #: ../plugins/postasa/eog-postasa-plugin.c:663
@@ -415,7 +415,7 @@ msgstr "Treba li koristiti slova sustava"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
+"If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
 "Ako je odabrano, terminal će koristiti opća slova radne površine ako je "
@@ -426,7 +426,7 @@ msgid "Font used by Python Console"
 msgstr "Slova koje koristi Python konzola"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr "Naziv Pango slova. Primjeri su „Sans 12“ ili „Monospace Bold 14“."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
