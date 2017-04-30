@@ -1,25 +1,26 @@
 # Brazilian Portuguese translation of eog-plugins.
-# Copyright (C) 2001-2008 Free Software Foundation, Inc.
+# Copyright (C) 2001-2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
 # Og Maciel <ogmaciel@gnome.org>, 2008-2009.
 # Carlos Eduardo Moreira dos Santos <cems@cemshost.com.br>, 2008.
 # Jonh Wendell <jwendell@gnome.org>, 2009.
 # Antonio Fernandes C. Neto <fernandes@pelivre.org>, 2010.
-# Florêncio Neves <florencioneves@gmail.com>, 2012"
+# Florêncio Neves <florencioneves@gmail.com>, 2012.
+# Enrico Nicoletto <liverig@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins 2.28\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-03-03 04:32+0000\n"
-"PO-Revision-Date: 2015-03-03 12:12-0300\n"
-"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=plugins\n"
+"POT-Creation-Date: 2017-04-10 18:59+0000\n"
+"PO-Revision-Date: 2017-04-30 15:38-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -112,7 +113,7 @@ msgstr "Exportar para pasta"
 msgid "Export the current image to a separate directory"
 msgstr "Exportar a imagem atual para um diretório diferente"
 
-#: ../plugins/export-to-folder/export-to-folder.py:55
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Exportar"
 
@@ -138,10 +139,10 @@ msgid "Zoom to Fit Image Width"
 msgstr "Ampliar para adequar a largura da imagem"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
-msgid "Adjusts the zoom to have the image's width fit into the window"
+msgid "Adjusts the zoom to have the image’s width fit into the window"
 msgstr "Ajusta a ampliação para que a largura da imagem se adeque à janela"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:119
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Ajustar ao tamanho"
 
@@ -208,12 +209,11 @@ msgid "Disables dark theme"
 msgstr "Desabilita tema escuro"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
-msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Desabilita a preferência do Eye of GNOME pela variante escura de temas"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:441
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:467 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Mapa"
 
@@ -221,15 +221,15 @@ msgstr "Mapa"
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Exibe em um mapa no painel lateral onde a imagem foi tirada"
 
-#: ../plugins/map/eog-map-plugin.c:404
-msgid "Jump to current image's location"
+#: ../plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
 msgstr "Ir para a localização da imagem atual"
 
-#: ../plugins/map/eog-map-plugin.c:417
+#: ../plugins/map/eog-map-plugin.c:443
 msgid "Zoom in"
 msgstr "Mais zoom"
 
-#: ../plugins/map/eog-map-plugin.c:426
+#: ../plugins/map/eog-map-plugin.c:452
 msgid "Zoom out"
 msgstr "Menos zoom"
 
@@ -259,8 +259,8 @@ msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Possui suporte ao envio de fotos para o Google Picasa Web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:306
-msgid "Uploading..."
-msgstr "Enviando..."
+msgid "Uploading…"
+msgstr "Enviando…"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
@@ -293,14 +293,14 @@ msgstr "Cancelar"
 
 #. TODO: want to handle passwords more securely
 #: ../plugins/postasa/eog-postasa-plugin.c:614
-msgid "Logging in..."
-msgstr "Conectando-se em..."
+msgid "Logging in…"
+msgstr "Conectando-se em…"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Por favor, conecte-se para continuar o envio."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:807
+#: ../plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
 msgstr "Enviar ao PicasaWeb"
 
@@ -364,7 +364,7 @@ msgstr "Postr"
 msgid "Supports uploading photos to Flickr"
 msgstr "Possui suporte ao envio de fotos para o Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:123
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Enviar ao Flickr"
 
@@ -420,7 +420,7 @@ msgstr "Se a fonte do sistema deve ser utilizada"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
+"If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
 "Se verdadeiro, o terminal usará a fonte padrão global do ambiente de "
@@ -432,16 +432,15 @@ msgid "Font used by Python Console"
 msgstr "Fonte usada pelo console Python"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr ""
-"Um nome de fonte Pango. Exemplos são \"Sans 12\" ou \"Monospace Bold 14\"."
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
+msgstr "Um nome de fonte Pango. Exemplos são “Sans 12” ou “Monospace Bold 14”."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Console Python para o Visualisador de imagens GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:84
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Enviar por e-mail"
 
