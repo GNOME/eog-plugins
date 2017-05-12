@@ -1,5 +1,5 @@
 # German translation of eog-plugins.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012, 2017.
 # Felix Riemann <friemann@gnome.org>, 2009.
 # Christian Kirbach <Christian.Kirbach@gmail.com>, 2013.
 # Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>, 2015.
@@ -7,18 +7,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-20 03:37+0000\n"
-"PO-Revision-Date: 2015-06-20 08:14+0100\n"
-"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=plugins\n"
+"POT-Creation-Date: 2017-04-10 18:59+0000\n"
+"PO-Revision-Date: 2017-05-12 22:11+0200\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 2.0.1\n"
 
 #: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -112,7 +112,7 @@ msgstr "In Ordner exportieren"
 msgid "Export the current image to a separate directory"
 msgstr "Das aktuelle Bild in einen separaten Ordner exportieren"
 
-#: ../plugins/export-to-folder/export-to-folder.py:55
+#: ../plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Exportieren"
 
@@ -139,10 +139,10 @@ msgid "Zoom to Fit Image Width"
 msgstr "Vergrößerung auf Bildbreite anpassen"
 
 #: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
-msgid "Adjusts the zoom to have the image's width fit into the window"
-msgstr "Passt die Vergrößerung an damit das Bild in die Fensterbreite passt"
+msgid "Adjusts the zoom to have the image’s width fit into the window"
+msgstr "Passt die Vergrößerung an, damit das Bild in die Fensterbreite passt"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:119
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Breite einpassen"
 
@@ -208,12 +208,11 @@ msgid "Disables dark theme"
 msgstr "Dunkles Thema deaktivieren"
 
 #: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
-msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Die Verwendung des dunklen Themas durch Eye of GNOME deaktivieren"
 
 #: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:441
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: ../plugins/map/eog-map-plugin.c:467 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Karte"
 
@@ -222,15 +221,15 @@ msgid "Displays on a map in the side panel where the picture was taken"
 msgstr ""
 "Zeigt auf einer Karte in der Seitenleiste an, wo das Bild aufgenommen wurde"
 
-#: ../plugins/map/eog-map-plugin.c:404
-msgid "Jump to current image's location"
+#: ../plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
 msgstr "Zum Ort des aktuellen Bildes springen"
 
-#: ../plugins/map/eog-map-plugin.c:417
+#: ../plugins/map/eog-map-plugin.c:443
 msgid "Zoom in"
 msgstr "Vergrößern"
 
-#: ../plugins/map/eog-map-plugin.c:426
+#: ../plugins/map/eog-map-plugin.c:452
 msgid "Zoom out"
 msgstr "Verkleinern"
 
@@ -260,7 +259,7 @@ msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Unterstützt das Hochladen von Fotos zu Google Picasa Web"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:306
-msgid "Uploading..."
+msgid "Uploading…"
 msgstr "Übertragung läuft …"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:352
@@ -294,14 +293,14 @@ msgstr "Abbrechen"
 
 #. TODO: want to handle passwords more securely
 #: ../plugins/postasa/eog-postasa-plugin.c:614
-msgid "Logging in..."
+msgid "Logging in…"
 msgstr "Anmeldung läuft …"
 
 #: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Bitte melden Sie sich an, um die Übertragung fortzusetzen."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:807
+#: ../plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
 msgstr "Hochladen zu PicasaWeb"
 
@@ -365,7 +364,7 @@ msgstr "Postr"
 msgid "Supports uploading photos to Flickr"
 msgstr "Unterstützt das Hochladen von Fotos zu Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:123
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Hochladen zu Flickr"
 
@@ -421,7 +420,7 @@ msgstr "Systemschrift verwenden?"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
 msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
+"If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
 "Falls wahr, verwendet das Terminal die global geltende Standardschrift, "
@@ -433,7 +432,7 @@ msgid "Font used by Python Console"
 msgstr "In der Python-Konsole verwendete Schrift"
 
 #: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr "Ein Pango-Schriftname, wie z.B.: »Sans 12« oder »Monospace Bold 14«."
 
 #: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
@@ -441,7 +440,7 @@ msgid "Python console for Eye of GNOME"
 msgstr "Python-Konsole für Eye of GNOME"
 
 #: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:84
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Als E-Mail versenden"
 
@@ -466,9 +465,3 @@ msgstr "Mischen der Photos im Diaschau-Modus"
 #: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Mischen der Bilder im Diaschau-Modus"
-
-#~ msgid "Fit the image to the window width"
-#~ msgstr "Bild an die Fensterbreite anpassen"
-
-#~ msgid "Send the selected images by mail"
-#~ msgstr "Die ausgewählten Bilder als E-Mail versenden"
