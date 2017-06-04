@@ -9,15 +9,10 @@ EXTRA_DIST =			\
 DISTCLEANFILES =
 
 MAINTAINERCLEANFILES =		\
-	$(srcdir)/aclocal.m4	\
-	$(srcdir)/config.guess	\
-	$(srcdir)/config.h.in	\
-	$(srcdir)/config.sub	\
-	$(srcdir)/depcomp	\
-	$(srcdir)/install-sh	\
-	$(srcdir)/ltmain.sh	\
-	$(srcdir)/missing	\
-	$(srcdir)/mkinstalldirs
+	$(GITIGNORE_MAINTAINERCLEANFILES_TOPLEVEL)	\
+	$(GITIGNORE_MAINTAINERCLEANFILES_M4_LIBTOOL)	\
+	$(GITIGNORE_MAINTAINERCLEANFILES_M4_GETTEXT)	\
+	py-compile
 
 DISTCHECK_CONFIGURE_FLAGS = --with-plugins=really-all
 
