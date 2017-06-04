@@ -2,7 +2,7 @@
 plugindir = $(EOG_PLUGINS_LIBS_DIR)
 appstreamdir = $(datadir)/appdata
 plugin_in_files = fullscreenbg.plugin.desktop.in
-appstream_in_files = eog-fullscreenbg.metainfo.xml.in
+appstream_in_files = eog-fullscreenbg.appdata.xml.in
 
 gsettings_SCHEMAS = org.gnome.eog.plugins.fullscreenbg.gschema.xml
 gsettings_SCHEMAS_in_files = org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
@@ -21,7 +21,7 @@ $(plugin_DATA): %.plugin: %.plugin.desktop.in $(wildcard $(top_srcdir)/po/*po)
 	$(AM_V_GEN)$(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
 
-appstream_DATA = $(appstream_in_files:.xml.in=.xml)
+appstream_DATA = $(appstream_in_files:.appdata.xml.in=.metainfo.xml)
 $(appstream_DATA): $(appstream_in_files)
 	$(AM_V_GEN)$(MSGFMT) --xml --language=appdata --template $< -d $(top_srcdir)/po -o $@
 
