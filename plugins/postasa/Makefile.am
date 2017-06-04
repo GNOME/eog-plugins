@@ -32,7 +32,7 @@ libpostasa_la_LIBADD = $(EOG_LIBS)			\
 eog-postasa-plugin-resources.c: eog-postasa-plugin.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/eog-postasa-plugin.gresource.xml)
 	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --internal --target=$@ --sourcedir=$(srcdir) --generate-source $(srcdir)/eog-postasa-plugin.gresource.xml
 
-UI_FILES = postasa-config.xml postasa-uploads.xml
+UI_FILES = postasa-config.ui postasa-uploads.ui
 
 # Plugin Info
 

@@ -26,9 +26,9 @@ plugins/maximize-windows/eog-maximize-windows.appdata.xml.in
 plugins/maximize-windows/maximize-windows.plugin.desktop.in
 plugins/postasa/eog-postasa.appdata.xml.in
 plugins/postasa/eog-postasa-plugin.c
-plugins/postasa/postasa-config.xml
+plugins/postasa/postasa-config.ui
 plugins/postasa/postasa.plugin.desktop.in
-plugins/postasa/postasa-uploads.xml
+plugins/postasa/postasa-uploads.ui
 plugins/postr/eog-postr.appdata.xml.in
 plugins/postr/eog-postr-plugin.c
 plugins/postr/postr.plugin.desktop.in

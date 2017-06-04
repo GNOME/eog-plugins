@@ -39,8 +39,8 @@
 #include <gdata/gdata.h>
 
 #define EOG_POSTASA_RESOURCE_PREFIX "/org/gnome/eog/plugins/postasa"
-#define GTKBUILDER_CONFIG_FILE EOG_POSTASA_RESOURCE_PREFIX"/postasa-config.xml"
-#define GTKBUILDER_UPLOAD_FILE EOG_POSTASA_RESOURCE_PREFIX"/postasa-uploads.xml"
+#define GTKBUILDER_CONFIG_FILE EOG_POSTASA_RESOURCE_PREFIX"/postasa-config.ui"
+#define GTKBUILDER_UPLOAD_FILE EOG_POSTASA_RESOURCE_PREFIX"/postasa-uploads.ui"
 
 #define EOG_POSTASA_PLUGIN_MENU_ID "EogPluginPostasa"
 #define EOG_POSTASA_PLUGIN_ACTION "postasa-upload"
