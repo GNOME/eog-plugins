@@ -6,10 +6,7 @@ EXTRA_DIST =			\
 	autogen.sh		\
 	ChangeLog.pre-git
 
-DISTCLEANFILES = 		\
-	intltool-extract 	\
-	intltool-merge 		\
-	intltool-update
+DISTCLEANFILES =
 
 MAINTAINERCLEANFILES =		\
 	$(srcdir)/aclocal.m4	\

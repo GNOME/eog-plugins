@@ -1,9 +1,11 @@
 [Plugin]
 Module=light-theme
 IAge=3
-_Name=Disable Dark Theme
+Name=Disable Dark Theme
+# TRANSLATORS: Do NOT translate or transliterate this text!
+# This is an icon file name
 Icon=eog-plugin
-_Description=Disables Eye of GNOME’s preference of dark theme variants
+Description=Disables Eye of GNOME’s preference of dark theme variants
 Authors=Felix Riemann <friemann@gnome.org>
 Copyright=Copyright © 2012 Felix Riemann
 Website=http://www.gnome.org/projects/eog

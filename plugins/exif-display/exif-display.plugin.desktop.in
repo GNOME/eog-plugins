@@ -1,9 +1,11 @@
 [Plugin]
 Module=exif-display
 IAge=3
-_Name=Exif Display
+Name=Exif Display
+# TRANSLATORS: Do NOT translate or transliterate this text!
+# This is an icon file name
 Icon=zoom-fit-best
-_Description=Displays camera settings and histogram
+Description=Displays camera settings and histogram
 Authors=Emmanuel Touzery
 Copyright=Copyright © 2009 Emmanuel Touzery
 Website=http://www.gnome.org/projects/eog

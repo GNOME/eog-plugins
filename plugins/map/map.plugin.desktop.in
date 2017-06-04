@@ -1,9 +1,11 @@
 [Plugin]
 Module=map
 IAge=3
-_Name=Map
+Name=Map
+# TRANSLATORS: Do NOT translate or transliterate this text!
+# This is an icon file name
 Icon=map
-_Description=Display the geolocation of the image on a map
+Description=Display the geolocation of the image on a map
 Authors=Pierre-Luc Beaudoin <pierre-luc@pierlux.com>
 Copyright=Copyright © 2008, 2010 Pierre-Luc Beaudoin
 Website=http://projects.gnome.org/libchamplain

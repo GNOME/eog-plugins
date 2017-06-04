@@ -2,8 +2,10 @@
 Loader=python3
 Module=slideshowshuffle
 IAge=3
-_Name=Slideshow Shuffle
+Name=Slideshow Shuffle
+# TRANSLATORS: Do NOT translate or transliterate this text!
+# This is an icon file name
 Icon=media-playlist-shuffle
-_Description=Shuffles images in slideshow mode
+Description=Shuffles images in slideshow mode
 Authors=Johannes Marbach <jm@rapidrabbit.de>
 Copyright=Copyright © 2008 Johannes Marbach

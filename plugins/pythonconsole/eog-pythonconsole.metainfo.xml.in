@@ -3,8 +3,8 @@
 <component type="addon">
   <id>eog-pythonconsole</id>
   <extends>eog.desktop</extends>
-  <_name>Python Console</_name>
-  <_summary>Adds a Python console</_summary>
+  <name>Python Console</name>
+  <summary>Adds a Python console</summary>
   <url type="homepage">https://wiki.gnome.org/Apps/EyeOfGnome/Plugins</url>
   <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=eog&amp;component=plugins</url>
   <metadata_license>CC0-1.0</metadata_license>

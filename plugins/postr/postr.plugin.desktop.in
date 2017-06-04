@@ -1,9 +1,11 @@
 [Plugin]
 Module=postr
 IAge=3
-_Name=Flickr Uploader
+Name=Flickr Uploader
+# TRANSLATORS: Do NOT translate or transliterate this text!
+# This is an icon file name
 Icon=postr
-_Description=Upload your pictures to Flickr
+Description=Upload your pictures to Flickr
 Authors=Lucas Rocha <lucasr@gnome.org>
 Copyright=Copyright © 2007 Lucas Rocha
 Website=http://www.gnome.org/projects/eog

@@ -2,8 +2,8 @@
 Loader=python3
 Module=fullscreenbg
 IAge=3
-_Name=Fullscreen Background
-_Description=Enables changing background in fullscreen mode
+Name=Fullscreen Background
+Description=Enables changing background in fullscreen mode
 Authors=Adrian Zgorzałek <a.zgorzalek@gmail.com>
 Copyright=Copyright © 2012 Adrian Zgorzałek <a.zgorzalek@gmail.com>
 Website=http://projects.gnome.org/eog

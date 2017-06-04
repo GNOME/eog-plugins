@@ -2,9 +2,11 @@
 Loader=python3
 Module=export-to-folder
 IAge=3
-_Name=Export to Folder
+Name=Export to Folder
+# TRANSLATORS: Do NOT translate or transliterate this text!
+# This is an icon file name
 Icon=eog
-_Description=Export the current image to a separate directory
+Description=Export the current image to a separate directory
 Authors=Jendrik Seipp <jendrikseipp@web.de>
 Copyright=Copyright © 2012 Jendrik Seipp
 Website=https://bitbucket.org/jendrikseipp/eog-export
