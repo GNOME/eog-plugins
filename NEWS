@@ -1,3 +1,23 @@
+Version 3.25.1
+--------------
+
+General changes:
+
+- #774002, Take advantage of Unicode (Piotr Drąg)
+- Drop intltool support in favour of plain gettext (Felix Riemann)
+- Drop gnome-common dependency (Felix Riemann)
+
+New and updated translations:
+
+- Mario Blättermann [de]
+- Fabio Tomat [fur]
+- gogo [hr]
+- Balázs Úr [hu]
+- Andika Triwidada [id]
+- Piotr Drąg [pl]
+- Enrico Nicoletto [pt_BR]
+- Anders Jonsson [sv]
+
 Version 3.16.6
 --------------
 
