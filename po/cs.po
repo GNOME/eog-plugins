@@ -336,7 +336,7 @@ msgstr "Prosím přihlašte se pro pokračování odesílání."
 
 #: plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
-msgstr "Odeslat na PicasaWeb"
+msgstr "Nahrát na PicasaWeb"
 
 #: plugins/postasa/postasa-config.ui:9
 msgid "PicasaWeb Login"
@@ -400,7 +400,7 @@ msgstr "Podpora odesílání fotografií do služby Flickr"
 
 #: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
-msgstr "Odeslat na Flickr"
+msgstr "Nahrát na Flickr"
 
 #: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
