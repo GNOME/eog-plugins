@@ -115,7 +115,7 @@ impl_activate (EogWindowActivatable *activatable)
 
 	/* Append entry to the window's gear menu */
 	menu = g_menu_new ();
-	g_menu_append (menu, _("Send by Mail"),
+	g_menu_append (menu, _("Send by _Mail"),
 		       "win." EOG_SEND_BY_MAIL_PLUGIN_ACTION);
 
 	item = g_menu_item_new_section (NULL, G_MENU_MODEL (menu));
