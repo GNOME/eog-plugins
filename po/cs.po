@@ -286,19 +286,19 @@ msgstr "Maximalizuje nová okna"
 
 #: plugins/postasa/eog-postasa.appdata.xml.in:5
 msgid "Picasa Web Uploader"
-msgstr "Odesílání na Picasa Web"
+msgstr "Nahrávání na Picasa Web"
 
 #: plugins/postasa/eog-postasa.appdata.xml.in:6
 msgid "Supports uploading photos to Google Picasa Web"
-msgstr "Podpora odesílání fotografií do služby Google Picase Web"
+msgstr "Podpora nahrávání fotografií do služby Google Picase Web"
 
 #: plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading…"
-msgstr "Odesílá se…"
+msgstr "Nahrává se…"
 
 #: plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
-msgstr "Odesláno"
+msgstr "Nahráno"
 
 #: plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
@@ -332,7 +332,7 @@ msgstr "Přihlašuje se…"
 
 #: plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
-msgstr "Prosím přihlašte se pro pokračování odesílání."
+msgstr "Pro pokračování v nahrávání se prosím přihlašte."
 
 #: plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
@@ -360,7 +360,7 @@ msgstr "_Heslo:"
 
 #: plugins/postasa/postasa.plugin.desktop.in:5
 msgid "PicasaWeb Uploader"
-msgstr "Odesílání na PicasaWeb"
+msgstr "Nahrávání na PicasaWeb"
 
 #: plugins/postasa/postasa.plugin.desktop.in:9
 msgid "Upload your pictures to PicasaWeb"
@@ -368,7 +368,7 @@ msgstr "Odešlete své obrázky na PicasaWeb"
 
 #: plugins/postasa/postasa-uploads.ui:37
 msgid "Uploads:"
-msgstr "Odesílání:"
+msgstr "Nahrávání:"
 
 #: plugins/postasa/postasa-uploads.ui:62
 msgid "File"
@@ -396,7 +396,7 @@ msgstr "Postr"
 
 #: plugins/postr/eog-postr.appdata.xml.in:7
 msgid "Supports uploading photos to Flickr"
-msgstr "Podpora odesílání fotografií do služby Flickr"
+msgstr "Podpora nahrávání fotografií do služby Flickr"
 
 #: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
@@ -404,7 +404,7 @@ msgstr "Nahrát na Flickr"
 
 #: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
-msgstr "Odesílání na Flickr"
+msgstr "Nahrávání na Flickr"
 
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name
