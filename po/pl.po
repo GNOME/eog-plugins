@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-06-04 20:34+0000\n"
-"PO-Revision-Date: 2017-06-11 15:15+0200\n"
+"POT-Creation-Date: 2017-08-10 20:28+0000\n"
+"PO-Revision-Date: 2017-08-11 04:39+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -485,18 +485,21 @@ msgid "about"
 msgstr "about"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
-#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
-msgstr "Wyślij przez e-mail"
+msgstr "Wyślij pocztą"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
 msgid "Sends an image attached to a new mail"
 msgstr "Wysyła obraz załączony do nowej wiadomości e-mail"
 
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+msgid "Send by _Mail"
+msgstr "_Wyślij pocztą"
+
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
 msgid "Send By Mail"
-msgstr "Wysyłanie przez e-mail"
+msgstr "Wysyłanie pocztą"
 
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name
