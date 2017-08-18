@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-06-04 20:34+0000\n"
-"PO-Revision-Date: 2017-06-18 14:39+0700\n"
+"POT-Creation-Date: 2017-08-10 20:28+0000\n"
+"PO-Revision-Date: 2017-08-15 10:45+0700\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "Language: id\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -482,7 +482,6 @@ msgid "about"
 msgstr "about"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
-#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Kirim lewat Surel:"
 
@@ -490,6 +489,10 @@ msgstr "Kirim lewat Surel:"
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
 msgid "Sends an image attached to a new mail"
 msgstr "Kirim suatu citra yang dilampirkan pada suatu surel baru"
+
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+msgid "Send by _Mail"
+msgstr "Kiri_m lewat Surel"
 
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
 msgid "Send By Mail"
