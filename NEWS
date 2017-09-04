@@ -1,3 +1,26 @@
+Version 3.25.92
+---------------
+
+Plugin changes:
+
+- Send By Mail
+ - #786011, "Send by Mail" menu item misses a mnemonic (Felix Riemann)
+
+New and updated translations:
+
+- Marek Černocký [cs]
+- Mario Blättermann [de]
+- Daniel Mustieles [es]
+- gogo [hr]
+- Balázs Úr [hu]
+- Kukuh Syafaat [id]
+- Piotr Drąg [pl]
+- Rafael Fontenelle [pt_BR]
+- Matej Urbančič [sl]
+- Мирослав Николић [sr]
+- Miroslav Nikolić [sr@latin]
+- Josef Andersson [sv]
+
 Version 3.25.1
 --------------
 
