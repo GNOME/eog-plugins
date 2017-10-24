@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=eog&keywords=I18N+L10N&component=plugins\n"
 "POT-Creation-Date: 2017-08-10 20:28+0000\n"
-"PO-Revision-Date: 2017-08-11 04:39+0200\n"
+"PO-Revision-Date: 2017-10-24 04:58+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -151,7 +151,7 @@ msgstr "Przybliżanie obrazów, aby dopasować szerokość"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
 msgid "Adjusts the zoom to have the image’s width fit into the window"
-msgstr "Dostosowuje przybliżenie, aby dopasować szerokość obraz do okna"
+msgstr "Dostosowuje przybliżenie, aby dopasować szerokość obrazu do okna"
 
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
@@ -333,11 +333,11 @@ msgstr "Proszę się zalogować, aby kontynuować wysyłanie."
 
 #: plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
-msgstr "Wyślij do serwisu PicasaWeb"
+msgstr "Wyślij do serwisu Picasa Web"
 
 #: plugins/postasa/postasa-config.ui:9
 msgid "PicasaWeb Login"
-msgstr "Login serwisu PicasaWeb"
+msgstr "Login serwisu Picasa Web"
 
 #: plugins/postasa/postasa-config.ui:26
 msgid "_Cancel"
@@ -357,11 +357,11 @@ msgstr "_Hasło:"
 
 #: plugins/postasa/postasa.plugin.desktop.in:5
 msgid "PicasaWeb Uploader"
-msgstr "Wysyłanie do serwisu PicasaWeb"
+msgstr "Wysyłanie do serwisu Picasa Web"
 
 #: plugins/postasa/postasa.plugin.desktop.in:9
 msgid "Upload your pictures to PicasaWeb"
-msgstr "Wysyłanie zdjęć do serwisu PicasaWeb"
+msgstr "Wysyłanie zdjęć do serwisu Picasa Web"
 
 #: plugins/postasa/postasa-uploads.ui:37
 msgid "Uploads:"
