@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Eog-plugins\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-08-10 20:28+0000\n"
+"POT-Creation-Date: 2017-10-24 02:58+0000\n"
 "PO-Revision-Date: 2017-10-18 14:49+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -288,7 +288,7 @@ msgstr "Understøtter upload af billeder til Google Picasa Web"
 
 #: plugins/postasa/eog-postasa-plugin.c:306
 msgid "Uploading…"
-msgstr "Overfører..."
+msgstr "Overfører …"
 
 #: plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
@@ -403,7 +403,6 @@ msgstr "Overførsel til Flickr"
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name
 #: plugins/postr/postr.plugin.desktop.in:8
-#| msgid "Postr"
 msgid "postr"
 msgstr "postr"
 
@@ -468,8 +467,7 @@ msgstr "Skrifttype brugt af Python-konsol"
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr ""
-"Et Pango-skrifttypenavn. Eksempler er \"Sans 12\" eller \"Monospace Bold "
-"14\"."
+"Et Pango-skrifttypenavn. Eksempler er “Sans 12” eller “Monospace Bold 14”."
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
