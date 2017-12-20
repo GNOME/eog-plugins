@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins.HEAD.es\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-06-04 20:34+0000\n"
-"PO-Revision-Date: 2017-06-20 12:14+0200\n"
+"POT-Creation-Date: 2017-08-10 20:28+0000\n"
+"PO-Revision-Date: 2017-12-14 13:09+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -154,7 +154,6 @@ msgid "Zoom to Fit Image Width"
 msgstr "Ampliar para ajustar a la anchura de la imagen"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
-#| msgid "Adjusts the zoom to have the image's width fit into the window"
 msgid "Adjusts the zoom to have the image’s width fit into the window"
 msgstr ""
 "Ajusta la ampliación para que la anchura de la imagen se ajuste a la ventana"
@@ -241,7 +240,6 @@ msgid "Disables dark theme"
 msgstr "Desactiva el tema oscuro"
 
 #: plugins/light-theme/light-theme.plugin.desktop.in:9
-#| msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Desactiva las preferencias de las variantes del tema oscuro"
 
@@ -255,7 +253,6 @@ msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Muestra en un mapa en el panel lateral dónde se tomó la foto"
 
 #: plugins/map/eog-map-plugin.c:430
-#| msgid "Jump to current image's location"
 msgid "Jump to current image’s location"
 msgstr "Saltar a la ubicación de la imagen actual"
 
@@ -270,7 +267,6 @@ msgstr "Reducir"
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name
 #: plugins/map/map.plugin.desktop.in:8
-#| msgid "Map"
 msgid "map"
 msgstr "map"
 
@@ -300,7 +296,6 @@ msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Soporta subir fotos a Picasa Web de Google"
 
 #: plugins/postasa/eog-postasa-plugin.c:306
-#| msgid "Uploading..."
 msgid "Uploading…"
 msgstr "Cargando…"
 
@@ -335,7 +330,6 @@ msgstr "Cancelar"
 
 #. TODO: want to handle passwords more securely
 #: plugins/postasa/eog-postasa-plugin.c:614
-#| msgid "Logging in..."
 msgid "Logging in…"
 msgstr "Iniciando sesión…"
 
@@ -418,7 +412,6 @@ msgstr "Cargador para Flickr"
 #. TRANSLATORS: Do NOT translate or transliterate this text!
 #. This is an icon file name
 #: plugins/postr/postr.plugin.desktop.in:8
-#| msgid "Postr"
 msgid "postr"
 msgstr "postr"
 
@@ -469,9 +462,6 @@ msgid "Whether to use the system font"
 msgstr "Indica si se debe usar la tipografía del sistema"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
-#| msgid ""
-#| "If true, the terminal will use the desktop-global standard font if it's "
-#| "monospace (and the most similar font it can come up with otherwise)."
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -484,8 +474,6 @@ msgid "Font used by Python Console"
 msgstr "Tipografía usada por la consola de Python"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
-#| msgid ""
-#| "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr ""
 "Un nombre de tipografía Pango. Por ejemplo «Sans 12» o «Monospace Bold 14»."
@@ -501,7 +489,6 @@ msgid "about"
 msgstr "about"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
-#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Enviar por correo-e"
 
@@ -509,6 +496,11 @@ msgstr "Enviar por correo-e"
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
 msgid "Sends an image attached to a new mail"
 msgstr "Envía una imagen adjunta a un correo nuevo"
+
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+#| msgid "Send by Mail"
+msgid "Send by _Mail"
+msgstr "Enviar por _correo-e"
 
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
 msgid "Send By Mail"
