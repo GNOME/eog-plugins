@@ -1,5 +1,5 @@
 # German translation of eog-plugins.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012, 2017.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012, 2017-2018.
 # Felix Riemann <friemann@gnome.org>, 2009.
 # Christian Kirbach <Christian.Kirbach@gmail.com>, 2013.
 # Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>, 2015.
@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-08-10 20:28+0000\n"
-"PO-Revision-Date: 2017-09-06 21:30+0200\n"
+"POT-Creation-Date: 2017-09-06 19:31+0000\n"
+"PO-Revision-Date: 2018-02-25 19:42+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -137,9 +137,9 @@ msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
 msgstr ""
-"Dies ist der Ordner, in den das Plugin die exportierten Dateien ablegt. Das "
-"Plugin wird den Ordner $HOME/exported-images verwenden, falls nichts "
-"angegeben ist."
+"Dies ist der Ordner, in den die Erweiterung die exportierten Dateien ablegt. "
+"Die Erweiterung wird den Ordner $HOME/exported-images verwenden, falls "
+"nichts angegeben ist."
 
 #: plugins/export-to-folder/preferences_dialog.ui:19
 msgid "Export directory:"
@@ -185,7 +185,7 @@ msgstr "Benutzerdefinierte Hintergrundeinstellungen verwenden"
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
 msgid "Whether the plugin should use global settings or its own."
 msgstr ""
-"Soll das Plugin globale oder benutzerdefinierte Einstellungen verwenden?"
+"Soll die Erweiterung globale oder benutzerdefinierte Einstellungen verwenden?"
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
 msgid "Background color in fullscreen mode"
