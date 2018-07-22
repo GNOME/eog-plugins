@@ -50,14 +50,6 @@ enum {
 	PROP_WINDOW
 };
 
-static void
-eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
-
-G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogPostasaPlugin, eog_postasa_plugin,
-		PEAS_TYPE_EXTENSION_BASE, 0,
-		G_IMPLEMENT_INTERFACE_DYNAMIC(EOG_TYPE_WINDOW_ACTIVATABLE,
-					eog_window_activatable_iface_init))
-
 /**
  * _EogPostasaPluginPrivate:
  *
@@ -89,6 +81,15 @@ struct _EogPostasaPluginPrivate
 	GtkTreeView  *uploads_view;
 	GtkListStore *uploads_store;
 };
+
+static void
+eog_window_activatable_iface_init (EogWindowActivatableInterface *iface);
+
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (EogPostasaPlugin, eog_postasa_plugin,
+		PEAS_TYPE_EXTENSION_BASE, 0,
+		G_ADD_PRIVATE_DYNAMIC(EogPostasaPlugin)
+		G_IMPLEMENT_INTERFACE_DYNAMIC(EOG_TYPE_WINDOW_ACTIVATABLE,
+					eog_window_activatable_iface_init))
 
 /**
  * PicasaWebUploadFileAsyncData:
@@ -907,7 +908,7 @@ eog_postasa_plugin_init (EogPostasaPlugin *plugin)
 {
 	eog_debug_message (DEBUG_PLUGINS, "EogPostasaPlugin initializing");
 
-	plugin->priv = G_TYPE_INSTANCE_GET_PRIVATE (plugin, EOG_TYPE_POSTASA_PLUGIN, EogPostasaPluginPrivate);
+	plugin->priv = eog_postasa_plugin_get_instance_private (plugin);
 
 #ifdef HAVE_LIBGDATA_0_9
 	plugin->priv->authorizer = gdata_client_login_authorizer_new ("EogPostasa", GDATA_TYPE_PICASAWEB_SERVICE);
@@ -1009,8 +1010,6 @@ static void
 eog_postasa_plugin_class_init (EogPostasaPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-
-	g_type_class_add_private (klass, sizeof (EogPostasaPluginPrivate));
 
 	object_class->dispose = eog_postasa_plugin_dispose;
 	object_class->set_property = eog_postasa_plugin_set_property;
