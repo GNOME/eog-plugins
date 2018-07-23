@@ -1,3 +1,18 @@
+Version 3.26.3
+--------------
+
+Plugin changes:
+
+- PicasaWeb Uploader
+ - Avoid compiler warning with glib 2.58 (Felix Riemann)
+
+New and updated translations:
+
+- Mario Blättermann [de]
+- Alexandre Franke [fr]
+- Rūdolfs Mazurs [lv]
+- Nathan Follens, Justin van Steijn [nl]
+
 Version 3.26.2
 --------------
 
