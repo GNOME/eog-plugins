@@ -7,27 +7,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2016-11-16 12:53+0000\n"
-"PO-Revision-Date: 2016-11-30 23:57+0300\n"
-"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2018-06-10 16:02+0000\n"
+"PO-Revision-Date: 2019-01-08 19:56+0200\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-POOTLE-MTIME: 1424264104.000000\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:105
+#: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (geçersiz Unikod)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:183
+#: plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (mercek)"
@@ -35,91 +34,103 @@ msgstr "%.1fmm (mercek)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:194
+#: plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:1
+#: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
 msgstr "Çubuklu Grafik"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:2
+#: plugins/exif-display/exif-display-config.ui:88
 msgid "Display per-channel histogram"
 msgstr "Kanal başına çubuk grafik göster"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:3
+#: plugins/exif-display/exif-display-config.ui:103
 msgid "Display RGB histogram"
 msgstr "RGB çubuk grafiği göster"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:4
+#: plugins/exif-display/exif-display-config.ui:135
 msgid "General"
 msgstr "Genel"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
+#: plugins/exif-display/exif-display-config.ui:170
 msgid "Display camera settings in statusbar"
 msgstr "Kamera ayarlarını durum çubuğunda göster"
 
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+#: plugins/exif-display/exif-display.plugin.desktop.in:5
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Exif Görünümü"
 
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/exif-display/exif-display.plugin.desktop.in:8
+msgid "zoom-fit-best"
+msgstr "zoom-fit-best"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
 msgstr "Kamera ayarlarını ve çubuk grafiği gösterir"
 
-#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:7
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
 msgstr "Exif etiketlerini yan panelde ve isteğe bağlı durum çubuğunda gösterir"
 
-#: ../plugins/exif-display/exif-display.ui.h:1
+#: plugins/exif-display/exif-display.ui:59
 msgid "ISO speed:"
 msgstr "ISO hızı:"
 
-#: ../plugins/exif-display/exif-display.ui.h:2
+#: plugins/exif-display/exif-display.ui:74
 msgid "Expo. Time:"
 msgstr "Poz. Zamanı:"
 
-#: ../plugins/exif-display/exif-display.ui.h:3
+#: plugins/exif-display/exif-display.ui:89
 msgid "Aperture:"
 msgstr "Açıklık:"
 
-#: ../plugins/exif-display/exif-display.ui.h:4
+#: plugins/exif-display/exif-display.ui:104
 msgid "Zoom:"
 msgstr "Yakınlaştırma:"
 
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: plugins/exif-display/exif-display.ui:119
 msgid "Metering:"
 msgstr "Metreleme:"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: plugins/exif-display/exif-display.ui:134
 msgid "Expo. bias:"
 msgstr "Pozl. meyili:"
 
-#: ../plugins/exif-display/exif-display.ui.h:7
+#: plugins/exif-display/exif-display.ui:149
 msgid "Description:"
 msgstr "Tanım:"
 
-#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
-#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:6
 msgid "Export to Folder"
 msgstr "Klasöre Aktar"
 
-#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
-#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
 msgid "Export the current image to a separate directory"
 msgstr "Mevcut resmi ayrı bir dizine aktar"
 
-#: ../plugins/export-to-folder/export-to-folder.py:56
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
+msgid "eog"
+msgstr "eog"
+
+#: plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Dışa Aktar"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
 msgid "The folder to export to"
 msgstr "Dışa aktarılacak klasör"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
@@ -127,50 +138,56 @@ msgstr ""
 "Eklentinin dışa aktarılan dosyaları koyacağı klasördür. Eğer belirtilmezse, "
 "eklenti $HOME/exported-images klasörüne aktaracaktır."
 
-#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+#: plugins/export-to-folder/preferences_dialog.ui:19
 msgid "Export directory:"
 msgstr "Dışa aktarım dizini:"
 
-#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:5
 msgid "Zoom to Fit Image Width"
 msgstr "Resim Genişliğine Uygun Yaklaştır"
 
-#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
-msgid "Adjusts the zoom to have the image's width fit into the window"
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
+msgid "Adjusts the zoom to have the image’s width fit into the window"
 msgstr "Yaklaştırmayı resmin genişliği pencereye sığacak şekilde ayarlar"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
+#: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Genişliğe sığdır"
 
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
+msgid "gtk-zoom-fit"
+msgstr "gtk-zoom-fit"
+
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
 msgstr "Resimleri pencere genişliğine uydur"
 
-#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
-#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
 msgid "Fullscreen Background"
 msgstr "Tam Ekran Arkaplan"
 
-#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
-#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:7
 msgid "Enables changing background in fullscreen mode"
 msgstr "Tam ekran kipinde arkaplan değiştirmeyi etkinleştir"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
 msgid "Use custom background settings"
 msgstr "Özel arkaplan ayarları kullan"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
 msgid "Whether the plugin should use global settings or its own."
 msgstr "Eklenti kendi ayarlarını mı genel ayarları mı kullanmalı."
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
 msgid "Background color in fullscreen mode"
 msgstr "Tam ekran kipinde arkaplan rengi"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -178,287 +195,327 @@ msgstr ""
 "Resmin arkasındaki alanı doldurmak için kullanılan renk. Bu seçenek yalnızca "
 "özel-kullanım etkinse kullanılabilir."
 
-#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+#: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "Özel renk kullan:"
 
-#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
-#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
 msgid "Hide Titlebar"
 msgstr "Başlık Çubuğunu Gizle"
 
-#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
 msgid "Hides the titlebar of maximized windows"
 msgstr "Tam ekran pencerelerde başlık çubuğunu gizler"
 
-#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
+#: plugins/light-theme/light-theme.plugin.desktop.in:8
+#: plugins/postasa/postasa.plugin.desktop.in:8
+msgid "eog-plugin"
+msgstr "eog-plugin"
+
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "Tam ekran Gnome Gözü pencerelerinin başlık çubuğunu gizler"
 
-#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
-#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:6
+#: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
 msgstr "Karanlık Temayı Kapat"
 
-#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:7
 msgid "Disables dark theme"
 msgstr "Karanlık temayı kapatır"
 
-#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
-msgid "Disables Eye of GNOME's preference of dark theme variants"
-msgstr "Gnome'un Gözü'nün karanlık tema çeşitleri tercihlerini kapatır"
+#: plugins/light-theme/light-theme.plugin.desktop.in:9
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
+msgstr "Gnome’un Gözü’nün karanlık tema çeşitleri tercihlerini kapatır"
 
-#: ../plugins/map/eog-map.metainfo.xml.in.h:1
-#: ../plugins/map/eog-map-plugin.c:467 ../plugins/map/map.plugin.desktop.in.h:1
+#: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
+#: plugins/map/map.plugin.desktop.in:5
 msgid "Map"
 msgstr "Harita"
 
-#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+#: plugins/map/eog-map.appdata.xml.in:7
 msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Yan panelde resmin nerde çekildiğini bir haritada gösterir"
 
-#: ../plugins/map/eog-map-plugin.c:430
-msgid "Jump to current image's location"
+#: plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
 msgstr "Mevcut resmin konumuna git"
 
-#: ../plugins/map/eog-map-plugin.c:443
+#: plugins/map/eog-map-plugin.c:443
 msgid "Zoom in"
 msgstr "Yakınlaştır"
 
-#: ../plugins/map/eog-map-plugin.c:452
+#: plugins/map/eog-map-plugin.c:452
 msgid "Zoom out"
 msgstr "Uzaklaştır"
 
-#: ../plugins/map/map.plugin.desktop.in.h:2
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/map/map.plugin.desktop.in:8
+msgid "map"
+msgstr "harita"
+
+#: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "Resmin coğrafik konumunu haritada göster"
 
-#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
-#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
 msgid "Maximize Windows"
 msgstr "Pencereler Ekranı Kaplasın"
 
-#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
 msgid "New windows will open maximized"
 msgstr "Yeni pencereler ekranı kaplamış şekilde açılır"
 
-#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
 msgid "Maximize new windows"
 msgstr "Yeni pencereler ekranı kaplasın"
 
-#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+#: plugins/postasa/eog-postasa.appdata.xml.in:5
 msgid "Picasa Web Uploader"
 msgstr "Picasa Web Yükleyici"
 
-#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+#: plugins/postasa/eog-postasa.appdata.xml.in:6
 msgid "Supports uploading photos to Google Picasa Web"
-msgstr "Fotoğrafların Google Picasa Web'e yüklenmesini destekler"
+msgstr "Fotoğrafların Google Picasa Web’e yüklenmesini destekler"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:306
-msgid "Uploading..."
-msgstr "Karşıya Yükleniyor..."
+#: plugins/postasa/eog-postasa-plugin.c:306
+msgid "Uploading…"
+msgstr "Karşıya yükleniyor..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Karşıya Yüklendi"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "İptal Edildi"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Başarısız Oldu"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Oturum açma başarısız oldu. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "Başarıyla oturum açıldı."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Kapat"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Vazgeç"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:614
-msgid "Logging in..."
+#: plugins/postasa/eog-postasa-plugin.c:614
+msgid "Logging in…"
 msgstr "Oturum açılıyor..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Karşıya yüklemeye devam etmek için lütfen oturum açın."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
-msgstr "PicasaWeb'e Yükle"
+msgstr "PicasaWeb’e Yükle"
 
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: plugins/postasa/postasa-config.ui:9
 msgid "PicasaWeb Login"
 msgstr "PicasaWeb Giriş"
 
-#: ../plugins/postasa/postasa-config.xml.h:2
+#: plugins/postasa/postasa-config.ui:26
 msgid "_Cancel"
 msgstr "_Vazgeç"
 
-#: ../plugins/postasa/postasa-config.xml.h:3
+#: plugins/postasa/postasa-config.ui:41
 msgid "_Login"
 msgstr "_Giriş"
 
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: plugins/postasa/postasa-config.ui:72
 msgid "_Username:"
 msgstr "K_ullanıcı Adı:"
 
-#: ../plugins/postasa/postasa-config.xml.h:5
+#: plugins/postasa/postasa-config.ui:86
 msgid "_Password:"
 msgstr "_Parola:"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+#: plugins/postasa/postasa.plugin.desktop.in:5
 msgid "PicasaWeb Uploader"
 msgstr "PicasaWeb Yükleyici"
 
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+#: plugins/postasa/postasa.plugin.desktop.in:9
 msgid "Upload your pictures to PicasaWeb"
-msgstr "Resimlerinizi PicasaWeb'e yükleyin"
+msgstr "Resimlerinizi PicasaWeb’e yükleyin"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:1
+#: plugins/postasa/postasa-uploads.ui:37
 msgid "Uploads:"
 msgstr "Karşıya Yüklemeler:"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:2
+#: plugins/postasa/postasa-uploads.ui:62
 msgid "File"
 msgstr "Dosya"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:3
+#: plugins/postasa/postasa-uploads.ui:84
 msgid "Size"
 msgstr "Boyut"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:4
+#: plugins/postasa/postasa-uploads.ui:96
 msgid "Status"
 msgstr "Durum"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:5
+#: plugins/postasa/postasa-uploads.ui:125
 msgid "Cancel Selected"
 msgstr "Seçileni İptal Et"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:6
+#: plugins/postasa/postasa-uploads.ui:138
 msgid "Cancel All"
 msgstr "Tümünü İptal Et"
 
-#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+#: plugins/postr/eog-postr.appdata.xml.in:6
 msgid "Postr"
 msgstr "Postr"
 
-#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+#: plugins/postr/eog-postr.appdata.xml.in:7
 msgid "Supports uploading photos to Flickr"
-msgstr "Fotoğrafların Flickr'a yüklenmesini destekler"
+msgstr "Fotoğrafların Flickr’a yüklenmesini destekler"
 
-#: ../plugins/postr/eog-postr-plugin.c:156
+#: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
-msgstr "Flickr'a Yükle"
+msgstr "Flickr’a Yükle"
 
-#: ../plugins/postr/postr.plugin.desktop.in.h:1
+#: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
 msgstr "Flickr Yükleyici"
 
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Resimlerinizi Flickr'a yükleyin"
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/postr/postr.plugin.desktop.in:8
+msgid "postr"
+msgstr "postr"
 
-#: ../plugins/pythonconsole/config.ui.h:1
+#: plugins/postr/postr.plugin.desktop.in:9
+msgid "Upload your pictures to Flickr"
+msgstr "Resimlerinizi Flickr’a yükleyin"
+
+#: plugins/pythonconsole/config.ui:56
 msgid "C_ommand color:"
 msgstr "_Komut rengi:"
 
-#: ../plugins/pythonconsole/config.ui.h:2
+#: plugins/pythonconsole/config.ui:70
 msgid "_Error color:"
 msgstr "_Hata rengi:"
 
-#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
-#: ../plugins/pythonconsole/__init__.py:87
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
+#: plugins/pythonconsole/__init__.py:87
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
 msgid "Python Console"
 msgstr "Python Konsolu"
 
-#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
 msgid "Adds a Python console"
 msgstr "Bir Python konsolu ekler"
 
-#: ../plugins/pythonconsole/__init__.py:59
+#: plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
 msgstr "P_ython Konsolu"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
 msgid "Command Text Color"
 msgstr "Komut Metni Rengi"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
 msgid "The color used for commands."
 msgstr "Komutlar için kullanılan renk."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
 msgid "Error Text Color"
 msgstr "Hata Metni Rengi"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
 msgid "The color used for errors."
 msgstr "Hatalar için kullanılan renk."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
 msgid "Whether to use the system font"
 msgstr "Sistem yazıtipinin kullanılması"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
 msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
+"If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
 "True ise, uç birim masa üstü standart yazı tipini eğer monospace ise "
 "kullanacaktır (aksi halde en yakın gelen yazı tipi)."
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
 msgstr "Python Konsolu tarafından kullanılan yazıtipi"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
-msgstr ""
-"Pango yazı tipi ismi. Örnekler \"Sans 12\" veya \"Monospace Kalın 14\"."
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
+msgstr "Pango yazı tipi ismi. Örnekler “Sans 12” veya “Monospace Bold 14”."
 
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
-msgstr "Gnome'un Gözü için Python konsolu"
+msgstr "Gnome’un Gözü için Python konsolu"
 
-#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
+msgid "about"
+msgstr "about"
+
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "Postayla Gönder"
 
-#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
 msgid "Sends an image attached to a new mail"
 msgstr "Resmi yeni bir e-postaya ekli gönderir"
 
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+msgid "Send by _Mail"
+msgstr "_Postayla Gönder"
+
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
 msgid "Send By Mail"
 msgstr "Postayla Gönder"
 
-#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
+msgid "mail-send-symbolic"
+msgstr "mail-send-symbolic"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
 msgstr "Slayt Karıştırma"
 
-#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Fotoğrafları slayt gösterim kipinde karıştırır"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
+msgid "media-playlist-shuffle"
+msgstr "media-playlist-shuffle"
+
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Resimleri slayt gösterim kipinde karıştırır"
 
