@@ -29,7 +29,7 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="action">select-folder</property>
-        <signal name="current-folder-changed" handler="current_folder_changed_cb" swapped="no"/>
+        <signal name="file-set" handler="file_set_cb" swapped="no"/>
       </object>
       <packing>
         <property name="expand">False</property>
