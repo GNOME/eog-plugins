@@ -125,7 +125,7 @@ class ExportConfigurable(GObject.Object, PeasGtk.Configurable):
 
     def do_create_configure_widget(self):
         # Create preference dialog
-        signals = {'current_folder_changed_cb': self.current_folder_changed_cb}
+        signals = {'file_set_cb': self.file_set_cb}
         builder = Gtk.Builder()
         builder.set_translation_domain('eog-plugins')
         builder.add_from_file(os.path.join(self.plugin_info.get_data_dir(),
@@ -137,9 +137,9 @@ class ExportConfigurable(GObject.Object, PeasGtk.Configurable):
         target_dir = self.settings.get_string('target-folder')
         if target_dir == "":
             target_dir = EXPORT_DIR
-        self.export_dir_button.set_current_folder(target_dir)
+        self.export_dir_button.set_filename(target_dir)
 
         return self.preferences_dialog
 
-    def current_folder_changed_cb(self, button):
-        self.settings.set_string('target-folder', button.get_current_folder())
+    def file_set_cb(self, button):
+        self.settings.set_string('target-folder', button.get_filename())
