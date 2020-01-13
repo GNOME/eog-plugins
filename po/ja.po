@@ -1,16 +1,17 @@
 # eog-plugins ja.po.
-# Copyright (C) 2009-2012 Free Software Foundation, Inc.
+# Copyright (C) 2009-2012, 2020 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2009-2011.
-# Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011, 2012.
+# Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011-2012.
+# sicklylife <translation@sicklylife.jp>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
 "POT-Creation-Date: 2019-10-13 18:33+0000\n"
-"PO-Revision-Date: 2012-02-19 18:30+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
+"PO-Revision-Date: 2020-01-13 21:00+0900\n"
+"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -60,8 +61,6 @@ msgstr "ステータスバーにカメラの設定を表示する"
 # http://cachu.xrea.jp/perl/ExifTAG.html
 #: plugins/exif-display/exif-display.plugin.desktop.in:5
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
-#, fuzzy
-#| msgid "Exif display"
 msgid "Exif Display"
 msgstr "Exif データ表示"
 
@@ -71,7 +70,7 @@ msgstr "カメラの設定と画像のヒストグラムを表示します"
 
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:7
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
-msgstr ""
+msgstr "Exif タグをサイドパネルに表示します (オプションでステータスバーにも表示します)"
 
 #: plugins/exif-display/exif-display.ui:59
 msgid "ISO speed:"
@@ -104,41 +103,41 @@ msgstr "説明:"
 #: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
 #: plugins/export-to-folder/export-to-folder.plugin.desktop.in:6
 msgid "Export to Folder"
-msgstr ""
+msgstr "フォルダーにエクスポート"
 
 #: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
 #: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
 msgid "Export the current image to a separate directory"
-msgstr ""
+msgstr "現在の画像を別のディレクトリにエクスポートします"
 
 #: plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
-msgstr ""
+msgstr "エクスポート(_E)"
 
 #: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
 msgid "The folder to export to"
-msgstr ""
+msgstr "エクスポートするフォルダー"
 
 #: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
 msgstr ""
+"プラグインがファイルをエクスポートするフォルダーです。設定していない場合は"
+" $HOME/exported-images にエクスポートします。"
 
 #: plugins/export-to-folder/preferences_dialog.ui:19
 msgid "Export directory:"
-msgstr ""
+msgstr "エクスポート先:"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:5
-#, fuzzy
-#| msgid "Zoom to fit image width"
 msgid "Zoom to Fit Image Width"
 msgstr "画像の幅にズームを合わせる"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
 msgid "Adjusts the zoom to have the image’s width fit into the window"
-msgstr ""
+msgstr "画像の幅がウィンドウに合うようにズームを調整します"
 
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
@@ -146,7 +145,7 @@ msgstr "幅に合わせる"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
-msgstr ""
+msgstr "画像をウィンドウ幅に合わせます"
 
 #: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
 #: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
@@ -165,7 +164,7 @@ msgstr "設定した選択色を使用する"
 # 原文がおかしい? キー名でもわかるとおり、動作的にはtrueならits ownが有効
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
 msgid "Whether the plugin should use global settings or its own."
-msgstr ""
+msgstr "プラグイン側の設定を使用するかどうかです。"
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
 msgid "Background color in fullscreen mode"
@@ -186,28 +185,28 @@ msgstr "選択色を使用する:"
 #: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
 #: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
 msgid "Hide Titlebar"
-msgstr ""
+msgstr "タイトルバーを隠す"
 
 #: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
 msgid "Hides the titlebar of maximized windows"
-msgstr ""
+msgstr "最大化したウインドウのタイトルバーを隠します"
 
 #: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr ""
+msgstr "最大化した Eye of GNOME のウィンドウタイトルバーを隠します"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
-msgstr ""
+msgstr "ダークテーマ無効化"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:7
 msgid "Disables dark theme"
-msgstr ""
+msgstr "ダークテーマを無効にします"
 
 #: plugins/light-theme/light-theme.plugin.desktop.in:9
 msgid "Disables Eye of GNOME’s preference of dark theme variants"
-msgstr ""
+msgstr "Eye of GNOME のダークテーマを無効にします"
 
 #: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
 #: plugins/map/map.plugin.desktop.in:5
@@ -216,11 +215,9 @@ msgstr "マップ"
 
 #: plugins/map/eog-map.appdata.xml.in:7
 msgid "Displays on a map in the side panel where the picture was taken"
-msgstr ""
+msgstr "写真の撮影場所をサイドパネルのマップに表示します"
 
 #: plugins/map/eog-map-plugin.c:430
-#, fuzzy
-#| msgid "Jump to current image's location"
 msgid "Jump to current image’s location"
 msgstr "この画像の撮影場所へジャンプします"
 
@@ -239,31 +236,27 @@ msgstr "画像に含まれた情報から地理的位置をマップに表示し
 #: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
 #: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
 msgid "Maximize Windows"
-msgstr ""
+msgstr "ウィンドウ最大化"
 
 #: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
 msgid "New windows will open maximized"
-msgstr ""
+msgstr "新しいウィンドウを最大化して開きます"
 
 #: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
 msgid "Maximize new windows"
-msgstr ""
+msgstr "新しいウィンドウを最大化します"
 
 #: plugins/postasa/eog-postasa.appdata.xml.in:5
-#, fuzzy
-#| msgid "PicasaWeb Uploader"
 msgid "Picasa Web Uploader"
-msgstr "PicasaWeb アップローダー"
+msgstr "Picasa Web アップローダー"
 
 #: plugins/postasa/eog-postasa.appdata.xml.in:6
 msgid "Supports uploading photos to Google Picasa Web"
-msgstr ""
+msgstr "Google の Picasa Web への写真のアップロードをサポートします"
 
 #: plugins/postasa/eog-postasa-plugin.c:307
-#, fuzzy
-#| msgid "Uploading..."
 msgid "Uploading…"
-msgstr "アップロード中..."
+msgstr "アップロード中…"
 
 #: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
@@ -296,10 +289,8 @@ msgstr "キャンセル"
 
 #. TODO: want to handle passwords more securely
 #: plugins/postasa/eog-postasa-plugin.c:615
-#, fuzzy
-#| msgid "Logging in..."
 msgid "Logging in…"
-msgstr "ログイン中..."
+msgstr "ログイン中…"
 
 #: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
@@ -359,15 +350,15 @@ msgstr "選択した画像のキャンセル"
 
 #: plugins/postasa/postasa-uploads.ui:138
 msgid "Cancel All"
-msgstr "全てキャンセル"
+msgstr "すべてキャンセル"
 
 #: plugins/postr/eog-postr.appdata.xml.in:6
 msgid "Postr"
-msgstr ""
+msgstr "Postr"
 
 #: plugins/postr/eog-postr.appdata.xml.in:7
 msgid "Supports uploading photos to Flickr"
-msgstr ""
+msgstr "Flickr への写真のアップロードをサポートします"
 
 #: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
@@ -396,16 +387,12 @@ msgid "Python Console"
 msgstr "Python 端末"
 
 #: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
-#, fuzzy
-#| msgid "Python Console"
 msgid "Adds a Python console"
-msgstr "Python 端末"
+msgstr "Python 端末を追加します"
 
 #: plugins/pythonconsole/__init__.py:59
-#, fuzzy
-#| msgid "Python Console"
 msgid "P_ython Console"
-msgstr "Python 端末"
+msgstr "Python 端末(_Y)"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
 msgid "Command Text Color"
@@ -432,6 +419,9 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
+"true にすると、端末はデスクトップの標準フォント (monospace) を使用します "
+"(monospace に設定されていない場合は最も monospace に近いフォントを使用しま"
+"す)。"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
@@ -439,7 +429,7 @@ msgstr "Python 端末で使用するフォント"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
-msgstr ""
+msgstr "Pango フォント名です (“Sans 12”や“Monospace Bold 14”など)。"
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
@@ -455,10 +445,8 @@ msgid "Sends an image attached to a new mail"
 msgstr "メールに画像を添付して送信します"
 
 #: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
-#, fuzzy
-#| msgid "Send by Mail"
 msgid "Send by _Mail"
-msgstr "メールで送信する"
+msgstr "メールで送信(_M)"
 
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
 msgid "Send By Mail"
@@ -470,10 +458,8 @@ msgid "Slideshow Shuffle"
 msgstr "スライドショーシャッフル"
 
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
-#, fuzzy
-#| msgid "Shuffles images in slideshow mode"
 msgid "Shuffles the photos in slideshow mode"
-msgstr "スライドショーモードで画像の並びをシャッフルします"
+msgstr "スライドショーモードで写真の並びをシャッフルします"
 
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
