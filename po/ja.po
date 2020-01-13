@@ -7,24 +7,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-02-20 18:18+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2019-10-13 18:33+0000\n"
 "PO-Revision-Date: 2012-02-19 18:30+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:105
+#: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (Unicode が不正です)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:183
+#: plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (レンズ)"
@@ -32,100 +31,147 @@ msgstr "%.1fmm (レンズ)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:194
+#: plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm フィルム)"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:1
+#: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
 msgstr "ヒストグラム"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:2
+#: plugins/exif-display/exif-display-config.ui:88
 msgid "Display per-channel histogram"
 msgstr "チャンネル毎のヒストグラムを表示する"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:3
+#: plugins/exif-display/exif-display-config.ui:103
 msgid "Display RGB histogram"
 msgstr "RGB のヒストグラムを表示する"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:4
+#: plugins/exif-display/exif-display-config.ui:135
 msgid "General"
 msgstr "全般"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
+#: plugins/exif-display/exif-display-config.ui:170
 msgid "Display camera settings in statusbar"
 msgstr "ステータスバーにカメラの設定を表示する"
 
 # # 参考情報:
 # http://cachu.xrea.jp/perl/ExifTAG.html
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
+#: plugins/exif-display/exif-display.plugin.desktop.in:5
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:6
+#, fuzzy
+#| msgid "Exif display"
+msgid "Exif Display"
 msgstr "Exif データ表示"
 
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+#: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
 msgstr "カメラの設定と画像のヒストグラムを表示します"
 
-#: ../plugins/exif-display/exif-display.ui.h:1
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:7
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr ""
+
+#: plugins/exif-display/exif-display.ui:59
 msgid "ISO speed:"
 msgstr "ISO 値:"
 
-#: ../plugins/exif-display/exif-display.ui.h:2
+#: plugins/exif-display/exif-display.ui:74
 msgid "Expo. Time:"
 msgstr "露出時間:"
 
-#: ../plugins/exif-display/exif-display.ui.h:3
+#: plugins/exif-display/exif-display.ui:89
 msgid "Aperture:"
 msgstr "レンズ径:"
 
-#: ../plugins/exif-display/exif-display.ui.h:4
+#: plugins/exif-display/exif-display.ui:104
 msgid "Zoom:"
 msgstr "ズーム:"
 
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: plugins/exif-display/exif-display.ui:119
 msgid "Metering:"
 msgstr "測光方式:"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: plugins/exif-display/exif-display.ui:134
 msgid "Expo. bias:"
 msgstr "露出補正値:"
 
-#: ../plugins/exif-display/exif-display.ui.h:7
+#: plugins/exif-display/exif-display.ui:149
 msgid "Description:"
 msgstr "説明:"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:6
+msgid "Export to Folder"
+msgstr ""
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
+msgid "Export the current image to a separate directory"
+msgstr ""
+
+#: plugins/export-to-folder/export-to-folder.py:56
+msgid "_Export"
+msgstr ""
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
+msgid "The folder to export to"
+msgstr ""
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+
+#: plugins/export-to-folder/preferences_dialog.ui:19
+msgid "Export directory:"
+msgstr ""
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:5
+#, fuzzy
+#| msgid "Zoom to fit image width"
+msgid "Zoom to Fit Image Width"
+msgstr "画像の幅にズームを合わせる"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
+msgid "Adjusts the zoom to have the image’s width fit into the window"
+msgstr ""
+
+#: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "幅に合わせる"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "画像の幅にズームを合わせる"
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
+msgid "Fit images to the window width"
+msgstr ""
 
-#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
 msgid "Fullscreen Background"
 msgstr "フルスクリーンの背景"
 
-#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:7
 msgid "Enables changing background in fullscreen mode"
 msgstr "フルスクリーンモードでの背景色を変更します"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
 msgid "Use custom background settings"
 msgstr "設定した選択色を使用する"
 
 # 原文がおかしい? キー名でもわかるとおり、動作的にはtrueならits ownが有効
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
 msgid "Whether the plugin should use global settings or its own."
 msgstr ""
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
 msgid "Background color in fullscreen mode"
 msgstr "フルスクリーンモードで使用する背景色"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
@@ -133,220 +179,305 @@ msgstr ""
 "画像の背景に使用する色です。このオプションは、use-custom が有効になっている場"
 "合だけ効果があります。"
 
-#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+#: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "選択色を使用する:"
 
-#: ../plugins/map/eog-map-plugin.c:401
-msgid "Jump to current image's location"
-msgstr "この画像の撮影場所へジャンプします"
+#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
+msgid "Hide Titlebar"
+msgstr ""
 
-#: ../plugins/map/eog-map-plugin.c:413
-msgid "Zoom in"
-msgstr "拡大します"
+#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
+msgid "Hides the titlebar of maximized windows"
+msgstr ""
 
-#: ../plugins/map/eog-map-plugin.c:421
-msgid "Zoom out"
-msgstr "縮小します"
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr ""
 
-#: ../plugins/map/eog-map-plugin.c:436
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:6
+#: plugins/light-theme/light-theme.plugin.desktop.in:5
+msgid "Disable Dark Theme"
+msgstr ""
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:7
+msgid "Disables dark theme"
+msgstr ""
+
+#: plugins/light-theme/light-theme.plugin.desktop.in:9
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
+msgstr ""
+
+#: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
+#: plugins/map/map.plugin.desktop.in:5
 msgid "Map"
 msgstr "マップ"
 
-#: ../plugins/map/map.plugin.desktop.in.h:2
+#: plugins/map/eog-map.appdata.xml.in:7
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr ""
+
+#: plugins/map/eog-map-plugin.c:430
+#, fuzzy
+#| msgid "Jump to current image's location"
+msgid "Jump to current image’s location"
+msgstr "この画像の撮影場所へジャンプします"
+
+#: plugins/map/eog-map-plugin.c:443
+msgid "Zoom in"
+msgstr "拡大します"
+
+#: plugins/map/eog-map-plugin.c:452
+msgid "Zoom out"
+msgstr "縮小します"
+
+#: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "画像に含まれた情報から地理的位置をマップに表示します"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-msgid "Upload to PicasaWeb"
-msgstr "PicasaWeb へアップロード"
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
+msgid "Maximize Windows"
+msgstr ""
 
-#: ../plugins/postasa/eog-postasa-plugin.c:128
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "お気に入りの写真を PicasaWeb へアップロードします"
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
+msgid "New windows will open maximized"
+msgstr ""
 
-#: ../plugins/postasa/eog-postasa-plugin.c:323
-msgid "Uploading..."
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
+msgid "Maximize new windows"
+msgstr ""
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:5
+#, fuzzy
+#| msgid "PicasaWeb Uploader"
+msgid "Picasa Web Uploader"
+msgstr "PicasaWeb アップローダー"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:6
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr ""
+
+#: plugins/postasa/eog-postasa-plugin.c:307
+#, fuzzy
+#| msgid "Uploading..."
+msgid "Uploading…"
 msgstr "アップロード中..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:369
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "アップロード完了"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "キャンセルしました"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:376
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "失敗しました"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:599
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "ログインできませんでした: %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:603
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "ログインが完了しました"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:604
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "閉じる"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:625
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "キャンセル"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:631
-msgid "Logging in..."
+#: plugins/postasa/eog-postasa-plugin.c:615
+#, fuzzy
+#| msgid "Logging in..."
+msgid "Logging in…"
 msgstr "ログイン中..."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:676
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "アップロードするにはログインが必要です。"
 
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: plugins/postasa/eog-postasa-plugin.c:843
+msgid "Upload to PicasaWeb"
+msgstr "PicasaWeb へアップロード"
+
+#: plugins/postasa/postasa-config.ui:9
 msgid "PicasaWeb Login"
 msgstr "PicasaWeb へのログイン"
 
-#: ../plugins/postasa/postasa-config.xml.h:2
+#: plugins/postasa/postasa-config.ui:26
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: ../plugins/postasa/postasa-config.xml.h:3
+#: plugins/postasa/postasa-config.ui:41
 msgid "_Login"
 msgstr "ログイン(_L)"
 
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: plugins/postasa/postasa-config.ui:72
 msgid "_Username:"
 msgstr "ユーザー名(_U):"
 
-#: ../plugins/postasa/postasa-config.xml.h:5
+#: plugins/postasa/postasa-config.ui:86
 msgid "_Password:"
 msgstr "パスワード(_P):"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Uploads:"
-msgstr "アップロード:"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "File"
-msgstr "ファイル"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:3
-msgid "Size"
-msgstr "サイズ"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:4
-msgid "Status"
-msgstr "状態"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:5
-msgid "Cancel Selected"
-msgstr "選択した画像のキャンセル"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:6
-msgid "Cancel All"
-msgstr "全てキャンセル"
-
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+#: plugins/postasa/postasa.plugin.desktop.in:5
 msgid "PicasaWeb Uploader"
 msgstr "PicasaWeb アップローダー"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: plugins/postasa/postasa.plugin.desktop.in:9
+msgid "Upload your pictures to PicasaWeb"
+msgstr "お気に入りの写真を PicasaWeb へアップロードします"
+
+#: plugins/postasa/postasa-uploads.ui:37
+msgid "Uploads:"
+msgstr "アップロード:"
+
+#: plugins/postasa/postasa-uploads.ui:62
+msgid "File"
+msgstr "ファイル"
+
+#: plugins/postasa/postasa-uploads.ui:84
+msgid "Size"
+msgstr "サイズ"
+
+#: plugins/postasa/postasa-uploads.ui:96
+msgid "Status"
+msgstr "状態"
+
+#: plugins/postasa/postasa-uploads.ui:125
+msgid "Cancel Selected"
+msgstr "選択した画像のキャンセル"
+
+#: plugins/postasa/postasa-uploads.ui:138
+msgid "Cancel All"
+msgstr "全てキャンセル"
+
+#: plugins/postr/eog-postr.appdata.xml.in:6
+msgid "Postr"
+msgstr ""
+
+#: plugins/postr/eog-postr.appdata.xml.in:7
+msgid "Supports uploading photos to Flickr"
+msgstr ""
+
+#: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Flickr へアップロード"
 
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "お気に入りの写真を Flickr へアップロードします"
-
-#: ../plugins/postr/postr.plugin.desktop.in.h:1
+#: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
 msgstr "Flickr アップローダー"
 
-#: ../plugins/pythonconsole/__init__.py:64
+#: plugins/postr/postr.plugin.desktop.in:9
+msgid "Upload your pictures to Flickr"
+msgstr "お気に入りの写真を Flickr へアップロードします"
+
+#: plugins/pythonconsole/config.ui:56
+msgid "C_ommand color:"
+msgstr "コマンドの色(_O):"
+
+#: plugins/pythonconsole/config.ui:70
+msgid "_Error color:"
+msgstr "エラーの色(_E):"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
+#: plugins/pythonconsole/__init__.py:87
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
+msgid "Python Console"
+msgstr "Python 端末"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
+#, fuzzy
+#| msgid "Python Console"
+msgid "Adds a Python console"
+msgstr "Python 端末"
+
+#: plugins/pythonconsole/__init__.py:59
 #, fuzzy
 #| msgid "Python Console"
 msgid "P_ython Console"
 msgstr "Python 端末"
 
-#: ../plugins/pythonconsole/__init__.py:88
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python 端末"
-
-#: ../plugins/pythonconsole/config.ui.h:1
-msgid "C_ommand color:"
-msgstr "コマンドの色(_O):"
-
-#: ../plugins/pythonconsole/config.ui.h:2
-msgid "_Error color:"
-msgstr "エラーの色(_E):"
-
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
 msgid "Command Text Color"
 msgstr "コマンドの色"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
 msgid "The color used for commands."
 msgstr "コマンドに使用する色です。"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
 msgid "Error Text Color"
 msgstr "エラーメッセージの色"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
 msgid "The color used for errors."
 msgstr "エラーメッセージに使用する色です。"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
 msgid "Whether to use the system font"
 msgstr "システムフォントを使用する"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
 msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
+"If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
 msgstr "Python 端末で使用するフォント"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr ""
 
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
 msgstr "Eye of GNOME 専用の Python 端末を表示します"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "メールで送信する"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "選択した画像をメールで送信します"
-
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
-msgid "Send By Mail"
-msgstr "メールで送信"
-
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
 msgid "Sends an image attached to a new mail"
 msgstr "メールに画像を添付して送信します"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+#, fuzzy
+#| msgid "Send by Mail"
+msgid "Send by _Mail"
+msgstr "メールで送信する"
+
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
+msgid "Send By Mail"
+msgstr "メールで送信"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
 msgstr "スライドショーシャッフル"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
+#, fuzzy
+#| msgid "Shuffles images in slideshow mode"
+msgid "Shuffles the photos in slideshow mode"
+msgstr "スライドショーモードで画像の並びをシャッフルします"
+
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "スライドショーモードで画像の並びをシャッフルします"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "選択した画像をメールで送信します"
