@@ -1,31 +1,32 @@
 # Ukrainian translation for eog-plugins.
 # Copyright (C) 2010 Free Software Foundation
 # This file is distributed under the same license as the eog-plugins package.
-# Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2010.
 #
+# Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2010.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&component=general\n"
-"POT-Creation-Date: 2010-04-01 13:03+0000\n"
-"PO-Revision-Date: 2010-04-01 15:53+0300\n"
-"Last-Translator: Maxim V. Dziumanenko <dziumanenko@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2020-02-26 14:53+0000\n"
+"PO-Revision-Date: 2020-03-30 22:35+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.07.70\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+#: ../plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
-msgstr " (неправильний Юнікод)"
+msgstr " (некоректний символ Unicode)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#: ../plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fмм (лінза)"
@@ -33,226 +34,442 @@ msgstr "%.1fмм (лінза)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#: ../plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fмм (35мм плівка)"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "General"
-msgstr "Загальне"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
 msgid "Histogram"
 msgstr "Гістограма"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:2
+msgid "Display per-channel histogram"
+msgstr "Показати гістограму по каналах"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:3
 msgid "Display RGB histogram"
 msgstr "Показати гістограму RGB"
 
 #: ../plugins/exif-display/exif-display-config.ui.h:4
+msgid "General"
+msgstr "Загальне"
+
+#: ../plugins/exif-display/exif-display-config.ui.h:5
 msgid "Display camera settings in statusbar"
 msgstr "Показати параметри камери у панелі статусу"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
-msgid "Display per-channel histogram"
-msgstr "Показати гістограму по каналах"
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:1
+msgid "Exif Display"
+msgstr "Показ Exif"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
 msgid "Displays camera settings and histogram"
 msgstr "Показати параметри камери та гістограму"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
-msgid "Exif display"
-msgstr "Показати Exif"
+#: ../plugins/exif-display/eog-exif-display.metainfo.xml.in.h:2
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr "Показує мітки Exif на бічній панелі і, якщо вказано, на смужці стану"
 
 #: ../plugins/exif-display/exif-display.ui.h:1
-msgid "Aperture:"
-msgstr "Діафрагма:"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "Description:"
-msgstr "Опис:"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "Expo. Time:"
-msgstr "Час експозиції:"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "Expo. bias:"
-msgstr "Центр експозиції:"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "ISO speed:"
 msgstr "Швидкість ISO:"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: ../plugins/exif-display/exif-display.ui.h:2
+msgid "Expo. Time:"
+msgstr "Час експозиції:"
+
+#: ../plugins/exif-display/exif-display.ui.h:3
+msgid "Aperture:"
+msgstr "Діафрагма:"
+
+#: ../plugins/exif-display/exif-display.ui.h:4
+msgid "Zoom:"
+msgstr "Масштаб:"
+
+#: ../plugins/exif-display/exif-display.ui.h:5
 msgid "Metering:"
 msgstr "Вимірювання:"
 
-#: ../plugins/exif-display/exif-display.ui.h:7
-msgid "Zoom:"
-msgstr "Зум:"
+#: ../plugins/exif-display/exif-display.ui.h:6
+msgid "Expo. bias:"
+msgstr "Ухил експозиції:"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
+#: ../plugins/exif-display/exif-display.ui.h:7
+msgid "Description:"
+msgstr "Опис:"
+
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:1
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+msgid "Export to Folder"
+msgstr "Експортувати до теки"
+
+#: ../plugins/export-to-folder/eog-export-to-folder.metainfo.xml.in.h:2
+#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+msgid "Export the current image to a separate directory"
+msgstr "Експортувати поточне зображення до окремого каталогу"
+
+#: ../plugins/export-to-folder/export-to-folder.py:56
+msgid "_Export"
+msgstr "_Експортувати"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:1
+msgid "The folder to export to"
+msgstr "Тека, до якої слід експортувати дані"
+
+#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.h:2
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Це тека, у якій додаток зберігатиме експортовані файли. Якщо значення не "
+"встановлено, додаток зберігатиме файли до $HOME/exported-images."
+
+#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+msgid "Export directory:"
+msgstr "Каталог експортування:"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:1
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
+msgid "Zoom to Fit Image Width"
+msgstr "Підібрати оптимальний масштаб за шириною"
+
+#: ../plugins/fit-to-width/eog-fit-to-width.metainfo.xml.in.h:2
+#| msgid "Adjusts the zoom to have the image’s width fit into the window"
+msgid "Adjusts the zoom to have the image's width fit into the window"
+msgstr ""
+"Коригує масштаб зображення так, щоб воно вмістилося до вікна за шириною"
+
+#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Підігнати за шириною"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
-#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Змінити масштаб, щоб умістити сторінку по ширині"
+#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
+msgid "Fit images to the window width"
+msgstr "Підібрати розмір зображення за шириною вікна"
 
-#: ../plugins/map/eog-map-plugin.c:321
-msgid "Jump to current image's location"
-msgstr "Перейти до теки поточного зображення"
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:1
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+msgid "Fullscreen Background"
+msgstr "Тло у повноекранному режимі"
 
-#: ../plugins/map/eog-map-plugin.c:333
-msgid "Zoom in"
-msgstr "Збільшити"
+#: ../plugins/fullscreenbg/eog-fullscreenbg.metainfo.xml.in.h:2
+#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+msgid "Enables changing background in fullscreen mode"
+msgstr "Вмикає зміну тла у повноекранному режимі"
 
-#: ../plugins/map/eog-map-plugin.c:341
-msgid "Zoom out"
-msgstr "Зменшити"
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:1
+msgid "Use custom background settings"
+msgstr "Використовувати нетипові параметри тла"
 
-#: ../plugins/map/eog-map-plugin.c:355
-#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:2
+msgid "Whether the plugin should use global settings or its own."
+msgstr "Визначає, буде додаток використовувати загальні параметри чи власні."
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:3
+msgid "Background color in fullscreen mode"
+msgstr "Колір тла у повноекранному режимі"
+
+#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"Колір, який буде використано для заповнення області за зображенням. Цей "
+"параметр працюватиме, лише якщо вибрано варіант із нетиповим кольором."
+
+#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+msgid "Use custom color:"
+msgstr "Нетиповий колір:"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:1
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+msgid "Hide Titlebar"
+msgstr "Приховати смужку заголовка"
+
+#: ../plugins/hide-titlebar/eog-hide-titlebar.metainfo.xml.in.h:2
+msgid "Hides the titlebar of maximized windows"
+msgstr "Ховає смужку заголовка у максимізованих вікнах"
+
+#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Ховає смужку заголовка у максимізованих вікнах «Ока GNOME»"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:1
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
+msgid "Disable Dark Theme"
+msgstr "Вимкнути темну тему"
+
+#: ../plugins/light-theme/eog-light-theme.metainfo.xml.in.h:2
+msgid "Disables dark theme"
+msgstr "Вимикає темну тему"
+
+#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
+#| msgid "Disables Eye of GNOME’s preference of dark theme variants"
+msgid "Disables Eye of GNOME's preference of dark theme variants"
+msgstr "Вимикає перевагу у «Оці GNOME» темних варіантів тем"
+
+#: ../plugins/map/eog-map.metainfo.xml.in.h:1
+#: ../plugins/map/eog-map-plugin.c:467 ../plugins/map/map.plugin.desktop.in.h:1
 msgid "Map"
 msgstr "Мапа"
 
-#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+#: ../plugins/map/eog-map.metainfo.xml.in.h:2
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Показує на бічній панелі мапу місця, де було створено знімок"
+
+#: ../plugins/map/eog-map-plugin.c:430
+#| msgid "Jump to current image’s location"
+msgid "Jump to current image's location"
+msgstr "Перейти до місця створення поточного зображення"
+
+#: ../plugins/map/eog-map-plugin.c:443
+msgid "Zoom in"
+msgstr "Збільшити"
+
+#: ../plugins/map/eog-map-plugin.c:452
+msgid "Zoom out"
+msgstr "Зменшити"
+
+#: ../plugins/map/map.plugin.desktop.in.h:2
 msgid "Display the geolocation of the image on a map"
 msgstr "Показує географічне розташування зображення на мапі"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:124
-#| msgid "Upload to Flickr"
-msgid "Upload to PicasaWeb"
-msgstr "Вивантаження на PicasaWeb"
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:1
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:1
+msgid "Maximize Windows"
+msgstr "Максимізувати вікна"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
-#| msgid "Upload your pictures to Flickr"
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Вивантажити зображення до сайту PicasaWeb"
+#: ../plugins/maximize-windows/eog-maximize-windows.metainfo.xml.in.h:2
+msgid "New windows will open maximized"
+msgstr "Нові вікна відкриватимуться максимізованим"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:320
+#: ../plugins/maximize-windows/maximize-windows.plugin.desktop.in.h:2
+msgid "Maximize new windows"
+msgstr "Максимізувати нові вікна"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:1
+msgid "Picasa Web Uploader"
+msgstr "Вивантаження до Picasa"
+
+#: ../plugins/postasa/eog-postasa.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Підтримує вивантаження фотографій до Picasa Web Google"
+
+#: ../plugins/postasa/eog-postasa-plugin.c:306
+#| msgid "Uploading…"
 msgid "Uploading..."
-msgstr "Вивантаження..."
+msgstr "Вивантаження…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:366
-#| msgid "Flickr Uploader"
+#: ../plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "Вивантажено"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: ../plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "Скасовано"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: ../plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "Помилка"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:520
+#: ../plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "Помилка реєстрації. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:524
+#: ../plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
-msgstr "Вхід успашно виконано."
+msgstr "Вхід успішно виконано."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:525
+#: ../plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "Закрити"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:546
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: ../plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "Скасувати"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:552
+#: ../plugins/postasa/eog-postasa-plugin.c:614
+#| msgid "Logging in…"
 msgid "Logging in..."
-msgstr "Триває вхід..."
+msgstr "Вхід до системи…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:580
+#: ../plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "Увійдіть для продовження завантаження."
 
-#: ../plugins/postasa/postasa-config.xml.h:2
-msgid "Login"
-msgstr "Реєстраційне ім'я"
+#: ../plugins/postasa/eog-postasa-plugin.c:842
+msgid "Upload to PicasaWeb"
+msgstr "Вивантаження на PicasaWeb"
 
-#: ../plugins/postasa/postasa-config.xml.h:3
-msgid "Password"
-msgstr "Пароль"
-
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: ../plugins/postasa/postasa-config.xml.h:1
 msgid "PicasaWeb Login"
 msgstr "Ім'я у PicasaWeb"
 
+#: ../plugins/postasa/postasa-config.xml.h:2
+msgid "_Cancel"
+msgstr "_Скасувати"
+
+#: ../plugins/postasa/postasa-config.xml.h:3
+msgid "_Login"
+msgstr "_Увійти"
+
+#: ../plugins/postasa/postasa-config.xml.h:4
+msgid "_Username:"
+msgstr "_Користувач:"
+
 #: ../plugins/postasa/postasa-config.xml.h:5
-msgid "Username"
-msgstr "Реєстраційне ім'я"
+msgid "_Password:"
+msgstr "_Пароль:"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "Скасувати все"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "Cancel Selected"
-msgstr "Скасувати вибране"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:3
-msgid "Uploads:"
-msgstr "Вивантажено:"
-
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
-#| msgid "Flickr Uploader"
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
 msgid "PicasaWeb Uploader"
 msgstr "Вивантаження до PicasaWeb"
 
-#: ../plugins/postr/eog-postr-plugin.c:57
+#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Вивантажити зображення до сайту PicasaWeb"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:1
+msgid "Uploads:"
+msgstr "Вивантажено:"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:2
+msgid "File"
+msgstr "Файл"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:3
+msgid "Size"
+msgstr "Розмір"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:4
+msgid "Status"
+msgstr "Стан"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:5
+msgid "Cancel Selected"
+msgstr "Скасувати вибране"
+
+#: ../plugins/postasa/postasa-uploads.xml.h:6
+msgid "Cancel All"
+msgstr "Скасувати все"
+
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:1
+msgid "Postr"
+msgstr "Postr"
+
+#: ../plugins/postr/eog-postr.metainfo.xml.in.h:2
+msgid "Supports uploading photos to Flickr"
+msgstr "Підтримує вивантаження фотографій до Flickr"
+
+#: ../plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Вивантаження на Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:59
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Вивантажити зображення до сайту Flickr"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+#: ../plugins/postr/postr.plugin.desktop.in.h:1
 msgid "Flickr Uploader"
 msgstr "Вивантаження до Flickr"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+#: ../plugins/postr/postr.plugin.desktop.in.h:2
+msgid "Upload your pictures to Flickr"
+msgstr "Вивантажити зображення до сайту Flickr"
+
+#: ../plugins/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "К_олір команди:"
+
+#: ../plugins/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "К_олір помилки:"
+
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:1
+#: ../plugins/pythonconsole/__init__.py:87
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
 msgid "Python Console"
 msgstr "Консоль python"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+#: ../plugins/pythonconsole/eog-pythonconsole.metainfo.xml.in.h:2
+msgid "Adds a Python console"
+msgstr "Додає консоль Python"
+
+#: ../plugins/pythonconsole/__init__.py:59
+msgid "P_ython Console"
+msgstr "_Консоль Python"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:1
+msgid "Command Text Color"
+msgstr "Колір тексту команд"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:2
+msgid "The color used for commands."
+msgstr "Колір, який буде використано для команд."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:3
+msgid "Error Text Color"
+msgstr "Колір тексту помилок"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:4
+msgid "The color used for errors."
+msgstr "Колір, який буде використано для повідомлень про помилки."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:5
+msgid "Whether to use the system font"
+msgstr "Чи використовувати системні шрифти"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:6
+#| msgid ""
+#| "If true, the terminal will use the desktop-global standard font if it’s "
+#| "monospace (and the most similar font it can come up with otherwise)."
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Якщо це позначено, термінал використає загальний стандарт шрифтів стільниці "
+"(інакше буде підібрано найподібніший шрифт)."
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:7
+msgid "Font used by Python Console"
+msgstr "Шрифт, який буде використано у консолі Python"
+
+#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.h:8
+#| msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Назва шрифту Pango. Наприклад, «Sans 12» або «Monospace Bold 14»."
+
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
 msgid "Python console for Eye of GNOME"
 msgstr "Консоль Python до Ока GNOME."
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:1
+#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by Mail"
 msgstr "Надіслати електронною поштою"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
-msgid "Send the selected images by mail"
-msgstr "Надсилати обрані зображення електронною поштою"
-
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
-msgid "Send By Mail"
-msgstr "Надіслати електронною поштою"
-
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+#: ../plugins/send-by-mail/eog-send-by-mail.metainfo.xml.in.h:2
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
 msgid "Sends an image attached to a new mail"
 msgstr "Надсилати приєднане зображення електронною поштою"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
+msgid "Send By Mail"
+msgstr "Надіслати електронною поштою"
+
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:1
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
+msgid "Slideshow Shuffle"
+msgstr "Перемішати слайдшоу"
+
+#: ../plugins/slideshowshuffle/eog-slideshowshuffle.metainfo.xml.in.h:2
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Перемішати фотографії при показі слайдів"
+
+#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
 msgid "Shuffles images in slideshow mode"
 msgstr "Перемішати зображення при показі слайдів"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
-msgid "Slideshow Shuffle"
-msgstr "Перемішати слайдшоу"
+#~| msgid "Send by Mail"
+#~ msgid "Send by _Mail"
+#~ msgstr "Надіслати _електронною поштою"
