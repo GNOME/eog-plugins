@@ -1,401 +1,527 @@
-# Chinese translations for eog-plugins package
-# eog-plugins 软件包的简体中文翻译.
-# Copyright (C) 2008, 2010 Free Software Foundation, Inc.
+# Chinese (China) translation for eog-plugins.
+# Copyright (C) 2009-2017 eog-plugins's COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
 # Eleanor Chen <chenyueg@gmail.com>, 2010.
 # Aron Xu <happyaron.xu@gmail.com>, 2008, 2010.
 # Yunqiang Su <wzssyqa@gmail.com>, 2010, 2014.
 # tuhaihe <wangdianjin@linuxdeepin.com>, 2012.
+# Dingzhong Chen <wsxy162@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-13 20:43+0000\n"
-"PO-Revision-Date: 2014-01-25 10:34+0800\n"
-"Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=eog&keywords=I18N+L10N&component=plugins\n"
+"POT-Creation-Date: 2017-08-18 10:01+0000\n"
+"PO-Revision-Date: 2017-09-02 02:55+0800\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Gtranslator 2.91.7\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:105
+#: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
-msgstr " (无效的 Unicode)"
+msgstr "（无效的 Unicode）"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:183
+#: plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
-msgstr "%.1fmm (长)"
+msgstr "%.1fmm（镜头）"
 
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:194
+#: plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
-msgstr "%.1fmm (35mm 胶片)"
+msgstr "%.1fmm（35mm 胶片）"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:1
+#: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
 msgstr "直方图"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:2
+#: plugins/exif-display/exif-display-config.ui:88
 msgid "Display per-channel histogram"
 msgstr "显示各通道的直方图"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:3
+#: plugins/exif-display/exif-display-config.ui:103
 msgid "Display RGB histogram"
 msgstr "显示 RGB 直方图"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:4
+#: plugins/exif-display/exif-display-config.ui:135
 msgid "General"
 msgstr "常规"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:5
+#: plugins/exif-display/exif-display-config.ui:170
 msgid "Display camera settings in statusbar"
 msgstr "在状态栏上显示相机设置"
 
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:1
-msgid "Exif display"
-msgstr "Exif 数据显示"
+#: plugins/exif-display/exif-display.plugin.desktop.in:5
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:6
+msgid "Exif Display"
+msgstr "Exif 显示"
+
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/exif-display/exif-display.plugin.desktop.in:8
+msgid "zoom-fit-best"
+msgstr "zoom-fit-best"
 
 # 在遥感影像相关的论文里面，都称为 color histogram，“颜色直方图”。这里就是直方图的意思。
-#: ../plugins/exif-display/exif-display.plugin.desktop.in.h:2
+#: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
 msgstr "显示相机设置和直方图"
 
-#: ../plugins/exif-display/exif-display.ui.h:1
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:7
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr "在侧面板和选择性地在状态栏里显示 Exif 标签"
+
+#: plugins/exif-display/exif-display.ui:59
 msgid "ISO speed:"
 msgstr "ISO 速度："
 
-#: ../plugins/exif-display/exif-display.ui.h:2
+#: plugins/exif-display/exif-display.ui:74
 msgid "Expo. Time:"
 msgstr "曝光时间："
 
-#: ../plugins/exif-display/exif-display.ui.h:3
+#: plugins/exif-display/exif-display.ui:89
 msgid "Aperture:"
 msgstr "光圈："
 
-#: ../plugins/exif-display/exif-display.ui.h:4
+#: plugins/exif-display/exif-display.ui:104
 msgid "Zoom:"
 msgstr "缩放："
 
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: plugins/exif-display/exif-display.ui:119
 msgid "Metering:"
 msgstr "测光："
 
-#: ../plugins/exif-display/exif-display.ui.h:6
+#: plugins/exif-display/exif-display.ui:134
 msgid "Expo. bias:"
 msgstr "曝光偏差："
 
-#: ../plugins/exif-display/exif-display.ui.h:7
+#: plugins/exif-display/exif-display.ui:149
 msgid "Description:"
 msgstr "描述："
 
-#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:1
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:6
 msgid "Export to Folder"
 msgstr "导出到文件夹"
 
-#: ../plugins/export-to-folder/export-to-folder.plugin.desktop.in.h:2
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
 msgid "Export the current image to a separate directory"
 msgstr "将当前图像导出到一个单独的目录"
 
-#: ../plugins/export-to-folder/export-to-folder.py:62
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
+msgid "eog"
+msgstr "eog"
+
+#: plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "导出(_E)"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:1
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
 msgid "The folder to export to"
 msgstr "导出的目标文件夹"
 
-#: ../plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in.in.h:2
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
 msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
 msgstr ""
 "这是插件放置导出文件的文件夹。如不设置，插件将导出到 $HOME/exported-images。"
 
-#: ../plugins/export-to-folder/preferences_dialog.ui.h:1
+#: plugins/export-to-folder/preferences_dialog.ui:19
 msgid "Export directory:"
 msgstr "导出目录："
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:91
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:5
+msgid "Zoom to Fit Image Width"
+msgstr "缩放到适合图像宽度"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
+msgid "Adjusts the zoom to have the image’s width fit into the window"
+msgstr "调整缩放以让图像适应窗口的宽度"
+
+#: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "适合宽度"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:93
-msgid "Fit the image to the window width"
-msgstr "图像适配窗口宽度"
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
+msgid "gtk-zoom-fit"
+msgstr "gtk-zoom-fit"
 
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "缩放到适合图像宽度"
-
-#: ../plugins/fit-to-width/fit-to-width.plugin.desktop.in.h:2
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
 msgstr "图像适配窗口宽度"
 
-#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:1
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
 msgid "Fullscreen Background"
 msgstr "全屏背景"
 
-#: ../plugins/fullscreenbg/fullscreenbg.plugin.desktop.in.h:2
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:7
 msgid "Enables changing background in fullscreen mode"
 msgstr "允许在全屏模式下更换背景"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:1
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
 msgid "Use custom background settings"
 msgstr "使用自定义背景设置"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:2
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
 msgid "Whether the plugin should use global settings or its own."
 msgstr "插件使用全局设置还是自身设置。"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:3
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
 msgid "Background color in fullscreen mode"
 msgstr "全屏模式下的背景颜色"
 
-#: ../plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in.in.h:4
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
 msgstr "该颜色用来填充图像背后的区域。该选项只有在启用“使用自定义”时才生效。"
 
-#: ../plugins/fullscreenbg/preferences_dialog.ui.h:1
+#: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "使用自定义颜色："
 
-#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:1
+#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
 msgid "Hide Titlebar"
 msgstr "隐藏标题栏"
 
-#: ../plugins/hide-titlebar/hide-titlebar.plugin.desktop.in.h:2
+#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
+msgid "Hides the titlebar of maximized windows"
+msgstr "隐藏最大化窗口时的标题栏"
+
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
+#: plugins/light-theme/light-theme.plugin.desktop.in:8
+#: plugins/postasa/postasa.plugin.desktop.in:8
+msgid "eog-plugin"
+msgstr "eog-plugin"
+
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "隐藏图像查看器窗口最大化时的标题栏"
 
-#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:1
-msgid "Disable dark theme"
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:6
+#: plugins/light-theme/light-theme.plugin.desktop.in:5
+msgid "Disable Dark Theme"
 msgstr "禁用黑色主题"
 
-#: ../plugins/light-theme/light-theme.plugin.desktop.in.h:2
-msgid "Disables Eye of GNOME's preference of dark theme variants"
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:7
+msgid "Disables dark theme"
+msgstr "禁用黑色主题"
+
+#: plugins/light-theme/light-theme.plugin.desktop.in:9
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "禁用图像查看器首选的黑色主题风格"
 
-#: ../plugins/map/eog-map-plugin.c:401
-msgid "Jump to current image's location"
-msgstr "跳到当前图像的位置"
-
-#: ../plugins/map/eog-map-plugin.c:413
-msgid "Zoom in"
-msgstr "放大"
-
-#: ../plugins/map/eog-map-plugin.c:421
-msgid "Zoom out"
-msgstr "缩小"
-
-#: ../plugins/map/eog-map-plugin.c:436
-#: ../plugins/map/map.plugin.desktop.in.h:1
+#: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
+#: plugins/map/map.plugin.desktop.in:5
 msgid "Map"
 msgstr "地图"
 
-#: ../plugins/map/map.plugin.desktop.in.h:2
+#: plugins/map/eog-map.appdata.xml.in:7
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "在侧面板里显示照片拍取地点的地图"
+
+#: plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
+msgstr "跳到当前图像的位置"
+
+#: plugins/map/eog-map-plugin.c:443
+msgid "Zoom in"
+msgstr "放大"
+
+#: plugins/map/eog-map-plugin.c:452
+msgid "Zoom out"
+msgstr "缩小"
+
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/map/map.plugin.desktop.in:8
+msgid "map"
+msgstr "map"
+
+#: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "在地图上显示图像的地理位置"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:127
-msgid "Upload to PicasaWeb"
-msgstr "上传到 PicasaWeb"
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
+msgid "Maximize Windows"
+msgstr "最大化窗口"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:129
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "把您的图片上传到 PicasaWeb"
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
+msgid "New windows will open maximized"
+msgstr "新窗口将以最大化打开"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:325
-msgid "Uploading..."
-msgstr "上传中..."
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
+msgid "Maximize new windows"
+msgstr "最大化新窗口"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:371
+#: plugins/postasa/eog-postasa.appdata.xml.in:5
+msgid "Picasa Web Uploader"
+msgstr "Picasa 网络上传工具"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:6
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "支持上传照片到谷歌 Picasa 网络"
+
+#: plugins/postasa/eog-postasa-plugin.c:306
+msgid "Uploading…"
+msgstr "上传中…"
+
+#: plugins/postasa/eog-postasa-plugin.c:352
 msgid "Uploaded"
 msgstr "已上传"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:375
+#: plugins/postasa/eog-postasa-plugin.c:356
 msgid "Cancelled"
 msgstr "已取消"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:378
+#: plugins/postasa/eog-postasa-plugin.c:359
 msgid "Failed"
 msgstr "失败"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:601
+#: plugins/postasa/eog-postasa-plugin.c:582
 #, c-format
 msgid "Login failed. %s"
 msgstr "登录失败。%s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:605
+#: plugins/postasa/eog-postasa-plugin.c:586
 msgid "Logged in successfully."
 msgstr "登录成功。"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:606
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Close"
 msgstr "关闭"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:627
+#: plugins/postasa/eog-postasa-plugin.c:608
 msgid "Cancel"
 msgstr "取消"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:633
-msgid "Logging in..."
-msgstr "正在登录..."
+#: plugins/postasa/eog-postasa-plugin.c:614
+msgid "Logging in…"
+msgstr "正在登录…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:678
+#: plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
 msgstr "请登录以便继续上传。"
 
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: plugins/postasa/eog-postasa-plugin.c:842
+msgid "Upload to PicasaWeb"
+msgstr "上传到 PicasaWeb"
+
+#: plugins/postasa/postasa-config.ui:9
 msgid "PicasaWeb Login"
 msgstr "登录 PicasaWeb"
 
-#: ../plugins/postasa/postasa-config.xml.h:2
+#: plugins/postasa/postasa-config.ui:26
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: ../plugins/postasa/postasa-config.xml.h:3
+#: plugins/postasa/postasa-config.ui:41
 msgid "_Login"
 msgstr "登录(_L)"
 
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: plugins/postasa/postasa-config.ui:72
 msgid "_Username:"
 msgstr "用户名(_U)："
 
-#: ../plugins/postasa/postasa-config.xml.h:5
+#: plugins/postasa/postasa-config.ui:86
 msgid "_Password:"
 msgstr "密码(_P)："
 
-#: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Uploads:"
-msgstr "上传："
-
-#: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "File"
-msgstr "文件"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:3
-msgid "Size"
-msgstr "尺寸"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:4
-msgid "Status"
-msgstr "状态"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:5
-msgid "Cancel Selected"
-msgstr "取消选中"
-
-#: ../plugins/postasa/postasa-uploads.xml.h:6
-msgid "Cancel All"
-msgstr "取消全部"
-
-#: ../plugins/postasa/postasa.plugin.desktop.in.h:1
+#: plugins/postasa/postasa.plugin.desktop.in:5
 msgid "PicasaWeb Uploader"
 msgstr "PicasaWeb 上传工具"
 
-#: ../plugins/postr/eog-postr-plugin.c:62
+#: plugins/postasa/postasa.plugin.desktop.in:9
+msgid "Upload your pictures to PicasaWeb"
+msgstr "把您的图片上传到 PicasaWeb"
+
+#: plugins/postasa/postasa-uploads.ui:37
+msgid "Uploads:"
+msgstr "上传："
+
+#: plugins/postasa/postasa-uploads.ui:62
+msgid "File"
+msgstr "文件"
+
+#: plugins/postasa/postasa-uploads.ui:84
+msgid "Size"
+msgstr "尺寸"
+
+#: plugins/postasa/postasa-uploads.ui:96
+msgid "Status"
+msgstr "状态"
+
+#: plugins/postasa/postasa-uploads.ui:125
+msgid "Cancel Selected"
+msgstr "取消选中"
+
+#: plugins/postasa/postasa-uploads.ui:138
+msgid "Cancel All"
+msgstr "取消全部"
+
+#: plugins/postr/eog-postr.appdata.xml.in:6
+msgid "Postr"
+msgstr "Postr"
+
+#: plugins/postr/eog-postr.appdata.xml.in:7
+msgid "Supports uploading photos to Flickr"
+msgstr "支持上传照片到 Flickr"
+
+#: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "上传到 Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:64
-#: ../plugins/postr/postr.plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "把您的图片上传到 Flickr"
-
-#: ../plugins/postr/postr.plugin.desktop.in.h:1
+#: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
 msgstr "Flickr 上传工具"
 
-#: ../plugins/pythonconsole/__init__.py:64
-msgid "P_ython Console"
-msgstr "P_ython 控制台"
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/postr/postr.plugin.desktop.in:8
+msgid "postr"
+msgstr "postr"
 
-#: ../plugins/pythonconsole/__init__.py:87
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
-msgid "Python Console"
-msgstr "Python 控制台"
+#: plugins/postr/postr.plugin.desktop.in:9
+msgid "Upload your pictures to Flickr"
+msgstr "把您的图片上传到 Flickr"
 
-#: ../plugins/pythonconsole/config.ui.h:1
+#: plugins/pythonconsole/config.ui:56
 msgid "C_ommand color:"
 msgstr "命令颜色(_O)："
 
-#: ../plugins/pythonconsole/config.ui.h:2
+#: plugins/pythonconsole/config.ui:70
 msgid "_Error color:"
 msgstr "错误颜色(_E)："
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:1
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
+#: plugins/pythonconsole/__init__.py:87
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
+msgid "Python Console"
+msgstr "Python 控制台"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
+msgid "Adds a Python console"
+msgstr "添加 Python 控制台"
+
+#: plugins/pythonconsole/__init__.py:59
+msgid "P_ython Console"
+msgstr "P_ython 控制台"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
 msgid "Command Text Color"
 msgstr "命令文本颜色"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:2
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
 msgid "The color used for commands."
 msgstr "用来显示命令的颜色。"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:3
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
 msgid "Error Text Color"
 msgstr "错误文本颜色"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:4
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
 msgid "The color used for errors."
 msgstr "用来显示错误的颜色。"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:5
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
 msgid "Whether to use the system font"
 msgstr "是否使用系统字体"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:6
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
 msgid ""
-"If true, the terminal will use the desktop-global standard font if it's "
+"If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
-"如果为真，终端将使用桌面全局的标准字体(如果是等宽字体，也可能使用最相近的字"
-"体)。"
+"如果为真，终端将使用桌面全局的标准字体（如果是等宽字体，也可能使用最相近的字"
+"体）。"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:7
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
 msgstr "Python 控制台所用字体"
 
-#: ../plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in.in.h:8
-msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr "一个 Pango 字体名。例如，“Sans 12”或“Monospace Bold 14”。"
 
-#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
 msgstr "图像查看器的 Python 控制台"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:63
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
+msgid "about"
+msgstr "关于"
+
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "邮件发送"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:65
-msgid "Send the selected images by mail"
-msgstr "通过邮件发送选中的图像"
-
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:1
-msgid "Send By Mail"
-msgstr "邮件发送"
-
-#: ../plugins/send-by-mail/send-by-mail.plugin.desktop.in.h:2
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
 msgid "Sends an image attached to a new mail"
 msgstr "将附件图像发送到新邮件"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:1
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+msgid "Send by _Mail"
+msgstr "邮件发送(_M)"
+
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
+msgid "Send By Mail"
+msgstr "邮件发送"
+
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
+msgid "mail-send-symbolic"
+msgstr "mail-send-symbolic"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
 msgstr "幻灯片随机播放"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in.h:2
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
+msgid "Shuffles the photos in slideshow mode"
+msgstr "幻灯片模式下随机显示照片"
+
+#. TRANSLATORS: Do NOT translate or transliterate this text!
+#. This is an icon file name
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
+msgid "media-playlist-shuffle"
+msgstr "media-playlist-shuffle"
+
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "幻灯片模式下随机显示图像"
+
+#~ msgid "Fit the image to the window width"
+#~ msgstr "图像适配窗口宽度"
+
+#~ msgid "Send the selected images by mail"
+#~ msgstr "通过邮件发送选中的图像"
