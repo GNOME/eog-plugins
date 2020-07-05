@@ -7,11 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eog-"
-"plugins&component=general\n"
-"POT-Creation-Date: 2010-10-30 15:08+0000\n"
-"PO-Revision-Date: 2010-11-27 21:43+0300\n"
-"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2020-06-17 13:02+0000\n"
+"PO-Revision-Date: 2020-07-05 16:23+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.6.1\n"
+"X-Generator: Poedit 2.3.1\n"
 
-#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+#: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (Unicode nevalid)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#: plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1fmm (lentilă)"
@@ -35,223 +34,441 @@ msgstr "%.1fmm (lentilă)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#: plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (film de 35mm)"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "General"
-msgstr "Generale"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:2
+#: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
 msgstr "Histogramă"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:3
-msgid "Display RGB histogram"
-msgstr "Afișează histograma RGB"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:4
-msgid "Display camera settings in statusbar"
-msgstr "Afișează configurările camerei în bara de stare"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:5
+#: plugins/exif-display/exif-display-config.ui:88
 msgid "Display per-channel histogram"
 msgstr "Afișează histogramă per canal"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+#: plugins/exif-display/exif-display-config.ui:103
+msgid "Display RGB histogram"
+msgstr "Afișează histograma RGB"
+
+#: plugins/exif-display/exif-display-config.ui:135
+msgid "General"
+msgstr "Generale"
+
+#: plugins/exif-display/exif-display-config.ui:170
+msgid "Display camera settings in statusbar"
+msgstr "Afișează configurările camerei în bara de stare"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:5
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:6
+msgid "Exif Display"
+msgstr "Afișaj Exif"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
 msgstr "Afișează configurările camerei și histograma"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
-msgid "Exif display"
-msgstr "Afișaj Exif"
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:7
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr ""
+"Afișează etichetele Exif în panoul lateral și opțional în bara de stare"
 
-#: ../plugins/exif-display/exif-display.ui.h:1
-msgid "Aperture:"
-msgstr "Apertură:"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "Description:"
-msgstr "Descriere:"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "Expo. Time:"
-msgstr "Timp de expunere:"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-#, fuzzy
-msgid "Expo. bias:"
-msgstr "Bias de expunere:"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: plugins/exif-display/exif-display.ui:59
 msgid "ISO speed:"
 msgstr "Viteză ISO:"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
-msgid "Metering:"
-msgstr "Măsurare:"
+#: plugins/exif-display/exif-display.ui:74
+msgid "Expo. Time:"
+msgstr "Timp de expunere:"
 
-#: ../plugins/exif-display/exif-display.ui.h:7
+#: plugins/exif-display/exif-display.ui:89
+msgid "Aperture:"
+msgstr "Apertură:"
+
+#: plugins/exif-display/exif-display.ui:104
 msgid "Zoom:"
 msgstr "Zoom:"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:85
+#: plugins/exif-display/exif-display.ui:119
+msgid "Metering:"
+msgstr "Măsurare:"
+
+#: plugins/exif-display/exif-display.ui:134
+msgid "Expo. bias:"
+msgstr "Bias de expunere:"
+
+#: plugins/exif-display/exif-display.ui:149
+msgid "Description:"
+msgstr "Descriere:"
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:6
+msgid "Export to Folder"
+msgstr "Exportă la dosar"
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
+msgid "Export the current image to a separate directory"
+msgstr "Exportă imaginea curentă într-un director separat"
+
+#: plugins/export-to-folder/export-to-folder.py:56
+msgid "_Export"
+msgstr "_Exportă"
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
+msgid "The folder to export to"
+msgstr "Dosarul la care să se exporte"
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Acesta este dosarul în care modulul va plasa fișierele exportate. Modulul "
+"va exporta la $HOME/exported-images dacă nu este stabilit."
+
+#: plugins/export-to-folder/preferences_dialog.ui:15
+msgid "Export directory:"
+msgstr "Director de exportare:"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:5
+msgid "Zoom to Fit Image Width"
+msgstr "Focalizează pentru a potrivi la lățimea imaginii"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
+msgid "Adjusts the zoom to have the image’s width fit into the window"
+msgstr ""
+"Ajustează focalizarea pentru a avea lățimea imaginii potrivită în fereastră"
+
+#: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Potrivește la lățime"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:87
-#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Modifică zoomul pentru a se se potrivi cu lățimea imaginii"
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
+msgid "Fit images to the window width"
+msgstr "Potrivește imaginile la lățimea ferestrei"
 
-#: ../plugins/map/eog-map-plugin.c:321
-msgid "Jump to current image's location"
-msgstr "Sari la locația imaginii curente"
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
+msgid "Fullscreen Background"
+msgstr "Fundal ecran complet"
 
-#: ../plugins/map/eog-map-plugin.c:333
-msgid "Zoom in"
-msgstr "Apropie"
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:7
+msgid "Enables changing background in fullscreen mode"
+msgstr "Activează modificarea fundalului în modul ecran complet"
 
-#: ../plugins/map/eog-map-plugin.c:341
-msgid "Zoom out"
-msgstr "Depărtează"
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
+msgid "Use custom background settings"
+msgstr "Utilizează configurări de fundal personalizate"
 
-#: ../plugins/map/eog-map-plugin.c:355
-#: ../plugins/map/map.eog-plugin.desktop.in.h:2
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
+msgid "Whether the plugin should use global settings or its own."
+msgstr ""
+"Dacă modulul ar trebui să utilizeze configurările globale sau pe ale "
+"acestuia."
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
+msgid "Background color in fullscreen mode"
+msgstr "Culoarea fundalului în modul ecran complet"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"Culoarea care este utilizată pentru a umple zona în spatele imaginii. "
+"Această opțiune are efect doar dacă utilizează personalizată este activată."
+
+#: plugins/fullscreenbg/preferences_dialog.ui:17
+msgid "Use custom color:"
+msgstr "Utilizează o culoare personalizată:"
+
+#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
+msgid "Hide Titlebar"
+msgstr "Ascunde bara de titlu"
+
+#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
+msgid "Hides the titlebar of maximized windows"
+msgstr "Ascunde bara de titlu a ferestrelor maximizate"
+
+#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
+msgid "Hides the titlebar of maximized Eye of GNOME windows"
+msgstr "Ascunde bara de titlu a ferestrelor Ochi al GNOME maximizate"
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:6
+#: plugins/light-theme/light-theme.plugin.desktop.in:5
+msgid "Disable Dark Theme"
+msgstr "Dezactivează tema întunecată"
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:7
+msgid "Disables dark theme"
+msgstr "Dezactivează tema întunecată"
+
+#: plugins/light-theme/light-theme.plugin.desktop.in:9
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
+msgstr ""
+"Dezactivează preferința Ochi al GNOME a variantelor de temă întunecată"
+
+#: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
+#: plugins/map/map.plugin.desktop.in:5
 msgid "Map"
 msgstr "Hartă"
 
-#: ../plugins/map/map.eog-plugin.desktop.in.h:1
+#: plugins/map/eog-map.appdata.xml.in:7
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Afișează pe o hartă în panoul lateral unde a fost luată poza"
+
+#: plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
+msgstr "Sari la locația imaginii curente"
+
+#: plugins/map/eog-map-plugin.c:443
+msgid "Zoom in"
+msgstr "Apropie"
+
+#: plugins/map/eog-map-plugin.c:452
+msgid "Zoom out"
+msgstr "Depărtează"
+
+#: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "Afișează geolocația imaginii pe o hartă"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:124
-msgid "Upload to PicasaWeb"
-msgstr "Încarcă pe PicasaWeb"
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
+msgid "Maximize Windows"
+msgstr "Maximizează ferestrele"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:126
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:2
-msgid "Upload your pictures to PicasaWeb"
-msgstr "Încărcați-vă imaginile pe PicasaWeb"
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
+msgid "New windows will open maximized"
+msgstr "Ferestrele noi se vor deschide maximizate"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:320
-msgid "Uploading..."
-msgstr "Se încarcă..."
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
+msgid "Maximize new windows"
+msgstr "Maximizează ferestrele noi"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:366
+#: plugins/postasa/eog-postasa.appdata.xml.in:5
+msgid "Picasa Web Uploader"
+msgstr "Serviciu de încărcare Picasa Web"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:6
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Suportă încărcarea fotografiilor la Google Picasa Web"
+
+#: plugins/postasa/eog-postasa-plugin.c:307
+msgid "Uploading…"
+msgstr "Se încarcă…"
+
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Încărcat"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:370
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Anulat"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:373
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Eșuat"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:520
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "Autentificarea a eșuat. %s"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:524
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "Autentificat cu succes."
 
-#: ../plugins/postasa/eog-postasa-plugin.c:525
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Închide"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:546
-#: ../plugins/postasa/postasa-config.xml.h:1
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Anulează"
 
 #. TODO: want to handle passwords more securely
-#: ../plugins/postasa/eog-postasa-plugin.c:552
-msgid "Logging in..."
-msgstr "Se autentifică..."
+#: plugins/postasa/eog-postasa-plugin.c:615
+msgid "Logging in…"
+msgstr "Se autentifică…"
 
-#: ../plugins/postasa/eog-postasa-plugin.c:580
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Autentificați-vă pentru a continua încărcarea."
 
-#: ../plugins/postasa/postasa-config.xml.h:2
-msgid "Login"
-msgstr "Autentificare"
+#: plugins/postasa/eog-postasa-plugin.c:843
+msgid "Upload to PicasaWeb"
+msgstr "Încarcă pe PicasaWeb"
 
-#: ../plugins/postasa/postasa-config.xml.h:3
-msgid "Password"
-msgstr "Parolă"
-
-#: ../plugins/postasa/postasa-config.xml.h:4
+#: plugins/postasa/postasa-config.ui:9
 msgid "PicasaWeb Login"
 msgstr "Autentificare PicasaWeb"
 
-#: ../plugins/postasa/postasa-config.xml.h:5
-msgid "Username"
-msgstr "Nume de utilizator"
+#: plugins/postasa/postasa-config.ui:26
+msgid "_Cancel"
+msgstr "_Anulează"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:1
-msgid "Cancel All"
-msgstr "Anulează toate"
+#: plugins/postasa/postasa-config.ui:41
+msgid "_Login"
+msgstr "_Autentificare"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:2
-msgid "Cancel Selected"
-msgstr "Anulează cele selectate"
+#: plugins/postasa/postasa-config.ui:72
+msgid "_Username:"
+msgstr "Nume de _utilizator:"
 
-#: ../plugins/postasa/postasa-uploads.xml.h:3
-msgid "Uploads:"
-msgstr "Încărcări:"
+#: plugins/postasa/postasa-config.ui:86
+msgid "_Password:"
+msgstr "_Parolă:"
 
-#: ../plugins/postasa/postasa.eog-plugin.desktop.in.h:1
+#: plugins/postasa/postasa.plugin.desktop.in:5
 msgid "PicasaWeb Uploader"
 msgstr "Serviciu de încărcare pentru PicasaWeb"
 
-#: ../plugins/postr/eog-postr-plugin.c:57
+#: plugins/postasa/postasa.plugin.desktop.in:9
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Încărcați-vă imaginile pe PicasaWeb"
+
+#: plugins/postasa/postasa-uploads.ui:37
+msgid "Uploads:"
+msgstr "Încărcări:"
+
+#: plugins/postasa/postasa-uploads.ui:62
+msgid "File"
+msgstr "Fișier"
+
+#: plugins/postasa/postasa-uploads.ui:84
+msgid "Size"
+msgstr "Dimensiune"
+
+#: plugins/postasa/postasa-uploads.ui:96
+msgid "Status"
+msgstr "Stare"
+
+#: plugins/postasa/postasa-uploads.ui:125
+msgid "Cancel Selected"
+msgstr "Anulează cele selectate"
+
+#: plugins/postasa/postasa-uploads.ui:138
+msgid "Cancel All"
+msgstr "Anulează toate"
+
+#: plugins/postr/eog-postr.appdata.xml.in:6
+msgid "Postr"
+msgstr "Postator"
+
+#: plugins/postr/eog-postr.appdata.xml.in:7
+msgid "Supports uploading photos to Flickr"
+msgstr "Suportă încărcarea fotografiilor la Flickr"
+
+#: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Încarcă pe Flickr"
 
-#: ../plugins/postr/eog-postr-plugin.c:59
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-msgid "Upload your pictures to Flickr"
-msgstr "Încărcați-vă pozele pe Flickr"
-
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
+#: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
 msgstr "Serviciu de încărcare pentru Flickr"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+#: plugins/postr/postr.plugin.desktop.in:9
+msgid "Upload your pictures to Flickr"
+msgstr "Încărcați-vă pozele pe Flickr"
+
+#: plugins/pythonconsole/config.ui:56
+msgid "C_ommand color:"
+msgstr "Culoarea c_omenzii:"
+
+#: plugins/pythonconsole/config.ui:70
+msgid "_Error color:"
+msgstr "Culoarea _erorii:"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
+#: plugins/pythonconsole/__init__.py:87
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
 msgid "Python Console"
 msgstr "Consolă Python"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
+msgid "Adds a Python console"
+msgstr "Adaugă o consolă Python"
+
+#: plugins/pythonconsole/__init__.py:59
+msgid "P_ython Console"
+msgstr "Consolă P_ython"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
+msgid "Command Text Color"
+msgstr "Culoare de text al comenzii"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
+msgid "The color used for commands."
+msgstr "Culoarea utilizată pentru comenzi."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
+msgid "Error Text Color"
+msgstr "Culoare de text al erorii"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
+msgid "The color used for errors."
+msgstr "Culoarea utilizată pentru erori."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
+msgid "Whether to use the system font"
+msgstr "Dacă să se utilizeze fontul sistemului"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it’s "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Dacă este adevărat, terminalul va utiliza fontul standard global-desktop "
+"dacă este monospațiat (și, altminteri, cel mai asemănător font cu care "
+"poate veni)."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
+msgid "Font used by Python Console"
+msgstr "Fontul utilizat de consola Python"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
+msgstr ""
+"Un nume de font Pango. Exemple sunt „Sans 12” sau „Monospace Bold 14”."
+
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
 msgstr "Consolă Python pentru Eye of GNOME"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:60
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "Trimite prin email"
 
-#: ../plugins/send-by-mail/eog-send-by-mail-plugin.c:62
-msgid "Send the selected images by mail"
-msgstr "Trimite imaginile selectate prin email"
-
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:1
-msgid "Send By Mail"
-msgstr "Trimitere prin email"
-
-#: ../plugins/send-by-mail/send-by-mail.eog-plugin.desktop.in.h:2
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
 msgid "Sends an image attached to a new mail"
 msgstr "Trimite o imagine atașată unui nou email"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+msgid "Send by _Mail"
+msgstr "Trimite prin _mail"
+
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
+msgid "Send By Mail"
+msgstr "Trimitere prin email"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
+msgid "Slideshow Shuffle"
+msgstr "Succesiune automată a imaginilor în ordine aleatoare"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Amestecă fotografiile în modul prezentare diapozitive"
+
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Amestecă imaginile în modul de succesiune automată a imaginilor"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
-msgid "Slideshow Shuffle"
-msgstr "Succesiune automată a imaginilor în ordine aleatoare"
+#~ msgid "Send the selected images by mail"
+#~ msgstr "Trimite imaginile selectate prin email"
