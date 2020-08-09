@@ -6,7 +6,7 @@
   <name>Fullscreen Background</name>
   <summary>Enables changing background in fullscreen mode</summary>
   <url type="homepage">https://wiki.gnome.org/Apps/EyeOfGnome/Plugins</url>
-  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=eog&amp;component=plugins</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/eog-plugins/issues</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <updatecontact>i.gnatenko.brain@gmail.com</updatecontact>
