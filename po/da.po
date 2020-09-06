@@ -7,10 +7,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Eog-plugins\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-10-24 02:58+0000\n"
+"Project-Id-Version: eog-plugins master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2020-06-17 13:02+0000\n"
 "PO-Revision-Date: 2017-10-18 14:49+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -18,7 +17,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -64,12 +62,6 @@ msgstr "Vis kameraindstillinger i statuslinje"
 msgid "Exif Display"
 msgstr "Exif-visning"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
-
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
 msgstr "Vis kameraindstillinger og histogram"
@@ -84,7 +76,7 @@ msgstr "ISO-hastighed:"
 
 #: plugins/exif-display/exif-display.ui:74
 msgid "Expo. Time:"
-msgstr "Belysningstid:"
+msgstr "Eksponeringstid:"
 
 #: plugins/exif-display/exif-display.ui:89
 msgid "Aperture:"
@@ -100,7 +92,7 @@ msgstr "Måling:"
 
 #: plugins/exif-display/exif-display.ui:134
 msgid "Expo. bias:"
-msgstr "Belysningsindflydelse:"
+msgstr "Eksponeringsindflydelse:"
 
 #: plugins/exif-display/exif-display.ui:149
 msgid "Description:"
@@ -115,12 +107,6 @@ msgstr "Eksportér til mappe"
 #: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
 msgid "Export the current image to a separate directory"
 msgstr "Eksportér det nuværende billede til en separat mappe"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
 
 #: plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
@@ -139,7 +125,7 @@ msgstr ""
 "Udvidelsesmodulet vil eksportere til $HOME/exported-images, hvis intet er "
 "angivet."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Eksportmappe:"
 
@@ -155,12 +141,6 @@ msgstr "Justerer zoomniveauet, så billedets bredde passer til vinduet"
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Tilpas til bredde"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -209,14 +189,6 @@ msgstr "Skjul titellinje"
 msgid "Hides the titlebar of maximized windows"
 msgstr "Skjuler maksimerede vinduers titellinje"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
 #: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "Skjuler titellinjen i maksimerede GNOMEs øje-vinduer"
@@ -255,12 +227,6 @@ msgstr "Zoom ind"
 msgid "Zoom out"
 msgstr "Zoom ud"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-msgid "map"
-msgstr "map"
-
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "Vis den geografiske placering af billedet på et kort"
@@ -286,49 +252,49 @@ msgstr "Overførsel til Picasa Web"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Understøtter upload af billeder til Google Picasa Web"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "Overfører …"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Overført"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Annulleret"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Mislykkedes"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "Indlogning mislykkedes. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "Loggede ind med success."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Luk"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Annullér"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "Logger ind …"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Log venligst ind, for at fortsætte overførsel."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "Overfør til PicasaWeb"
 
@@ -400,12 +366,6 @@ msgstr "Overfør til Flickr"
 msgid "Flickr Uploader"
 msgstr "Overførsel til Flickr"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-msgid "postr"
-msgstr "postr"
-
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
 msgstr "Overfør dine billeder til Flickr"
@@ -473,12 +433,6 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "Python-konsol til GNOMEs øje"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
-
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "Send med mail"
@@ -496,33 +450,15 @@ msgstr "Send med _mail"
 msgid "Send By Mail"
 msgstr "Send med mail"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
-
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
-msgstr "Bland diasshow"
+msgstr "Bland præsentation"
 
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
 msgid "Shuffles the photos in slideshow mode"
-msgstr "Blander billeder i diasshow-tilstand"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
+msgstr "Blander billeder i præsentationstilstand"
 
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
-msgstr "Bland billeder i diasshow-tilstand"
-
-#~ msgid "Fit the image to the window width"
-#~ msgstr "Tilpas billede til vinduets bredde"
-
-#~ msgid "Send the selected images by mail"
-#~ msgstr "Send de valgte billeder med mail"
+msgstr "Blander billeder i præsentationstilstand"
