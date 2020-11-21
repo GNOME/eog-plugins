@@ -1,3 +1,21 @@
+Version 3.26.6
+--------------
+
+General changes:
+
+- Replace projects.gnome.org URLs with gitlab.gnome.org URLs (Andre Klapper)
+- Replace Bugzilla URLs with gitlab.gnome.org URLs (Felix Riemann)
+
+New and updated translations:
+
+- Alan Mortensen [da]
+- Yosef Or Boczko [he]
+- sicklylife [ja]
+- Florentina Mușat [ro]
+- Matej Urbančič [sl]
+- Yuri Chornoivan [uk]
+- Dingzhong Chen [zh_CN]
+
 Version 3.26.5
 --------------
 
