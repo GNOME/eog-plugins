@@ -143,7 +143,7 @@ msgstr "Directori d'exportació:"
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:5
 msgid "Zoom to Fit Image Width"
-msgstr "Amplia per ajustar-se a l'amplada de la imatge"
+msgstr "Amplia per a ajustar-se a l'amplada de la imatge"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
 msgid "Adjusts the zoom to have the image’s width fit into the window"
@@ -322,7 +322,7 @@ msgstr "S'està entrant…"
 
 #: plugins/postasa/eog-postasa-plugin.c:663
 msgid "Please log in to continue upload."
-msgstr "Entreu per continuar el procés de pujada."
+msgstr "Entreu per a continuar el procés de pujada."
 
 #: plugins/postasa/eog-postasa-plugin.c:842
 msgid "Upload to PicasaWeb"
@@ -513,4 +513,3 @@ msgstr "media-playlist-shuffle"
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Mescla les imatges en el mode de projecció de diapositives"
-
