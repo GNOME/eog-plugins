@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2018-06-10 16:02+0000\n"
+"POT-Creation-Date: 2020-06-17 13:02+0000\n"
 "PO-Revision-Date: 2019-01-08 19:56+0200\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -57,22 +57,16 @@ msgstr "Genel"
 
 #: plugins/exif-display/exif-display-config.ui:170
 msgid "Display camera settings in statusbar"
-msgstr "Kamera ayarlarını durum çubuğunda göster"
+msgstr "Fotoğraf makinesi ayarlarını durum çubuğunda göster"
 
 #: plugins/exif-display/exif-display.plugin.desktop.in:5
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Exif Görünümü"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
-
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
-msgstr "Kamera ayarlarını ve çubuk grafiği gösterir"
+msgstr "Fotoğraf makinesi ayarlarını ve çubuk grafiği gösterir"
 
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:7
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
@@ -116,12 +110,6 @@ msgstr "Klasöre Aktar"
 msgid "Export the current image to a separate directory"
 msgstr "Mevcut resmi ayrı bir dizine aktar"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
 #: plugins/export-to-folder/export-to-folder.py:56
 msgid "_Export"
 msgstr "_Dışa Aktar"
@@ -138,7 +126,7 @@ msgstr ""
 "Eklentinin dışa aktarılan dosyaları koyacağı klasördür. Eğer belirtilmezse, "
 "eklenti $HOME/exported-images klasörüne aktaracaktır."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Dışa aktarım dizini:"
 
@@ -154,12 +142,6 @@ msgstr "Yaklaştırmayı resmin genişliği pencereye sığacak şekilde ayarlar
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Genişliğe sığdır"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -208,14 +190,6 @@ msgstr "Başlık Çubuğunu Gizle"
 msgid "Hides the titlebar of maximized windows"
 msgstr "Tam ekran pencerelerde başlık çubuğunu gizler"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
 #: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
 msgstr "Tam ekran Gnome Gözü pencerelerinin başlık çubuğunu gizler"
@@ -254,12 +228,6 @@ msgstr "Yakınlaştır"
 msgid "Zoom out"
 msgstr "Uzaklaştır"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-msgid "map"
-msgstr "harita"
-
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "Resmin coğrafik konumunu haritada göster"
@@ -285,49 +253,49 @@ msgstr "Picasa Web Yükleyici"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Fotoğrafların Google Picasa Web’e yüklenmesini destekler"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "Karşıya yükleniyor..."
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Karşıya Yüklendi"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "İptal Edildi"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Başarısız Oldu"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "Oturum açma başarısız oldu. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "Başarıyla oturum açıldı."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Kapat"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Vazgeç"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "Oturum açılıyor..."
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Karşıya yüklemeye devam etmek için lütfen oturum açın."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "PicasaWeb’e Yükle"
 
@@ -399,12 +367,6 @@ msgstr "Flickr’a Yükle"
 msgid "Flickr Uploader"
 msgstr "Flickr Yükleyici"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-msgid "postr"
-msgstr "postr"
-
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
 msgstr "Resimlerinizi Flickr’a yükleyin"
@@ -471,12 +433,6 @@ msgstr "Pango yazı tipi ismi. Örnekler “Sans 12” veya “Monospace Bold 14
 msgid "Python console for Eye of GNOME"
 msgstr "Gnome’un Gözü için Python konsolu"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
-
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "Postayla Gönder"
@@ -494,12 +450,6 @@ msgstr "_Postayla Gönder"
 msgid "Send By Mail"
 msgstr "Postayla Gönder"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
-
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
@@ -509,15 +459,36 @@ msgstr "Slayt Karıştırma"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Fotoğrafları slayt gösterim kipinde karıştırır"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
-
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Resimleri slayt gösterim kipinde karıştırır"
+
+#~ msgid "zoom-fit-best"
+#~ msgstr "zoom-fit-best"
+
+#~ msgid "eog"
+#~ msgstr "eog"
+
+#~ msgid "gtk-zoom-fit"
+#~ msgstr "gtk-zoom-fit"
+
+#~ msgid "eog-plugin"
+#~ msgstr "eog-plugin"
+
+#~ msgid "map"
+#~ msgstr "harita"
+
+#~ msgid "postr"
+#~ msgstr "postr"
+
+#~ msgid "about"
+#~ msgstr "about"
+
+#~ msgid "mail-send-symbolic"
+#~ msgstr "mail-send-symbolic"
+
+#~ msgid "media-playlist-shuffle"
+#~ msgstr "media-playlist-shuffle"
 
 #~ msgid "Fit the image to the window width"
 #~ msgstr "Resmi pencere genişliğine uydur"
