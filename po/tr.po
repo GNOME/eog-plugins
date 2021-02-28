@@ -41,7 +41,7 @@ msgstr "%.1fmm (35mm film)"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
-msgstr "Çubuklu Grafik"
+msgstr "Çubuk Grafik"
 
 #: plugins/exif-display/exif-display-config.ui:88
 msgid "Display per-channel histogram"
@@ -255,7 +255,7 @@ msgstr "Fotoğrafların Google Picasa Web’e yüklenmesini destekler"
 
 #: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
-msgstr "Karşıya yükleniyor..."
+msgstr "Karşıya yükleniyor…"
 
 #: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
