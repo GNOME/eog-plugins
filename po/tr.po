@@ -1,14 +1,16 @@
 # Turkish translation for eog-plugins.
-# Copyright (C) 2014 eog-plugins's COPYRIGHT HOLDER
+# Copyright (C) 2014-2021 eog-plugins's COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
+#
 # İşbaran Akçayır <isbaran@gmail.com>, 2015.
 # Muhammet Kara <muhammetk@gmail.com>, 2014, 2016.
+# Sabri Ünal <libreajans@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2020-06-17 13:02+0000\n"
+"POT-Creation-Date: 2021-02-28 14:37+0000\n"
 "PO-Revision-Date: 2019-01-08 19:56+0200\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -78,7 +80,7 @@ msgstr "ISO hızı:"
 
 #: plugins/exif-display/exif-display.ui:74
 msgid "Expo. Time:"
-msgstr "Poz. Zamanı:"
+msgstr "Poz. Süresi:"
 
 #: plugins/exif-display/exif-display.ui:89
 msgid "Aperture:"
@@ -110,7 +112,7 @@ msgstr "Klasöre Aktar"
 msgid "Export the current image to a separate directory"
 msgstr "Mevcut resmi ayrı bir dizine aktar"
 
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Dışa Aktar"
 
@@ -383,15 +385,15 @@ msgstr "_Hata rengi:"
 #: plugins/pythonconsole/__init__.py:87
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
 msgid "Python Console"
-msgstr "Python Konsolu"
+msgstr "Python Uçbirimi"
 
 #: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
 msgid "Adds a Python console"
-msgstr "Bir Python konsolu ekler"
+msgstr "Bir Python uçbirimi ekler"
 
 #: plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
-msgstr "P_ython Konsolu"
+msgstr "P_ython Uçbirimi"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
 msgid "Command Text Color"
@@ -423,7 +425,7 @@ msgstr ""
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
-msgstr "Python Konsolu tarafından kullanılan yazıtipi"
+msgstr "Python uçbirimi tarafından kullanılan yazıtipi"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
@@ -431,7 +433,7 @@ msgstr "Pango yazı tipi ismi. Örnekler “Sans 12” veya “Monospace Bold 14
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
-msgstr "Gnome’un Gözü için Python konsolu"
+msgstr "Gnome’un Gözü için Python uçbirimi"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
@@ -453,7 +455,7 @@ msgstr "Postayla Gönder"
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
-msgstr "Slayt Karıştırma"
+msgstr "Slayt Gösterisi Karıştırma"
 
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
 msgid "Shuffles the photos in slideshow mode"
@@ -462,33 +464,6 @@ msgstr "Fotoğrafları slayt gösterim kipinde karıştırır"
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Resimleri slayt gösterim kipinde karıştırır"
-
-#~ msgid "zoom-fit-best"
-#~ msgstr "zoom-fit-best"
-
-#~ msgid "eog"
-#~ msgstr "eog"
-
-#~ msgid "gtk-zoom-fit"
-#~ msgstr "gtk-zoom-fit"
-
-#~ msgid "eog-plugin"
-#~ msgstr "eog-plugin"
-
-#~ msgid "map"
-#~ msgstr "harita"
-
-#~ msgid "postr"
-#~ msgstr "postr"
-
-#~ msgid "about"
-#~ msgstr "about"
-
-#~ msgid "mail-send-symbolic"
-#~ msgstr "mail-send-symbolic"
-
-#~ msgid "media-playlist-shuffle"
-#~ msgstr "media-playlist-shuffle"
 
 #~ msgid "Fit the image to the window width"
 #~ msgstr "Resmi pencere genişliğine uydur"
