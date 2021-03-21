@@ -1,3 +1,17 @@
+Version 3.26.7
+--------------
+
+Plugin changes:
+
+- Export to Folder
+ - #8, export: Menu item is not translated (Felix Riemann)
+
+New and updated translations:
+
+- Sílvia Miranda [ca]
+- Fran Dieguez [gl]
+- Sabri Ünal [tr]
+
 Version 3.26.6
 --------------
 
