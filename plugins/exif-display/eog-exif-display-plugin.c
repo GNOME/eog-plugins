@@ -68,7 +68,7 @@ eog_exif_display_plugin_init (EogExifDisplayPlugin *plugin)
 }
 
 /* eog_util_make_valid_utf8 is not exported so it's duped here */
-gchar *
+static gchar *
 _eog_util_make_valid_utf8 (const gchar *str)
 {
 	GString *string;
