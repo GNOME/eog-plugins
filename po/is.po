@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
 "POT-Creation-Date: 2021-12-07 21:27+0000\n"
-"PO-Revision-Date: 2021-12-08 17:20+0000\n"
+"PO-Revision-Date: 2021-12-08 17:30+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -133,7 +133,7 @@ msgstr "Laga aðdrátt myndar að breidd"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
 msgid "Adjusts the zoom to have the image’s width fit into the window"
-msgstr ""
+msgstr "Aðlagar aðdráttinn þannig að myndin passi við breidd gluggans"
 
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
@@ -141,7 +141,7 @@ msgstr "Aðlaga að breidd"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
-msgstr ""
+msgstr "Aðlaga myndir að breidd glugga"
 
 #: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
 #: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
@@ -151,7 +151,7 @@ msgstr "Bakgrunnur á öllum skjánum"
 #: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
 #: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:7
 msgid "Enables changing background in fullscreen mode"
-msgstr ""
+msgstr "Gerir kleift að skipta um bakgrunn í heilskjásham"
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
 msgid "Use custom background settings"
@@ -209,7 +209,7 @@ msgstr "Landakort"
 
 #: plugins/map/eog-map.appdata.xml.in:7
 msgid "Displays on a map in the side panel where the picture was taken"
-msgstr ""
+msgstr "Birtir landakort á hliðarspjaldinu með merki þar sem myndin var tekin"
 
 #: plugins/map/eog-map-plugin.c:430
 msgid "Jump to current image’s location"
