@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
 "POT-Creation-Date: 2021-12-07 21:27+0000\n"
-"PO-Revision-Date: 2021-12-08 16:20+0000\n"
+"PO-Revision-Date: 2021-12-08 17:20+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -92,7 +92,7 @@ msgstr "Mæling:"
 
 #: plugins/exif-display/exif-display.ui:134
 msgid "Expo. bias:"
-msgstr ""
+msgstr "Frávik lýsingar:"
 
 #: plugins/exif-display/exif-display.ui:149
 msgid "Description:"
@@ -106,7 +106,7 @@ msgstr "Flytja út í möppu"
 #: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
 #: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
 msgid "Export the current image to a separate directory"
-msgstr ""
+msgstr "Flytja fyrirliggjandi mynd út í aðra möppu"
 
 #: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
@@ -114,7 +114,7 @@ msgstr "_Flytja út"
 
 #: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
 msgid "The folder to export to"
-msgstr ""
+msgstr "Mappan sem á að flytja út í"
 
 #: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
 msgid ""
@@ -155,15 +155,15 @@ msgstr ""
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
 msgid "Use custom background settings"
-msgstr ""
+msgstr "Nota sérsniðnar bakgrunnsstillingar"
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
 msgid "Whether the plugin should use global settings or its own."
-msgstr ""
+msgstr "Hvort viðbótin eigi að nota almennar stillingar eða sínar eigin."
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
 msgid "Background color in fullscreen mode"
-msgstr ""
+msgstr "Bakgrunnslitur í heilskjásham"
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
 msgid ""
@@ -182,11 +182,11 @@ msgstr "Fela titilrönd"
 
 #: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
 msgid "Hides the titlebar of maximized windows"
-msgstr ""
+msgstr "Felur titilrönd hámarkaðra glugga"
 
 #: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
 msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr ""
+msgstr "Felur titilrönd hámarkaðra glugga í myndskoðaranum"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
@@ -200,6 +200,7 @@ msgstr "Gera dökkt þema óvirkt"
 #: plugins/light-theme/light-theme.plugin.desktop.in:9
 msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr ""
+"Gerir óvirka tilhneigingu myndarýnisins til að velja tilbrigði dökks þema"
 
 #: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
 #: plugins/map/map.plugin.desktop.in:5
@@ -224,7 +225,7 @@ msgstr "Renna frá"
 
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
-msgstr "Birta hnattstaðsetningu myndarinnar"
+msgstr "Birta hnattstaðsetningu myndarinnar á landakorti"
 
 #: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
 #: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
@@ -233,19 +234,19 @@ msgstr "Hámarka glugga"
 
 #: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
 msgid "New windows will open maximized"
-msgstr ""
+msgstr "Nýir gluggar munu opnast hámarkaðir"
 
 #: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
 msgid "Maximize new windows"
-msgstr ""
+msgstr "Hámarka nýja glugga"
 
 #: plugins/postasa/eog-postasa.appdata.xml.in:5
 msgid "Picasa Web Uploader"
-msgstr ""
+msgstr "Senda inn á Picasa-vefþjónustu"
 
 #: plugins/postasa/eog-postasa.appdata.xml.in:6
 msgid "Supports uploading photos to Google Picasa Web"
-msgstr ""
+msgstr "Sendir myndir inn á Google Picasa-vefinn"
 
 #: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
@@ -266,7 +267,7 @@ msgstr "Mistókst"
 #: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
-msgstr ""
+msgstr "Innskráning mistókst. %s"
 
 #: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
@@ -287,15 +288,15 @@ msgstr "Skrái inn…"
 
 #: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
-msgstr ""
+msgstr "Skráðu þig inn til að halda áfram innsendingu."
 
 #: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
-msgstr ""
+msgstr "Senda inn á PicasaWeb"
 
 #: plugins/postasa/postasa-config.ui:9
 msgid "PicasaWeb Login"
-msgstr ""
+msgstr "Innskráning á PicasaWeb"
 
 #: plugins/postasa/postasa-config.ui:26
 msgid "_Cancel"
@@ -315,11 +316,11 @@ msgstr "_Lykilorð:"
 
 #: plugins/postasa/postasa.plugin.desktop.in:5
 msgid "PicasaWeb Uploader"
-msgstr ""
+msgstr "PicasaWeb innsending"
 
 #: plugins/postasa/postasa.plugin.desktop.in:9
 msgid "Upload your pictures to PicasaWeb"
-msgstr ""
+msgstr "Sendu myndirnar þínar inn á PicasaWeb"
 
 #: plugins/postasa/postasa-uploads.ui:37
 msgid "Uploads:"
@@ -351,27 +352,27 @@ msgstr ""
 
 #: plugins/postr/eog-postr.appdata.xml.in:7
 msgid "Supports uploading photos to Flickr"
-msgstr ""
+msgstr "Sendir myndir inn á Flickr"
 
 #: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
-msgstr ""
+msgstr "Senda inn á Flickr"
 
 #: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
-msgstr ""
+msgstr "Flickr innsending"
 
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
-msgstr ""
+msgstr "Sendu myndirnar þínar inn á Flickr"
 
 #: plugins/pythonconsole/config.ui:56
 msgid "C_ommand color:"
-msgstr ""
+msgstr "_Litur skipunar:"
 
 #: plugins/pythonconsole/config.ui:70
 msgid "_Error color:"
-msgstr ""
+msgstr "Litur _villu:"
 
 #: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
 #: plugins/pythonconsole/__init__.py:87
@@ -381,49 +382,52 @@ msgstr "Python stjórnskjár"
 
 #: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
 msgid "Adds a Python console"
-msgstr ""
+msgstr "Bætir við Python-stjórnskjá"
 
 #: plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
-msgstr ""
+msgstr "P_ython-stjórnskjár"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
 msgid "Command Text Color"
-msgstr ""
+msgstr "Litur textaskipunar"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
 msgid "The color used for commands."
-msgstr ""
+msgstr "Liturinn sem notaður er fyrir skipanir."
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
 msgid "Error Text Color"
-msgstr ""
+msgstr "Litur villumeldinga"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
 msgid "The color used for errors."
-msgstr ""
+msgstr "Liturinn sem notaður er fyrir villur."
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
 msgid "Whether to use the system font"
-msgstr ""
+msgstr "Hvort nota eigi kerfisletur"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
+"Satt merkir að skjáhermirinn skuli nota leturgerð úr víðværum"
+" skjáborðsstillingum ef sú gerð hefur jafnbreitt letur (en annars er reynt að"
+" finna eitthvað svipað)."
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
-msgstr ""
+msgstr "Litur notaður í Python-stjórnskjá"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
-msgstr ""
+msgstr "Heiti á Pango letri. Dæmi: \"Sans 12\" eða \"Monospace Bold 14\"."
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
-msgstr ""
+msgstr "Python-stjórnskjár fyrir Eye of GNOME myndarýninn"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
@@ -445,12 +449,12 @@ msgstr "Senda í tölvupósti"
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
-msgstr ""
+msgstr "Stokka skyggnusýningu"
 
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
 msgid "Shuffles the photos in slideshow mode"
-msgstr ""
+msgstr "Stokkar ljósmyndir í skyggnusýningarham"
 
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
-msgstr ""
+msgstr "Stokkar myndir í skyggnusýningarham"
