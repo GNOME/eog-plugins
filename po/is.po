@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
 "POT-Creation-Date: 2021-12-07 21:27+0000\n"
-"PO-Revision-Date: 2021-12-08 17:30+0000\n"
+"PO-Revision-Date: 2021-12-08 17:56+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -121,6 +121,8 @@ msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
 msgstr ""
+"Þetta er mappan sem viðbótin mun setja útfluttu skrárnar í. Viðbótin mun"
+" flytja út í $HOME/exported-images ef ekkert er stillt hér."
 
 #: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
@@ -170,6 +172,8 @@ msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
 msgstr ""
+"Liturinn sem notaður er til að fylla í svæðið bakvið myndina. Þessi kostur"
+" virkar bara ef nota-sérsniðið er virkjað."
 
 #: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
@@ -348,7 +352,7 @@ msgstr "Hætta við allt"
 
 #: plugins/postr/eog-postr.appdata.xml.in:6
 msgid "Postr"
-msgstr ""
+msgstr "Postr"
 
 #: plugins/postr/eog-postr.appdata.xml.in:7
 msgid "Supports uploading photos to Flickr"
