@@ -1,3 +1,19 @@
+Version 3.26.8
+--------------
+
+Plugin changes:
+
+- Exif Display
+ - !4, exif-display: make _eog_util_make_valid_utf8 static (Krifa75)
+
+New and updated translations:
+
+- Zander Brown [en_GB]
+- Asier Sarasua Garmendia [eu]
+- Sveinn í Felli [is]
+- Quentin PAGÈS [oc]
+- Hugo Carvalho [pt]
+
 Version 3.26.7
 --------------
 
