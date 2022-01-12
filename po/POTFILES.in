@@ -15,8 +15,6 @@ plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in
 plugins/fullscreenbg/fullscreenbg.plugin.desktop.in
 plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in
 plugins/fullscreenbg/preferences_dialog.ui
-plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in
-plugins/hide-titlebar/hide-titlebar.plugin.desktop.in
 plugins/light-theme/eog-light-theme.appdata.xml.in
 plugins/light-theme/light-theme.plugin.desktop.in
 plugins/map/eog-map.appdata.xml.in
