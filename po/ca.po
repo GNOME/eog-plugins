@@ -9,16 +9,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2018-06-10 16:02+0000\n"
-"PO-Revision-Date: 2019-05-11 08:26+0200\n"
-"Last-Translator: Sílvia Miranda <silvia@softcatala.cat>\n"
+"POT-Creation-Date: 2022-01-12 20:56+0000\n"
+"PO-Revision-Date: 2022-01-19 16:22+0100\n"
+"Last-Translator: maite guix <maite.guix@me.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -64,12 +64,6 @@ msgstr "Visualitza els paràmetres de la càmera a la barra d'estat"
 msgid "Exif Display"
 msgstr "Visualitza l'EXIF"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr ""
-
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
 msgstr "Visualitza els paràmetres de la càmera i l'histograma"
@@ -77,6 +71,8 @@ msgstr "Visualitza els paràmetres de la càmera i l'histograma"
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:7
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
 msgstr ""
+"Mostra les etiquetes Exif al panell lateral i opcionalment a la barra "
+"d'estat"
 
 #: plugins/exif-display/exif-display.ui:59
 msgid "ISO speed:"
@@ -116,13 +112,7 @@ msgstr "Exporta a una carpeta"
 msgid "Export the current image to a separate directory"
 msgstr "Exporta la imatge actual a un altre directori"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Exporta"
 
@@ -135,8 +125,10 @@ msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
 msgstr ""
+"Aquesta és la carpeta on el connector col·locarà els fitxers exportats. El "
+"connector exportarà a $HOME/exported-images si no s’ha configurat."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Directori d'exportació:"
 
@@ -153,81 +145,57 @@ msgstr "Ajusta ampliació perquè l'amplada de la imatge s'ajusti a la finestra"
 msgid "Fit to width"
 msgstr "Ajusta a l'amplada"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr ""
-
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
-msgstr ""
+msgstr "Ajusta les imatges a l'amplada de la finestra"
 
 #: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
 #: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
 msgid "Fullscreen Background"
-msgstr ""
+msgstr "Fons a pantalla completa"
 
 #: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
 #: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:7
 msgid "Enables changing background in fullscreen mode"
-msgstr ""
+msgstr "Habilita el canvi de fons en mode de pantalla completa"
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
 msgid "Use custom background settings"
-msgstr ""
+msgstr "Utilitza la configuració de fons personalitzada"
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
 msgid "Whether the plugin should use global settings or its own."
 msgstr ""
+"Si el connector ha d'utilitzar la configuració global o la seva pròpia."
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
 msgid "Background color in fullscreen mode"
-msgstr ""
+msgstr "Color de fons en mode pantalla completa"
 
 #: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
 msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
 msgstr ""
+"El color que s'utilitza per omplir l'àrea darrere de la imatge. Aquesta "
+"opció només té efecte si use-custom està habilitat."
 
 #: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
-msgstr "Usa un color personalitzat:"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Amaga la barra de títol"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Amaga la barra de títol en les finestres maximitzades"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr ""
+msgstr "Utilitza un color personalitzat:"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
-msgstr ""
+msgstr "Inhabilita el tema fosc"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:7
 msgid "Disables dark theme"
-msgstr ""
+msgstr "Inhabilita el tema fosc"
 
 #: plugins/light-theme/light-theme.plugin.desktop.in:9
 msgid "Disables Eye of GNOME’s preference of dark theme variants"
-msgstr ""
+msgstr "Inhabilita la preferència Eye de GNOME de les variants del tema fosc"
 
 #: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
 #: plugins/map/map.plugin.desktop.in:5
@@ -236,7 +204,7 @@ msgstr "Mapa"
 
 #: plugins/map/eog-map.appdata.xml.in:7
 msgid "Displays on a map in the side panel where the picture was taken"
-msgstr ""
+msgstr "Mostra en un mapa del panell lateral on s'ha pres la imatge"
 
 #: plugins/map/eog-map-plugin.c:430
 msgid "Jump to current image’s location"
@@ -250,13 +218,6 @@ msgstr "Amplia"
 msgid "Zoom out"
 msgstr "Redueix"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-#| msgid "Map"
-msgid "map"
-msgstr "map"
-
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "Visualitza la localització geogràfica de la imatge en un mapa"
@@ -264,15 +225,15 @@ msgstr "Visualitza la localització geogràfica de la imatge en un mapa"
 #: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
 #: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
 msgid "Maximize Windows"
-msgstr ""
+msgstr "Maximitza les finestres"
 
 #: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
 msgid "New windows will open maximized"
-msgstr ""
+msgstr "Les finestres noves s'obriran maximitzades"
 
 #: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
 msgid "Maximize new windows"
-msgstr ""
+msgstr "Maximitza les finestres noves"
 
 #: plugins/postasa/eog-postasa.appdata.xml.in:5
 msgid "Picasa Web Uploader"
@@ -280,51 +241,51 @@ msgstr "Gestor de pujades al Picasa Web"
 
 #: plugins/postasa/eog-postasa.appdata.xml.in:6
 msgid "Supports uploading photos to Google Picasa Web"
-msgstr ""
+msgstr "Suporta la càrrega de fotos a Google Picasa Web"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "S'està pujant…"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Pujat"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Cancel·lat"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Ha fallat"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "No s'ha pogut entrar. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "S'ha entrat correctament."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Tanca"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Cancel·la"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "S'està entrant…"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Entreu per a continuar el procés de pujada."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "Puja al Picasa Web"
 
@@ -386,7 +347,7 @@ msgstr "Postr"
 
 #: plugins/postr/eog-postr.appdata.xml.in:7
 msgid "Supports uploading photos to Flickr"
-msgstr ""
+msgstr "Suporta la càrrega de fotos a Flickr"
 
 #: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
@@ -395,12 +356,6 @@ msgstr "Puja al Flickr"
 #: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
 msgstr "Gestor de pujades al Flickr"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-msgid "postr"
-msgstr ""
 
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
@@ -430,19 +385,19 @@ msgstr "_Consola de Python"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
 msgid "Command Text Color"
-msgstr ""
+msgstr "Color del text de l'ordre"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
 msgid "The color used for commands."
-msgstr ""
+msgstr "El color utilitzat per a les ordres."
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
 msgid "Error Text Color"
-msgstr ""
+msgstr "Color del text de l'error"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
 msgid "The color used for errors."
-msgstr ""
+msgstr "El color utilitzat per als errors."
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
 msgid "Whether to use the system font"
@@ -453,6 +408,9 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
+"Si és cert, el terminal utilitzarà el tipus de lletra estàndard global "
+"d'escriptori si és monoespaiada (i en cas contrari el tipus de lletra més "
+"similar possible)."
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
@@ -461,16 +419,12 @@ msgstr "Tipus de lletra usat per la Consola de Python"
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr ""
+"Un nom de lletra del Pango. Alguns exemples són «Sans 12» o «Monoespaiada "
+"Bold 14»."
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
-msgstr "Consola de Python per a l'Eye of GNOME"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
+msgstr "Consola de Python per a l'Eye de GNOME"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
@@ -489,12 +443,6 @@ msgstr "_Envia per correu electrònic"
 msgid "Send By Mail"
 msgstr "Envia per correu electrònic"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
-
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
@@ -504,12 +452,31 @@ msgstr "Projecció de diapositives mesclades"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Mescla les fotografies en el mode de projecció de diapositives"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
-
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Mescla les imatges en el mode de projecció de diapositives"
+
+#~ msgid "eog"
+#~ msgstr "eog"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Amaga la barra de títol"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Amaga la barra de títol en les finestres maximitzades"
+
+#~ msgid "eog-plugin"
+#~ msgstr "eog-plugin"
+
+#~| msgid "Map"
+#~ msgid "map"
+#~ msgstr "map"
+
+#~ msgid "about"
+#~ msgstr "about"
+
+#~ msgid "mail-send-symbolic"
+#~ msgstr "mail-send-symbolic"
+
+#~ msgid "media-playlist-shuffle"
+#~ msgstr "media-playlist-shuffle"
