@@ -665,7 +665,7 @@ impl_activate (EogWindowActivatable *activatable)
 			  G_CALLBACK (drawing_area_draw_cb), plugin);
 	plugin->drawing_area = GTK_DRAWING_AREA (drawing_area);
 
-	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), "Details",
+	eog_sidebar_add_page (EOG_SIDEBAR (sidebar), _("Details"),
 			      plugin->gtkbuilder_widget);
 	gtk_widget_show_all (plugin->gtkbuilder_widget);
 
