@@ -3,7 +3,7 @@ project(
   version: '42.alpha',
   license: 'GPL2+',
   default_options: 'buildtype=debugoptimized',
-  meson_version: '>= 0.51'
+  meson_version: '>= 0.57.0'
 )
 
 gnome = import('gnome')
@@ -111,6 +111,10 @@ subdir('plugins')
 configure_file(
   output: 'config.h',
   configuration: config_h
+)
+
+gnome.post_install(
+  glib_compile_schemas: true,
 )
 
 # Summary message
