@@ -1,17 +1,16 @@
 # Polish translation for eog-plugins.
-# Copyright © 2008-2017 the eog-plugins authors.
+# Copyright © 2008-2022 the eog-plugins authors.
 # This file is distributed under the same license as the eog-plugins package.
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008-2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2009-2017.
-# Aviary.pl <community-poland@mozilla.org>, 2008-2017.
+# Piotr Drąg <piotrdrag@gmail.com>, 2009-2022.
+# Aviary.pl <community-poland@mozilla.org>, 2008-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-08-10 20:28+0000\n"
-"PO-Revision-Date: 2017-10-24 04:58+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2022-01-25 22:29+0000\n"
+"PO-Revision-Date: 2022-01-30 13:28+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -40,6 +39,10 @@ msgstr "%.1f mm (obiektyw)"
 msgid "%.1fmm (35mm film)"
 msgstr "%.1f mm (film 35 mm)"
 
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Szczegóły"
+
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
 msgstr "Histogram"
@@ -64,12 +67,6 @@ msgstr "Wyświetlanie ustawień aparatu na pasku stanu"
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Wyświetlanie danych Exif"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
 
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
@@ -117,13 +114,7 @@ msgstr "Eksport do katalogu"
 msgid "Export the current image to a separate directory"
 msgstr "Eksportuje bieżący obraz do oddzielnego katalogu"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "Wy_eksportuj"
 
@@ -140,7 +131,7 @@ msgstr ""
 "będzie eksportować do „$HOME/exported-images”, jeśli nie ustawiono żadnej "
 "wartości."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Katalog eksportu:"
 
@@ -156,12 +147,6 @@ msgstr "Dostosowuje przybliżenie, aby dopasować szerokość obrazu do okna"
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Dopasowanie do szerokości"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -202,27 +187,6 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Niestandardowy kolor:"
 
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Ukrycie paska tytułowego"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Ukrywa pasek tytułowy zmaksymalizowanych okien"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Ukrywa pasek tytułowy zmaksymalizowanych okien programu Oko GNOME"
-
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
@@ -258,12 +222,6 @@ msgstr "Przybliż"
 msgid "Zoom out"
 msgstr "Oddal"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-msgid "map"
-msgstr "map"
-
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "Wyświetla położenie geograficzne obrazu na mapie"
@@ -289,49 +247,49 @@ msgstr "Wysyłanie do serwisu Picasa Web"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Obsługuje wysyłanie zdjęć do serwisu Picasa Web firmy Google"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "Wysyłanie…"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Wysłano"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Anulowano"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Niepowodzenie"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "Zalogowanie się nie powiodło. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "Zalogowano."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Zamknij"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Anuluj"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "Logowanie…"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Proszę się zalogować, aby kontynuować wysyłanie."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "Wyślij do serwisu Picasa Web"
 
@@ -403,12 +361,6 @@ msgstr "Wyślij do serwisu Flickr"
 msgid "Flickr Uploader"
 msgstr "Wysyłanie do serwisu Flickr"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-msgid "postr"
-msgstr "postr"
-
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
 msgstr "Wysyłanie zdjęć do serwisu Flickr"
@@ -478,12 +430,6 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "Konsola języka Python dla programu Oko GNOME"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
-
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "Wyślij pocztą"
@@ -501,12 +447,6 @@ msgstr "_Wyślij pocztą"
 msgid "Send By Mail"
 msgstr "Wysyłanie pocztą"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
-
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
@@ -515,12 +455,6 @@ msgstr "Tryb losowy pokazu slajdów"
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Losuje zdjęcia w trybie pokazu slajdów"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
 
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
