@@ -12,7 +12,6 @@ libgdata_dep = dependency('libgdata', version: '>= 0.6.0')
 
 postasa_deps = [
   eog_dep,
-  libexif_dep,
   libpeas_dep,
   libpeasgtk_dep,
   libgdata_dep,

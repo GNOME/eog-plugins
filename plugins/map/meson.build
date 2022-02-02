@@ -4,13 +4,13 @@ map_sources = files(
 
 map_deps = [
   eog_dep,
-  libexif_dep,
   libpeas_dep,
   libpeasgtk_dep,
   dependency('champlain-0.12', version: '>= 0.9.0'),
   dependency('champlain-gtk-0.12', version: '>= 0.9.0'),
   dependency('clutter-1.0', version: '>= 1.9.4'),
   dependency('clutter-gtk-1.0', version: '>= 1.1.2'),
+  dependency('libexif', version: '>= 0.6.16'),
 ]
 
 map_plugin = shared_module(
