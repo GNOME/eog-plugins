@@ -12,9 +12,9 @@ exifdisplay_sources += [ exifdisplay_res.get(0) ]
 
 exifdisplay_deps = [
   eog_dep,
-  libexif_dep,
   libpeas_dep,
   libpeasgtk_dep,
+  dependency('libexif', version: '>= 0.6.16'),
 ]
 
 exifdisplay_sha = shared_module(

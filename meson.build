@@ -105,7 +105,6 @@ if 'python' in extra_languages
 endif
 
 subdir('po')
-libexif_dep = dependency('libexif', version: '>= 0.6.16', required: false)
 subdir('plugins')
 
 configure_file(
