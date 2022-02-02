@@ -118,29 +118,13 @@ gnome.post_install(
 
 # Summary message
 
-summary = [
-  'Configuration:',
-  '',
-  '        eog-plugins version @0@'.format(meson.project_version()),
-  '',
-  '        Prefix: @0@'.format(get_option('prefix')),
-  '',
-  '        Enabled plugins:'
-]
+summary({
+  'Prefix': get_option('prefix'),
+  'Compiler': cc.get_id(),
+  'Extra compiler warnings': compiler_flags,
+}, section: 'Build')
 
-foreach plugin_name : enabled_plugins
-  summary += '                ' + plugin_name
-endforeach
-
-summary += [
-  '',
-  '        Disabled plugins:'
-]
-
-foreach plugin_name : disabled_plugins
-  summary += '                ' + plugin_name
-endforeach
-
-summary += ''
-
-message('\n'.join(summary))
+summary({
+  'Enabled plugins': enabled_plugins,
+  'Disabled plugins': disabled_plugins,
+}, section: 'Plugins')
