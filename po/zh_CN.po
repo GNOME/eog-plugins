@@ -6,22 +6,22 @@
 # Yunqiang Su <wzssyqa@gmail.com>, 2010, 2014.
 # tuhaihe <wangdianjin@linuxdeepin.com>, 2012.
 # Dingzhong Chen <wsxy162@gmail.com>, 2017.
+# lumingzh <lumingzh@qq.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-08-18 10:01+0000\n"
-"PO-Revision-Date: 2017-09-02 02:55+0800\n"
-"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
-"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2022-01-25 22:29+0000\n"
+"PO-Revision-Date: 2022-02-03 10:22+0800\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>\n"
+"Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.7\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 41.0\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -41,6 +41,10 @@ msgstr "%.1fmm（镜头）"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm（35mm 胶片）"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "详情"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -66,12 +70,6 @@ msgstr "在状态栏上显示相机设置"
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Exif 显示"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
 
 # 在遥感影像相关的论文里面，都称为 color histogram，“颜色直方图”。这里就是直方图的意思。
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
@@ -120,13 +118,7 @@ msgstr "导出到文件夹"
 msgid "Export the current image to a separate directory"
 msgstr "将当前图像导出到一个单独的目录"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "导出(_E)"
 
@@ -141,7 +133,7 @@ msgid ""
 msgstr ""
 "这是插件放置导出文件的文件夹。如不设置，插件将导出到 $HOME/exported-images。"
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "导出目录："
 
@@ -157,12 +149,6 @@ msgstr "调整缩放以让图像适应窗口的宽度"
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "适合宽度"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -200,27 +186,6 @@ msgstr "该颜色用来填充图像背后的区域。该选项只有在启用“
 msgid "Use custom color:"
 msgstr "使用自定义颜色："
 
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "隐藏标题栏"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "隐藏最大化窗口时的标题栏"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "隐藏图像查看器窗口最大化时的标题栏"
-
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
@@ -255,12 +220,6 @@ msgstr "放大"
 msgid "Zoom out"
 msgstr "缩小"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-msgid "map"
-msgstr "map"
-
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "在地图上显示图像的地理位置"
@@ -286,49 +245,49 @@ msgstr "Picasa 网络上传工具"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "支持上传照片到谷歌 Picasa 网络"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "上传中…"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "已上传"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "已取消"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "失败"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "登录失败。%s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "登录成功。"
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "关闭"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "取消"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "正在登录…"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "请登录以便继续上传。"
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "上传到 PicasaWeb"
 
@@ -400,12 +359,6 @@ msgstr "上传到 Flickr"
 msgid "Flickr Uploader"
 msgstr "Flickr 上传工具"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-msgid "postr"
-msgstr "postr"
-
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
 msgstr "把您的图片上传到 Flickr"
@@ -472,12 +425,6 @@ msgstr "一个 Pango 字体名。例如，“Sans 12”或“Monospace Bold 14�
 msgid "Python console for Eye of GNOME"
 msgstr "图像查看器的 Python 控制台"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "关于"
-
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "邮件发送"
@@ -495,12 +442,6 @@ msgstr "邮件发送(_M)"
 msgid "Send By Mail"
 msgstr "邮件发送"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
-
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
@@ -510,15 +451,45 @@ msgstr "幻灯片随机播放"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "幻灯片模式下随机显示照片"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
-
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "幻灯片模式下随机显示图像"
+
+#~ msgid "zoom-fit-best"
+#~ msgstr "zoom-fit-best"
+
+#~ msgid "eog"
+#~ msgstr "eog"
+
+#~ msgid "gtk-zoom-fit"
+#~ msgstr "gtk-zoom-fit"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "隐藏标题栏"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "隐藏最大化窗口时的标题栏"
+
+#~ msgid "eog-plugin"
+#~ msgstr "eog-plugin"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "隐藏图像查看器窗口最大化时的标题栏"
+
+#~ msgid "map"
+#~ msgstr "map"
+
+#~ msgid "postr"
+#~ msgstr "postr"
+
+#~ msgid "about"
+#~ msgstr "关于"
+
+#~ msgid "mail-send-symbolic"
+#~ msgstr "mail-send-symbolic"
+
+#~ msgid "media-playlist-shuffle"
+#~ msgstr "media-playlist-shuffle"
 
 #~ msgid "Fit the image to the window width"
 #~ msgstr "图像适配窗口宽度"
