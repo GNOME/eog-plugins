@@ -1,6 +1,6 @@
 project(
   'eog-plugins', 'c', # vala is added below if needed, with add_languages().
-  version: '42.alpha',
+  version: '42.rc',
   license: 'GPL2+',
   default_options: 'buildtype=debugoptimized',
   meson_version: '>= 0.57.0'
