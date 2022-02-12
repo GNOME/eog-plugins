@@ -1,3 +1,33 @@
+Version 42.beta
+---------------
+
+General changes:
+
+- Port build system to Meson (Felix Riemann)
+
+Plugin changes:
+
+- Exif Display
+ - !3, translate: mark "Details" page title translatable (Sabri Ünal)
+
+- Flickr Uploader (postr)
+ - Do not migrate to Meson and disable by default as
+   Postr is no longer maintained and working (Felix Riemann)
+
+- Hide Titlebar
+ - !5, Drop hide-titlebar plugin (Krifa75)
+
+New and updated translations:
+
+- maite guix [ca]
+- Daniel Mustieles [es]
+- Yaron Shahrabani [he]
+- Piotr Drąg [pl]
+- Matheus Barbosa [pt_BR]
+- Luna Jernberg [sv]
+- Yuri Chornoivan [uk]
+- Luming Zh [zh_CN]
+
 Version 3.26.8
 --------------
 
