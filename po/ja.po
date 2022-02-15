@@ -1,16 +1,16 @@
 # eog-plugins ja.po.
-# Copyright (C) 2009-2012, 2020 Free Software Foundation, Inc.
+# Copyright (C) 2009-2012, 2020, 2022 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2009-2011.
 # Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011-2012.
-# sicklylife <translation@sicklylife.jp>, 2020.
+# sicklylife <translation@sicklylife.jp>, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
 "POT-Creation-Date: 2019-10-13 18:33+0000\n"
-"PO-Revision-Date: 2020-01-13 21:00+0900\n"
+"PO-Revision-Date: 2022-02-15 21:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -36,6 +36,10 @@ msgstr "%.1fmm (レンズ)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm フィルム)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "詳細"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
