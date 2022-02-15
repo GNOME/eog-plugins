@@ -22,7 +22,7 @@ lighttheme_plugin = shared_module(
 #        to extract translatable strings. .plugin is not recognized.
 i18n.merge_file(
   input: 'light-theme.plugin.desktop.in',
-  output: 'light-theme.plugin.desktop',
+  output: 'light-theme.plugin',
   po_dir: po_dir,
   type: 'desktop',
   args: ['--keyword=Name', '--keyword=Description'],
