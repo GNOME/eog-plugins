@@ -48,7 +48,6 @@ i18n.merge_file(
 )
 
 postasa_appdata = i18n.merge_file(
-  'eog-postasa.appdata.xml',
   input: 'eog-postasa.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',

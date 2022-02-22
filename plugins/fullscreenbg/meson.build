@@ -35,7 +35,6 @@ configure_file(
 )
 
 fullscreenbg_appdata = i18n.merge_file(
-  'eog-fullscreenbg.appdata.xml',
   input: 'eog-fullscreenbg.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',

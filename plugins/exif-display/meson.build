@@ -49,7 +49,6 @@ configure_file(
 )
 
 exifdisplay_appdata = i18n.merge_file(
-  'eog-exif-display.appdata.xml',
   input: 'eog-exif-display.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',

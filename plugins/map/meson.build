@@ -37,7 +37,6 @@ i18n.merge_file(
 )
 
 exifdisplay_appdata = i18n.merge_file(
-  'eog-map.appdata.xml',
   input: 'eog-map.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',
