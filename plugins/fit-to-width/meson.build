@@ -31,7 +31,6 @@ i18n.merge_file(
 )
 
 fittowidth_appdata = i18n.merge_file(
-  'eog-fit-to-width.appdata.xml',
   input: 'eog-fit-to-width.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',

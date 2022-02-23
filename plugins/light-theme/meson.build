@@ -31,7 +31,6 @@ i18n.merge_file(
 )
 
 lighttheme_appdata = i18n.merge_file(
-  'eog-light-theme.appdata.xml',
   input: 'eog-light-theme.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',

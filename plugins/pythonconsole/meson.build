@@ -37,7 +37,6 @@ configure_file(
 )
 
 pythonconsole_appdata = i18n.merge_file(
-  'eog-export-to-folder.appdata.xml',
   input: 'eog-pythonconsole.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',

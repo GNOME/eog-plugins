@@ -32,7 +32,6 @@ i18n.merge_file(
 )
 
 sendbymail_appdata = i18n.merge_file(
-  'eog-send-by-mail.appdata.xml',
   input: 'eog-send-by-mail.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',

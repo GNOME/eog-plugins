@@ -22,7 +22,6 @@ i18n.merge_file(
 )
 
 maximizewindows_appdata = i18n.merge_file(
-  'eog-maximize-windows.appdata.xml',
   input: 'eog-maximize-windows.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',

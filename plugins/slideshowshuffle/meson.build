@@ -22,7 +22,6 @@ i18n.merge_file(
 )
 
 slideshowshuffle_appdata = i18n.merge_file(
-  'eog-slideshowshuffle.appdata.xml',
   input: 'eog-slideshowshuffle.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',
