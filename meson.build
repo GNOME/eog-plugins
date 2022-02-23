@@ -3,7 +3,7 @@ project(
   version: '42.rc',
   license: 'GPL2+',
   default_options: 'buildtype=debugoptimized',
-  meson_version: '>= 0.57.0'
+  meson_version: '>= 0.58.0'
 )
 
 gnome = import('gnome')
