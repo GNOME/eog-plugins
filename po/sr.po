@@ -1,22 +1,21 @@
 # Serbian translation of eog-plugins.
 # Copyright © YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012—2017.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012–2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=eog&ke"
-"ywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-08-10 20:28+0000\n"
-"PO-Revision-Date: 2017-08-13 14:53+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2022-01-25 22:29+0000\n"
+"PO-Revision-Date: 2022-03-04 07:05+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: српски <gnome-sr@googlegroups.org>\n"
+"Language-Team: Serbian <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
@@ -37,6 +36,10 @@ msgstr "%.1fmm (објектив)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm филм)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Детаљи"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -62,12 +65,6 @@ msgstr "Прикажите подешавања фото-апарата на т�
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Ексиф приказ"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
 
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
@@ -115,13 +112,7 @@ msgstr "Извези у фасциклу"
 msgid "Export the current image to a separate directory"
 msgstr "Извезите текућу слику у засебну фасциклу"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Извези"
 
@@ -138,7 +129,7 @@ msgstr ""
 "није подешено онда ће прикључак да их извезе у фасциклу „$HOME/exported-"
 "images“."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Фасцикла извоза:"
 
@@ -148,19 +139,12 @@ msgid "Zoom to Fit Image Width"
 msgstr "Увећај да испуни ширину слике"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
-#| msgid "Adjusts the zoom to have the image's width fit into the window"
 msgid "Adjusts the zoom to have the image’s width fit into the window"
 msgstr "Дотерајте увеличање тако да ширина слике испуни прозор"
 
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Испуни по ширини"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -200,27 +184,6 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Произвољна боја:"
 
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Сакриј наслов"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Сакријте траку наслова увећаних прозора"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Сакрјте траку наслова увећаних прозора Гномовог Ока"
-
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
@@ -231,7 +194,6 @@ msgid "Disables dark theme"
 msgstr "Искључите тамну тему"
 
 #: plugins/light-theme/light-theme.plugin.desktop.in:9
-#| msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Искључите тамну тему у поставкама Гномовог Ока"
 
@@ -245,7 +207,6 @@ msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Прикажите на карти у бочној површи где је снимљена слика"
 
 #: plugins/map/eog-map-plugin.c:430
-#| msgid "Jump to current image's location"
 msgid "Jump to current image’s location"
 msgstr "Скочи до места текуће слике"
 
@@ -256,13 +217,6 @@ msgstr "Увећај"
 #: plugins/map/eog-map-plugin.c:452
 msgid "Zoom out"
 msgstr "Умањи"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-#| msgid "Map"
-msgid "map"
-msgstr "map"
 
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
@@ -289,51 +243,49 @@ msgstr "Отпремник Пикаса веба"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Подршка за отпремање фотографија на Гугл Пикаса веб"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
-#| msgid "Uploading..."
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "Отпремам…"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Отпремљено"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Отказано"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Неуспело"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "Пријављивање није успело. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "Успешно сте пријављени."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Затвори"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Откажи"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
-#| msgid "Logging in..."
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "Пријављујем се…"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Пријавите се да наставите отпремање."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "Отпреми на Пикаса веб"
 
@@ -405,13 +357,6 @@ msgstr "Отпреми на Фликр"
 msgid "Flickr Uploader"
 msgstr "Фликров отпреник"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-#| msgid "Postr"
-msgid "postr"
-msgstr "postr"
-
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
 msgstr "Отпремите ваше слике на Фликр"
@@ -459,9 +404,6 @@ msgid "Whether to use the system font"
 msgstr "Да ли да користи системско писмо"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
-#| msgid ""
-#| "If true, the terminal will use the desktop-global standard font if it's "
-#| "monospace (and the most similar font it can come up with otherwise)."
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -474,20 +416,12 @@ msgid "Font used by Python Console"
 msgstr "Писмо које користи Питонова конзола"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
-#| msgid ""
-#| "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr "Назив Панго писма. Примери су „Sans 12“ или „Monospace Bold 14“."
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
 msgstr "Питонова конзола за Око Гнома"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
@@ -499,19 +433,12 @@ msgid "Sends an image attached to a new mail"
 msgstr "Пошаљите слику прикачену новој пошти"
 
 #: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
-#| msgid "Send by Mail"
 msgid "Send by _Mail"
 msgstr "Пошаљи _поштом"
 
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
 msgid "Send By Mail"
 msgstr "Пошаљи поштом"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
 
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
@@ -522,15 +449,47 @@ msgstr "Мешање покретног приказа"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Измешајте фотографије у режиму покретног приказа"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
-
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Измешајте слике у режиму покретног приказа"
+
+#~ msgid "zoom-fit-best"
+#~ msgstr "zoom-fit-best"
+
+#~ msgid "eog"
+#~ msgstr "eog"
+
+#~ msgid "gtk-zoom-fit"
+#~ msgstr "gtk-zoom-fit"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Сакриј наслов"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Сакријте траку наслова увећаних прозора"
+
+#~ msgid "eog-plugin"
+#~ msgstr "eog-plugin"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "Сакрјте траку наслова увећаних прозора Гномовог Ока"
+
+#~| msgid "Map"
+#~ msgid "map"
+#~ msgstr "map"
+
+#~| msgid "Postr"
+#~ msgid "postr"
+#~ msgstr "postr"
+
+#~ msgid "about"
+#~ msgstr "about"
+
+#~ msgid "mail-send-symbolic"
+#~ msgstr "mail-send-symbolic"
+
+#~ msgid "media-playlist-shuffle"
+#~ msgstr "media-playlist-shuffle"
 
 #~ msgid "Fit the image to the window width"
 #~ msgstr "Прилагоди слику ширини прозора"
