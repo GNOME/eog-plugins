@@ -1,5 +1,5 @@
 project(
-  'eog-plugins', 'c', # vala is added below if needed, with add_languages().
+  'eog-plugins', 'c',
   version: '42.0',
   license: 'GPL2+',
   default_options: 'buildtype=debugoptimized',
