@@ -1,4 +1,29 @@
+Version 42.rc
+-------------
+
+General changes:
+
+- !7, build: drop unused positional argument (Jeremy Bicha)
+
+Plugin changes:
+
+- Disable Dark Theme
+ - !6, Fix light-theme plugin file output name (David King)
+
+New and updated translations:
+
+- Goran Vidović [hr]
+- sicklylife [ja]
+- Hugo Carvalho [pt]
+- Мирослав Николић [sr]
+
 Version 42.beta
+---------------
+
+42.beta was accidentally released in a 42.alpha tarball.
+Accordingly the two versions are identical.
+
+Version 42.alpha
 ---------------
 
 General changes:
