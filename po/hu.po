@@ -1,25 +1,24 @@
 # Hungarian translation of eog-plugins
-# Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017 Free Software Foundation, Inc.
+# Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2022 Free Software Foundation, Inc.
 # This file is distributed under the same license as the eog-plugins package.
 #
 # Gergely Szarka <gszarka at invitel dot hu>, 2009.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2009, 2010, 2011, 2012.
-# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014, 2015, 2017.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2013, 2014, 2015, 2017, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-08-10 20:28+0000\n"
-"PO-Revision-Date: 2017-09-03 17:35+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2022-01-25 22:29+0000\n"
+"PO-Revision-Date: 2022-03-06 22:04+0100\n"
+"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 19.12.3\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -39,6 +38,10 @@ msgstr "%.1fmm (lencse)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Részletek"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -64,12 +67,6 @@ msgstr "Fényképezőgép beállításainak megjelenítése az állapotsoron"
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Exif megjelenítő"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
 
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
@@ -119,13 +116,7 @@ msgstr "Exportálás mappába"
 msgid "Export the current image to a separate directory"
 msgstr "A jelenlegi kép exportálása külön könyvtárba"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Exportálás"
 
@@ -141,7 +132,7 @@ msgstr ""
 "A bővítmény ebbe a mappába helyezi el az exportált fájlokat. "
 "Alapértelmezett: $HOME/exported-images."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Exportálás könyvtára:"
 
@@ -157,12 +148,6 @@ msgstr "Beállítja a nagyítást, hogy a képek szélessége beférjen az ablak
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Szélesség illesztése"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -202,27 +187,6 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Egyéni szín használata:"
 
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Címsor elrejtése"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Elrejti a teljes méretű ablakok címsorát"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Elejti a teljes méretű Képmegjelenítő ablakok címsorát"
-
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
@@ -258,13 +222,6 @@ msgstr "Nagyítás"
 msgid "Zoom out"
 msgstr "Kicsinyítés"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-#| msgid "Map"
-msgid "map"
-msgstr "map"
-
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "A kép földrajzi elhelyezkedésének jelölése a térképen"
@@ -290,49 +247,49 @@ msgstr "Picasa Web feltöltő"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Támogatja a fényképek feltöltését a Google Picasa Web szolgáltatásba"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "Feltöltés…"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Feltöltve"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Megszakítva"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Sikertelen"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "A bejelentkezés meghiúsult. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "A bejelentkezés sikerült."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Bezárás"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Mégse"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "Bejelentkezés…"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Jelentkezzen be a feltöltés folytatásához."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "Feltöltés a Picasawebre"
 
@@ -404,13 +361,6 @@ msgstr "Feltöltés a Flickr-re"
 msgid "Flickr Uploader"
 msgstr "Flickr feltöltő"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-#| msgid "Postr"
-msgid "postr"
-msgstr "postr"
-
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
 msgstr "Képek feltöltése a Flickr-re"
@@ -477,12 +427,6 @@ msgstr "Egy Pango betűkészletnév. Például: „Sans 12” vagy „Monospace 
 msgid "Python console for Eye of GNOME"
 msgstr "Python konzol az Eye of GNOME programhoz"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
-
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "Küldés e-mailben"
@@ -493,19 +437,12 @@ msgid "Sends an image attached to a new mail"
 msgstr "Kép küldése egy új e-mailhez csatolva"
 
 #: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
-#| msgid "Send by Mail"
 msgid "Send by _Mail"
 msgstr "Küldés _levélben"
 
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
 msgid "Send By Mail"
 msgstr "Küldés e-mailben"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
 
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
@@ -516,13 +453,6 @@ msgstr "Diavetítés véletlenszerűen"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Megkeveri a fényképeket diavetítés módban"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
-
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Megkeveri a képeket diavetítés módban"
-
