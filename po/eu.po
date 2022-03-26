@@ -4,13 +4,13 @@
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2014, 2015, 2017.
 # Edurne Labaka <elabaka@uzei.com>, 2015.
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2021.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2021, 2022.
 #
 msgid ""
 msgstr "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2020-06-17 13:02+0000\n"
-"PO-Revision-Date: 2021-04-03 10:00+0100\n"
+"POT-Creation-Date: 2022-01-25 22:29+0000\n"
+"PO-Revision-Date: 2022-03-26 10:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -37,6 +37,10 @@ msgstr "%.1fmm (objektiboa)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm filma)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Xehetasunak"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -109,7 +113,7 @@ msgstr "Esportatu karpetara"
 msgid "Export the current image to a separate directory"
 msgstr "Esportatu uneko irudia bereizitako direktorio batera"
 
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "E_sportatu"
 
@@ -175,19 +179,6 @@ msgstr "Irudiaren atzeko area betetzeko erabiliko den kolorea. Aukera honek erag
 #: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "Erabili kolore pertsonalizatua:"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Ezkutatu titulu-barra"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Leiho maximizatuen titulu-barra ezkutatzen du"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "GNOMEren Begiaren leiho maximizatuen titulu-barra ezkutatzen du"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
@@ -455,6 +446,15 @@ msgstr "Ausaz nahasi irudiak diapositiba-aurkezpena moduan"
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Ausaz nahasi irudiak diapositiba-aurkezpena moduan"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Ezkutatu titulu-barra"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Leiho maximizatuen titulu-barra ezkutatzen du"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "GNOMEren Begiaren leiho maximizatuen titulu-barra ezkutatzen du"
 
 #~ msgid "Fit the image to the window width"
 #~ msgstr "Doitu irudia leihoaren zabalerara"
