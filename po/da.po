@@ -9,14 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2020-06-17 13:02+0000\n"
-"PO-Revision-Date: 2017-10-18 14:49+0200\n"
+"POT-Creation-Date: 2022-03-27 12:05+0000\n"
+"PO-Revision-Date: 2022-03-17 19:27+0100\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -36,6 +37,10 @@ msgstr "%.1fmm (objektiv)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Detaljer"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -108,7 +113,7 @@ msgstr "Eksportér til mappe"
 msgid "Export the current image to a separate directory"
 msgstr "Eksportér det nuværende billede til en separat mappe"
 
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Eksportér"
 
@@ -179,19 +184,6 @@ msgstr ""
 #: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "Brug tilpasset farve:"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Skjul titellinje"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Skjuler maksimerede vinduers titellinje"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Skjuler titellinjen i maksimerede GNOMEs øje-vinduer"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
@@ -462,3 +454,12 @@ msgstr "Blander billeder i præsentationstilstand"
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Blander billeder i præsentationstilstand"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Skjul titellinje"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Skjuler maksimerede vinduers titellinje"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "Skjuler titellinjen i maksimerede GNOMEs øje-vinduer"
