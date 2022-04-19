@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the eog-plugins package.
 # Imam Musthaqim <userindesign@gmail.com>, 2009.
 # Andika Triwidada <andika@gmail.com>, 2012, 2013.
+# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-08-10 20:28+0000\n"
-"PO-Revision-Date: 2017-08-15 10:45+0700\n"
-"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2022-04-17 11:16+0000\n"
+"PO-Revision-Date: 2022-04-19 09:56+0700\n"
+"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -38,6 +38,10 @@ msgstr "%.1fmm (lensa)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (film 35mm)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Detail"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -63,12 +67,6 @@ msgstr "Tampilkan tatanan kamera di batang status"
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Tampilan Exif"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
 
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
@@ -117,13 +115,7 @@ msgstr "Ekspor ke Folder"
 msgid "Export the current image to a separate directory"
 msgstr "Ekspor gambar sekarang ke direktori terpisah"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Ekspor"
 
@@ -139,7 +131,7 @@ msgstr ""
 "Ini adalah folder dimana plugin akan meletakkan berkas yang diekspor. Plugin "
 "akan mengekspor ke $HOME/exported-images bila tak diisi."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Direktori ekspor:"
 
@@ -155,12 +147,6 @@ msgstr "Atur zum agar lebar citra pas ke jendela"
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Pas lebar"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -201,27 +187,6 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Gunakan warna ubahan:"
 
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Sembunyikan Bilah Judul"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Sembunyikan bilah judul dari jendela yang dimaksimalkan"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Sembunyikan bilah judul dari jendela Eye of GNOME yang dimaksimalkan"
-
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
@@ -256,12 +221,6 @@ msgstr "Perbesar"
 msgid "Zoom out"
 msgstr "Perkecil"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-msgid "map"
-msgstr "map"
-
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "Tampilkan lokasi geografis citra pada peta"
@@ -287,49 +246,49 @@ msgstr "Pengunggah Web Picasa"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Mendukung pengunggahan foto ke Google Picasa Web"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
-msgstr "Mengunggah..."
+msgstr "Mengunggah…"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Diunggah"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Dibatalkan"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Gagal"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "Log masuk gagal. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "Sukses log masuk."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Tutup"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Batal"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
-msgstr "Sedang log masuk..."
+msgstr "Sedang log masuk…"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Silakan log masuk untuk melanjutkan mengunggah."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "Unggah ke PicasaWeb"
 
@@ -401,12 +360,6 @@ msgstr "Unggah ke Flickr"
 msgid "Flickr Uploader"
 msgstr "Pengunggah Flickr"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-msgid "postr"
-msgstr "postr"
-
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
 msgstr "Unggah citra Anda ke Flickr"
@@ -475,15 +428,9 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "Konsol Python untuk Mata GNOME"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
-
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
-msgstr "Kirim lewat Surel:"
+msgstr "Kirim lewat Surel"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
@@ -498,12 +445,6 @@ msgstr "Kiri_m lewat Surel"
 msgid "Send By Mail"
 msgstr "Kirim Lewat Surel"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
-
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
@@ -513,12 +454,43 @@ msgstr "Acak Pertunjukan Slide"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Acak foto pada moda pertunjukan salindia"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
-
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Acak citra pada moda pertunjukan slide"
+
+#~ msgid "zoom-fit-best"
+#~ msgstr "zoom-fit-best"
+
+#~ msgid "eog"
+#~ msgstr "eog"
+
+#~ msgid "gtk-zoom-fit"
+#~ msgstr "gtk-zoom-fit"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Sembunyikan Bilah Judul"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Sembunyikan bilah judul dari jendela yang dimaksimalkan"
+
+#~ msgid "eog-plugin"
+#~ msgstr "eog-plugin"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr ""
+#~ "Sembunyikan bilah judul dari jendela Eye of GNOME yang dimaksimalkan"
+
+#~ msgid "map"
+#~ msgstr "map"
+
+#~ msgid "postr"
+#~ msgstr "postr"
+
+#~ msgid "about"
+#~ msgstr "about"
+
+#~ msgid "mail-send-symbolic"
+#~ msgstr "mail-send-symbolic"
+
+#~ msgid "media-playlist-shuffle"
+#~ msgstr "media-playlist-shuffle"
