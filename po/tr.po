@@ -1,17 +1,17 @@
 # Turkish translation for eog-plugins.
-# Copyright (C) 2014-2021 eog-plugins's COPYRIGHT HOLDER
+# Copyright (C) 2014-2022 eog-plugins's COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
 #
 # İşbaran Akçayır <isbaran@gmail.com>, 2015.
 # Muhammet Kara <muhammetk@gmail.com>, 2014, 2016.
-# Sabri Ünal <libreajans@gmail.com>, 2021.
+# Sabri Ünal <libreajans@gmail.com>, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2021-02-28 14:37+0000\n"
-"PO-Revision-Date: 2019-01-08 19:56+0200\n"
+"POT-Creation-Date: 2022-04-17 11:16+0000\n"
+"PO-Revision-Date: 2022-04-24 03:29+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-POOTLE-MTIME: 1424264104.000000\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
@@ -40,6 +40,10 @@ msgstr "%.1fmm (mercek)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Ayrıntılar"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -182,19 +186,6 @@ msgstr ""
 #: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "Özel renk kullan:"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Başlık Çubuğunu Gizle"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Tam ekran pencerelerde başlık çubuğunu gizler"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Tam ekran Gnome Gözü pencerelerinin başlık çubuğunu gizler"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
@@ -464,6 +455,15 @@ msgstr "Fotoğrafları slayt gösterim kipinde karıştırır"
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Resimleri slayt gösterim kipinde karıştırır"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Başlık Çubuğunu Gizle"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Tam ekran pencerelerde başlık çubuğunu gizler"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "Tam ekran Gnome Gözü pencerelerinin başlık çubuğunu gizler"
 
 #~ msgid "Fit the image to the window width"
 #~ msgstr "Resmi pencere genişliğine uydur"
