@@ -2,13 +2,13 @@
 # Copyright (C) 2021 eog-plugins's COPYRIGHT HOLDER
 # This file is distributed under the same license as the eog-plugins package.
 #
-# Sveinn í Felli <sv1@fellsnet.is>, 2021.
+# Sveinn í Felli <sv1@fellsnet.is>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2021-12-07 21:27+0000\n"
-"PO-Revision-Date: 2021-12-08 17:56+0000\n"
+"POT-Creation-Date: 2022-07-06 20:28+0000\n"
+"PO-Revision-Date: 2022-09-06 13:24+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -36,6 +36,10 @@ msgstr "%.1fmm (linsa)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm filma)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Nánar"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -121,8 +125,8 @@ msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
 msgstr ""
-"Þetta er mappan sem viðbótin mun setja útfluttu skrárnar í. Viðbótin mun"
-" flytja út í $HOME/exported-images ef ekkert er stillt hér."
+"Þetta er mappan sem viðbótin mun setja útfluttu skrárnar í. Viðbótin mun "
+"flytja út í $HOME/exported-images ef ekkert er stillt hér."
 
 #: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
@@ -172,25 +176,12 @@ msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
 msgstr ""
-"Liturinn sem notaður er til að fylla í svæðið bakvið myndina. Þessi kostur"
-" virkar bara ef nota-sérsniðið er virkjað."
+"Liturinn sem notaður er til að fylla í svæðið bakvið myndina. Þessi kostur "
+"virkar bara ef nota-sérsniðið er virkjað."
 
 #: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "Nota sérsniðinn lit:"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Fela titilrönd"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Felur titilrönd hámarkaðra glugga"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Felur titilrönd hámarkaðra glugga í myndskoðaranum"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
@@ -417,9 +408,9 @@ msgid ""
 "If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
-"Satt merkir að skjáhermirinn skuli nota leturgerð úr víðværum"
-" skjáborðsstillingum ef sú gerð hefur jafnbreitt letur (en annars er reynt að"
-" finna eitthvað svipað)."
+"Satt merkir að skjáhermirinn skuli nota leturgerð úr víðværum "
+"skjáborðsstillingum ef sú gerð hefur jafnbreitt letur (en annars er reynt að "
+"finna eitthvað svipað)."
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
@@ -462,3 +453,12 @@ msgstr "Stokkar ljósmyndir í skyggnusýningarham"
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Stokkar myndir í skyggnusýningarham"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Fela titilrönd"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Felur titilrönd hámarkaðra glugga"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "Felur titilrönd hámarkaðra glugga í myndskoðaranum"
