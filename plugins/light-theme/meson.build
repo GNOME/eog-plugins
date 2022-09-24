@@ -46,7 +46,7 @@ if appstream_util.found()
     args: [
       'validate',
       '--nonet',
-      exifdisplay_appdata.full_path(),
+      lighttheme_appdata.full_path(),
     ]
   )
 endif
