@@ -47,7 +47,7 @@ if appstream_util.found()
     args: [
       'validate',
       '--nonet',
-      exifdisplay_appdata.full_path(),
+      sendbymail_appdata.full_path(),
     ]
   )
 endif
