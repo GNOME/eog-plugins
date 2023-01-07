@@ -36,7 +36,7 @@ i18n.merge_file(
   install_dir: pluginlibdir,
 )
 
-exifdisplay_appdata = i18n.merge_file(
+map_appdata = i18n.merge_file(
   input: 'eog-map.appdata.xml.in',
   output: '@BASENAME@',
   po_dir: src_root / 'po',
@@ -52,7 +52,7 @@ if appstream_util.found()
     args: [
       'validate',
       '--nonet',
-      exifdisplay_appdata.full_path(),
+      map_appdata.full_path(),
     ]
   )
 endif
