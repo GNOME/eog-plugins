@@ -4,24 +4,23 @@
 #
 # Gintautas Miliauskas <gintas@akl.lt>, 2008.
 # Žygimantas Beručka <zygis@gnome.org>, 20, 2010.
-# Aurimas Černius <aurisc4@gmail.com>, 2013, 2014, 2015, 2017.
+# Aurimas Černius <aurisc4@gmail.com>, 2013-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-08-10 20:28+0000\n"
-"PO-Revision-Date: 2017-10-15 21:41+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2022-09-06 13:25+0000\n"
+"PO-Revision-Date: 2023-02-19 21:45+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -41,6 +40,10 @@ msgstr "%.1fmm (lęšis)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm filmas)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Detalės"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -66,12 +69,6 @@ msgstr "Rodyti kameros nustatymus būsenos juostoje"
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Exif vaizduoklis"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
 
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
@@ -119,13 +116,7 @@ msgstr "Eksportuoti į aplanką"
 msgid "Export the current image to a separate directory"
 msgstr "Eksportuoti dabartinį paveikslėlį į atskirą katalogą"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Eksportuoti"
 
@@ -141,7 +132,7 @@ msgstr ""
 "Tai yra aplankas, į kurį įskiepis patalpins eksportuojamus failus. Jei "
 "nenustatyta, įskiepis eksportuos į $HOME/exported-images."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Eksportavimo katalogas:"
 
@@ -151,19 +142,12 @@ msgid "Zoom to Fit Image Width"
 msgstr "Keisti mastelį sutalpinant paveikslėlio plotį"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
-#| msgid "Adjusts the zoom to have the image's width fit into the window"
 msgid "Adjusts the zoom to have the image’s width fit into the window"
 msgstr "Pakoreguoja mastelį, kad paveikslėlio plotis tilptų į langą"
 
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Sutalpinti į plotį"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -203,27 +187,6 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Naudoti pasirinktinę spalvą:"
 
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Slėpti pavadinimo juostą"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Slepia išdidintų langų pavadinimų juostas"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Slepia išdidintų Eye of GNOME langų pavadinimų juostas"
-
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
@@ -234,7 +197,6 @@ msgid "Disables dark theme"
 msgstr "Išjungia tamsią temą"
 
 #: plugins/light-theme/light-theme.plugin.desktop.in:9
-#| msgid "Disables Eye of GNOME's preference of dark theme variants"
 msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Išjungia Eye of GNOME tamsaus temos varianto nuostatą"
 
@@ -248,7 +210,6 @@ msgid "Displays on a map in the side panel where the picture was taken"
 msgstr "Šoniniame polangyje rodo žemėlapio vietą, kur padaryta nuotrauka"
 
 #: plugins/map/eog-map-plugin.c:430
-#| msgid "Jump to current image's location"
 msgid "Jump to current image’s location"
 msgstr "Pereiti į dabartinio paveikslėlio vietą"
 
@@ -259,13 +220,6 @@ msgstr "Didinti"
 #: plugins/map/eog-map-plugin.c:452
 msgid "Zoom out"
 msgstr "Mažinti"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-#| msgid "Map"
-msgid "map"
-msgstr "map"
 
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
@@ -292,51 +246,49 @@ msgstr "Picasa Web siuntiklis"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Palaiko nuotraukų siuntimą į Google Picasa Web"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
-#| msgid "Uploading..."
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "Siunčiama…"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Nusiųsta"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Atšaukta"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Nepavyko"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "Prisijungimas nepavyko. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "Prisijungta sėkmingai."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Užverti"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Atšaukti"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
-#| msgid "Logging in..."
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "Prisijungiama…"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Prisijunkite įkėlimo tęsimui."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "Siųsti į PicasaWeb"
 
@@ -408,13 +360,6 @@ msgstr "Siųsti į Flickr"
 msgid "Flickr Uploader"
 msgstr "Flickr siuntiklis"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-#| msgid "Postr"
-msgid "postr"
-msgstr "postr"
-
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
 msgstr "Siųsti paveikslėlius į Filckr"
@@ -462,9 +407,6 @@ msgid "Whether to use the system font"
 msgstr "Ar naudoti sistemos šriftą"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
-#| msgid ""
-#| "If true, the terminal will use the desktop-global standard font if it's "
-#| "monospace (and the most similar font it can come up with otherwise)."
 msgid ""
 "If true, the terminal will use the desktop-global standard font if it’s "
 "monospace (and the most similar font it can come up with otherwise)."
@@ -477,20 +419,12 @@ msgid "Font used by Python Console"
 msgstr "Python konsolės naudojamas šriftas"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
-#| msgid ""
-#| "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr "Pango šrifto pavadinimas. Pvz. „Sans 12“ arba „Monospace Bold 14“."
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
 msgstr "Eye of GNOME Python konsolė"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
@@ -502,19 +436,12 @@ msgid "Sends an image attached to a new mail"
 msgstr "Siunčia paveikslėlį, prisegtą prie naujo laiško"
 
 #: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
-#| msgid "Send by Mail"
 msgid "Send by _Mail"
 msgstr "Siųsti el. _paštu"
 
 #: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
 msgid "Send By Mail"
 msgstr "Siųsti el. paštu"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
 
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
@@ -525,15 +452,47 @@ msgstr "Skaidrių maišymas"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Maišo paveikslėlius skaidrių rodymo veiksenoje"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
-
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Maišo paveikslėlius skaidrių rodymo veiksenoje"
+
+#~ msgid "zoom-fit-best"
+#~ msgstr "zoom-fit-best"
+
+#~ msgid "eog"
+#~ msgstr "eog"
+
+#~ msgid "gtk-zoom-fit"
+#~ msgstr "gtk-zoom-fit"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Slėpti pavadinimo juostą"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Slepia išdidintų langų pavadinimų juostas"
+
+#~ msgid "eog-plugin"
+#~ msgstr "eog-plugin"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "Slepia išdidintų Eye of GNOME langų pavadinimų juostas"
+
+#~| msgid "Map"
+#~ msgid "map"
+#~ msgstr "map"
+
+#~| msgid "Postr"
+#~ msgid "postr"
+#~ msgstr "postr"
+
+#~ msgid "about"
+#~ msgstr "about"
+
+#~ msgid "mail-send-symbolic"
+#~ msgstr "mail-send-symbolic"
+
+#~ msgid "media-playlist-shuffle"
+#~ msgstr "media-playlist-shuffle"
 
 #~ msgid "Fit the image to the window width"
 #~ msgstr "Pritaikyti paveikslėlį prie lango pločio"
