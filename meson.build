@@ -1,6 +1,6 @@
 project(
   'eog-plugins', 'c',
-  version: '44.alpha',
+  version: '44.0',
   license: 'GPL2+',
   default_options: 'buildtype=debugoptimized',
   meson_version: '>= 0.58.0'
