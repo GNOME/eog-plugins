@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the eog-plugins package.
 # Ivan Buresi <err747@free.fr>, 2007.
 # Claude Paroz <claude@2xlibre.net>, 2009-2014
+# Charles Monzat <charles.monzat@free.fr>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins HEAD\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eog&keywords=I18N+L10N&component=plugins\n"
-"POT-Creation-Date: 2017-10-02 20:45+0000\n"
-"PO-Revision-Date: 2018-03-26 11:34+0200\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
+"POT-Creation-Date: 2022-09-06 13:25+0000\n"
+"PO-Revision-Date: 2022-10-08 14:28+0200\n"
+"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Gtranslator 40.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -37,6 +38,10 @@ msgstr "%.1f mm (focale)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1f mm (film 35 mm)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Détails"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -62,12 +67,6 @@ msgstr "Afficher les paramètres de l’appareil dans la barre d’état"
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Affichage Exif"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/exif-display/exif-display.plugin.desktop.in:8
-msgid "zoom-fit-best"
-msgstr "zoom-fit-best"
 
 #: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
@@ -117,13 +116,7 @@ msgstr "Exporter vers le dossier"
 msgid "Export the current image to a separate directory"
 msgstr "Exporter l’image actuelle dans un répertoire distinct"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
-msgid "eog"
-msgstr "eog"
-
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Exporter"
 
@@ -140,7 +133,7 @@ msgstr ""
 "sont exportés par défaut dans $HOME/exported-images si le dossier n’est pas "
 "spécifié."
 
-#: plugins/export-to-folder/preferences_dialog.ui:19
+#: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
 msgstr "Répertoire d’exportation :"
 
@@ -156,12 +149,6 @@ msgstr "Ajuste le zoom afin que la largeur de l’image tienne dans la fenêtre"
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Adapter à la largeur"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
-msgid "gtk-zoom-fit"
-msgstr "gtk-zoom-fit"
 
 #: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
 msgid "Fit images to the window width"
@@ -203,27 +190,6 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Utiliser une couleur personnalisée :"
 
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Masquer la barre de titre"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Masque la barre de titre des fenêtres maximisées"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:8
-#: plugins/light-theme/light-theme.plugin.desktop.in:8
-#: plugins/postasa/postasa.plugin.desktop.in:8
-msgid "eog-plugin"
-msgstr "eog-plugin"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Masque la barre de titre des fenêtres maximisées de Eye of GNOME"
-
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
@@ -260,12 +226,6 @@ msgstr "Zoom avant"
 msgid "Zoom out"
 msgstr "Zoom arrière"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/map/map.plugin.desktop.in:8
-msgid "map"
-msgstr "map"
-
 #: plugins/map/map.plugin.desktop.in:9
 msgid "Display the geolocation of the image on a map"
 msgstr "Affiche la position géographique de l’image sur une carte"
@@ -291,49 +251,49 @@ msgstr "Moteur de mise en ligne sur PicasaWeb"
 msgid "Supports uploading photos to Google Picasa Web"
 msgstr "Gère le téléversement de photos vers Google Picasa Web"
 
-#: plugins/postasa/eog-postasa-plugin.c:306
+#: plugins/postasa/eog-postasa-plugin.c:307
 msgid "Uploading…"
 msgstr "Envoi des images en cours…"
 
-#: plugins/postasa/eog-postasa-plugin.c:352
+#: plugins/postasa/eog-postasa-plugin.c:353
 msgid "Uploaded"
 msgstr "Mise en ligne terminée"
 
-#: plugins/postasa/eog-postasa-plugin.c:356
+#: plugins/postasa/eog-postasa-plugin.c:357
 msgid "Cancelled"
 msgstr "Annulé"
 
-#: plugins/postasa/eog-postasa-plugin.c:359
+#: plugins/postasa/eog-postasa-plugin.c:360
 msgid "Failed"
 msgstr "Échec"
 
-#: plugins/postasa/eog-postasa-plugin.c:582
+#: plugins/postasa/eog-postasa-plugin.c:583
 #, c-format
 msgid "Login failed. %s"
 msgstr "Échec de connexion. %s"
 
-#: plugins/postasa/eog-postasa-plugin.c:586
+#: plugins/postasa/eog-postasa-plugin.c:587
 msgid "Logged in successfully."
 msgstr "Connexion réussie."
 
-#: plugins/postasa/eog-postasa-plugin.c:587
+#: plugins/postasa/eog-postasa-plugin.c:588
 msgid "Close"
 msgstr "Fermer"
 
-#: plugins/postasa/eog-postasa-plugin.c:608
+#: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
 msgstr "Annuler"
 
 #. TODO: want to handle passwords more securely
-#: plugins/postasa/eog-postasa-plugin.c:614
+#: plugins/postasa/eog-postasa-plugin.c:615
 msgid "Logging in…"
 msgstr "Connexion en cours…"
 
-#: plugins/postasa/eog-postasa-plugin.c:663
+#: plugins/postasa/eog-postasa-plugin.c:664
 msgid "Please log in to continue upload."
 msgstr "Veuillez vous connecter pour continuer le téléversement."
 
-#: plugins/postasa/eog-postasa-plugin.c:842
+#: plugins/postasa/eog-postasa-plugin.c:843
 msgid "Upload to PicasaWeb"
 msgstr "Mettre en ligne sur PicasaWeb"
 
@@ -343,7 +303,7 @@ msgstr "Connexion à PicasaWeb"
 
 #: plugins/postasa/postasa-config.ui:26
 msgid "_Cancel"
-msgstr "_Annuler"
+msgstr "A_nnuler"
 
 #: plugins/postasa/postasa-config.ui:41
 msgid "_Login"
@@ -404,12 +364,6 @@ msgstr "Mettre en ligne sur Flickr"
 #: plugins/postr/postr.plugin.desktop.in:5
 msgid "Flickr Uploader"
 msgstr "Moteur de mise en ligne sur Flickr"
-
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/postr/postr.plugin.desktop.in:8
-msgid "postr"
-msgstr "postr"
 
 #: plugins/postr/postr.plugin.desktop.in:9
 msgid "Upload your pictures to Flickr"
@@ -479,12 +433,6 @@ msgstr ""
 msgid "Python console for Eye of GNOME"
 msgstr "Console Python pour Eye of GNOME"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:10
-msgid "about"
-msgstr "about"
-
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
 msgstr "Envoyer par courriel"
@@ -502,12 +450,6 @@ msgstr "Envoyer par _courriel"
 msgid "Send By Mail"
 msgstr "Envoi par courriel"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
-msgid "mail-send-symbolic"
-msgstr "mail-send-symbolic"
-
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
 msgid "Slideshow Shuffle"
@@ -517,15 +459,45 @@ msgstr "Diaporama aléatoire"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Mélange les photos en mode diaporama"
 
-#. TRANSLATORS: Do NOT translate or transliterate this text!
-#. This is an icon file name
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
-msgid "media-playlist-shuffle"
-msgstr "media-playlist-shuffle"
-
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Mélange les images en mode diaporama"
+
+#~ msgid "zoom-fit-best"
+#~ msgstr "zoom-fit-best"
+
+#~ msgid "eog"
+#~ msgstr "eog"
+
+#~ msgid "gtk-zoom-fit"
+#~ msgstr "gtk-zoom-fit"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Masquer la barre de titre"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Masque la barre de titre des fenêtres maximisées"
+
+#~ msgid "eog-plugin"
+#~ msgstr "eog-plugin"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "Masque la barre de titre des fenêtres maximisées de Eye of GNOME"
+
+#~ msgid "map"
+#~ msgstr "map"
+
+#~ msgid "postr"
+#~ msgstr "postr"
+
+#~ msgid "about"
+#~ msgstr "about"
+
+#~ msgid "mail-send-symbolic"
+#~ msgstr "mail-send-symbolic"
+
+#~ msgid "media-playlist-shuffle"
+#~ msgstr "media-playlist-shuffle"
 
 #~ msgid "Fit the image to the window width"
 #~ msgstr "Adapter l’image à la largeur de la fenêtre"
