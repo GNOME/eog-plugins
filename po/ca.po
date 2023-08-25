@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2022-01-12 20:56+0000\n"
-"PO-Revision-Date: 2022-01-19 16:22+0100\n"
+"POT-Creation-Date: 2023-01-25 16:13+0000\n"
+"PO-Revision-Date: 2023-08-25 09:51+0200\n"
 "Last-Translator: maite guix <maite.guix@me.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -38,6 +38,10 @@ msgstr "%.1f mm (lent)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1f mm (pel·lícula de 35 mm)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Detalls"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -71,8 +75,7 @@ msgstr "Visualitza els paràmetres de la càmera i l'histograma"
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:7
 msgid "Displays Exif tags in the side panel and optionally the statusbar"
 msgstr ""
-"Mostra les etiquetes Exif al panell lateral i opcionalment a la barra "
-"d'estat"
+"Mostra les etiquetes Exif al panell lateral i opcionalment a la barra d'estat"
 
 #: plugins/exif-display/exif-display.ui:59
 msgid "ISO speed:"
