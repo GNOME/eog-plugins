@@ -7,8 +7,8 @@
   <shortdesc xml:lang="en">A set of plugins for Eye of GNOME</shortdesc>
   <description xml:lang="en">This package contains some useful plugins for the Eye of GNOME image viewer.</description>
   <homepage rdf:resource="https://wiki.gnome.org/Apps/EyeOfGnome/Plugins" />
-  <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/eog-list" />
-  <download-page rdf:resource="http://download.gnome.org/sources/eog-plugins/" />
+  <support-forum rdf:resource="https://discourse.gnome.org/tag/eog" />
+  <download-page rdf:resource="https://download.gnome.org/sources/eog-plugins/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/eog-plugins/issues/" />
   <programming-language>C</programming-language>
   <programming-language>Python</programming-language>
