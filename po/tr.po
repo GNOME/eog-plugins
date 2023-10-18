@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2023-01-25 16:13+0000\n"
-"PO-Revision-Date: 2022-04-24 03:29+0300\n"
+"POT-Creation-Date: 2023-07-15 15:47+0000\n"
+"PO-Revision-Date: 2023-10-17 01:21+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <takim@gnome.org.tr>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4\n"
 "X-POOTLE-MTIME: 1424264104.000000\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
@@ -277,7 +277,7 @@ msgstr "Kapat"
 
 #: plugins/postasa/eog-postasa-plugin.c:609
 msgid "Cancel"
-msgstr "Vazgeç"
+msgstr "İptal"
 
 #. TODO: want to handle passwords more securely
 #: plugins/postasa/eog-postasa-plugin.c:615
@@ -298,7 +298,7 @@ msgstr "PicasaWeb Giriş"
 
 #: plugins/postasa/postasa-config.ui:26
 msgid "_Cancel"
-msgstr "_Vazgeç"
+msgstr "İ_ptal"
 
 #: plugins/postasa/postasa-config.ui:41
 msgid "_Login"
