@@ -8,9 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2020-06-17 13:02+0000\n"
-"PO-Revision-Date: 2020-07-05 16:23+0300\n"
-"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
+"POT-Creation-Date: 2022-09-06 13:25+0000\n"
+"PO-Revision-Date: 2023-08-01 17:02+0300\n"
+"Last-Translator: Florentina Mușat <florentina [dot] musat [dot] 28 [at] "
+"gmail [dot] com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
@@ -38,6 +39,10 @@ msgstr "%.1fmm (lentilă)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (film de 35mm)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Detalii"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -111,7 +116,7 @@ msgstr "Exportă la dosar"
 msgid "Export the current image to a separate directory"
 msgstr "Exportă imaginea curentă într-un director separat"
 
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Exportă"
 
@@ -124,8 +129,8 @@ msgid ""
 "This is the folder the plugin will place the exported files in. Plugin will "
 "export to $HOME/exported-images if not set."
 msgstr ""
-"Acesta este dosarul în care modulul va plasa fișierele exportate. Modulul "
-"va exporta la $HOME/exported-images dacă nu este stabilit."
+"Acesta este dosarul în care modulul va plasa fișierele exportate. Modulul va "
+"exporta la $HOME/exported-images dacă nu este stabilit."
 
 #: plugins/export-to-folder/preferences_dialog.ui:15
 msgid "Export directory:"
@@ -185,19 +190,6 @@ msgstr ""
 msgid "Use custom color:"
 msgstr "Utilizează o culoare personalizată:"
 
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Ascunde bara de titlu"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Ascunde bara de titlu a ferestrelor maximizate"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Ascunde bara de titlu a ferestrelor Ochi al GNOME maximizate"
-
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
 msgid "Disable Dark Theme"
@@ -209,8 +201,7 @@ msgstr "Dezactivează tema întunecată"
 
 #: plugins/light-theme/light-theme.plugin.desktop.in:9
 msgid "Disables Eye of GNOME’s preference of dark theme variants"
-msgstr ""
-"Dezactivează preferința Ochi al GNOME a variantelor de temă întunecată"
+msgstr "Dezactivează preferința Ochi al GNOME a variantelor de temă întunecată"
 
 #: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
 #: plugins/map/map.plugin.desktop.in:5
@@ -424,8 +415,8 @@ msgid ""
 "monospace (and the most similar font it can come up with otherwise)."
 msgstr ""
 "Dacă este adevărat, terminalul va utiliza fontul standard global-desktop "
-"dacă este monospațiat (și, altminteri, cel mai asemănător font cu care "
-"poate veni)."
+"dacă este monospațiat (și, altminteri, cel mai asemănător font cu care poate "
+"veni)."
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
@@ -433,8 +424,7 @@ msgstr "Fontul utilizat de consola Python"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
-msgstr ""
-"Un nume de font Pango. Exemple sunt „Sans 12” sau „Monospace Bold 14”."
+msgstr "Un nume de font Pango. Exemple sunt „Sans 12” sau „Monospace Bold 14”."
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
@@ -469,6 +459,15 @@ msgstr "Amestecă fotografiile în modul prezentare diapozitive"
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Amestecă imaginile în modul de succesiune automată a imaginilor"
+
+#~ msgid "Hide Titlebar"
+#~ msgstr "Ascunde bara de titlu"
+
+#~ msgid "Hides the titlebar of maximized windows"
+#~ msgstr "Ascunde bara de titlu a ferestrelor maximizate"
+
+#~ msgid "Hides the titlebar of maximized Eye of GNOME windows"
+#~ msgstr "Ascunde bara de titlu a ferestrelor Ochi al GNOME maximizate"
 
 #~ msgid "Send the selected images by mail"
 #~ msgstr "Trimite imaginile selectate prin email"
