@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
 "POT-Creation-Date: 2023-04-14 13:09+0000\n"
-"PO-Revision-Date: 2024-02-05 22:51+0200\n"
+"PO-Revision-Date: 2024-02-05 22:52+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -43,7 +43,7 @@ msgstr "%.1fmm (35mm filmas)"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:668
 msgid "Details"
-msgstr ""
+msgstr "Detalės"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
