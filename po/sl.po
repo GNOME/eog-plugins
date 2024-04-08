@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2020-04-25 14:44+0000\n"
-"PO-Revision-Date: 2020-06-17 09:03+0200\n"
-"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues/\n"
+"POT-Creation-Date: 2024-02-05 20:53+0000\n"
+"PO-Revision-Date: 2024-04-08 17:02+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Launchpad-Export-Date: 2007-10-05 05:48+0000\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: plugins/exif-display/eog-exif-display-plugin.c:105
@@ -40,6 +40,10 @@ msgstr "%.1fmm (leča)"
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1fmm (35mm film)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Podrobnosti"
 
 #: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
@@ -112,7 +116,7 @@ msgstr "Izvozi v mapo"
 msgid "Export the current image to a separate directory"
 msgstr "Izvozi trenutno sliko v ločeno mapo"
 
-#: plugins/export-to-folder/export-to-folder.py:56
+#: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
 msgstr "_Izvozi"
 
@@ -182,19 +186,6 @@ msgstr ""
 #: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "Uporabi barvo po meri:"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:6
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:5
-msgid "Hide Titlebar"
-msgstr "Skrij naslovno vrstico"
-
-#: plugins/hide-titlebar/eog-hide-titlebar.appdata.xml.in:7
-msgid "Hides the titlebar of maximized windows"
-msgstr "Skrije naslovno vrstico razpetega okna programa"
-
-#: plugins/hide-titlebar/hide-titlebar.plugin.desktop.in:9
-msgid "Hides the titlebar of maximized Eye of GNOME windows"
-msgstr "Skrije naslovno vrstico razpetega okna programa"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
 #: plugins/light-theme/light-theme.plugin.desktop.in:5
@@ -465,39 +456,3 @@ msgstr "Premeša slike med prikazovanjem predstavitve"
 #: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
 msgid "Shuffles images in slideshow mode"
 msgstr "Premešaj slike med prikazovanjem predstavitve"
-
-#~ msgid "zoom-fit-best"
-#~ msgstr "zoom-fit-best"
-
-#~ msgid "eog"
-#~ msgstr "eog"
-
-#~ msgid "gtk-zoom-fit"
-#~ msgstr "gtk-zoom-fit"
-
-#~ msgid "eog-plugin"
-#~ msgstr "eog-plugin"
-
-#~ msgid "map"
-#~ msgstr "map"
-
-#~ msgid "postr"
-#~ msgstr "postr"
-
-#~ msgid "about"
-#~ msgstr "about"
-
-#~ msgid "mail-send-symbolic"
-#~ msgstr "mail-send-symbolic"
-
-#~ msgid "media-playlist-shuffle"
-#~ msgstr "media-playlist-shuffle"
-
-#~ msgid "Fit the image to the window width"
-#~ msgstr "Prilagodi velikost slike širini okna"
-
-#~ msgid "Send the selected images by mail"
-#~ msgstr "Pošiljanje izbranih slik po pošti"
-
-#~ msgid "<b>Zoom:</b>"
-#~ msgstr "<b>Približanje:</b>"
