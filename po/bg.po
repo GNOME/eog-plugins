@@ -1,38 +1,31 @@
 # Bulgarian translation of eog-plugins po-file.
 # Copyright (C) 2009 Free Software Foundation, Inc.
+# Copyright (C) 2025 twlvnn kraftwerk <kraft_werk@tutanota.com>.
 # This file is distributed under the same license as the eog-plugins package.
 # Yavor Doganov <yavor@gnu.org>, 2009.
-#
+# twlvnn kraftwerk <kraft_werk@tutanota.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-20 14:42+0300\n"
-"PO-Revision-Date: 2009-09-20 14:42+0300\n"
-"Last-Translator: Yavor Doganov <yavor@gnu.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues/\n"
+"POT-Creation-Date: 2025-02-10 19:54+0000\n"
+"PO-Revision-Date: 2025-03-06 21:22+0100\n"
+"Last-Translator: twlvnn kraftwerk <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
 
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:1
-msgid "Display the geolocation of the image on a map"
-msgstr "Показване на географското положение на изображението на карта"
-
-#: ../plugins/champlain/champlain.eog-plugin.desktop.in.h:2
-#: ../plugins/champlain/eog-champlain-plugin.c:312
-msgid "Map"
-msgstr "Карта"
-
-#: ../plugins/exif-display/eog-exif-display-plugin.c:136
+#: plugins/exif-display/eog-exif-display-plugin.c:105
 msgid " (invalid Unicode)"
 msgstr " (неправилен Уникод)"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:212
+#: plugins/exif-display/eog-exif-display-plugin.c:183
 #, c-format
 msgid "%.1fmm (lens)"
 msgstr "%.1f мм (лещи)"
@@ -40,101 +33,427 @@ msgstr "%.1f мм (лещи)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../plugins/exif-display/eog-exif-display-plugin.c:223
+#: plugins/exif-display/eog-exif-display-plugin.c:194
 #, c-format
 msgid "%.1fmm (35mm film)"
 msgstr "%.1f мм (филм 35 мм)"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:1
-msgid "General"
-msgstr "Общи"
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Подробности"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:2
+#: plugins/exif-display/exif-display-config.ui:53
 msgid "Histogram"
 msgstr "Хистограма"
 
-#: ../plugins/exif-display/exif-display-config.ui.h:3
-msgid "Display RGB histogram"
-msgstr "Показване на хистограма на ЧЗС"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:4
-msgid "Display camera settings in statusbar"
-msgstr "Показване на настройките на фотоапарата в лентата за състояние"
-
-#: ../plugins/exif-display/exif-display-config.ui.h:5
+#: plugins/exif-display/exif-display-config.ui:88
 msgid "Display per-channel histogram"
 msgstr "Показване на хистограма за всеки канал"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:1
+#: plugins/exif-display/exif-display-config.ui:103
+msgid "Display RGB histogram"
+msgstr "Показване на хистограма на ЧЗС"
+
+#: plugins/exif-display/exif-display-config.ui:135
+msgid "General"
+msgstr "Общи"
+
+#: plugins/exif-display/exif-display-config.ui:170
+msgid "Display camera settings in statusbar"
+msgstr "Показване на настройките на фотоапарата в лентата за състояние"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:5
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:6
+msgid "Exif Display"
+msgstr "Данни на Exif"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:9
 msgid "Displays camera settings and histogram"
 msgstr "Показване на настройки на фотоапарата и хистограма"
 
-#: ../plugins/exif-display/exif-display.eog-plugin.desktop.in.h:2
-msgid "Exif display"
-msgstr "Данни на Exif"
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:7
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr ""
+"Показва етикетите по Exif в страничния панел и по избор в лентата за "
+"състоянието"
 
-#: ../plugins/exif-display/exif-display.ui.h:1
-msgid "Aperture:"
-msgstr "Бленда:"
-
-#: ../plugins/exif-display/exif-display.ui.h:2
-msgid "Description:"
-msgstr "Описание:"
-
-#: ../plugins/exif-display/exif-display.ui.h:3
-msgid "Expo. Time:"
-msgstr "Време за експонация:"
-
-#: ../plugins/exif-display/exif-display.ui.h:4
-msgid "Expo. bias:"
-msgstr "Корекция за експонация:"
-
-#: ../plugins/exif-display/exif-display.ui.h:5
+#: plugins/exif-display/exif-display.ui:59
 msgid "ISO speed:"
 msgstr "Скорост по ISO:"
 
-#: ../plugins/exif-display/exif-display.ui.h:6
-msgid "Metering:"
-msgstr "Режим на мерене:"
+#: plugins/exif-display/exif-display.ui:74
+msgid "Expo. Time:"
+msgstr "Време за експонация:"
 
-#: ../plugins/exif-display/exif-display.ui.h:7
+#: plugins/exif-display/exif-display.ui:89
+msgid "Aperture:"
+msgstr "Бленда:"
+
+#: plugins/exif-display/exif-display.ui:104
 msgid "Zoom:"
 msgstr "Обектив:"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:82
+#: plugins/exif-display/exif-display.ui:119
+msgid "Metering:"
+msgstr "Режим на мерене:"
+
+#: plugins/exif-display/exif-display.ui:134
+msgid "Expo. bias:"
+msgstr "Корекция за експонация:"
+
+#: plugins/exif-display/exif-display.ui:149
+msgid "Description:"
+msgstr "Описание:"
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:6
+msgid "Export to Folder"
+msgstr "Изнасяне към папка"
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
+msgid "Export the current image to a separate directory"
+msgstr "Изнасяне на текущото изображение в отделна папка"
+
+#: plugins/export-to-folder/export-to-folder.py:59
+msgid "_Export"
+msgstr "_Изнасяне"
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
+msgid "The folder to export to"
+msgstr "Папката за изнасяне"
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Това е папката, в която приставката ще постави изнесените файлове. Ако не е "
+"зададена, приставката ще изнася в „$HOME/exported-images“."
+
+#: plugins/export-to-folder/preferences_dialog.ui:15
+msgid "Export directory:"
+msgstr "Папка за изнасяне:"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:5
+msgid "Zoom to Fit Image Width"
+msgstr "Мащабиране до напасване по широчината на изображението"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
+msgid "Adjusts the zoom to have the image’s width fit into the window"
+msgstr ""
+"Наглася мащаба, за да може изображението да се побере в прозореца по широчина"
+
+#: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Напасване по широчина"
 
-#: ../plugins/fit-to-width/eog-fit-to-width-plugin.c:84
-#: ../plugins/fit-to-width/fit-to-width.eog-plugin.desktop.in.h:1
-msgid "Zoom to fit image width"
-msgstr "Мащабиране до напасване по широчината на изображението"
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
+msgid "Fit images to the window width"
+msgstr "Напасване на изображенията към широчината на прозореца"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:1
-msgid "Shuffles images in slideshow mode"
-msgstr "Превключва изображения като прожекция"
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
+msgid "Fullscreen Background"
+msgstr "Фон на цял екран"
 
-#: ../plugins/slideshowshuffle/slideshowshuffle.eog-plugin.desktop.in.h:2
-msgid "Slideshow Shuffle"
-msgstr "Прожекция"
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:7
+msgid "Enables changing background in fullscreen mode"
+msgstr "Позволява промяна на фона в режим на цял екран"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Качване във Flickr"
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
+msgid "Use custom background settings"
+msgstr "Използване на други настройки на фона"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:59
-msgid "Upload your pictures to Flickr"
-msgstr "Качване на снимки във Flickr"
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
+msgid "Whether the plugin should use global settings or its own."
+msgstr ""
+"Дали приставката трябва да използва глобални настройки или свои собствени."
 
-#: ../plugins/postr/eog-postr-plugin.c:57
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
+msgid "Background color in fullscreen mode"
+msgstr "Цвят на фона в режим на цял екран"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"Цветът, който се използва за запълване на областта зад изображението. Тази "
+"опция има ефект само ако е включена опцията „use-custom“."
+
+#: plugins/fullscreenbg/preferences_dialog.ui:17
+msgid "Use custom color:"
+msgstr "Използване на друг цвят:"
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:6
+#: plugins/light-theme/light-theme.plugin.desktop.in:5
+msgid "Disable Dark Theme"
+msgstr "Изключване на тъмната тема"
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:7
+msgid "Disables dark theme"
+msgstr "Изключва тъмната тема"
+
+#: plugins/light-theme/light-theme.plugin.desktop.in:9
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
+msgstr "Изключва приоритета на „Окото на GNOME“ за тъмни варианти на темата"
+
+#: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
+#: plugins/map/map.plugin.desktop.in:5
+msgid "Map"
+msgstr "Карта"
+
+#: plugins/map/eog-map.appdata.xml.in:7
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Показва се на карта в страничния панел къде е направена снимката"
+
+#: plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
+msgstr "Към местоположението на текущото изображение"
+
+#: plugins/map/eog-map-plugin.c:443
+msgid "Zoom in"
+msgstr "Увеличаване"
+
+#: plugins/map/eog-map-plugin.c:452
+msgid "Zoom out"
+msgstr "Намаляване"
+
+#: plugins/map/map.plugin.desktop.in:9
+msgid "Display the geolocation of the image on a map"
+msgstr "Показване на географското положение на изображението на карта"
+
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
+msgid "Maximize Windows"
+msgstr "Максимизиране на прозорците"
+
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
+msgid "New windows will open maximized"
+msgstr "Новите прозорци ще се отварят максимизирани"
+
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
+msgid "Maximize new windows"
+msgstr "Максимизиране на новите прозорци"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:5
+msgid "Picasa Web Uploader"
+msgstr "Качване в Picasa Web"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:6
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Поддържа качване на снимки в Google Picasa Web"
+
+#: plugins/postasa/eog-postasa-plugin.c:307
+msgid "Uploading…"
+msgstr "Качване…"
+
+#: plugins/postasa/eog-postasa-plugin.c:353
+msgid "Uploaded"
+msgstr "Качено"
+
+#: plugins/postasa/eog-postasa-plugin.c:357
+msgid "Cancelled"
+msgstr "Прекратено"
+
+#: plugins/postasa/eog-postasa-plugin.c:360
+msgid "Failed"
+msgstr "Неуспешно"
+
+#: plugins/postasa/eog-postasa-plugin.c:583
+#, c-format
+msgid "Login failed. %s"
+msgstr "Неуспешно вписване: %s"
+
+#: plugins/postasa/eog-postasa-plugin.c:587
+msgid "Logged in successfully."
+msgstr "Успешно вписване."
+
+#: plugins/postasa/eog-postasa-plugin.c:588
+msgid "Close"
+msgstr "Затваряне"
+
+#: plugins/postasa/eog-postasa-plugin.c:609
+msgid "Cancel"
+msgstr "Прекратяване"
+
+#. TODO: want to handle passwords more securely
+#: plugins/postasa/eog-postasa-plugin.c:615
+msgid "Logging in…"
+msgstr "Вписване…"
+
+#: plugins/postasa/eog-postasa-plugin.c:664
+msgid "Please log in to continue upload."
+msgstr "Впишете се, за да продължите качването."
+
+#: plugins/postasa/eog-postasa-plugin.c:843
+msgid "Upload to PicasaWeb"
+msgstr "Качване в PicasaWeb"
+
+#: plugins/postasa/postasa-config.ui:9
+msgid "PicasaWeb Login"
+msgstr "Регистрация в PicasaWeb"
+
+#: plugins/postasa/postasa-config.ui:26
+msgid "_Cancel"
+msgstr "_Прекратяване"
+
+#: plugins/postasa/postasa-config.ui:41
+msgid "_Login"
+msgstr "_Вписване"
+
+#: plugins/postasa/postasa-config.ui:72
+msgid "_Username:"
+msgstr "_Потребителско име:"
+
+#: plugins/postasa/postasa-config.ui:86
+msgid "_Password:"
+msgstr "_Парола:"
+
+#: plugins/postasa/postasa.plugin.desktop.in:5
+msgid "PicasaWeb Uploader"
+msgstr "Качване в PicasaWeb"
+
+#: plugins/postasa/postasa.plugin.desktop.in:9
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Качете си снимките в PicasaWeb"
+
+#: plugins/postasa/postasa-uploads.ui:37
+msgid "Uploads:"
+msgstr "Качвания:"
+
+#: plugins/postasa/postasa-uploads.ui:62
+msgid "File"
+msgstr "Файл"
+
+#: plugins/postasa/postasa-uploads.ui:84
+msgid "Size"
+msgstr "Размер"
+
+#: plugins/postasa/postasa-uploads.ui:96
+msgid "Status"
+msgstr "Състояние"
+
+#: plugins/postasa/postasa-uploads.ui:125
+msgid "Cancel Selected"
+msgstr "Прекратяване на избраните"
+
+#: plugins/postasa/postasa-uploads.ui:138
+msgid "Cancel All"
+msgstr "Прекратяване на всички"
+
+#: plugins/postr/eog-postr.appdata.xml.in:6
+msgid "Postr"
+msgstr "Postr"
+
+#: plugins/postr/eog-postr.appdata.xml.in:7
+msgid "Supports uploading photos to Flickr"
+msgstr "Поддържа качване на снимки във Flickr"
+
+#: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Качване във Flickr"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:1
+#: plugins/postr/postr.plugin.desktop.in:5
+msgid "Flickr Uploader"
+msgstr "Качване във Flickr"
+
+#: plugins/postr/postr.plugin.desktop.in:9
+msgid "Upload your pictures to Flickr"
+msgstr "Качване на снимки във Flickr"
+
+#: plugins/pythonconsole/config.ui:56
+msgid "C_ommand color:"
+msgstr "_Цвят за команди:"
+
+#: plugins/pythonconsole/config.ui:70
+msgid "_Error color:"
+msgstr "_Цвят за грешки:"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
+#: plugins/pythonconsole/__init__.py:87
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
 msgid "Python Console"
 msgstr "Конзола на Питон"
 
-#: ../plugins/pythonconsole/pythonconsole.eog-plugin.desktop.in.h:2
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
+msgid "Adds a Python console"
+msgstr "Добавяне на конзола на Питон"
+
+#: plugins/pythonconsole/__init__.py:59
+msgid "P_ython Console"
+msgstr "Конзола на _Питон"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
+msgid "Command Text Color"
+msgstr "Цвят на текста на командите"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
+msgid "The color used for commands."
+msgstr "Цветът, който се използва за командите."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
+msgid "Error Text Color"
+msgstr "Цвят на текста на грешките"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
+msgid "The color used for errors."
+msgstr "Цветът, който се използва за грешките."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
+msgid "Whether to use the system font"
+msgstr "Дали да се използва системният шрифт"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it’s "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Ако е зададено, терминалът ще използва стандартния шрифт на работния плот, "
+"ако той е равноширок (и най-близкия шрифт, който може да предложи в противен "
+"случай)."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
+msgid "Font used by Python Console"
+msgstr "Шрифт, който се използва в конзолата на Питон"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
+msgstr "Име на шрифт на Pango. Примери са „Sans 12“ или „Monospace Bold 14“."
+
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
 msgid "Python console for Eye of GNOME"
 msgstr "Конзола на Питон за Eog"
+
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
+msgid "Send by Mail"
+msgstr "Изпращане по е-поща"
+
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
+msgid "Sends an image attached to a new mail"
+msgstr "Изпращане на изображение, прикачено към ново е-писмо"
+
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+msgid "Send by _Mail"
+msgstr "Изпращане по _е-поща"
+
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
+msgid "Send By Mail"
+msgstr "Изпращане по е-поща"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
+msgid "Slideshow Shuffle"
+msgstr "Прожекция"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Превключва изображенията като прожекция"
+
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
+msgid "Shuffles images in slideshow mode"
+msgstr "Превключва изображения като прожекция"
