@@ -1,0 +1,455 @@
+# Kazakh translation for eog-plugins.
+# Copyright (C) 2026 eog-plugins's COPYRIGHT HOLDER
+# This file is distributed under the same license as the eog-plugins package.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>,  2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eog-plugins gnome-42\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues/\n"
+"POT-Creation-Date: 2022-01-25 22:28+0000\n"
+"PO-Revision-Date: 2026-03-14 23:09+0500\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <Kazakh>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:105
+msgid " (invalid Unicode)"
+msgstr " (жарамсыз Unicode)"
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: plugins/exif-display/eog-exif-display-plugin.c:183
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1f мм (объектив)"
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: plugins/exif-display/eog-exif-display-plugin.c:194
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1f мм (35 мм таспа)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Мәліметтер"
+
+#: plugins/exif-display/exif-display-config.ui:53
+msgid "Histogram"
+msgstr "Гистограмма"
+
+#: plugins/exif-display/exif-display-config.ui:88
+msgid "Display per-channel histogram"
+msgstr "Әр арна бойынша гистограмманы көрсету"
+
+#: plugins/exif-display/exif-display-config.ui:103
+msgid "Display RGB histogram"
+msgstr "RGB гистограммасын көрсету"
+
+#: plugins/exif-display/exif-display-config.ui:135
+msgid "General"
+msgstr "Жалпы"
+
+#: plugins/exif-display/exif-display-config.ui:170
+msgid "Display camera settings in statusbar"
+msgstr "Камера баптауларын қалып-күй жолағында көрсету"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:4
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:6
+msgid "Exif Display"
+msgstr "Exif көрсету"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:8
+msgid "Displays camera settings and histogram"
+msgstr "Камера баптаулары мен гистограмманы көрсетеді"
+
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:7
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr ""
+"Exif тегтерін бүйір панельде және таңдау бойынша қалып-күй жолағында "
+"көрсетеді"
+
+#: plugins/exif-display/exif-display.ui:59
+msgid "ISO speed:"
+msgstr "ISO жылдамдығы:"
+
+#: plugins/exif-display/exif-display.ui:74
+msgid "Expo. Time:"
+msgstr "Ұстау уақыты:"
+
+#: plugins/exif-display/exif-display.ui:89
+msgid "Aperture:"
+msgstr "Диафрагма:"
+
+#: plugins/exif-display/exif-display.ui:104
+msgid "Zoom:"
+msgstr "Масштаб:"
+
+#: plugins/exif-display/exif-display.ui:119
+msgid "Metering:"
+msgstr "Өлшеу:"
+
+#: plugins/exif-display/exif-display.ui:134
+msgid "Expo. bias:"
+msgstr "Экспозиция ығысуы:"
+
+#: plugins/exif-display/exif-display.ui:149
+msgid "Description:"
+msgstr "Сипаттамасы:"
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:5
+msgid "Export to Folder"
+msgstr "Бумаға экспорттау"
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
+msgid "Export the current image to a separate directory"
+msgstr "Ағымдағы суретті бөлек бумаға экспорттау"
+
+#: plugins/export-to-folder/export-to-folder.py:59
+msgid "_Export"
+msgstr "_Экспорттау"
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
+msgid "The folder to export to"
+msgstr "Экспортталатын бума"
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Бұл — плагин экспортталған файлдарды орналастыратын бума. Егер орнатылмаса, "
+"плагин $HOME/exported-images бумасына экспорттайды."
+
+#: plugins/export-to-folder/preferences_dialog.ui:15
+msgid "Export directory:"
+msgstr "Экспорттау бумасы:"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:4
+msgid "Zoom to Fit Image Width"
+msgstr "Сурет еніне қарай масштабтау"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
+msgid "Adjusts the zoom to have the image’s width fit into the window"
+msgstr "Суреттің енін терезеге сыйдыру үшін масштабты реттейді"
+
+#: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
+msgid "Fit to width"
+msgstr "Ені бойынша сыйдыру"
+
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
+msgid "Fit images to the window width"
+msgstr "Суреттерді терезе еніне сыйдыру"
+
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:5
+msgid "Fullscreen Background"
+msgstr "Толық экранды режим фоны"
+
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
+msgid "Enables changing background in fullscreen mode"
+msgstr "Толық экранды режимде фонды өзгертуді іске қосады"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
+msgid "Use custom background settings"
+msgstr "Жеке фон баптауларын қолдану"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
+msgid "Whether the plugin should use global settings or its own."
+msgstr "Плагин глобалды баптауларды немесе өз баптауларын қолдану керек пе."
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
+msgid "Background color in fullscreen mode"
+msgstr "Толық экранды режимдегі фон түсі"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"Суреттің артындағы аймақты толтыру үшін қолданылатын түс. Бұл опция тек "
+"«use-custom» іске қосылғанда ғана әсер етеді."
+
+#: plugins/fullscreenbg/preferences_dialog.ui:17
+msgid "Use custom color:"
+msgstr "Басқа түсті қолдану:"
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:6
+#: plugins/light-theme/light-theme.plugin.desktop.in:4
+msgid "Disable Dark Theme"
+msgstr "Қараңғы теманы сөндіру"
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:7
+msgid "Disables dark theme"
+msgstr "Қараңғы теманы сөндіреді"
+
+#: plugins/light-theme/light-theme.plugin.desktop.in:8
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
+msgstr ""
+"Eye of GNOME бағдарламасының қараңғы тема нұсқаларына басымдылығын сөндіреді"
+
+#: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
+#: plugins/map/map.plugin.desktop.in:4
+msgid "Map"
+msgstr "Карта"
+
+#: plugins/map/eog-map.appdata.xml.in:7
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Сурет түсірілген орынды бүйір панельдегі картада көрсетеді"
+
+#: plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
+msgstr "Ағымдағы суреттің орнына өту"
+
+#: plugins/map/eog-map-plugin.c:443
+msgid "Zoom in"
+msgstr "Үлкейту"
+
+#: plugins/map/eog-map-plugin.c:452
+msgid "Zoom out"
+msgstr "Кішірейту"
+
+#: plugins/map/map.plugin.desktop.in:8
+msgid "Display the geolocation of the image on a map"
+msgstr "Суреттің геолокациясын картада көрсету"
+
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:5
+msgid "Maximize Windows"
+msgstr "Терезелерді жаю"
+
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
+msgid "New windows will open maximized"
+msgstr "Жаңа терезелер жайылған күйде ашылады"
+
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
+msgid "Maximize new windows"
+msgstr "Жаңа терезелерді жаю"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:5
+msgid "Picasa Web Uploader"
+msgstr "Picasa Web-ке жүктеп салушы"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:6
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Фотоларды Google Picasa Web-ке жүктеп салуды қолдайды"
+
+#: plugins/postasa/eog-postasa-plugin.c:307
+msgid "Uploading…"
+msgstr "Жүктеп салуда…"
+
+#: plugins/postasa/eog-postasa-plugin.c:353
+msgid "Uploaded"
+msgstr "Жүктеп салынды"
+
+#: plugins/postasa/eog-postasa-plugin.c:357
+msgid "Cancelled"
+msgstr "Бас тартылды"
+
+#: plugins/postasa/eog-postasa-plugin.c:360
+msgid "Failed"
+msgstr "Сәтсіз аяқталды"
+
+#: plugins/postasa/eog-postasa-plugin.c:583
+#, c-format
+msgid "Login failed. %s"
+msgstr "Кіру сәтсіз аяқталды. %s"
+
+#: plugins/postasa/eog-postasa-plugin.c:587
+msgid "Logged in successfully."
+msgstr "Жүйеге сәтті кірілді."
+
+#: plugins/postasa/eog-postasa-plugin.c:588
+msgid "Close"
+msgstr "Жабу"
+
+#: plugins/postasa/eog-postasa-plugin.c:609
+msgid "Cancel"
+msgstr "Бас тарту"
+
+#. TODO: want to handle passwords more securely
+#: plugins/postasa/eog-postasa-plugin.c:615
+msgid "Logging in…"
+msgstr "Жүйеге кіру…"
+
+#: plugins/postasa/eog-postasa-plugin.c:664
+msgid "Please log in to continue upload."
+msgstr "Жүктеп салуды жалғастыру үшін жүйеге кіріңіз."
+
+#: plugins/postasa/eog-postasa-plugin.c:843
+msgid "Upload to PicasaWeb"
+msgstr "PicasaWeb-ке жүктеп салу"
+
+#: plugins/postasa/postasa-config.ui:9
+msgid "PicasaWeb Login"
+msgstr "PicasaWeb-ке кіру"
+
+#: plugins/postasa/postasa-config.ui:26
+msgid "_Cancel"
+msgstr "_Бас тарту"
+
+#: plugins/postasa/postasa-config.ui:41
+msgid "_Login"
+msgstr "_Кіру"
+
+#: plugins/postasa/postasa-config.ui:72
+msgid "_Username:"
+msgstr "Па_йдаланушы аты:"
+
+#: plugins/postasa/postasa-config.ui:86
+msgid "_Password:"
+msgstr "_Пароль:"
+
+#: plugins/postasa/postasa.plugin.desktop.in:4
+msgid "PicasaWeb Uploader"
+msgstr "PicasaWeb-ке жүктеп салушы"
+
+#: plugins/postasa/postasa.plugin.desktop.in:8
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Суреттеріңізді PicasaWeb-ке жүктеп салыңыз"
+
+#: plugins/postasa/postasa-uploads.ui:37
+msgid "Uploads:"
+msgstr "Жүктеп салулар:"
+
+#: plugins/postasa/postasa-uploads.ui:62
+msgid "File"
+msgstr "Файл"
+
+#: plugins/postasa/postasa-uploads.ui:84
+msgid "Size"
+msgstr "Өлшемі"
+
+#: plugins/postasa/postasa-uploads.ui:96
+msgid "Status"
+msgstr "Күйі"
+
+#: plugins/postasa/postasa-uploads.ui:125
+msgid "Cancel Selected"
+msgstr "Таңдалғаннан бас тарту"
+
+#: plugins/postasa/postasa-uploads.ui:138
+msgid "Cancel All"
+msgstr "Барлығынан бас тарту"
+
+#: plugins/postr/eog-postr.appdata.xml.in:6
+msgid "Postr"
+msgstr "Postr"
+
+#: plugins/postr/eog-postr.appdata.xml.in:7
+msgid "Supports uploading photos to Flickr"
+msgstr "Фотоларды Flickr-ге жүктеп салуды қолдайды"
+
+#: plugins/postr/eog-postr-plugin.c:156
+msgid "Upload to Flickr"
+msgstr "Flickr-ге жүктеп салу"
+
+#: plugins/postr/postr.plugin.desktop.in:4
+msgid "Flickr Uploader"
+msgstr "Flickr-ге жүктеп салушы"
+
+#: plugins/postr/postr.plugin.desktop.in:8
+msgid "Upload your pictures to Flickr"
+msgstr "Суреттеріңізді Flickr-ге жүктеп салыңыз"
+
+#: plugins/pythonconsole/config.ui:56
+msgid "C_ommand color:"
+msgstr "К_оманда түсі:"
+
+#: plugins/pythonconsole/config.ui:70
+msgid "_Error color:"
+msgstr "Қа_те түсі:"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
+#: plugins/pythonconsole/__init__.py:87
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:5
+msgid "Python Console"
+msgstr "Python консолі"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
+msgid "Adds a Python console"
+msgstr "Python консолін қосады"
+
+#: plugins/pythonconsole/__init__.py:59
+msgid "P_ython Console"
+msgstr "Python _консолі"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
+msgid "Command Text Color"
+msgstr "Команда мәтінінің түсі"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
+msgid "The color used for commands."
+msgstr "Командалар үшін қолданылатын түс."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
+msgid "Error Text Color"
+msgstr "Қате мәтінінің түсі"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
+msgid "The color used for errors."
+msgstr "Қателер үшін қолданылатын түс."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
+msgid "Whether to use the system font"
+msgstr "Жүйелік қаріпті қолдану керек пе"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it’s "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Егер шын болса, терминал ені біркелкі болған жағдайда жұмыс үстелінің "
+"глобалды стандартты қарпін қолданады (немесе барынша ұқсас қаріп таңдалады)."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
+msgid "Font used by Python Console"
+msgstr "Python консолі қолданатын қаріп"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
+msgstr "Pango қарпінің аты. Мысалы, «Sans 12» немесе «Monospace жуан 14»."
+
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
+msgid "Python console for Eye of GNOME"
+msgstr "Eye of GNOME үшін Python консолі"
+
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
+msgid "Send by Mail"
+msgstr "Поштамен жіберу"
+
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
+msgid "Sends an image attached to a new mail"
+msgstr "Суретті жаңа хатқа тіркеп жібереді"
+
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+msgid "Send by _Mail"
+msgstr "_Поштамен жіберу"
+
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:4
+msgid "Send By Mail"
+msgstr "Поштамен жіберу"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:5
+msgid "Slideshow Shuffle"
+msgstr "Слайдшоуды араластыру"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Слайдшоу режимінде фотоларды араластырады"
+
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
+msgid "Shuffles images in slideshow mode"
+msgstr "Слайдшоу режимінде суреттерді араластырады"
