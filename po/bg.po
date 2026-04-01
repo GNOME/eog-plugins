@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eog-plugins master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues/\n"
 "POT-Creation-Date: 2022-01-25 22:28+0000\n"
-"PO-Revision-Date: 2025-03-06 21:22+0100\n"
+"PO-Revision-Date: 2026-04-01 11:22+0200\n"
 "Last-Translator: twlvnn kraftwerk <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -377,15 +377,15 @@ msgstr "_Цвят за грешки:"
 #: plugins/pythonconsole/__init__.py:87
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:5
 msgid "Python Console"
-msgstr "Конзола на Питон"
+msgstr "Конзола на Python"
 
 #: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
 msgid "Adds a Python console"
-msgstr "Добавяне на конзола на Питон"
+msgstr "Добавяне на конзола на Python"
 
 #: plugins/pythonconsole/__init__.py:59
 msgid "P_ython Console"
-msgstr "Конзола на _Питон"
+msgstr "_Конзола на Python"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
 msgid "Command Text Color"
@@ -418,7 +418,7 @@ msgstr ""
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
 msgid "Font used by Python Console"
-msgstr "Шрифт, който се използва в конзолата на Питон"
+msgstr "Шрифт, който се използва в конзолата на Python"
 
 #: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
@@ -426,7 +426,7 @@ msgstr "Име на шрифт на Pango. Примери са „Sans 12“ и�
 
 #: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
 msgid "Python console for Eye of GNOME"
-msgstr "Конзола на Питон за Eog"
+msgstr "Конзола на Python за Eog"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
 msgid "Send by Mail"
