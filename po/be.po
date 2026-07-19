@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eog-plugins master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues\n"
-"POT-Creation-Date: 2022-12-03 17:16+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues/\n"
+"POT-Creation-Date: 2022-01-25 22:28+0000\n"
 "PO-Revision-Date: 2022-12-22 23:32+0300\n"
 "Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -62,12 +62,12 @@ msgstr "Агульныя"
 msgid "Display camera settings in statusbar"
 msgstr "Паказваць налады камеры на панэлі стану"
 
-#: plugins/exif-display/exif-display.plugin.desktop.in:5
+#: plugins/exif-display/exif-display.plugin.desktop.in:4
 #: plugins/exif-display/eog-exif-display.appdata.xml.in:6
 msgid "Exif Display"
 msgstr "Паказваць даныя Exif"
 
-#: plugins/exif-display/exif-display.plugin.desktop.in:9
+#: plugins/exif-display/exif-display.plugin.desktop.in:8
 msgid "Displays camera settings and histogram"
 msgstr "Паказваць налады камеры і гістаграму"
 
@@ -104,14 +104,14 @@ msgid "Description:"
 msgstr "Апісанне:"
 
 #: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:6
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:5
 msgid "Export to Folder"
 msgstr "Экспартаваць у папку"
 
 #: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
-#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:10
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
 msgid "Export the current image to a separate directory"
-msgstr "Экспартаваць бягучую выяву ў асобны каталог"
+msgstr "Экспартаваць бягучы відарыс у асобны каталог"
 
 #: plugins/export-to-folder/export-to-folder.py:59
 msgid "_Export"
@@ -134,29 +134,29 @@ msgid "Export directory:"
 msgstr "Каталог для экспартавання:"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:5
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:4
 msgid "Zoom to Fit Image Width"
-msgstr "Маштабаванне выявы па шырыні"
+msgstr "Маштабаванне відарыса па шырыні"
 
 #: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
 msgid "Adjusts the zoom to have the image’s width fit into the window"
-msgstr "Змяняе маштаб, каб дапасаваць выяву да шырыні акна"
+msgstr "Змяняе маштаб, каб дапасаваць відарыс да шырыні акна"
 
 #: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
 msgid "Fit to width"
 msgstr "Дапасаваць да шырыні"
 
-#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:9
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
 msgid "Fit images to the window width"
-msgstr "Дапасаваць выявы да шырыні акна"
+msgstr "Дапасаваць відарысы да шырыні акна"
 
 #: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
-#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:5
 msgid "Fullscreen Background"
 msgstr "Фон у поўнаэкранным рэжыме"
 
 #: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
-#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:7
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
 msgid "Enables changing background in fullscreen mode"
 msgstr "Уключае змяненне фонавага колеру ў поўнаэкранным рэжыме"
 
@@ -177,16 +177,15 @@ msgid ""
 "The color that is used to fill the area behind the image. This option has "
 "effect only if use-custom is enabled."
 msgstr ""
-"Колер, які выкарыстоўваецца для запаўнення вобласці за выявай. Гэты "
-"параметр працуе, толькі калі задзейнічаны параметр use-custom "
-"(выкарыстоўваць уласны)."
+"Колер, які выкарыстоўваецца для запаўнення вобласці за відарысам. Гэты параметр "
+"працуе, толькі калі задзейнічаны параметр use-custom (выкарыстоўваць уласны)."
 
 #: plugins/fullscreenbg/preferences_dialog.ui:17
 msgid "Use custom color:"
 msgstr "Выкарыстоўваць уласны колер:"
 
 #: plugins/light-theme/eog-light-theme.appdata.xml.in:6
-#: plugins/light-theme/light-theme.plugin.desktop.in:5
+#: plugins/light-theme/light-theme.plugin.desktop.in:4
 msgid "Disable Dark Theme"
 msgstr "Адключэнне цёмнай тэмы"
 
@@ -194,12 +193,12 @@ msgstr "Адключэнне цёмнай тэмы"
 msgid "Disables dark theme"
 msgstr "Адключае цёмную тэму"
 
-#: plugins/light-theme/light-theme.plugin.desktop.in:9
+#: plugins/light-theme/light-theme.plugin.desktop.in:8
 msgid "Disables Eye of GNOME’s preference of dark theme variants"
 msgstr "Адключае ў наладах Вока GNOME варыянты з цёмнай тэмай"
 
 #: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
-#: plugins/map/map.plugin.desktop.in:5
+#: plugins/map/map.plugin.desktop.in:4
 msgid "Map"
 msgstr "Карта"
 
@@ -209,7 +208,7 @@ msgstr "Паказвае на карце ў бакавой панэлі, дзе 
 
 #: plugins/map/eog-map-plugin.c:430
 msgid "Jump to current image’s location"
-msgstr "Перайсці ў месцазнаходжанне з бягучай выявы"
+msgstr "Перайсці ў месцазнаходжанне з бягучага відарыса"
 
 #: plugins/map/eog-map-plugin.c:443
 msgid "Zoom in"
@@ -219,12 +218,12 @@ msgstr "Павялічыць"
 msgid "Zoom out"
 msgstr "Паменшыць"
 
-#: plugins/map/map.plugin.desktop.in:9
+#: plugins/map/map.plugin.desktop.in:8
 msgid "Display the geolocation of the image on a map"
-msgstr "Паказваць месцазнаходжанне атрымання выявы на карце"
+msgstr "Паказваць месцазнаходжанне атрымання відарыса на карце"
 
 #: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
-#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:5
 msgid "Maximize Windows"
 msgstr "Разгортванне акон"
 
@@ -232,7 +231,7 @@ msgstr "Разгортванне акон"
 msgid "New windows will open maximized"
 msgstr "Новыя вокны будуць адкрывацца разгорнутымі"
 
-#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:7
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
 msgid "Maximize new windows"
 msgstr "Разгортваць новыя вокны"
 
@@ -310,13 +309,13 @@ msgstr "І_мя карыстальніка:"
 msgid "_Password:"
 msgstr "_Пароль:"
 
-#: plugins/postasa/postasa.plugin.desktop.in:5
+#: plugins/postasa/postasa.plugin.desktop.in:4
 msgid "PicasaWeb Uploader"
 msgstr "Сродак запампоўвання на PicasaWeb"
 
-#: plugins/postasa/postasa.plugin.desktop.in:9
+#: plugins/postasa/postasa.plugin.desktop.in:8
 msgid "Upload your pictures to PicasaWeb"
-msgstr "Запампоўвае вашы выявы на PicasaWeb"
+msgstr "Запампоўвае вашы відарысы на PicasaWeb"
 
 #: plugins/postasa/postasa-uploads.ui:37
 msgid "Uploads:"
@@ -354,13 +353,13 @@ msgstr "Падтрымлівае запампоўвання фатаграфій
 msgid "Upload to Flickr"
 msgstr "Запампаваць на Flickr"
 
-#: plugins/postr/postr.plugin.desktop.in:5
+#: plugins/postr/postr.plugin.desktop.in:4
 msgid "Flickr Uploader"
 msgstr "Сродак запампоўвання на Flickr"
 
-#: plugins/postr/postr.plugin.desktop.in:9
+#: plugins/postr/postr.plugin.desktop.in:8
 msgid "Upload your pictures to Flickr"
-msgstr "Запампоўвае вашы выявы на Flickr"
+msgstr "Запампоўвае вашы відарысы на Flickr"
 
 #: plugins/pythonconsole/config.ui:56
 msgid "C_ommand color:"
@@ -372,7 +371,7 @@ msgstr "Колер _памылкі:"
 
 #: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
 #: plugins/pythonconsole/__init__.py:87
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:5
 msgid "Python Console"
 msgstr "Кансоль Python"
 
@@ -420,7 +419,7 @@ msgstr "Шрыфт, які выкарыстоўваецца ў кансолі Py
 msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
 msgstr "Назва шрыфту Pango. Напрыклад: «Sans 12» або «Monospace Bold 14»."
 
-#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:7
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
 msgid "Python console for Eye of GNOME"
 msgstr "Кансоль Python для Вока GNOME"
 
@@ -429,20 +428,20 @@ msgid "Send by Mail"
 msgstr "Адправіць праз эл. пошту"
 
 #: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:9
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
 msgid "Sends an image attached to a new mail"
-msgstr "Адпраўляе праз эл.пошту выяву, далучыўшы яе ў новае паведамленне"
+msgstr "Адпраўляе праз эл.пошту відарыс, далучыўшы яго ў новае паведамленне"
 
 #: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
 msgid "Send by _Mail"
 msgstr "Адправіць праз эл. _пошту"
 
-#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:5
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:4
 msgid "Send By Mail"
 msgstr "Адправіць праз электронную пошту"
 
 #: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:6
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:5
 msgid "Slideshow Shuffle"
 msgstr "Выпадковы парадак у слайдшоу"
 
@@ -450,6 +449,6 @@ msgstr "Выпадковы парадак у слайдшоу"
 msgid "Shuffles the photos in slideshow mode"
 msgstr "Перамешвае фатаграфіі ў рэжыме слайдшоу"
 
-#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:10
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
 msgid "Shuffles images in slideshow mode"
-msgstr "Перамешвае выявы ў рэжыме слайдшоу"
+msgstr "Перамешвае відарысы ў рэжыме слайдшоу"
