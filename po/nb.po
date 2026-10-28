@@ -1,14 +1,14 @@
 # Norwegian translation of eog (bokmål dialect).
 # Copyright (C) 1999-2004, 2005 Free Software Foundation, Inc.
-# Kjartan Maraas <kmaraas@gnome.org>, 1999-2008.
+# Kjartan Maraas <kmaraas@gnome.org>, 1999-2026.
 # Terance Edward Sola <terance@lyse.net>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eog 2.24.x\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-07 18:26+0200\n"
-"PO-Revision-Date: 2008-10-07 18:27+0200\n"
+"Project-Id-Version: eog 50.x\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/eog-plugins/issues/\n"
+"POT-Creation-Date: 2022-01-25 22:28+0000\n"
+"PO-Revision-Date: 2026-10-28 17:00+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmal <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -17,16 +17,438 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:1
-msgid "Flickr Uploader"
-msgstr "Last opp til Flickr"
+#: plugins/exif-display/eog-exif-display-plugin.c:105
+msgid " (invalid Unicode)"
+msgstr "(ugyldig Unicode)"
 
-#: ../plugins/postr/postr.eog-plugin.desktop.in.h:2
-#: ../plugins/postr/eog-postr-plugin.c:50
-msgid "Upload your pictures to Flickr"
-msgstr "Last opp dine bilder til Flickr"
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: plugins/exif-display/eog-exif-display-plugin.c:183
+#, c-format
+msgid "%.1fmm (lens)"
+msgstr "%.1f mm (linse)"
 
-#: ../plugins/postr/eog-postr-plugin.c:48
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: plugins/exif-display/eog-exif-display-plugin.c:194
+#, c-format
+msgid "%.1fmm (35mm film)"
+msgstr "%.1f mm (35 mm film)"
+
+#: plugins/exif-display/eog-exif-display-plugin.c:668
+msgid "Details"
+msgstr "Detaljer"
+
+#: plugins/exif-display/exif-display-config.ui:53
+msgid "Histogram"
+msgstr "Histogram"
+
+#: plugins/exif-display/exif-display-config.ui:88
+msgid "Display per-channel histogram"
+msgstr "Vis histogram per kanal"
+
+#: plugins/exif-display/exif-display-config.ui:103
+msgid "Display RGB histogram"
+msgstr "Vis RGB-histogram"
+
+#: plugins/exif-display/exif-display-config.ui:135
+msgid "General"
+msgstr "Generelt"
+
+#: plugins/exif-display/exif-display-config.ui:170
+msgid "Display camera settings in statusbar"
+msgstr "Vis kamera-innstillinger i statusfeltet"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:4
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:6
+msgid "Exif Display"
+msgstr "Exif Visning"
+
+#: plugins/exif-display/exif-display.plugin.desktop.in:8
+msgid "Displays camera settings and histogram"
+msgstr "Viser kamera-innstillinger og histogram"
+
+#: plugins/exif-display/eog-exif-display.appdata.xml.in:7
+msgid "Displays Exif tags in the side panel and optionally the statusbar"
+msgstr "Viser Exif-tagger i sidepanelet og valgfritt i statusfeltet"
+
+#: plugins/exif-display/exif-display.ui:59
+msgid "ISO speed:"
+msgstr "ISO-hastighet:"
+
+#: plugins/exif-display/exif-display.ui:74
+msgid "Expo. Time:"
+msgstr "Expo. Tid:"
+
+#: plugins/exif-display/exif-display.ui:89
+msgid "Aperture:"
+msgstr "Aperture:"
+
+#: plugins/exif-display/exif-display.ui:104
+msgid "Zoom:"
+msgstr "Zoom:"
+
+#: plugins/exif-display/exif-display.ui:119
+msgid "Metering:"
+msgstr "Måling:"
+
+#: plugins/exif-display/exif-display.ui:134
+msgid "Expo. bias:"
+msgstr "Expo. bias:"
+
+#: plugins/exif-display/exif-display.ui:149
+msgid "Description:"
+msgstr "Beskrivelse:"
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:6
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:5
+msgid "Export to Folder"
+msgstr "Eksporter til mappe"
+
+#: plugins/export-to-folder/eog-export-to-folder.appdata.xml.in:7
+#: plugins/export-to-folder/export-to-folder.plugin.desktop.in:9
+msgid "Export the current image to a separate directory"
+msgstr "Eksporter det nåværende bildet til en egen mappe"
+
+#: plugins/export-to-folder/export-to-folder.py:59
+msgid "_Export"
+msgstr "_Eksporter"
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:5
+msgid "The folder to export to"
+msgstr "Mappen som skal eksporteres til"
+
+#: plugins/export-to-folder/org.gnome.eog.plugins.export-to-folder.gschema.xml.in:6
+msgid ""
+"This is the folder the plugin will place the exported files in. Plugin will "
+"export to $HOME/exported-images if not set."
+msgstr ""
+"Dette er mappen plugin-en vil plassere de eksporterte filene i. Plugin-en "
+"eksporterer til $HOME/exported-images hvis ikke annet er angitt."
+
+#: plugins/export-to-folder/preferences_dialog.ui:15
+msgid "Export directory:"
+msgstr "Eksportmappe:"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:6
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:4
+msgid "Zoom to Fit Image Width"
+msgstr "Zoom til passende bildebredde"
+
+#: plugins/fit-to-width/eog-fit-to-width.appdata.xml.in:7
+msgid "Adjusts the zoom to have the image’s width fit into the window"
+msgstr "Justerer zoom slik at bildets bredde passer inn i vinduet"
+
+#: plugins/fit-to-width/eog-fit-to-width-plugin.c:129
+msgid "Fit to width"
+msgstr "Tilpass bredde"
+
+#: plugins/fit-to-width/fit-to-width.plugin.desktop.in:8
+msgid "Fit images to the window width"
+msgstr "Juster bilder til vindusbredde"
+
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:6
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:5
+msgid "Fullscreen Background"
+msgstr "Fullskjermbakgrunn"
+
+#: plugins/fullscreenbg/eog-fullscreenbg.appdata.xml.in:7
+#: plugins/fullscreenbg/fullscreenbg.plugin.desktop.in:6
+msgid "Enables changing background in fullscreen mode"
+msgstr "Aktiverer endring av bakgrunn i fullskjermmodus"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:5
+msgid "Use custom background settings"
+msgstr "Bruk egendefinerte bakgrunnsinnstillinger"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:6
+msgid "Whether the plugin should use global settings or its own."
+msgstr "Bør utvidelsen bruke globale innstillinger eller sine egne?"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:10
+msgid "Background color in fullscreen mode"
+msgstr "Bakgrunnsfarge i fullskjermmodus"
+
+#: plugins/fullscreenbg/org.gnome.eog.plugins.fullscreenbg.gschema.xml.in:11
+msgid ""
+"The color that is used to fill the area behind the image. This option has "
+"effect only if use-custom is enabled."
+msgstr ""
+"Fargen som brukes til å fylle området bak bildet. Denne innstillingen har "
+"bare virkning hvis bruk_tilpasset er aktivert."
+
+#: plugins/fullscreenbg/preferences_dialog.ui:17
+msgid "Use custom color:"
+msgstr "Bruk egendefinert farge:"
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:6
+#: plugins/light-theme/light-theme.plugin.desktop.in:4
+msgid "Disable Dark Theme"
+msgstr "Deaktiver mørk tema"
+
+#: plugins/light-theme/eog-light-theme.appdata.xml.in:7
+msgid "Disables dark theme"
+msgstr "Deaktiverer mørk tema"
+
+#: plugins/light-theme/light-theme.plugin.desktop.in:8
+msgid "Disables Eye of GNOME’s preference of dark theme variants"
+msgstr "Deaktiverer Eye of GNOME’s preferanse for mørke tema-varianter"
+
+#: plugins/map/eog-map.appdata.xml.in:6 plugins/map/eog-map-plugin.c:467
+#: plugins/map/map.plugin.desktop.in:4
+msgid "Map"
+msgstr "Kart"
+
+#: plugins/map/eog-map.appdata.xml.in:7
+msgid "Displays on a map in the side panel where the picture was taken"
+msgstr "Viser på et kart i sidepanelet der bildet ble tatt"
+
+#: plugins/map/eog-map-plugin.c:430
+msgid "Jump to current image’s location"
+msgstr "Hopper til gjeldende bildes plassering"
+
+#: plugins/map/eog-map-plugin.c:443
+msgid "Zoom in"
+msgstr "Zoom inn"
+
+#: plugins/map/eog-map-plugin.c:452
+msgid "Zoom out"
+msgstr "Zoom ut"
+
+#: plugins/map/map.plugin.desktop.in:8
+msgid "Display the geolocation of the image on a map"
+msgstr "Vis bildets posisjon på et kart"
+
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:5
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:5
+msgid "Maximize Windows"
+msgstr "Maksimer Windows"
+
+#: plugins/maximize-windows/eog-maximize-windows.appdata.xml.in:6
+msgid "New windows will open maximized"
+msgstr "Nye vinduer vil åpnes maksimert"
+
+#: plugins/maximize-windows/maximize-windows.plugin.desktop.in:6
+msgid "Maximize new windows"
+msgstr "Maksimer nye vinduer"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:5
+msgid "Picasa Web Uploader"
+msgstr "Last opp til PicasaWeb"
+
+#: plugins/postasa/eog-postasa.appdata.xml.in:6
+msgid "Supports uploading photos to Google Picasa Web"
+msgstr "Støtter opplasting av bilder til Google Picasa Web"
+
+#: plugins/postasa/eog-postasa-plugin.c:307
+msgid "Uploading…"
+msgstr "Laster opp…"
+
+#: plugins/postasa/eog-postasa-plugin.c:353
+msgid "Uploaded"
+msgstr "Lastet opp"
+
+#: plugins/postasa/eog-postasa-plugin.c:357
+msgid "Cancelled"
+msgstr "Avbrutt"
+
+#: plugins/postasa/eog-postasa-plugin.c:360
+msgid "Failed"
+msgstr "Feilet"
+
+#: plugins/postasa/eog-postasa-plugin.c:583
+#, c-format
+msgid "Login failed. %s"
+msgstr "Innlogging mislyktes. %s"
+
+#: plugins/postasa/eog-postasa-plugin.c:587
+msgid "Logged in successfully."
+msgstr "Logget inn vellykket."
+
+#: plugins/postasa/eog-postasa-plugin.c:588
+msgid "Close"
+msgstr "Lukk"
+
+#: plugins/postasa/eog-postasa-plugin.c:609
+msgid "Cancel"
+msgstr "Avbryt"
+
+#. TODO: want to handle passwords more securely
+#: plugins/postasa/eog-postasa-plugin.c:615
+msgid "Logging in…"
+msgstr "Logger inn …"
+
+#: plugins/postasa/eog-postasa-plugin.c:664
+msgid "Please log in to continue upload."
+msgstr "Vennligst logg inn for å fortsette opplastingen."
+
+#: plugins/postasa/eog-postasa-plugin.c:843
+msgid "Upload to PicasaWeb"
+msgstr "Last opp til PicasaWeb"
+
+#: plugins/postasa/postasa-config.ui:9
+msgid "PicasaWeb Login"
+msgstr "PicasaWeb-innlogging"
+
+#: plugins/postasa/postasa-config.ui:26
+msgid "_Cancel"
+msgstr "A_vbryt"
+
+#: plugins/postasa/postasa-config.ui:41
+msgid "_Login"
+msgstr "_Logg inn"
+
+#: plugins/postasa/postasa-config.ui:72
+msgid "_Username:"
+msgstr "_Brukernavn:"
+
+#: plugins/postasa/postasa-config.ui:86
+msgid "_Password:"
+msgstr "_Passord:"
+
+#: plugins/postasa/postasa.plugin.desktop.in:4
+msgid "PicasaWeb Uploader"
+msgstr "Last opp til PicasaWeb"
+
+#: plugins/postasa/postasa.plugin.desktop.in:8
+msgid "Upload your pictures to PicasaWeb"
+msgstr "Last opp dine bilder til PicasaWeb"
+
+#: plugins/postasa/postasa-uploads.ui:37
+msgid "Uploads:"
+msgstr "Opplastinger:"
+
+#: plugins/postasa/postasa-uploads.ui:62
+msgid "File"
+msgstr "Fil"
+
+#: plugins/postasa/postasa-uploads.ui:84
+msgid "Size"
+msgstr "Størrelse"
+
+#: plugins/postasa/postasa-uploads.ui:96
+msgid "Status"
+msgstr "Status"
+
+#: plugins/postasa/postasa-uploads.ui:125
+msgid "Cancel Selected"
+msgstr "Avbryt valgt"
+
+#: plugins/postasa/postasa-uploads.ui:138
+msgid "Cancel All"
+msgstr "Avbryt alle"
+
+#: plugins/postr/eog-postr.appdata.xml.in:6
+msgid "Postr"
+msgstr "Postr"
+
+#: plugins/postr/eog-postr.appdata.xml.in:7
+msgid "Supports uploading photos to Flickr"
+msgstr "Støtter opplasting av bilder til Flickr"
+
+#: plugins/postr/eog-postr-plugin.c:156
 msgid "Upload to Flickr"
 msgstr "Last opp til Flickr"
 
+#: plugins/postr/postr.plugin.desktop.in:4
+msgid "Flickr Uploader"
+msgstr "Last opp til Flickr"
+
+#: plugins/postr/postr.plugin.desktop.in:8
+msgid "Upload your pictures to Flickr"
+msgstr "Last opp dine bilder til Flickr"
+
+#: plugins/pythonconsole/config.ui:56
+msgid "C_ommand color:"
+msgstr "Farge for k_ommando:"
+
+#: plugins/pythonconsole/config.ui:70
+msgid "_Error color:"
+msgstr "Farge for f_eil:"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:6
+#: plugins/pythonconsole/__init__.py:87
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:5
+msgid "Python Console"
+msgstr "Python-konsoll"
+
+#: plugins/pythonconsole/eog-pythonconsole.appdata.xml.in:7
+msgid "Adds a Python console"
+msgstr "Legger til et Python-konsoll"
+
+#: plugins/pythonconsole/__init__.py:59
+msgid "P_ython Console"
+msgstr "P_ython-konsoll"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:5
+msgid "Command Text Color"
+msgstr "Kommando Tekstfarge"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:6
+msgid "The color used for commands."
+msgstr "Farge for kommandoer."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:10
+msgid "Error Text Color"
+msgstr "Feiltekstfarge"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:11
+msgid "The color used for errors."
+msgstr "Fargen som brukes for feil."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:15
+msgid "Whether to use the system font"
+msgstr "Om systemskriften skal brukes"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:16
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it’s "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Hvis denne har positiv verdi («true»), bruker terminalen forvalgt skrift for"
+" skrivebordet hvis dette er en skrift med lik avstand mellom tegnene. Ellers"
+" brukes den skriften som likner mest."
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:24
+msgid "Font used by Python Console"
+msgstr "Skrifttype brukt av Python-konsoll"
+
+#: plugins/pythonconsole/org.gnome.eog.plugins.pythonconsole.gschema.xml.in:25
+msgid "A Pango font name. Examples are “Sans 12” or “Monospace Bold 14”."
+msgstr ""
+"Et Pango-skriftnavn. For eksempel «Sans 12» eller «Monospace Bold 14»."
+
+#: plugins/pythonconsole/pythonconsole.plugin.desktop.in:6
+msgid "Python console for Eye of GNOME"
+msgstr "Python-konsoll for Eye of GNOME"
+
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:6
+msgid "Send by Mail"
+msgstr "Send med post"
+
+#: plugins/send-by-mail/eog-send-by-mail.appdata.xml.in:7
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:8
+msgid "Sends an image attached to a new mail"
+msgstr "Sender et bilde vedlagt en ny e-post"
+
+#: plugins/send-by-mail/eog-send-by-mail-plugin.c:118
+msgid "Send by _Mail"
+msgstr "Send via _E-post"
+
+#: plugins/send-by-mail/send-by-mail.plugin.desktop.in:4
+msgid "Send By Mail"
+msgstr "Send med post"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:6
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:5
+msgid "Slideshow Shuffle"
+msgstr "Fremvisningsblanding"
+
+#: plugins/slideshowshuffle/eog-slideshowshuffle.appdata.xml.in:7
+msgid "Shuffles the photos in slideshow mode"
+msgstr "Stokker bildene i lysbildemodus"
+
+#: plugins/slideshowshuffle/slideshowshuffle.plugin.desktop.in:9
+msgid "Shuffles images in slideshow mode"
+msgstr "Stokker bilder i lysbildemodus"
